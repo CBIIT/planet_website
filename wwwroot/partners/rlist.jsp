@@ -150,6 +150,7 @@ if (param != null)
 					outString.append(endTD);
             }
 			
+			
             if (rs.getString("title") != null && rs.getString("title").compareTo("") != 0)
                 outString.append(beginTD+rs.getString("title").trim()+endTD);
             if (rs.getString("org1") != null && rs.getString("org1").compareTo("") != 0)
