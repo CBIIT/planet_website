@@ -280,7 +280,7 @@ else {
 	
 		if (stateStatic.compareTo("the US") == 0) {
 			stateStatic = "All States";
-			researcherText="Research Partners for <font style='font-family : Arial, Verdana, Geneva, Helvetica, sans-serif; font-weight : bold; 	font-size : 20px; color : AA0000;'>"+staticTopic+"</font>";	
+			researcherText="Research Partners for<br><font style='font-family : Arial, Verdana, Geneva, Helvetica, sans-serif; font-weight : bold; 	font-size : 20px; color : AA0000;'>"+staticTopic+"</font>";	
 		}
 		else
 			researcherText="Research Partners for<br><font style='font-family : Arial, Verdana, Geneva, Helvetica, sans-serif; font-weight : bold; 	font-size : 20px; color : AA0000;'>"+staticTopic+"</font><br>in <font style='font-family : Arial, Verdana, Geneva, Helvetica, sans-serif; font-weight : bold; 	font-size : 20px; color : AA0000;'>"+stateStatic+"</font>";
