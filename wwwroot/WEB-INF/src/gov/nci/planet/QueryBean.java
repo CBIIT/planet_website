@@ -6,7 +6,7 @@ import gov.nci.util.ConnPoolBean;
 
 public class QueryBean
 {
-    private static Connection conn;
+    private Connection conn;
 
     public QueryBean() throws SQLException
     {
