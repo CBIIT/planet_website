@@ -104,6 +104,11 @@ topicNum = QBean.getTopicID(topic);
 						
                 }
 
+				if (typeDesc.equals("Regional") && (addedContact != 1)) {
+					outString.append(" Contact");
+					addedContact = 1;
+				}
+
                 // Close the underlining and the table cell.
                 outString.append("</u>"+endTD);
             }
@@ -139,7 +144,10 @@ topicNum = QBean.getTopicID(topic);
 								}
 							}
                 }
-
+				if (typeDesc.equals("Regional") && (addedContact != 1)) {
+					outString.append(" Contact");
+					addedContact = 1;
+				}
                 // Close the underlining and the table cell.
                 outString.append("</u>" + endTD);
             }
@@ -163,6 +171,10 @@ topicNum = QBean.getTopicID(topic);
 							}
                 }
 
+				if (typeDesc.equals("Regional") && (addedContact != 1)) {
+					outString.append(" Contact");
+					addedContact = 1;
+				}
 
                 // Close the underlining and the table cell.
                 outString.append("</u>" + endTD);
