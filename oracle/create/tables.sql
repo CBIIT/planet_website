@@ -1,4 +1,4 @@
-/* $Id: tables.sql,v 1.3 2003-05-21 15:22:01 juranj Exp $ */
+/* $Id: tables.sql,v 1.4 2003-05-21 15:24:53 juranj Exp $ */
 
 CREATE TABLE cc_partners (
     id                NUMBER(5,0),
@@ -7,10 +7,16 @@ CREATE TABLE cc_partners (
     name              VARCHAR2(50)  NOT NULL,
     CONSTRAINT cc_partners_pk PRIMARY KEY (id));
 
+CREATE TABLE cc_partner_states (
+    abbreviation  VARCHAR2(2),
+    name          VARCHAR2(32)    NOT NULL,
+    type          VARCHAR2(1),
+    CONSTRAINT cc_partner_states_pk PRIMARY KEY (abbreviation));
+
 CREATE TABLE cc_partner_contacts (
     id              NUMBER(10,0),
     partner_id,
-    region          VARCHAR2(2),
+    region                          NOT NULL,
     partner         VARCHAR2(5),
     topic           VARCHAR2(1),
     type            VARCHAR2(1),
@@ -32,10 +38,6 @@ CREATE TABLE cc_partner_contacts (
     email           VARCHAR2(100),
     CONSTRAINT cc_partner_contact_pk PRIMARY KEY (id),
     CONSTRAINT cc_partner_contact_partner_fk FOREIGN KEY (partner_id)
-        REFERENCES cc_partners(id));
-
-CREATE TABLE cc_partner_states (
-    abbreviation  VARCHAR2(2),
-    name          VARCHAR2(32)    NOT NULL,
-    type          VARCHAR2(1),
-    CONSTRAINT cc_partner_states_pk PRIMARY KEY (abbreviation));
+        REFERENCES cc_partners(id),
+    CONSTRAINT cc_partner_contacts_region_fk FOREIGN KEY (region)
+        REFERENCES cc_partner_states(abbreviation));
