@@ -89,7 +89,7 @@ public class QueryBean
 	    	stmt.execute();
 	    	return ((OracleCallableStatement)stmt).getCursor(1);
 	  }
-
+/*
     public ResultSet getTopicsResearcherCount(String stateAbbreviation) throws SQLException
     {
 	    	CallableStatement stmt = conn.prepareCall("{call dccps.planet_pkg.GetTopicsResearcherCount(?,?)}");
@@ -117,7 +117,7 @@ public class QueryBean
 	    	stmt.execute();
 	    	return stmt.getInt(1);
 	  }
-
+*/
     public void saveFeedback(String feedbackText, String email, String phone) throws SQLException
     {
         CallableStatement stmt = conn.prepareCall("{call dccps.products_order_pkg.save_feedback(?, ?, ?, ?)}");
