@@ -25,12 +25,28 @@
         <param-name>DBMinConnections</param-name>
         <param-value>3</param-value>
     </context-param>
+    <context-param>
+        <param-name>CordaExternalAddress</param-name>
+        <param-value>http://156.40.32.188:8080/servlet/ctRedirector</param-value>
+    </context-param>
+    <context-param>
+        <param-name>CordaClusterAddress</param-name>
+        <param-value>http://156.40.32.188:8080/servlet/ctcm</param-value>
+    </context-param>
     <servlet>
         <servlet-name>ctRedirector</servlet-name>
-        <servlet-class>com.corda.ctRedirector</servlet-class>
+        <servlet-class>ctRedirector</servlet-class>
         <init-param>
             <param-name>CordaServer</param-name>
             <param-value>procyon.cit.nih.gov:2001</param-value>
+        </init-param>
+    </servlet>
+    <servlet>
+        <servlet-name>ctcm</servlet-name>
+        <servlet-class>ctClusterMonitor</servlet-class>
+        <init-param>
+            <param-name>ClusterAddress</param-name>
+            <param-value>128.231.56.162:2002,128.231.56.163:2002</param-value>
         </init-param>
     </servlet>
     <servlet>
@@ -38,8 +54,17 @@
         <servlet-class>gov.nci.util.ConnPoolInitServlet</servlet-class>
         <load-on-startup>1</load-on-startup>
     </servlet>
+    <servlet>
+        <servlet-name>NCIPopChartInitServlet</servlet-name>
+        <servlet-class>gov.nci.corda.NCIPopChartInitServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ctRedirector</servlet-name>
         <url-pattern>/servlet/ctRedirector</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ctcm</servlet-name>
+        <url-pattern>/servlet/ctcm</url-pattern>
     </servlet-mapping>
 </web-app>
