@@ -11,6 +11,7 @@ int ccTopic = 0;
 Integer topic = new Integer(0);
 int topicID = -1;
 int topicCount = 0;
+int topicCount2 = 0;
 
 String htmlString = null;
 String caption = null;
@@ -71,24 +72,30 @@ if (param != null)
         String typeOutput = "";
 		topicString = new StringBuffer();
 		int researcherCount = 0;
+		
+		rs2 = QBean.getTopicsResearcherCount(topicInt, region);
 				
+			do
+			{
+	        	topicCount ++;
+	    	} while (rs2.next());
+			
         do
         {
 		
            if (topicID != rs.getInt("topic_id"))
  		       {
-			   		topicCount ++;
+			   		topicCount2 ++;
 			   		topicID = rs.getInt("topic_id");
 					topicInt = new Integer(topicID);
 					topicDesc = QBean.getTopicDescription(topicInt);
-					rs2 = QBean.getTopicsResearcherCount(topicInt, region);
-				
-					while(rs2.next()) {
-			        	topicCount ++;
-			    	}
 					
-					if (ccTopic == 0) {
-						topicString.append("<a href='#"+topicID+"'>"+topicDesc+"</a><br>");
+					if (topicCount > 1) {
+						topicString.append("<a href='#"+topicID+"'>"+topicDesc+"</a><br>");						
+						
+						if (topicCount2 == (topicCount/2)) {
+							topicString.append("</td><td valign='top' style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold;'>");
+						}
 					}
 					else
 						topicString.append("&nbsp;</td><td valign='top' style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold;'>&nbsp;");
