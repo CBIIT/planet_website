@@ -56,7 +56,7 @@ if (param != null)
 	
 
 
-		outString = new StringBuffer("<hr size='1' noshade><table bgcolor='white' border='0' cellpadding='5' cellspacing='0'><tr><td valign='top' style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: color : #000000;'>");
+		outString = new StringBuffer("<table bgcolor='white' border='0' cellpadding='5' cellspacing='0'><tr><td valign='top' style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: color : #000000;'>");
 		topicString = new StringBuffer("No Records Found.");
 	
     if (rs.next())
@@ -67,6 +67,7 @@ if (param != null)
         String typeString = "";
         String typeOutput = "";
 		topicString = new StringBuffer();
+		int researcherCount = 0;
 		
 		
         do
@@ -74,6 +75,7 @@ if (param != null)
 		
            if (topicID != rs.getInt("topic_id"))
  		       {
+			   		researcherCount = rs.getColumnCount();		
 			   		topicID = rs.getInt("topic_id");
 					topicInt = new Integer(topicID);
 					topicDesc = QBean.getTopicDescription(topicInt);
@@ -89,7 +91,7 @@ if (param != null)
 				if (count > 1)
 					outString.append("<p></font><a href='#top'>[Top of Page]</a></p>");
 					
-                outString.append("<p><font style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: #000000;'><font style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: #AA0000;'><a name='"+topicID+"'></a>"+topicDesc+"</font></p>");
+                outString.append("<p><font style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: #000000;'><font style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: #AA0000;'><a name='"+topicID+"'></a>"+topicDesc+"- "+researcherCount+"</font></p>");
                 outString.append("<p><table border='0' cellspacing='0' cellpadding='0'>");
 				outString.append("<tr><td style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'>"+rs.getString("researcher_name")+"  "+rs.getString("degree")+endTD);
 			
