@@ -90,11 +90,9 @@
 <table summary="Links to potential partner list" bgcolor="white" border="0" cellpadding="5" cellspacing="0">
 <tr>
 <td align="left" colspan="3">
-<div style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 16px;	font-weight: bold;color : #000000;">
-<%--= pageTitle--%>
-</div>
 
-<div style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;">
+
+<div style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 16px;	font-weight: bold; color : #000000;">
 Locate Research Partners in Your State or Region.
 </div>
 
@@ -110,13 +108,14 @@ To view, click on map or state name below.
 </tr>
 <tr>
 <td valign='top'><%= stateList.toString()%><br />
+
 <td valign='top'>
 <%= htmlString%><br>
 <a href="javascript:window.close()">Close Window</a>
 </td>
 </tr>
 <tr>
-<td colspan="2"><a href='rlist.jsp?r=ALL&cctopic=<%= topic %>'>View all U.S. Researchers by topic area</a></td>
+<td colspan="3"><a href='rlist.jsp?r=ALL&cctopic=<%= topic %>'>View all U.S. Researchers by topic area</a></td>
 </tr>
 </table>
 <table width="100%" border="0" cellspacing="0" cellpadding="0">

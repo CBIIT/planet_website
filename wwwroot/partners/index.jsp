@@ -108,7 +108,7 @@ To view, click on map or state name below.
 <a href="javascript:window.close()">Close Window</a>
 </td>
 <tr>
-<td colspan="2"><a href='list.jsp?r=ALL&cctopic=<%= topic %>'>View all Program Partners</a>
+<td colspan="3"><a href='list.jsp?r=ALL&cctopic=<%= topic %>'>View all Program Partners</a>
 </tr>
 </table>
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
