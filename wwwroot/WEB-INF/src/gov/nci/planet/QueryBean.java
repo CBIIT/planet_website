@@ -40,7 +40,7 @@ public class QueryBean
 	stmt.execute();
 	return (ResultSet)stmt.getObject(1);
     }
-    
+
     public ResultSet getPartners(String topic) throws SQLException
     {
         stmt = conn.prepareCall("{call dccps.planet_pkg.GetPartners(?, ?)}");
@@ -60,7 +60,25 @@ public class QueryBean
 				return (ResultSet)stmt.getObject(3);
     }
 
-    public ResultSet getResearchers(Integer topic) throws SQLException
+    public getTopicID(Integer topicIN) throws SQLException
+    {
+	    stmt = conn.prepareCall("{? = call dccps.planet_pkg.GetTopicID(?)}");
+	    stmt.registerOutParameter(1, Types.VARCHAR);
+	    stmt.setInt(1,topicIN.intValue());
+	    stmt.execute();
+	    return stmt.getString(1);
+	}
+
+    public getTopicID(String topicIN) throws SQLException
+    {
+	    stmt = conn.prepareCall("{? = call dccps.planet_pkg.GetTopicID(?)}");
+	    stmt.registerOutParameter(1, Types.INTEGER);
+	    stmt.setString(1,topicIN);
+	    stmt.execute();
+	    return stmt.getInt(1);
+	}
+
+	public ResultSet getResearchers(Integer topic) throws SQLException
     {
         stmt = conn.prepareCall("{call dccps.planet_pkg.GetResearchers(?, ?)}");
         stmt.setInt(1, topic.intValue());
