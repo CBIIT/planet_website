@@ -88,28 +88,22 @@
 
 <table summary="Links to potential partner list" bgcolor="white" border="0" cellpadding="5" cellspacing="0">
 <tr>
-<td align="left" colspan="3">
-<div style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 16px;	font-weight: bold;color : #000000;">
-<%--= pageTitle--%>Locate Program Partners in Your State or Region.
-</div>
-
-<div style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;">
-To view, click on map or state name below.
-</div>
-<div align="right" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;">
-<a href="researcher.jsp?cctopic=0">View Research Partners</a>
-</div>
-<br />
-</td>
+	<td align="left" colspan="3">
+	<p><strong><%--= pageTitle--%>Locate Program Partners in Your State or Region.</strong></p>
+	
+	<p><strong>To view, click on map or state name below.</strong></p>
+	
+	<p><strong><a href="researcher.jsp?cctopic=0">View Research Partners</a></strong></p>
+	
+	<br />
+	</td>
 </tr>
 <tr>
-<td valign='top'><%= stateList.toString()%><br /></td>
-<td valign='top'>
-<%= htmlString%><br>
-<a href="javascript:window.close()">Close Window</a>
-</td>
+	<td valign='top'><%= stateList.toString()%><br /></td>
+	<td valign='top'><%= htmlString%><br>
+	<a href="javascript:window.close()">Close Window</a></td>
 <tr>
-<td colspan="3"><a href='list.jsp?r=ALL&cctopic=<%= topic %>'>View all Program Partners</a>
+	<td colspan="3"><a href='list.jsp?r=ALL&cctopic=<%= topic %>'>View all Program Partners</a>
 </tr>
 </table>
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -127,5 +121,4 @@ To view, click on map or state name below.
     </td>
   </tr>
 </table>
-</body>
-</html>
+</body></html>
