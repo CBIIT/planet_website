@@ -279,6 +279,7 @@ else {
 	</td>
 	<td valign="top" width="60%" align="right"><a href="list.jsp?r=<%= region%>&cctopic=C">View Program Partners in <%= stateStatic%></a></td>
 </tr>
+
 <tr>
 	<td valign="top">
 		<table bgcolor='white' border='0' cellpadding="5" cellspacing="0">
