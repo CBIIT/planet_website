@@ -20,26 +20,29 @@ StringBuffer pcScript = null;
 
      QueryBean QBean = new QueryBean();
      Vector statePlans = QBean.getStatePlans();
-	 
+
      //now get the information to display
      //theQuery = "SELECT state, name, plan_status, plan_URL, type FROM states;";
 
 	 String beginTD = "<tr><td style='font-family: Arial,Helvetica;font-size: 12;' align=\"left\">";
 	 String endTD = "</td></tr>";
-	 
+
      pcScript = new StringBuffer();
-     pcScript.append("US.addPCXML(<DefaultShapeSettings><Properties FillColor='#b2b2b2' FillType='Pattern' PatternType='DiagonalBottomToTop'/><Drilldown URL='' FillColor='White' ZoomPercent='120'/></DefaultShapeSettings>");
-     pcScript.append("<Range Name='Red' LegendText='Cancer plan available' Minimum='1.0' Maximum='1.0'><RangeShapeSettings  Type='Rectangle' Width='8' Height='8'><MapProperties OverrideFillColor='True' OverrideShapeSettings='True'/><Properties FillColor='#b3a8ee'/></RangeShapeSettings></Range>");
-     pcScript.append("<Range Name='Noplan' LegendText='Cancer plan in progress' Minimum='No data' Maximum='No data'><RangeShapeSettings  Type='Rectangle' Width='8' Height='8'><MapProperties OverrideFillColor='True' OverrideShapeSettings='True'/><Properties FillColor='#bfbfbf' FillType='Pattern' PatternType='DiagonalTopToBottom'/></RangeShapeSettings></Range>)");
+     pcScript.append("US.addPCXML(<DefaultBackgroundShapeSettings><Properties FillColor='#b2b2b2' FillType='Pattern' PatternType='DiagonalBottomToTop'/><Drilldown URL='' FillColor='White' ZoomPercent='120'/></DefaultBackgroundShapeSettings>");
+     pcScript.append("<DefaultShapeSettings Type='Circle' Width='8' Height='8'><Properties FillColor='#b2b2b2' FillType='Pattern' PatternType='DiagonalBottomToTop'/><Drilldown URL='' FillColor='White' ZoomPercent='120'/></DefaultShapeSettings>");
+     pcScript.append("<Range Name='Plandp' LegendText='Cancer plan available (Tribal)' Minimum='1.0' Maximum='1.0'><RangeShapeSettings  Type='Circle' Width='8' Height='8'><MapProperties OverrideFillColor='True' OverrideShapeSettings='True'/><Properties FillColor='#b3a8ee'/></RangeShapeSettings></Range>");
+     pcScript.append("<Range Name='NoPlandp' LegendText='Cancer plan in progress (Tribal)' Minimum='No data' Maximum='No data'><RangeShapeSettings  Type='Circle' Width='8' Height='8'><MapProperties OverrideFillColor='True' OverrideShapeSettings='True'/><Properties FillColor='#bfbfbf' FillType='Pattern' PatternType='DiagonalTopToBottom'/></RangeShapeSettings></Range>");
+     pcScript.append("<Range Name='Plan' LegendText='Cancer plan available' Minimum='1.0' Maximum='1.0' BackgroundRange='True'><RangeShapeSettings  Type='Rectangle' Width='8' Height='8'><MapProperties OverrideFillColor='True' OverrideShapeSettings='True'/><Properties FillColor='#b3a8ee'/></RangeShapeSettings></Range>");
+     pcScript.append("<Range Name='NoPlan' LegendText='Cancer plan in progress' Minimum='No data' Maximum='No data' BackgroundRange='True'><RangeShapeSettings  Type='Rectangle' Width='8' Height='8'><MapProperties OverrideFillColor='True' OverrideShapeSettings='True'/><Properties FillColor='#bfbfbf' FillType='Pattern' PatternType='DiagonalTopToBottom'/></RangeShapeSettings></Range>)");
      pcScript.append("US.addPCXML(<Legend Name='legend' Top='5' Left='213' Width='403' Height='23' ZIndex='56'><Properties RangeSizeForMarkers='True' MinimumFontSize='10.0' ReverseOrder='True' Font='Name:Helvetica; Size:11.0;'/></Legend>)");
-     
+
      Iterator it = statePlans.iterator();
-	
-     
+
+
      if (it.hasNext())
      {
       stateList = new StringBuffer();
-      
+
       String typeString = "S";
       do
       {
@@ -52,7 +55,7 @@ StringBuffer pcScript = null;
         count = 0;
        }
        //******************************
-       
+
        //the next section is to separate the Territories from the States
        //******************************
        if (rs.getPlanStatus() == 1 && (typeString.toUpperCase().compareTo(rs.getPlanType().toUpperCase()) != 0))
@@ -61,32 +64,37 @@ StringBuffer pcScript = null;
           typeString = rs.getPlanType();
        }
        //******************************
-       
+
        //if (count > 0)
        //	stateList.append("<br />");
-       
+
        if (rs.getPlanStatus() == 1)
        {
        				stateList.append("<br />");
            //create the text link
            stateList.append("<a href='"+ rs.getPlanUrl().trim()+"' class='a1'  title='"+rs.getName().trim()+"' target='_blank'>"+rs.getName()+"</a>");
            //create the link on the map
-           pcScript.append("US.addPCXML(<MapShapeItem Name='"+rs.getState()+"' Value='1'><ItemShapeSettings><MapProperties OverrideDrilldownSettings='True'/><Drilldown URL='"+rs.getPlanUrl()+"' Target='_blank' FillColor='White' ZoomPercent='120'/></ItemShapeSettings></MapShapeItem>)");
+           if (rs.getState().equals("PI"))
+           {
+	           pcScript.append("US.addPCXML(<MapShapeItem Name='"+rs.getState()+"' Parent='OR' Value='1'><ItemShapeSettings  Type='Circle' Top='89' Left='40' Diameter='8'><MapProperties OverrideDrilldownSettings='True'/><Drilldown URL='"+rs.getPlanUrl()+"' Target='_blank' FillColor='White' ZoomPercent='120'/><Label Position='Left' FrameAlignment='RightCenter' LeaderColor='Black'/></ItemShapeSettings></MapShapeItem>)");
+           }else{
+	           pcScript.append("US.addPCXML(<MapShapeItem Name='"+rs.getState()+"' Value='1'><ItemShapeSettings><MapProperties OverrideDrilldownSettings='True'/><Drilldown URL='"+rs.getPlanUrl()+"' Target='_blank' FillColor='White' ZoomPercent='120'/></ItemShapeSettings></MapShapeItem>)");
+           }
            count++;
        }
 
-       
+
       }while (it.hasNext());
      }
-     
+
      NCIPopChartEmbedder myChart = new NCIPopChartEmbedder();
-     myChart.appearanceFile = "apfiles/planet/ccpmap.pcxml";
+     myChart.appearanceFile = "apfiles/planet/ccpmap_tribe.pcxml";
      myChart.pcScript = pcScript.toString();
      myChart.height = 449;
      myChart.width = 629;
      myChart.imageType = "FLASH";
      myChart.fallback = "STRICT";
-	 myChart.returnDescriptiveLink = false;
+     myChart.returnDescriptiveLink = false;
      myChart.userAgent = request.getHeader("USER-AGENT");
      htmlString = myChart.getEmbeddingHTML();
 %>
@@ -97,17 +105,17 @@ StringBuffer pcScript = null;
 </head>
 <body topmargin="0" leftmargin="0" bgcolor="White">
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
-  <tr> 
-    <td><p class="banner"><a href="http://virgo.cit.nih.gov:8080/planet/index.html"><img src="images/planet_logo.gif" alt="Cancer Control PLANET - Plan, Link, Act, Network with Evidence-based Tools" width="169" height="87" border="0"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p></td>
-    <td><a href="http://virgo.cit.nih.gov:8080/planet/index.html"><img src="images/planet_banner2.gif" alt="Cancer Control PLANET - Links to resources for cancer control planning" width="369" height="82" border="0"></a></td>
-    <td><p><a href="http://virgo.cit.nih.gov:8080/planet/index.html">Home</a><br>
-        <a href="http://virgo.cit.nih.gov:8080/planet/contact.html">Contact Us</a><br>
-        <a href="http://virgo.cit.nih.gov:8080/planet/about.html">About this Site</a><br>
-        <a href="http://virgo.cit.nih.gov:8080/planet/partners.html">PLANET Sponsors</a></p></td>
+  <tr>
+    <td><p class="banner"><a href="http://cancercontrolplanet.cancer.gov/index.html"><img src="images/planet_logo.gif" alt="Cancer Control PLANET - Plan, Link, Act, Network with Evidence-based Tools" width="169" height="87" border="0"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p></td>
+    <td><a href="http://cancercontrolplanet.cancer.gov/index.html"><img src="images/planet_banner2.gif" alt="Cancer Control PLANET - Links to resources for cancer control planning" width="369" height="82" border="0"></a></td>
+    <td><p><a href="http://cancercontrolplanet.cancer.gov/index.html">Home</a><br>
+        <a href="http://cancercontrolplanet.cancer.gov/contact.html">Contact Us</a><br>
+        <a href="http://cancercontrolplanet.cancer.gov/about.html">About this Site</a><br>
+        <a href="http://cancercontrolplanet.cancer.gov/partners.html">PLANET Sponsors</a></p></td>
   </tr>
-  <tr> 
+  <tr>
     <td colspan="3">
-      <hr size="1" noshade> 
+      <hr size="1" noshade>
 	</td>
   </tr>
 </table>
@@ -142,12 +150,12 @@ out.print(htmlString);
 </tr>
 </table>
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
-  <tr> 
+  <tr>
     <td><hr size="1" noshade>
-	<div align="center"><a href="http://virgo.cit.nih.gov:8080/planet/index.html">Home</a>&nbsp;&nbsp;&nbsp; <a href="http://virgo.cit.nih.gov:8080/planet/contact.html">Contact Us</a>&nbsp;&nbsp;&nbsp; 
-    <a href="http://virgo.cit.nih.gov:8080/planet/about.html">About this Site</a>&nbsp;&nbsp;&nbsp; 
-        <a href="http://virgo.cit.nih.gov:8080/planet/partners.html">PLANET Sponsors</a>&nbsp;&nbsp;&nbsp; <a href="http://virgo.cit.nih.gov:8080/planet/privacy.html">Privacy 
-        Policy</a>&nbsp;&nbsp;&nbsp; <a href="http://virgo.cit.nih.gov:8080/planet/disclaimer.html">Disclaimer</a>&nbsp;&nbsp;&nbsp; <a href="http://virgo.cit.nih.gov:8080/planet/accessibility.html">Accessibility</a><br>
+	<div align="center"><a href="http://cancercontrolplanet.cancer.gov/index.html">Home</a>&nbsp;&nbsp;&nbsp; <a href="http://cancercontrolplanet.cancer.gov/contact.html">Contact Us</a>&nbsp;&nbsp;&nbsp;
+    <a href="http://cancercontrolplanet.cancer.gov/about.html">About this Site</a>&nbsp;&nbsp;&nbsp;
+        <a href="http://cancercontrolplanet.cancer.gov/partners.html">PLANET Sponsors</a>&nbsp;&nbsp;&nbsp; <a href="http://cancercontrolplanet.cancer.gov/privacy.html">Privacy
+        Policy</a>&nbsp;&nbsp;&nbsp; <a href="http://cancercontrolplanet.cancer.gov/disclaimer.html">Disclaimer</a>&nbsp;&nbsp;&nbsp; <a href="http://cancercontrolplanet.cancer.gov/accessibility.html">Accessibility</a><br>
       </div></td>
   </tr>
 </table>
