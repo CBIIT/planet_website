@@ -1,4 +1,4 @@
-/* $Id: tables.sql,v 1.2 2003-05-19 20:17:27 juranj Exp $ */
+/* $Id: tables.sql,v 1.3 2003-05-21 15:22:01 juranj Exp $ */
 
 CREATE TABLE cc_partners (
     id                NUMBER(5,0),
@@ -9,7 +9,7 @@ CREATE TABLE cc_partners (
 
 CREATE TABLE cc_partner_contacts (
     id              NUMBER(10,0),
-    partner_id                     NOT NULL,
+    partner_id,
     region          VARCHAR2(2),
     partner         VARCHAR2(5),
     topic           VARCHAR2(1),
