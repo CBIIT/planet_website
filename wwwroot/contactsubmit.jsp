@@ -70,7 +70,7 @@
         // Write feedback to database.
         QueryBean QBean = new QueryBean();
         QBean.saveFeedback(feedback, email, phone);
-        QBean.close();
+        //QBean.close();
     }
 %>
         </td>
