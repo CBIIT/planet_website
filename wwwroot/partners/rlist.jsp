@@ -243,8 +243,7 @@ if (param != null)
 
      } while (rs.next());
 	 
-	 
-	 outString.append("</table>");
+	 outString.append("</table><p></font><a href='#top'>[Top of Page]</a></p>");
 }
 else {
   outString = new StringBuffer("No Records Found.");
