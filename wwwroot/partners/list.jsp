@@ -226,7 +226,7 @@ if (param != null)
 				
             if (count > 27)
             {
-                stateList.append("</td><td valign='top'>");
+                stateList.append("</td><td valign='top' nowrap>");
                 count = 0;
             }
             if (typeString.compareTo(rs.getString("type")) != 0)
@@ -290,13 +290,13 @@ if (param != null)
 <td valign="top" colspan="3" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;">View another state / territory</td>
 </tr>
 <tr>
-<td valign='top'>
+<td valign='top' nowrap>
 <%= stateList.toString()%>
 </td>
 </tr>
 </table>
 </td>
-<td valign="top" colspan="3" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;" align="right"><a href="rlist.jsp?r=<%= region%>&cctopic=0">View Research Partners in <%= stateStatic%></a>
+<td valign="top" colspan="3" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;"><a href="rlist.jsp?r=<%= region%>&cctopic=0">View Research Partners in <%= stateStatic%></a>
 <%= htmlString%><br>
 <a href="javascript:window.close()">Close Window</a>
 
