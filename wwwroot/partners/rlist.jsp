@@ -92,6 +92,7 @@ if (param != null)
 					}
 					else
 						topicString.append("&nbsp;</td><td valign='top' style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold;'>&nbsp;");
+						
 										
                 if (count > 1)
                    	outString.append("</table></p>");
