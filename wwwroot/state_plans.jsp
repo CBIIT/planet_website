@@ -49,10 +49,10 @@ try
        
        //the next section is to separate the Territories from the States
        //******************************
-       if (typeString.compareTo(rs.getString("type")) != 0)
+       if (typeString.compareTo(rs.getString("plan_type")) != 0)
        {
           stateList.append("<br />");
-          typeString = rs.getString("type");
+          typeString = rs.getString("plan_type");
        }
        //******************************
        
