@@ -325,7 +325,6 @@ else {
 <tr>
 <td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: color : #000000;" nowrap><%= stateList.toString()%></td>
 
-
 	<td valign="top" colspan="2" align="left"><table cellspacing="5"><%= topicString.toString()%></table><%= outString.toString()%></td>
 
 </tr>
