@@ -73,7 +73,8 @@ if (param != null)
         {
 		
            if (topicID != rs.getInt("topic_id"))
- 		       {		
+ 		       {
+			   		
 			   		topicID = rs.getInt("topic_id");
 					topicInt = new Integer(topicID);
 					topicDesc = QBean.getTopicDescription(topicInt);
