@@ -110,7 +110,8 @@ To view, click on map or state name below.
 <td valign='top'><a href='list.jsp?r=all&cctopic=<%= topic.toUpperCase()%>'>View all partners</a><br />
 <%= stateList.toString()%>
 <td valign='top'>
-<%= htmlString%>
+<%= htmlString%><br>
+<a href="javascript:window.close()">Close Window</a>
 </td>
 </tr>
 </table>

@@ -17,7 +17,7 @@ if (param != null)
 param = request.getParameter("cctopic");
 if (param != null)
    topic = param;
-   
+
 if (topic.equalsIgnoreCase("C"))
 {
    pageTitle = "Cancer Control Partners";
@@ -37,7 +37,7 @@ else
     StringBuffer stateList = null;
     ResultSet rs = null;
     QueryBean QBean = new QueryBean();
-    
+
     if (region.equals("all"))
     {
         pcScript = "US.addPCXML(<DefaultShapeSettings><Properties FillColor='#B20000'/><Drilldown URL='list.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultShapeSettings>)";
@@ -108,7 +108,7 @@ else
                 typeString = rs.getString("type");
                 outString.append("<p><table border='0' cellspacing='0' cellpadding='0' width='100%'>");
                 outString.append("<tr><td style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'>"+rs.getString("partner_name")+endTD);
-		
+
                 outString.append("<tr><td style='font-family: Arial, Helvetica, sans-serif;font-size: 12;style: bold;' align='left'>");
                 if (rs.getString("type").equals("R"))
                     outString.append("<u>Regional Contact<u/>"+endTD);
@@ -156,7 +156,7 @@ else
             {
                 outString.append(beginTD+rs.getString("contact_name").trim());
 
-                if (rs.getString("degree") != null && rs.getString("degree").compareTo("") != 0)			
+                if (rs.getString("degree") != null && rs.getString("degree").compareTo("") != 0)
                     outString.append(", "+rs.getString("degree"));
                 outString.append(endTD);
             }
@@ -186,7 +186,7 @@ else
             if (rs.getString("orgurl") != null && rs.getString("orgurl").compareTo("") != 0)
             {
                 String urlStr = "";
-                if (rs.getString("orgurl").indexOf("http://") < 0) 
+                if (rs.getString("orgurl").indexOf("http://") < 0)
                     urlStr = "http://"+rs.getString("orgurl").trim();
                 else
                     urlStr = rs.getString("orgurl").trim();
@@ -198,9 +198,9 @@ else
                     outString.append(beginTD+"Web site:  <a href=\""+urlStr+"\" target=\"_blank\" class='a1'>"+urlStr+"</a>"+endTD);
             }
             outString.append("<tr><td height='10'>&nbsp;</td></tr>");
-		
+
             count ++;
-        } while (rs.next());	
+        } while (rs.next());
     } //end of if statement
 
     rs = QBean.getStateList();
@@ -230,7 +230,7 @@ else
     }
 
     QBean.close();
-     
+
     NCIPopChartEmbedder myChart = new NCIPopChartEmbedder();
     myChart.appearanceFile = "apfiles/planet/ccpmap_small.pcxml";
     myChart.pcScript = pcScript;
@@ -251,7 +251,7 @@ else
 </head>
 <body topmargin="0" leftmargin="0" bgcolor="White">
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
-  <tr> 
+  <tr>
     <td><p class="banner"><a href="../index.html"><img src="../images/planet_logo.gif" alt="Cancer Control PLANET - Plan, Link, Act, Network with Evidence-based Tools" width="169" height="87" border="0"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p></td>
     <td><a href="../index.html"><img src="../images/planet_banner2.gif" alt="Cancer Control PLANET - Links to resources for cancer control planning" width="369" height="82" border="0"></a></td>
     <td><p><a href="../index.html">Home</a><br>
@@ -259,9 +259,9 @@ else
         <a href="../about.html">About this Site</a><br>
         <a href="../partners.html">PLANET Sponsors</a></p></td>
   </tr>
-    <tr> 
+    <tr>
     <td colspan="3">
-      <hr size="1" noshade> 
+      <hr size="1" noshade>
 	</td>
   </tr>
 </table>
@@ -279,7 +279,8 @@ else
 <%= stateList.toString()%>
 </td>
 <td valign='top'>
-<%= htmlString%>
+<%= htmlString%><br>
+<a href="javascript:window.close()">Close Window</a>
 </td>
 </tr>
 </table>
@@ -287,11 +288,11 @@ else
 </tr>
 </table>
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
-  <tr> 
+  <tr>
     <td><hr size="1" noshade>
-	<div align="center"><a href="../index.html">Home</a>&nbsp;&nbsp;&nbsp; <a href="../contact.html">Contact Us</a>&nbsp;&nbsp;&nbsp; 
-    <a href="../about.html">About this Site</a>&nbsp;&nbsp;&nbsp; 
-        <a href="../partners.html">PLANET Sponsors</a>&nbsp;&nbsp;&nbsp; <a href="../privacy.html">Privacy 
+	<div align="center"><a href="../index.html">Home</a>&nbsp;&nbsp;&nbsp; <a href="../contact.html">Contact Us</a>&nbsp;&nbsp;&nbsp;
+    <a href="../about.html">About this Site</a>&nbsp;&nbsp;&nbsp;
+        <a href="../partners.html">PLANET Sponsors</a>&nbsp;&nbsp;&nbsp; <a href="../privacy.html">Privacy
         Policy</a>&nbsp;&nbsp;&nbsp; <a href="../disclaimer.html">Disclaimer</a>&nbsp;&nbsp;&nbsp; <a href="../accessibility.html">Accessibility</a><br>
       </div></td>
   </tr>
