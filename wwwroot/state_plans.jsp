@@ -74,7 +74,7 @@ StringBuffer pcScript = null;
 	 {
 	 	QBean.close();
 	 }
-	 catch(SQLException exc)
+	 catch(Exception exc)
 	 {
 	 	System.out.print(exc);
 	 }
