@@ -334,7 +334,7 @@ if (param != null)
 
 <table bgcolor="white" border="0" cellpadding="0" cellspacing="0" width="100%">
 <tr>
-	<td valign="top" style="font-family: Arial, Helvetica, Verdana, Geneva, sans-serif; font-size: 20px; font-weight: bold; color: #000000;" colspan="2" nowrap><%= researcherText%></td>
+	<td valign="top" style="font-family: Arial, Helvetica, Verdana, Geneva, sans-serif; font-size: 20px; font-weight: bold; color: #000000;" colspan="2"><%= researcherText%></td>
 	<td valign="top" align="right"><strong><a href="list.jsp?r=<%= region%>&cctopic=<%= topicLet%>">View Program Partners in <%= stateStatic%></a></strong></td>
 </tr>
 <tr>
