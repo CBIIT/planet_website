@@ -100,6 +100,7 @@ if (param != null)
 					
 					topicString.append("<td valign='top' style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 12;	font-weight: bold;'><a href='#"+topicID+"' style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 12;	font-weight: bold;'>"+topicDesc+"</a></td>");						
 					
+					
 					if ((topicCount % 2) == 0)
 						topicString.append("</tr><tr>");
 						
