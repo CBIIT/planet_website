@@ -271,7 +271,6 @@ else
 			else
 	            stateList.append("<a href='rlist.jsp?r="+rs.getString("abbreviation")+"&cctopic="+topic+"' class='a1' title='"+rs.getString("name").trim()+"'>"+rs.getString("name")+"</a>");
 				
-				
             count++;
         } while (rs.next());
         stateList.append("</td></tr><tr><td colspan=2><a href='rlist.jsp?r=ALL&cctopic=" + topic + "' title=\"All states and regions\">View All U.S. Researchers by topic area</a>");
