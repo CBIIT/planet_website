@@ -195,6 +195,8 @@ if (param != null)
 	 if ((topicCount % 2) == 1)
 	 	topicString.append("<td>&nbsp;</td>");
 	
+	 outString.append("</table>");
+	 
 	 if ((cellCount % 2) == 0)
 		outString.append("<td>&nbsp;</td>");
 		
