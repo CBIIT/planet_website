@@ -59,7 +59,7 @@ if (param != null)
 
 
 		outString = new StringBuffer("<table cellspacing='0' cellpadding='5'>");
-		topicString = new StringBuffer("<tr><td valign='top' style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;' colspan='2'>View by Topic:</td></tr><a name='top'></a>");
+		topicString = new StringBuffer("<tr><td valign='top' style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;' colspan='2'><a name='top'></a>View by Topic:</td></tr>");
 	
     if (rs.next())
     {
@@ -291,12 +291,12 @@ else {
 					</tr>
 				</table>
 	</td>
-	<td valign="top" width="5%" rowspan="2">&nbsp;</td>
-	<td valign="top" width="35%" align="left"><%= listTitle%></td>
+
+	<td valign="top" width="40%" align="left"><%= listTitle%></td>
 	<td valign="top" width="30%" align="right"><a href="list.jsp?r=<%= region%>&cctopic=C">View Program Partners in <%= stateStatic%></a></td>
 </tr>
 <tr>
-	<td valign="top" colspan="3">
+	<td valign="top" colspan="2">
 		<table bgcolor='white' border='0' cellpadding="5" cellspacing="0">
 		<tr>
 			<%= topicString.toString()%>
