@@ -258,7 +258,7 @@ else
     }
      
     CordaEmbedder myChart = new CordaEmbedder();
-    myChart.appearanceFile = "apfiles/ccp/ccpmap_small.pcxml";
+    myChart.appearanceFile = "apfiles/planet/ccpmap_small.pcxml";
 
     myChart.externalServerAddress = "http://procyon.cit.nih.gov:2001";
     myChart.internalCommPortAddress = "http://procyon.cit.nih.gov:2002";
