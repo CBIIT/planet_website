@@ -312,7 +312,7 @@ else
 	<td valign='top'>
 		<table bgcolor='white' border='0' cellpadding="5" cellspacing="0">
 		<tr>
-			<td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;">View another state / territory<br /><table bgcolor='white' border='0' cellpadding="5" cellspacing="0"><tr><td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: color : #000000;" nowrap width="150"><%= stateList.toString()%></td></tr></table></td>
+			<td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;">View another state / territory<br /><table bgcolor='white' border='0' cellpadding="5" cellspacing="0"><tr><td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: color : #000000;" nowrap width="155"><%= stateList.toString()%></td></tr></table></td>
 			<td width="50">&nbsp;</td>
 			<td valign="top"><table bgcolor='white' border='0' cellpadding="5" cellspacing="0"><tr><td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: color : #000000;"><%= outString.toString()%></td></tr></table></td>
 			<td width="50">&nbsp;</td>
