@@ -99,9 +99,9 @@ if (param != null)
                 	stateName = rs.getString("state_name");
 					
 					if (count > 1)
-						outString.append("<tr><td colspan='2' style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left' valign='top'><a href='#top'>[Top of Page]</a></td></tr>");
+						outString.append("<tr><td colspan='2' style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left' valign='top'><a href='#top'>[Top of Page]</a></td></tr><tr><td colspan='2'>&nbsp;</td></tr>");
 					
-                	outString.append("<tr><td valign='top' style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: #AA0000;' colspan='2'><a name='"+topicID+"'></a>"+topicDesc+"</td></tr>");
+                	outString.append("<tr><td valign='top' style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: #AA0000;' colspan='2'><a name='"+topicID+"'></a>"+topicDesc+"</td></tr><tr><td colspan='2'>&nbsp;</td></tr>");
 	                outString.append("<tr><td><table border='0' cellspacing='0' cellpadding='0'>");
 					outString.append("<tr><td style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left' valign='top'>"+rs.getString("researcher_name")+"  "+rs.getString("degree")+endTD);
            		}
@@ -120,7 +120,7 @@ if (param != null)
 				
                 researcherId = rs.getInt("researcher_id");
                 researcherString = rs.getString("state_abbreviation");
-                outString.append("<td><table border='0' cellspacing='0' cellpadding='0'>");
+                outString.append("<td valign='top'><table border='0' cellspacing='0' cellpadding='0'>");
                 outString.append("<tr><td style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left' valign='top'>"+rs.getString("researcher_name")+"  "+rs.getString("degree")+endTD);
             }
 			
@@ -188,7 +188,7 @@ if (param != null)
      } while (rs.next());
 	 
 	 if ((topicCount % 2) == 1)
-	 	topicString.append("<td>nbsp;</td>");
+	 	topicString.append("<td>&nbsp;</td>");
 	
 	 if ((cellCount % 2) == 0)
 		outString.append("<td>&nbsp;</td>");
@@ -276,7 +276,8 @@ else {
 	<td valign="top">
 		<table bgcolor='white' border='0' cellpadding="5" cellspacing="0">
 		<tr>
-			<td colspan="2">View by Topic:</td>
+			<td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-				    
+			size : 14px;	font-weight: bold; color : #000000;" colspan="2">View by Topic:</td>
 		</tr>
 		<tr>
 			<%= topicString.toString()%>
