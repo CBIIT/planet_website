@@ -238,7 +238,7 @@ else {
   listTitle = "No Records Found.";
   
   topicString = new StringBuffer("");
-  outString = new StringBuffer("<tr><td>&nbsp;</td></tr></table>");
+  outString = new StringBuffer("<table><tr><td>&nbsp;</td></tr></table>");
 }  //end of if statement
 
     rs = QBean.getStateList();
@@ -323,7 +323,7 @@ else {
 <tr>
 <td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: color : #000000;" nowrap><%= stateList.toString()%></td>
 
-	<td valign="top" colspan="2"><table><%= topicString.toString()%></table><br><br><%= outString.toString()%></td>
+	<td valign="top" colspan="2" align="left"><table><%= topicString.toString()%></table><br><br><%= outString.toString()%></td>
 
 </tr>
 </table>
