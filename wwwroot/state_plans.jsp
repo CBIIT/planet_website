@@ -9,13 +9,13 @@ String caption = "State Cancer Control Plans";
 String pageTitle = "State Cancer Control Plans";
 int count= 0;
 
-QueryBean QBean = new QueryBean();
+
 
 
 StringBuffer stateList = null;
 StringBuffer pcScript = null;
 
-    
+     QueryBean QBean = new QueryBean();
      ResultSet rs = QBean.getStatePlans();
 	 
      //now get the information to display
@@ -70,7 +70,14 @@ StringBuffer pcScript = null;
        
       }while (rs.next());
      }
-     QBean.close();
+     try
+	 {
+	 	QBean.close();
+	 }
+	 catch(SQLException exc)
+	 {
+	 	System.out.print(exc);
+	 }
      NCIPopChartEmbedder myChart = new NCIPopChartEmbedder();
      myChart.appearanceFile = "apfiles/planet/ccpmap.pcxml";
      myChart.pcScript = pcScript.toString();
