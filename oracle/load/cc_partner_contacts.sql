@@ -1,4 +1,7 @@
-/* $Id: cc_partner_contacts.sql,v 1.1 2003-05-19 20:33:15 juranj Exp $ */
+/* $Id: cc_partner_contacts.sql,v 1.2 2003-05-19 21:00:39 juranj Exp $ */
+
+/* Turn off variable interpolation -- there are some organizations with ampersands in their name */
+set scan off
 
 INSERT INTO cc_partner_contacts (region, partner, topic, type, contact, name, degree, title, org1, org2, orgurl, address1, address2, city, state, zip, phone, fax, cell, email) VALUES ('AK','ACS','','R','','Patti Migliore','MPA','Regional Manager, Cancer Control Planning','','','','PO Box 19140','2120 First Avenue North','Seattle','WA','98109','(206) 283-1152','(206) 285-3469','','patricia.migliore@cancer.org');
 INSERT INTO cc_partner_contacts (region, partner, topic, type, contact, name, degree, title, org1, org2, orgurl, address1, address2, city, state, zip, phone, fax, cell, email) VALUES ('AK','CDC','C','S','','Jayne Andreen','','Community Health & EMS','Alaska Dept. of Health & Social Services','','http://health.hss.state.ak.us/dph/','P.O. Box 110616','','Juneau','AK','99811-0616','(907) 465-5729','','','jayne_andreen@health.state.ak.us');
