@@ -9,7 +9,6 @@ String pcScript = "";
 String topic = "C";
 String htmlString = null;
 String caption = null;
-String pageTitle = "";
 String cdcSubTitle = "State Health Department Contact";
 param = request.getParameter("r");
 if (param != null)
@@ -24,7 +23,7 @@ if (param != null)
     QueryBean QBean = new QueryBean();
 
     // Find the page title to use based on the topic
-    pageTitle = QBean.getTopicDescription(topic);
+    String pageTitle = QBean.getTopicDescription(topic) + " Partners";
     caption = "Cancer Control PLANET - " + pageTitle;
 
     if (region.equals("all"))

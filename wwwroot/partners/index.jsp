@@ -20,7 +20,7 @@
     QueryBean QBean = new QueryBean();
     // Find the page title to use based on the topic
     String topicTitle = QBean.getTopicDescription(topic);
-    pageTitle = "Locate " + topicTitle + " in Your State or Region.";
+    pageTitle = "Locate " + topicTitle + " Partners in Your State or Region.";
     caption = "Cancer Control PLANET - " + topicTitle;
 
     String typeString = "S";
