@@ -237,6 +237,7 @@ else {
     if (rs.next())
     {
         stateList = new StringBuffer();
+		stateList.append("<table><tr><td valign='top' nowrap>");
         String typeString = "S";
         int count= 0;
 		
@@ -262,7 +263,7 @@ else {
 			
             count++;
         } while (rs.next());
-        stateList.append("</td></tr><tr><td colspan=2><a href='rlist.jsp?r=ALL&cctopic=" + topic + "' title=\"All states and regions\">View All U.S. Researchers by topic area</a>");
+        stateList.append("</td></tr><tr><td colspan=2><a href='rlist.jsp?r=ALL&cctopic=" + topic + "' title=\"All states and regions\">View All U.S. Researchers by topic area</a></td></tr></table>");
     }
 	pageTitle = pageTitle + " - " + stateStatic;		
     QBean.close();
@@ -290,7 +291,7 @@ else {
   </tr>
 </table>
 
-<table bgcolor="white" border="1" cellpadding="0" cellspacing="0" width="100%">
+<table bgcolor="white" border="0" cellpadding="0" cellspacing="0" width="100%">
 <tr>
 	<td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-				    
 			size : 14px;	font-weight: bold; color : #000000;" width="66%" colspan="2"><%= listTitle%></td>
@@ -298,7 +299,7 @@ else {
 </tr>
 <tr>
 <td>
-<table bgcolor='white' border='1' cellpadding="5" cellspacing="0">
+<table bgcolor='white' border='0' cellpadding="5" cellspacing="0">
 					<tr>
 						<td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-
 						serif;	font-size : 14px;	font-weight: color : #000000;" nowrap><%= 
