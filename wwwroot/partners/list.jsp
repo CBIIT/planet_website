@@ -90,7 +90,7 @@ topicNum = QBean.getTopicID(topic);
                 outString.append("<u>" + typeDesc);
                 
                 // For state and territory contacts we may need to tack on some additional information.
-				outString.append(partnerString + " - " + typeString + " - " + topic + " - " + typeDesc + " - ");
+				// outString.append(partnerString + " - " + typeString + " - " + topic + " - " + typeDesc + " - ");
                 if (partnerString.equals("CDC") && !typeString.equals("W"))
                 {
                     if (topic.equals("T"))
@@ -102,14 +102,18 @@ topicNum = QBean.getTopicID(topic);
 								addedContact = 1;
                             	outString.append(" Contact");
 						}
-						
                 }
 
 				if (typeDesc.equals("Regional") && (addedContact != 1)) {
 					outString.append(" Contact");
 					addedContact = 1;
 				}
-
+				
+				if (typeDesc.equals("State") && (addedContact != 1)) {
+					outString.append(" Contact");
+					addedContact = 1;
+				}
+				
                 // Close the underlining and the table cell.
                 outString.append("</u>"+endTD);
             }
@@ -131,7 +135,7 @@ topicNum = QBean.getTopicID(topic);
                 outString.append("<u>" + rs.getTypeDescription());
                 
                 // For state and territory contacts we may need to tack on some additional information.
-				outString.append(partnerString + " - " + typeString + " - " + topic + " - " + typeDesc + " - ");
+				//outString.append(partnerString + " - " + typeString + " - " + topic + " - " + typeDesc + " - ");
                 if (partnerString.equals("CDC") && !typeString.equals("W"))
                 {
                     if (topic.equals("T"))
@@ -150,6 +154,11 @@ topicNum = QBean.getTopicID(topic);
 					outString.append(" Contact");
 					addedContact = 1;
 				}
+				
+				if (typeDesc.equals("State") && (addedContact != 1)) {
+					outString.append(" Contact");
+					addedContact = 1;
+				}
                 // Close the underlining and the table cell.
                 outString.append("</u>" + endTD);
             }
@@ -160,7 +169,7 @@ topicNum = QBean.getTopicID(topic);
                 outString.append("<tr><td height='20'>&nbsp;</td></tr>");
                 outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;font-style: normal;' align='left'>");
                 outString.append("<u>" + rs.getTypeDescription());
-				outString.append(partnerString + " - " + typeString + " - " + topic + " - " + typeDesc + " - ");
+				//outString.append(partnerString + " - " + typeString + " - " + topic + " - " + typeDesc + " - ");
 				
                 if (partnerString.equals("CDC") && !typeString.equals("W"))
                 {
@@ -175,6 +184,11 @@ topicNum = QBean.getTopicID(topic);
                 }
 
 				if (typeDesc.equals("Regional") && (addedContact != 1)) {
+					outString.append(" Contact");
+					addedContact = 1;
+				}
+				
+				if (typeDesc.equals("State") && (addedContact != 1)) {
 					outString.append(" Contact");
 					addedContact = 1;
 				}
