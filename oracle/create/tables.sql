@@ -1,35 +1,41 @@
-/* $Id: tables.sql,v 1.1 2003-05-19 20:00:13 juranj Exp $ */
+/* $Id: tables.sql,v 1.2 2003-05-19 20:17:27 juranj Exp $ */
 
-CREATE TABLE description (
-  id char(5),
-  cctopic char(1),
-  name char(50));
+CREATE TABLE cc_partners (
+    id                NUMBER(5,0),
+    abbreviation      VARCHAR2(5)   NOT NULL,
+    cctopic           VARCHAR2(1),
+    name              VARCHAR2(50)  NOT NULL,
+    CONSTRAINT cc_partners_pk PRIMARY KEY (id));
 
-CREATE TABLE partners (
-  region char(2),
-  partner char(5),
-  topic char(1),
-  type char(1),
-  contact char(1),
-  name char(100),
-  degree char(20),
-  title char(100),
-  org1 char(100),
-  org2 char(100),
-  orgurl char(200),
-  address1 char(100),
-  address2 char(100),
-  city char(50),
-  state char(3),
-  zip char(15),
-  phone char(50),
-  fax char(50),
-  cell char(50),
-  email char(100));
+CREATE TABLE cc_partner_contacts (
+    id              NUMBER(10,0),
+    partner_id                     NOT NULL,
+    region          VARCHAR2(2),
+    partner         VARCHAR2(5),
+    topic           VARCHAR2(1),
+    type            VARCHAR2(1),
+    contact         VARCHAR2(1),
+    name            VARCHAR2(100),
+    degree          VARCHAR2(20),
+    title           VARCHAR2(100),
+    org1            VARCHAR2(100),
+    org2            VARCHAR2(100),
+    orgurl          VARCHAR2(200),
+    address1        VARCHAR2(100),
+    address2        VARCHAR2(100),
+    city            VARCHAR2(50),
+    state           VARCHAR2(3),
+    zip             VARCHAR2(15),
+    phone           VARCHAR2(50),
+    fax             VARCHAR2(50),
+    cell            VARCHAR2(50),
+    email           VARCHAR2(100),
+    CONSTRAINT cc_partner_contact_pk PRIMARY KEY (id),
+    CONSTRAINT cc_partner_contact_partner_fk FOREIGN KEY (partner_id)
+        REFERENCES cc_partners(id));
 
-
-CREATE TABLE states (
-  state char(2) DEFAULT '' NOT NULL,
-  name varchar(32) DEFAULT '' NOT NULL,
-  type char(1),
-  PRIMARY KEY (state));
+CREATE TABLE cc_partner_states (
+    abbreviation  VARCHAR2(2),
+    name          VARCHAR2(32)    NOT NULL,
+    type          VARCHAR2(1),
+    CONSTRAINT cc_partner_states_pk PRIMARY KEY (abbreviation));
