@@ -6,23 +6,15 @@
     StringBuffer stateList = null;
 	int topic = 0;
 	Integer ccTopic = new Integer(0);
-    //String topic = "C";
     String param = null;
-	//int param = 0;
-    String htmlString = null;
+	String htmlString = null;
     String caption = null;
     String pageTitle = "";
 	
-
     param = request.getParameter("cctopic");
-   if (param != null)
-	//if (param != 0)
-        // The database expects the topic to be an uppercase character.
-        // Uppercase it here so we don't have to uppercase it every time
-        // we use it.
-        //topic = param.toUpperCase();
-		//topic = Integer.parseInt(param);
-		topic = Integer.parseInt(param);
+	
+    if (param != null)
+	    topic = Integer.parseInt(param);
 		ccTopic = new Integer(topic);
 
     QueryBean QBean = new QueryBean();
@@ -79,7 +71,7 @@
 <link href="styles.css" rel="stylesheet" type="text/css">
 </head>
 <body topmargin="0" leftmargin="0" bgcolor="White">
-<table width="100%" border="1" cellspacing="0" cellpadding="0">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
     <td><p class="banner"><a href="../index.html"><img src="../images/planet_logo.gif" alt="Cancer Control PLANET - Plan, Link, Act, Network with Evidence-based Tools" width="169" height="87" border="0"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p></td>
     <td><a href="../index.html"><img src="../images/planet_banner2.gif" alt="Cancer Control PLANET - Links to resources for cancer control planning" width="369" height="82" border="0"></a></td>
@@ -95,7 +87,7 @@
   </tr>
 </table>
 
-<table summary="Links to potential partner list" bgcolor="white" border="1" cellpadding="5" cellspacing="0">
+<table summary="Links to potential partner list" bgcolor="white" border="0" cellpadding="5" cellspacing="0">
 <tr>
 <td align="left" colspan="3">
 <div style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 16px;	font-weight: bold;color : #000000;">
@@ -121,7 +113,7 @@ To view, click on map or state name below.
 </td>
 </tr>
 </table>
-<table width="100%" border="1" cellspacing="0" cellpadding="0">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
     <td><hr size="1" noshade>
 	<div align="center">
