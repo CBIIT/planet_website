@@ -25,7 +25,6 @@
 
     String typeString = "S";
 
-
     ResultSet rs = QBean.getStateList();
     if (rs.next())
     { 

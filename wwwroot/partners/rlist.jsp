@@ -253,7 +253,6 @@ else
 					if (region.compareTo(rs.getString("abbreviation")) == 0)
 						stateStatic=rs.getString("name");
 				
-				
             if (count > 27)
             {
                 stateList.append("</td><td valign='top' nowrap>");

@@ -22,7 +22,6 @@ if (param != null)
 param = request.getParameter("cctopic");
 if (param != null)
     topic = param.toUpperCase();
-
     StringBuffer outString = null;
     StringBuffer stateList = null;
     ResultSet rs = null;
