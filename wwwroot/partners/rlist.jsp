@@ -86,7 +86,8 @@ if (param != null)
                 //typeString = rs.getString("type");
                 stateName = rs.getString("state_name");
 				
-                outString.append("<p><font style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: #000000;'><font style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: #AA0000;'><a name='"+topicID+"'>"+topicDesc+"</font></p>");
+				outString.append("<p><a href='#top'>[Top of Page]</a></p>");
+                outString.append("<p><font style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: #000000;'><font style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: #AA0000;'><a name='"+topicID+"'></a>"+topicDesc+"</font></p>");
                 outString.append("<p><table border='0' cellspacing='0' cellpadding='0'>");
 				
 				outString.append("<tr><td style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'>"+rs.getString("researcher_name")+"  "+rs.getString("degree")+endTD);
@@ -320,7 +321,7 @@ else
 	<td valign="top" width="30%">
 		<table bgcolor='white' border='0' cellpadding="5" cellspacing="0">
 		<tr>
-			<td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold;"><%= topicString.toString()%>
+			<td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold;"><a name="top"></a><%= topicString.toString()%>
 			</td>
 		</tr>
 		</table>
