@@ -139,10 +139,10 @@ if (param != null)
 					
 					outString.append("<a name='"+topicID+"'></a>"+topicDesc+"</td></tr>");
 	                outString.append("<tr><td><table border='0' cellspacing='0' cellpadding='0'>");
-					outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif; font-size: 12;font-weight: bold;color: #000000;' align='left' valign='top'>"+rs.getResearcherName()+"  ");
+					outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif; font-size: 12;font-weight: bold;color: #000000;' align='left' valign='top'>"+rs.getResearcherName());
 					
 					if (rs.getDegree() != null && rs.getDegree().compareTo("") != 0)
-						outString.append(rs.getDegree());
+						outString.append(", "+rs.getDegree());
 					
 					outString.append(endTD);
            		}
@@ -161,10 +161,10 @@ if (param != null)
                 researcherId = rs.getResearcherId();
                 researcherString = rs.getStateAbbreviation();
                 outString.append("<td valign='top'><table border='0' cellspacing='0' cellpadding='0'>");
-                outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif; font-size: 12;font-weight: bold;color: #000000;' align='left' valign='top'>"+rs.getResearcherName()+"  ");
+                outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif; font-size: 12;font-weight: bold;color: #000000;' align='left' valign='top'>"+rs.getResearcherName());
 					
 					if (rs.getDegree() != null && rs.getDegree().compareTo("") != 0)
-						outString.append(rs.getDegree());
+						outString.append(", "+rs.getDegree());
 					
 					outString.append(endTD);
             }
@@ -283,7 +283,7 @@ if (param != null)
                 stateList.append("<br />");
 			
 			if (region.compareTo(rs.getAbbreviation()) == 0)
-				stateList.append("<font style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size : 20px; color : AA0000;'>"+rs.getName().trim()+"</font>");
+				stateList.append("<font style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	color : AA0000; font-size: 12px;'>"+rs.getName().trim()+"</font>");
 			else
 	            stateList.append("<a href='rlist.jsp?r="+rs.getAbbreviation()+"&cctopic="+topic+"' class='a1' title='"+rs.getName().trim()+"'>"+rs.getName()+"</a>");
 			
