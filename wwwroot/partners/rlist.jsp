@@ -5,8 +5,7 @@
 <%
 String region = "ALL";
 String pcScript = "";
-//int topic = 0;
-//Integer ccTopic = new Integer(0);
+//String topic = "C";
 
 int ccTopic = 0;
 Integer topic = new Integer(0);
@@ -15,14 +14,15 @@ String htmlString = null;
 String caption = null;
 String cdcSubTitle = "State Health Department Contact";
 String param = request.getParameter("r");
+
 if (param != null)
     region = param.toUpperCase();
 	param = request.getParameter("cctopic");
-	
-if (param != null)
-    ccTopic = Integer.parseInt(param);
-	topic = new Integer(ccTopic);
 
+if (param != null)
+	ccTopic = Integer.parseInt(param);
+    topic = new Integer(ccTopic);
+	
     StringBuffer outString = null;
     StringBuffer stateList = null;
     ResultSet rs = null;
@@ -34,26 +34,23 @@ if (param != null)
 
     if (region.equals("ALL"))
     {
-        pcScript = "US.addPCXML(<DefaultShapeSettings><Properties FillColor='#B20000'/><Drilldown URL='rlist.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultShapeSettings>)";
-        rs = QBean.getResearchers(topic);
-		 
+        pcScript = "US.addPCXML(<DefaultShapeSettings><Properties FillColor='#B20000'/><Drilldown URL='list.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultShapeSettings>)";
+        rs = QBean.getPartners(topic);
     }
     else
     {
-        pcScript = "US.setShapeValues("+region.trim()+",1)US.addPCXML(<DefaultShapeSettings><Drilldown URL='rlist.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultShapeSettings>)@_END";
-       	rs = QBean.getResearchers(topic, region);
-	}
+        pcScript = "US.setShapeValues("+region.trim()+",1)US.addPCXML(<DefaultShapeSettings><Drilldown URL='list.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultShapeSettings>)@_END";
+        rs = QBean.getPartners(topic.toUpperCase(), region);
+    }
 
     String beginTD = "<tr><td style='font-family: Arial,Helvetica;font-size: 12;' align=\"left\">";
     String endTD = "</td></tr>";
-   
+
     if (rs.next())
     {
         outString = new StringBuffer();
         String researcherString = "";
         int researcherId = 0;
-		//String partnerString = "";
-        //int partnerId = 0;
         String stateName = "";
         int count = 1;
         String typeString = "";
@@ -64,89 +61,85 @@ if (param != null)
             if (stateName.compareTo(rs.getString("state_name").trim()) != 0)
             {
                 if (count > 1)
-                outString.append("</table></p>");
+                    outString.append("</table></p>");
                 researcherId = rs.getInt("researcher_id");
-                //researcherString = rs.getString("partner_abbreviation");
-				researcherString = rs.getString("state_abbreviation");
+                researcherString = rs.getString("state_abbreviation");
                 //typeString = rs.getString("type");
                 stateName = rs.getString("state_name");
                 outString.append("<p><font style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: #000000;'>"+pageTitle+" - </font><font style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: #AA0000;'>"+stateName.trim()+"</font></p>");
                 outString.append("<p><table border='0' cellspacing='0' cellpadding='0' width='100%'>");
-                outString.append("<tr><td style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'>"+rs.getString("partner_name")+endTD);
+                outString.append("<tr><td style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'>"+rs.getString("researcher_name")+endTD);
 
                 //outString.append("<tr><td style='font-family: Arial, Helvetica, sans-serif;font-size: 12;font-style: normal;' align='left'>");
                 //outString.append("<u>" + rs.getString("type_description"));
                 
                 // For state and territory contacts we may need to tack on some additional information.
-                //if (researcherString.equals("CDC") && !typeString.equals("W"))
+                //if (partnerString.equals("CDC") && !typeString.equals("W"))
                 //{
-                  //  if (topic.equals("T"))
-                   //     outString.append(" Health Department Web Site");
-                  //  else
+                    //if (topic.equals("T"))
+                     //   outString.append(" Health Department Web Site");
+                   // else
                   //      if (topic.equals("P"))
-                 //           outString.append(" Health Department Contact");
-                 //       else
-                 //           outString.append(" Contact");
-               // }
+                    //        outString.append(" Health Department Contact");
+                     //   else
+                     //       outString.append(" Contact");
+              //  }
 
                 // Close the underlining and the table cell.
               //  outString.append("</u>"+endTD);
-            //}
+          //  }
 
-            //if (researcherId != rs.getInt("partner_id"))
-			if (researcherId != rs.getInt("researcher_id"))
+            if (researcherId != rs.getInt("researcher_id"))
             {
                 if (count > 1)
                    outString.append("</table></p>");
                 researcherId = rs.getInt("researcher_id");
                 researcherString = rs.getString("state_abbreviation");
-				//researcherId = rs.getInt("partner_id");
-                //researcherString = rs.getString("partner_abbreviation");
                 typeString = rs.getString("type");
                 outString.append("<p><table border='0' cellspacing='0' cellpadding='0' width='100%'>");
-                outString.append("<tr><td style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'>"+rs.getString("partner_name")+endTD);
+                outString.append("<tr><td style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'>"+rs.getString("researcher_name")+endTD);
 
                 outString.append("<tr><td style='font-family: Arial, Helvetica, sans-serif;font-size: 12;style: bold;' align='left'>");
                 //outString.append("<u>" + rs.getString("type_description"));
                 
                 // For state and territory contacts we may need to tack on some additional information.
-               // if (researcherString.equals("CDC") && !typeString.equals("W"))
-              //  {
-              //      if (topic.equals("T"))
-               //         outString.append(" Health Department Web Site");
-               //     else
-               //         if (topic.equals("P"))
-               //             outString.append(" Health Department Contact");
-                //        else
-               //             outString.append(" Contact");
+                //if (partnerString.equals("CDC") && !typeString.equals("W"))
+                //{
+                    //if (topic.equals("T"))
+                    //    outString.append(" Health Department Web Site");
+                  //  else
+                   //     if (topic.equals("P"))
+                  //          outString.append(" Health Department Contact");
+                 //       else
+                      //      outString.append(" Contact");
+              //  }
+
+                // Close the underlining and the table cell.
+             //   outString.append("</u>" + endTD);
+            }
+
+          //  if (typeString.compareTo(rs.getString("type").trim()) != 0)
+          //  {
+             //   outString.append("<tr><td height='20'>&nbsp;</td></tr>");
+             //   outString.append("<tr><td style='font-family: Arial,Helvetica;font-size: 12;font-style: normal;' align='left'>");
+              //  outString.append("<u>" + rs.getString("type_description"));
+             //   if (partnerString.equals("CDC") && !typeString.equals("W"))
+               // {
+                 //   if (topic.compareTo("C") != 0)
+                  //     outString.append(" Health Department Contact");
+                 //   else
+                  //     outString.append(" Contact");
                // }
 
                 // Close the underlining and the table cell.
                // outString.append("</u>" + endTD);
-            }
+                //typeString = rs.getString("type");
+          //  }
 
-           // if (typeString.compareTo(rs.getString("type").trim()) != 0)
-           // {
-             //   outString.append("<tr><td height='20'>&nbsp;</td></tr>");
-             //   outString.append("<tr><td style='font-family: Arial,Helvetica;font-size: 12;font-style: normal;' align='left'>");
-                //outString.append("<u>" + rs.getString("type_description"));
-             //   if (researcherString.equals("CDC") && !typeString.equals("W"))
-             //   {
-             //       if (topic.compareTo("C") != 0)
-             //          outString.append(" Health Department Contact");
-             //       else
-             //          outString.append(" Contact");
-             //   }
-
-                // Close the underlining and the table cell.
-                //outString.append("</u>" + endTD);
-              //  typeString = rs.getString("type");
-            //}
-
-            //if (rs.getString("contact_name") != null && rs.getString("contact_name").compareTo("") != 0)
+         //   if (rs.getString("contact_name") != null && rs.getString("contact_name").compareTo("") != 0)
            // {
                // outString.append(beginTD+rs.getString("contact_name").trim());
-				
+
 			  if (rs.getString("researcher_name") != null && rs.getString("researcher_name").compareTo("") != 0)
             {
                 outString.append(beginTD+rs.getString("researcher_name").trim());
@@ -187,7 +180,7 @@ if (param != null)
                     urlStr = rs.getString("orgurl").trim();
 
                 // Don't display Web site: field header for tobacco, breast cancer, and cervical cancer contacts.
-                if (researcherString.equals("CDC") && (topic.equals("T") || topic.equals("B") || topic.equals("V")))
+                if (partnerString.equals("CDC") && (topic.equals("T") || topic.equals("B") || topic.equals("V")))
                 {
                    outString.append(beginTD+"<a href=\""+urlStr+"\" target=\"_blank\" class='a1'>"+urlStr+"</a>"+endTD);
                 }
@@ -203,7 +196,7 @@ if (param != null)
                     urlStr = rs.getString("orgurl2").trim();
 
                 // Don't display Web site: field header for tobacco, breast cancer, and cervical cancer contacts.
-                if (researcherString.equals("CDC") && (topic.equals("T") || topic.equals("B") || topic.equals("V")))
+                if (partnerString.equals("CDC") && (topic.equals("T") || topic.equals("B") || topic.equals("V")))
                 {
                    outString.append(beginTD+"<a href=\""+urlStr+"\" target=\"_blank\" class='a1'>"+urlStr+"</a>"+endTD);
                 }
@@ -215,18 +208,6 @@ if (param != null)
             count ++;
         } while (rs.next());
     } //end of if statement
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 
     rs = QBean.getStateList();
     if (rs.next())
@@ -243,8 +224,8 @@ if (param != null)
             }
             //if (typeString.compareTo(rs.getString("type")) != 0)
             //{
-             //   stateList.append("<br />");
-             //   typeString = rs.getString("type");
+               // stateList.append("<br />");
+              //  typeString = rs.getString("type");
            // }
             if (count > 0)
                 stateList.append("<br />");
@@ -275,7 +256,7 @@ if (param != null)
 <link href="styles.css" rel="stylesheet" type="text/css">
 </head>
 <body topmargin="0" leftmargin="0" bgcolor="White">
-<table width="100%" border="0" cellspacing="0" cellpadding="0"><!-- header -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
     <td><p class="banner"><a href="../index.html"><img src="../images/planet_logo.gif" alt="Cancer Control PLANET - Plan, Link, Act, Network with Evidence-based Tools" width="169" height="87" border="0"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p></td>
     <td><a href="../index.html"><img src="../images/planet_banner2.gif" alt="Cancer Control PLANET - Links to resources for cancer control planning" width="369" height="82" border="0"></a></td>
@@ -289,30 +270,30 @@ if (param != null)
       <hr size="1" noshade>
 	</td>
   </tr>
-</table><!-- end of header -->
-<table bgcolor="white" border="0" cellpadding="0" cellspacing="0"><!-- body -->
+</table>
+<table bgcolor="white" border="0" cellpadding="0" cellspacing="0">
 <tr>
-<td valign='top' width="20%">
-<table bgcolor='white' border='0' cellpadding="1" cellspacing="0"><!-- state list & popchart -->
+<td valign='top'><table><tr><td><%= outString.toString()%></table></td></tr></table></td>
+<td width="2" valign='top'>&nbsp;</td>
+<td valign='top'>
+<table bgcolor='white' border='0' cellpadding="5" cellspacing="0">
 <tr>
-<td valign="top" colspan="2" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;">View another state / territory</td>
+<td valign="top" colspan="3" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;">View another state / territory</td>
 </tr>
 <tr>
-<td valign='top'> 
+<td valign='top'>
 <%= stateList.toString()%>
 </td>
-</tr>
-</table><!-- end of state list & popchart -->
-</td>
-<td colspan="2" valign='top'>&nbsp;</td>
-<td valign='top'  width="80%">
-<table border="1"><!-- content -->
-<tr><td><%--= outString.toString()--%></table></td></tr>
-</table><!-- end of content -->
+<td valign='top'>
+<%= htmlString%><br>
+<a href="javascript:window.close()">Close Window</a>
 </td>
 </tr>
-</table><!-- end of body -->
-<table width="100%" border="0" cellspacing="0" cellpadding="0"><!-- footer -->
+</table>
+</td>
+</tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
     <td><hr size="1" noshade>
 	<div align="center"><a href="../index.html">Home</a>&nbsp;&nbsp;&nbsp; <a href="../contact.html">Contact Us</a>&nbsp;&nbsp;&nbsp;
@@ -321,6 +302,6 @@ if (param != null)
         Policy</a>&nbsp;&nbsp;&nbsp; <a href="../disclaimer.html">Disclaimer</a>&nbsp;&nbsp;&nbsp; <a href="../accessibility.html">Accessibility</a><br>
       </div></td>
   </tr>
-</table><!-- end of footer -->
+</table>
 </body>
 </html>
