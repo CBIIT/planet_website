@@ -3,19 +3,18 @@
 <%@ page import="gov.nci.corda.NCIPopChartEmbedder" %>
 <%@ page import="gov.nci.planet.QueryBean" %>
 <%
-String param;
 String region = "all";
 String pcScript = "";
 String topic = "C";
 String htmlString = null;
 String caption = null;
 String cdcSubTitle = "State Health Department Contact";
-param = request.getParameter("r");
+String param = request.getParameter("r");
 if (param != null)
-	region = param;
+    region = param.toUpperCase();
 param = request.getParameter("cctopic");
 if (param != null)
-   topic = param;
+    topic = param.toUpperCase();
 
     StringBuffer outString = null;
     StringBuffer stateList = null;
