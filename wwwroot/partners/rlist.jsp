@@ -85,14 +85,15 @@ if (param != null)
  		       {
 			   		topicCount ++;
 			   		topicID = rs.getInt("topic_id");
-					rs2 = QBean.getTopicsResearcherCount(topicID);
+					
+					
+					topicInt = new Integer(topicID);
+					topicDesc = QBean.getTopicDescription(topicInt);
+					rs2 = QBean.getTopicsResearcherCount(topicInt);
 				
 					while(rs2.next()) {
 			        	topicCount ++;
 			    	}
-					
-					topicInt = new Integer(topicID);
-					topicDesc = QBean.getTopicDescription(topicInt);
 					
 					if (ccTopic == 0) {
 						topicString.append("<a href='#"+topicID+"'>"+topicDesc+"</a><br>");
