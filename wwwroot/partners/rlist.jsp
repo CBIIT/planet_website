@@ -308,7 +308,7 @@ else {
 <table bgcolor="white" border="0" cellpadding="0" cellspacing="0" width="100%">
 <tr>
 	<td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-				    
-			size : 14px;	font-weight: bold; color : #000000;" width="30%">View another state / territory<br />		
+			size : 14px;	font-weight: bold; color : #000000;" width="30%" rowspan="2">View another state / territory<br />		
 				<table bgcolor='white' border='0' cellpadding="5" cellspacing="0">
 					<tr>
 						<td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-
@@ -318,12 +318,11 @@ else {
 					</tr>
 				</table>
 	</td>
-	<td width="5%">&nbsp;</td>
+	<td width="5%" rowspan="2">&nbsp;</td>
 	<td valign="top" width="30%">
 		<table bgcolor='white' border='0' cellpadding="5" cellspacing="0">
 		<tr>
-			<td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold;"><a name="top"></a><%= topicString.toString()%>
-			</td>
+			<td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold;"><a name="top"></a><%= topicString.toString()%></td>
 		</tr>
 		</table>
 	</td>
@@ -331,9 +330,12 @@ else {
 	<td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;" width="30%"><a href="list.jsp?r=<%= region%>&cctopic=C">View Program Partners in <%= stateStatic%></a>
 	</td>
 </tr>
+<tr>
+	<td colspan="3"><%= outString.toString()%></td>
+</tr>
 </table>
 
-<%= outString.toString()%>
+
 			
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
