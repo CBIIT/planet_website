@@ -83,7 +83,7 @@ if (param != null)
                 stateName = rs.getString("state_name");
 				
                 outString.append("<p><font style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: #000000;'><font style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: #AA0000;'>"+topicDesc+"</font></p>");
-                outString.append("<p><table border='1' cellspacing='0' cellpadding='0'>");
+                outString.append("<p><table border='0' cellspacing='0' cellpadding='0'>");
 				
 				outString.append("<tr><td style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'>"+rs.getString("researcher_name")+"  "+rs.getString("degree")+endTD);
 				
@@ -118,7 +118,7 @@ if (param != null)
                 researcherId = rs.getInt("researcher_id");
                 researcherString = rs.getString("state_abbreviation");
                 //typeString = rs.getString("type");
-                outString.append("<p><table border='1' cellspacing='0' cellpadding='0'>");
+                outString.append("<p><table border='0' cellspacing='0' cellpadding='0'>");
                 outString.append("<tr><td style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'>"+rs.getString("researcher_name")+"  "+rs.getString("degree")+endTD);
 
                //outString.append("<tr><td style='font-family: Arial, Helvetica, sans-serif;font-size: 12;style: bold;' align='left'>");
@@ -230,7 +230,7 @@ if (param != null)
                 else
                     outString.append(beginTD+"Web site:  <a href=\""+urlStr+"\" target=\"_blank\" class='a1'>"+urlStr+"</a>"+endTD);
             }
-            outString.append("<tr><td height='10'>&nbsp;</td></tr>");
+            //outString.append("<tr><td height='10'>&nbsp;</td></tr>");
 
             count ++;
 
@@ -307,11 +307,11 @@ else
   </tr>
 </table>
 
-<table bgcolor="white" border="1" cellpadding="0" cellspacing="0" width="100%">
+<table bgcolor="white" border="0" cellpadding="0" cellspacing="0" width="100%">
 <tr>
 	<td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-				    
 			size : 14px;	font-weight: bold; color : #000000;" width="30%">View another state / territory<br />		
-				<table bgcolor='white' border='1' cellpadding="5" cellspacing="0">
+				<table bgcolor='white' border='0' cellpadding="5" cellspacing="0">
 					<tr>
 						<td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-
 						serif;	font-size : 14px;	font-weight: color : #000000;" nowrap><%= 
@@ -323,7 +323,7 @@ else
 	</td>
 	<td width="5%">&nbsp;</td>
 	<td valign="top" width="30%">
-		<table bgcolor='white' border='1' cellpadding="5" cellspacing="0">
+		<table bgcolor='white' border='0' cellpadding="5" cellspacing="0">
 		<tr>
 			<td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: color : #000000;"><%= outString.toString()%>
 			</td>
