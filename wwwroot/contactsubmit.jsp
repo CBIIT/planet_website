@@ -58,7 +58,7 @@
 
 <%
     
-    String driver = "jdbc:oracle:thin:@mooch.nci.nih.gov:1521:mooch817";
+    String driver = "jdbc:oracle:oci8:@sc1";
     String username = "pma_web_user";
     String password = "pjc242323";
 
