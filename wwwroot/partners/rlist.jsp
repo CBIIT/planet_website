@@ -71,6 +71,7 @@ if (param != null)
         String typeOutput = "";
 		int researcherCount = 0;
 			
+			
         do
         {
 		
