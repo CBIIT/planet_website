@@ -30,7 +30,7 @@ public class QueryBean
         stmt = conn.prepareCall("{call dccps.planet_pkg.GetStateList(?)}");
 		stmt.registerOutParameter(1, OracleTypes.CURSOR);
 		stmt.execute();
-		return ((OracleCallableStatement)stmt).getCursor(1);
+		return (ResultSet)stmt.getObject(1);
     }
 
     public ResultSet getStatePlans() throws SQLException
@@ -47,7 +47,7 @@ public class QueryBean
         stmt.setString(1, topic);
 		stmt.registerOutParameter(2, OracleTypes.CURSOR);
 		stmt.execute();
-		return ((OracleCallableStatement)stmt).getCursor(2);
+		return (ResultSet)stmt.getObject(2);
     }
 
     public ResultSet getPartners(String topic, String stateAbbreviation) throws SQLException
@@ -57,7 +57,7 @@ public class QueryBean
         stmt.setString(2, stateAbbreviation);
 				stmt.registerOutParameter(3, OracleTypes.CURSOR);
 				stmt.execute();
-				return ((OracleCallableStatement)stmt).getCursor(3);
+				return (ResultSet)stmt.getObject(3);
     }
 
     public ResultSet getResearchers(Integer topic) throws SQLException
@@ -66,7 +66,7 @@ public class QueryBean
         stmt.setInt(1, topic.intValue());
 				stmt.registerOutParameter(2, OracleTypes.CURSOR);
 				stmt.execute();
-				return ((OracleCallableStatement)stmt).getCursor(2);
+				return (ResultSet)stmt.getObject(2);
     }
 
     public ResultSet getResearchers(Integer topic, String stateAbbreviation) throws SQLException
@@ -76,7 +76,7 @@ public class QueryBean
         stmt.setString(2, stateAbbreviation);
 				stmt.registerOutParameter(3, OracleTypes.CURSOR);
 				stmt.execute();
-				return ((OracleCallableStatement)stmt).getCursor(3);
+				return (ResultSet)stmt.getObject(3);
     }
 
     public String getTopicDescription(String topic) throws SQLException
@@ -102,7 +102,7 @@ public class QueryBean
 	    	stmt = conn.prepareCall("{call dccps.planet_pkg.GetTopicsResearcherCount(?)}");
 	    	stmt.registerOutParameter(1, OracleTypes.CURSOR);
 	    	stmt.execute();
-	    	return ((OracleCallableStatement)stmt).getCursor(1);
+	    	return (ResultSet)stmt.getObject(1);
 	  }
 
     public ResultSet getTopicsResearcherCount(String stateAbbreviation) throws SQLException
@@ -111,7 +111,7 @@ public class QueryBean
 	    	stmt.registerOutParameter(1, OracleTypes.CURSOR);
 	    	stmt.setString(2, stateAbbreviation);
 	    	stmt.execute();
-	    	return ((OracleCallableStatement)stmt).getCursor(1);
+	    	return (ResultSet)stmt.getObject(1);
 	  }
 
     public int getTopicResearcherCount(Integer topic) throws SQLException
