@@ -266,13 +266,13 @@ if (param != null)
 				if (topicDesc.compareTo("") != 0)
 					partnerText=topicDesc+" and Other Program Partners - All States";	
 				else
-					partnerText="Program Partners - All States";
+					partnerText="Program Partners - <font style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 20px;	font-weight: bold; color : #AA0000;'>All States</font>";
 		}
 		else
 				if (topicDesc.compareTo("") != 0)
-					partnerText=topicDesc+" and Other Program Partners - "+stateStatic;
+					partnerText=topicDesc+" and Other Program Partners - <font style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 20px;	font-weight: bold; color : #AA0000;'>"+stateStatic+"</font>";
 				else
-					partnerText="Program Partners - "+stateStatic;
+					partnerText="Program Partners - <font style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 20px;	font-weight: bold; color : #AA0000;'>"+stateStatic+"</font>";
 			
     QBean.close();
 
@@ -349,7 +349,7 @@ if (param != null)
 <tr>
 <td valign="top" width="25%"><%= stateList.toString()%></td>
 <td valign="top" width="5%">&nbsp;</td>
-<td valign="top" width="25%"><font style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 18px;	font-weight: bold; color : #AA0000;"><%= stateStatic%></font><br><br><%= outString.toString()%></td>
+<td valign="top" width="25%"><%= outString.toString()%></td>
 <td valign="top" width="5%">&nbsp;</td>
 <td valign="top" width="40%"><%= htmlString%></td>
 </tr>
