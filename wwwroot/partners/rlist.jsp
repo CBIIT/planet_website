@@ -61,7 +61,7 @@ if (param != null)
 
 
 		outString = new StringBuffer("<table cellspacing='0' cellpadding='5'>");
-		topicString = new StringBuffer("<tr><td valign='top' style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;' colspan='2'><a name='top'></a>View by Topic:</td></tr><tr>");
+		topicString = new StringBuffer("<tr><td valign='top' style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;' colspan='2'><a name='top'></a>View by Topic:</td></tr><tr><td valign='top' style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 12;'>");
 	
     if (rs.next())
     {
@@ -98,11 +98,11 @@ if (param != null)
 						listTitle = "<font style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: #000000;'>Research Partners - </font><font style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: #AA0000;'>"+stateName+"</font>";
 					}
 					
-					topicString.append("<td valign='top' style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 12;'><a href='#"+topicID+"' style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 12;'>"+topicDesc+"</a></td>");						
+					topicString.append("<li><a href='#"+topicID+"' style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 12;'>"+topicDesc+"</a></li>");						
 					
 					
-					if ((topicCount % 2) == 0)
-						topicString.append("</tr><tr>");
+					//if ((topicCount % 2) == 0)
+						//topicString.append("</tr><tr>");
 						
 	                if (count > 1)
 	  	               	outString.append("</table></td>");
@@ -223,9 +223,9 @@ if (param != null)
 	     count ++;       
      } while (rs.next());
 	 
-	 if ((topicCount % 2) == 1)
-	 	topicString.append("<td>&nbsp;</td>");
-	
+	// if ((topicCount % 2) == 1)
+	 	//topicString.append("<td>&nbsp;</td>");
+	topicString.append("</td></tr>");
 	 outString.append("</table>");
 	 
 	 if ((cellCount % 2) == 0)
