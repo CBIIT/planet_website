@@ -1,9 +1,9 @@
 <%@ page language="java" contentType="text/html" %>
 <%@ page import="java.text.*" %>
 <%@ page import="java.io.*" %>
-<%@ page import="java.sql.*" %>
+<%@ page import="java.sql.ResultSet" %>
 <%@ page import="com.corda.CordaEmbedder" %>
-<%@ page import="oracle.jdbc.driver.*" %>
+<%@ page import="gov.nci.planet.QueryBean" %>
 <%
 String param;
 String region = "all";
@@ -30,43 +30,27 @@ else
    pageTitle = "Potential Partners";
    if (topic.equalsIgnoreCase("T"))
    	caption = "Cancer Control PLANET - Tobacco Control Partners";
-   else if (topic.equalsIgnoreCase("P"))
-   	caption = "Cancer Control PLANET - Physical Activity Partners";
+   else
+        if (topic.equalsIgnoreCase("P"))
+   	    caption = "Cancer Control PLANET - Physical Activity Partners";
 }
 
-String whereString = "";
-
-String URL = "jdbc:oracle:thin:@mooch.nci.nih.gov:1521:mooch920";
-String username = "pma_web_user";
-String password = "pjc242323";
-
-
-StringBuffer outString = null;
-StringBuffer stateList = null;
-
+    StringBuffer outString = null;
+    StringBuffer stateList = null;
+    ResultSet rs = null;
+    QueryBean QBean = new QueryBean();
+    
     if (region.equals("all"))
+    {
         pcScript = "US.addPCXML(<DefaultShapeSettings><Properties FillColor='#B20000'/><Drilldown URL='list.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultShapeSettings>)";
+        rs = QBean.getPartners(topic.toUpperCase());
+    }
     else
     {
         pcScript = "US.setShapeValues("+region.trim()+",1)US.addPCXML(<DefaultShapeSettings><Drilldown URL='list.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultShapeSettings>)@_END";
-        whereString = " AND region = '" + region + "'";
+        rs = QBean.getPartners(topic.toUpperCase(), region);
     }
 
-    DriverManager.registerDriver(new OracleDriver());
-    Connection con = DriverManager.getConnection(URL, username, password);
-    Statement stmt = con.createStatement();
-    String theQuery = "SELECT region, p.abbreviation partner, pc.type, contact, pc.name contact_name, " +
-                        "degree, title, org1, org2, orgurl, address1, address2, city, " +
-                        "pc.state, zip, phone, fax, cell, email, p.name partner_name, ps.name state_name " +
-                      "FROM dccps.cc_partners p, dccps.cc_partner_contacts pc, dccps.cc_partner_states ps  " +
-                      "WHERE p.id = pc.partner_id " +
-                        "AND pc.region = ps.abbreviation " +
-                        "AND pc.type <> 'N' " +
-                        "AND (cctopic IS NULL OR cctopic = '" + topic.toUpperCase() + "') " +
-                        whereString +
-                      " ORDER BY ps.name, p.abbreviation, pc.type, contact";
-
-    ResultSet rs = stmt.executeQuery(theQuery);
     String beginTD = "<tr><td style='font-family: Arial,Helvetica;font-size: 12;' align=\"left\">";
     String endTD = "</td></tr>";
 
@@ -84,7 +68,7 @@ StringBuffer stateList = null;
             {
                 if (count > 1)
                     outString.append("</table></p>");
-                partnerString = rs.getString("partner");
+                partnerString = rs.getString("partner_abbreviation");
                 typeString = rs.getString("type");
                 stateName = rs.getString("state_name");
                 outString.append("<p><font style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: #000000;'>"+pageTitle+" - </font><font style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: #AA0000;'>"+stateName.trim()+"</font></p>");
@@ -118,11 +102,11 @@ StringBuffer stateList = null;
                     }
                     typeString = rs.getString("type");
             }
-            if (partnerString.compareTo(rs.getString("partner").trim()) != 0)
+            if (partnerString.compareTo(rs.getString("partner_abbreviation").trim()) != 0)
             {
                 if (count > 1)
                    outString.append("</table></p>");
-                partnerString = rs.getString("partner");
+                partnerString = rs.getString("partner_abbreviation");
                 typeString = rs.getString("type");
                 outString.append("<p><table border='0' cellspacing='0' cellpadding='0' width='100%'>");
                 outString.append("<tr><td style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'>"+rs.getString("partner_name")+endTD);
@@ -189,7 +173,7 @@ StringBuffer stateList = null;
             if (rs.getString("address2") != null && rs.getString("address2").compareTo("") != 0)
                 outString.append(beginTD+rs.getString("address2").trim()+endTD);
             if (rs.getString("city") != null && rs.getString("city").compareTo("") != 0)
-                outString.append(beginTD+rs.getString("city").trim()+", "+rs.getString("state")+" "+rs.getString("zip").trim()+endTD);
+                outString.append(beginTD+rs.getString("city").trim()+", "+rs.getString("address_state")+" "+rs.getString("zip").trim()+endTD);
             if (rs.getString("phone") != null && rs.getString("phone").compareTo("") != 0)
                     outString.append(beginTD+"Phone:  "+rs.getString("phone").trim()+endTD);
             if (rs.getString("fax") != null && rs.getString("fax").compareTo("") != 0)
@@ -220,11 +204,8 @@ StringBuffer stateList = null;
             count ++;
         } while (rs.next());	
     } //end of if statement
-     
-    theQuery = "SELECT type, abbreviation, name " +
-               "FROM dccps.cc_partner_states " +
-               "ORDER BY type, name";
-    rs = stmt.executeQuery(theQuery);
+
+    rs = QBean.getStateList();
     if (rs.next())
     {
         stateList = new StringBuffer();
@@ -249,6 +230,8 @@ StringBuffer stateList = null;
         } while (rs.next());
         stateList.append("<br /><br /><a href='list.jsp?r=all&cctopic="+topic.toUpperCase()+"' title=\"All states and regions\">All</a>");
     }
+
+    QBean.close();
      
     CordaEmbedder myChart = new CordaEmbedder();
     myChart.appearanceFile = "apfiles/planet/ccpmap_small.pcxml";

@@ -3,7 +3,7 @@
 <%@ page import="java.io.*" %>
 <%@ page import="java.sql.*" %>
 <%@ page import="com.corda.CordaEmbedder" %>
-<%@ page import="oracle.jdbc.driver.*" %>
+<%@ page import="gov.nci.planet.QueryBean" %>
 <%
 StringBuffer stateList = null;
 String topic = "C";
@@ -32,20 +32,10 @@ else
    caption = "Cancer Control PLANET - Cancer Control Partners";
 }
 
-    String URL = "jdbc:oracle:thin:@mooch.nci.nih.gov:1521:mooch920";
-    String username = "pma_web_user";
-    String password = "pjc242323";
     String typeString = "S";
- 
-    DriverManager.registerDriver(new OracleDriver());
-    Connection con = DriverManager.getConnection(URL, username, password);
-    
-    Statement stmt = con.createStatement();
-    String theQuery = "SELECT abbreviation, name, type " +
-                      "FROM dccps.cc_partner_states " +
-                      "ORDER BY type, name";
+    QueryBean QBean = new QueryBean();
 
-    ResultSet rs = stmt.executeQuery(theQuery);
+    ResultSet rs = QBean.getStateList();
     if (rs.next())
     {
         stateList = new StringBuffer();
@@ -67,6 +57,8 @@ else
       } while (rs.next());
     stateList.append("</td>");
     }
+
+    QBean.close();
      
     CordaEmbedder myChart = new CordaEmbedder();
     myChart.appearanceFile = "apfiles/planet/ccpmap.pcxml";
