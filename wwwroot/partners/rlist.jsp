@@ -64,7 +64,7 @@ if (param != null)
 		outString = new StringBuffer();
         String researcherString = "";
         int researcherId = 0;
-        int count = 0;
+        int count = 1;
         String typeString = "";
         String typeOutput = "";
 		topicString = new StringBuffer();
@@ -72,7 +72,7 @@ if (param != null)
 		
         do
         {
-		count ++;
+		
            if (topicID != rs.getInt("topic_id"))
  		       {
 			   		topicID = rs.getInt("topic_id");
@@ -241,12 +241,11 @@ if (param != null)
             }
             //outString.append("<tr><td height='10'>&nbsp;</td></tr>");
 
-            
+     count ++;       
 
      } while (rs.next());
 	 
-	 if (count == 1)
-		outString.append("<p></font><a href='#top'>[Top of Page]</a></p>");
+	 
 	 
 	 outString.append("</table>");
 }
