@@ -72,12 +72,6 @@ if (param != null)
 		topicString = new StringBuffer();
 		int researcherCount = 0;
 				
-		rs2 = QBean.getTopicsResearcherCount();
-				
-		while(rs2.next()) {
-        	topicCount ++;
-    	}
-		
         do
         {
 		
