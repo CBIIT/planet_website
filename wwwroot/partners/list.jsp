@@ -9,7 +9,7 @@ String pcScript = "";
 String topic = "C";
 String htmlString = null;
 String caption = null;
-String pageTitle = "Cancer Control Partners";
+String pageTitle = "";
 String cdcSubTitle = "State Health Department Contact";
 param = request.getParameter("r");
 if (param != null)
@@ -18,25 +18,14 @@ param = request.getParameter("cctopic");
 if (param != null)
    topic = param;
 
-if (topic.equalsIgnoreCase("C"))
-{
-   pageTitle = "Cancer Control Partners";
-   caption = "Cancer Control PLANET - Cancer Control Partners";
-}
-else
-{
-   pageTitle = "Potential Partners";
-   if (topic.equalsIgnoreCase("T"))
-   	caption = "Cancer Control PLANET - Tobacco Control Partners";
-   else
-        if (topic.equalsIgnoreCase("P"))
-   	    caption = "Cancer Control PLANET - Physical Activity Partners";
-}
-
     StringBuffer outString = null;
     StringBuffer stateList = null;
     ResultSet rs = null;
     QueryBean QBean = new QueryBean();
+
+    // Find the page title to use based on the topic
+    pageTitle = QBean.getTopicDescription(topic);
+    caption = "Cancer Control PLANET - " + pageTitle;
 
     if (region.equals("all"))
     {
