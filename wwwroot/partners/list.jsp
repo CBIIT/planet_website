@@ -319,13 +319,18 @@ if (param != null)
 
 <table bgcolor="white" border="0" cellpadding="0" cellspacing="0">
 <tr>
-<td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 18px;	font-weight: bold; color : #000000;" align="right" colspan="2">Program Partners in <%= stateStatic%> for <%= topicDesc%></td>
-<td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;" align="right"><a href="rlist.jsp?r=<%= region%>&cctopic=0">View Research Partners in <%= stateStatic%></a></td>
+<td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 18px;	font-weight: bold; color : #000000;" align="left" colspan="3">Program Partners in <%= stateStatic%> for <%= topicDesc%></td>
+<td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;" align="right" colspan="2"><a href="rlist.jsp?r=<%= region%>&cctopic=0">View Research Partners in <%= stateStatic%></a></td>
 </tr>
 <tr>
-<td valign="top"><%= stateList.toString()%></td>
-<td valign="top"><%= outString.toString()%></td>
-<td valign="top"><%= htmlString%></td>
+<td colspan="5">&nbsp;</td>
+</tr>
+<tr>
+<td valign="top" width="25%"><%= stateList.toString()%></td>
+<td valign="top" width="5%">&nbsp;</td>
+<td valign="top" width="25%"><%= outString.toString()%></td>
+<td valign="top" width="5%">&nbsp;</td>
+<td valign="top" width="40%"><%= htmlString%></td>
 </tr>
 </table>
 
