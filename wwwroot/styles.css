@@ -23,6 +23,30 @@ h4 {
 	margin-bottom : 0 px;
 }
 
+A.titlelink {
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size : 18px;
+	color: Blue;
+	font-style : italic;
+	text-decoration : underline;
+}
+
+A.titlelink:hover {
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size : 18px;
+	color: Blue;
+	font-style : italic;
+	text-decoration : underline;	
+}
+
+A.titlelink:active {
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size : 18px;
+	color: Blue;
+	font-style : italic;
+	text-decoration : underline;	
+}
+
 a {
 	font-family : Arial, Helvetica, sans-serif;
 	font-size : 16px;
@@ -51,13 +75,6 @@ a {
 .smaller {
 	font-family : Arial, Helvetica, sans-serif;
 	font-size : 16px;
-}
-
-.h4 {
-	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
-	font-size : 16px;
-	color : #000000;
-	font-weight : bold;
 }
 
 .sponsors {
