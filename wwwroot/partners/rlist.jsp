@@ -58,13 +58,13 @@ if (param != null)
         rs = QBean.getResearchers(topic, region);
     }
 
-    String beginTD = "<tr><td style='font-family: Arial,Helvetica;font-size: 12;' align=\"left\">";
+    String beginTD = "<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif; font-size: 12;' align=\"left\">";
     String endTD = "</td></tr>";
 	
 
 
 		outString = new StringBuffer("<table cellspacing='0' cellpadding='5'>");
-		topicString = new StringBuffer("<tr><td valign='top' style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;' colspan='2'><a name='top'></a>View by Topic:</td></tr><tr><td valign='top' style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 12;'>");
+		topicString = new StringBuffer("<tr><td valign='top' style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size: 14px; font-weight: bold; color : #000000;' colspan='2'><a name='top'></a>View by Topic:</td></tr><tr><td valign='top' style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size : 12;'>");
 	
     if (rs.next())
     {
@@ -94,14 +94,14 @@ if (param != null)
 					
 					if (region.compareTo("ALL") == 0) {
 						stateName = "US";
-						listTitle = "<font style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: #000000;'>Research Partners - </font><font style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: #AA0000;'>US</font>";
+						listTitle = "<font style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif; font-size: 14;font-weight: bold;color: #000000;'>Research Partners - </font><font style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif; font-size: 14;font-weight: bold;color: #AA0000;'>US</font>";
 					}
 					else {
 						stateName = rs.getString("state_name");
-						listTitle = "<font style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: #000000;'>Research Partners - </font><font style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: #AA0000;'>"+stateName+"</font>";
+						listTitle = "<font style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif; font-size: 14;font-weight: bold;color: #000000;'>Research Partners - </font><font style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif; font-size: 14;font-weight: bold;color: #AA0000;'>"+stateName+"</font>";
 					}
 					
-					topicString.append("<li><a href='#"+topicID+"' style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 12;'>"+topicDesc+"</a></li>");						
+					topicString.append("<li><a href='#"+topicID+"' style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size : 12;'>"+topicDesc+"</a></li>");						
 					
 					
 					//if ((topicCount % 2) == 0)
@@ -122,16 +122,16 @@ if (param != null)
                 	
 					
 					if (count > 1)
-						outString.append("<tr><td colspan='2' style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 12;color: #000000;' align='left' valign='top'><br /><a href='#top' style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 12;'>[Top of Page]</a></td></tr>");
+						outString.append("<tr><td colspan='2' style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif; font-size: 12;color: #000000;' align='left' valign='top'><br /><a href='#top' style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif; font-size: 12;'>[Top of Page]</a></td></tr>");
 					
-                	outString.append("<tr><td valign='top' style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: #AA0000;' colspan='2'>");
+                	outString.append("<tr><td valign='top' style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif; font-size: 14;font-weight: bold;color: #AA0000;' colspan='2'>");
 					
 					if (count > 1)
 						outString.append("<br />");
 					
 					outString.append("<a name='"+topicID+"'></a>"+topicDesc+"</td></tr>");
 	                outString.append("<tr><td><table border='0' cellspacing='0' cellpadding='0'>");
-					outString.append("<tr><td style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left' valign='top'>"+rs.getString("researcher_name")+"  ");
+					outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif; font-size: 12;font-weight: bold;color: #000000;' align='left' valign='top'>"+rs.getString("researcher_name")+"  ");
 					
 					if (rs.getString("degree") != null && rs.getString("degree").compareTo("") != 0)
 						outString.append(rs.getString("degree"));
@@ -154,7 +154,7 @@ if (param != null)
                 researcherId = rs.getInt("researcher_id");
                 researcherString = rs.getString("state_abbreviation");
                 outString.append("<td valign='top'><table border='0' cellspacing='0' cellpadding='0'>");
-                outString.append("<tr><td style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left' valign='top'>"+rs.getString("researcher_name")+"  ");
+                outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif; font-size: 12;font-weight: bold;color: #000000;' align='left' valign='top'>"+rs.getString("researcher_name")+"  ");
 					
 					if (rs.getString("degree") != null && rs.getString("degree").compareTo("") != 0)
 						outString.append(rs.getString("degree"));
@@ -234,7 +234,7 @@ if (param != null)
 	 if ((cellCount % 2) == 0)
 		outString.append("<td>&nbsp;</td>");
 		
-		outString.append("</tr><tr><td colspan='2' style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 12;color: #000000;' align='left' valign='top'><a href='#top' style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 12;'>[Top of Page]</a></td></tr></table></td></tr></table>");
+		outString.append("</tr><tr><td colspan='2' style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif; font-size: 12;color: #000000;' align='left' valign='top'><a href='#top' style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif; font-size: 12;'>[Top of Page]</a></td></tr></table></td></tr></table>");
 		
 }
 else {
@@ -267,7 +267,7 @@ else {
                 stateList.append("<br />");
 			
 			if (region.compareTo(rs.getString("abbreviation")) == 0)
-				stateList.append("<font style='font-family : Arial, Verdana, Geneva, Helvetica, sans-serif;	font-size : 12px; color : AA0000;'>"+rs.getString("name").trim()+"</font>");
+				stateList.append("<font style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size : 12px; color : AA0000;'>"+rs.getString("name").trim()+"</font>");
 			else
 	            stateList.append("<a href='rlist.jsp?r="+rs.getString("abbreviation")+"&cctopic="+topic+"' class='a1' title='"+rs.getString("name").trim()+"'>"+rs.getString("name")+"</a>");
 			
@@ -279,13 +279,14 @@ else {
 	
 		if (stateStatic.compareTo("the US") == 0) {
 			stateStatic = "All States";
-			researcherText="Research Partners for<br><font style='font-family : Arial, Verdana, Geneva, Helvetica, sans-serif; font-weight : bold; 	font-size : 20px; color : AA0000;'>"+staticTopic+"</font>";	
+			researcherText="
+			Research Partners - <font style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif; font-size: 20px; font-weight: bold; color: #AA0000;'>"+staticTopic+"</font>";	
 		}
 		else
-			researcherText="Research Partners for<br><font style='font-family : Arial, Verdana, Geneva, Helvetica, sans-serif; font-weight : bold; 	font-size : 20px; color : AA0000;'>"+staticTopic+"</font><br>in <font style='font-family : Arial, Verdana, Geneva, Helvetica, sans-serif; font-weight : bold; 	font-size : 20px; color : AA0000;'>"+stateStatic+"</font>";
+			researcherText="Research Partners for<br><font style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif; font-weight: bold; 	font-size: 20px; color: AA0000;'>"+staticTopic+"</font><br>in <font style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif; font-weight: bold; font-size: 20px; color: AA0000;'>"+stateStatic+"</font>";
 
 	if (topicString.length() == 0) {
-  		topicString = new StringBuffer("<tr><td><font style='family : Verdana, Geneva, Arial, Helvetica, sans-serif;	size : 14px;	weight: bold; color : #000000;'>Research partners not currently available in "+stateStatic+".</font></td></tr>");
+  		topicString = new StringBuffer("<tr><td><font style='family: Arial, Helvetica, Verdana, Geneva, sans-serif;	size: 14px; weight: bold; color: #000000;'>Research partners not currently available in "+stateStatic+".</font></td></tr>");
 	}
 	
     QBean.close();
@@ -315,14 +316,14 @@ else {
 
 <table bgcolor="white" border="0" cellpadding="0" cellspacing="0" width="100%">
 <tr>
-	<td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif; font-size : 20px;	font-weight: bold; color : #000000;" colspan="2" nowrap><%= researcherText%></td>
+	<td valign="top" style="font-family: Arial, Helvetica, Verdana, Geneva, sans-serif; font-size: 20px; font-weight: bold; color: #000000;" colspan="2" nowrap><%= researcherText%></td>
 	<td valign="top" align="right"><strong><a href="list.jsp?r=<%= region%>&cctopic=<%= topicLet%>">View Program Partners in <%= stateStatic%></a></strong></td>
 </tr>
 <tr>
 <td colspan="3">&nbsp;</td>
 </tr>
 <tr>
-<td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: color : #000000;" nowrap><%= stateList.toString()%></td>
+<td valign="top" style="font-family : Arial, Helvetica, Verdana, Geneva, sans-serif; font-size: 14px; font-weight: color : #000000;" nowrap><%= stateList.toString()%></td>
 	<td valign="top" colspan="2" align="left"><table cellspacing="5"><%= topicString.toString()%></table><%= outString.toString()%></td>
 </tr>
 </table>
@@ -336,5 +337,4 @@ else {
       </div></td>
   </tr>
 </table>
-</body>
-</html>
+</body></html>
