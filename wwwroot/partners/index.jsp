@@ -12,7 +12,10 @@
 
     param = request.getParameter("cctopic");
     if (param != null)
-        topic = param;
+        // The database expects the topic to be an uppercase character.
+        // Uppercase it here so we don't have to uppercase it every time
+        // we use it.
+        topic = param.toUpperCase();
 
     QueryBean QBean = new QueryBean();
     // Find the page title to use based on the topic
@@ -39,7 +42,7 @@
                stateList.append("<br />");
                typeString = rs.getString("type");
            }
-           stateList.append("\n<br /><a href='list.jsp?r="+rs.getString("abbreviation")+"&cctopic="+topic.toUpperCase()+"' class='a1'>"+rs.getString("name")+"</a>");
+           stateList.append("\n<br /><a href='list.jsp?r="+rs.getString("abbreviation")+"&cctopic="+topic+"' class='a1'>"+rs.getString("name")+"</a>");
            count++;
       } while (rs.next());
     stateList.append("</td>");
@@ -96,7 +99,7 @@ To view, click on map or state name below.
 </td>
 </tr>
 <tr>
-<td valign='top'><a href='list.jsp?r=all&cctopic=<%= topic.toUpperCase()%>'>View all partners</a><br />
+<td valign='top'><a href='list.jsp?r=all&cctopic=<%= topic %>'>View all partners</a><br />
 <%= stateList.toString()%>
 <td valign='top'>
 <%= htmlString%><br>
