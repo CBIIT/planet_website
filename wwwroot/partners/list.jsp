@@ -64,7 +64,6 @@ topicNum = QBean.getTopicID(topic);
 	    outString = new StringBuffer();
         String partnerString = "";
         int partnerId = 0;
-        
         int count = 1;
         String typeString = "";
         String typeOutput = "";
@@ -72,6 +71,7 @@ topicNum = QBean.getTopicID(topic);
         do
         {
 	        PartnerBean rs = (PartnerBean)it.next();
+			typeDesc = rs.getTypeDescription();
             if (stateName.compareTo(rs.getStateName().trim()) != 0)
             {
                 if (count > 1)
@@ -117,6 +117,7 @@ topicNum = QBean.getTopicID(topic);
                 partnerId = rs.getPartnerId();
                 partnerString = rs.getPartnerAbbreviation();
                 typeString = rs.getType();
+				typeDesc = rs.getTypeDescription();
                 outString.append("<p><table border='0' cellspacing='0' cellpadding='0' width='100%'>");
                 outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'>"+rs.getPartnerName()+endTD);
 
@@ -145,6 +146,7 @@ topicNum = QBean.getTopicID(topic);
 
             if (typeString.compareTo(rs.getType().trim()) != 0)
             {
+				typeDesc = rs.getTypeDescription();
                 outString.append("<tr><td height='20'>&nbsp;</td></tr>");
                 outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;font-style: normal;' align='left'>");
                 outString.append("<u>" + rs.getTypeDescription());
@@ -164,6 +166,7 @@ topicNum = QBean.getTopicID(topic);
                 // Close the underlining and the table cell.
                 outString.append("</u>" + endTD);
                 typeString = rs.getType();
+				typeDesc = rs.getTypeDescription();
             }
 
             if (rs.getContactName() != null && rs.getContactName().compareTo("") != 0)
@@ -243,7 +246,7 @@ topicNum = QBean.getTopicID(topic);
             }
 
             outString.append("<tr><td height='10'>&nbsp;</td></tr>");
-
+			typeDesc = rs.getTypeDescription();
             count ++;
         } while (it.hasNext());
 
