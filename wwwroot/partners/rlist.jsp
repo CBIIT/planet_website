@@ -81,6 +81,7 @@ if (param != null)
 			   		topicID = rs.getInt("topic_id");
 					topicInt = new Integer(topicID);
 					topicDesc = QBean.getTopicDescription(topicInt);
+					QBean.closeStatement();
 					
 					if (region.compareTo("ALL") == 0) {
 						stateName = "US";
@@ -132,6 +133,7 @@ if (param != null)
             {
 				topicID = rs.getInt("topic_id");
 				topicDesc = QBean.getTopicDescription(topic);
+				QBean.closeStatement();
         
 		        if (count > 1)
                    outString.append("</table></td>");
