@@ -19,6 +19,7 @@ String param = request.getParameter("r");
 String stateStatic = "";
 String stateName = "";
 String topicDesc = "";
+String listTitle = "";
 Integer topicInt = new Integer(-1);
 
 if (param != null) 
@@ -58,7 +59,7 @@ if (param != null)
 
 
 		outString = new StringBuffer("<table cellspacing='0' cellpadding='5'>");
-		topicString = new StringBuffer("<tr><td valign='top' style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;' colspan='2'>Cancer Control Partners - ");
+		topicString = new StringBuffer("<tr><td valign='top' style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;' colspan='2'>View by Topic:</td></tr><a name='top'></a>");
 	
     if (rs.next())
     {
@@ -80,14 +81,15 @@ if (param != null)
 					topicInt = new Integer(topicID);
 					topicDesc = QBean.getTopicDescription(topicInt);
 					
-					if (region.compareTo("ALL") == 0)
+					if (region.compareTo("ALL") == 0) {
 						stateName = "US";
-					else
+						listTitle = "Cancer Control Partners - <font style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: #AA0000;'>US</font>";
+					}
+					else {
 						stateName = rs.getString("state_name");
+						listTitle = "Cancer Control Partners - <font style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: #AA0000;'>"+stateName+"</font>";
+					}
 					
-					if (count == 1)
-						topicString.append("<font style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: #AA0000;'>"+stateName.trim()+"</font><br /><br />View by Topic:</td></tr><a name='top'></a>");
-						
 					topicString.append("<td valign='top' style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 12;	font-weight: bold;'><a href='#"+topicID+"' style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 12;	font-weight: bold;'>"+topicDesc+"</a></td>");						
 					
 					if ((topicCount % 2) == 0)
@@ -213,7 +215,8 @@ if (param != null)
 		
 }
 else {
-  topicString = new StringBuffer("<td valign='top' style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;' colspan='2'>No Records Found.</td>");
+  listTitle = new StringBuffer("No Records Found.");
+  topicString = new StringBuffer("<td valign='top' style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;' colspan='2'>&nbsp;</td>");
   outString = new StringBuffer("<tr><td>&nbsp;</td></tr></table>");
 }  //end of if statement
 
@@ -277,7 +280,7 @@ else {
 <table bgcolor="white" border="0" cellpadding="0" cellspacing="0" width="100%">
 <tr>
 	<td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-				    
-			size : 14px;	font-weight: bold; color : #000000;" width="30%" rowspan="2">View Research Partners in another state / territory:<br />		
+			size : 14px;	font-weight: bold; color : #000000;" width="33%" rowspan="2">View Research Partners in another state / territory:<br />		
 				<table bgcolor='white' border='0' cellpadding="5" cellspacing="0">
 					<tr>
 						<td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-
@@ -287,11 +290,11 @@ else {
 					</tr>
 				</table>
 	</td>
-	<td valign="top" width="60%" align="right"><a href="list.jsp?r=<%= region%>&cctopic=C">View Program Partners in <%= stateStatic%></a></td>
+	<td valign="top" width="33%" align="left"><%= listTitle%></td>
+	<td valign="top" width="33%" align="right"><a href="list.jsp?r=<%= region%>&cctopic=C">View Program Partners in <%= stateStatic%></a></td>
 </tr>
-
 <tr>
-	<td valign="top">
+	<td valign="top" colspan="2">
 		<table bgcolor='white' border='0' cellpadding="5" cellspacing="0">
 		<tr>
 			<%= topicString.toString()%>
