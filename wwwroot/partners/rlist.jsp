@@ -283,7 +283,7 @@ else {
 			researcherText="Research Partners for <font style='font-family : Arial, Verdana, Geneva, Helvetica, sans-serif; font-weight : bold; 	font-size : 20px; color : AA0000;'>"+staticTopic+"</font>";	
 		}
 		else
-			researcherText="Research Partners for <font style='font-family : Arial, Verdana, Geneva, Helvetica, sans-serif; font-weight : bold; 	font-size : 20px; color : AA0000;'>"+staticTopic+"</font>in <font style='font-family : Arial, Verdana, Geneva, Helvetica, sans-serif; font-weight : bold; 	font-size : 20px; color : AA0000;'>"+stateStatic+"</font>";
+			researcherText="Research Partners for<br><font style='font-family : Arial, Verdana, Geneva, Helvetica, sans-serif; font-weight : bold; 	font-size : 20px; color : AA0000;'>"+staticTopic+"</font><br>in <font style='font-family : Arial, Verdana, Geneva, Helvetica, sans-serif; font-weight : bold; 	font-size : 20px; color : AA0000;'>"+stateStatic+"</font>";
 
 
 	if (topicString.length() == 0) {
