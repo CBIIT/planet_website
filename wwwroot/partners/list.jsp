@@ -13,8 +13,12 @@ String param = request.getParameter("r");
 String stateName = "";
 String stateStatic = "";
 
+
+
 if (param != null)
     region = param.toUpperCase();
+	
+	
 param = request.getParameter("cctopic");
 if (param != null)
     topic = param.toUpperCase();
@@ -32,6 +36,7 @@ if (param != null)
     {
         pcScript = "US.addPCXML(<DefaultShapeSettings><Properties FillColor='#B20000'/><Drilldown URL='list.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultShapeSettings>)";
         rs = QBean.getPartners(topic.toUpperCase());
+		stateStatic="the US";
     }
     else
     {
@@ -63,7 +68,7 @@ if (param != null)
                 partnerString = rs.getString("partner_abbreviation");
                 typeString = rs.getString("type");
                 stateName = rs.getString("state_name");
-				stateStatic = stateName;
+				
                 outString.append("<p><font style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: #000000;'>"+pageTitle+" - </font><font style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: #AA0000;'>"+stateName.trim()+"</font></p>");
                 outString.append("<p><table border='0' cellspacing='0' cellpadding='0' width='100%'>");
                 outString.append("<tr><td style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'>"+rs.getString("partner_name")+endTD);
@@ -209,8 +214,16 @@ if (param != null)
         stateList = new StringBuffer();
         String typeString = "S";
         int count= 0;
+
+
+		
         do
         {
+	
+			
+			if (region.compareTo(rs.getString("abbreviation")) == 0)
+				stateStatic=rs.getString("name");
+				
             if (count > 27)
             {
                 stateList.append("</td><td valign='top'>");
@@ -223,15 +236,12 @@ if (param != null)
             }
             if (count > 0)
                 stateList.append("<br />");
-            stateList.append("<a href='list.jsp?r="+rs.getString("abbreviation")+"&cctopic="+topic.toUpperCase()+"' class='a1' title='"+rs.getString("name").trim()+"'>"+rs.getString("abbreviation")+"</a>");
+            stateList.append("<a href='list.jsp?r="+rs.getString("abbreviation")+"&cctopic="+topic.toUpperCase()+"' class='a1' title='"+rs.getString("name").trim()+"'>"+rs.getString("name")+"</a>");
             count++;
         } while (rs.next());
-        stateList.append("<br /><br /><a href='list.jsp?r=ALL&cctopic=" + topic + "' title=\"All states and regions\">All</a>");
+        stateList.append("</td></tr><tr><td colspan=2><a href='list.jsp?r=ALL&cctopic=" + topic + "' title=\"All states and regions\">View All U.S. Partners</a></td></tr>");
     }
 
-
-	if (region.equals("ALL"))
-		stateStatic="U.S.";
 
 		pageTitle = pageTitle + " - " + stateStatic;
     QBean.close();
@@ -272,7 +282,7 @@ if (param != null)
 </table>
 <table bgcolor="white" border="0" cellpadding="0" cellspacing="0">
 <tr>
-<td valign='top'><table><tr><td><%= outString.toString()%></table></td></tr></table></td>
+<td valign='top'><table><tr><td><%= outString.toString()%></table></td>
 <td width="2" valign='top'>&nbsp;</td>
 <td valign='top'>
 <table bgcolor='white' border='0' cellpadding="5" cellspacing="0">
@@ -283,12 +293,13 @@ if (param != null)
 <td valign='top'>
 <%= stateList.toString()%>
 </td>
-<td valign="top" colspan="3" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;" align="right"><a href="rlist.jsp?r=<%= region%>&cctopic=0">View Research Partners in <%= stateName%></a>
-<%= htmlString%><br>
-<a href="javascript:window.close()">Close Window</a>
-</td>
 </tr>
 </table>
+</td>
+<td valign="top" colspan="3" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;" align="right"><a href="rlist.jsp?r=<%= region%>&cctopic=0">View Research Partners in <%= stateStatic%></a>
+<%= htmlString%><br>
+<a href="javascript:window.close()">Close Window</a>
+
 </td>
 </tr>
 </table>

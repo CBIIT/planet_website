@@ -22,7 +22,7 @@ Integer topicInt = new Integer(-1);
 
 if (param != null) 
     region = param.toUpperCase();
-
+	
 param = request.getParameter("cctopic");
 
 if (param != null) 
@@ -42,6 +42,7 @@ if (param != null)
     {
         pcScript = "US.addPCXML(<DefaultShapeSettings><Properties FillColor='#B20000'/><Drilldown URL='rlist.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultShapeSettings>)";
         rs = QBean.getResearchers(topic);
+		stateStatic="the US";
     }
     else
     {
@@ -80,7 +81,7 @@ if (param != null)
                 researcherString = rs.getString("state_abbreviation");
                 //typeString = rs.getString("type");
                 stateName = rs.getString("state_name");
-				stateStatic = stateName;
+				
                 outString.append("<p><font style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: #000000;'><font style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: #AA0000;'>"+topicDesc+"</font></p>");
                 outString.append("<p><table border='0' cellspacing='0' cellpadding='0' width='100%'>");
 				
@@ -245,11 +246,16 @@ else
         stateList = new StringBuffer();
         String typeString = "S";
         int count= 0;
+		
         do
         {
+		
+					if (region.compareTo(rs.getString("abbreviation")) == 0)
+						stateStatic=rs.getString("name");
+				
             if (count > 27)
             {
-                stateList.append("</td><td valign='top'>");
+                stateList.append("</td><td valign='top' nowrap>");
                 count = 0;
             }
             //if (typeString.compareTo(rs.getString("type")) != 0)
@@ -259,15 +265,16 @@ else
            // }
             if (count > 0)
                 stateList.append("<br />");
-            stateList.append("<a href='rlist.jsp?r="+rs.getString("abbreviation")+"&cctopic="+topic+"' class='a1' title='"+rs.getString("name").trim()+"'>"+rs.getString("abbreviation")+"</a>");
+            stateList.append("<a href='rlist.jsp?r="+rs.getString("abbreviation")+"&cctopic="+topic+"' class='a1' title='"+rs.getString("name").trim()+"'>"+rs.getString("name")+"</a>");
             count++;
         } while (rs.next());
-        stateList.append("<br /><br /><a href='rlist.jsp?r=ALL&cctopic=" + topic + "' title=\"All states and regions\">View All U.S. Researchers by topic area</a>");
+        stateList.append("</td></tr><tr><td colspan=2><a href='rlist.jsp?r=ALL&cctopic=" + topic + "' title=\"All states and regions\">View All U.S. Researchers by topic area</a>");
     }
-	if (region.equals("ALL"))
-		stateStatic="U.S.";
+
 
 		pageTitle = pageTitle + " - " + stateStatic;
+		
+
 		
     QBean.close();
 
@@ -301,7 +308,7 @@ else
 	<td valign='top'>
 		<table bgcolor='white' border='0' cellpadding="5" cellspacing="0">
 		<tr>
-			<td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;">View another state / territory<br /><table bgcolor='white' border='0' cellpadding="5" cellspacing="0"><tr><td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: color : #000000;"><%= stateList.toString()%></td></tr></table></td>
+			<td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;">View another state / territory<br /><table bgcolor='white' border='0' cellpadding="5" cellspacing="0"><tr><td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: color : #000000;" nowrap><%= stateList.toString()%></td></tr></table></td>
 			<td width="50">&nbsp;</td>
 			<td valign="top"><table bgcolor='white' border='0' cellpadding="5" cellspacing="0"><tr><td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: color : #000000;"><%= outString.toString()%></td></tr></table></td>
 			<td width="50">&nbsp;</td>
