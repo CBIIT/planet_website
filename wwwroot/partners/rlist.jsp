@@ -320,7 +320,7 @@ if (param != null)
 <table bgcolor="white" border="0" cellpadding="0" cellspacing="0" width="100%">
   <tr>
 	<td valign="top" colspan="2"><div  style="font-family: Arial, Helvetica, Verdana, Geneva, sans-serif; font-size: 20px; font-weight: bold; color: #000000;"><%= researcherText%></div><br>
-	</td><p>To locate program partners in your state or region go to the <a href="list.jsp?r=<%= region%>&cctopic=<%= topicLet%>">Program Partners in <%= stateStatic%></a> page.
+	<p>To locate program partners in <%= stateStatic%> go to the <a href="list.jsp?r=<%= region%>&cctopic=<%= topicLet%>">Program Partners</a> page.</td>
 	<td valign="top" align="right">&nbsp;</td>
   </tr>
 </table>
