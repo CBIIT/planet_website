@@ -97,7 +97,7 @@ topicNum = QBean.getTopicID(topic);
                         if (topic.equals("P"))
                             outString.append(" Health Department Contact");
                         else {
-
+							outString.append("-"+typeDesc+"-");
 							if (!typeDesc.equals("Regional Contact")) {
                             	outString.append(" Contact");
 							}
@@ -133,6 +133,7 @@ topicNum = QBean.getTopicID(topic);
                             outString.append(" Health Department Contact");
                         else {
                             if (!typeDesc.equals("Regional Contact")) {
+								outString.append("-"+typeDesc+"-");
                             	outString.append(" Contact");
 							}
 						}
@@ -154,6 +155,7 @@ topicNum = QBean.getTopicID(topic);
                        outString.append(" Health Department Contact");
                     else {
                             if (!typeDesc.equals("Regional Contact")) {
+								outString.append("-"+typeDesc+"-");
                             	outString.append(" Contact");
 							}
 						}
@@ -265,7 +267,6 @@ topicNum = QBean.getTopicID(topic);
 		
         do
         {
-	
 			StateBean rs = (StateBean)it2.next();
 			
 			if (region.compareTo(rs.getAbbreviation()) == 0)
@@ -390,7 +391,6 @@ topicNum = QBean.getTopicID(topic);
 </tr>
 </table>
 
-
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
     <td><hr size="1" noshade>
@@ -401,4 +401,5 @@ topicNum = QBean.getTopicID(topic);
       </div></td>
   </tr>
 </table>
-</body></html>
+</body>
+</html>
