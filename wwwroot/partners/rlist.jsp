@@ -215,7 +215,7 @@ if (param != null)
 		
 }
 else {
-  listTitle = new StringBuffer("No Records Found.");
+  listTitle = "No Records Found.";
   topicString = new StringBuffer("<td valign='top' style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;' colspan='2'>&nbsp;</td>");
   outString = new StringBuffer("<tr><td>&nbsp;</td></tr></table>");
 }  //end of if statement
