@@ -74,7 +74,7 @@ if (param != null)
                 typeString = rs.getString("type");
                 stateName = rs.getString("state_name");
                 outString.append("<table border='0' cellspacing='0' cellpadding='0' width='100%'>");
-                outString.append("<tr><td style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'>"+rs.getString("partner_name")+endTD);
+                outString.append("<tr><td style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'><font style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 12px;	font-weight: bold; color : #AA0000;'>"+stateName+"</font><br><br>"+rs.getString("partner_name")+endTD);
 
                 outString.append("<tr><td style='font-family: Arial, Helvetica, sans-serif;font-size: 12;font-style: normal;' align='left'>");
                 outString.append("<u>" + rs.getString("type_description"));
