@@ -2,6 +2,10 @@
 <%@ page import="java.sql.ResultSet" %>
 <%@ page import="gov.nci.corda.NCIPopChartEmbedder" %>
 <%@ page import="gov.nci.planet.QueryBean" %>
+<%@ page import="gov.nci.planet.bean.*" %>
+<%@ page import="java.util.Vector" %>
+<%@ page import="java.util.Iterator" %>
+
 <%
 String region = "ALL";
 String pcScript = "";
@@ -25,7 +29,7 @@ if (param != null)
     topic = param.toUpperCase();
     StringBuffer outString = null;
     StringBuffer stateList = null;
-    ResultSet rs = null;
+    Vector partners = null;
     QueryBean QBean = new QueryBean();
 	
 	topicNum = QBean.getTopicID(topic);
@@ -40,20 +44,24 @@ if (param != null)
     if (region.equals("ALL"))
     {
         pcScript = "US.addPCXML(<DefaultShapeSettings><Properties FillColor='#B20000'/><Drilldown URL='list.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultShapeSettings>)";
-        rs = QBean.getPartners(topic.toUpperCase());
+        partners = QBean.getPartners(topic.toUpperCase());
 		stateStatic="the US";
     }
     else
     {
         pcScript = "US.setShapeValues("+region.trim()+",1)US.addPCXML(<DefaultShapeSettings><Drilldown URL='list.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultShapeSettings>)@_END";
-        rs = QBean.getPartners(topic.toUpperCase(), region);
+        partners = QBean.getPartners(topic.toUpperCase(), region);
     }
 
     String beginTD = "<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;' align=\"left\">";
     String endTD = "</td></tr>";
-
-    if (rs.next())
+    
+    
+    if (partners!=null)
     {
+    	Iterator it = partners.iterator();
+	
+    	
         outString = new StringBuffer();
         String partnerString = "";
         int partnerId = 0;
@@ -65,19 +73,20 @@ if (param != null)
 		
         do
         {
-            if (stateName.compareTo(rs.getString("state_name").trim()) != 0)
+	        PartnerBean rs = (PartnerBean)it.next();
+            if (stateName.compareTo(rs.getStateName().trim()) != 0)
             {
                 if (count > 1)
                     outString.append("</table></p>");
-                partnerId = rs.getInt("partner_id");
-                partnerString = rs.getString("partner_abbreviation");
-                typeString = rs.getString("type");
-                stateName = rs.getString("state_name");
+                partnerId = rs.getPartnerId();
+                partnerString = rs.getPartnerAbbreviation();
+                typeString = rs.getType();
+                stateName = rs.getStateName();
                 outString.append("<table border='0' cellspacing='0' cellpadding='0' width='100%'>");
-                outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'><font style='font-family : Arial, Helvetica, Verdana, Geneva,  sans-serif;	font-size : 12px;	font-weight: bold; color : #AA0000;'>"+stateName+"</font><br><br>"+rs.getString("partner_name")+endTD);
+                outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'><font style='font-family : Arial, Helvetica, Verdana, Geneva,  sans-serif;	font-size : 12px;	font-weight: bold; color : #AA0000;'>"+stateName+"</font><br><br>"+rs.getPartnerName()+endTD);
 
                 outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;font-style: normal;' align='left'>");
-                outString.append("<u>" + rs.getString("type_description"));
+                outString.append("<u>" + rs.getTypeDescription());
                 
                 // For state and territory contacts we may need to tack on some additional information.
                 if (partnerString.equals("CDC") && !typeString.equals("W"))
@@ -95,18 +104,18 @@ if (param != null)
                 outString.append("</u>"+endTD);
             }
 
-            if (partnerId != rs.getInt("partner_id"))
+            if (partnerId != rs.getPartnerId())
             {
                 if (count > 1)
                    outString.append("</table></p>");
-                partnerId = rs.getInt("partner_id");
-                partnerString = rs.getString("partner_abbreviation");
-                typeString = rs.getString("type");
+                partnerId = rs.getPartnerId();
+                partnerString = rs.getPartnerAbbreviation();
+                typeString = rs.getType();
                 outString.append("<p><table border='0' cellspacing='0' cellpadding='0' width='100%'>");
-                outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'>"+rs.getString("partner_name")+endTD);
+                outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'>"+rs.getPartnerName()+endTD);
 
                 outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;style: bold;' align='left'>");
-                outString.append("<u>" + rs.getString("type_description"));
+                outString.append("<u>" + rs.getTypeDescription());
                 
                 // For state and territory contacts we may need to tack on some additional information.
                 if (partnerString.equals("CDC") && !typeString.equals("W"))
@@ -124,11 +133,11 @@ if (param != null)
                 outString.append("</u>" + endTD);
             }
 
-            if (typeString.compareTo(rs.getString("type").trim()) != 0)
+            if (typeString.compareTo(rs.getType().trim()) != 0)
             {
                 outString.append("<tr><td height='20'>&nbsp;</td></tr>");
                 outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;font-style: normal;' align='left'>");
-                outString.append("<u>" + rs.getString("type_description"));
+                outString.append("<u>" + rs.getTypeDescription());
                 if (partnerString.equals("CDC") && !typeString.equals("W"))
                 {
                     if (topic.compareTo("C") != 0)
@@ -139,47 +148,47 @@ if (param != null)
 
                 // Close the underlining and the table cell.
                 outString.append("</u>" + endTD);
-                typeString = rs.getString("type");
+                typeString = rs.getType();
             }
 
-            if (rs.getString("contact_name") != null && rs.getString("contact_name").compareTo("") != 0)
+            if (rs.getContactName() != null && rs.getContactName().compareTo("") != 0)
             {
-                outString.append(beginTD+rs.getString("contact_name").trim());
+                outString.append(beginTD+rs.getContactName().trim());
 
-                if (rs.getString("degree") != null && rs.getString("degree").compareTo("") != 0)
-                    outString.append(", "+rs.getString("degree"));
+                if (rs.getDegree() != null && rs.getDegree().compareTo("") != 0)
+                    outString.append(", "+rs.getDegree());
                 outString.append(endTD);
             }
-            if (rs.getString("title") != null && rs.getString("title").compareTo("") != 0)
-                outString.append(beginTD+rs.getString("title").trim()+endTD);
-            if (rs.getString("org1") != null && rs.getString("org1").compareTo("") != 0)
-                outString.append(beginTD+rs.getString("org1").trim()+endTD);
-            if (rs.getString("org2") != null && rs.getString("org2").compareTo("") != 0)
-                outString.append(beginTD+rs.getString("org2").trim()+endTD);
-            if (rs.getString("address1") != null && rs.getString("address1").compareTo("") != 0)
-                outString.append(beginTD+rs.getString("address1").trim()+endTD);
-            if (rs.getString("address2") != null && rs.getString("address2").compareTo("") != 0)
-                outString.append(beginTD+rs.getString("address2").trim()+endTD);
-            if (rs.getString("city") != null && rs.getString("city").compareTo("") != 0)
-                outString.append(beginTD+rs.getString("city").trim()+", "+rs.getString("address_state")+" "+rs.getString("zip").trim()+endTD);
-            if (rs.getString("phone") != null && rs.getString("phone").compareTo("") != 0)
-                    outString.append(beginTD+"Phone:  "+rs.getString("phone").trim()+endTD);
-            if (rs.getString("fax") != null && rs.getString("fax").compareTo("") != 0)
-                    outString.append(beginTD+"Fax:  "+rs.getString("fax").trim()+endTD);
-            if (rs.getString("cell") != null && rs.getString("cell").compareTo("") != 0)
-                    outString.append(beginTD+"Cell:  "+rs.getString("cell").trim()+endTD);
-            if (rs.getString("email") != null && rs.getString("email").compareTo("") != 0)
+            if (rs.getTitle() != null && rs.getTitle().compareTo("") != 0)
+                outString.append(beginTD+rs.getTitle().trim()+endTD);
+            if (rs.getOrg1() != null && rs.getOrg1().compareTo("") != 0)
+                outString.append(beginTD+rs.getOrg1().trim()+endTD);
+            if (rs.getOrg2() != null && rs.getOrg2().compareTo("") != 0)
+                outString.append(beginTD+rs.getOrg2().trim()+endTD);
+            if (rs.getAddress1() != null && rs.getAddress1().compareTo("") != 0)
+                outString.append(beginTD+rs.getAddress1().trim()+endTD);
+            if (rs.getAddress2() != null && rs.getAddress2().compareTo("") != 0)
+                outString.append(beginTD+rs.getAddress2().trim()+endTD);
+            if (rs.getCity() != null && rs.getCity().compareTo("") != 0)
+                outString.append(beginTD+rs.getCity().trim()+", "+rs.getAddressState()+" "+rs.getZip().trim()+endTD);
+            if (rs.getPhone() != null && rs.getPhone().compareTo("") != 0)
+                    outString.append(beginTD+"Phone:  "+rs.getPhone().trim()+endTD);
+            if (rs.getFax() != null && rs.getFax().compareTo("") != 0)
+                    outString.append(beginTD+"Fax:  "+rs.getFax().trim()+endTD);
+            if (rs.getCell() != null && rs.getCell().compareTo("") != 0)
+                    outString.append(beginTD+"Cell:  "+rs.getCell().trim()+endTD);
+            if (rs.getEmail() != null && rs.getEmail().compareTo("") != 0)
             {
-                String emailStr = rs.getString("email").trim();
+                String emailStr = rs.getEmail().trim();
                 outString.append(beginTD+"Email:  <a href=\"mailto:"+emailStr+"\" class='a1'>"+emailStr+"</a>"+endTD);
             }
-            if (rs.getString("orgurl") != null && rs.getString("orgurl").compareTo("") != 0)
+            if (rs.getOrgurl() != null && rs.getOrgurl().compareTo("") != 0)
             {
                 String urlStr = "";
-                if (rs.getString("orgurl").indexOf("http://") < 0)
-                    urlStr = "http://"+rs.getString("orgurl").trim();
+                if (rs.getOrgurl().indexOf("http://") < 0)
+                    urlStr = "http://"+rs.getOrgurl().trim();
                 else
-                    urlStr = rs.getString("orgurl").trim();
+                    urlStr = rs.getOrgurl().trim();
 
                 // Don't display Web site: field header for tobacco, breast cancer, and cervical cancer contacts.
                 if (partnerString.equals("CDC") && (topic.equals("T") || topic.equals("B") || topic.equals("V")))
@@ -189,13 +198,13 @@ if (param != null)
                 else
                     outString.append(beginTD+"Web site:  <a href=\""+urlStr+"\" target=\"_blank\" class='a1'>"+urlStr+"</a>"+endTD);
             }
-            if (rs.getString("orgurl2") != null && rs.getString("orgurl").compareTo("") != 0)
+            if (rs.getOrgurl2() != null && rs.getOrgurl2().compareTo("") != 0)
             {
                 String urlStr = "";
-                if (rs.getString("orgurl2").indexOf("http://") < 0)
-                    urlStr = "http://"+rs.getString("orgurl2").trim();
+                if (rs.getOrgurl2().indexOf("http://") < 0)
+                    urlStr = "http://"+rs.getOrgurl2().trim();
                 else
-                    urlStr = rs.getString("orgurl2").trim();
+                    urlStr = rs.getOrgurl2().trim();
 
                 // Don't display Web site: field header for tobacco, breast cancer, and cervical cancer contacts.
                 if (partnerString.equals("CDC") && (topic.equals("T") || topic.equals("B") || topic.equals("V")))
@@ -208,7 +217,7 @@ if (param != null)
             outString.append("<tr><td height='10'>&nbsp;</td></tr>");
 
             count ++;
-        } while (rs.next());
+        } while (it.hasNext());
 		outString.append("</table>");
     } //end of if statement
 	else {
@@ -216,9 +225,13 @@ if (param != null)
 		outString.append("No records found.");
 	}
 
-    rs = QBean.getStateList();
-    if (rs.next())
+    Vector states = QBean.getStateList();
+    
+    Iterator it2 = states.iterator();
+	
+    if (it2.hasNext())
     {
+    
         stateList = new StringBuffer();
 		stateList.append("<table bgcolor='white' border='0' cellpadding='5' cellspacing='0'><tr><td valign='top' nowrap>");
         String typeString = "S";
@@ -229,9 +242,10 @@ if (param != null)
         do
         {
 	
+			StateBean rs = (StateBean)it2.next();
 			
-			if (region.compareTo(rs.getString("abbreviation")) == 0)
-				stateStatic=rs.getString("name");
+			if (region.compareTo(rs.getAbbreviation()) == 0)
+				stateStatic=rs.getName();
 				
             if (count > 27)
             {
@@ -239,22 +253,22 @@ if (param != null)
                 count = 0;
             }
             
-			if (typeString.compareTo(rs.getString("type")) != 0)
+			if (typeString.compareTo(rs.getType()) != 0)
             {
                 stateList.append("<br />");
-                typeString = rs.getString("type");
+                typeString = rs.getType();
             }
 			
             if (count > 0)
                 stateList.append("<br />");
 			
-			if (region.compareTo(rs.getString("abbreviation")) == 0)
-				stateList.append("<font style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size : 12px; color : AA0000;'>"+rs.getString("name").trim()+"</font>");
+			if (region.compareTo(rs.getAbbreviation()) == 0)
+				stateList.append("<font style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size : 12px; color : AA0000;'>"+rs.getName().trim()+"</font>");
 			else
-	            stateList.append("<a href='list.jsp?r="+rs.getString("abbreviation")+"&cctopic="+topic.toUpperCase()+"' class='a1' title='"+rs.getString("name").trim()+"'>"+rs.getString("name")+"</a>");			
+	            stateList.append("<a href='list.jsp?r="+rs.getAbbreviation()+"&cctopic="+topic.toUpperCase()+"' class='a1' title='"+rs.getName().trim()+"'>"+rs.getName()+"</a>");			
             
 			count++;
-        } while (rs.next());
+        } while (it2.hasNext());
         stateList.append("</td></tr><tr><td colspan=2><a href='list.jsp?r=ALL&cctopic=" + topic + "' title=\"All states and regions\">View All U.S. Partners</a></td></tr></table>");
     }
 
@@ -274,7 +288,7 @@ if (param != null)
 				else
 					partnerText="Program Partners - <font style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size: 20px; font-weight: bold; color : #AA0000;'>"+stateStatic+"</font>";
 			
-    QBean.close();
+    
 
     NCIPopChartEmbedder myChart = new NCIPopChartEmbedder();
     myChart.appearanceFile = "apfiles/planet/ccpmap_small.pcxml";

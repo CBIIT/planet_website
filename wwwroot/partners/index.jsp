@@ -2,6 +2,9 @@
 <%@ page import="java.sql.ResultSet" %>
 <%@ page import="gov.nci.corda.NCIPopChartEmbedder" %>
 <%@ page import="gov.nci.planet.QueryBean" %>
+<%@ page import="gov.nci.planet.bean.*" %>
+<%@ page import="java.util.Vector" %>
+<%@ page import="java.util.Iterator" %>
 <%
     StringBuffer stateList = null;
     String topic = "C";
@@ -25,31 +28,36 @@
 
     String typeString = "S";
 
-    ResultSet rs = QBean.getStateList();
-    if (rs.next())
+    
+    Vector states = QBean.getStateList();
+    Iterator it2 = states.iterator();
+	
+    if (it2.hasNext())
     {
 	
         stateList = new StringBuffer();
         int count= 0;
         do
         {
+           StateBean rs = (StateBean)it2.next();
            if (count > 27)
            {
                stateList.append("</td><td valign='bottom'>");
                count = 0;
            }
-           if (typeString.compareTo(rs.getString("type")) != 0)
+           if (typeString.compareTo(rs.getType()) != 0)
            {
                stateList.append("<br />");
-               typeString = rs.getString("type");
+               typeString = rs.getType();
            }
-           stateList.append("\n<br /><a href='list.jsp?r="+rs.getString("abbreviation")+"&cctopic="+topic+"' class='a1'>"+rs.getString("name")+"</a>");
+           stateList.append("\n<br /><a href='list.jsp?r="+rs.getAbbreviation()+"&cctopic="+topic+"' class='a1'>"+rs.getName()+"</a>");
            count++;
-      } while (rs.next());
+      } while (it2.hasNext());
     stateList.append("</td>");
     }
-
-    QBean.close();
+    
+    
+    
 
     NCIPopChartEmbedder myChart = new NCIPopChartEmbedder();
     myChart.appearanceFile = "apfiles/planet/ccpmap.pcxml";
