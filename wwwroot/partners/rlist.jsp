@@ -9,13 +9,16 @@ String pcScript = "";
 
 int ccTopic = 0;
 Integer topic = new Integer(0);
+int topicID = -1;
 
 String htmlString = null;
 String caption = null;
 String cdcSubTitle = "State Health Department Contact";
 String param = request.getParameter("r");
-
-//int topicInt = 0;
+String stateStatic = "";
+String stateName = "";
+String topicDesc = "";
+Integer topicInt = new Integer(-1);
 
 if (param != null) 
     region = param.toUpperCase();
@@ -31,9 +34,9 @@ if (param != null)
     ResultSet rs = null;
     QueryBean QBean = new QueryBean();
 	
-    // Find the page title to use based on the topic
-    String pageTitle = QBean.getTopicDescription(topic) + " Partners";
-    caption = "Cancer Control PLANET - " + pageTitle;
+	
+    // Find the page title to use based on the topic 
+    String pageTitle = "Cancer Control Researchers";
 
     if (region.equals("ALL"))
     {
@@ -59,24 +62,30 @@ if (param != null)
 		outString = new StringBuffer();
         String researcherString = "";
         int researcherId = 0;
-        String stateName = "";
         int count = 1;
         String typeString = "";
         String typeOutput = "";
-
+		
         do
         {
-           if (stateName.compareTo(rs.getString("state_name").trim()) != 0)
+           if (topicID != rs.getInt("topic_id"))
  		       {
+			   		topicID = rs.getInt("topic_id");
+					topicInt = new Integer(topicID);
+					topicDesc = QBean.getTopicDescription(topicInt);
+					
                 if (count > 1)
-                    outString.append("</table></p>");
+                   	outString.append("</table></p>");
                 researcherId = rs.getInt("researcher_id");
                 researcherString = rs.getString("state_abbreviation");
                 //typeString = rs.getString("type");
                 stateName = rs.getString("state_name");
-                outString.append("<p><font style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: #000000;'>"+pageTitle+" - </font><font style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: #AA0000;'>"+stateName.trim()+"</font></p>");
+				stateStatic = stateName;
+                outString.append("<p><font style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: #000000;'><font style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: #AA0000;'>"+topicDesc+"</font></p>");
                 outString.append("<p><table border='0' cellspacing='0' cellpadding='0' width='100%'>");
-                outString.append("<tr><td style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'>"+rs.getString("researcher_name")+endTD);
+				
+				outString.append("<tr><td style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'>"+rs.getString("researcher_name")+"  "+rs.getString("degree")+endTD);
+				
 
                 //outString.append("<tr><td style='font-family: Arial, Helvetica, sans-serif;font-size: 12;font-style: normal;' align='left'>");
                 //outString.append("<u>" + rs.getString("type_description"));
@@ -100,13 +109,16 @@ if (param != null)
 
             if (researcherId != rs.getInt("researcher_id"))
             {
+			topicID = rs.getInt("topic_id");
+		
+					topicDesc = QBean.getTopicDescription(topic);
                 if (count > 1)
                    outString.append("</table></p>");
                 researcherId = rs.getInt("researcher_id");
                 researcherString = rs.getString("state_abbreviation");
                 //typeString = rs.getString("type");
                 outString.append("<p><table border='0' cellspacing='0' cellpadding='0' width='100%'>");
-                outString.append("<tr><td style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'>"+rs.getString("researcher_name")+endTD);
+                outString.append("<tr><td style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'>"+rs.getString("researcher_name")+"  "+rs.getString("degree")+endTD);
 
                //outString.append("<tr><td style='font-family: Arial, Helvetica, sans-serif;font-size: 12;style: bold;' align='left'>");
                //outString.append("<u>" + rs.getString("type_description"));
@@ -220,6 +232,7 @@ if (param != null)
             outString.append("<tr><td height='10'>&nbsp;</td></tr>");
 
             count ++;
+
      } while (rs.next());
 }
 else
@@ -249,9 +262,13 @@ else
             stateList.append("<a href='rlist.jsp?r="+rs.getString("abbreviation")+"&cctopic="+topic+"' class='a1' title='"+rs.getString("name").trim()+"'>"+rs.getString("abbreviation")+"</a>");
             count++;
         } while (rs.next());
-        stateList.append("<br /><br /><a href='rlist.jsp?r=ALL&cctopic=" + topic + "' title=\"All states and regions\">All</a>");
+        stateList.append("<br /><br /><a href='rlist.jsp?r=ALL&cctopic=" + topic + "' title=\"All states and regions\">View All U.S. Researchers by topic area</a>");
     }
+	if (region.equals("ALL"))
+		stateStatic="U.S.";
 
+		pageTitle = pageTitle + " - " + stateStatic;
+		
     QBean.close();
 
 
@@ -260,7 +277,7 @@ else
 
 <html>
 <head>
-<title><%= caption%></title>
+<title><%= pageTitle%></title>
 <link href="styles.css" rel="stylesheet" type="text/css">
 </head>
 <body topmargin="0" leftmargin="0" bgcolor="White">
@@ -281,24 +298,17 @@ else
 </table>
 <table bgcolor="white" border="0" cellpadding="0" cellspacing="0">
 <tr>
-<td valign='top'><table><tr><td><%= outString.toString()%></table></td></tr></table></td>
-<td width="2" valign='top'>&nbsp;</td>
-<td valign='top'>
-<table bgcolor='white' border='0' cellpadding="5" cellspacing="0">
-<tr>
-<td valign="top" colspan="3" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;">View another state / territory</td>
-</tr>
-<tr>
-<td valign='top'>
-<%= stateList.toString()%>
-</td>
-<td valign='top'>
-<br>
-<a href="javascript:window.close()">Close Window</a>
-</td>
-</tr>
-</table>
-</td>
+	<td valign='top'>
+		<table bgcolor='white' border='0' cellpadding="5" cellspacing="0">
+		<tr>
+			<td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;">View another state / territory<br /><table bgcolor='white' border='0' cellpadding="5" cellspacing="0"><tr><td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: color : #000000;"><%= stateList.toString()%></td></tr></table></td>
+			<td width="50">&nbsp;</td>
+			<td valign="top"><table bgcolor='white' border='0' cellpadding="5" cellspacing="0"><tr><td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: color : #000000;"><%= outString.toString()%></td></tr></table></td>
+			<td width="50">&nbsp;</td>
+			<td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;"><a href="list.jsp?r=<%= region%>&cctopic=C">View Program Partners in <%= stateStatic%></a></td>
+		</tr>
+		</table>
+	</td>
 </tr>
 </table>
 <table width="100%" border="0" cellspacing="0" cellpadding="0">

@@ -10,6 +10,9 @@ String htmlString = null;
 String caption = null;
 String cdcSubTitle = "State Health Department Contact";
 String param = request.getParameter("r");
+String stateName = "";
+String stateStatic = "";
+
 if (param != null)
     region = param.toUpperCase();
 param = request.getParameter("cctopic");
@@ -44,11 +47,12 @@ if (param != null)
         outString = new StringBuffer();
         String partnerString = "";
         int partnerId = 0;
-        String stateName = "";
+        
         int count = 1;
         String typeString = "";
         String typeOutput = "";
-
+		
+		
         do
         {
             if (stateName.compareTo(rs.getString("state_name").trim()) != 0)
@@ -59,6 +63,7 @@ if (param != null)
                 partnerString = rs.getString("partner_abbreviation");
                 typeString = rs.getString("type");
                 stateName = rs.getString("state_name");
+				stateStatic = stateName;
                 outString.append("<p><font style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: #000000;'>"+pageTitle+" - </font><font style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: #AA0000;'>"+stateName.trim()+"</font></p>");
                 outString.append("<p><table border='0' cellspacing='0' cellpadding='0' width='100%'>");
                 outString.append("<tr><td style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'>"+rs.getString("partner_name")+endTD);
@@ -224,6 +229,11 @@ if (param != null)
         stateList.append("<br /><br /><a href='list.jsp?r=ALL&cctopic=" + topic + "' title=\"All states and regions\">All</a>");
     }
 
+
+	if (region.equals("ALL"))
+		stateStatic="U.S.";
+
+		pageTitle = pageTitle + " - " + stateStatic;
     QBean.close();
 
     NCIPopChartEmbedder myChart = new NCIPopChartEmbedder();
@@ -273,7 +283,7 @@ if (param != null)
 <td valign='top'>
 <%= stateList.toString()%>
 </td>
-<td valign='top'>
+<td valign="top" colspan="3" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;" align="right"><a href="rlist.jsp?r=<%= region%>&cctopic=0">View Research Partners in <%= stateName%></a>
 <%= htmlString%><br>
 <a href="javascript:window.close()">Close Window</a>
 </td>

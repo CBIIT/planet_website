@@ -96,7 +96,7 @@
 To view, click on map or state name below.
 </div>
 <div align="right" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;">
-<a href="researcher.jsp?cctopic=0">View Researcher</a>
+<a href="researcher.jsp?cctopic=0">View Research Partners</a>
 </div>
 <br />
 </td>
