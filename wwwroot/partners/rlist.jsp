@@ -22,6 +22,7 @@ String topicDesc = "";
 String listTitle = "";
 Integer topicInt = new Integer(-1);
 String researcherText="";
+String staticTopic = "";
 
 if (param != null) 
     region = param.toUpperCase();
@@ -72,6 +73,10 @@ if (param != null)
         String typeOutput = "";
 		int researcherCount = 0;
 			
+		if (cctopic == 0)
+			staticTopic = "all topics";
+		else
+			staticTopic = QBean.getTopicDescription(topic);
 			
         do
         {
@@ -270,7 +275,7 @@ else {
 	
 		if (stateStatic.compareTo("the US") == 0) {
 			stateStatic = "All States";
-			researcherText="Researcg Partners";	
+			researcherText="Research Partners for "+staticTopic;	
 		}
 		else
 			researcherText="Research Partners in "+stateStatic;
