@@ -83,7 +83,7 @@ if (param != null)
                 stateName = rs.getString("state_name");
 				
                 outString.append("<p><font style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: #000000;'><font style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: #AA0000;'>"+topicDesc+"</font></p>");
-                outString.append("<p><table border='0' cellspacing='0' cellpadding='0' width='100%'>");
+                outString.append("<p><table border='0' cellspacing='0' cellpadding='0' width='450'>");
 				
 				outString.append("<tr><td style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'>"+rs.getString("researcher_name")+"  "+rs.getString("degree")+endTD);
 				
@@ -118,7 +118,7 @@ if (param != null)
                 researcherId = rs.getInt("researcher_id");
                 researcherString = rs.getString("state_abbreviation");
                 //typeString = rs.getString("type");
-                outString.append("<p><table border='0' cellspacing='0' cellpadding='0' width='100%'>");
+                outString.append("<p><table border='0' cellspacing='0' cellpadding='0' width='450'>");
                 outString.append("<tr><td style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'>"+rs.getString("researcher_name")+"  "+rs.getString("degree")+endTD);
 
                //outString.append("<tr><td style='font-family: Arial, Helvetica, sans-serif;font-size: 12;style: bold;' align='left'>");
@@ -267,7 +267,7 @@ else
                 stateList.append("<br />");
 			
 			if (region.compareTo(rs.getString("abbreviation")) == 0)
-				stateList.append("<font color='ff0000'>"+rs.getString("name").trim()+"</font>");
+				stateList.append("<font style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: FF0000;'>"+rs.getString("name").trim()+"</font>");
 			else
 	            stateList.append("<a href='rlist.jsp?r="+rs.getString("abbreviation")+"&cctopic="+topic+"' class='a1' title='"+rs.getString("name").trim()+"'>"+rs.getString("name")+"</a>");
 				
