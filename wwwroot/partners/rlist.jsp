@@ -230,11 +230,13 @@ if (param != null)
                 else
                     outString.append(beginTD+"Web site:  <a href=\""+urlStr+"\" target=\"_blank\" class='a1'>"+urlStr+"</a>"+endTD);
             }
-            //outString.append("<tr><td height='10'>&nbsp;</td></tr>");
+            outString.append("<tr><td height='10'>&nbsp;</td></tr>");
 
             count ++;
 
      } while (rs.next());
+	 
+	 outString.append("</table>");
 }
 else
   outString = new StringBuffer("No Records Found.");
