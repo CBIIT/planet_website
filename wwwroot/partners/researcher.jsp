@@ -40,7 +40,7 @@
            StateBean rs = (StateBean)it2.next();
            if (count > 27)
            {
-               stateList.append("</td><td valign='bottom'>");
+               stateList.append("</td><td valign='bottom' bgcolor="#F1F1FD">");
                count = 0;
            }
            if (typeString.compareTo(rs.getType()) != 0)
@@ -111,7 +111,7 @@
 </td>
 </tr>
 <tr>
-<td valign='top' bgcolor="#E9E9FE"><%= stateList.toString()%><br />
+<td valign='top' bgcolor="#F1F1FD"><%= stateList.toString()%><br />
 
 <td valign='top'>
 <%= htmlString%><br>
