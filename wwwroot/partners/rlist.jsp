@@ -78,7 +78,7 @@ if (param != null)
 					topicInt = new Integer(topicID);
 					topicDesc = QBean.getTopicDescription(topicInt);
 					
-					if (topicID != 0)
+					if (topicID == 0)
 						topicString.append("<a href='#"+topicID+"'>"+topicDesc+"</a><br>");
 					else
 						topicString.append("&nbsp;");
