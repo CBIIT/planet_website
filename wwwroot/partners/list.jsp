@@ -90,7 +90,7 @@ topicNum = QBean.getTopicID(topic);
                 outString.append("<u>" + typeDesc);
                 
                 // For state and territory contacts we may need to tack on some additional information.
-				outString.append(partnerString + " - " + typeString + " - " + topic " - " + typeDesc + " - ");
+				outString.append(partnerString + " - " + typeString + " - " + topic + " - " + typeDesc + " - ");
                 if (partnerString.equals("CDC") && !typeString.equals("W"))
                 {
                     if (topic.equals("T"))
@@ -131,7 +131,7 @@ topicNum = QBean.getTopicID(topic);
                 outString.append("<u>" + rs.getTypeDescription());
                 
                 // For state and territory contacts we may need to tack on some additional information.
-				outString.append(partnerString + " - " + typeString + " - " + topic " - " + typeDesc + " - ");
+				outString.append(partnerString + " - " + typeString + " - " + topic + " - " + typeDesc + " - ");
                 if (partnerString.equals("CDC") && !typeString.equals("W"))
                 {
                     if (topic.equals("T"))
