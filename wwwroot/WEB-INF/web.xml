@@ -27,7 +27,7 @@
     </context-param>
     <context-param>
         <param-name>CordaExternalAddress</param-name>
-        <param-value>http://156.40.32.188:8080/servlet/ctRedirector</param-value>
+        <param-value>http://156.40.32.188:8080/servlet/ctRedirector/</param-value>
     </context-param>
     <context-param>
         <param-name>CordaClusterAddress</param-name>
@@ -61,7 +61,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>ctRedirector</servlet-name>
-        <url-pattern>/servlet/ctRedirector</url-pattern>
+        <url-pattern>/servlet/ctRedirector/</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>ctcm</servlet-name>
