@@ -98,7 +98,7 @@ if (param != null)
 						listTitle = "<font style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: #000000;'>Research Partners - </font><font style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: #AA0000;'>"+stateName+"</font>";
 					}
 					
-					topicString.append("<td valign='top' style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 12;	font-weight: bold;'><a href='#"+topicID+"' style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 12;	font-weight: bold;'>"+topicDesc+"</a></td>");						
+					topicString.append("<td valign='top' style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 12;'><a href='#"+topicID+"' style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 12;'>"+topicDesc+"</a></td>");						
 					
 					
 					if ((topicCount % 2) == 0)
