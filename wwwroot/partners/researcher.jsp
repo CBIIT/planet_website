@@ -95,6 +95,10 @@
 </div>
 
 <div style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;">
+Locate Research Partners in Your State or Region.
+</div>
+
+<div style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;">
 To view, click on map or state name below.
 </div>
 
@@ -105,8 +109,8 @@ To view, click on map or state name below.
 </td>
 </tr>
 <tr>
-<td valign='top'><a href='rlist.jsp?r=ALL&cctopic=<%= topic %>'>View all U.S. Researchers by topic area</a><br />
-<%= stateList.toString()%>
+<td valign='top'><%= stateList.toString()%><br />
+<a href='rlist.jsp?r=ALL&cctopic=<%= topic %>'>View all U.S. Researchers by topic area</a>
 <td valign='top'>
 <%= htmlString%><br>
 <a href="javascript:window.close()">Close Window</a>

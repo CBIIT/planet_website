@@ -20,7 +20,7 @@
     QueryBean QBean = new QueryBean();
     // Find the page title to use based on the topic
     String topicTitle = QBean.getTopicDescription(topic);
-    pageTitle = "Locate " + topicTitle + " Partners in Your State or Region.";
+    pageTitle = "Locate " + topicTitle + " Partners in Your State or Region";
     caption = "Cancer Control PLANET - " + topicTitle;
 
     String typeString = "S";
@@ -89,7 +89,7 @@
 <tr>
 <td align="left" colspan="3">
 <div style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 16px;	font-weight: bold;color : #000000;">
-<%= pageTitle%>
+<%--= pageTitle--%>Locate Program Partners in Your State or Region.
 </div>
 
 <div style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;">
@@ -102,8 +102,8 @@ To view, click on map or state name below.
 </td>
 </tr>
 <tr>
-<td valign='top'><a href='list.jsp?r=ALL&cctopic=<%= topic %>'>View all partners</a><br />
-<%= stateList.toString()%>
+<td valign='top'><%= stateList.toString()%><br />
+<a href='list.jsp?r=ALL&cctopic=<%= topic %>'>View all partners</a>
 <td valign='top'>
 <%= htmlString%><br>
 <a href="javascript:window.close()">Close Window</a>
