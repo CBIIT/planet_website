@@ -163,7 +163,7 @@ topicNum = QBean.getTopicID(topic);
 						}
                 }
 
-				if (typeDesc.equals("Regional") {
+				if (typeDesc.equals("Regional")) {
 					outString.append(" Contact");
 				}
 
