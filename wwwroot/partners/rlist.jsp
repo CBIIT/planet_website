@@ -66,11 +66,8 @@ if (param != null)
     String endTD = "</td></tr>";
 	
 
-
 		outString = new StringBuffer("<table cellspacing='0' cellpadding='5'>");
 		topicString = new StringBuffer("<tr><td valign='top' style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size: 14px; font-weight: bold; color : #000000;' colspan='2'><a name='top'></a>View by Topic:</td></tr><tr><td valign='top' style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size : 12;'>");
-	
-	
 	
     if (researchers!=null)
     {
@@ -99,7 +96,6 @@ if (param != null)
 					topicInt = new Integer(topicID);
 					topicDesc = QBean.getTopicDescription(topicInt);
 
-					
 					if (region.compareTo("ALL") == 0) {
 						stateName = "US";
 						listTitle = "<font style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif; font-size: 14;font-weight: bold;color: #000000;'>Research Partners - </font><font style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif; font-size: 14;font-weight: bold;color: #AA0000;'>US</font>";
@@ -110,7 +106,6 @@ if (param != null)
 					}
 					
 					topicString.append("<li><a href='#"+topicID+"' style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size : 12;'>"+topicDesc+"</a></li>");						
-					
 					
 					//if ((topicCount % 2) == 0)
 						//topicString.append("</tr><tr>");
@@ -127,7 +122,6 @@ if (param != null)
 												
         	        researcherId = rs.getResearcherId();
             	    researcherString = rs.getStateAbbreviation();
-                	
 					
 					if (count > 1)
 						outString.append("<tr><td colspan='2' style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif; font-size: 12;color: #000000;' align='left' valign='top'><br /><a href='#top' style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif; font-size: 12;'>[Top of Page]</a></td></tr>");
@@ -165,10 +159,8 @@ if (param != null)
 					
 					if (rs.getDegree() != null && rs.getDegree().compareTo("") != 0)
 						outString.append(", "+rs.getDegree());
-					
 					outString.append(endTD);
             }
-			
 			
             if (rs.getTitle() != null && rs.getTitle().compareTo("") != 0)
                 outString.append(beginTD+rs.getTitle().trim()+endTD);
@@ -187,7 +179,7 @@ if (param != null)
                 outString.append( rs.getAddressState() +" ");
             if (rs.getZip() != null && rs.getZip().compareTo("") != 0)                
                 outString.append( rs.getZip().trim() +endTD);
-                
+
             if (rs.getPhone() != null && rs.getPhone().compareTo("") != 0)
                     outString.append(beginTD+"Phone:  "+rs.getPhone().trim()+endTD);
             if (rs.getFax() != null && rs.getFax().compareTo("") != 0)
@@ -216,7 +208,7 @@ if (param != null)
                else
                  outString.append(beginTD+"Web site:  <a href=\""+urlStr+"\" target=\"_blank\" class='a1'>"+urlStr+"</a>"+endTD);
             }
-			
+
             if (rs.getOrgurl2() != null && rs.getOrgurl2().compareTo("") != 0)
             {
                 String urlStr = "";
@@ -226,7 +218,7 @@ if (param != null)
                     urlStr = rs.getOrgurl2().trim();
 
                 // Don't display Web site: field header for tobacco, breast cancer, and cervical cancer contacts.
-				
+
                if (researcherString.equals("CDC") && (topic.equals("1") || topic.equals("4") || topic.equals("5")))
                 {
                    outString.append(beginTD+"<a href=\""+urlStr+"\" target=\"_blank\" class='a1'>"+urlStr+"</a>"+endTD);
@@ -234,46 +226,44 @@ if (param != null)
                 else
                     outString.append(beginTD+"Web site:  <a href=\""+urlStr+"\" target=\"_blank\" class='a1'>"+urlStr+"</a>"+endTD);
             }
-			
+
 	         cellCount++;
 		     count ++;       
 	     } while (it.hasNext());
-	 
+
 		 topicString.append("</td></tr>");
 	 	 outString.append("</table>");
-	 
+
 	 	 if ((cellCount % 2) == 0)
 		 outString.append("<td>&nbsp;</td>");
-		
+
 		 outString.append("</tr><tr><td colspan='2' style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif; font-size: 12px;color: #000000;' align='left' valign='top'><a href='#top' style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif; font-size: 12px;'>[Top of Page]</a></td></tr></table></td></tr></table>");
-		
 	}
 	else {
 	  listTitle = "No Records Found.";
-	  
+
 	  topicString = new StringBuffer("");
 	  outString = new StringBuffer("<table><tr><td>&nbsp;</td></tr></table>");
 	}  //end of if statement
 
     Vector states = QBean.getStateList();
-    
+
     Iterator it2 = states.iterator();
-	
+
     if (it2.hasNext())
     {
         stateList = new StringBuffer();
 		stateList.append("<table><tr><td valign='top' nowrap>");
         String typeString = "S";
         int count= 0;
-		
-		
+
         do
         {
         	StateBean rs = (StateBean)it2.next();
-			
+
 			if (region.compareTo(rs.getAbbreviation()) == 0)
 				stateStatic=rs.getName();
-				
+
             if (count > 27)
             {
                 stateList.append("</td><td valign='top' nowrap>");
@@ -282,12 +272,12 @@ if (param != null)
 
             if (count > 0)
                 stateList.append("<br />");
-			
+
 			if (region.compareTo(rs.getAbbreviation()) == 0)
 				stateList.append("<font style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	color : AA0000; font-size: 12px;'><strong>"+rs.getName().trim()+"</strong></font>");
 			else
 	            stateList.append("<a href='rlist.jsp?r="+rs.getAbbreviation()+"&cctopic="+topic+"' class='a1' title='"+rs.getName().trim()+"'>"+rs.getName()+"</a>");
-			
+
             count++;
         } while (it2.hasNext());
         stateList.append("</td></tr><tr><td colspan=2><a href='rlist.jsp?r=ALL&cctopic=" + topic + "' title=\"All states and regions\">View All U.S. Researchers by topic area</a></td></tr></table>");
@@ -304,8 +294,6 @@ if (param != null)
 	if (topicString.length() == 0) {
   		topicString = new StringBuffer("<tr><td><font style='family: Arial, Helvetica, Verdana, Geneva, sans-serif;	size: 14px; weight: bold; color: #000000;'>Research partners not currently available in "+stateStatic+".</font></td></tr>");
 	}
-	
-    
 %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
@@ -320,47 +308,50 @@ if (param != null)
     <td><a href="../index.html"><img src="../images/planet_banner2.gif" alt="Cancer Control PLANET - Links to resources for cancer control planning" width="369" height="82" border="0"></a></td>
     <td><p><a href="../index.html">Home</a><br>
         <a href="../contact.html">Contact Us</a><br>
-	<a href="about.html">About This Site</a><br>
+		<a href="..about.html">About This Site</a><br>
         <a href="../factsheet.pdf">Fact Sheet (PDF)</a><br>
-
         <a href="../partners.html">PLANET Sponsors</a></p></td>
   </tr>
-    <tr>
-    <td colspan="3">
-      <hr size="1" noshade>
-	</td>
+  <tr>
+    <td colspan="3"><hr size="1" noshade></td>
   </tr>
 </table>
 
 <table bgcolor="white" border="0" cellpadding="0" cellspacing="0" width="100%">
-<tr>
+  <tr>
 	<td valign="top" style="font-family: Arial, Helvetica, Verdana, Geneva, sans-serif; font-size: 20px; font-weight: bold; color: #000000;" colspan="2"><%= researcherText%></td>
 	<td valign="top" align="right"><strong><a href="list.jsp?r=<%= region%>&cctopic=<%= topicLet%>">View Program Partners in <%= stateStatic%></a></strong></td>
-</tr>
+  </tr>
 </table>
+
 <table bgcolor="white" border="0" cellpadding="0" cellspacing="0" width="100%">
-<tr>
-<td colspan="3">&nbsp;</td>
-</tr>
-<tr>
-<td valign="top" style="font-family : Arial, Helvetica, Verdana, Geneva, sans-serif; font-size: 14px; font-weight: color : #000000;" nowrap><%= stateList.toString()%></td>
+  <tr>
+	<td colspan="3">&nbsp;</td>
+  </tr>
+  <tr>
+	<td valign="top" style="font-family : Arial, Helvetica, Verdana, Geneva, sans-serif; font-size: 14px; font-weight: color : #000000;" nowrap><%= stateList.toString()%></td>
 	<td valign="top" colspan="2" align="left"><table cellspacing="5"><%= topicString.toString()%></table><%= outString.toString()%></td>
-</tr>
+  </tr>
 </table>
+
 <table width="100%" border="0" cellpadding="5" cellspacing="0">
-<tr>
-<td colspan="3">The list of research partners was compiled based on those individuals who had received a grant during the fiscal year period from 1998-2003 and who have permitted their contact information to be listed as a resource for comprehensive cancer control planning and implementation within their state.
-</td>
-</tr>
+  <tr>
+	<td colspan="3">The list of research partners was compiled based on those individuals who had received a grant during the fiscal year period from 1998-2003 and who have permitted their contact information to be listed as a resource for comprehensive cancer control planning and implementation within their state.</td>
+  </tr>
 </table>
+
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
     <td><hr size="1" noshade>
-	<div align="center"><a href="../index.html">Home</a>&nbsp;&nbsp;&nbsp; <a href="../contact.html">Contact Us</a>&nbsp;&nbsp;&nbsp;
+	<div align="center">
+	<a href="../index.html">Home</a>&nbsp;&nbsp;&nbsp; 
+	<a href="../contact.html">Contact Us</a>&nbsp;&nbsp;&nbsp;
     <a href="../about.html">About this Site</a>&nbsp;&nbsp;&nbsp;
-        <a href="../partners.html">PLANET Sponsors</a>&nbsp;&nbsp;&nbsp; <a href="../privacy.html">Privacy
-        Policy</a>&nbsp;&nbsp;&nbsp; <a href="../disclaimer.html">Disclaimer</a>&nbsp;&nbsp;&nbsp; <a href="../accessibility.html">Accessibility</a><br>
-      </div></td>
+    <a href="../partners.html">PLANET Sponsors</a>&nbsp;&nbsp;&nbsp; 
+	<a href="../privacy.html">Privacy Policy</a>&nbsp;&nbsp;&nbsp; 
+	<a href="../disclaimer.html">Disclaimer</a>&nbsp;&nbsp;&nbsp; 
+	<a href="../accessibility.html">Accessibility</a><br>
+    </div></td>
   </tr>
 </table>
 </body></html>
