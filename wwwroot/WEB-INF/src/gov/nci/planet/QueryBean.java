@@ -112,8 +112,7 @@ public class QueryBean {
 			stmt.execute();
 			topicTitle = stmt.getString(1);
 			
-		    rs.close();
-		    rs = null;
+		 
 		    stmt.close();
 		    stmt = null;
 		    conn.close(); // Return to connection pool
@@ -167,8 +166,7 @@ public class QueryBean {
 			stmt.execute();
 			topicID =  stmt.getString(1);
 			
-		    rs.close();
-		    rs = null;
+		    
 		    stmt.close();
 		    stmt = null;
 		    conn.close(); // Return to connection pool
@@ -221,8 +219,7 @@ public class QueryBean {
 			stmt.execute();
 			topicID = stmt.getInt(1);
 			
-		    rs.close();
-		    rs = null;
+		    
 		    stmt.close();
 		    stmt = null;
 		    conn.close(); // Return to connection pool
@@ -459,8 +456,6 @@ public class QueryBean {
 			stmt.execute();
 			desc = stmt.getString(1);
 			
-		    rs.close();
-		    rs = null;
 		    stmt.close();
 		    stmt = null;
 		    conn.close(); // Return to connection pool
