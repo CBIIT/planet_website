@@ -56,12 +56,11 @@ if (param != null)
 	
 
 
-		outString = new StringBuffer("No Records Found.");
+		outString = new StringBuffer("<hr size='1' noshade><table bgcolor='white' border='0' cellpadding='5' cellspacing='0'><tr><td valign='top' style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: color : #000000;'>");
 		topicString = new StringBuffer("No Records Found.");
 	
     if (rs.next())
     {
-		outString = new StringBuffer();
         String researcherString = "";
         int researcherId = 0;
         int count = 1;
@@ -243,13 +242,12 @@ if (param != null)
 
      } while (rs.next());
 	 
-	 outString.append("</table><p></font><a href='#top'>[Top of Page]</a></p>");
+	 outString.append("</table><p></font><a href='#top'>[Top of Page]</a></p></td></tr></table>");
 }
 else {
-  outString = new StringBuffer("No Records Found.");
   topicString = new StringBuffer("No Records Found.");
- //end of if statement
- }
+  outString = new StringBuffer("&nbsp;");
+}  //end of if statement
 
     rs = QBean.getStateList();
     if (rs.next())
@@ -334,13 +332,9 @@ else {
 	</td>
 </tr>
 </table>
-<hr size="1" noshade>
-<table bgcolor='white' border='0' cellpadding="5" cellspacing="0">
-		<tr>
-			<td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: color : #000000;"><%= outString.toString()%>
-			</td>
-		</tr>
-</table>
+
+<%= outString.toString()%>
+			
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
     <td><hr size="1" noshade>
