@@ -123,9 +123,9 @@ if (param != null)
 					outString.append("<tr><td style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left' valign='top'>"+rs.getString("researcher_name")+"  ");
 					
 					if (rs.getString("degree") != null && rs.getString("degree").compareTo("") != 0)
-						outstring.append(rs.getString("degree"));
+						outString.append(rs.getString("degree"));
 					
-					outstring.append(endTD);
+					outString.append(endTD);
            		}
 		   
 
@@ -146,9 +146,9 @@ if (param != null)
                 outString.append("<tr><td style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left' valign='top'>"+rs.getString("researcher_name")+"  ");
 					
 					if (rs.getString("degree") != null && rs.getString("degree").compareTo("") != 0)
-						outstring.append(rs.getString("degree"));
+						outString.append(rs.getString("degree"));
 					
-					outstring.append(endTD);
+					outString.append(endTD);
             }
 			
             if (rs.getString("title") != null && rs.getString("title").compareTo("") != 0)
