@@ -8,20 +8,10 @@ import gov.nci.util.ConnPoolBean;
 import gov.nci.planet.bean.*;
 
 public class QueryBean {
-	// private Connection conn;
-	// private CallableStatement stmt;
-	public QueryBean() throws SQLException {
-		//conn = ConnPoolBean.getConnection();
+	
+	public QueryBean(){
 	}
-	/*
-	public void closeStatement() throws SQLException {
-		//stmt.close();
-	}
-	public void close() throws SQLException {
-		//closeStatement();
-		//conn.close();
-	}
-	*/
+
 	public Vector getStateList()
 	{
 		ResultSet rs = null;
@@ -62,8 +52,9 @@ public class QueryBean {
 		    rs = null;
 		    stmt.close();
 		    stmt = null;
-		    conn.close(); // Return to connection pool
-		    conn = null;  // Make sure we don't close it twice
+		    //conn.close(); // Return to connection pool
+		    //conn = null;  // Make sure we don't close it twice
+		    ConnPoolBean.closeConnection(conn);
 
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -86,7 +77,8 @@ public class QueryBean {
 			}
 			if (conn!=null) {
 				try {
-					conn.close();
+					//conn.close();
+					ConnPoolBean.closeConnection(conn);
 				} catch (SQLException ee){
 					ee.printStackTrace();
 				}
@@ -115,8 +107,10 @@ public class QueryBean {
 		 
 		    stmt.close();
 		    stmt = null;
-		    conn.close(); // Return to connection pool
-		    conn = null;  // Make sure we don't close it twice
+		    //conn.close(); // Return to connection pool
+		    //conn = null;  // Make sure we don't close it twice
+		    
+		    ConnPoolBean.closeConnection(conn);
 
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -139,7 +133,8 @@ public class QueryBean {
 			}
 			if (conn!=null) {
 				try {
-					conn.close();
+					//conn.close();
+					ConnPoolBean.closeConnection(conn);
 				} catch (SQLException ee){
 					ee.printStackTrace();
 				}
@@ -169,8 +164,10 @@ public class QueryBean {
 		    
 		    stmt.close();
 		    stmt = null;
-		    conn.close(); // Return to connection pool
-		    conn = null;  // Make sure we don't close it twice
+		    //conn.close(); // Return to connection pool
+		    //conn = null;  // Make sure we don't close it twice
+		    
+		    ConnPoolBean.closeConnection(conn);
 
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -193,7 +190,8 @@ public class QueryBean {
 			}
 			if (conn!=null) {
 				try {
-					conn.close();
+					//conn.close();
+					ConnPoolBean.closeConnection(conn);
 				} catch (SQLException ee){
 					ee.printStackTrace();
 				}
@@ -222,8 +220,10 @@ public class QueryBean {
 		    
 		    stmt.close();
 		    stmt = null;
-		    conn.close(); // Return to connection pool
-		    conn = null;  // Make sure we don't close it twice
+		    //conn.close(); // Return to connection pool
+		    //conn = null;  // Make sure we don't close it twice
+		    
+		    ConnPoolBean.closeConnection(conn);
 
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -246,7 +246,8 @@ public class QueryBean {
 			}
 			if (conn!=null) {
 				try {
-					conn.close();
+					//conn.close();
+					ConnPoolBean.closeConnection(conn);
 				} catch (SQLException ee){
 					ee.printStackTrace();
 				}
@@ -312,8 +313,8 @@ public class QueryBean {
 		    rs = null;
 		    stmt.close();
 		    stmt = null;
-		    conn.close(); // Return to connection pool
-		    conn = null;  // Make sure we don't close it twice
+		    //conn.close(); // Return to connection pool
+		    //conn = null;  // Make sure we don't close it twice
 
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -336,7 +337,8 @@ public class QueryBean {
 			}
 			if (conn!=null) {
 				try {
-					conn.close();
+					//conn.close();
+					ConnPoolBean.closeConnection(conn);
 				} catch (SQLException ee){
 					ee.printStackTrace();
 				}
@@ -405,8 +407,10 @@ public class QueryBean {
 		    rs = null;
 		    stmt.close();
 		    stmt = null;
-		    conn.close(); // Return to connection pool
-		    conn = null;  // Make sure we don't close it twice
+		    //conn.close(); // Return to connection pool
+		    //conn = null;  // Make sure we don't close it twice
+		    
+		    ConnPoolBean.closeConnection(conn);
 
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -429,7 +433,8 @@ public class QueryBean {
 			}
 			if (conn!=null) {
 				try {
-					conn.close();
+					//conn.close();
+					ConnPoolBean.closeConnection(conn);
 				} catch (SQLException ee){
 					ee.printStackTrace();
 				}
@@ -458,8 +463,10 @@ public class QueryBean {
 			
 		    stmt.close();
 		    stmt = null;
-		    conn.close(); // Return to connection pool
-		    conn = null;  // Make sure we don't close it twice
+		    //conn.close(); // Return to connection pool
+		    //conn = null;  // Make sure we don't close it twice
+		    
+		    ConnPoolBean.closeConnection(conn);
 
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -482,7 +489,8 @@ public class QueryBean {
 			}
 			if (conn!=null) {
 				try {
-					conn.close();
+					//conn.close();
+					ConnPoolBean.closeConnection(conn);
 				} catch (SQLException ee){
 					ee.printStackTrace();
 				}
@@ -551,8 +559,10 @@ public class QueryBean {
 		    rs = null;
 		    stmt.close();
 		    stmt = null;
-		    conn.close(); // Return to connection pool
-		    conn = null;  // Make sure we don't close it twice
+		    //conn.close(); // Return to connection pool
+		    //conn = null;  // Make sure we don't close it twice
+		    
+		    ConnPoolBean.closeConnection(conn);
 
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -575,7 +585,8 @@ public class QueryBean {
 			}
 			if (conn!=null) {
 				try {
-					conn.close();
+					//conn.close();
+					ConnPoolBean.closeConnection(conn);
 				} catch (SQLException ee){
 					ee.printStackTrace();
 				}
@@ -644,8 +655,8 @@ public class QueryBean {
 		    rs = null;
 		    stmt.close();
 		    stmt = null;
-		    conn.close(); // Return to connection pool
-		    conn = null;  // Make sure we don't close it twice
+		    //conn.close(); // Return to connection pool
+		    //conn = null;  // Make sure we don't close it twice
 
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -668,7 +679,8 @@ public class QueryBean {
 			}
 			if (conn!=null) {
 				try {
-					conn.close();
+					//conn.close();
+					ConnPoolBean.closeConnection(conn);
 				} catch (SQLException ee){
 					ee.printStackTrace();
 				}
