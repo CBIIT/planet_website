@@ -410,8 +410,10 @@ topicNum = QBean.getTopicID(topic);
 
 <table bgcolor="white" border="0" cellpadding="0" cellspacing="0">
 <tr>
-<td valign="top" style="font-family : Arial, Helvetica, Verdana, Geneva, sans-serif; font-size: 20px; font-weight: bold; color: #000000;" align="left" colspan="3"><%= partnerText%></td>
-<td valign="top" style="font-family : Arial, Helvetica, Verdana, Geneva, sans-serif; font-size: 14px; font-weight: bold; color: #000000;" align="right" colspan="2"><a href="rlist.jsp?r=<%= region%>&cctopic=<%= topicNum%>">View Research Partners in <%= stateStatic%></a></td>
+<td valign="top" align="left" colspan="3"><div style="font-family : Arial, Helvetica, Verdana, Geneva, sans-serif; font-size: 20px; font-weight: bold; color: #000000;"><%= partnerText%></div><br>
+<p>To locate research partners in your state or region go to the  <a href="rlist.jsp?r=<%= region%>&cctopic=<%= topicNum%>">research partners in <%= stateStatic%></a> page.</p>
+</td>
+<td valign="top" style="font-family : Arial, Helvetica, Verdana, Geneva, sans-serif; font-size: 14px; font-weight: bold; color: #000000;" align="right" colspan="2">&nbsp;</td>
 </tr>
 <tr>
 <td colspan="5">&nbsp;</td>

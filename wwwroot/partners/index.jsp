@@ -42,7 +42,7 @@
            StateBean rs = (StateBean)it2.next();
            if (count > 27)
            {
-               stateList.append("</td><td valign='bottom'>");
+               stateList.append("</td><td valign='bottom' bgcolor="#F1F1FD">");
                count = 0;
            }
            if (typeString.compareTo(rs.getType()) != 0)
@@ -110,7 +110,7 @@
 	</td>
 </tr>
 <tr>
-	<td valign='top'><%= stateList.toString()%><br /></td>
+	<td valign='top' bgcolor="#F1F1FD"><%= stateList.toString()%><br /></td>
 	<td valign='top'><%= htmlString%><br></td>
 <tr>
 	<td colspan="3"><a href='list.jsp?r=ALL&cctopic=<%= topic %>'>View all Program Partners</a>
