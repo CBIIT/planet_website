@@ -25,6 +25,7 @@ if (param != null)
 	
 param = request.getParameter("cctopic");
  
+
 if (param != null) 
 	ccTopic = Integer.parseInt(param);
 	
