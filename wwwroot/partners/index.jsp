@@ -43,7 +43,7 @@
                stateList.append("<br />");
                typeString = rs.getString("type");
            }
-           stateList.append("\n<br />"+topic+"<a href='list.jsp?r="+rs.getString("abbreviation")+"&cctopic="+topic+"' class='a1'>"+rs.getString("name")+"</a>");
+           stateList.append("\n<br /><a href='list.jsp?r="+rs.getString("abbreviation")+"&cctopic="+topic+"' class='a1'>"+rs.getString("name")+"</a>");
            count++;
       } while (rs.next());
     stateList.append("</td>");
