@@ -56,7 +56,7 @@ if (param != null)
 	
 
 
-		outString = new StringBuffer("<table bgcolor='white' border='0' cellpadding='5' cellspacing='0'><tr><td valign='top' style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: color : #000000;' width='50%'>");
+		outString = new StringBuffer("<table bgcolor='white' border='0' cellpadding='5' cellspacing='0'><tr><td valign='top' style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: color : #000000;' width='50%' valign='top'>");
 		topicString = new StringBuffer("No Records Found.");
 	
     if (rs.next())
@@ -77,8 +77,7 @@ if (param != null)
 			   		topicID = rs.getInt("topic_id");
 					topicInt = new Integer(topicID);
 					topicDesc = QBean.getTopicDescription(topicInt);
-					topicString.append("<a href='#"+topicID+"'>"+topicDesc+"</a><br>");
-					
+										
                 if (count > 1)
                    	outString.append("</table></p>");
 				
@@ -92,7 +91,7 @@ if (param != null)
 					
                 outString.append("<p><font style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: #000000;'><font style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: #AA0000;'><a name='"+topicID+"'></a>"+topicDesc+"</font></p>");
                 outString.append("<p><table border='0' cellspacing='0' cellpadding='0'>");
-				outString.append("<tr><td style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'>"+rs.getString("researcher_name")+"  "+rs.getString("degree")+endTD);
+				outString.append("<tr><td style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left' valign='top'>"+rs.getString("researcher_name")+"  "+rs.getString("degree")+endTD);
 			
                 //outString.append("<tr><td style='font-family: Arial, Helvetica, sans-serif;font-size: 12;font-style: normal;' align='left'>");
                 //outString.append("<u>" + rs.getString("type_description"));
@@ -125,7 +124,7 @@ if (param != null)
                 researcherString = rs.getString("state_abbreviation");
                 //typeString = rs.getString("type");
                 outString.append("<p><table border='0' cellspacing='0' cellpadding='0'>");
-                outString.append("<tr><td style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'>"+rs.getString("researcher_name")+"  "+rs.getString("degree")+endTD);
+                outString.append("<tr><td style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left' valign='top'>"+rs.getString("researcher_name")+"  "+rs.getString("degree")+endTD);
 
 
                //outString.append("<tr><td style='font-family: Arial, Helvetica, sans-serif;font-size: 12;style: bold;' align='left'>");
@@ -332,7 +331,7 @@ else {
 	</td>
 </tr>
 <tr>
-	<td colspan="3"><%= outString.toString()%></td>
+	<td colspan="3" valign="top"><%= outString.toString()%></td>
 </tr>
 </table>
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
