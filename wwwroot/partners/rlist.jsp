@@ -290,7 +290,6 @@ else {
   		topicString = new StringBuffer("<tr><td><font style='family : Verdana, Geneva, Arial, Helvetica, sans-serif;	size : 14px;	weight: bold; color : #000000;'>Research partners not currently available in "+stateStatic+".</font></td></tr>");
 	}
 	
-	
     QBean.close();
 %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
