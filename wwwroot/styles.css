@@ -64,3 +64,19 @@ a {
 	font-family : Arial, Helvetica, sans-serif;
 	font-size : 13px;
 }
+
+.obj {
+	font-weight : bold;
+}
+
+.cont {
+	background-color : Silver;
+}
+
+.out {
+	font-weight : lighter;
+}
+
+.plan {
+	
+}
