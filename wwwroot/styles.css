@@ -27,7 +27,6 @@ A.titlelink {
 	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
 	font-size : 18px;
 	color: Blue;
-	font-style : italic;
 	text-decoration : underline;
 }
 
@@ -35,7 +34,6 @@ A.titlelink:hover {
 	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
 	font-size : 18px;
 	color: Blue;
-	font-style : italic;
 	text-decoration : underline;	
 }
 
@@ -43,7 +41,6 @@ A.titlelink:active {
 	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
 	font-size : 18px;
 	color: Blue;
-	font-style : italic;
 	text-decoration : underline;	
 }
 
