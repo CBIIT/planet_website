@@ -79,7 +79,11 @@ if (param != null)
 			   		topicID = rs.getInt("topic_id");
 					topicInt = new Integer(topicID);
 					topicDesc = QBean.getTopicDescription(topicInt);
-					stateName = rs.getString("state_name");
+					
+					if (region.compareTo("ALL") == 0)
+						stateName = "US";
+					else
+						stateName = rs.getString("state_name");
 					
 					if (count == 1)
 						topicString.append("<font style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: #AA0000;'>"+stateName.trim()+"</font><br /><br />View by Topic:</td></tr><a name='top'></a>");

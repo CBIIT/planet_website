@@ -294,7 +294,7 @@ if (param != null)
 </table>
 </td>
 <td width="2" valign='top'>&nbsp;</td>
-<td valign='top'><table><tr><td><%= outString.toString()%></table></td>
+<td valign='top'><table><tr><td><%= outString.toString()%></td></tr></table></td>
 
 
 <td valign="top" colspan="3" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;" align="right"><a href="rlist.jsp?r=<%= region%>&cctopic=0">View Research Partners in <%= stateStatic%></a>
