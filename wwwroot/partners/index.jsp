@@ -95,6 +95,9 @@
 <div style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;">
 To view, click on map or state name below.
 </div>
+<div align="right" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;">
+<a href="research.jsp?cctopic=0">View Researcher</a>
+</div>
 <br />
 </td>
 </tr>
