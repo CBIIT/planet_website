@@ -58,32 +58,39 @@ public class QueryBean {
 				} while (rs.next());
 			}
 			
+		    rs.close();
+		    rs = null;
+		    stmt.close();
+		    stmt = null;
+		    conn.close(); // Return to connection pool
+		    conn = null;  // Make sure we don't close it twice
+
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
 			if (rs!= null){
 				try {
 					rs.close();
-					rs = null;
 				} catch (SQLException ee){
 					ee.printStackTrace();
 				}
+				rs = null;
 			}
 			if (stmt!=null){
 				try {
 					stmt.close();
-					stmt = null;
 				} catch (SQLException ee){
 					ee.printStackTrace();
 				}
+				stmt = null;
 			}
 			if (conn!=null) {
 				try {
 					conn.close();
-					conn = null;
 				} catch (SQLException ee){
 					ee.printStackTrace();
 				}
+				conn = null;
 			}
 		}
 		
@@ -105,34 +112,42 @@ public class QueryBean {
 			stmt.execute();
 			topicTitle = stmt.getString(1);
 			
+		    rs.close();
+		    rs = null;
+		    stmt.close();
+		    stmt = null;
+		    conn.close(); // Return to connection pool
+		    conn = null;  // Make sure we don't close it twice
+
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
 			if (rs!= null){
 				try {
 					rs.close();
-					rs = null;
 				} catch (SQLException ee){
 					ee.printStackTrace();
 				}
+				rs = null;
 			}
 			if (stmt!=null){
 				try {
 					stmt.close();
-					stmt = null;
 				} catch (SQLException ee){
 					ee.printStackTrace();
 				}
+				stmt = null;
 			}
 			if (conn!=null) {
 				try {
 					conn.close();
-					conn = null;
 				} catch (SQLException ee){
 					ee.printStackTrace();
 				}
+				conn = null;
 			}
 		}
+
 		
 		return topicTitle;
 	}
@@ -151,32 +166,40 @@ public class QueryBean {
 			stmt.setInt(2, topicIN.intValue());
 			stmt.execute();
 			topicID =  stmt.getString(1);
+			
+		    rs.close();
+		    rs = null;
+		    stmt.close();
+		    stmt = null;
+		    conn.close(); // Return to connection pool
+		    conn = null;  // Make sure we don't close it twice
+
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
 			if (rs!= null){
 				try {
 					rs.close();
-					rs = null;
 				} catch (SQLException ee){
 					ee.printStackTrace();
 				}
+				rs = null;
 			}
 			if (stmt!=null){
 				try {
 					stmt.close();
-					stmt = null;
 				} catch (SQLException ee){
 					ee.printStackTrace();
 				}
+				stmt = null;
 			}
 			if (conn!=null) {
 				try {
 					conn.close();
-					conn = null;
 				} catch (SQLException ee){
 					ee.printStackTrace();
 				}
+				conn = null;
 			}
 		}
 		
@@ -198,35 +221,42 @@ public class QueryBean {
 			stmt.execute();
 			topicID = stmt.getInt(1);
 			
+		    rs.close();
+		    rs = null;
+		    stmt.close();
+		    stmt = null;
+		    conn.close(); // Return to connection pool
+		    conn = null;  // Make sure we don't close it twice
+
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
 			if (rs!= null){
 				try {
 					rs.close();
-					rs = null;
 				} catch (SQLException ee){
 					ee.printStackTrace();
 				}
+				rs = null;
 			}
 			if (stmt!=null){
 				try {
 					stmt.close();
-					stmt = null;
 				} catch (SQLException ee){
 					ee.printStackTrace();
 				}
+				stmt = null;
 			}
 			if (conn!=null) {
 				try {
 					conn.close();
-					conn = null;
 				} catch (SQLException ee){
 					ee.printStackTrace();
 				}
+				conn = null;
 			}
 		}
-		
+
 		return topicID;
 	}
 	
@@ -280,35 +310,43 @@ public class QueryBean {
 			
 		        } while (rs.next());
 		    }
+			
+		    rs.close();
+		    rs = null;
+		    stmt.close();
+		    stmt = null;
+		    conn.close(); // Return to connection pool
+		    conn = null;  // Make sure we don't close it twice
+
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
 			if (rs!= null){
 				try {
 					rs.close();
-					rs = null;
 				} catch (SQLException ee){
 					ee.printStackTrace();
 				}
+				rs = null;
 			}
 			if (stmt!=null){
 				try {
 					stmt.close();
-					stmt = null;
 				} catch (SQLException ee){
 					ee.printStackTrace();
 				}
+				stmt = null;
 			}
 			if (conn!=null) {
 				try {
 					conn.close();
-					conn = null;
 				} catch (SQLException ee){
 					ee.printStackTrace();
 				}
+				conn = null;
 			}
 		}
-		
+
 		return partners;
 	}
 	
@@ -365,32 +403,40 @@ public class QueryBean {
 			
 		        } while (rs.next());
 		    }
+			
+		    rs.close();
+		    rs = null;
+		    stmt.close();
+		    stmt = null;
+		    conn.close(); // Return to connection pool
+		    conn = null;  // Make sure we don't close it twice
+
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
 			if (rs!= null){
 				try {
 					rs.close();
-					rs = null;
 				} catch (SQLException ee){
 					ee.printStackTrace();
 				}
+				rs = null;
 			}
 			if (stmt!=null){
 				try {
 					stmt.close();
-					stmt = null;
 				} catch (SQLException ee){
 					ee.printStackTrace();
 				}
+				stmt = null;
 			}
 			if (conn!=null) {
 				try {
 					conn.close();
-					conn = null;
 				} catch (SQLException ee){
 					ee.printStackTrace();
 				}
+				conn = null;
 			}
 		}
 
@@ -412,34 +458,43 @@ public class QueryBean {
 			stmt.setInt(2, topic.intValue());
 			stmt.execute();
 			desc = stmt.getString(1);
+			
+		    rs.close();
+		    rs = null;
+		    stmt.close();
+		    stmt = null;
+		    conn.close(); // Return to connection pool
+		    conn = null;  // Make sure we don't close it twice
+
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
 			if (rs!= null){
 				try {
 					rs.close();
-					rs = null;
 				} catch (SQLException ee){
 					ee.printStackTrace();
 				}
+				rs = null;
 			}
 			if (stmt!=null){
 				try {
 					stmt.close();
-					stmt = null;
 				} catch (SQLException ee){
 					ee.printStackTrace();
 				}
+				stmt = null;
 			}
 			if (conn!=null) {
 				try {
 					conn.close();
-					conn = null;
 				} catch (SQLException ee){
 					ee.printStackTrace();
 				}
+				conn = null;
 			}
 		}
+		
 		return desc;
 	}
 	
@@ -451,6 +506,8 @@ public class QueryBean {
 		
 		try {
 			conn = ConnPoolBean.getConnection();
+			
+			
 			
 			stmt = conn.prepareCall("{call dccps.planet_pkg.GetResearchers(?, ?)}");
 			stmt.setInt(1, topic.intValue());
@@ -495,34 +552,42 @@ public class QueryBean {
 		        } while (rs.next());
 		    }
 			
+		    rs.close();
+		    rs = null;
+		    stmt.close();
+		    stmt = null;
+		    conn.close(); // Return to connection pool
+		    conn = null;  // Make sure we don't close it twice
+
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
 			if (rs!= null){
 				try {
 					rs.close();
-					rs = null;
 				} catch (SQLException ee){
 					ee.printStackTrace();
 				}
+				rs = null;
 			}
 			if (stmt!=null){
 				try {
 					stmt.close();
-					stmt = null;
 				} catch (SQLException ee){
 					ee.printStackTrace();
 				}
+				stmt = null;
 			}
 			if (conn!=null) {
 				try {
 					conn.close();
-					conn = null;
 				} catch (SQLException ee){
 					ee.printStackTrace();
 				}
+				conn = null;
 			}
 		}
+
 		return researchers;
 	}
 	
@@ -580,34 +645,42 @@ public class QueryBean {
 		        } while (rs.next());
 		    }
 			
+		    rs.close();
+		    rs = null;
+		    stmt.close();
+		    stmt = null;
+		    conn.close(); // Return to connection pool
+		    conn = null;  // Make sure we don't close it twice
+
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
 			if (rs!= null){
 				try {
 					rs.close();
-					rs = null;
 				} catch (SQLException ee){
 					ee.printStackTrace();
 				}
+				rs = null;
 			}
 			if (stmt!=null){
 				try {
 					stmt.close();
-					stmt = null;
 				} catch (SQLException ee){
 					ee.printStackTrace();
 				}
+				stmt = null;
 			}
 			if (conn!=null) {
 				try {
 					conn.close();
-					conn = null;
 				} catch (SQLException ee){
 					ee.printStackTrace();
 				}
+				conn = null;
 			}
 		}
+
 		return researchers;		
 	}
 	
