@@ -282,7 +282,7 @@ else {
 		else
 			researcherText="Research Partners in <font style='font-family : Arial, Verdana, Geneva, Helvetica, sans-serif; font-weight : bold; 	font-size : 20px; color : AA0000;'>"+stateStatic+"</font>";
 
-	if (topicString.compareTo("") == 0) {
+	if (topicString == "") {
   		topicString = new StringBuffer("<tr><td><font style='family : Verdana, Geneva, Arial, Helvetica, sans-serif;	size : 14px;	weight: bold; color : #000000;'>Research partners not currently available in "+stateStatic+".</font></td></tr>");
 	}
 	
