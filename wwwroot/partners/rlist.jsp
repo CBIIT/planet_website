@@ -84,11 +84,11 @@ if (param != null)
 					
 					if (region.compareTo("ALL") == 0) {
 						stateName = "US";
-						listTitle = "Cancer Control Partners - <font style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: #AA0000;'>US</font>";
+						listTitle = "<font style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: #000000;'>Cancer Control Partners - </font><font style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: #AA0000;'>US</font>";
 					}
 					else {
 						stateName = rs.getString("state_name");
-						listTitle = "Cancer Control Partners - <font style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: #AA0000;'>"+stateName+"</font>";
+						listTitle = "<font style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: #000000;'>Cancer Control Partners - </font><font style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: #AA0000;'>"+stateName+"</font>";
 					}
 					
 					topicString.append("<td valign='top' style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 12;	font-weight: bold;'><a href='#"+topicID+"' style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 12;	font-weight: bold;'>"+topicDesc+"</a></td>");						
@@ -281,7 +281,7 @@ else {
 <table bgcolor="white" border="0" cellpadding="0" cellspacing="0" width="100%">
 <tr>
 	<td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-				    
-			size : 14px;	font-weight: bold; color : #000000;" width="33%" rowspan="2">View Research Partners in another state / territory:<br />		
+			size : 14px;	font-weight: bold; color : #000000;" width="30%" rowspan="2">View Research Partners in another state / territory:<br />		
 				<table bgcolor='white' border='0' cellpadding="5" cellspacing="0">
 					<tr>
 						<td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-
@@ -291,11 +291,12 @@ else {
 					</tr>
 				</table>
 	</td>
-	<td valign="top" width="33%" align="left"><%= listTitle%></td>
-	<td valign="top" width="33%" align="right"><a href="list.jsp?r=<%= region%>&cctopic=C">View Program Partners in <%= stateStatic%></a></td>
+	<td valign="top" width="10%" rowspan="2">&nbsp;</td>
+	<td valign="top" width="30%" align="left"><%= listTitle%></td>
+	<td valign="top" width="30%" align="right"><a href="list.jsp?r=<%= region%>&cctopic=C">View Program Partners in <%= stateStatic%></a></td>
 </tr>
 <tr>
-	<td valign="top" colspan="2">
+	<td valign="top" colspan="3">
 		<table bgcolor='white' border='0' cellpadding="5" cellspacing="0">
 		<tr>
 			<%= topicString.toString()%>
