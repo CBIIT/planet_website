@@ -226,15 +226,22 @@ if (param != null)
                 stateList.append("</td><td valign='top' nowrap>");
                 count = 0;
             }
-            if (typeString.compareTo(rs.getString("type")) != 0)
+            
+			if (typeString.compareTo(rs.getString("type")) != 0)
             {
                 stateList.append("<br />");
                 typeString = rs.getString("type");
             }
+			
             if (count > 0)
                 stateList.append("<br />");
-            stateList.append("<a href='list.jsp?r="+rs.getString("abbreviation")+"&cctopic="+topic.toUpperCase()+"' class='a1' title='"+rs.getString("name").trim()+"'>"+rs.getString("name")+"</a>");
-            count++;
+			
+			if (region.compareTo(rs.getString("abbreviation")) == 0)
+				stateList.append("<font style='font-family : Arial, Verdana, Geneva, Helvetica, sans-serif;	font-size : 12px; color : FF0000;'>"+rs.getString("name").trim()+"</font>");
+			else
+	            stateList.append("<a href='list.jsp?r="+rs.getString("abbreviation")+"&cctopic="+topic.toUpperCase()+"' class='a1' title='"+rs.getString("name").trim()+"'>"+rs.getString("name")+"</a>");			
+            
+			count++;
         } while (rs.next());
         stateList.append("</td></tr><tr><td colspan=2><a href='list.jsp?r=ALL&cctopic=" + topic + "' title=\"All states and regions\">View All U.S. Partners</a></td></tr>");
     }
