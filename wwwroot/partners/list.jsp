@@ -97,6 +97,7 @@ topicNum = QBean.getTopicID(topic);
                         if (topic.equals("P"))
                             outString.append(" Health Department Contact");
                         else {
+outstring.append("-" + typeDesc + "-");
 							if (!typeDesc.equals("Regional Contact")) {
                             	outString.append(" Contact");
 							}
@@ -109,8 +110,10 @@ topicNum = QBean.getTopicID(topic);
 
             if (partnerId != rs.getPartnerId())
             {
+
                 if (count > 1)
                    outString.append("</table></p>");
+
                 partnerId = rs.getPartnerId();
                 partnerString = rs.getPartnerAbbreviation();
                 typeString = rs.getType();
@@ -141,6 +144,7 @@ topicNum = QBean.getTopicID(topic);
                 outString.append("<tr><td height='20'>&nbsp;</td></tr>");
                 outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;font-style: normal;' align='left'>");
                 outString.append("<u>" + rs.getTypeDescription());
+
                 if (partnerString.equals("CDC") && !typeString.equals("W"))
                 {
                     if (topic.compareTo("C") != 0)
@@ -160,31 +164,42 @@ topicNum = QBean.getTopicID(topic);
 
                 if (rs.getDegree() != null && rs.getDegree().compareTo("") != 0)
                     outString.append(", "+rs.getDegree());
+
                 outString.append(endTD);
             }
             if (rs.getTitle() != null && rs.getTitle().compareTo("") != 0)
                 outString.append(beginTD+rs.getTitle().trim()+endTD);
+
             if (rs.getOrg1() != null && rs.getOrg1().compareTo("") != 0)
                 outString.append(beginTD+rs.getOrg1().trim()+endTD);
+
             if (rs.getOrg2() != null && rs.getOrg2().compareTo("") != 0)
                 outString.append(beginTD+rs.getOrg2().trim()+endTD);
+
             if (rs.getAddress1() != null && rs.getAddress1().compareTo("") != 0)
                 outString.append(beginTD+rs.getAddress1().trim()+endTD);
+
             if (rs.getAddress2() != null && rs.getAddress2().compareTo("") != 0)
                 outString.append(beginTD+rs.getAddress2().trim()+endTD);
+
             if (rs.getCity() != null && rs.getCity().compareTo("") != 0)
                 outString.append(beginTD+rs.getCity().trim()+", "+rs.getAddressState()+" "+rs.getZip().trim()+endTD);
+
             if (rs.getPhone() != null && rs.getPhone().compareTo("") != 0)
                     outString.append(beginTD+"Phone:  "+rs.getPhone().trim()+endTD);
+
             if (rs.getFax() != null && rs.getFax().compareTo("") != 0)
                     outString.append(beginTD+"Fax:  "+rs.getFax().trim()+endTD);
+
             if (rs.getCell() != null && rs.getCell().compareTo("") != 0)
                     outString.append(beginTD+"Cell:  "+rs.getCell().trim()+endTD);
+
             if (rs.getEmail() != null && rs.getEmail().compareTo("") != 0)
             {
                 String emailStr = rs.getEmail().trim();
                 outString.append(beginTD+"Email:  <a href=\"mailto:"+emailStr+"\" class='a1'>"+emailStr+"</a>"+endTD);
             }
+
             if (rs.getOrgurl() != null && rs.getOrgurl().compareTo("") != 0)
             {
                 String urlStr = "";
@@ -201,6 +216,7 @@ topicNum = QBean.getTopicID(topic);
                 else
                     outString.append(beginTD+"Web site:  <a href=\""+urlStr+"\" target=\"_blank\" class='a1'>"+urlStr+"</a>"+endTD);
             }
+
             if (rs.getOrgurl2() != null && rs.getOrgurl2().compareTo("") != 0)
             {
                 String urlStr = "";
@@ -217,10 +233,12 @@ topicNum = QBean.getTopicID(topic);
                 else
                     outString.append(beginTD+"Web site:  <a href=\""+urlStr+"\" target=\"_blank\" class='a1'>"+urlStr+"</a>"+endTD);
             }
+
             outString.append("<tr><td height='10'>&nbsp;</td></tr>");
 
             count ++;
         } while (it.hasNext());
+
 		outString.append("</table>");
     } //end of if statement
 	else {
@@ -234,13 +252,10 @@ topicNum = QBean.getTopicID(topic);
 	
     if (it2.hasNext())
     {
-    
         stateList = new StringBuffer();
 		stateList.append("<table bgcolor='white' border='0' cellpadding='5' cellspacing='0'><tr><td valign='top' nowrap>");
         String typeString = "S";
         int count= 0;
-
-
 		
         do
         {
@@ -250,22 +265,19 @@ topicNum = QBean.getTopicID(topic);
 			if (region.compareTo(rs.getAbbreviation()) == 0)
 				stateStatic=rs.getName();
 				
-            if (count > 27)
-            {
+            if (count > 27) {
                 stateList.append("</td><td valign='top' nowrap>");
                 count = 0;
             }
             
-			if (typeString.compareTo(rs.getType()) != 0)
-            {
+			if (typeString.compareTo(rs.getType()) != 0) {
                 stateList.append("<br />");
                 typeString = rs.getType();
             }
 			
             if (count > 0)
                 stateList.append("<br />");
-			
-			
+						
 			if (region.compareTo(rs.getAbbreviation()) == 0)
 				stateList.append("<font style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size : 12px; color : AA0000;'><strong>"+rs.getName().trim()+"</strong></font>");
 			else
@@ -273,26 +285,25 @@ topicNum = QBean.getTopicID(topic);
             
 			count++;
         } while (it2.hasNext());
+
         stateList.append("</td></tr><tr><td colspan=2><a href='list.jsp?r=ALL&cctopic=" + topic + "' title=\"All states and regions\">View All U.S. Partners</a></td></tr></table>");
     }
-
 
 		pageTitle = pageTitle + " - " + stateStatic;
 		
 		if (stateStatic.compareTo("the US") == 0) {
 			stateStatic = "All States";
-				if (topicDesc.compareTo("") != 0)
-					partnerText=topicDesc+" and Other Program Partners - <font style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size : 20px;	font-weight: bold; color : #AA0000;'>All States</font>";	
-				else
-					partnerText="Program Partners - <font style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size: 20px; font-weight: bold; color : #AA0000;'>All States</font>";
+
+		if (topicDesc.compareTo("") != 0)
+			partnerText=topicDesc+" and Other Program Partners - <font style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size : 20px;	font-weight: bold; color : #AA0000;'>All States</font>";	
+		else
+			partnerText="Program Partners - <font style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size: 20px; font-weight: bold; color : #AA0000;'>All States</font>";
 		}
 		else
 				if (topicDesc.compareTo("") != 0)
 					partnerText=topicDesc+" and Other Program Partners - <font style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size: 20px; font-weight: bold; color : #AA0000;'>"+stateStatic+"</font>";
 				else
 					partnerText="Program Partners - <font style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size: 20px; font-weight: bold; color : #AA0000;'>"+stateStatic+"</font>";
-			
-    
 
     NCIPopChartEmbedder myChart = new NCIPopChartEmbedder();
     myChart.appearanceFile = "apfiles/planet/ccpmap_small.pcxml";
@@ -306,7 +317,6 @@ topicNum = QBean.getTopicID(topic);
     htmlString = myChart.getEmbeddingHTML();
 %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-
 <html>
 <head>
 <title><%= caption%></title>
