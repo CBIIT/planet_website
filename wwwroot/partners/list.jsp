@@ -332,7 +332,7 @@ if (param != null)
 <tr>
 <td valign="top" width="25%"><%= stateList.toString()%></td>
 <td valign="top" width="5%">&nbsp;</td>
-<td valign="top" width="25%"><font style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #FF0000;"><%= stateStatic%></font><br><br><%= outString.toString()%></td>
+<td valign="top" width="25%"><font style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #FF0000;"><div align="center"><%= stateStatic%></div></font><br><br><%= outString.toString()%></td>
 <td valign="top" width="5%">&nbsp;</td>
 <td valign="top" width="40%"><%= htmlString%></td>
 </tr>
