@@ -1,0 +1,72 @@
+
+p {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 16px;
+}
+
+td {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 16px;
+}
+
+th {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 16px;
+}
+
+ul {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 16px;
+}
+
+ol {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 16px;
+}
+
+li {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 16px;
+}
+
+h2 {
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size : medium;
+	color : #000000;
+}
+
+h3 {
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size : small;
+	color : #000000;
+}
+
+h4 {
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size : 16px;
+	color : #000000;
+}
+a {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 16px;
+	color : #0033cc;
+}
+
+.greek
+{
+	font-family : Symbol;
+	font-size : 16px;
+}
+
+.banner
+{
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size : medium;
+}
+
+.white
+{
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 12px;
+	color : #ffffff;
+}
