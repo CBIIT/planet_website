@@ -26,6 +26,7 @@ if (param != null)
     StringBuffer stateList = null;
     ResultSet rs = null;
     QueryBean QBean = new QueryBean();
+	
 	topicNum = QBean.GetTopicID(topic);
 	
     // Find the page title to use based on the topic
