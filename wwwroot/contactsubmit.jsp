@@ -1,5 +1,6 @@
 <%@ page import="java.sql.*" %>
 <%@ page import="oracle.jdbc.*" %>
+<%@ page import="gov.nci.planet.QueryBean" %>
 <html>
 <head>
 <title>Cancer Control PLANET</title>
@@ -66,21 +67,10 @@
 			</table><!-- End of Confirm Page -->
 
 <%
-
-        String driver = "jdbc:oracle:oci8:@isdbp2";
-        String username = "pma_web_user";
-        String password = "pjc242323";
-
-        // Load the Oracle JDBC driver
-        DriverManager.registerDriver (new OracleDriver());
-        Connection conn = DriverManager.getConnection(driver, username, password);
-
-        CallableStatement stmt = conn.prepareCall("{call dccps.products_order_pkg.save_feedback(?, ?, ?, ?)}");
-        stmt.setString(1, feedback);
-        stmt.setString(2, email);
-        stmt.setString(3, phone);
-        stmt.setString(4, "PLANET");
-        stmt.execute();
+        // Write feedback to database.
+        QueryBean QBean = new QueryBean();
+        QBean.saveFeedback(feedback, email, phone);
+        QBean.close();
     }
 %>
         </td>
