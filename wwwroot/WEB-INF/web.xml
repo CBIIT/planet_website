@@ -11,7 +11,7 @@
     </description>
     <context-param>
         <param-name>DBURL</param-name>
-        <param-value>jdbc:oracle:thin:@192.168.50.132:1521:test9i</param-value>
+        <param-value>jdbc:oracle:thin:@mooch.nci.nih.gov:1521:mooch920</param-value>
     </context-param>
     <context-param>
         <param-name>DBUser</param-name>
