@@ -266,6 +266,7 @@ if (param != null)
         String typeString = "S";
         int count= 0;
 		
+		
         do
         {
         	StateBean rs = (StateBean)it2.next();
