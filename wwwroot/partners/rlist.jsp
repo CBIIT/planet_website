@@ -298,13 +298,15 @@ else {
 	<td valign="top" width="34%" align="right"><strong><a href="list.jsp?r=<%= region%>&cctopic=C">View Program Partners in <%= stateStatic%></a></strong></td>
 </tr>
 <tr>
+<td colspan="3">&nbsp;</td>
+</tr>
+<tr>
 <td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-
 						serif;	font-size : 14px;	font-weight: color : #000000;" nowrap><%= 
 						stateList.toString()%>
 						</td>
 
-	<td valign="top"><font style='font-family : Arial, Verdana, Geneva, Helvetica, sans-serif;	font-size : 14px; color : FF0000;'><%= stateStatic%><br><br></font><table><%= topicString.toString()%></table></td>
-	<td valign='top'><%= outString.toString()%></td>
+	<td valign="top" colspan="2"><font style='font-family : Arial, Verdana, Geneva, Helvetica, sans-serif; font-weight : bold; 	font-size : 14px; color : AA0000;'><%= stateStatic%><br><br></font><table><%= topicString.toString()%></table><br><br><%= outString.toString()%></td>
 
 </tr>
 </table>
