@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html" %>
 <%@ page import="java.sql.ResultSet" %>
-<%@ page import="gov.nci.corda.NCIPopChartEmbedder" %>
+
 <%@ page import="gov.nci.planet.QueryBean" %>
 <%
 String region = "ALL";
@@ -15,40 +15,48 @@ String caption = null;
 String cdcSubTitle = "State Health Department Contact";
 String param = request.getParameter("r");
 
-if (param != null)
-    region = param.toUpperCase();
-	param = request.getParameter("cctopic");
+//int topicInt = 0;
 
-if (param != null)
+if (param != null) 
+    region = param.toUpperCase();
+
+param = request.getParameter("cctopic");
+
+if (param != null) 
 	ccTopic = Integer.parseInt(param);
-    topic = new Integer(ccTopic);
 	
+    topic = new Integer(ccTopic);
     StringBuffer outString = null;
     StringBuffer stateList = null;
     ResultSet rs = null;
     QueryBean QBean = new QueryBean();
-
+	
     // Find the page title to use based on the topic
     String pageTitle = QBean.getTopicDescription(topic) + " Partners";
     caption = "Cancer Control PLANET - " + pageTitle;
 
     if (region.equals("ALL"))
     {
-        pcScript = "US.addPCXML(<DefaultShapeSettings><Properties FillColor='#B20000'/><Drilldown URL='list.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultShapeSettings>)";
-        rs = QBean.getPartners(topic);
+        pcScript = "US.addPCXML(<DefaultShapeSettings><Properties FillColor='#B20000'/><Drilldown URL='rlist.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultShapeSettings>)";
+        rs = QBean.getResearchers(topic);
     }
     else
     {
-        pcScript = "US.setShapeValues("+region.trim()+",1)US.addPCXML(<DefaultShapeSettings><Drilldown URL='list.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultShapeSettings>)@_END";
-        rs = QBean.getPartners(topic.toUpperCase(), region);
+        pcScript = "US.setShapeValues("+region.trim()+",1)US.addPCXML(<DefaultShapeSettings><Drilldown URL='rlist.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultShapeSettings>)@_END";
+        rs = QBean.getResearchers(topic, region);
     }
 
     String beginTD = "<tr><td style='font-family: Arial,Helvetica;font-size: 12;' align=\"left\">";
     String endTD = "</td></tr>";
+	
 
+
+		outString = new StringBuffer("No Records Found");
+
+	
     if (rs.next())
     {
-        outString = new StringBuffer();
+		outString = new StringBuffer();
         String researcherString = "";
         int researcherId = 0;
         String stateName = "";
@@ -58,8 +66,8 @@ if (param != null)
 
         do
         {
-            if (stateName.compareTo(rs.getString("state_name").trim()) != 0)
-            {
+           if (stateName.compareTo(rs.getString("state_name").trim()) != 0)
+ 		       {
                 if (count > 1)
                     outString.append("</table></p>");
                 researcherId = rs.getInt("researcher_id");
@@ -87,7 +95,8 @@ if (param != null)
 
                 // Close the underlining and the table cell.
               //  outString.append("</u>"+endTD);
-          //  }
+           }
+		   
 
             if (researcherId != rs.getInt("researcher_id"))
             {
@@ -95,12 +104,12 @@ if (param != null)
                    outString.append("</table></p>");
                 researcherId = rs.getInt("researcher_id");
                 researcherString = rs.getString("state_abbreviation");
-                typeString = rs.getString("type");
+                //typeString = rs.getString("type");
                 outString.append("<p><table border='0' cellspacing='0' cellpadding='0' width='100%'>");
                 outString.append("<tr><td style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'>"+rs.getString("researcher_name")+endTD);
 
-                outString.append("<tr><td style='font-family: Arial, Helvetica, sans-serif;font-size: 12;style: bold;' align='left'>");
-                //outString.append("<u>" + rs.getString("type_description"));
+               //outString.append("<tr><td style='font-family: Arial, Helvetica, sans-serif;font-size: 12;style: bold;' align='left'>");
+               //outString.append("<u>" + rs.getString("type_description"));
                 
                 // For state and territory contacts we may need to tack on some additional information.
                 //if (partnerString.equals("CDC") && !typeString.equals("W"))
@@ -116,7 +125,7 @@ if (param != null)
 
                 // Close the underlining and the table cell.
              //   outString.append("</u>" + endTD);
-            }
+            // this is the one that stays}
 
           //  if (typeString.compareTo(rs.getString("type").trim()) != 0)
           //  {
@@ -139,14 +148,14 @@ if (param != null)
          //   if (rs.getString("contact_name") != null && rs.getString("contact_name").compareTo("") != 0)
            // {
                // outString.append(beginTD+rs.getString("contact_name").trim());
+//cutting this out now
+//			  if (rs.getString("researcher_name") != null && rs.getString("researcher_name").compareTo("") != 0)
+  //          {
+    //            outString.append(beginTD+rs.getString("researcher_name").trim());
 
-			  if (rs.getString("researcher_name") != null && rs.getString("researcher_name").compareTo("") != 0)
-            {
-                outString.append(beginTD+rs.getString("researcher_name").trim());
-
-                if (rs.getString("degree") != null && rs.getString("degree").compareTo("") != 0)
-                    outString.append(", "+rs.getString("degree"));
-                outString.append(endTD);
+      //          if (rs.getString("degree") != null && rs.getString("degree").compareTo("") != 0)
+        //            outString.append(", "+rs.getString("degree"));
+          //      outString.append(endTD);
             }
             if (rs.getString("title") != null && rs.getString("title").compareTo("") != 0)
                 outString.append(beginTD+rs.getString("title").trim()+endTD);
@@ -180,13 +189,16 @@ if (param != null)
                     urlStr = rs.getString("orgurl").trim();
 
                 // Don't display Web site: field header for tobacco, breast cancer, and cervical cancer contacts.
-                if (partnerString.equals("CDC") && (topic.equals("T") || topic.equals("B") || topic.equals("V")))
+				//topicInt = topic.intValue();
+				
+                if (researcherString.equals("CDC") && (topic.equals("1") || topic.equals("4") || topic.equals("5")))
                 {
-                   outString.append(beginTD+"<a href=\""+urlStr+"\" target=\"_blank\" class='a1'>"+urlStr+"</a>"+endTD);
+                  outString.append(beginTD+"<a href=\""+urlStr+"\" target=\"_blank\" class='a1'>"+urlStr+"</a>"+endTD);
                 }
-                else
-                    outString.append(beginTD+"Web site:  <a href=\""+urlStr+"\" target=\"_blank\" class='a1'>"+urlStr+"</a>"+endTD);
+               else
+                 outString.append(beginTD+"Web site:  <a href=\""+urlStr+"\" target=\"_blank\" class='a1'>"+urlStr+"</a>"+endTD);
             }
+			
             if (rs.getString("orgurl2") != null && rs.getString("orgurl").compareTo("") != 0)
             {
                 String urlStr = "";
@@ -196,7 +208,9 @@ if (param != null)
                     urlStr = rs.getString("orgurl2").trim();
 
                 // Don't display Web site: field header for tobacco, breast cancer, and cervical cancer contacts.
-                if (partnerString.equals("CDC") && (topic.equals("T") || topic.equals("B") || topic.equals("V")))
+				//topicInt = topic.intValue();
+				
+               if (researcherString.equals("CDC") && (topic.equals("1") || topic.equals("4") || topic.equals("5")))
                 {
                    outString.append(beginTD+"<a href=\""+urlStr+"\" target=\"_blank\" class='a1'>"+urlStr+"</a>"+endTD);
                 }
@@ -206,8 +220,11 @@ if (param != null)
             outString.append("<tr><td height='10'>&nbsp;</td></tr>");
 
             count ++;
-        } while (rs.next());
-    } //end of if statement
+     } while (rs.next());
+}
+else
+  outString = new StringBuffer("No Records Found.");
+ //end of if statement
 
     rs = QBean.getStateList();
     if (rs.next())
@@ -237,16 +254,7 @@ if (param != null)
 
     QBean.close();
 
-    NCIPopChartEmbedder myChart = new NCIPopChartEmbedder();
-    myChart.appearanceFile = "apfiles/planet/ccpmap_small.pcxml";
-    myChart.pcScript = pcScript;
-    myChart.height = 360;
-    myChart.width = 505;
-    myChart.imageType = "FLASH";
-    myChart.fallback = "STRICT";
-    myChart.returnDescriptiveLink = false;
-    myChart.userAgent = request.getHeader("USER-AGENT");
-    htmlString = myChart.getEmbeddingHTML();
+
 %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 
@@ -285,7 +293,7 @@ if (param != null)
 <%= stateList.toString()%>
 </td>
 <td valign='top'>
-<%= htmlString%><br>
+<br>
 <a href="javascript:window.close()">Close Window</a>
 </td>
 </tr>
