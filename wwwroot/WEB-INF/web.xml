@@ -9,4 +9,16 @@
       For information, please contact Lewellyn Belber (lewellyn.belber@matthewsgroup.com)
       or James Juran (juranj@mail.nih.gov).
     </description>
+    <servlet>
+        <servlet-name>ctRedirector</servlet-name>
+        <servlet-class>ctRedirector</servlet-class>
+        <init-param>
+            <param-name>CordaServer</param-name>
+            <param-value>procyon.cit.nih.gov:2001</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ctRedirector</servlet-name>
+        <url-pattern>/servlet/ctRedirector</url-pattern>
+    </servlet-mapping>
 </web-app>
