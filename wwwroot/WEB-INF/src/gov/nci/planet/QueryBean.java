@@ -54,7 +54,8 @@ public class QueryBean {
 		    stmt = null;
 		    //conn.close(); // Return to connection pool
 		    //conn = null;  // Make sure we don't close it twice
-		    ConnPoolBean.closeConnection(conn);
+		    
+		    //ConnPoolBean.closeConnection(conn);
 
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -110,7 +111,7 @@ public class QueryBean {
 		    //conn.close(); // Return to connection pool
 		    //conn = null;  // Make sure we don't close it twice
 		    
-		    ConnPoolBean.closeConnection(conn);
+		    //ConnPoolBean.closeConnection(conn);
 
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -167,7 +168,7 @@ public class QueryBean {
 		    //conn.close(); // Return to connection pool
 		    //conn = null;  // Make sure we don't close it twice
 		    
-		    ConnPoolBean.closeConnection(conn);
+		    //ConnPoolBean.closeConnection(conn);
 
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -223,7 +224,7 @@ public class QueryBean {
 		    //conn.close(); // Return to connection pool
 		    //conn = null;  // Make sure we don't close it twice
 		    
-		    ConnPoolBean.closeConnection(conn);
+		    //ConnPoolBean.closeConnection(conn);
 
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -315,6 +316,8 @@ public class QueryBean {
 		    stmt = null;
 		    //conn.close(); // Return to connection pool
 		    //conn = null;  // Make sure we don't close it twice
+		    
+		    //ConnPoolBean.closeConnection(conn);
 
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -410,7 +413,7 @@ public class QueryBean {
 		    //conn.close(); // Return to connection pool
 		    //conn = null;  // Make sure we don't close it twice
 		    
-		    ConnPoolBean.closeConnection(conn);
+		    //ConnPoolBean.closeConnection(conn);
 
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -466,7 +469,7 @@ public class QueryBean {
 		    //conn.close(); // Return to connection pool
 		    //conn = null;  // Make sure we don't close it twice
 		    
-		    ConnPoolBean.closeConnection(conn);
+		    //ConnPoolBean.closeConnection(conn);
 
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -562,7 +565,7 @@ public class QueryBean {
 		    //conn.close(); // Return to connection pool
 		    //conn = null;  // Make sure we don't close it twice
 		    
-		    ConnPoolBean.closeConnection(conn);
+		    //ConnPoolBean.closeConnection(conn);
 
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -657,6 +660,8 @@ public class QueryBean {
 		    stmt = null;
 		    //conn.close(); // Return to connection pool
 		    //conn = null;  // Make sure we don't close it twice
+		    
+		    //ConnPoolBean.closeConnection(conn);
 
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -691,14 +696,85 @@ public class QueryBean {
 		return researchers;		
 	}
 	
-	/*
-	public ResultSet getStatePlans() throws SQLException {
-		CallableStatement stmt = conn.prepareCall("{call dccps.planet_pkg.GetStatePlans(?)}");
-		stmt.registerOutParameter(1, OracleTypes.CURSOR);
-		stmt.execute();
-		return (ResultSet) stmt.getObject(1);
+	public Vector getStatePlans() throws SQLException {
+
+		ResultSet rs = null;
+		Connection conn =null;
+		CallableStatement stmt =null;
+		Vector statePlans = null;
+		
+		try {
+			conn = ConnPoolBean.getConnection();
+			
+			stmt = conn.prepareCall("{call dccps.planet_pkg.GetStatePlans(?)}");
+			stmt.registerOutParameter(1, OracleTypes.CURSOR);
+			stmt.execute();
+			rs = (ResultSet) stmt.getObject(1);
+			
+			if (rs.next())
+		    {
+				statePlans = new Vector();
+		        do
+		        {
+		        	StatePlanBean statePlanBean = new StatePlanBean();		        	
+		        	// set the values of the bean
+		        	statePlanBean.setPlanStatus(rs.getInt("plan_status"));
+		        	statePlanBean.setPlanType(rs.getString("plan_type"));
+		        	statePlanBean.setPlanUrl(rs.getString("plan_URL"));
+		        	statePlanBean.setName(rs.getString("name"));
+		        	statePlanBean.setState(rs.getString("state"));
+		        	
+		        	// add them to the vector
+		        	statePlans.add(statePlanBean);
+			
+		        } while (rs.next());
+		    }
+			
+		    rs.close();
+		    rs = null;
+		    stmt.close();
+		    stmt = null;
+		    //conn.close(); // Return to connection pool
+		    //conn = null;  // Make sure we don't close it twice
+		    
+		    //ConnPoolBean.closeConnection(conn);
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			if (rs!= null){
+				try {
+					rs.close();
+				} catch (SQLException ee){
+					ee.printStackTrace();
+				}
+				rs = null;
+			}
+			if (stmt!=null){
+				try {
+					stmt.close();
+				} catch (SQLException ee){
+					ee.printStackTrace();
+				}
+				stmt = null;
+			}
+			if (conn!=null) {
+				try {
+					//conn.close();
+					ConnPoolBean.closeConnection(conn);
+				} catch (SQLException ee){
+					ee.printStackTrace();
+				}
+				conn = null;
+			}
+		}
+
+		return statePlans;
+		
+		
 	}
 
+	/*
 	public String getTopicDescription(Integer topic) throws SQLException {
 		stmt = conn
 		.prepareCall("{? = call dccps.planet_pkg.GetTopicDescription(?)}");

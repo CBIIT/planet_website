@@ -2,6 +2,9 @@
 <%@ page import="java.sql.ResultSet" %>
 <%@ page import="gov.nci.corda.NCIPopChartEmbedder" %>
 <%@ page import="gov.nci.planet.QueryBean" %>
+<%@ page import="gov.nci.planet.bean.*" %>
+<%@ page import="java.util.Vector" %>
+<%@ page import="java.util.Iterator" %>
 <%
 String param;
 String htmlString = null;
@@ -16,7 +19,7 @@ StringBuffer stateList = null;
 StringBuffer pcScript = null;
 
      QueryBean QBean = new QueryBean();
-     ResultSet rs = QBean.getStatePlans();
+     Vector statePlans = QBean.getStatePlans();
 	 
      //now get the information to display
      //theQuery = "SELECT state, name, plan_status, plan_URL, type FROM states;";
@@ -29,13 +32,18 @@ StringBuffer pcScript = null;
      pcScript.append("<Range Name='Red' LegendText='Cancer plan available' Minimum='1.0' Maximum='1.0'><RangeShapeSettings  Type='Rectangle' Width='8' Height='8'><MapProperties OverrideFillColor='True' OverrideShapeSettings='True'/><Properties FillColor='#b3a8ee'/></RangeShapeSettings></Range>");
      pcScript.append("<Range Name='Noplan' LegendText='Cancer plan in progress' Minimum='No data' Maximum='No data'><RangeShapeSettings  Type='Rectangle' Width='8' Height='8'><MapProperties OverrideFillColor='True' OverrideShapeSettings='True'/><Properties FillColor='#bfbfbf' FillType='Pattern' PatternType='DiagonalTopToBottom'/></RangeShapeSettings></Range>)");
      pcScript.append("US.addPCXML(<Legend Name='legend' Top='5' Left='213' Width='403' Height='23' ZIndex='56'><Properties RangeSizeForMarkers='True' MinimumFontSize='10.0' ReverseOrder='True' Font='Name:Helvetica; Size:11.0;'/></Legend>)");
-     if (rs.next())
+     
+     Iterator it = statePlans.iterator();
+	
+     
+     if (it.hasNext())
      {
       stateList = new StringBuffer();
       
       String typeString = "S";
       do
       {
+       StatePlanBean rs = (StatePlanBean)it.next();
        //the following lines are used to create can be added back in when the list gets over 27 states
        //*******************************
        if (count > 27)
@@ -47,37 +55,30 @@ StringBuffer pcScript = null;
        
        //the next section is to separate the Territories from the States
        //******************************
-       if (rs.getInt("plan_status") == 1 && (typeString.toUpperCase().compareTo(rs.getString("plan_type").toUpperCase()) != 0))
+       if (rs.getPlanStatus() == 1 && (typeString.toUpperCase().compareTo(rs.getPlanType().toUpperCase()) != 0))
        {
           stateList.append("<br>");
-          typeString = rs.getString("plan_type");
+          typeString = rs.getPlanType();
        }
        //******************************
        
        //if (count > 0)
        //	stateList.append("<br />");
        
-       if (rs.getInt("plan_status") == 1)
+       if (rs.getPlanStatus() == 1)
        {
        				stateList.append("<br />");
            //create the text link
-           stateList.append("<a href='"+ rs.getString("plan_URL").trim()+"' class='a1'  title='"+rs.getString("name").trim()+"' target='_blank'>"+rs.getString("name")+"</a>");
+           stateList.append("<a href='"+ rs.getPlanUrl().trim()+"' class='a1'  title='"+rs.getName().trim()+"' target='_blank'>"+rs.getName()+"</a>");
            //create the link on the map
-           pcScript.append("US.addPCXML(<MapShapeItem Name='"+rs.getString("state")+"' Value='1'><ItemShapeSettings><MapProperties OverrideDrilldownSettings='True'/><Drilldown URL='"+rs.getString("plan_url")+"' Target='_blank' FillColor='White' ZoomPercent='120'/></ItemShapeSettings></MapShapeItem>)");
+           pcScript.append("US.addPCXML(<MapShapeItem Name='"+rs.getState()+"' Value='1'><ItemShapeSettings><MapProperties OverrideDrilldownSettings='True'/><Drilldown URL='"+rs.getPlanUrl()+"' Target='_blank' FillColor='White' ZoomPercent='120'/></ItemShapeSettings></MapShapeItem>)");
            count++;
        }
 
        
-      }while (rs.next());
+      }while (it.hasNext());
      }
-     try
-	 {
-	 	QBean.close();
-	 }
-	 catch(Exception e1)
-	 {
-	 	System.out.print(e1);
-	 }
+     
      NCIPopChartEmbedder myChart = new NCIPopChartEmbedder();
      myChart.appearanceFile = "apfiles/planet/ccpmap.pcxml";
      myChart.pcScript = pcScript.toString();
