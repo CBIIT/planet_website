@@ -30,6 +30,7 @@ if (param != null)
 	
     topic = new Integer(ccTopic);
     StringBuffer outString = null;
+	StringBuffer topicString = null;
     StringBuffer stateList = null;
     ResultSet rs = null;
     QueryBean QBean = new QueryBean();
