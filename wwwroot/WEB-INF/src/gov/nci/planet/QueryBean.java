@@ -64,7 +64,7 @@ public class QueryBean
     {
 	    stmt = conn.prepareCall("{? = call dccps.planet_pkg.GetTopicID(?)}");
 	    stmt.registerOutParameter(1, Types.VARCHAR);
-	    stmt.setInt(1,topicIN.intValue());
+	    stmt.setInt(2,topicIN.intValue());
 	    stmt.execute();
 	    return stmt.getString(1);
 	}
@@ -73,7 +73,7 @@ public class QueryBean
     {
 	    stmt = conn.prepareCall("{? = call dccps.planet_pkg.GetTopicID(?)}");
 	    stmt.registerOutParameter(1, Types.INTEGER);
-	    stmt.setString(1,topicIN);
+	    stmt.setString(2,topicIN);
 	    stmt.execute();
 	    return stmt.getInt(1);
 	}
