@@ -98,12 +98,7 @@
 </table>
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
-    <td><hr size="1" noshade>
-	<div align="center"><a href="index.html">Home</a>&nbsp;&nbsp;&nbsp; <a href="about.html">About this
-        Site</a>&nbsp;&nbsp;&nbsp; <a href="contact.html">Contact Us</a>&nbsp;&nbsp;&nbsp;
-        <a href="partners.html">Learn about PLANET Sponsors</a>&nbsp;&nbsp;&nbsp; <a href="privacy.html">Privacy
-        Policy</a>&nbsp;&nbsp;&nbsp; <a href="disclaimer.html">Disclaimer</a>&nbsp;&nbsp;&nbsp; <a href="accessibility.html">Accessibility</a><br>
-      </div></td>
+    <td><hr size="1" noshade><div align="center"><a href="index.html">Home</a>&nbsp;&nbsp;&nbsp; <a href="contact.html">Contact Us</a>&nbsp;&nbsp;&nbsp; <a href="about.html">About this Site</a>&nbsp;&nbsp;&nbsp; <a href="partners.html">PLANET Sponsors</a>&nbsp;&nbsp;&nbsp; <a href="privacy.html">Privacy  Policy</a>&nbsp;&nbsp;&nbsp; <a href="disclaimer.html">Disclaimer</a>&nbsp;&nbsp;&nbsp; <a href="accessibility.html">Accessibility</a><br></div></td>
   </tr>
 </table>
 </body>
