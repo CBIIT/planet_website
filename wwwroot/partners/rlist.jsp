@@ -65,6 +65,7 @@ if (param != null)
         int count = 1;
         String typeString = "";
         String typeOutput = "";
+		topicString = new StringBuffer();
 		
         do
         {
@@ -73,6 +74,7 @@ if (param != null)
 			   		topicID = rs.getInt("topic_id");
 					topicInt = new Integer(topicID);
 					topicDesc = QBean.getTopicDescription(topicInt);
+					topicString.append("<a href='\#'"+topicID+"'>"+topicDesc+"</a><br>");
 					
                 if (count > 1)
                    	outString.append("</table></p>");
@@ -81,7 +83,7 @@ if (param != null)
                 //typeString = rs.getString("type");
                 stateName = rs.getString("state_name");
 				
-                outString.append("<p><font style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: #000000;'><font style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: #AA0000;'>"+topicDesc+"</font></p>");
+                outString.append("<p><font style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: #000000;'><font style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: #AA0000;'><a name='"+topicID+"'>"+topicDesc+"</font></p>");
                 outString.append("<p><table border='0' cellspacing='0' cellpadding='0'>");
 				
 				outString.append("<tr><td style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'>"+rs.getString("researcher_name")+"  "+rs.getString("degree")+endTD);
@@ -315,7 +317,7 @@ else
 	<td valign="top" width="30%">
 		<table bgcolor='white' border='0' cellpadding="5" cellspacing="0">
 		<tr>
-			<td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: color : #000000;"><%= outString.toString()%>
+			<td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold;"><%= topicString.toString()%>
 			</td>
 		</tr>
 		</table>
@@ -324,6 +326,13 @@ else
 	<td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;" width="30%"><a href="list.jsp?r=<%= region%>&cctopic=C">View Program Partners in <%= stateStatic%></a>
 	</td>
 </tr>
+</table>
+<hr size="1" noshade>
+<table bgcolor='white' border='0' cellpadding="5" cellspacing="0">
+		<tr>
+			<td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: color : #000000;"><%= outString.toString()%>
+			</td>
+		</tr>
 </table>
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
