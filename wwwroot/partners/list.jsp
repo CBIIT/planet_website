@@ -276,6 +276,7 @@ if (param != null)
 			
     QBean.close();
 
+
     NCIPopChartEmbedder myChart = new NCIPopChartEmbedder();
     myChart.appearanceFile = "apfiles/planet/ccpmap_small.pcxml";
     myChart.pcScript = pcScript;
