@@ -291,8 +291,8 @@ else {
 					</tr>
 				</table>
 	</td>
-	<td valign="top" width="10%" rowspan="2">&nbsp;</td>
-	<td valign="top" width="30%" align="left"><%= listTitle%></td>
+	<td valign="top" width="5%" rowspan="2">&nbsp;</td>
+	<td valign="top" width="35%" align="left"><%= listTitle%></td>
 	<td valign="top" width="30%" align="right"><a href="list.jsp?r=<%= region%>&cctopic=C">View Program Partners in <%= stateStatic%></a></td>
 </tr>
 <tr>
