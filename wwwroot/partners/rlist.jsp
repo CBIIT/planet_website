@@ -64,6 +64,7 @@ if (param != null)
         String researcherString = "";
         int researcherId = 0;
         int count = 1;
+		int topicCount = 0;
         String typeString = "";
         String typeOutput = "";
 		topicString = new StringBuffer();
@@ -74,7 +75,7 @@ if (param != null)
 		
            if (topicID != rs.getInt("topic_id"))
  		       {
-			   		
+			   		topicCount ++;
 			   		topicID = rs.getInt("topic_id");
 					topicInt = new Integer(topicID);
 					topicDesc = QBean.getTopicDescription(topicInt);
@@ -82,7 +83,7 @@ if (param != null)
 					if (ccTopic == 0)
 						topicString.append("<a href='#"+topicID+"'>"+topicDesc+"</a><br>");
 					else
-						topicString.append("&nbsp;");
+						topicString.append("&nbsp;</td><td valign='top' style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold;'>&nbsp;");
 										
                 if (count > 1)
                    	outString.append("</table></p>");
@@ -252,7 +253,7 @@ if (param != null)
 }
 else {
   topicString = new StringBuffer("No Records Found.");
-  outString = new StringBuffer("&nbsp;");
+  outString = new StringBuffer("&nbsp;</td><td valign='top' style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold;'>&nbsp;");
 }  //end of if statement
 
     rs = QBean.getStateList();
@@ -325,19 +326,18 @@ else {
 				</table>
 	</td>
 	<td width="5%" rowspan="2">&nbsp;</td>
-	<td valign="top" width="30%">
+	<td valign="top" width="60%"><a href="list.jsp?r=<%= region%>&cctopic=C">View Program Partners in <%= stateStatic%></a></td>
+</tr>
+
+<tr>
+	<td valign="top">
 		<table bgcolor='white' border='0' cellpadding="5" cellspacing="0">
 		<tr>
-			<td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold;"><a name="top"></a><%= topicString.toString()%></td>
+			<td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold;"><a name="top"></a><%= topicString.toString()%> - <%= topicCount%></td>
 		</tr>
 		</table>
+		<%= outString.toString()%>
 	</td>
-	<td width="5%">&nbsp;</td>
-	<td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;" width="30%"><a href="list.jsp?r=<%= region%>&cctopic=C">View Program Partners in <%= stateStatic%></a>
-	</td>
-</tr>
-<tr>
-	<td colspan="3" valign="top"><%= outString.toString()%></td>
 </tr>
 </table>
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
