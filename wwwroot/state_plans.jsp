@@ -47,7 +47,7 @@ StringBuffer pcScript = null;
        
        //the next section is to separate the Territories from the States
        //******************************
-       if (typeString.compareTo(rs.getString("plan_type").toUpperCase()) != 0)
+       if (typeString.toUpperCase().compareTo(rs.getString("plan_type").toUpperCase()) != 0)
        {
           stateList.append("<br />");
           typeString = rs.getString("plan_type");
