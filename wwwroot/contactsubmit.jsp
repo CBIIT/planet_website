@@ -37,9 +37,18 @@
 			<p align="center"> Thank you for providing this information. Below is the information you provided.</p>
 
 <%
-     String feedback = request.getParameter("feedback");
-     String email = request.getParameter("email");
-     String phone = request.getParameter("phone");
+    String feedback = request.getParameter("feedback");
+    String email = request.getParameter("email");
+    String phone = request.getParameter("phone");
+
+    if (feedback == null || feedback.equals(""))
+    {
+%>
+          <p>No information entered -- please enter your comments on the <a href="contact.html">contact page</a>.</p>
+<%
+    }
+    else
+    {
 %>
 			<table border="0" cellpadding="6" cellspacing="0" align="center" width="50%"><!-- Confirm Page -->
 			<tr>
@@ -57,21 +66,22 @@
 			</table><!-- End of Confirm Page -->
 
 <%
-    
-    String driver = "jdbc:oracle:oci8:@sc1";
-    String username = "pma_web_user";
-    String password = "pjc242323";
 
-    // Load the Oracle JDBC driver
-    DriverManager.registerDriver (new OracleDriver());
-    Connection conn = DriverManager.getConnection(driver, username, password);
-				
-    CallableStatement stmt = conn.prepareCall("{call dccps.products_order_pkg.save_feedback(?, ?, ?, ?)}");
-    stmt.setString(1, feedback);
-    stmt.setString(2, email);
-    stmt.setString(3, phone);
-    stmt.setString(4, "PLANET");
-    stmt.execute();
+        String driver = "jdbc:oracle:oci8:@sc1";
+        String username = "pma_web_user";
+        String password = "pjc242323";
+
+        // Load the Oracle JDBC driver
+        DriverManager.registerDriver (new OracleDriver());
+        Connection conn = DriverManager.getConnection(driver, username, password);
+
+        CallableStatement stmt = conn.prepareCall("{call dccps.products_order_pkg.save_feedback(?, ?, ?, ?)}");
+        stmt.setString(1, feedback);
+        stmt.setString(2, email);
+        stmt.setString(3, phone);
+        stmt.setString(4, "PLANET");
+        stmt.execute();
+    }
 %>
         </td>
         </tr>
