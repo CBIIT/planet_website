@@ -348,7 +348,7 @@ else {
 	<td valign="top">
 		<table bgcolor='white' border='0' cellpadding="5" cellspacing="0">
 		<tr>
-			<td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 12px;	font-weight: bold;"><a name="top"></a><%= topicString.toString()%></td><td valign='top' style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 12px;	font-weight: bold;'>&nbsp;</td>
+			<td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 12;	font-weight: bold;"><a name="top"></a><%= topicString.toString()%></td><td valign='top' style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 12;	font-weight: bold;'>&nbsp;</td>
 		</tr>
 		</table>
 	</td>
