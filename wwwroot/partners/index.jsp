@@ -32,20 +32,20 @@ else
    caption = "Cancer Control PLANET - Cancer Control Partners";
 }
 
-    String theQuery = "";
     String URL = "jdbc:oracle:thin:@mooch.nci.nih.gov:1521:mooch920";
     String username = "pma_web_user";
     String password = "pjc242323";
     String typeString = "S";
-     
-    ResultSet rs=null;
  
     DriverManager.registerDriver(new OracleDriver());
     Connection con = DriverManager.getConnection(URL, username, password);
     
     Statement stmt = con.createStatement();
-    theQuery = "SELECT * from states order by type, name;";
-    rs = stmt.executeQuery(theQuery);
+    String theQuery = "SELECT abbreviation, name, type " +
+                      "FROM dccps.cc_partner_states " +
+                      "ORDER BY type, name";
+
+    ResultSet rs = stmt.executeQuery(theQuery);
     if (rs.next())
     {
         stateList = new StringBuffer();
@@ -62,7 +62,7 @@ else
                stateList.append("<br />");
                typeString = rs.getString("type");
            }
-           stateList.append("<br /><a href='list.jsp?r="+rs.getString("state")+"&cctopic="+topic.toUpperCase()+"' class='a1'>"+rs.getString("name")+"</a>");
+           stateList.append("<br /><a href='list.jsp?r="+rs.getString("abbreviation")+"&cctopic="+topic.toUpperCase()+"' class='a1'>"+rs.getString("name")+"</a>");
            count++;
       } while (rs.next());
     stateList.append("</td>");
