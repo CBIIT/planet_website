@@ -260,11 +260,7 @@ else
                 stateList.append("</td><td valign='top' nowrap>");
                 count = 0;
             }
-            //if (typeString.compareTo(rs.getString("type")) != 0)
-            //{
-               // stateList.append("<br />");
-              //  typeString = rs.getString("type");
-           // }
+
             if (count > 0)
                 stateList.append("<br />");
 			
@@ -277,14 +273,10 @@ else
         } while (rs.next());
         stateList.append("</td></tr><tr><td colspan=2><a href='rlist.jsp?r=ALL&cctopic=" + topic + "' title=\"All states and regions\">View All U.S. Researchers by topic area</a>");
     }
-		pageTitle = pageTitle + " - " + stateStatic;
-				
+	pageTitle = pageTitle + " - " + stateStatic;		
     QBean.close();
-
-
 %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-
 <html>
 <head>
 <title><%= pageTitle%></title>
@@ -306,7 +298,6 @@ else
 	</td>
   </tr>
 </table>
-
 <table bgcolor="white" border="0" cellpadding="0" cellspacing="0" width="100%">
 <tr>
 	<td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-				    
@@ -319,7 +310,6 @@ else
 						</td>
 					</tr>
 				</table>
-			
 	</td>
 	<td width="5%">&nbsp;</td>
 	<td valign="top" width="30%">
@@ -335,7 +325,6 @@ else
 	</td>
 </tr>
 </table>
-
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
     <td><hr size="1" noshade>
