@@ -254,9 +254,8 @@ else {
 		
         do
         {
-		
-					if (region.compareTo(rs.getString("abbreviation")) == 0)
-						stateStatic=rs.getString("name");
+			if (region.compareTo(rs.getString("abbreviation")) == 0)
+				stateStatic=rs.getString("name");
 				
             if (count > 27)
             {
