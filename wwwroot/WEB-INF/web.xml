@@ -9,13 +9,34 @@
       For information, please contact Lewellyn Belber (lewellyn.belber@matthewsgroup.com)
       or James Juran (juranj@mail.nih.gov).
     </description>
+    <context-param>
+        <param-name>DBURL</param-name>
+        <param-value>jdbc:oracle:thin:@192.168.50.132:1521:test9i</param-value>
+    </context-param>
+    <context-param>
+        <param-name>DBUser</param-name>
+        <param-value>pma_web_user</param-value>
+    </context-param>
+    <context-param>
+        <param-name>DBPass</param-name>
+        <param-value>pjc242323</param-value>
+    </context-param>
+    <context-param>
+        <param-name>DBMinConnections</param-name>
+        <param-value>3</param-value>
+    </context-param>
     <servlet>
         <servlet-name>ctRedirector</servlet-name>
-        <servlet-class>ctRedirector</servlet-class>
+        <servlet-class>com.corda.ctRedirector</servlet-class>
         <init-param>
             <param-name>CordaServer</param-name>
             <param-value>procyon.cit.nih.gov:2001</param-value>
         </init-param>
+    </servlet>
+    <servlet>
+        <servlet-name>ConnPoolInitServlet</servlet-name>
+        <servlet-class>gov.nci.util.ConnPoolInitServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
     </servlet>
     <servlet-mapping>
         <servlet-name>ctRedirector</servlet-name>
