@@ -38,7 +38,7 @@ public class QueryBean
         CallableStatement stmt = conn.prepareCall("{call dccps.planet_pkg.GetStatePlans(?)}");
 	stmt.registerOutParameter(1, OracleTypes.CURSOR);
 	stmt.execute();
-	return ((OracleCallableStatement)stmt).getCursor(1);
+	return (ResultSet)stmt.getObject(1);
     }
     
     public ResultSet getPartners(String topic) throws SQLException
