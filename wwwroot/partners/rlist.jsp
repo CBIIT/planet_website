@@ -91,8 +91,9 @@ if (param != null)
 					topicInt = new Integer(topicID);
 					topicDesc = QBean.getTopicDescription(topicInt);
 					
-					if (ccTopic == 0)
+					if (ccTopic == 0) {
 						topicString.append("<a href='#"+topicID+"'>"+topicDesc+"</a><br>");
+					}
 					else
 						topicString.append("&nbsp;</td><td valign='top' style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold;'>&nbsp;");
 										
