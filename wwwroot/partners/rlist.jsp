@@ -79,7 +79,7 @@ if (param != null)
 			   		topicID = rs.getInt("topic_id");
 					topicInt = new Integer(topicID);
 					topicDesc = QBean.getTopicDescription(topicInt);
-					topicString.append("<td valign='top' style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 12px;	font-weight: color : #000000;'><a href='#"+topicID+"'>"+topicDesc+"</a></td>");						
+					topicString.append("<td valign='top' style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 12;	font-weight: bold; color : #000000;'><a href='#"+topicID+"' style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 12;	font-weight: bold; color : #000000;'>"+topicDesc+"</a></td>");						
 					
 					if ((topicCount % 2) == 0)
 						topicString.append("</tr><tr>");
@@ -99,7 +99,7 @@ if (param != null)
                 	stateName = rs.getString("state_name");
 					
 					if (count > 1)
-						outString.append("<tr><td colspan='2' style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 10;font-weight: bold;color: #000000;' align='left' valign='top'></font><br /><a href='#top'>[Top of Page]</a></td></tr>");
+						outString.append("<tr><td colspan='2' style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 12;color: #000000;' align='left' valign='top'><br /><a href='#top'>[Top of Page]</a></td></tr>");
 					
                 	outString.append("<tr><td valign='top' style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: #AA0000;' colspan='2'><a name='"+topicID+"'></a>"+topicDesc+"</td></tr>");
 	                outString.append("<tr><td><table border='0' cellspacing='0' cellpadding='0'>");
@@ -193,7 +193,7 @@ if (param != null)
 	 if ((cellCount % 2) == 0)
 		outString.append("<td>&nbsp;</td>");
 		
-		outString.append("</tr><tr><td colspan='2' style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 10;font-weight: bold;color: #000000;' align='left' valign='top'></font><a href='#top'>[Top of Page]</a></td></tr></table></td></tr></table>");
+		outString.append("</tr><tr><td colspan='2' style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 12;color: #000000;' align='left' valign='top'><a href='#top'>[Top of Page]</a></td></tr></table></td></tr></table>");
 		
 }
 else {
@@ -281,9 +281,6 @@ else {
 		</tr>
 		<tr>
 			<%= topicString.toString()%>
-		</tr>
-		<tr>
-			<td colspan="2">&nbsp;</td>
 		</tr>
 		<tr>
 			<td valign='top' colspan='2'><%= outString.toString()%></td>
