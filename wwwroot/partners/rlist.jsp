@@ -236,7 +236,7 @@ if (param != null)
 }
 else {
   listTitle = "No Records Found.";
-  topicString = new StringBuffer("<tr><td><font style='family : Verdana, Geneva, Arial, Helvetica, sans-serif;	size : 14px;	weight: bold; color : #000000;'>&nbsp;</font></td></tr>");
+  topicString = new StringBuffer("<tr><td><font style='family : Verdana, Geneva, Arial, Helvetica, sans-serif;	size : 14px;	weight: bold; color : #000000;'>Research partners not currently available in "+stateStatic+".</font></td></tr>");
   outString = new StringBuffer("<tr><td>&nbsp;</td></tr></table>");
 }  //end of if statement
 
@@ -276,10 +276,10 @@ else {
 	
 		if (stateStatic.compareTo("the US") == 0) {
 			stateStatic = "All States";
-			researcherText="Research Partners for <font style='font-family : Arial, Verdana, Geneva, Helvetica, sans-serif; font-weight : bold; 	font-size : 18px; color : AA0000;'>"+staticTopic+"</font>";	
+			researcherText="Research Partners for <font style='font-family : Arial, Verdana, Geneva, Helvetica, sans-serif; font-weight : bold; 	font-size : 20px; color : AA0000;'>"+staticTopic+"</font>";	
 		}
 		else
-			researcherText="Research Partners in <font style='font-family : Arial, Verdana, Geneva, Helvetica, sans-serif; font-weight : bold; 	font-size : 18px; color : AA0000;'>"+stateStatic+"</font>";
+			researcherText="Research Partners in <font style='font-family : Arial, Verdana, Geneva, Helvetica, sans-serif; font-weight : bold; 	font-size : 20px; color : AA0000;'>"+stateStatic+"</font>";
 					
     QBean.close();
 %>
