@@ -58,8 +58,7 @@ else
 
 	whereString = " where region <> '' AND topic IN ('','"+topic.toUpperCase()+"') AND states.state = partners.region";
 }
-try
-{
+
     DriverManager.registerDriver(new OracleDriver());
     Connection con = DriverManager.getConnection(URL,"user","password");
     Statement stmt = con.createStatement();
@@ -267,11 +266,6 @@ try
     myChart.fallback = "STRICT";
     myChart.userAgent = request.getHeader("USER-AGENT");
     htmlString = myChart.getEmbeddingHTML();
-}
-catch(Exception exc)
-{
-    System.out.println(exc.getMessage());
-}
 %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 
