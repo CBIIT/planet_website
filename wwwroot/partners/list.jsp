@@ -96,8 +96,11 @@ if (param != null)
                     else
                         if (topic.equals("P"))
                             outString.append(" Health Department Contact");
-                        else
-                            outString.append(" Contact");
+                        else {
+							if (!rs.getTypeDescription().equals("Regional Contact")) {
+                            	outString.append(" Contact");
+							}
+						}
                 }
 
                 // Close the underlining and the table cell.
