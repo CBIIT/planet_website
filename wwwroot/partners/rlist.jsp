@@ -176,7 +176,7 @@ if (param != null)
      } while (rs.next());
 	 
 	 if ((topicCount % 2) == 1)
-	 	topicCount.append("<td>nbsp;</td>");
+	 	topicString.append("<td>nbsp;</td>");
 		
 	 outString.append("</table><p></font><a href='#top'>[Top of Page]</a></p></td></tr></table>");
 }
