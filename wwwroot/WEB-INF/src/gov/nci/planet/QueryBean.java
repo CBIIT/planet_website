@@ -44,4 +44,13 @@ public class QueryBean
 	stmt.execute();
 	return ((OracleCallableStatement)stmt).getCursor(3);
     }
+    
+    public String getTopicDescription(String topic) throws SQLException
+    {
+        CallableStatement stmt = conn.prepareCall("{? = call dccps.planet_pkg.getTopicDescription(?)}");
+        stmt.registerOutParameter(1, Types.VARCHAR);
+        stmt.setString(2, topic);
+        stmt.execute();
+        return stmt.getString(1);
+    }
 };
