@@ -35,6 +35,7 @@ if (param != null)
 	StringBuffer topicString = null;
     StringBuffer stateList = null;
     ResultSet rs = null;
+	ResultSet rs2 = null;
     QueryBean QBean = new QueryBean();
 	
     // Find the page title to use based on the topic 
@@ -70,6 +71,15 @@ if (param != null)
         String typeOutput = "";
 		topicString = new StringBuffer();
 		int researcherCount = 0;
+		
+		if (region.compareTo("ALL") == 0)
+			rs2 = QBean.getTopicsResearherCount();
+		else 
+			rs2 = QBean.getTopicsResearherCount(region);
+		
+		while(rs2.next()) {
+        	topicCount ++;
+    	}
 		
         do
         {
@@ -327,14 +337,14 @@ else {
 				</table>
 	</td>
 	<td width="5%" rowspan="2">&nbsp;</td>
-	<td valign="top" width="60%"><a href="list.jsp?r=<%= region%>&cctopic=C">View Program Partners in <%= stateStatic%></a></td>
+	<td valign="top" width="60%" align="right"><a href="list.jsp?r=<%= region%>&cctopic=C">View Program Partners in <%= stateStatic%></a></td>
 </tr>
 
 <tr>
 	<td valign="top">
 		<table bgcolor='white' border='0' cellpadding="5" cellspacing="0">
 		<tr>
-			<td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold;"><a name="top"></a><%= topicString.toString()%> - <%= topicCount%></td>
+			<td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold;"><%= topicCount%> - <a name="top"></a><%= topicString.toString()%></td>
 		</tr>
 		</table>
 		<%= outString.toString()%>
