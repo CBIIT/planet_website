@@ -204,6 +204,10 @@ if (param != null)
             count ++;
         } while (rs.next());
     } //end of if statement
+	else {
+		outString = new StringBuffer();
+		outString.append("No records found.");
+	}
 
     rs = QBean.getStateList();
     if (rs.next())
