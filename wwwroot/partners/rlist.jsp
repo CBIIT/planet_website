@@ -75,7 +75,7 @@ if (param != null)
 		
            if (topicID != rs.getInt("topic_id"))
  		       {
-			   		researcherCount = rs.getColumnCount();		
+			   		researcherCount = rs.columns();		
 			   		topicID = rs.getInt("topic_id");
 					topicInt = new Integer(topicID);
 					topicDesc = QBean.getTopicDescription(topicInt);
@@ -90,6 +90,7 @@ if (param != null)
 				
 				if (count > 1)
 					outString.append("<p></font><a href='#top'>[Top of Page]</a></p>");
+					
 					
                 outString.append("<p><font style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: #000000;'><font style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: #AA0000;'><a name='"+topicID+"'></a>"+topicDesc+"- "+researcherCount+"</font></p>");
                 outString.append("<p><table border='0' cellspacing='0' cellpadding='0'>");
