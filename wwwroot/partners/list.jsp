@@ -64,10 +64,10 @@ if (param != null)
 
                 outString.append("<tr><td style='font-family: Arial, Helvetica, sans-serif;font-size: 12;font-style: normal;' align='left'>");
                 if (rs.getString("type").equals("R"))
-                    outString.append("<u>Regional Contact<u/>"+endTD);
+                    outString.append("<u>Regional Contact</u>"+endTD);
                 else
                     if (rs.getString("type").equals("B"))
-                        outString.append("<u>Tribal Contact<u/>"+endTD);
+                        outString.append("<u>Tribal Contact</u>"+endTD);
                     else
                     {
                         if (partnerString.equals("CDC"))
@@ -100,10 +100,10 @@ if (param != null)
 
                 outString.append("<tr><td style='font-family: Arial, Helvetica, sans-serif;font-size: 12;style: bold;' align='left'>");
                 if (rs.getString("type").equals("R"))
-                    outString.append("<u>Regional Contact<u/>"+endTD);
+                    outString.append("<u>Regional Contact</u>"+endTD);
                 else
                     if(rs.getString("type").equals("B"))
-                        outString.append("<u>Tribal Contact<u/>"+endTD);
+                        outString.append("<u>Tribal Contact</u>"+endTD);
                     else
                     {
                         if (partnerString.equals("CDC"))
