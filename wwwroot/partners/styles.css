@@ -1,38 +1,65 @@
 
-p, td, th, ul, ol, li {
+p {
 	font-family : Arial, Helvetica, sans-serif;
-	font-size : 16px;
+	font-size : 14px;
+}
+
+td {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 14px;
+}
+
+th {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 14px;
+}
+
+ul {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 14px;
+}
+
+ol {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 14px;
+}
+
+li {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 14px;
 }
 
 h2 {
 	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
-	font-size : 20px;
+	font-size : medium;
 	color : #000000;
 }
 
 h3 {
 	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
-	font-size : 18px;
+	font-size : small;
 	color : #000000;
 }
 
 h4 {
 	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
-	font-size : 16px;
+	font-size : 14px;
 	color : #000000;
-	margin-bottom : 0 px;
 }
-
 a {
 	font-family : Arial, Helvetica, sans-serif;
 	font-size : 16px;
 	color : #0033cc;
 }
-
+.a1 {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 12px;
+	color : #0033cc;
+}
 .greek
 {
 	font-family : Symbol;
-	font-size : 16px;
+	font-size : 14px;
 }
 
 .banner
@@ -46,16 +73,4 @@ a {
 	font-family : Arial, Helvetica, sans-serif;
 	font-size : 12px;
 	color : #ffffff;
-}
-
-.smaller {
-	font-family : Arial, Helvetica, sans-serif;
-	font-size : 16px;
-}
-
-.h4 {
-	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
-	font-size : 16px;
-	color : #000000;
-	font-weight : bold;
 }
