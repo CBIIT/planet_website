@@ -295,7 +295,7 @@ topicNum = QBean.getTopicID(topic);
     if (it2.hasNext())
     {
         stateList = new StringBuffer();
-		stateList.append("<table bgcolor='white' border='0' cellpadding='5' cellspacing='0'><tr><td valign='top' nowrap>");
+		stateList.append("<table border='0' cellpadding='5' cellspacing='0'><tr><td valign='top' nowrap>");
         String typeString = "S";
         int count= 0;
 		
@@ -421,7 +421,7 @@ topicNum = QBean.getTopicID(topic);
 <tr>
 <td valign="top" width="25%" bgcolor="F1F1FD"><%= stateList.toString()%></td>
 <td valign="top" width="5%">&nbsp;</td>
-<td valign="top" width="25%" bgcolor="F1F1FD"><%= outString.toString()%></td>
+<td valign="top" width="25%"><%= outString.toString()%></td>
 <td valign="top" width="5%">&nbsp;</td>
 <td valign="top" width="40%"><%= htmlString%></td>
 </tr>
