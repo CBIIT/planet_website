@@ -342,7 +342,7 @@ else {
 				</table>
 	</td>
 	<td width="5%" rowspan="2">&nbsp;</td>
-	<td valign="top" width="60%" align="right"><a href="list.jsp?r=<%= region%>&cctopic=C">View Program Partners in <%= stateStatic%></a></td>
+	<td valign="top" width="60%" align="right" colspan="2"><a href="list.jsp?r=<%= region%>&cctopic=C">View Program Partners in <%= stateStatic%></a></td>
 </tr>
 
 <tr>
@@ -352,8 +352,8 @@ else {
 			<td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold;"><a name="top"></a><%= topicString.toString()%></td><td valign='top' style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold;'>&nbsp;</td>
 		</tr>
 		</table>
-		<%= outString.toString()%>
 	</td>
+	<td valign="top"><%= outString.toString()%></td>
 </tr>
 </table>
 
