@@ -12,7 +12,7 @@ String cdcSubTitle = "State Health Department Contact";
 String param = request.getParameter("r");
 String stateName = "";
 String stateStatic = "";
-
+String topicDesc = "";
 
 
 if (param != null)
@@ -66,8 +66,7 @@ if (param != null)
                 partnerString = rs.getString("partner_abbreviation");
                 typeString = rs.getString("type");
                 stateName = rs.getString("state_name");
-                outString.append("<p><font style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: #000000;'>Program Partners - </font><font style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: #AA0000;'>"+stateName.trim()+"</font></p>");
-                outString.append("<p><table border='0' cellspacing='0' cellpadding='0' width='100%'>");
+                outString.append("<table border='0' cellspacing='0' cellpadding='0' width='100%'>");
                 outString.append("<tr><td style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'>"+rs.getString("partner_name")+endTD);
 
                 outString.append("<tr><td style='font-family: Arial, Helvetica, sans-serif;font-size: 12;font-style: normal;' align='left'>");
@@ -203,6 +202,7 @@ if (param != null)
 
             count ++;
         } while (rs.next());
+		outString.append("</table>");
     } //end of if statement
 	else {
 		outString = new StringBuffer();
@@ -213,6 +213,7 @@ if (param != null)
     if (rs.next())
     {
         stateList = new StringBuffer();
+		stateList.append("<table bgcolor='white' border='0' cellpadding='5' cellspacing='0'><tr><td valign='top' nowrap>");
         String typeString = "S";
         int count= 0;
 
@@ -247,7 +248,7 @@ if (param != null)
             
 			count++;
         } while (rs.next());
-        stateList.append("</td></tr><tr><td colspan=2><a href='list.jsp?r=ALL&cctopic=" + topic + "' title=\"All states and regions\">View All U.S. Partners</a></td></tr>");
+        stateList.append("</td></tr><tr><td colspan=2><a href='list.jsp?r=ALL&cctopic=" + topic + "' title=\"All states and regions\">View All U.S. Partners</a></td></tr></table>");
     }
 
 
@@ -288,7 +289,7 @@ if (param != null)
 	</td>
   </tr>
 </table>
-<table bgcolor="white" border="0" cellpadding="0" cellspacing="0">
+<!-- <table bgcolor="white" border="0" cellpadding="0" cellspacing="0">
 <tr>
 <td valign='top'>
 <table bgcolor='white' border='0' cellpadding="5" cellspacing="0">
@@ -297,24 +298,37 @@ if (param != null)
 </tr>
 <tr>
 <td valign='top' nowrap>
-<%= stateList.toString()%>
+< stateList.toString()%>
 </td>
 </tr>
 </table>
 </td>
 <td width="2" valign='top'>&nbsp;</td>
-<td valign='top'><table><tr><td><%= outString.toString()%></td></tr></table></td>
+<td valign='top'><table><tr><td>< outString.toString()%></td></tr></table></td>
 
 
-<td valign="top" colspan="3" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;" align="right"><a href="rlist.jsp?r=<%= region%>&cctopic=0">View Research Partners in <%= stateStatic%></a>
-<%= htmlString%><br>
+<td valign="top" colspan="3" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;" align="right"><a href="rlist.jsp?r=< region%>&cctopic=0">View Research Partners in < stateStatic%></a>
+< htmlString%><br>
 <a href="javascript:window.close()">Close Window</a>
 
 </td>
 
 </tr>
 </table>
+</table> -->
+
+<table bgcolor="white" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 18px;	font-weight: bold; color : #000000;" align="right" colspan="2">Program Partners in <%= stateStatic%> for <%= topicDesc%></td>
+<td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;" align="right"><a href="rlist.jsp?r=<%= region%>&cctopic=0">View Research Partners in <%= stateStatic%></a></td>
+</tr>
+<tr>
+<td valign="top"><%= stateList.toString()%></td>
+<td valign="top"><%= outString.toString()%></td>
+<td valign="top"><%= htmlString%></td>
+</tr>
 </table>
+
 
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
