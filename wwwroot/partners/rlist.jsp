@@ -59,7 +59,7 @@ if (param != null)
 
 
 		outString = new StringBuffer("<table cellspacing='0' cellpadding='5'>");
-		topicString = new StringBuffer("<tr><td valign='top' style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;' colspan='2'><a name='top'></a>View by Topic:</td></tr>");
+		topicString = new StringBuffer("<table><tr><td valign='top' style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;' colspan='2'><a name='top'></a>View by Topic:</td></tr><tr>");
 	
     if (rs.next())
     {
@@ -229,7 +229,7 @@ if (param != null)
 }
 else {
   listTitle = "No Records Found.";
-  topicString = new StringBuffer("<td valign='top' style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;' colspan='2'>&nbsp;</td>");
+  topicString = new StringBuffer("<font style='family : Verdana, Geneva, Arial, Helvetica, sans-serif;	size : 14px;	weight: bold; color : #000000;'>&nbsp;</font>");
   outString = new StringBuffer("<tr><td>&nbsp;</td></tr></table>");
 }  //end of if statement
 
