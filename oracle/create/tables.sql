@@ -1,6 +1,6 @@
-/* $Id: tables.sql,v 1.5 2003-09-12 19:47:32 juranj Exp $ */
+/* $Id: tables.sql,v 1.6 2003-09-12 19:54:54 juranj Exp $ */
 
-CREATE TABLE cc_partner_topics2 (
+CREATE TABLE cc_partner_topics (
     cctopic            VARCHAR(1),
     description        VARCHAR2(50),
     CONSTRAINT cc_partner_topics_pk PRIMARY KEY (cctopic));
