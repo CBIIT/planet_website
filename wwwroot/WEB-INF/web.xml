@@ -30,23 +30,15 @@
         <param-value>http://156.40.32.188:8080/servlet/ctRedirector/</param-value>
     </context-param>
     <context-param>
-        <param-name>CordaClusterAddress</param-name>
-        <param-value>http://156.40.32.188:8080/servlet/ctcm</param-value>
+        <param-name>CordaInternalAddress</param-name>
+        <param-value>virgo.cit.nih.gov:2002</param-value>
     </context-param>
     <servlet>
         <servlet-name>ctRedirector</servlet-name>
         <servlet-class>ctRedirector</servlet-class>
         <init-param>
             <param-name>CordaServer</param-name>
-            <param-value>128.231.56.162:2001</param-value>
-        </init-param>
-    </servlet>
-    <servlet>
-        <servlet-name>ctcm</servlet-name>
-        <servlet-class>ctClusterMonitor</servlet-class>
-        <init-param>
-            <param-name>ClusterAddress</param-name>
-            <param-value>128.231.56.162:2002,128.231.56.163:2002</param-value>
+            <param-value>virgo.cit.nih.gov:2001</param-value>
         </init-param>
     </servlet>
     <servlet>
@@ -62,9 +54,5 @@
     <servlet-mapping>
         <servlet-name>ctRedirector</servlet-name>
         <url-pattern>/servlet/ctRedirector/</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>ctcm</servlet-name>
-        <url-pattern>/servlet/ctcm</url-pattern>
     </servlet-mapping>
 </web-app>
