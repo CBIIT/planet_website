@@ -74,9 +74,9 @@ if (param != null)
 				
 		//rs2 = QBean.getTopicsResearcherCount(region);
 				
-		while(rs2.next()) {
-        	topicCount ++;
-    	}
+		//while(rs2.next()) {
+        //	topicCount ++;
+    //	}
 		
         do
         {
