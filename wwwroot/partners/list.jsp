@@ -45,9 +45,11 @@ if (param != null)
     {
         outString = new StringBuffer();
         String partnerString = "";
+        int partnerId = 0;
         String stateName = "";
         int count = 1;
         String typeString = "";
+        String typeOutput = "";
 
         do
         {
@@ -55,6 +57,7 @@ if (param != null)
             {
                 if (count > 1)
                     outString.append("</table></p>");
+                partnerId = rs.getInt("partner_id");
                 partnerString = rs.getString("partner_abbreviation");
                 typeString = rs.getString("type");
                 stateName = rs.getString("state_name");
@@ -63,84 +66,71 @@ if (param != null)
                 outString.append("<tr><td style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'>"+rs.getString("partner_name")+endTD);
 
                 outString.append("<tr><td style='font-family: Arial, Helvetica, sans-serif;font-size: 12;font-style: normal;' align='left'>");
-                if (rs.getString("type").equals("R"))
-                    outString.append("<u>Regional Contact</u>"+endTD);
-                else
-                    if (rs.getString("type").equals("B"))
-                        outString.append("<u>Tribal Contact</u>"+endTD);
+                outString.append("<u>" + rs.getString("type_description"));
+                
+                // For state and territory contacts we may need to tack on some additional information.
+                if (partnerString.equals("CDC") && !typeString.equals("W"))
+                {
+                    if (topic.equals("T"))
+                        outString.append(" Health Department Web Site");
                     else
-                    {
-                        if (partnerString.equals("CDC"))
-                        {
-                            if (rs.getString("type").equals("T"))
-                                outString.append("<u>Territorial");
-                            else
-                                outString.append("<u>State");
-                            if (topic.equals("T"))
-                                outString.append(" Health Department Web Site</u>"+endTD);
-                            else
-                                if (topic.equals("P"))
-                                    outString.append(" Health Department Contact</u>"+endTD);
-                                else
-                                    outString.append(" Contact</u>"+endTD);
-                        }
+                        if (topic.equals("P"))
+                            outString.append(" Health Department Contact");
                         else
-                            outString.append("<u>State Contact</u>"+endTD);
-                    }
-                    typeString = rs.getString("type");
+                            outString.append(" Contact");
+                }
+
+                // Close the underlining and the table cell.
+                outString.append("</u>"+endTD);
             }
-            if (partnerString.compareTo(rs.getString("partner_abbreviation").trim()) != 0)
+
+            if (partnerId != rs.getInt("partner_id"))
             {
                 if (count > 1)
                    outString.append("</table></p>");
+                partnerId = rs.getInt("partner_id");
                 partnerString = rs.getString("partner_abbreviation");
                 typeString = rs.getString("type");
                 outString.append("<p><table border='0' cellspacing='0' cellpadding='0' width='100%'>");
                 outString.append("<tr><td style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'>"+rs.getString("partner_name")+endTD);
 
                 outString.append("<tr><td style='font-family: Arial, Helvetica, sans-serif;font-size: 12;style: bold;' align='left'>");
-                if (rs.getString("type").equals("R"))
-                    outString.append("<u>Regional Contact</u>"+endTD);
-                else
-                    if(rs.getString("type").equals("B"))
-                        outString.append("<u>Tribal Contact</u>"+endTD);
+                outString.append("<u>" + rs.getString("type_description"));
+                
+                // For state and territory contacts we may need to tack on some additional information.
+                if (partnerString.equals("CDC") && !typeString.equals("W"))
+                {
+                    if (topic.equals("T"))
+                        outString.append(" Health Department Web Site");
                     else
-                    {
-                        if (partnerString.equals("CDC"))
-                        {
-                            if (rs.getString("type").equals("T"))
-                               outString.append("<u>Territorial");
-                            else
-                               outString.append("<u>State");
-                            if (topic.equals("T"))
-                               outString.append(" Health Department Web Site</u>"+endTD);
-                            else if (topic.equals("P"))
-                               outString.append(" Health Department Contact</u>"+endTD);
-                            else
-                               outString.append(" Contact</u>"+endTD);
-                        }
+                        if (topic.equals("P"))
+                            outString.append(" Health Department Contact");
                         else
-                            outString.append("<u>State Contact</u>"+endTD);
-                    }
-                    typeString = rs.getString("type");
+                            outString.append(" Contact");
+                }
+
+                // Close the underlining and the table cell.
+                outString.append("</u>" + endTD);
             }
+
             if (typeString.compareTo(rs.getString("type").trim()) != 0)
             {
                 outString.append("<tr><td height='20'>&nbsp;</td></tr>");
                 outString.append("<tr><td style='font-family: Arial,Helvetica;font-size: 12;font-style: normal;' align='left'>");
-                if (rs.getString("type").equals("R"))
-                    outString.append("<u>Regional Contact</u>"+endTD);
-                else
+                outString.append("<u>" + rs.getString("type_description"));
+                if (partnerString.equals("CDC") && !typeString.equals("W"))
                 {
-                    if (partnerString.equals("CDC") && topic.compareTo("C") != 0)
-                    {
-                       outString.append("<u>State Health Department Contact</u>"+endTD);
-                    }
+                    if (topic.compareTo("C") != 0)
+                       outString.append(" Health Department Contact");
                     else
-                       outString.append("<u>State Contact</u>"+endTD);
+                       outString.append(" Contact");
                 }
+
+                // Close the underlining and the table cell.
+                outString.append("</u>" + endTD);
                 typeString = rs.getString("type");
             }
+
             if (rs.getString("contact_name") != null && rs.getString("contact_name").compareTo("") != 0)
             {
                 outString.append(beginTD+rs.getString("contact_name").trim());
@@ -179,7 +169,25 @@ if (param != null)
                     urlStr = "http://"+rs.getString("orgurl").trim();
                 else
                     urlStr = rs.getString("orgurl").trim();
-                if (partnerString.equals("CDC") && topic.equals("T"))
+
+                // Don't display Web site: field header for tobacco, breast cancer, and cervical cancer contacts.
+                if (partnerString.equals("CDC") && (topic.equals("T") || topic.equals("B") || topic.equals("V")))
+                {
+                   outString.append(beginTD+"<a href=\""+urlStr+"\" target=\"_blank\" class='a1'>"+urlStr+"</a>"+endTD);
+                }
+                else
+                    outString.append(beginTD+"Web site:  <a href=\""+urlStr+"\" target=\"_blank\" class='a1'>"+urlStr+"</a>"+endTD);
+            }
+            if (rs.getString("orgurl2") != null && rs.getString("orgurl").compareTo("") != 0)
+            {
+                String urlStr = "";
+                if (rs.getString("orgurl2").indexOf("http://") < 0)
+                    urlStr = "http://"+rs.getString("orgurl2").trim();
+                else
+                    urlStr = rs.getString("orgurl2").trim();
+
+                // Don't display Web site: field header for tobacco, breast cancer, and cervical cancer contacts.
+                if (partnerString.equals("CDC") && (topic.equals("T") || topic.equals("B") || topic.equals("V")))
                 {
                    outString.append(beginTD+"<a href=\""+urlStr+"\" target=\"_blank\" class='a1'>"+urlStr+"</a>"+endTD);
                 }
