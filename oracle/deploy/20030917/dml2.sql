@@ -2,6 +2,10 @@ insert into cc_partners (abbreviation, name)
 values ('CDC', 'The National Breast and Cervical Cancer Early Detection Program');
 
 INSERT INTO cc_partner_topics (cc_partner_id, cctopic)
+VALUES (2, 'B');
+INSERT INTO cc_partner_topics (cc_partner_id, cctopic)
+VALUES (2, 'V');
+INSERT INTO cc_partner_topics (cc_partner_id, cctopic)
 VALUES (6, 'B');
 INSERT INTO cc_partner_topics (cc_partner_id, cctopic)
 VALUES (6, 'V');
