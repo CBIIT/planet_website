@@ -21,6 +21,7 @@ String stateName = "";
 String topicDesc = "";
 String listTitle = "";
 Integer topicInt = new Integer(-1);
+String researcherText="";
 
 if (param != null) 
     region = param.toUpperCase();
@@ -265,7 +266,15 @@ else {
         } while (rs.next());
         stateList.append("</td></tr><tr><td colspan=2><a href='rlist.jsp?r=ALL&cctopic=" + topic + "' title=\"All states and regions\">View All U.S. Researchers by topic area</a></td></tr></table>");
     }
-	pageTitle = pageTitle + " - " + stateStatic;		
+	pageTitle = pageTitle + " - " + stateStatic;
+	
+		if (stateStatic.compareTo("the US") == 0) {
+			stateStatic = "All States";
+			researcherText="Researcg Partners";	
+		}
+		else
+			researcherText="Research Partners in "+stateStatic;
+					
     QBean.close();
 %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
@@ -294,8 +303,8 @@ else {
 <table bgcolor="white" border="0" cellpadding="0" cellspacing="0" width="100%">
 <tr>
 	<td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-				    
-			size : 14px;	font-weight: bold; color : #000000;" width="66%" colspan="2"><%= listTitle%></td>
-	<td valign="top" width="34%" align="right"><strong><a href="list.jsp?r=<%= region%>&cctopic=C">View Program Partners in <%= stateStatic%></a></strong></td>
+			size : 14px;	font-weight: bold; color : #000000;" colspan="2"><%= researcherText%></td>
+	<td valign="top" align="right"><strong><a href="list.jsp?r=<%= region%>&cctopic=C">View Program Partners in <%= stateStatic%></a></strong></td>
 </tr>
 <tr>
 <td colspan="3">&nbsp;</td>
