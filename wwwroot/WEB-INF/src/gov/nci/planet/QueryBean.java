@@ -53,4 +53,14 @@ public class QueryBean
         stmt.execute();
         return stmt.getString(1);
     }
+    
+    public void saveFeedback(String feedbackText, String email, String phone) throws SQLException
+    {
+        CallableStatement stmt = conn.prepareCall("{call dccps.products_order_pkg.save_feedback(?, ?, ?, ?)}");
+        stmt.setString(1, feedbackText);
+        stmt.setString(2, email);
+        stmt.setString(3, phone);
+        stmt.setString(4, "PLANET");
+        stmt.execute();
+    }
 };
