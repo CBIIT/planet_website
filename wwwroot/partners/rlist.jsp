@@ -293,7 +293,7 @@ else {
 	</td>
 
 	<td valign="top" width="40%" align="left"><%= listTitle%></td>
-	<td valign="top" width="30%" align="right"><a href="list.jsp?r=<%= region%>&cctopic=C">View Program Partners in <%= stateStatic%></a></td>
+	<td valign="top" width="30%" align="right"><strong><a href="list.jsp?r=<%= region%>&cctopic=C">View Program Partners in <%= stateStatic%></a></strong></td>
 </tr>
 <tr>
 	<td valign="top" colspan="2">

@@ -66,7 +66,7 @@ if (param != null)
                 partnerString = rs.getString("partner_abbreviation");
                 typeString = rs.getString("type");
                 stateName = rs.getString("state_name");
-                outString.append("<p><font style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: #000000;'>"+pageTitle+" - </font><font style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: #AA0000;'>"+stateName.trim()+"</font></p>");
+                outString.append("<p><font style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: #000000;'>Program Partners - </font><font style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: #AA0000;'>"+stateName.trim()+"</font></p>");
                 outString.append("<p><table border='0' cellspacing='0' cellpadding='0' width='100%'>");
                 outString.append("<tr><td style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'>"+rs.getString("partner_name")+endTD);
 
@@ -289,7 +289,7 @@ if (param != null)
 <td valign='top'>
 <table bgcolor='white' border='0' cellpadding="5" cellspacing="0">
 <tr>
-<td valign="top" colspan="3" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;">View Cancer Control Partners in another state / territory:</td>
+<td valign="top" colspan="3" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;">View Program Partners in another state / territory:</td>
 </tr>
 <tr>
 <td valign='top' nowrap>
