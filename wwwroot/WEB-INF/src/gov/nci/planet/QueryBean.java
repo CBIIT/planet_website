@@ -60,7 +60,7 @@ public class QueryBean
 				return (ResultSet)stmt.getObject(3);
     }
 
-    public getTopicID(Integer topicIN) throws SQLException
+    public String getTopicID(Integer topicIN) throws SQLException
     {
 	    stmt = conn.prepareCall("{? = call dccps.planet_pkg.GetTopicID(?)}");
 	    stmt.registerOutParameter(1, Types.VARCHAR);
@@ -69,7 +69,7 @@ public class QueryBean
 	    return stmt.getString(1);
 	}
 
-    public getTopicID(String topicIN) throws SQLException
+    public int getTopicID(String topicIN) throws SQLException
     {
 	    stmt = conn.prepareCall("{? = call dccps.planet_pkg.GetTopicID(?)}");
 	    stmt.registerOutParameter(1, Types.INTEGER);
