@@ -3,6 +3,7 @@
 <%@ page import="java.io.*" %>
 <%@ page import="java.sql.*" %>
 <%@ page import="com.corda.CordaEmbedder" %>
+<%@ page import="oracle.jdbc.driver.*" %>
 <%
 StringBuffer stateList = null;
 String topic = "C";
@@ -31,69 +32,57 @@ else
    caption = "Cancer Control PLANET - Cancer Control Partners";
 }
 
-try
-{
-	 String theQuery = "";
+    String theQuery = "";
+    String URL = "jdbc:oracle:oci8:@mooch920";
+    String username = "pma_web_user";
+    String password = "pjc242323";
+    String typeString = "S";
+     
+    ResultSet rs=null;
+ 
+    Connection con = DriverManager.getConnection(URL, username, password);
     
-    //change this line to point to your jdbc url for the Oracle database
-	String URL = "jdbc:mysql://databaseurl/db";
-
-     String typeString = "S";
+    Statement stmt = con.createStatement();
+    theQuery = "SELECT * from states order by type, name;";
+    rs = stmt.executeQuery(theQuery);
+    if (rs.next())
+    {
+        stateList = new StringBuffer();
+        int count= 0;
+        do
+        {
+           if (count > 27)
+           {
+               stateList.append("</td><td valign='bottom'>");
+               count = 0;
+           }
+           if (typeString.compareTo(rs.getString("type")) != 0)
+           {
+               stateList.append("<br />");
+               typeString = rs.getString("type");
+           }
+           stateList.append("<br /><a href='list.jsp?r="+rs.getString("state")+"&cctopic="+topic.toUpperCase()+"' class='a1'>"+rs.getString("name")+"</a>");
+           count++;
+      } while (rs.next());
+    stateList.append("</td>");
+    }
      
-     ResultSet rs=null;
-     Connection con;
-	 //change the following line to reference the oracle jdbc driver
-     Class.forName("org.gjt.mm.mysql.Driver");
-     
-	//change the following line to include your user name and password for the oracle database
- 	 con = DriverManager.getConnection(URL,"user","password");
-    
-     Statement stmt = con.createStatement();
-     theQuery = "SELECT * from states order by type, name;";
-     rs = stmt.executeQuery(theQuery);
-     if (rs.next())
-     {
-      stateList = new StringBuffer();
-      int count= 0;
-      do
-      {
-       if (count > 27)
-       {
-        stateList.append("</td><td valign='bottom'>");
-        count = 0;
-       }
-       if (typeString.compareTo(rs.getString("type")) != 0)
-       {
-          stateList.append("<br />");
-          typeString = rs.getString("type");
-       }
-       stateList.append("<br /><a href='list.jsp?r="+rs.getString("state")+"&cctopic="+topic.toUpperCase()+"' class='a1'>"+rs.getString("name")+"</a>");
-       count++;
-      }while (rs.next());
-      stateList.append("</td>");
-     }
-     
-     CordaEmbedder myChart = new CordaEmbedder();
-     myChart.appearanceFile = "apfiles/ccp/ccpmap.pcxml";
+    CordaEmbedder myChart = new CordaEmbedder();
+    myChart.appearanceFile = "apfiles/ccp/ccpmap.pcxml";
 
-//change the next two lines to point to your popchart/optimap server or to a redirector
-     myChart.externalServerAddress = "http://your.optimap.server:2001";
-     myChart.internalCommPortAddress = "http://your.optimap.server:2002";
+    //change the next two lines to point to your popchart/optimap server or to a redirector
+    myChart.externalServerAddress = "http://your.optimap.server:2001";
+    myChart.internalCommPortAddress = "http://your.optimap.server:2002";
 
-//change the next line so the drilldown url points to your application server
-     myChart.pcScript = "US.addPCXML(<DefaultShapeSettings><Drilldown URL='http://your.app.server/ccp/list.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultShapeSettings>)";
+    //change the next line so the drilldown url points to your application server
+    myChart.pcScript = "US.addPCXML(<DefaultShapeSettings><Drilldown URL='http://your.app.server/ccp/list.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultShapeSettings>)";
 
-     myChart.height = 449;
-     myChart.width = 629;
-     myChart.imageType = "FLASH";
-     myChart.fallback = "STRICT";
-     myChart.userAgent = request.getHeader("USER-AGENT");
-     htmlString = myChart.getEmbeddingHTML();
-}// end of try
-catch (Exception exc)
-{
- System.out.println(exc.getMessage());
-}
+    myChart.height = 449;
+    myChart.width = 629;
+    myChart.imageType = "FLASH";
+    myChart.fallback = "STRICT";
+    myChart.userAgent = request.getHeader("USER-AGENT");
+    htmlString = myChart.getEmbeddingHTML();
 %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 
