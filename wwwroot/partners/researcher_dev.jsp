@@ -77,7 +77,9 @@
     <td><a href="../index.html"><img src="../images/planet_banner2.gif" alt="Cancer Control PLANET - Links to resources for cancer control planning" width="369" height="82" border="0"></a></td>
     <td><p><a href="../index.html">Home</a><br>
         <a href="../contact.html">Contact Us</a><br>
-        <a href="../about.html">About this Site</a><br>
+	<a href="about.html">About This Site</a><br>
+        <a href="factsheet.pdf">Fact Sheet (PDF)</a><br>
+
         <a href="../partners.html">PLANET Sponsors</a></p></td>
   </tr>
   <tr>
