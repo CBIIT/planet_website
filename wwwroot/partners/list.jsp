@@ -3,7 +3,7 @@
 <%@ page import="gov.nci.corda.NCIPopChartEmbedder" %>
 <%@ page import="gov.nci.planet.QueryBean" %>
 <%
-String region = "all";
+String region = "ALL";
 String pcScript = "";
 String topic = "C";
 String htmlString = null;
@@ -25,7 +25,7 @@ if (param != null)
     String pageTitle = QBean.getTopicDescription(topic) + " Partners";
     caption = "Cancer Control PLANET - " + pageTitle;
 
-    if (region.equals("all"))
+    if (region.equals("ALL"))
     {
         pcScript = "US.addPCXML(<DefaultShapeSettings><Properties FillColor='#B20000'/><Drilldown URL='list.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultShapeSettings>)";
         rs = QBean.getPartners(topic.toUpperCase());
@@ -221,7 +221,7 @@ if (param != null)
             stateList.append("<a href='list.jsp?r="+rs.getString("abbreviation")+"&cctopic="+topic.toUpperCase()+"' class='a1' title='"+rs.getString("name").trim()+"'>"+rs.getString("abbreviation")+"</a>");
             count++;
         } while (rs.next());
-        stateList.append("<br /><br /><a href='list.jsp?r=all&cctopic="+topic.toUpperCase()+"' title=\"All states and regions\">All</a>");
+        stateList.append("<br /><br /><a href='list.jsp?r=ALL&cctopic=" + topic + "' title=\"All states and regions\">All</a>");
     }
 
     QBean.close();

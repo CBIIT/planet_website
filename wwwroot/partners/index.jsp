@@ -99,7 +99,7 @@ To view, click on map or state name below.
 </td>
 </tr>
 <tr>
-<td valign='top'><a href='list.jsp?r=all&cctopic=<%= topic %>'>View all partners</a><br />
+<td valign='top'><a href='list.jsp?r=ALL&cctopic=<%= topic %>'>View all partners</a><br />
 <%= stateList.toString()%>
 <td valign='top'>
 <%= htmlString%><br>
