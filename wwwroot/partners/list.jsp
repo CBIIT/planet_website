@@ -305,6 +305,8 @@ if (param != null)
 
 </tr>
 </table>
+</table>
+
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
     <td><hr size="1" noshade>
