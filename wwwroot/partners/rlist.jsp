@@ -127,7 +127,6 @@ if (param != null)
 					
 					outString.append(endTD);
            		}
-		   
 
             if (researcherId != rs.getInt("researcher_id"))
             {
