@@ -65,6 +65,7 @@ else
     myChart.width = 629;
     myChart.imageType = "FLASH";
     myChart.fallback = "STRICT";
+    myChart.returnDescriptiveLink = false;
     myChart.userAgent = request.getHeader("USER-AGENT");
     htmlString = myChart.getEmbeddingHTML();
 %>
