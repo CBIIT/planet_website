@@ -14,6 +14,7 @@ String stateName = "";
 String stateStatic = "";
 String topicDesc = "";
 String partnerText = "";
+int topicNum = 0;
 
 if (param != null)
     region = param.toUpperCase();
@@ -25,7 +26,8 @@ if (param != null)
     StringBuffer stateList = null;
     ResultSet rs = null;
     QueryBean QBean = new QueryBean();
-
+	topicNum = QBean.getTopicID(topic);
+	
     // Find the page title to use based on the topic
     String pageTitle = QBean.getTopicDescription(topic) + " Partners";
     caption = "Cancer Control PLANET - " + pageTitle;
@@ -328,7 +330,7 @@ if (param != null)
 <table bgcolor="white" border="0" cellpadding="0" cellspacing="0">
 <tr>
 <td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 20px;	font-weight: bold; color : #000000;" align="left" colspan="3"><%= partnerText%></td>
-<td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;" align="right" colspan="2"><a href="rlist.jsp?r=<%= region%>&cctopic=0">View Research Partners in <%= stateStatic%></a></td>
+<td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;" align="right" colspan="2"><a href="rlist.jsp?r=<%= region%>&cctopic=<%= topicNum%>">View Research Partners in <%= stateStatic%></a></td>
 </tr>
 <tr>
 <td colspan="5">&nbsp;</td>
