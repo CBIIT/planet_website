@@ -67,6 +67,7 @@ if (param != null)
         String typeOutput = "";
 		topicString = new StringBuffer();
 		
+		
         do
         {
            if (topicID != rs.getInt("topic_id"))
