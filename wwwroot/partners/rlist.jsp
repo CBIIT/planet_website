@@ -68,14 +68,14 @@ if (param != null)
         String typeOutput = "";
 		topicString = new StringBuffer();
 		int researcherCount = 0;
-		
+		ResultSetMetaData rsmd = rs.getMetaData();
+		researcherCount = rsmd.getColumnCount();
 		
         do
         {
 		
            if (topicID != rs.getInt("topic_id"))
- 		       {
-			   		researcherCount = rs.columns();		
+ 		       {		
 			   		topicID = rs.getInt("topic_id");
 					topicInt = new Integer(topicID);
 					topicDesc = QBean.getTopicDescription(topicInt);
