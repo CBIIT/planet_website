@@ -267,7 +267,8 @@ else
                 stateList.append("<br />");
 			
 			if (region.compareTo(rs.getString("abbreviation")) == 0)
-				stateList.append("<font style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 12;font-weight: normal;color: FF0000;'>"+rs.getString("name").trim()+"</font>");
+				stateList.append("<font style='font-family : Verdana, Geneva, Arial, Helvetica, sans-
+						serif;	font-size : 14px;	font-weight: color : #FF0000;'>"+rs.getString("name").trim()+"</font>");
 			else
 	            stateList.append("<a href='rlist.jsp?r="+rs.getString("abbreviation")+"&cctopic="+topic+"' class='a1' title='"+rs.getString("name").trim()+"'>"+rs.getString("name")+"</a>");
 				
