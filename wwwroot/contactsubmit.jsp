@@ -13,7 +13,7 @@
     <td><p class="banner"><a href="index.html"><img src="images/planet_logo.gif" alt="Cancer Control PLANET - Plan, Link, Act, Network with Evidence-based Tools" width="169" height="87" border="0"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p></td>
     <td><a href="index.html"><img src="images/planet_banner2.gif" alt="Cancer Control PLANET - Links to resources for cancer control planning" width="369" height="82" border="0"></a></td>
     <td><p><a href="index.html">Home</a><br>
-        <a href="contact.asp">Contact Us</a><br>
+        <a href="contact.html">Contact Us</a><br>
         <a href="about.html">About this Site</a><br>
         <a href="partners.html">PLANET Sponsors</a></p></td>
   </tr>
@@ -37,9 +37,18 @@
 			<p align="center"> Thank you for providing this information. Below is the information you provided.</p>
 
 <%
-     String feedback = request.getParameter("feedback");
-     String email = request.getParameter("email");
-     String phone = request.getParameter("phone");
+    String feedback = request.getParameter("feedback");
+    String email = request.getParameter("email");
+    String phone = request.getParameter("phone");
+
+    if (feedback == null || feedback.equals(""))
+    {
+%>
+          <p>No information entered -- please enter your comments on the <a href="contact.html">contact page</a>.</p>
+<%
+    }
+    else
+    {
 %>
 			<table border="0" cellpadding="6" cellspacing="0" align="center" width="50%"><!-- Confirm Page -->
 			<tr>
@@ -57,21 +66,22 @@
 			</table><!-- End of Confirm Page -->
 
 <%
-    
-    String driver = "jdbc:oracle:thin:@mooch.nci.nih.gov:1521:mooch817";
-    String username = "pma_web_user";
-    String password = "pjc242323";
 
-    // Load the Oracle JDBC driver
-    DriverManager.registerDriver (new OracleDriver());
-    Connection conn = DriverManager.getConnection(driver, username, password);
-				
-    CallableStatement stmt = conn.prepareCall("{call dccps.products_order_pkg.save_feedback(?, ?, ?, ?)}");
-    stmt.setString(1, feedback);
-    stmt.setString(2, email);
-    stmt.setString(3, phone);
-    stmt.setString(4, "PLANET");
-    stmt.execute();
+        String driver = "jdbc:oracle:oci8:@sc1";
+        String username = "pma_web_user";
+        String password = "pjc242323";
+
+        // Load the Oracle JDBC driver
+        DriverManager.registerDriver (new OracleDriver());
+        Connection conn = DriverManager.getConnection(driver, username, password);
+
+        CallableStatement stmt = conn.prepareCall("{call dccps.products_order_pkg.save_feedback(?, ?, ?, ?)}");
+        stmt.setString(1, feedback);
+        stmt.setString(2, email);
+        stmt.setString(3, phone);
+        stmt.setString(4, "PLANET");
+        stmt.execute();
+    }
 %>
         </td>
         </tr>
@@ -88,12 +98,7 @@
 </table>
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
-    <td><hr size="1" noshade>
-	<div align="center"><a href="index.html">Home</a>&nbsp;&nbsp;&nbsp; <a href="about.html">About this
-        Site</a>&nbsp;&nbsp;&nbsp; <a href="contact.asp">Contact Us</a>&nbsp;&nbsp;&nbsp;
-        <a href="partners.html">Learn about PLANET Sponsors</a>&nbsp;&nbsp;&nbsp; <a href="privacy.html">Privacy
-        Policy</a>&nbsp;&nbsp;&nbsp; <a href="disclaimer.html">Disclaimer</a>&nbsp;&nbsp;&nbsp; <a href="accessibility.html">Accessibility</a><br>
-      </div></td>
+    <td><hr size="1" noshade><div align="center"><a href="index.html">Home</a>&nbsp;&nbsp;&nbsp; <a href="contact.html">Contact Us</a>&nbsp;&nbsp;&nbsp; <a href="about.html">About this Site</a>&nbsp;&nbsp;&nbsp; <a href="partners.html">PLANET Sponsors</a>&nbsp;&nbsp;&nbsp; <a href="privacy.html">Privacy  Policy</a>&nbsp;&nbsp;&nbsp; <a href="disclaimer.html">Disclaimer</a>&nbsp;&nbsp;&nbsp; <a href="accessibility.html">Accessibility</a><br></div></td>
   </tr>
 </table>
 </body>
