@@ -1,4 +1,4 @@
-/* $Id: tables.sql,v 1.7 2003-09-16 14:55:21 juranj Exp $ */
+/* $Id: tables.sql,v 1.8 2003-09-16 22:19:00 juranj Exp $ */
 
 CREATE TABLE cc_partner_topic_list (
     cctopic            VARCHAR(1),
@@ -8,7 +8,7 @@ CREATE TABLE cc_partner_topic_list (
 CREATE TABLE cc_partners (
     id                NUMBER(5,0),
     abbreviation      VARCHAR2(5)   NOT NULL,
-    name              VARCHAR2(50)  NOT NULL,
+    name              VARCHAR2(65)  NOT NULL,
     all_topic_flag    VARCHAR2(1),
     CONSTRAINT cc_partners_pk PRIMARY KEY (id),
     CONSTRAINT cc_partners_all_topic_chk CHECK (all_topic_flag = 'Y'));
@@ -28,10 +28,14 @@ CREATE TABLE cc_partner_states (
     type          VARCHAR2(1),
     CONSTRAINT cc_partner_states_pk PRIMARY KEY (abbreviation));
 
+CREATE TABLE cc_contact_types (
+    type_code       VARCHAR2(1),
+    description     VARCHAR2(50),
+    CONSTRAINT cc_contact_types_pk PRIMARY KEY (type_code));
+
 CREATE TABLE cc_partner_contacts (
     id              NUMBER(10,0),
-    partner_id,
-    region                          NOT NULL,
+    partner_id                      NOT NULL,
     partner         VARCHAR2(5),
     topic           VARCHAR2(1),
     type            VARCHAR2(1),
@@ -51,11 +55,12 @@ CREATE TABLE cc_partner_contacts (
     fax             VARCHAR2(50),
     cell            VARCHAR2(50),
     email           VARCHAR2(100),
+    orgurl2         VARCHAR2(200),
     CONSTRAINT cc_partner_contact_pk PRIMARY KEY (id),
     CONSTRAINT cc_partner_contact_partner_fk FOREIGN KEY (partner_id)
         REFERENCES cc_partners(id),
-    CONSTRAINT cc_partner_contacts_region_fk FOREIGN KEY (region)
-        REFERENCES cc_partner_states(abbreviation));
+    CONSTRAINT cc_partner_contacts_type_fk FOREIGN KEY (type)
+        REFERENCES cc_contact_types(type_code));
 
 CREATE TABLE cc_partner_contact_states (
     state_abbr,
