@@ -18,21 +18,22 @@ String stateName = "";
 String stateStatic = "";
 String topicDesc = "";
 String partnerText = "";
+String typeDesc = "";
 int topicNum = 0;
-
 
 if (param != null)
     region = param.toUpperCase();
 	
 param = request.getParameter("cctopic");
+
 if (param != null)
     topic = param.toUpperCase();
-    StringBuffer outString = null;
-    StringBuffer stateList = null;
-    Vector partners = null;
-    QueryBean QBean = new QueryBean();
-	
-	topicNum = QBean.getTopicID(topic);
+
+StringBuffer outString = null;
+StringBuffer stateList = null;
+Vector partners = null;
+QueryBean QBean = new QueryBean();
+topicNum = QBean.getTopicID(topic);
 	
     // Find the page title to use based on the topic
 	if (topic.compareTo("C") != 0)
@@ -60,17 +61,14 @@ if (param != null)
     if (partners!=null)
     {
     	Iterator it = partners.iterator();
-	
-    	
-        outString = new StringBuffer();
+	    outString = new StringBuffer();
         String partnerString = "";
         int partnerId = 0;
         
         int count = 1;
         String typeString = "";
         String typeOutput = "";
-		
-		
+				
         do
         {
 	        PartnerBean rs = (PartnerBean)it.next();
@@ -78,15 +76,17 @@ if (param != null)
             {
                 if (count > 1)
                     outString.append("</table></p>");
+
                 partnerId = rs.getPartnerId();
                 partnerString = rs.getPartnerAbbreviation();
                 typeString = rs.getType();
                 stateName = rs.getStateName();
+				typeDesc = rs.getTypeDescription();
                 outString.append("<table border='0' cellspacing='0' cellpadding='0' width='100%'>");
                 outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'><font style='font-family : Arial, Helvetica, Verdana, Geneva,  sans-serif;	font-size : 12px;	font-weight: bold; color : #AA0000;'>"+stateName+"</font><br><br>"+rs.getPartnerName()+endTD);
 
                 outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;font-style: normal;' align='left'>");
-                outString.append("<u>" + rs.getTypeDescription());
+                outString.append("<u>" + typeDesc);
                 
                 // For state and territory contacts we may need to tack on some additional information.
                 if (partnerString.equals("CDC") && !typeString.equals("W"))
@@ -97,7 +97,7 @@ if (param != null)
                         if (topic.equals("P"))
                             outString.append(" Health Department Contact");
                         else {
-							if (!rs.getTypeDescription().equals("Regional Contact")) {
+							if (!typeDesc.equals("Regional Contact")) {
                             	outString.append(" Contact");
 							}
 						}
