@@ -49,28 +49,30 @@ if (region.compareTo("all") != 0)
     
   
     pcScript = "US.setShapeValues("+region.trim()+",1)US.addPCXML(<DefaultShapeSettings><Drilldown URL='list.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultShapeSettings>)@_END";
-    whereString = " where region = '" + region + "' and region IS NOT NULL AND topic IN (NULL,'"+topic.toUpperCase()+"') AND states.state = '"+ region + "'";
+    whereString = " AND region = '" + region + "' and region IS NOT NULL AND cctopic IN (NULL,'"+topic.toUpperCase()+"') AND ps.abbreviation = '"+ region + "'";
 }
 else
 {
 //change the next line so the drilldown url points to your application server    
     pcScript = "US.addPCXML(<DefaultShapeSettings><Properties FillColor='#B20000'/><Drilldown URL='list.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultShapeSettings>)";
 
-	whereString = " where region <> '' AND topic IN ('','"+topic.toUpperCase()+"') AND states.state = partners.region";
+	whereString = " AND region IS NOT NULL AND cctopic IN (NULL,'"+topic.toUpperCase()+"')";
 }
 
     DriverManager.registerDriver(new OracleDriver());
-    Connection con = DriverManager.getConnection(URL,"user","password");
+    Connection con = DriverManager.getConnection(URL, username, password);
     Statement stmt = con.createStatement();
-    String theQuery = "SELECT region, partner, partners.type, contact, partners.name, " +
+    String theQuery = "SELECT region, p.abbreviation partner, pc.type, contact, pc.name contact_name, " +
                         "degree, title, org1, org2, orgurl, address1, address2, city, " +
-                        "partners.state, zip, phone, fax, cell, email, description.name, states.name " +
-                      "FROM partners, states, description" +
-                      whereString + 
-                        " AND partners.type <> 'N' " +
-                        " AND partners.partner = description.id " +
-                        " AND (ISNULL(description.cctopic) OR description.cctopic = '"+topic.toUpperCase()+"') " +
-                      "ORDER BY states.name, partner, partners.type, contact";
+                        "pc.state, zip, phone, fax, cell, email, p.name partner_name, ps.name state_name " +
+                      "FROM dccps.cc_partners p, dccps.cc_partner_contacts pc, dccps.cc_partner_states ps  " +
+                      "WHERE p.id = pc.partner_id " +
+                        "AND pc.region = ps.abbreviation " +
+                        "AND pc.type <> 'N' " +
+                        "AND (cctopic IS NULL OR cctopic = '" + topic.toUpperCase() + "') " +
+                        whereString +
+                      " ORDER BY ps.name, p.abbreviation, pc.type, contact";
+
     ResultSet rs = stmt.executeQuery(theQuery);
     String beginTD = "<tr><td style='font-family: Arial,Helvetica;font-size: 12;' align=\"left\">";
     String endTD = "</td></tr>";
@@ -85,16 +87,16 @@ else
 
         do
         {
-            if (stateName.compareTo(rs.getString("states.name").trim()) != 0)
+            if (stateName.compareTo(rs.getString("state_name").trim()) != 0)
             {
                 if (count > 1)
                     outString.append("</table></p>");
                 partnerString = rs.getString("partner");
                 typeString = rs.getString("type");
-                stateName = rs.getString("states.name");
+                stateName = rs.getString("state_name");
                 outString.append("<p><font style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: #000000;'>"+pageTitle+" - </font><font style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: #AA0000;'>"+stateName.trim()+"</font></p>");
                 outString.append("<p><table border='0' cellspacing='0' cellpadding='0' width='100%'>");
-                outString.append("<tr><td style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'>"+rs.getString("description.name")+endTD);
+                outString.append("<tr><td style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'>"+rs.getString("partner_name")+endTD);
 
                 outString.append("<tr><td style='font-family: Arial, Helvetica, sans-serif;font-size: 12;font-style: normal;' align='left'>");
                 if (rs.getString("type").equals("R"))
@@ -130,7 +132,7 @@ else
                 partnerString = rs.getString("partner");
                 typeString = rs.getString("type");
                 outString.append("<p><table border='0' cellspacing='0' cellpadding='0' width='100%'>");
-                outString.append("<tr><td style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'>"+rs.getString("description.name")+endTD);
+                outString.append("<tr><td style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'>"+rs.getString("partner_name")+endTD);
 		
                 outString.append("<tr><td style='font-family: Arial, Helvetica, sans-serif;font-size: 12;style: bold;' align='left'>");
                 if (rs.getString("type").equals("R"))
@@ -175,9 +177,9 @@ else
                 }
                 typeString = rs.getString("type");
             }
-            if (rs.getString("partners.name") != null && rs.getString("partners.name").compareTo("") != 0)
+            if (rs.getString("contact_name") != null && rs.getString("contact_name").compareTo("") != 0)
             {
-                outString.append(beginTD+rs.getString("partners.name").trim());
+                outString.append(beginTD+rs.getString("contact_name").trim());
 
                 if (rs.getString("degree") != null && rs.getString("degree").compareTo("") != 0)			
                     outString.append(", "+rs.getString("degree"));
@@ -226,7 +228,9 @@ else
         } while (rs.next());	
     } //end of if statement
      
-    theQuery = "SELECT * from states order by type, name;";
+    theQuery = "SELECT type, abbreviation, name " +
+               "FROM dccps.cc_partner_states " +
+               "ORDER BY type, name";
     rs = stmt.executeQuery(theQuery);
     if (rs.next())
     {
@@ -247,7 +251,7 @@ else
             }
             if (count > 0)
                 stateList.append("<br />");
-            stateList.append("<a href='list.jsp?r="+rs.getString("state")+"&cctopic="+topic.toUpperCase()+"' class='a1' title='"+rs.getString("name").trim()+"'>"+rs.getString("state")+"</a>");
+            stateList.append("<a href='list.jsp?r="+rs.getString("abbreviation")+"&cctopic="+topic.toUpperCase()+"' class='a1' title='"+rs.getString("name").trim()+"'>"+rs.getString("abbreviation")+"</a>");
             count++;
         } while (rs.next());
         stateList.append("<br /><br /><a href='list.jsp?r=all&cctopic="+topic.toUpperCase()+"' title=\"All states and regions\">All</a>");
