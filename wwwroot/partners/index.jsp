@@ -33,13 +33,14 @@ else
 }
 
     String theQuery = "";
-    String URL = "jdbc:oracle:oci8:@mooch920";
+    String URL = "jdbc:oracle:thin:@mooch.nci.nih.gov:1521:mooch920";
     String username = "pma_web_user";
     String password = "pjc242323";
     String typeString = "S";
      
     ResultSet rs=null;
  
+    DriverManager.registerDriver(new OracleDriver());
     Connection con = DriverManager.getConnection(URL, username, password);
     
     Statement stmt = con.createStatement();
