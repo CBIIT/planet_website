@@ -27,7 +27,7 @@ if (param != null)
     ResultSet rs = null;
     QueryBean QBean = new QueryBean();
 	
-	topicNum = QBean.GetTopicID(topic);
+	//topicNum = QBean.GetTopicID(topic);
 	
     // Find the page title to use based on the topic
     String pageTitle = QBean.getTopicDescription(topic) + " Partners";
