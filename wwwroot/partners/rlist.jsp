@@ -271,7 +271,6 @@ else
         stateList.append("</td></tr><tr><td colspan=2><a href='rlist.jsp?r=ALL&cctopic=" + topic + "' title=\"All states and regions\">View All U.S. Researchers by topic area</a>");
     }
 
-
 		pageTitle = pageTitle + " - " + stateStatic;
 		
 
@@ -312,7 +311,25 @@ else
 			<td width="50">&nbsp;</td>
 			<td valign="top"><table bgcolor='white' border='0' cellpadding="5" cellspacing="0"><tr><td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: color : #000000;"><%= outString.toString()%></td></tr></table></td>
 			<td width="50">&nbsp;</td>
-			<td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;"><a href="list.jsp?r=<%= region%>&cctopic=C">View Program Partners in <%= stateStatic%></a></td>
+			<td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;"><a href="list.jsp?r=<%= region%>&cctopic=C">View Program Partners in <%= stateStatic%></a>
+			<p>View Researchers By Specific Topic Area:<br />
+			<a href="rlist.jsp?r=ALL&cctopic=1">Tobacco Control</a><br />
+  <a href="rlist.jsp?r=ALL&cctopic=2">Physical Activity</a><br />
+  <a href="rlist.jsp?r=ALL&cctopic=3">Sun Safety</a><br />
+  <a href="rlist.jsp?r=ALL&cctopic=4">Breast Cancer Screening</a><br />
+  <a href="rlist.jsp?r=ALL&cctopic=5">Cervical Cancer Screening</a><br />
+  <a href="rlist.jsp?r=ALL&cctopic=6">Colorectal Cancer Screening</a><br />
+  <a href="rlist.jsp?r=ALL&cctopic=7">Informed Decision Making for Prostate Cancer Screening</a><br />
+  <a href="rlist.jsp?r=ALL&cctopic=8">Nutrition/ 5 A Day</a><br />
+  <a href="rlist.jsp?r=ALL&cctopic=9">Diet</a><br />
+ <a href="rlist.jsp?r=ALL&cctopic=10">Informed Decision Making for Breast Cancer Screening</a><br />
+ <a href="rlist.jsp?r=ALL&cctopic=11">Informed Decision Making for Colorectal Cancer Screening</a><br />
+ <a href="rlist.jsp?r=ALL&cctopic=12">Survivorship</a><br />
+ <a href="rlist.jsp?r=ALL&cctopic=13">Health Communications & Informatics</a>
+
+			
+			</p>
+			</td>
 		</tr>
 		</table>
 	</td>
