@@ -98,11 +98,13 @@
 <table summary="Links to potential partner list" bgcolor="white" border="0" cellpadding="5" cellspacing="0">
 <tr>
 	<td align="left" colspan="3">
-	<p><strong><%--= pageTitle--%>Locate Program Partners in Your State or Region.</strong></p>
+	<h3>Program Partners in Cancer Control</h3>
+	
+        <%--= pageTitle--%>
 	
 	<p><strong>To view, click on map or state name below.</strong></p>
 	
-	<p><strong><a href="researcher.jsp?cctopic=0">View Research Partners</a></strong></p>
+	    <p>To locate research partners in your state or region go to the  <a href="researcher.jsp?cctopic=0">research partners</a> page.</p>
 	
 	<br />
 	</td>

@@ -78,7 +78,7 @@
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
     <td><p class="banner"><a href="../index.html"><img src="../images/planet_logo.gif" alt="Cancer Control PLANET - Plan, Link, Act, Network with Evidence-based Tools" width="169" height="87" border="0"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p></td>
-    <td><a href="../index.html"><img src="../images/planet_banner2.gif" alt="Cancer Control PLANET - Links to resources for cancer control planning" width="369" height="82" border="0"></a></td>
+    <td><a href="../index.html"><img src="../images/planet_banner_wider.gif" alt="Cancer Control PLANET - Links to comprehensive cancer control resources for public health professionals" width="500" height="82" border="0"></a></td>
     <td><p><a href="../index.html">Home</a><br>
         <a href="../contact.html">Contact Us</a><br>
 	<a href="about.html">About This Site</a><br>
@@ -96,19 +96,17 @@
 <table summary="Links to potential partner list" bgcolor="white" border="0" cellpadding="5" cellspacing="0">
 <tr>
 <td align="left" colspan="3">
+<h3>Research Partners in Cancer Control</h3>
 
+      <div style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;">
+        <p>To view, click on map or state name below.
+</p></div>
 
-<div style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 16px;	font-weight: bold; color : #000000;">
-Locate Research Partners in Your State or Region.
-</div>
+        
+      <p>To locate program partners in your state or region go to the <a href="">Program Partners</a> page.
+</p>
+      </div>
 
-<div style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;">
-To view, click on map or state name below.
-</div>
-
-<div align="right" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;">
-<a href="">View Program Partners</a>
-</div>
 <br />
 </td>
 </tr>
