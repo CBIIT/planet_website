@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html" %>
 <%@ page import="java.sql.ResultSet" %>
-<%@ page import="com.corda.CordaEmbedder" %>
+<%@ page import="gov.nci.corda.NCIPopChartEmbedder" %>
 <%@ page import="gov.nci.planet.QueryBean" %>
 <%
 String param;
@@ -231,12 +231,8 @@ else
 
     QBean.close();
      
-    CordaEmbedder myChart = new CordaEmbedder();
+    NCIPopChartEmbedder myChart = new NCIPopChartEmbedder();
     myChart.appearanceFile = "apfiles/planet/ccpmap_small.pcxml";
-
-    myChart.externalServerAddress = "http://procyon.cit.nih.gov:2001";
-    myChart.internalCommPortAddress = "http://procyon.cit.nih.gov:2002";
-
     myChart.pcScript = pcScript;
     myChart.height = 360;
     myChart.width = 505;
