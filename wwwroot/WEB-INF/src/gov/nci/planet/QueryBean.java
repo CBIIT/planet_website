@@ -99,7 +99,7 @@ public class QueryBean
 	    	return ((OracleCallableStatement)stmt).getCursor(1);
 	  }
 
-    public Integer getTopicResearcherCount(Integer topic) throws SQLException
+    public int getTopicResearcherCount(Integer topic) throws SQLException
     {
 	    	CallableStatement stmt = conn.prepareCall("{? = call dccps.planet_pkg.GetTopicResearcherCount(?)}");
 	    	stmt.registerOutParameter(1, Types.INTEGER);
@@ -108,7 +108,7 @@ public class QueryBean
 	    	return stmt.getInt(1);
 	  }
 
-    public Integer getTopicResearcherCount(Integer topic, String stateAbbreviation) throws SQLException
+    public int getTopicResearcherCount(Integer topic, String stateAbbreviation) throws SQLException
     {
 	    	CallableStatement stmt = conn.prepareCall("{? = call dccps.planet_pkg.GetTopicResearcherCount(?,?)}");
 	    	stmt.registerOutParameter(1, Types.INTEGER);
