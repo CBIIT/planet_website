@@ -13,7 +13,7 @@ String pageTitle = "Locate Comprehensive Cancer Control Partners in Your State o
 param = request.getParameter("cctopic");
 if (param != null)
    topic = param;
-   
+
 if (topic.equalsIgnoreCase("T"))
 {
    pageTitle = "Locate Potential Tobacco Control Partners in Your State or Region.";
@@ -57,10 +57,10 @@ else
     }
 
     QBean.close();
-     
+
     NCIPopChartEmbedder myChart = new NCIPopChartEmbedder();
     myChart.appearanceFile = "apfiles/planet/ccpmap.pcxml";
-    myChart.pcScript = "US.addPCXML(<DefaultShapeSettings><Drilldown URL='http://156.40.32.188:8080/partners/list.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultShapeSettings>)";
+    myChart.pcScript = "US.addPCXML(<DefaultShapeSettings><Drilldown URL='list.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultShapeSettings>)";
     myChart.height = 449;
     myChart.width = 629;
     myChart.imageType = "FLASH";
@@ -78,7 +78,7 @@ else
 </head>
 <body topmargin="0" leftmargin="0" bgcolor="White">
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
-  <tr> 
+  <tr>
     <td><p class="banner"><a href="../index.html"><img src="../images/planet_logo.gif" alt="Cancer Control PLANET - Plan, Link, Act, Network with Evidence-based Tools" width="169" height="87" border="0"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p></td>
     <td><a href="../index.html"><img src="../images/planet_banner2.gif" alt="Cancer Control PLANET - Links to resources for cancer control planning" width="369" height="82" border="0"></a></td>
     <td><p><a href="../index.html">Home</a><br>
@@ -86,9 +86,9 @@ else
         <a href="../about.html">About this Site</a><br>
         <a href="../partners.html">PLANET Sponsors</a></p></td>
   </tr>
-  <tr> 
+  <tr>
     <td colspan="3">
-      <hr size="1" noshade> 
+      <hr size="1" noshade>
 	</td>
   </tr>
 </table>
@@ -115,12 +115,12 @@ To view, click on map or state name below.
 </tr>
 </table>
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
-  <tr> 
+  <tr>
     <td><hr size="1" noshade>
 	<div align="center">
           <a href="../index.html">Home</a>&nbsp;&nbsp;&nbsp;
-          <a href="../contact.html">Contact Us</a>&nbsp;&nbsp;&nbsp; 
-          <a href="../about.html">About this Site</a>&nbsp;&nbsp;&nbsp; 
+          <a href="../contact.html">Contact Us</a>&nbsp;&nbsp;&nbsp;
+          <a href="../about.html">About this Site</a>&nbsp;&nbsp;&nbsp;
           <a href="../partners.html">PLANET Sponsors</a>&nbsp;&nbsp;&nbsp;
           <a href="../privacy.html">Privacy Policy</a>&nbsp;&nbsp;&nbsp;
           <a href="../disclaimer.html">Disclaimer</a>&nbsp;&nbsp;&nbsp;
