@@ -61,7 +61,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>ctRedirector</servlet-name>
-        <url-pattern>/servlet/ctRedirector</url-pattern>
+        <url-pattern>/servlet/ctRedirector/</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>ctcm</servlet-name>
