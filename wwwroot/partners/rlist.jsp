@@ -23,6 +23,7 @@ String listTitle = "";
 Integer topicInt = new Integer(-1);
 String researcherText="";
 String staticTopic = "";
+String topicLet = "C";
 
 if (param != null) 
     region = param.toUpperCase();
@@ -39,6 +40,8 @@ if (param != null)
     StringBuffer stateList = null;
     ResultSet rs = null;
     QueryBean QBean = new QueryBean();
+	
+	topicLet = QBean.getTopicID(ccTopic);
 	
     // Find the page title to use based on the topic 
     String pageTitle = "Cancer Control Researchers";
@@ -315,7 +318,7 @@ else {
 <table bgcolor="white" border="0" cellpadding="0" cellspacing="0" width="100%">
 <tr>
 	<td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif; font-size : 20px;	font-weight: bold; color : #000000;" colspan="2" nowrap><%= researcherText%></td>
-	<td valign="top" align="right"><strong><a href="list.jsp?r=<%= region%>&cctopic=C">View Program Partners in <%= stateStatic%></a></strong></td>
+	<td valign="top" align="right"><strong><a href="list.jsp?r=<%= region%>&cctopic=<%= topicLet%>">View Program Partners in <%= stateStatic%></a></strong></td>
 </tr>
 <tr>
 <td colspan="3">&nbsp;</td>
