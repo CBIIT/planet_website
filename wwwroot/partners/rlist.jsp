@@ -276,10 +276,10 @@ else {
 	
 		if (stateStatic.compareTo("the US") == 0) {
 			stateStatic = "All States";
-			researcherText="Research Partners for "+staticTopic;	
+			researcherText="Research Partners for <font style='font-family : Arial, Verdana, Geneva, Helvetica, sans-serif; font-weight : bold; 	font-size : 18px; color : AA0000;'>"+staticTopic+"</font>";	
 		}
 		else
-			researcherText="Research Partners in "+stateStatic;
+			researcherText="Research Partners in <font style='font-family : Arial, Verdana, Geneva, Helvetica, sans-serif; font-weight : bold; 	font-size : 18px; color : AA0000;'>"+stateStatic+"</font>";
 					
     QBean.close();
 %>
@@ -317,7 +317,7 @@ else {
 <tr>
 <td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: color : #000000;" nowrap><%= stateList.toString()%></td>
 
-	<td valign="top" colspan="2"><font style='font-family : Arial, Verdana, Geneva, Helvetica, sans-serif; font-weight : bold; 	font-size : 18px; color : AA0000;'><%= stateStatic%><br><br></font><table><%= topicString.toString()%></table><br><br><%= outString.toString()%></td>
+	<td valign="top" colspan="2"><table><%= topicString.toString()%></table><br><br><%= outString.toString()%></td>
 
 </tr>
 </table>
