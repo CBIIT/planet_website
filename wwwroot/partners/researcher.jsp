@@ -82,7 +82,7 @@
     <td><p><a href="../index.html">Home</a><br>
         <a href="../contact.html">Contact Us</a><br>
 	<a href="about.html">About This Site</a><br>
-        <a href="factsheet.pdf">Fact Sheet (PDF)</a><br>
+        <a href="../factsheet.pdf">Fact Sheet (PDF)</a><br>
 
         <a href="../partners.html">PLANET Sponsors</a></p></td>
   </tr>
