@@ -160,7 +160,8 @@ topicNum = QBean.getTopicID(topic);
                 outString.append("<tr><td height='20'>&nbsp;</td></tr>");
                 outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;font-style: normal;' align='left'>");
                 outString.append("<u>" + rs.getTypeDescription());
-
+				outString.append(partnerString + " - " + typeString + " - " + topic + " - " + typeDesc + " - ");
+				
                 if (partnerString.equals("CDC") && !typeString.equals("W"))
                 {
                     if (topic.compareTo("C") != 0)
