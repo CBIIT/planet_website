@@ -310,7 +310,7 @@ else {
 <tr>
 
 	<td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-				    
-			size : 20px;	font-weight: bold; color : #000000;" colspan="2"><%= researcherText%></td>
+			size : 22px;	font-weight: bold; color : #000000;" colspan="2"><%= researcherText%></td>
 	<td valign="top" align="right"><strong><a href="list.jsp?r=<%= region%>&cctopic=C">View Program Partners in <%= stateStatic%></a></strong></td>
 </tr>
 <tr>
