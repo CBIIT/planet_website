@@ -111,11 +111,10 @@
 </td>
 </tr>
 <tr>
-<td valign='top'><%= stateList.toString()%><br />
+<td valign='top' bgcolor="#E9E9FE"><%= stateList.toString()%><br />
 
 <td valign='top'>
 <%= htmlString%><br>
-<a href="javascript:window.close()">Close Window</a>
 </td>
 </tr>
 <tr>
