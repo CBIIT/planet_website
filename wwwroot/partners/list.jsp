@@ -16,6 +16,7 @@ String topicDesc = "";
 String partnerText = "";
 int topicNum = 0;
 
+
 if (param != null)
     region = param.toUpperCase();
 	
@@ -30,7 +31,10 @@ if (param != null)
 	//topicNum = QBean.GetTopicID(topic);
 	
     // Find the page title to use based on the topic
-    String pageTitle = QBean.getTopicDescription(topic) + " Partners";
+	if (topic.compareTo("C") != 0)
+		topicDesc = QBean.getTopicDescription(topic);
+
+    String pageTitle = topicDesc + " Partners";
     caption = "Cancer Control PLANET - " + pageTitle;
 
     if (region.equals("ALL"))
@@ -259,10 +263,16 @@ if (param != null)
 		
 		if (stateStatic.compareTo("the US") == 0) {
 			stateStatic = "All States";
-			partnerText="Program Partners";	
+				if (topicDesc.compareTo("") != 0)
+					partnerText=topicDesc+" and Other Program Partners - All States";	
+				else
+					partnerText="Program Partners - All States";
 		}
 		else
-			partnerText="Program Partners in "+stateStatic;
+				if (topicDesc.compareTo("") != 0)
+					partnerText=topicDesc+" and Other Program Partners - "+stateStatic;
+				else
+					partnerText="Program Partners - "+stateStatic;
 			
     QBean.close();
 
