@@ -264,7 +264,7 @@ if (param != null)
 		if (stateStatic.compareTo("the US") == 0) {
 			stateStatic = "All States";
 				if (topicDesc.compareTo("") != 0)
-					partnerText=topicDesc+" and Other Program Partners - All States";	
+					partnerText=topicDesc+" and Other Program Partners - <font style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 20px;	font-weight: bold; color : #AA0000;'>All States</font>";	
 				else
 					partnerText="Program Partners - <font style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 20px;	font-weight: bold; color : #AA0000;'>All States</font>";
 		}
@@ -275,7 +275,6 @@ if (param != null)
 					partnerText="Program Partners - <font style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 20px;	font-weight: bold; color : #AA0000;'>"+stateStatic+"</font>";
 			
     QBean.close();
-
 
     NCIPopChartEmbedder myChart = new NCIPopChartEmbedder();
     myChart.appearanceFile = "apfiles/planet/ccpmap_small.pcxml";
