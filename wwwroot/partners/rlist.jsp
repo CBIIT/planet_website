@@ -267,7 +267,7 @@ else
                 stateList.append("<br />");
 			
 			if (region.compareTo(rs.getString("abbreviation")) == 0)
-				stateList.append("<font color='red'>"+rs.getString("name").trim()+"</font>");
+				stateList.append("<font color='red' size='-1'>"+rs.getString("name").trim()+"</font>");
 			else
 	            stateList.append("<a href='rlist.jsp?r="+rs.getString("abbreviation")+"&cctopic="+topic+"' class='a1' title='"+rs.getString("name").trim()+"'>"+rs.getString("name")+"</a>");
 				
