@@ -91,7 +91,7 @@ if (param != null)
 					topicDesc = QBean.getTopicDescription(topicInt);
 					
 //					if (topicCount > 1) {
-					topicString.append("<a href='#"+topicID+"'>"+topicDesc+"</a><br>");						
+					topicString.append("<a href='#"+topicID+"'>"+topicDesc+"</a><br><br>");						
 						
 		//				if (topicCount2 == (topicCount/2)) {
 			//				topicString.append("</td><td valign='top' style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold;'>");
@@ -346,9 +346,9 @@ else {
 </tr>
 <tr>
 	<td valign="top">
-		<table bgcolor='white' border='1' cellpadding="5" cellspacing="0">
+		<table bgcolor='white' border='0' cellpadding="5" cellspacing="0">
 		<tr>
-			<td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold;"><a name="top"></a><%= topicString.toString()%></td><td valign='top' style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold;'>&nbsp;</td>
+			<td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 12px;	font-weight: bold;"><a name="top"></a><%= topicString.toString()%></td><td valign='top' style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 12px;	font-weight: bold;'>&nbsp;</td>
 		</tr>
 		</table>
 	</td>
