@@ -1,21 +1,4 @@
-# MySQL dump 6.0
-#
-# Host: localhost    Database: ccp
-#--------------------------------------------------------
-# Server version	3.22.25-log
-
-#
-# Table structure for table 'description'
-#
-CREATE TABLE description (
-  id char(5),
-  cctopic char(1),
-  name char(50)
-);
-
-#
-# Dumping data for table 'description'
-#
+/* $Id: load.sql,v 1.1 2003-05-19 20:00:13 juranj Exp $ */
 
 INSERT INTO description VALUES ('ACS',NULL,'American Cancer Society');
 INSERT INTO description VALUES ('CDC','C','CDC Comprehensive Cancer Control Network');
@@ -23,35 +6,6 @@ INSERT INTO description VALUES ('CIS',NULL,'NCI Cancer Information Service');
 INSERT INTO description VALUES ('CDC','T','CDC Tobacco Control Network');
 INSERT INTO description VALUES ('CDC','P','CDC Physical Activity Network');
 
-#
-# Table structure for table 'partners'
-#
-CREATE TABLE partners (
-  region char(2),
-  partner char(5),
-  topic char(1),
-  type char(1),
-  contact char(1),
-  name char(100),
-  degree char(20),
-  title char(100),
-  org1 char(100),
-  org2 char(100),
-  orgurl char(200),
-  address1 char(100),
-  address2 char(100),
-  city char(50),
-  state char(3),
-  zip char(15),
-  phone char(50),
-  fax char(50),
-  cell char(50),
-  email char(100)
-);
-
-#
-# Dumping data for table 'partners'
-#
 
 INSERT INTO partners VALUES ('AK','ACS','','R','','Patti Migliore','MPA','Regional Manager, Cancer Control Planning','','','','PO Box 19140','2120 First Avenue North','Seattle','WA','98109','(206) 283-1152','(206) 285-3469','','patricia.migliore@cancer.org');
 INSERT INTO partners VALUES ('AK','CDC','C','S','','Jayne Andreen','','Community Health & EMS','Alaska Dept. of Health & Social Services','','http://health.hss.state.ak.us/dph/','P.O. Box 110616','','Juneau','AK','99811-0616','(907) 465-5729','','','jayne_andreen@health.state.ak.us');
@@ -330,19 +284,6 @@ INSERT INTO partners VALUES ('WY','CDC','T','S','','Janet Jares','','Tobacco Pre
 INSERT INTO partners VALUES ('WY','CDC','P','S','','Star Heintz','MS, RD','Cardiovascular Disease Program Coordinator','Preventive Health and Safety Division','Wyoming Department of Health','http://wdh.state.wy.us/cvd/','6101 Yellowstone Road, Suite 259A','','Cheyenne','WY','82002','(307) 777-3732','(307) 777-8604','','sheint@state.wy.us');
 INSERT INTO partners VALUES ('WY','CIS','','R','','Barbara Baldwin','','Partnership Program Manager','Centura Health','Penrose-St. Francis Health Services','','PO Box 7021','','Colorado Springs','CO','80933','(719) 776-3150','(719) 776-3132','','barbarabaldwin@centura.org');
 
-#
-# Table structure for table 'states'
-#
-CREATE TABLE states (
-  state char(2) DEFAULT '' NOT NULL,
-  name varchar(32) DEFAULT '' NOT NULL,
-  type char(1),
-  PRIMARY KEY (state)
-);
-
-#
-# Dumping data for table 'states'
-#
 
 INSERT INTO states VALUES ('AL','Alabama','S');
 INSERT INTO states VALUES ('AK','Alaska','S');
@@ -399,4 +340,3 @@ INSERT INTO states VALUES ('AS','American Samoa','T');
 INSERT INTO states VALUES ('GU','Guam','T');
 INSERT INTO states VALUES ('PR','Puerto Rico','T');
 INSERT INTO states VALUES ('VI','Virgin Islands','T');
-
