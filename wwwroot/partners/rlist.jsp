@@ -5,13 +5,11 @@
 <%
 String region = "ALL";
 String pcScript = "";
-//String topic = "C";
 
 int ccTopic = 0;
 Integer topic = new Integer(0);
 int topicID = -1;
 int topicCount = 0;
-int topicCount2 = 0;
 
 String htmlString = null;
 String caption = null;
@@ -36,7 +34,6 @@ if (param != null)
 	StringBuffer topicString = null;
     StringBuffer stateList = null;
     ResultSet rs = null;
-	ResultSet rs2 = null;
     QueryBean QBean = new QueryBean();
 	
     // Find the page title to use based on the topic 
@@ -60,7 +57,7 @@ if (param != null)
 
 
 		outString = new StringBuffer("<table bgcolor='white' border='0' cellpadding='5' cellspacing='0'><tr><td valign='top' style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: color : #000000;' width='50%' valign='top'>");
-		topicString = new StringBuffer("No Records Found.");
+		topicString = new StringBuffer("<a name='top'></a>");
 	
     if (rs.next())
     {
@@ -70,135 +67,52 @@ if (param != null)
 		
         String typeString = "";
         String typeOutput = "";
-		topicString = new StringBuffer();
 		int researcherCount = 0;
-		
-//		rs2 = QBean.getTopicsResearcherCount(topicInt, region);
-				
-	//		do
-		//	{
-	      //  	topicCount ++;
-	    	//} while (rs2.next());
 			
         do
         {
 		
            if (topicID != rs.getInt("topic_id"))
  		       {
-			   		topicCount2 ++;
+			   		topicCount++;
 			   		topicID = rs.getInt("topic_id");
 					topicInt = new Integer(topicID);
 					topicDesc = QBean.getTopicDescription(topicInt);
+					topicString.append("<td valign='top'><a href='#"+topicID+"'>"+topicDesc+"</a></td>");						
 					
-//					if (topicCount > 1) {
-					topicString.append("<a href='#"+topicID+"'>"+topicDesc+"</a><br><br>");						
+					if ((topicCount % 2) == 0)
+						topicString.append("</tr><tr>");
 						
-		//				if (topicCount2 == (topicCount/2)) {
-			//				topicString.append("</td><td valign='top' style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold;'>");
-				//		}
-					//}
-//					else
-				//		topicString.append("</td><td valign='top' style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold;'>&nbsp;");
-						
-										
-                if (count > 1)
-                   	outString.append("</table></p>");
+	                if (count > 1)
+    	               	outString.append("</table></p>");
 				
-                researcherId = rs.getInt("researcher_id");
-                researcherString = rs.getString("state_abbreviation");
-                //typeString = rs.getString("type");
-                stateName = rs.getString("state_name");
-				
-				if (count > 1)
-					outString.append("<p></font><a href='#top'>[Top of Page]</a></p>");
+        	        researcherId = rs.getInt("researcher_id");
+            	    researcherString = rs.getString("state_abbreviation");
+                	stateName = rs.getString("state_name");
 					
-                outString.append("<p><font style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: #000000;'><font style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: #AA0000;'><a name='"+topicID+"'></a>"+topicDesc+"</font></p>");
-                outString.append("<p><table border='0' cellspacing='0' cellpadding='0'>");
-				outString.append("<tr><td style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left' valign='top'>"+rs.getString("researcher_name")+"  "+rs.getString("degree")+endTD);
-			
-                //outString.append("<tr><td style='font-family: Arial, Helvetica, sans-serif;font-size: 12;font-style: normal;' align='left'>");
-                //outString.append("<u>" + rs.getString("type_description"));
-                
-                // For state and territory contacts we may need to tack on some additional information.
-                //if (partnerString.equals("CDC") && !typeString.equals("W"))
-                //{
-                    //if (topic.equals("T"))
-                     //   outString.append(" Health Department Web Site");
-                   // else
-                  //      if (topic.equals("P"))
-                    //        outString.append(" Health Department Contact");
-                     //   else
-                     //       outString.append(" Contact");
-              //  }
-
-                // Close the underlining and the table cell.
-              //  outString.append("</u>"+endTD);
-           }
+					if (count > 1)
+						outString.append("<p></font><a href='#top'>[Top of Page]</a></p>");
+					
+                	outString.append("<p><font style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: #000000;'><font style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: #AA0000;'><a name='"+topicID+"'></a>"+topicDesc+"</font></p>");
+	                outString.append("<p><table border='0' cellspacing='0' cellpadding='0'>");
+					outString.append("<tr><td style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left' valign='top'>"+rs.getString("researcher_name")+"  "+rs.getString("degree")+endTD);
+           		}
 		   
 
             if (researcherId != rs.getInt("researcher_id"))
             {
-			topicID = rs.getInt("topic_id");
-		
-					topicDesc = QBean.getTopicDescription(topic);
-                if (count > 1)
+				topicID = rs.getInt("topic_id");
+				topicDesc = QBean.getTopicDescription(topic);
+        
+		        if (count > 1)
                    outString.append("</table></p>");
+				   
                 researcherId = rs.getInt("researcher_id");
                 researcherString = rs.getString("state_abbreviation");
-                //typeString = rs.getString("type");
                 outString.append("<p><table border='0' cellspacing='0' cellpadding='0'>");
                 outString.append("<tr><td style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left' valign='top'>"+rs.getString("researcher_name")+"  "+rs.getString("degree")+endTD);
-
-
-               //outString.append("<tr><td style='font-family: Arial, Helvetica, sans-serif;font-size: 12;style: bold;' align='left'>");
-               //outString.append("<u>" + rs.getString("type_description"));
-                
-                // For state and territory contacts we may need to tack on some additional information.
-                //if (partnerString.equals("CDC") && !typeString.equals("W"))
-                //{
-                    //if (topic.equals("T"))
-                    //    outString.append(" Health Department Web Site");
-                  //  else
-                   //     if (topic.equals("P"))
-                  //          outString.append(" Health Department Contact");
-                 //       else
-                      //      outString.append(" Contact");
-              //  }
-
-                // Close the underlining and the table cell.
-             //   outString.append("</u>" + endTD);
-            // this is the one that stays}
-
-          //  if (typeString.compareTo(rs.getString("type").trim()) != 0)
-          //  {
-             //   outString.append("<tr><td height='20'>&nbsp;</td></tr>");
-             //   outString.append("<tr><td style='font-family: Arial,Helvetica;font-size: 12;font-style: normal;' align='left'>");
-              //  outString.append("<u>" + rs.getString("type_description"));
-             //   if (partnerString.equals("CDC") && !typeString.equals("W"))
-               // {
-                 //   if (topic.compareTo("C") != 0)
-                  //     outString.append(" Health Department Contact");
-                 //   else
-                  //     outString.append(" Contact");
-               // }
-
-                // Close the underlining and the table cell.
-               // outString.append("</u>" + endTD);
-                //typeString = rs.getString("type");
-          //  }
-
-         //   if (rs.getString("contact_name") != null && rs.getString("contact_name").compareTo("") != 0)
-           // {
-               // outString.append(beginTD+rs.getString("contact_name").trim());
-//cutting this out now
-//			  if (rs.getString("researcher_name") != null && rs.getString("researcher_name").compareTo("") != 0)
-  //          {
-    //            outString.append(beginTD+rs.getString("researcher_name").trim());
-
-      //          if (rs.getString("degree") != null && rs.getString("degree").compareTo("") != 0)
-        //            outString.append(", "+rs.getString("degree"));
-          //      outString.append(endTD);
             }
+			
             if (rs.getString("title") != null && rs.getString("title").compareTo("") != 0)
                 outString.append(beginTD+rs.getString("title").trim()+endTD);
             if (rs.getString("org1") != null && rs.getString("org1").compareTo("") != 0)
@@ -231,7 +145,6 @@ if (param != null)
                     urlStr = rs.getString("orgurl").trim();
 
                 // Don't display Web site: field header for tobacco, breast cancer, and cervical cancer contacts.
-				//topicInt = topic.intValue();
 				
                 if (researcherString.equals("CDC") && (topic.equals("1") || topic.equals("4") || topic.equals("5")))
                 {
@@ -250,7 +163,6 @@ if (param != null)
                     urlStr = rs.getString("orgurl2").trim();
 
                 // Don't display Web site: field header for tobacco, breast cancer, and cervical cancer contacts.
-				//topicInt = topic.intValue();
 				
                if (researcherString.equals("CDC") && (topic.equals("1") || topic.equals("4") || topic.equals("5")))
                 {
@@ -259,12 +171,13 @@ if (param != null)
                 else
                     outString.append(beginTD+"Web site:  <a href=\""+urlStr+"\" target=\"_blank\" class='a1'>"+urlStr+"</a>"+endTD);
             }
-            //outString.append("<tr><td height='10'>&nbsp;</td></tr>");
 
-     count ++;       
-
+	     count ++;       
      } while (rs.next());
 	 
+	 if ((topicCount % 2) == 1)
+	 	topicCount.append("<td>nbsp;</td>");
+		
 	 outString.append("</table><p></font><a href='#top'>[Top of Page]</a></p></td></tr></table>");
 }
 else {
@@ -348,7 +261,7 @@ else {
 	<td valign="top">
 		<table bgcolor='white' border='0' cellpadding="5" cellspacing="0">
 		<tr>
-			<td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 12;	font-weight: bold;"><a name="top"></a><%= topicString.toString()%></td><td valign='top' style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 12;	font-weight: bold;'>&nbsp;</td>
+			<%= topicString.toString()%>
 		</tr>
 		</table>
 	</td>
