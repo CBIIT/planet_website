@@ -74,9 +74,9 @@ StringBuffer pcScript = null;
 	 {
 	 	QBean.close();
 	 }
-	 catch(Exception exc)
+	 catch(Exception e1)
 	 {
-	 	System.out.print(exc);
+	 	System.out.print(e1);
 	 }
      NCIPopChartEmbedder myChart = new NCIPopChartEmbedder();
      myChart.appearanceFile = "apfiles/planet/ccpmap.pcxml";
