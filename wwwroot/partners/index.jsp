@@ -1,8 +1,7 @@
 <%@ page language="java" contentType="text/html" %>
-<%@ page import="java.text.*" %>
-<%@ page import="java.io.*" %>
-<%@ page import="java.sql.*" %>
-<%@ page import="com.corda.CordaEmbedder" %>
+<%@ page import="java.sql.ResultSet" %>
+<%@ page import="gov.nci.corda.NCIPopChartEmbedder" %>
+<%@ page import="gov.nci.planet.QueryBean" %>
 <%
 StringBuffer stateList = null;
 String topic = "C";
@@ -14,7 +13,7 @@ String pageTitle = "Locate Comprehensive Cancer Control Partners in Your State o
 param = request.getParameter("cctopic");
 if (param != null)
    topic = param;
-   
+
 if (topic.equalsIgnoreCase("T"))
 {
    pageTitle = "Locate Potential Tobacco Control Partners in Your State or Region.";
@@ -31,69 +30,44 @@ else
    caption = "Cancer Control PLANET - Cancer Control Partners";
 }
 
-try
-{
-	 String theQuery = "";
-    
-    //change this line to point to your jdbc url for the Oracle database
-	String URL = "jdbc:mysql://databaseurl/db";
+    String typeString = "S";
+    QueryBean QBean = new QueryBean();
 
-     String typeString = "S";
-     
-     ResultSet rs=null;
-     Connection con;
-	 //change the following line to reference the oracle jdbc driver
-     Class.forName("org.gjt.mm.mysql.Driver");
-     
-	//change the following line to include your user name and password for the oracle database
- 	 con = DriverManager.getConnection(URL,"user","password");
-    
-     Statement stmt = con.createStatement();
-     theQuery = "SELECT * from states order by type, name;";
-     rs = stmt.executeQuery(theQuery);
-     if (rs.next())
-     {
-      stateList = new StringBuffer();
-      int count= 0;
-      do
-      {
-       if (count > 27)
-       {
-        stateList.append("</td><td valign='bottom'>");
-        count = 0;
-       }
-       if (typeString.compareTo(rs.getString("type")) != 0)
-       {
-          stateList.append("<br />");
-          typeString = rs.getString("type");
-       }
-       stateList.append("<br /><a href='list.jsp?r="+rs.getString("state")+"&cctopic="+topic.toUpperCase()+"' class='a1'>"+rs.getString("name")+"</a>");
-       count++;
-      }while (rs.next());
-      stateList.append("</td>");
-     }
-     
-     CordaEmbedder myChart = new CordaEmbedder();
-     myChart.appearanceFile = "apfiles/ccp/ccpmap.pcxml";
+    ResultSet rs = QBean.getStateList();
+    if (rs.next())
+    {
+        stateList = new StringBuffer();
+        int count= 0;
+        do
+        {
+           if (count > 27)
+           {
+               stateList.append("</td><td valign='bottom'>");
+               count = 0;
+           }
+           if (typeString.compareTo(rs.getString("type")) != 0)
+           {
+               stateList.append("<br />");
+               typeString = rs.getString("type");
+           }
+           stateList.append("\n<br /><a href='list.jsp?r="+rs.getString("abbreviation")+"&cctopic="+topic.toUpperCase()+"' class='a1'>"+rs.getString("name")+"</a>");
+           count++;
+      } while (rs.next());
+    stateList.append("</td>");
+    }
 
-//change the next two lines to point to your popchart/optimap server or to a redirector
-     myChart.externalServerAddress = "http://your.optimap.server:2001";
-     myChart.internalCommPortAddress = "http://your.optimap.server:2002";
+    QBean.close();
 
-//change the next line so the drilldown url points to your application server
-     myChart.pcScript = "US.addPCXML(<DefaultShapeSettings><Drilldown URL='http://your.app.server/ccp/list.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultShapeSettings>)";
-
-     myChart.height = 449;
-     myChart.width = 629;
-     myChart.imageType = "FLASH";
-     myChart.fallback = "STRICT";
-     myChart.userAgent = request.getHeader("USER-AGENT");
-     htmlString = myChart.getEmbeddingHTML();
-}// end of try
-catch (Exception exc)
-{
- System.out.println(exc.getMessage());
-}
+    NCIPopChartEmbedder myChart = new NCIPopChartEmbedder();
+    myChart.appearanceFile = "apfiles/planet/ccpmap.pcxml";
+    myChart.pcScript = "US.addPCXML(<DefaultShapeSettings><Drilldown URL='list.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultShapeSettings>)";
+    myChart.height = 449;
+    myChart.width = 629;
+    myChart.imageType = "FLASH";
+    myChart.fallback = "STRICT";
+    myChart.returnDescriptiveLink = false;
+    myChart.userAgent = request.getHeader("USER-AGENT");
+    htmlString = myChart.getEmbeddingHTML();
 %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 
@@ -104,17 +78,17 @@ catch (Exception exc)
 </head>
 <body topmargin="0" leftmargin="0" bgcolor="White">
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
-  <tr> 
-    <td><p class="banner"><a href="http://cancercontrolplanet.cancer.gov/index.html"><img src="images/planet_logo.gif" alt="Cancer Control PLANET - Plan, Link, Act, Network with Evidence-based Tools" width="169" height="87" border="0"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p></td>
-    <td><a href="http://cancercontrolplanet.cancer.gov/index.html"><img src="images/planet_banner2.gif" alt="Cancer Control PLANET - Links to resources for cancer control planning" width="369" height="82" border="0"></a></td>
-    <td><p><a href="http://cancercontrolplanet.cancer.gov/index.html">Home</a><br>
-        <a href="http://cancercontrolplanet.cancer.gov/contact.html">Contact Us</a><br>
-        <a href="http://cancercontrolplanet.cancer.gov/about.html">About this Site</a><br>
-        <a href="http://cancercontrolplanet.cancer.gov/partners.html">PLANET Sponsors</a></p></td>
+  <tr>
+    <td><p class="banner"><a href="../index.html"><img src="../images/planet_logo.gif" alt="Cancer Control PLANET - Plan, Link, Act, Network with Evidence-based Tools" width="169" height="87" border="0"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p></td>
+    <td><a href="../index.html"><img src="../images/planet_banner2.gif" alt="Cancer Control PLANET - Links to resources for cancer control planning" width="369" height="82" border="0"></a></td>
+    <td><p><a href="../index.html">Home</a><br>
+        <a href="../contact.html">Contact Us</a><br>
+        <a href="../about.html">About this Site</a><br>
+        <a href="../partners.html">PLANET Sponsors</a></p></td>
   </tr>
-  <tr> 
+  <tr>
     <td colspan="3">
-      <hr size="1" noshade> 
+      <hr size="1" noshade>
 	</td>
   </tr>
 </table>
@@ -136,18 +110,24 @@ To view, click on map or state name below.
 <td valign='top'><a href='list.jsp?r=all&cctopic=<%= topic.toUpperCase()%>'>View all partners</a><br />
 <%= stateList.toString()%>
 <td valign='top'>
-<%= htmlString%>
+<%= htmlString%><br>
+<a href="javascript:window.close()">Close Window</a>
 </td>
 </tr>
 </table>
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
-  <tr> 
+  <tr>
     <td><hr size="1" noshade>
-	<div align="center"><a href="http://cancercontrolplanet.cancer.gov/index.html">Home</a>&nbsp;&nbsp;&nbsp; <a href="http://cancercontrolplanet.cancer.gov/contact.html">Contact Us</a>&nbsp;&nbsp;&nbsp; 
-    <a href="http://cancercontrolplanet.cancer.gov/about.html">About this Site</a>&nbsp;&nbsp;&nbsp; 
-        <a href="http://cancercontrolplanet.cancer.gov/partners.html">PLANET Sponsors</a>&nbsp;&nbsp;&nbsp; <a href="http://cancercontrolplanet.cancer.gov/privacy.html">Privacy 
-        Policy</a>&nbsp;&nbsp;&nbsp; <a href="http://cancercontrolplanet.cancer.gov/disclaimer.html">Disclaimer</a>&nbsp;&nbsp;&nbsp; <a href="http://cancercontrolplanet.cancer.gov/accessibility.html">Accessibility</a><br>
-      </div></td>
+	<div align="center">
+          <a href="../index.html">Home</a>&nbsp;&nbsp;&nbsp;
+          <a href="../contact.html">Contact Us</a>&nbsp;&nbsp;&nbsp;
+          <a href="../about.html">About this Site</a>&nbsp;&nbsp;&nbsp;
+          <a href="../partners.html">PLANET Sponsors</a>&nbsp;&nbsp;&nbsp;
+          <a href="../privacy.html">Privacy Policy</a>&nbsp;&nbsp;&nbsp;
+          <a href="../disclaimer.html">Disclaimer</a>&nbsp;&nbsp;&nbsp;
+          <a href="../accessibility.html">Accessibility</a><br>
+      </div>
+    </td>
   </tr>
 </table>
 </body>
