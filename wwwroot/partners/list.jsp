@@ -44,20 +44,13 @@ String password = "pjc242323";
 StringBuffer outString = null;
 StringBuffer stateList = null;
 
-if (region.compareTo("all") != 0)
-{
-    
-  
-    pcScript = "US.setShapeValues("+region.trim()+",1)US.addPCXML(<DefaultShapeSettings><Drilldown URL='list.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultShapeSettings>)@_END";
-    whereString = " AND region = '" + region + "' and region IS NOT NULL AND cctopic IN (NULL,'"+topic.toUpperCase()+"') AND ps.abbreviation = '"+ region + "'";
-}
-else
-{
-//change the next line so the drilldown url points to your application server    
-    pcScript = "US.addPCXML(<DefaultShapeSettings><Properties FillColor='#B20000'/><Drilldown URL='list.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultShapeSettings>)";
-
-	whereString = " AND region IS NOT NULL AND cctopic IN (NULL,'"+topic.toUpperCase()+"')";
-}
+    if (region.equals("all"))
+        pcScript = "US.addPCXML(<DefaultShapeSettings><Properties FillColor='#B20000'/><Drilldown URL='list.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultShapeSettings>)";
+    else
+    {
+        pcScript = "US.setShapeValues("+region.trim()+",1)US.addPCXML(<DefaultShapeSettings><Drilldown URL='list.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultShapeSettings>)@_END";
+        whereString = " AND region = '" + region + "'";
+    }
 
     DriverManager.registerDriver(new OracleDriver());
     Connection con = DriverManager.getConnection(URL, username, password);
