@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html" %>
 <%@ page import="java.sql.ResultSet" %>
-
+<%@ page import="java.sql.ResultSetMetaData" %>
 <%@ page import="gov.nci.planet.QueryBean" %>
 <%
 String region = "ALL";
