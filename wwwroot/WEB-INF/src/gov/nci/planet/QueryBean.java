@@ -774,6 +774,50 @@ public class QueryBean {
 		
 	}
 
+	public void saveFeedback(String feedbackText, String email, String phone)
+					throws SQLException {
+
+		Connection conn =null;
+		CallableStatement stmt =null;
+		Vector statePlans = null;
+		
+		try {
+			conn = ConnPoolBean.getConnection();
+			
+			stmt = conn
+				.prepareCall("{call dccps.products_order_pkg.save_feedback(?, ?, ?, ?)}");
+			stmt.setString(1, feedbackText);
+			stmt.setString(2, email);
+			stmt.setString(3, phone);
+			stmt.setString(4, "PLANET");
+			stmt.execute();
+
+		    stmt.close();
+		    stmt = null;
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			if (stmt!=null){
+				try {
+					stmt.close();
+				} catch (SQLException ee){
+					ee.printStackTrace();
+				}
+				stmt = null;
+			}
+			if (conn!=null) {
+				try {
+					//conn.close();
+					ConnPoolBean.closeConnection(conn);
+				} catch (SQLException ee){
+					ee.printStackTrace();
+				}
+				conn = null;
+			}
+		}
+	}
+
 	/*
 	public String getTopicDescription(Integer topic) throws SQLException {
 		stmt = conn
