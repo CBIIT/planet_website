@@ -13,7 +13,7 @@ String param = request.getParameter("r");
 String stateName = "";
 String stateStatic = "";
 String topicDesc = "";
-
+String partnerString = "";
 
 if (param != null)
     region = param.toUpperCase();
@@ -254,8 +254,12 @@ if (param != null)
 
 		pageTitle = pageTitle + " - " + stateStatic;
 		
-		if (stateStatic.compareTo("the US") == 0)
+		if (stateStatic.compareTo("the US") == 0) {
 			stateStatic = "All States";
+			partnerString="Program Partners";	
+		}
+		else
+			partnerString="Program Partners in "+stateStatic;
 			
     QBean.close();
 
@@ -323,7 +327,7 @@ if (param != null)
 
 <table bgcolor="white" border="0" cellpadding="0" cellspacing="0">
 <tr>
-<td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 18px;	font-weight: bold; color : #000000;" align="left" colspan="3">Program Partners in <%= stateStatic%> for <%= topicDesc%></td>
+<td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 18px;	font-weight: bold; color : #000000;" align="left" colspan="3"><%= partnerString%></td>
 <td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;" align="right" colspan="2"><a href="rlist.jsp?r=<%= region%>&cctopic=0">View Research Partners in <%= stateStatic%></a></td>
 </tr>
 <tr>
