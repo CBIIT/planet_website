@@ -3,35 +3,24 @@
 <%@ page import="gov.nci.corda.NCIPopChartEmbedder" %>
 <%@ page import="gov.nci.planet.QueryBean" %>
 <%
-StringBuffer stateList = null;
-String topic = "C";
-String param = null;
-String htmlString = null;
-String caption = null;
-String pageTitle = "Locate Comprehensive Cancer Control Partners in Your State or Region.";
+    StringBuffer stateList = null;
+    String topic = "C";
+    String param = null;
+    String htmlString = null;
+    String caption = null;
+    String pageTitle = "Locate Comprehensive Cancer Control Partners in Your State or Region.";
 
-param = request.getParameter("cctopic");
-if (param != null)
-   topic = param;
+    param = request.getParameter("cctopic");
+    if (param != null)
+        topic = param;
 
-if (topic.equalsIgnoreCase("T"))
-{
-   pageTitle = "Locate Potential Tobacco Control Partners in Your State or Region.";
-   caption = "Cancer Control PLANET - Tobacco Control Partners";
-}
-else if (topic.equalsIgnoreCase("P"))
-{
-   pageTitle = "Locate Potential Physical Activity Partners in Your State or Region.";
-   caption = "Cancer Control PLANET - Physical Activity Partners";
-}
-else
-{
-   pageTitle = "Locate Comprehensive Cancer Control Partners in Your State or Region.";
-   caption = "Cancer Control PLANET - Cancer Control Partners";
-}
+    QueryBean QBean = new QueryBean();
+    // Find the page title to use based on the topic
+    String topicTitle = QBean.getTopicDescription(topic);
+    pageTitle = "Locate " + topicTitle + " in Your State or Region.";
+    caption = "Cancer Control PLANET - " + topicTitle;
 
     String typeString = "S";
-    QueryBean QBean = new QueryBean();
 
     ResultSet rs = QBean.getStateList();
     if (rs.next())
