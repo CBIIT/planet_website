@@ -67,16 +67,22 @@ a {
 
 .obj {
 	font-weight : bold;
+	font-size : smaller;
 }
 
 .cont {
 	background-color : Silver;
+	font-size : smaller;
 }
 
 .out {
 	font-weight : lighter;
+	font-size : smaller;
 }
 
 .plan {
-	
+	font-size : larger;
+	font-weight : bolder;
+	color : Navy;
+	text-align : center;
 }
