@@ -59,7 +59,7 @@ if (param != null)
 
 
 		outString = new StringBuffer("<table cellspacing='0' cellpadding='5'>");
-		topicString = new StringBuffer("<table><tr><td valign='top' style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;' colspan='2'><a name='top'></a>View by Topic:</td></tr><tr>");
+		topicString = new StringBuffer("<tr><td valign='top' style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;' colspan='2'><a name='top'></a>View by Topic:</td></tr><tr>");
 	
     if (rs.next())
     {
@@ -229,7 +229,7 @@ if (param != null)
 }
 else {
   listTitle = "No Records Found.";
-  topicString = new StringBuffer("<font style='family : Verdana, Geneva, Arial, Helvetica, sans-serif;	size : 14px;	weight: bold; color : #000000;'>&nbsp;</font>");
+  topicString = new StringBuffer("<tr><td><font style='family : Verdana, Geneva, Arial, Helvetica, sans-serif;	size : 14px;	weight: bold; color : #000000;'>&nbsp;</font></td></tr>");
   outString = new StringBuffer("<tr><td>&nbsp;</td></tr></table>");
 }  //end of if statement
 
@@ -298,18 +298,12 @@ else {
 	<td valign="top" width="34%" align="right"><strong><a href="list.jsp?r=<%= region%>&cctopic=C">View Program Partners in <%= stateStatic%></a></strong></td>
 </tr>
 <tr>
-<td>
-<table bgcolor='white' border='0' cellpadding="5" cellspacing="0">
-					<tr>
-						<td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-
+<td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-
 						serif;	font-size : 14px;	font-weight: color : #000000;" nowrap><%= 
 						stateList.toString()%>
 						</td>
-					</tr>
-</table>
-</td>
 
-	<td valign="top"><font style='font-family : Arial, Verdana, Geneva, Helvetica, sans-serif;	font-size : 14px; color : FF0000;'><%= stateStatic%><br><br></font><%= topicString.toString()%></td>
+	<td valign="top"><font style='font-family : Arial, Verdana, Geneva, Helvetica, sans-serif;	font-size : 14px; color : FF0000;'><%= stateStatic%><br><br></font><table><%= topicString.toString()%></table></td>
 	<td valign='top'><%= outString.toString()%></td>
 
 </tr>
