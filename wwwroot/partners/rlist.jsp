@@ -255,7 +255,7 @@ else
 				
             if (count > 27)
             {
-                stateList.append("</td><td valign='top' nowrap width='160'>");
+                stateList.append("</td><td valign='top' nowrap>");
                 count = 0;
             }
             //if (typeString.compareTo(rs.getString("type")) != 0)
@@ -265,12 +265,7 @@ else
            // }
             if (count > 0)
                 stateList.append("<br />");
-			
-			if (region.compareTo(rs.getString("abbreviation")) == 0)
-				stateList.append("<strong>"+rs.getString("name").trim()+"</strong>");
-			else
-            	stateList.append("<a href='rlist.jsp?r="+rs.getString("abbreviation")+"&cctopic="+topic+"' class='a1' title='"+rs.getString("name").trim()+"'>"+rs.getString("name")+"</a>");
-				
+            stateList.append("<a href='rlist.jsp?r="+rs.getString("abbreviation")+"&cctopic="+topic+"' class='a1' title='"+rs.getString("name").trim()+"'>"+rs.getString("name")+"</a>");
             count++;
         } while (rs.next());
         stateList.append("</td></tr><tr><td colspan=2><a href='rlist.jsp?r=ALL&cctopic=" + topic + "' title=\"All states and regions\">View All U.S. Researchers by topic area</a>");
@@ -312,7 +307,7 @@ else
 	<td valign='top'>
 		<table bgcolor='white' border='0' cellpadding="5" cellspacing="0">
 		<tr>
-			<td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;">View another state / territory<br /><table bgcolor='white' border='0' cellpadding="5" cellspacing="0"><tr><td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: color : #000000;" nowrap width="160"><%= stateList.toString()%></td></tr></table></td>
+			<td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;">View another state / territory<br /><table bgcolor='white' border='0' cellpadding="5" cellspacing="0"><tr><td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: color : #000000;" nowrap><%= stateList.toString()%></td></tr></table></td>
 			<td width="50">&nbsp;</td>
 			<td valign="top"><table bgcolor='white' border='0' cellpadding="5" cellspacing="0"><tr><td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: color : #000000;"><%= outString.toString()%></td></tr></table></td>
 			<td width="50">&nbsp;</td>
