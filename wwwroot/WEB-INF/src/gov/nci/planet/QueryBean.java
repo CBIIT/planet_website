@@ -21,24 +21,25 @@ public class QueryBean
 
     public void close() throws SQLException
     {
+        closeStatement();
         conn.close();
     }
 
     public ResultSet getStateList() throws SQLException
     {
         stmt = conn.prepareCall("{call dccps.planet_pkg.GetStateList(?)}");
-				stmt.registerOutParameter(1, OracleTypes.CURSOR);
-				stmt.execute();
-				return ((OracleCallableStatement)stmt).getCursor(1);
+		stmt.registerOutParameter(1, OracleTypes.CURSOR);
+		stmt.execute();
+		return ((OracleCallableStatement)stmt).getCursor(1);
     }
 
     public ResultSet getPartners(String topic) throws SQLException
     {
         stmt = conn.prepareCall("{call dccps.planet_pkg.GetPartners(?, ?)}");
         stmt.setString(1, topic);
-				stmt.registerOutParameter(2, OracleTypes.CURSOR);
-				stmt.execute();
-				return ((OracleCallableStatement)stmt).getCursor(2);
+		stmt.registerOutParameter(2, OracleTypes.CURSOR);
+		stmt.execute();
+		return ((OracleCallableStatement)stmt).getCursor(2);
     }
 
     public ResultSet getPartners(String topic, String stateAbbreviation) throws SQLException
