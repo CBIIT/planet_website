@@ -1,7 +1,5 @@
 <%@ page language="java" contentType="text/html" %>
-<%@ page import="java.text.*" %>
-<%@ page import="java.io.*" %>
-<%@ page import="java.sql.*" %>
+<%@ page import="java.sql.ResultSet" %>
 <%@ page import="com.corda.CordaEmbedder" %>
 <%@ page import="gov.nci.planet.QueryBean" %>
 <%
