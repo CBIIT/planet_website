@@ -312,7 +312,7 @@ else
 			<td valign="top"><table bgcolor='white' border='0' cellpadding="5" cellspacing="0"><tr><td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: color : #000000;"><%= outString.toString()%></td></tr></table></td>
 			<td width="50">&nbsp;</td>
 			<td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;"><a href="list.jsp?r=<%= region%>&cctopic=C">View Program Partners in <%= stateStatic%></a>
-			<p>View Researchers By Specific Topic Area:<br />
+<!-- 			<p>View Researchers By Specific Topic Area:<br />
 			<a href="rlist.jsp?r=ALL&cctopic=1">Tobacco Control</a><br />
   <a href="rlist.jsp?r=ALL&cctopic=2">Physical Activity</a><br />
   <a href="rlist.jsp?r=ALL&cctopic=3">Sun Safety</a><br />
@@ -325,7 +325,7 @@ else
  <a href="rlist.jsp?r=ALL&cctopic=10">Informed Decision Making for Breast Cancer Screening</a><br />
  <a href="rlist.jsp?r=ALL&cctopic=11">Informed Decision Making for Colorectal Cancer Screening</a><br />
  <a href="rlist.jsp?r=ALL&cctopic=12">Survivorship</a><br />
- <a href="rlist.jsp?r=ALL&cctopic=13">Health Communications & Informatics</a>
+ <a href="rlist.jsp?r=ALL&cctopic=13">Health Communications & Informatics</a> -->
 
 			
 			</p>
