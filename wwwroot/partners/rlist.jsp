@@ -266,7 +266,6 @@ else
             if (count > 0)
                 stateList.append("<br />");
 			
-			
 			if (region.compareTo(rs.getString("abbreviation")) == 0)
 				stateList.append("<font style='font-family : Arial, Verdana, Geneva, Helvetica, sans-serif;	font-size : 12px; color : FF0000;'>"+rs.getString("name").trim()+"</font>");
 			else
