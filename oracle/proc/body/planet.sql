@@ -1,6 +1,6 @@
 CREATE OR REPLACE PACKAGE BODY planet_pkg
 AS
-    /* $Id: planet.sql,v 1.2 2003-09-12 19:47:36 juranj Exp $ */
+    /* $Id: planet.sql,v 1.3 2003-09-16 14:57:01 juranj Exp $ */
     PROCEDURE GetStateList(p_cursor OUT refcursor)
     IS
     BEGIN
@@ -10,50 +10,64 @@ AS
             ORDER BY type, name;
     END GetStateList;
 
-    PROCEDURE GetPartners(p_topic IN cc_partners.cctopic%TYPE, p_cursor OUT refcursor)
+    PROCEDURE GetPartners(p_topic IN cc_partner_topics.cctopic%TYPE, p_cursor OUT refcursor)
     IS
     BEGIN
+        /* If a contact is responsible for multiple states,
+           we want to return that contact once for each state.  Therefore,
+           an inner join is appropriate here, rather than an IN subquery.
+         */
         OPEN p_cursor FOR
-            SELECT region state_abbreviation, ps.name state_name,
+            SELECT ps.abbreviation state_abbreviation, ps.name state_name,
                 p.abbreviation partner_abbreviation, p.name partner_name,
                 pc.type, pc.name contact_name,
                 degree, title, org1, org2, orgurl, address1, address2, city,
                 pc.state address_state, zip, phone, fax, cell, email
-            FROM cc_partners p, cc_partner_contacts pc, cc_partner_states ps
+            FROM cc_partners p, cc_partner_contacts pc,
+                cc_partner_contact_states pcs, cc_partner_states ps
             WHERE p.id = pc.partner_id
-                AND pc.region = ps.abbreviation
+                AND pc.id = pcs.partner_contact_id
+                AND pcs.state_abbr = ps.abbreviation
                 AND pc.type <> 'N'
-                AND (cctopic IS NULL OR cctopic = p_topic)
+                AND (p.all_topic_flag = 'Y' OR p.id IN (
+                    SELECT cc_partner_id
+                    FROM cc_partner_topics
+                    WHERE cctopic = p_topic))
             ORDER BY ps.name, p.abbreviation, pc.type, contact;
     END GetPartners;
 
-    PROCEDURE GetPartners(p_topic IN cc_partners.cctopic%TYPE,
-                         p_state cc_partner_contacts.region%TYPE, p_cursor OUT refcursor)
+    PROCEDURE GetPartners(p_topic IN cc_partner_topics.cctopic%TYPE,
+                         p_state cc_partner_contact_states.state_abbr%TYPE, p_cursor OUT refcursor)
     IS
     BEGIN
         OPEN p_cursor FOR
-            SELECT region state_abbreviation, ps.name state_name,
+            SELECT ps.abbreviation state_abbreviation, ps.name state_name,
                 p.abbreviation partner_abbreviation, p.name partner_name,
                 pc.type, pc.name contact_name,
                 degree, title, org1, org2, orgurl, address1, address2, city,
                 pc.state address_state, zip, phone, fax, cell, email
-            FROM cc_partners p, cc_partner_contacts pc, cc_partner_states ps
+            FROM cc_partners p, cc_partner_contacts pc,
+                cc_partner_contact_states pcs, cc_partner_states ps
             WHERE p.id = pc.partner_id
-                AND pc.region = ps.abbreviation
+                AND pc.id = pcs.partner_contact_id
+                AND pcs.state_abbr = ps.abbreviation
                 AND pc.type <> 'N'
-                AND (cctopic IS NULL OR cctopic = p_topic)
-                AND region = p_state
+                AND (p.all_topic_flag = 'Y' OR p.id IN (
+                    SELECT cc_partner_id
+                    FROM cc_partner_topics
+                    WHERE cctopic = p_topic))
+                AND pcs.state_abbr = p_state
             ORDER BY ps.name, p.abbreviation, pc.type, contact;
     END GetPartners;
 
-   FUNCTION GetTopicDescription(p_topic IN cc_partner_topics.cctopic%TYPE)
-        RETURN cc_partner_topics.description%TYPE
+   FUNCTION GetTopicDescription(p_topic IN cc_partner_topic_list.cctopic%TYPE)
+        RETURN cc_partner_topic_list.description%TYPE
    IS
-       l_descrip cc_partner_topics.description%TYPE;
+       l_descrip cc_partner_topic_list.description%TYPE;
    BEGIN
        SELECT description
        INTO l_descrip
-       FROM cc_partner_topics
+       FROM cc_partner_topic_list
        WHERE cctopic = p_topic;
 
        RETURN l_descrip;

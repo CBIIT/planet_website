@@ -1,6 +1,6 @@
 CREATE OR REPLACE PACKAGE planet_pkg
 AS
-    /* $Id: planet.sql,v 1.2 2003-09-12 19:47:36 juranj Exp $ */
+    /* $Id: planet.sql,v 1.3 2003-09-16 14:57:01 juranj Exp $ */
     TYPE refcursor IS REF CURSOR;
 
     /* Key to cursor data types:
@@ -49,7 +49,7 @@ AS
             cell(s)                  - cell phone number
             email(s)                 - Email address
     ******************************************************************************/
-    PROCEDURE GetPartners(p_topic IN cc_partners.cctopic%TYPE, p_cursor OUT refcursor);
+    PROCEDURE GetPartners(p_topic IN cc_partner_topics.cctopic%TYPE, p_cursor OUT refcursor);
 
     /***************************************************************************
     NAME  : GetPartners
@@ -60,8 +60,8 @@ AS
     OUT   : none
     CURSOR: same as above procedure.
     ******************************************************************************/
-    PROCEDURE GetPartners(p_topic IN cc_partners.cctopic%TYPE,
-                         p_state cc_partner_contacts.region%TYPE, p_cursor OUT refcursor);
+    PROCEDURE GetPartners(p_topic IN cc_partner_topics.cctopic%TYPE,
+                         p_state cc_partner_contact_states.state_abbr%TYPE, p_cursor OUT refcursor);
 
     /***************************************************************************
     NAME  : GetTopicDescription
@@ -69,7 +69,7 @@ AS
     IN    : topic(s) - C for Comprehensive, T for tobacco control, etc.
     RETURN: description(s) - description of the topic
     ******************************************************************************/
-    FUNCTION GetTopicDescription(p_topic IN cc_partner_topics.cctopic%TYPE)
-        RETURN cc_partner_topics.description%TYPE;
+    FUNCTION GetTopicDescription(p_topic IN cc_partner_topic_list.cctopic%TYPE)
+        RETURN cc_partner_topic_list.description%TYPE;
 END planet_pkg;
 /
