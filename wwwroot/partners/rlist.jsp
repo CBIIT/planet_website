@@ -10,6 +10,7 @@ String pcScript = "";
 int ccTopic = 0;
 Integer topic = new Integer(0);
 int topicID = -1;
+int topicCount = 0;
 
 String htmlString = null;
 String caption = null;
@@ -64,7 +65,7 @@ if (param != null)
         String researcherString = "";
         int researcherId = 0;
         int count = 1;
-		int topicCount = 0;
+		
         String typeString = "";
         String typeOutput = "";
 		topicString = new StringBuffer();
