@@ -71,12 +71,9 @@ if (param != null)
         String typeOutput = "";
 		topicString = new StringBuffer();
 		int researcherCount = 0;
-		
-		if (region.compareTo("ALL") == 0)
-			rs2 = QBean.getTopicsResearcherCount();
-		else 
-			rs2 = QBean.getTopicsResearcherCount(region);
-		
+				
+		rs2 = QBean.getTopicsResearcherCount(region);
+				
 		while(rs2.next()) {
         	topicCount ++;
     	}
