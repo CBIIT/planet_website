@@ -42,7 +42,7 @@
            StateBean rs = (StateBean)it2.next();
            if (count > 27)
            {
-               stateList.append("</td><td valign='bottom' bgcolor="F1F1FD">");
+               stateList.append("</td><td valign='bottom' bgcolor='F1F1FD'>");
                count = 0;
            }
            if (typeString.compareTo(rs.getType()) != 0)
