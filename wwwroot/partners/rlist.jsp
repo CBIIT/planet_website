@@ -56,8 +56,8 @@ if (param != null)
 	
 
 
-		outString = new StringBuffer("No Records Found");
-
+		outString = new StringBuffer("No Records Found.");
+		topicString = new StringBuffer("No Records Found.");
 	
     if (rs.next())
     {
@@ -86,7 +86,9 @@ if (param != null)
                 //typeString = rs.getString("type");
                 stateName = rs.getString("state_name");
 				
-				outString.append("<p><a href='#top'>[Top of Page]</a></p>");
+				if (count > 1)
+					outString.append("<p></font><a href='#top'>[Top of Page]</a></p>");
+					
                 outString.append("<p><font style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: #000000;'><font style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: #AA0000;'><a name='"+topicID+"'></a>"+topicDesc+"</font></p>");
                 outString.append("<p><table border='0' cellspacing='0' cellpadding='0'>");
 				
@@ -244,9 +246,11 @@ if (param != null)
 	 
 	 outString.append("</table>");
 }
-else
+else {
   outString = new StringBuffer("No Records Found.");
+  topicString = new StringBuffer("No Records Found.");
  //end of if statement
+ }
 
     rs = QBean.getStateList();
     if (rs.next())
