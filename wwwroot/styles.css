@@ -1,57 +1,56 @@
-
 p, td, th, ul, ol, li {
-	font-family : Arial, Helvetica, sans-serif;
+	font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;
 	font-size : 16px;
 }
 
 h2 {
-	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;
 	font-size : 20px;
 	color : #000000;
 }
 
 h3 {
-	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;
 	font-size : 18px;
 	color : #000000;
 }
 
 h4 {
-	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;
 	font-size : 16px;
 	color : #000000;
 	margin-bottom : 0 px;
 }
 
 A.titlelink {
-	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;
 	font-size : 18px;
 	color: Blue;
 	text-decoration : underline;
 }
 
 A.titlelink:hover {
-	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;
 	font-size : 18px;
 	color: Blue;
 	text-decoration : underline;	
 }
 
 A.titlelink:active {
-	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;
 	font-size : 18px;
 	color: Blue;
 	text-decoration : underline;	
 }
 
 a {
-	font-family : Arial, Helvetica, sans-serif;
+	font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;
 	font-size : 16px;
 	color : #0033cc;
 }
 
 .a1 {
-	font-family : Arial, Helvetica, sans-serif;
+	font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;
 	font-size : 12px;
 	color : #0033cc;
 }
@@ -64,24 +63,24 @@ a {
 
 .banner
 {
-	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;
 	font-size : medium;
 }
 
 .white
 {
-	font-family : Arial, Helvetica, sans-serif;
+	font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;
 	font-size : 12px;
 	color : #ffffff;
 }
 
 .smaller {
-	font-family : Arial, Helvetica, sans-serif;
+	font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;
 	font-size : 16px;
 }
 
 .sponsors {
-	font-family : Arial, Helvetica, sans-serif;
+	font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;
 	font-size : 13px;
 }
 
@@ -113,7 +112,7 @@ a {
 }
 
 .small {
-	font-family : Arial, Helvetica, sans-serif;
+	font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;
 	font-size : smaller;
 	font-weight : normal;
 }
@@ -125,7 +124,7 @@ a {
 }
 .red
 {
-	font-family : Arial, Helvetica, sans-serif;
+	font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;
 	font-size : 16px;
 	color : #ff0000;
 }
