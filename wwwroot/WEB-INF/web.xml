@@ -11,7 +11,7 @@
     </description>
     <context-param>
         <param-name>DBURL</param-name>
-        <param-value>jdbc:oracle:thin:@mooch.nci.nih.gov:1521:mooch920</param-value>
+        <param-value>jdbc:oracle:thin:@isdbp2.nci.nih.gov:1521:isdbp2</param-value>
     </context-param>
     <context-param>
         <param-name>DBUser</param-name>
@@ -30,15 +30,23 @@
         <param-value>http://156.40.32.188:8080/servlet/ctRedirector/</param-value>
     </context-param>
     <context-param>
-        <param-name>CordaInternalAddress</param-name>
-        <param-value>virgo.cit.nih.gov:2002</param-value>
+        <param-name>CordaClusterAddress</param-name>
+        <param-value>http://156.40.32.188:8080/servlet/ctcm</param-value>
     </context-param>
     <servlet>
         <servlet-name>ctRedirector</servlet-name>
         <servlet-class>ctRedirector</servlet-class>
         <init-param>
             <param-name>CordaServer</param-name>
-            <param-value>virgo.cit.nih.gov:2001</param-value>
+            <param-value>procyon.cit.nih.gov:2001</param-value>
+        </init-param>
+    </servlet>
+    <servlet>
+        <servlet-name>ctcm</servlet-name>
+        <servlet-class>ctClusterMonitor</servlet-class>
+        <init-param>
+            <param-name>ClusterAddress</param-name>
+            <param-value>procyon.cit.nih.gov:2002,spica.cit.nih.gov:2002</param-value>
         </init-param>
     </servlet>
     <servlet>
@@ -54,5 +62,9 @@
     <servlet-mapping>
         <servlet-name>ctRedirector</servlet-name>
         <url-pattern>/servlet/ctRedirector/</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ctcm</servlet-name>
+        <url-pattern>/servlet/ctcm</url-pattern>
     </servlet-mapping>
 </web-app>
