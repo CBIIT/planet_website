@@ -245,7 +245,8 @@ if (param != null)
 
      } while (rs.next());
 	 
-	 
+	 if (count == 2)
+	 	outString.append("<p></font><a href='#top'>[Top of Page]</a></p>");
 	 
 	 outString.append("</table>");
 }
