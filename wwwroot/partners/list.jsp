@@ -242,7 +242,7 @@ if (param != null)
                 stateList.append("<br />");
 			
 			if (region.compareTo(rs.getString("abbreviation")) == 0)
-				stateList.append("<font style='font-family : Arial, Verdana, Geneva, Helvetica, sans-serif;	font-size : 12px; color : FF0000;'>"+rs.getString("name").trim()+"</font>");
+				stateList.append("<font style='font-family : Arial, Verdana, Geneva, Helvetica, sans-serif;	font-size : 12px; color : AA0000;'>"+rs.getString("name").trim()+"</font>");
 			else
 	            stateList.append("<a href='list.jsp?r="+rs.getString("abbreviation")+"&cctopic="+topic.toUpperCase()+"' class='a1' title='"+rs.getString("name").trim()+"'>"+rs.getString("name")+"</a>");			
             
@@ -336,7 +336,7 @@ if (param != null)
 <tr>
 <td valign="top" width="25%"><%= stateList.toString()%></td>
 <td valign="top" width="5%">&nbsp;</td>
-<td valign="top" width="25%"><font style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 18px;	font-weight: bold; color : #FF0000;"><%= stateStatic%></font><br><br><%= outString.toString()%></td>
+<td valign="top" width="25%"><font style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 18px;	font-weight: bold; color : #AA0000;"><%= stateStatic%></font><br><br><%= outString.toString()%></td>
 <td valign="top" width="5%">&nbsp;</td>
 <td valign="top" width="40%"><%= htmlString%></td>
 </tr>
