@@ -1,6 +1,6 @@
 CREATE OR REPLACE PACKAGE planet_pkg
 AS
-    /* $Id: planet.sql,v 1.1 2003-05-22 19:56:41 juranj Exp $ */
+    /* $Id: planet.sql,v 1.2 2003-09-12 19:47:36 juranj Exp $ */
     TYPE refcursor IS REF CURSOR;
 
     /* Key to cursor data types:
@@ -62,5 +62,14 @@ AS
     ******************************************************************************/
     PROCEDURE GetPartners(p_topic IN cc_partners.cctopic%TYPE,
                          p_state cc_partner_contacts.region%TYPE, p_cursor OUT refcursor);
+
+    /***************************************************************************
+    NAME  : GetTopicDescription
+    DESC  : Retreive description of a given topic
+    IN    : topic(s) - C for Comprehensive, T for tobacco control, etc.
+    RETURN: description(s) - description of the topic
+    ******************************************************************************/
+    FUNCTION GetTopicDescription(p_topic IN cc_partner_topics.cctopic%TYPE)
+        RETURN cc_partner_topics.description%TYPE;
 END planet_pkg;
 /

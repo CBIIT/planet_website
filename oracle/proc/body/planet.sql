@@ -1,6 +1,6 @@
 CREATE OR REPLACE PACKAGE BODY planet_pkg
 AS
-    /* $Id: planet.sql,v 1.1 2003-05-22 19:56:41 juranj Exp $ */
+    /* $Id: planet.sql,v 1.2 2003-09-12 19:47:36 juranj Exp $ */
     PROCEDURE GetStateList(p_cursor OUT refcursor)
     IS
     BEGIN
@@ -45,5 +45,18 @@ AS
                 AND region = p_state
             ORDER BY ps.name, p.abbreviation, pc.type, contact;
     END GetPartners;
+
+   FUNCTION GetTopicDescription(p_topic IN cc_partner_topics.cctopic%TYPE)
+        RETURN cc_partner_topics.description%TYPE
+   IS
+       l_descrip cc_partner_topics.description%TYPE;
+   BEGIN
+       SELECT description
+       INTO l_descrip
+       FROM cc_partner_topics
+       WHERE cctopic = p_topic;
+
+       RETURN l_descrip;
+   END GetTopicDescription;
 END planet_pkg;
 /

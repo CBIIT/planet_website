@@ -1,11 +1,18 @@
-/* $Id: tables.sql,v 1.4 2003-05-21 15:24:53 juranj Exp $ */
+/* $Id: tables.sql,v 1.5 2003-09-12 19:47:32 juranj Exp $ */
+
+CREATE TABLE cc_partner_topics2 (
+    cctopic            VARCHAR(1),
+    description        VARCHAR2(50),
+    CONSTRAINT cc_partner_topics_pk PRIMARY KEY (cctopic));
 
 CREATE TABLE cc_partners (
     id                NUMBER(5,0),
     abbreviation      VARCHAR2(5)   NOT NULL,
-    cctopic           VARCHAR2(1),
+    cctopic,
     name              VARCHAR2(50)  NOT NULL,
-    CONSTRAINT cc_partners_pk PRIMARY KEY (id));
+    CONSTRAINT cc_partners_pk PRIMARY KEY (id),
+    CONSTRAINT cc_partners_topic_fk FOREIGN KEY (cctopic)
+        REFERENCES cc_partner_topics(cctopic));
 
 CREATE TABLE cc_partner_states (
     abbreviation  VARCHAR2(2),
