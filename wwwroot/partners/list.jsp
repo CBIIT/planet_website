@@ -253,6 +253,10 @@ if (param != null)
 
 
 		pageTitle = pageTitle + " - " + stateStatic;
+		
+		if (stateStatic.compareTo("the US") == 0)
+			stateStatic = "All States";
+			
     QBean.close();
 
     NCIPopChartEmbedder myChart = new NCIPopChartEmbedder();
@@ -328,7 +332,7 @@ if (param != null)
 <tr>
 <td valign="top" width="25%"><%= stateList.toString()%></td>
 <td valign="top" width="5%">&nbsp;</td>
-<td valign="top" width="25%"><%= outString.toString()%></td>
+<td valign="top" width="25%"><font style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #FF0000;"><%= stateStatic%></font><br><br><%= outString.toString()%></td>
 <td valign="top" width="5%">&nbsp;</td>
 <td valign="top" width="40%"><%= htmlString%></td>
 </tr>
