@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html" %>
 <%@ page import="java.sql.ResultSet" %>
-<%@ page import="java.sql.ResultSetMetaData" %>
+
 <%@ page import="gov.nci.planet.QueryBean" %>
 <%
 String region = "ALL";
@@ -56,7 +56,7 @@ if (param != null)
 	
 
 
-		outString = new StringBuffer("<table bgcolor='white' border='0' cellpadding='5' cellspacing='0'><tr><td valign='top' style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: color : #000000;'>");
+		outString = new StringBuffer("<table bgcolor='white' border='0' cellpadding='5' cellspacing='0'><tr><td valign='top' style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: color : #000000;' width='50%'>");
 		topicString = new StringBuffer("No Records Found.");
 	
     if (rs.next())
@@ -68,8 +68,6 @@ if (param != null)
         String typeOutput = "";
 		topicString = new StringBuffer();
 		int researcherCount = 0;
-		ResultSetMetaData rsmd = rs.getMetaData();
-		researcherCount = rsmd.getColumnCount();
 		
         do
         {
@@ -83,6 +81,7 @@ if (param != null)
 					
                 if (count > 1)
                    	outString.append("</table></p>");
+				
                 researcherId = rs.getInt("researcher_id");
                 researcherString = rs.getString("state_abbreviation");
                 //typeString = rs.getString("type");
