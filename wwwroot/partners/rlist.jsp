@@ -74,7 +74,7 @@ if (param != null)
 			   		topicID = rs.getInt("topic_id");
 					topicInt = new Integer(topicID);
 					topicDesc = QBean.getTopicDescription(topicInt);
-					topicString.append("<a href='\#'"+topicID+"'>"+topicDesc+"</a><br>");
+					topicString.append("<a href='#'"+topicID+"'>"+topicDesc+"</a><br>");
 					
                 if (count > 1)
                    	outString.append("</table></p>");
