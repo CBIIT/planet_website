@@ -38,7 +38,7 @@
         <servlet-class>ctRedirector</servlet-class>
         <init-param>
             <param-name>CordaServer</param-name>
-            <param-value>procyon.cit.nih.gov:2001</param-value>
+            <param-value>128.231.56.162:2001</param-value>
         </init-param>
     </servlet>
     <servlet>
