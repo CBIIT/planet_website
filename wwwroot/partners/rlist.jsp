@@ -255,7 +255,7 @@ else
 				
             if (count > 27)
             {
-                stateList.append("</td><td valign='top' nowrap>");
+                stateList.append("</td><td valign='top' nowrap width='150'>");
                 count = 0;
             }
             //if (typeString.compareTo(rs.getString("type")) != 0)
@@ -267,7 +267,7 @@ else
                 stateList.append("<br />");
 			
 			if (region.compareTo(rs.getString("abbreviation")) == 0)
-				stateList.append("<font color='red' size='-1'>"+rs.getString("name").trim()+"</font>");
+				stateList.append("<font color='red' size='-2'>"+rs.getString("name").trim()+"</font>");
 			else
 	            stateList.append("<a href='rlist.jsp?r="+rs.getString("abbreviation")+"&cctopic="+topic+"' class='a1' title='"+rs.getString("name").trim()+"'>"+rs.getString("name")+"</a>");
 				
@@ -312,11 +312,11 @@ else
 	<td valign='top'>
 		<table bgcolor='white' border='0' cellpadding="5" cellspacing="0">
 		<tr>
-			<td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;">View another state / territory<br /><table bgcolor='white' border='0' cellpadding="5" cellspacing="0"><tr><td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: color : #000000;" nowrap><%= stateList.toString()%></td></tr></table></td>
+			<td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;">View another state / territory<br /><table bgcolor='white' border='0' cellpadding="5" cellspacing="0"><tr><td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: color : #000000;" nowrap width="150"><%= stateList.toString()%></td></tr></table></td>
 			<td width="50">&nbsp;</td>
-			<td valign="top"><table bgcolor='white' border='0' cellpadding="5" cellspacing="0"><tr><td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: color : #000000;"><%= outString.toString()%></td></tr></table></td>
+			<td valign="top" width="300"><table bgcolor='white' border='0' cellpadding="5" cellspacing="0"><tr><td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: color : #000000;"><%= outString.toString()%></td></tr></table></td>
 			<td width="50">&nbsp;</td>
-			<td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;"><a href="list.jsp?r=<%= region%>&cctopic=C">View Program Partners in <%= stateStatic%></a>
+			<td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;" width="150"><a href="list.jsp?r=<%= region%>&cctopic=C">View Program Partners in <%= stateStatic%></a>
 <!-- 			<p>View Researchers By Specific Topic Area:<br />
 			<a href="rlist.jsp?r=ALL&cctopic=1">Tobacco Control</a><br />
   <a href="rlist.jsp?r=ALL&cctopic=2">Physical Activity</a><br />
