@@ -103,7 +103,9 @@ topicNum = QBean.getTopicID(topic);
 							}
 						}
                 }
-
+				if (typeDesc.equals("Regional")) {
+					outString.append(" Contact");
+				}
                 // Close the underlining and the table cell.
                 outString.append("</u>"+endTD);
             }
@@ -139,7 +141,9 @@ topicNum = QBean.getTopicID(topic);
 							}
 						}
                 }
-
+				if (typeDesc.equals("Regional")) {
+					outString.append(" Contact");
+				}
                 // Close the underlining and the table cell.
                 outString.append("</u>" + endTD);
             }
