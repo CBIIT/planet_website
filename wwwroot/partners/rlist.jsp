@@ -87,7 +87,6 @@ if (param != null)
 			   		topicID = rs.getInt("topic_id");
 					rs2 = QBean.getTopicsResearcherCount(topicID);
 				
-				
 					while(rs2.next()) {
 			        	topicCount ++;
 			    	}
