@@ -10,6 +10,7 @@ int ccTopic = 0;
 Integer topic = new Integer(0);
 int topicID = -1;
 int topicCount = 0;
+int cellCount = 1;
 
 String htmlString = null;
 String caption = null;
@@ -56,7 +57,7 @@ if (param != null)
 	
 
 
-		outString = new StringBuffer("<table bgcolor='white' border='0' cellpadding='5' cellspacing='0'><tr><td valign='top' style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: color : #000000;' width='50%' valign='top'>");
+		outString = new StringBuffer("<table cellspacing='0' cellpadding='0'>");
 		topicString = new StringBuffer("<a name='top'></a>");
 	
     if (rs.next())
@@ -78,23 +79,30 @@ if (param != null)
 			   		topicID = rs.getInt("topic_id");
 					topicInt = new Integer(topicID);
 					topicDesc = QBean.getTopicDescription(topicInt);
-					topicString.append("<td valign='top'><a href='#"+topicID+"'>"+topicDesc+"</a></td>");						
+					topicString.append("<td valign='top' style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: color : #000000;'><a href='#"+topicID+"'>"+topicDesc+"</a></td>");						
 					
 					if ((topicCount % 2) == 0)
 						topicString.append("</tr><tr>");
 						
 	                if (count > 1)
-    	               	outString.append("</table></p>");
-				
+	  	               	outString.append("</table></td>");
+					
+					if (((cellCount % 2) != 0) && (count != 1))
+						outString.append("</tr>");
+					else {
+						outString.append("<td>&nbsp;</td></tr>");
+						cellCount++;
+						}
+												
         	        researcherId = rs.getInt("researcher_id");
             	    researcherString = rs.getString("state_abbreviation");
                 	stateName = rs.getString("state_name");
 					
 					if (count > 1)
-						outString.append("<p></font><a href='#top'>[Top of Page]</a></p>");
+						outString.append("<tr><td colspan='2' style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left' valign='top'><a href='#top'>[Top of Page]</a></td></tr>");
 					
-                	outString.append("<p><font style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: #000000;'><font style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: #AA0000;'><a name='"+topicID+"'></a>"+topicDesc+"</font></p>");
-	                outString.append("<p><table border='0' cellspacing='0' cellpadding='0'>");
+                	outString.append("<tr><td valign='top' style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: #AA0000;' colspan='2'><a name='"+topicID+"'></a>"+topicDesc+"</td></tr>");
+	                outString.append("<tr><td><table border='0' cellspacing='0' cellpadding='0'>");
 					outString.append("<tr><td style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left' valign='top'>"+rs.getString("researcher_name")+"  "+rs.getString("degree")+endTD);
            		}
 		   
@@ -105,11 +113,14 @@ if (param != null)
 				topicDesc = QBean.getTopicDescription(topic);
         
 		        if (count > 1)
-                   outString.append("</table></p>");
-				   
+                   outString.append("</table></td>");
+				 
+				if ((cellCount % 2) != 0)
+					outString.append("</tr><tr>");
+				
                 researcherId = rs.getInt("researcher_id");
                 researcherString = rs.getString("state_abbreviation");
-                outString.append("<p><table border='0' cellspacing='0' cellpadding='0'>");
+                outString.append("<td><table border='0' cellspacing='0' cellpadding='0'>");
                 outString.append("<tr><td style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left' valign='top'>"+rs.getString("researcher_name")+"  "+rs.getString("degree")+endTD);
             }
 			
@@ -171,18 +182,23 @@ if (param != null)
                 else
                     outString.append(beginTD+"Web site:  <a href=\""+urlStr+"\" target=\"_blank\" class='a1'>"+urlStr+"</a>"+endTD);
             }
-
+			
+         cellCount++;
 	     count ++;       
      } while (rs.next());
 	 
 	 if ((topicCount % 2) == 1)
 	 	topicString.append("<td>nbsp;</td>");
+	
+	 if ((cellCount % 2) == 0)
+		outString.append("<td>&nbsp;</td>");
 		
-	 outString.append("</table><p></font><a href='#top'>[Top of Page]</a></p></td></tr></table>");
+		outString.append("</tr><tr><td colspan='2' style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left' valign='top'><a href='#top'>[Top of Page]</a></td></tr></table></td></tr></table>");
+		
 }
 else {
   topicString = new StringBuffer("No Records Found.");
-  outString = new StringBuffer("&nbsp;</td><td valign='top' style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold;'>&nbsp;");
+  outString = new StringBuffer("<tr><td>&nbsp;</td></tr></table>");
 }  //end of if statement
 
     rs = QBean.getStateList();
@@ -211,7 +227,7 @@ else {
 				stateList.append("<font style='font-family : Arial, Verdana, Geneva, Helvetica, sans-serif;	font-size : 12px; color : FF0000;'>"+rs.getString("name").trim()+"</font>");
 			else
 	            stateList.append("<a href='rlist.jsp?r="+rs.getString("abbreviation")+"&cctopic="+topic+"' class='a1' title='"+rs.getString("name").trim()+"'>"+rs.getString("name")+"</a>");
-				
+			
             count++;
         } while (rs.next());
         stateList.append("</td></tr><tr><td colspan=2><a href='rlist.jsp?r=ALL&cctopic=" + topic + "' title=\"All states and regions\">View All U.S. Researchers by topic area</a>");
@@ -254,18 +270,25 @@ else {
 					</tr>
 				</table>
 	</td>
-	<td width="5%" rowspan="2">&nbsp;</td>
-	<td valign="top" width="60%" align="right" colspan="2"><a href="list.jsp?r=<%= region%>&cctopic=C">View Program Partners in <%= stateStatic%></a></td>
+	<td valign="top" width="60%" align="right"><a href="list.jsp?r=<%= region%>&cctopic=C">View Program Partners in <%= stateStatic%></a></td>
 </tr>
 <tr>
 	<td valign="top">
 		<table bgcolor='white' border='0' cellpadding="5" cellspacing="0">
 		<tr>
+			<td colspan="2">View by Topic:</td>
+		</tr>
+		<tr>
 			<%= topicString.toString()%>
+		</tr>
+		<tr>
+			<td colspan="2">&nbsp;</td>
+		</tr>
+		<tr>
+			<td valign='top' colspan='2'><%= outString.toString()%></td>
 		</tr>
 		</table>
 	</td>
-	<td valign="top"><br><br><%= outString.toString()%></td>
 </tr>
 </table>
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
