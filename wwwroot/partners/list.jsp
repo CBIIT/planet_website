@@ -286,7 +286,7 @@ if (param != null)
 <td valign='top'>
 <table bgcolor='white' border='0' cellpadding="5" cellspacing="0">
 <tr>
-<td valign="top" colspan="3" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;">View another state / territory</td>
+<td valign="top" colspan="3" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;">View Cancer Control Partners in another state / territory:</td>
 </tr>
 <tr>
 <td valign='top' nowrap>
