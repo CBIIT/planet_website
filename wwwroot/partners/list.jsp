@@ -67,6 +67,7 @@ topicNum = QBean.getTopicID(topic);
         int count = 1;
         String typeString = "";
         String typeOutput = "";
+		int addedContact = 0;
 				
         do
         {
@@ -97,15 +98,12 @@ topicNum = QBean.getTopicID(topic);
                         if (topic.equals("P"))
                             outString.append(" Health Department Contact");
                         else {
-							//outString.append("-"+typeDesc+"-");
-							if (!typeDesc.equals("Regional Contact")) {
+								addedContact = 1;
                             	outString.append(" Contact");
-							}
 						}
+						
                 }
-				if (typeDesc.equals("Regional")) {
-					outString.append(" Contact");
-				}
+
                 // Close the underlining and the table cell.
                 outString.append("</u>"+endTD);
             }
@@ -135,15 +133,13 @@ topicNum = QBean.getTopicID(topic);
                         if (topic.equals("P"))
                             outString.append(" Health Department Contact");
                         else {
-                            if (!typeDesc.equals("Regional Contact")) {
-								//outString.append("-"+typeDesc+"-");
-                            	outString.append(" Contact");
+								if (addedContact != 1) {
+                            		outString.append(" Contact");
+									addedContact = 1;
+								}
 							}
-						}
                 }
-				if (typeDesc.equals("Regional")) {
-					outString.append(" Contact");
-				}
+
                 // Close the underlining and the table cell.
                 outString.append("</u>" + endTD);
             }
@@ -160,16 +156,13 @@ topicNum = QBean.getTopicID(topic);
                     if (topic.compareTo("C") != 0)
                        outString.append(" Health Department Contact");
                     else {
-                            if (!typeDesc.equals("Regional Contact")) {
-								//outString.append("-"+typeDesc+"-");
-                            	outString.append(" Contact");
+								if (addedContact != 1) {
+                            		outString.append(" Contact");
+									addedContact = 1;
+								}
 							}
-						}
                 }
 
-				if (typeDesc.equals("Regional")) {
-					outString.append(" Contact");
-				}
 
                 // Close the underlining and the table cell.
                 outString.append("</u>" + endTD);
@@ -256,6 +249,7 @@ topicNum = QBean.getTopicID(topic);
             outString.append("<tr><td height='10'>&nbsp;</td></tr>");
 			typeDesc = rs.getTypeDescription();
             count ++;
+			addedContact = 0;
         } while (it.hasNext());
 
 		outString.append("</table>");
