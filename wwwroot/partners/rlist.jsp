@@ -267,7 +267,7 @@ else {
 <table bgcolor="white" border="0" cellpadding="0" cellspacing="0" width="100%">
 <tr>
 	<td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-				    
-			size : 14px;	font-weight: bold; color : #000000;" width="30%" rowspan="2">View another state / territory<br />		
+			size : 14px;	font-weight: bold; color : #000000;" width="30%" rowspan="2">View another state / territory:<br />		
 				<table bgcolor='white' border='0' cellpadding="5" cellspacing="0">
 					<tr>
 						<td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-
