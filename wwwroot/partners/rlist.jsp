@@ -120,7 +120,12 @@ if (param != null)
 					
 					outString.append("<a name='"+topicID+"'></a>"+topicDesc+"</td></tr>");
 	                outString.append("<tr><td><table border='0' cellspacing='0' cellpadding='0'>");
-					outString.append("<tr><td style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left' valign='top'>"+rs.getString("researcher_name")+"  "+rs.getString("degree")+endTD);
+					outString.append("<tr><td style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left' valign='top'>"+rs.getString("researcher_name")+"  ");
+					
+					if (rs.getString("degree") != null && rs.getString("degree").compareTo("") != 0)
+						outstring.append(rs.getString("degree"));
+					
+					outstring.append(endTD);
            		}
 		   
 
@@ -138,7 +143,12 @@ if (param != null)
                 researcherId = rs.getInt("researcher_id");
                 researcherString = rs.getString("state_abbreviation");
                 outString.append("<td valign='top'><table border='0' cellspacing='0' cellpadding='0'>");
-                outString.append("<tr><td style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left' valign='top'>"+rs.getString("researcher_name")+"  "+rs.getString("degree")+endTD);
+                outString.append("<tr><td style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left' valign='top'>"+rs.getString("researcher_name")+"  ");
+					
+					if (rs.getString("degree") != null && rs.getString("degree").compareTo("") != 0)
+						outstring.append(rs.getString("degree"));
+					
+					outstring.append(endTD);
             }
 			
             if (rs.getString("title") != null && rs.getString("title").compareTo("") != 0)
