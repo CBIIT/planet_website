@@ -88,7 +88,7 @@ if (param != null)
 				outString.append("<tr><td style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'>"+rs.getString("researcher_name")+"  "+rs.getString("degree")+endTD);
 				
 
-                //outString.append("<tr><td style='font-family: Arial, Helvetica, sans-serif;font-size: 12;font-style: normal;' align='left'>");
+                //outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;font-style: normal;' align='left'>");
                 //outString.append("<u>" + rs.getString("type_description"));
                 
                 // For state and territory contacts we may need to tack on some additional information.
@@ -121,7 +121,7 @@ if (param != null)
                 outString.append("<p><table border='0' cellspacing='0' cellpadding='0' width='100%'>");
                 outString.append("<tr><td style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'>"+rs.getString("researcher_name")+"  "+rs.getString("degree")+endTD);
 
-               //outString.append("<tr><td style='font-family: Arial, Helvetica, sans-serif;font-size: 12;style: bold;' align='left'>");
+               //outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;style: bold;' align='left'>");
                //outString.append("<u>" + rs.getString("type_description"));
                 
                 // For state and territory contacts we may need to tack on some additional information.
@@ -143,7 +143,7 @@ if (param != null)
           //  if (typeString.compareTo(rs.getString("type").trim()) != 0)
           //  {
              //   outString.append("<tr><td height='20'>&nbsp;</td></tr>");
-             //   outString.append("<tr><td style='font-family: Arial,Helvetica;font-size: 12;font-style: normal;' align='left'>");
+             //   outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;font-style: normal;' align='left'>");
               //  outString.append("<u>" + rs.getString("type_description"));
              //   if (partnerString.equals("CDC") && !typeString.equals("W"))
                // {
