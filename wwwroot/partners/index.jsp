@@ -16,7 +16,7 @@
         // Uppercase it here so we don't have to uppercase it every time
         // we use it.
         topic = param.toUpperCase();
-
+  
     QueryBean QBean = new QueryBean();
     // Find the page title to use based on the topic
     String topicTitle = QBean.getTopicDescription(topic);

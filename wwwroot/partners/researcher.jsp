@@ -27,7 +27,7 @@
 
     ResultSet rs = QBean.getStateList();
     if (rs.next())
-    {
+    { 
         stateList = new StringBuffer();
         int count= 0;
         do

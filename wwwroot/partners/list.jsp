@@ -18,7 +18,7 @@ String stateStatic = "";
 if (param != null)
     region = param.toUpperCase();
 	
-	
+	 
 param = request.getParameter("cctopic");
 if (param != null)
     topic = param.toUpperCase();

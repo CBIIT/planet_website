@@ -24,7 +24,7 @@ if (param != null)
     region = param.toUpperCase();
 	
 param = request.getParameter("cctopic");
-
+ 
 if (param != null) 
 	ccTopic = Integer.parseInt(param);
 	
