@@ -281,14 +281,6 @@ if (param != null)
 </table>
 <table bgcolor="white" border="0" cellpadding="0" cellspacing="0">
 <tr>
-<td valign='top'><table><tr><td><%= outString.toString()%></table></td>
-<td width="2" valign='top'>&nbsp;</td>
-
-<td valign="top" colspan="3" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;" align="right"><a href="rlist.jsp?r=<%= region%>&cctopic=0">View Research Partners in <%= stateStatic%></a>
-<%= htmlString%><br>
-<a href="javascript:window.close()">Close Window</a>
-
-</td>
 <td valign='top'>
 <table bgcolor='white' border='0' cellpadding="5" cellspacing="0">
 <tr>
@@ -301,6 +293,16 @@ if (param != null)
 </tr>
 </table>
 </td>
+<td width="2" valign='top'>&nbsp;</td>
+<td valign='top'><table><tr><td><%= outString.toString()%></table></td>
+
+
+<td valign="top" colspan="3" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;" align="right"><a href="rlist.jsp?r=<%= region%>&cctopic=0">View Research Partners in <%= stateStatic%></a>
+<%= htmlString%><br>
+<a href="javascript:window.close()">Close Window</a>
+
+</td>
+
 </tr>
 </table>
 <table width="100%" border="0" cellspacing="0" cellpadding="0">

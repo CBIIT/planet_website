@@ -58,7 +58,7 @@ if (param != null)
 
 
 		outString = new StringBuffer("<table cellspacing='0' cellpadding='5'>");
-		topicString = new StringBuffer("<tr><td valign='top' style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;' colspan='2'>View by Topic:</td></tr><a name='top'></a>");
+		topicString = new StringBuffer("<tr><td valign='top' style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;' colspan='2'>Cancer Control Partners - ");
 	
     if (rs.next())
     {
@@ -79,6 +79,11 @@ if (param != null)
 			   		topicID = rs.getInt("topic_id");
 					topicInt = new Integer(topicID);
 					topicDesc = QBean.getTopicDescription(topicInt);
+					stateName = rs.getString("state_name");
+					
+					if (count == 1)
+						topicString.append("<font style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 14;font-weight: bold;color: #AA0000;'>"+stateName.trim()+"</font><br /><br />View by Topic:</td></tr><a name='top'></a>");
+						
 					topicString.append("<td valign='top' style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 12;	font-weight: bold;'><a href='#"+topicID+"' style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 12;	font-weight: bold;'>"+topicDesc+"</a></td>");						
 					
 					if ((topicCount % 2) == 0)
@@ -96,7 +101,7 @@ if (param != null)
 												
         	        researcherId = rs.getInt("researcher_id");
             	    researcherString = rs.getString("state_abbreviation");
-                	stateName = rs.getString("state_name");
+                	
 					
 					if (count > 1)
 						outString.append("<tr><td colspan='2' style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 12;color: #000000;' align='left' valign='top'><br /><a href='#top' style='font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 12;'>[Top of Page]</a></td></tr>");
