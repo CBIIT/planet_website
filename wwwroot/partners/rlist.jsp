@@ -41,7 +41,7 @@ if (param != null)
     ResultSet rs = null;
     QueryBean QBean = new QueryBean();
 	
-	topicLet = QBean.getTopicID(ccTopic);
+	topicLet = QBean.getTopicID(topic);
 	
     // Find the page title to use based on the topic 
     String pageTitle = "Cancer Control Researchers";
