@@ -11,7 +11,7 @@
     </description>
     <context-param>
         <param-name>DBURL</param-name>
-        <param-value>jdbc:oracle:thin:@isdbp2.nci.nih.gov:1521:isdbp2</param-value>
+        <param-value>jdbc:oracle:oci8:@isdbp2</param-value>
     </context-param>
     <context-param>
         <param-name>DBUser</param-name>
@@ -23,15 +23,15 @@
     </context-param>
     <context-param>
         <param-name>DBMinConnections</param-name>
-        <param-value>3</param-value>
+        <param-value>6</param-value>
     </context-param>
     <context-param>
         <param-name>CordaExternalAddress</param-name>
-        <param-value>http://156.40.32.188:8080/servlet/ctRedirector/</param-value>
+        <param-value>http://cancercontrolplanet.cancer.gov/servlet/ctRedirector/</param-value>
     </context-param>
     <context-param>
         <param-name>CordaClusterAddress</param-name>
-        <param-value>http://156.40.32.188:8080/servlet/ctcm</param-value>
+        <param-value>http://cancercontrolplanet.cancer.gov/servlet/ctcm</param-value>
     </context-param>
     <servlet>
         <servlet-name>ctRedirector</servlet-name>
