@@ -73,12 +73,12 @@ if (param != null)
 		topicString = new StringBuffer();
 		int researcherCount = 0;
 		
-		rs2 = QBean.getTopicsResearcherCount(topicInt, region);
+//		rs2 = QBean.getTopicsResearcherCount(topicInt, region);
 				
-			do
-			{
-	        	topicCount ++;
-	    	} while (rs2.next());
+	//		do
+		//	{
+	      //  	topicCount ++;
+	    	//} while (rs2.next());
 			
         do
         {
@@ -90,15 +90,15 @@ if (param != null)
 					topicInt = new Integer(topicID);
 					topicDesc = QBean.getTopicDescription(topicInt);
 					
-					if (topicCount > 1) {
-						topicString.append("<a href='#"+topicID+"'>"+topicDesc+"</a><br>");						
+//					if (topicCount > 1) {
+					topicString.append("<a href='#"+topicID+"'>"+topicDesc+"</a><br>");						
 						
-						if (topicCount2 == (topicCount/2)) {
-							topicString.append("</td><td valign='top' style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold;'>");
-						}
-					}
-					else
-						topicString.append("&nbsp;</td><td valign='top' style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold;'>&nbsp;");
+		//				if (topicCount2 == (topicCount/2)) {
+			//				topicString.append("</td><td valign='top' style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold;'>");
+				//		}
+					//}
+//					else
+				//		topicString.append("</td><td valign='top' style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold;'>&nbsp;");
 						
 										
                 if (count > 1)
@@ -349,7 +349,7 @@ else {
 	<td valign="top">
 		<table bgcolor='white' border='0' cellpadding="5" cellspacing="0">
 		<tr>
-			<td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold;"><%= topicCount%> - <a name="top"></a><%= topicString.toString()%></td>
+			<td valign="top" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold;"><a name="top"></a><%= topicString.toString()%></td><td valign='top' style='font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold;'>&nbsp;</td>
 		</tr>
 		</table>
 		<%= outString.toString()%>
