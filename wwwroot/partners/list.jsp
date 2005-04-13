@@ -34,6 +34,7 @@ StringBuffer stateList = null;
 Vector partners = null;
 QueryBean QBean = new QueryBean();
 topicNum = QBean.getTopicID(topic);
+
 	
     // Find the page title to use based on the topic
 	if (topic.compareTo("C") != 0)
@@ -397,7 +398,6 @@ topicNum = QBean.getTopicID(topic);
 <td width="2" valign='top'>&nbsp;</td>
 <td valign='top'><table><tr><td>< outString.toString()%></td></tr></table></td>
 
-
 <td valign="top" colspan="3" style="font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size: 14px;	font-weight: bold; color: #000000;" align="right"><a href="rlist.jsp?r=< region%>&cctopic=0">View Research Partners in < stateStatic%></a>
 < htmlString%><br>
 <a href="javascript:window.close()">Close Window</a>
@@ -412,8 +412,7 @@ topicNum = QBean.getTopicID(topic);
 <tr>
 <td valign="top" align="left" colspan="3"><div style="font-family : Arial, Helvetica, Verdana, Geneva, sans-serif; font-size: 20px; font-weight: bold; color: #000000;"><%= partnerText%></div><br>
 <p>To locate research partners in <%= stateStatic%> go to the  <a href="rlist.jsp?r=<%= region%>&cctopic=<%= topicNum%>">research partners</a> page.</p>
-<p>topicNum=<%= topicNum%><br>
-topic=<%= topic%></p>
+
 </td>
 <td valign="top" style="font-family : Arial, Helvetica, Verdana, Geneva, sans-serif; font-size: 14px; font-weight: bold; color: #000000;" align="right" colspan="2">&nbsp;</td>
 </tr>
@@ -439,5 +438,4 @@ topic=<%= topic%></p>
       </div></td>
   </tr>
 </table>
-</body>
-</html>
+</body></html>
