@@ -8,12 +8,9 @@
 <%
 String param;
 String htmlString = null;
-String caption = "State Cancer Control Plans";
-String pageTitle = "State Cancer Control Plans";
+String caption = "State, Tribal and Territorial Cancer Control Plans";
+String pageTitle = "State, Tribal and Territorial Cancer Control Plans";
 int count= 0;
-
-
-
 
 StringBuffer stateList = null;
 StringBuffer pcScript = null;
@@ -37,7 +34,6 @@ StringBuffer pcScript = null;
      pcScript.append("US.addPCXML(<Legend Name='legend' Top='5' Left='213' Width='403' Height='23' ZIndex='56'><Properties RangeSizeForMarkers='True' MinimumFontSize='10.0' ReverseOrder='True' Font='Name:Helvetica; Size:11.0;'/></Legend>)");
 
      Iterator it = statePlans.iterator();
-
 
      if (it.hasNext())
      {
@@ -82,7 +78,6 @@ StringBuffer pcScript = null;
            }
            count++;
        }
-
 
       }while (it.hasNext());
      }
@@ -159,5 +154,4 @@ out.print(htmlString);
       </div></td>
   </tr>
 </table>
-</body>
-</html>
+</body></html>
