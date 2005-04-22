@@ -70,9 +70,9 @@ StringBuffer pcScript = null;
            //create the text link
            stateList.append("<a href='"+ rs.getPlanUrl().trim()+"' class='a1'  title='"+rs.getName().trim()+"' target='_blank'>"+rs.getName()+"</a>");
            //create the link on the map
-           if (rs.getState().equals("PI"))
+           if (rs.getState().equals("PI") || rs.getState().equals("CN") || rs.getState().equals("FD") || rs.getState().equals("SP") || rs.getState().equals("AN"))
            {
-	           pcScript.append("US.addPCXML(<MapShapeItem Name='"+rs.getState()+"' Parent='OR' Value='1'><ItemShapeSettings  Type='Circle' Top='89' Left='40' Diameter='8'><MapProperties OverrideDrilldownSettings='True'/><Drilldown URL='"+rs.getPlanUrl()+"' Target='_blank' FillColor='White' ZoomPercent='120'/><Label Position='Left' FrameAlignment='RightCenter' LeaderColor='Black'/></ItemShapeSettings></MapShapeItem>)");
+	           pcScript.append("US.addPCXML(<MapShapeItem Name='"+rs.getState()+"' Value='1'><ItemShapeSettings  Type='Circle' Diameter='8'><MapProperties OverrideDrilldownSettings='True'/><Drilldown URL='"+rs.getPlanUrl()+"' Target='_blank' FillColor='White' ZoomPercent='120'/></ItemShapeSettings></MapShapeItem>)");
            }else{
 	           pcScript.append("US.addPCXML(<MapShapeItem Name='"+rs.getState()+"' Value='1'><ItemShapeSettings><MapProperties OverrideDrilldownSettings='True'/><Drilldown URL='"+rs.getPlanUrl()+"' Target='_blank' FillColor='White' ZoomPercent='120'/></ItemShapeSettings></MapShapeItem>)");
            }
