@@ -8,8 +8,8 @@
 <%
 String param;
 String htmlString = null;
-String caption = "State, Tribal and Territorial Cancer Control Plans";
-String pageTitle = "State, Tribal and Territorial Cancer Control Plans";
+String caption = "State, Tribe and Territory Plans";
+String pageTitle = "State, Tribe and Territory Plans";
 int count= 0;
 
 StringBuffer stateList = null;
