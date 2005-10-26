@@ -130,7 +130,7 @@ topicNum = QBean.getTopicID(topic);
                 typeString = rs.getType();
 				typeDesc = rs.getTypeDescription();
                 outString.append("<p><table border='0' cellspacing='0' cellpadding='0' width='100%'>");
-                outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'>"+rs.getPartnerName()+endTD);
+                outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;fon align='left'>"+rs.getPartnerName()+endTD);
 
                 outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;style: bold;' align='left'>");
                 outString.append("<u>" + rs.getTypeDescription());
@@ -296,7 +296,7 @@ topicNum = QBean.getTopicID(topic);
     if (it2.hasNext())
     {
         stateList = new StringBuffer();
-		stateList.append("<table border='0' cellpadding='5' cellspacing='0'><tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;font-style: normal;' colspan='2' valign='top' nowrap>STATES</td><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;font-style: bold;' valign='top' nowrap>TERRITORIES/TRIBES</td></tr><tr><td valign='top' nowrap>");
+		stateList.append("<table border='0' cellpadding='5' cellspacing='0'><tr><th colspan='2' valign='top' nowrap>STATES</th><th valign='top' nowrap>TERRITORIES/TRIBES</th></tr><tr><td valign='top' nowrap>");
         String typeString = "S";
         int count= 0;
 		
