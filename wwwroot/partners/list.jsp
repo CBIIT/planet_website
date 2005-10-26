@@ -309,11 +309,11 @@ topicNum = QBean.getTopicID(topic);
 				
             if (count > 25) {
                 stateList.append("</td><td valign='top' nowrap>");
-                'count = 0;
+                //count = 0;
             }
             if (count > 51) {
                 stateList.append("</td><td valign='top' nowrap>");
-                'count = 0;
+                //count = 0;
             }
             
 			if (typeString.compareTo(rs.getType()) != 0) {
