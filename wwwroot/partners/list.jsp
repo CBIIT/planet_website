@@ -296,7 +296,7 @@ topicNum = QBean.getTopicID(topic);
     if (it2.hasNext())
     {
         stateList = new StringBuffer();
-		stateList.append("<table border='0' cellpadding='5' cellspacing='0'><tr><td valign='top' nowrap>");
+		stateList.append("<table border='0' cellpadding='5' cellspacing='0'><tr><td colspan='2' valign='top' nowrap>STATES</td><td>TERRITORIES/TRIBES</td></tr><tr><td valign='top' nowrap>");
         String typeString = "S";
         int count= 0;
 		
