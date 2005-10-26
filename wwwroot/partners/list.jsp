@@ -307,11 +307,11 @@ topicNum = QBean.getTopicID(topic);
 			if (region.compareTo(rs.getAbbreviation()) == 0)
 				stateStatic=rs.getName();
 				
-            if (count > 25) {
+            if (count == 26) {
                 stateList.append("</td><td valign='top' nowrap>");
                 //count = 0;
             }
-            if (count > 51) {
+            if (count == 51) {
                 stateList.append("</td><td valign='top' nowrap>");
                 //count = 0;
             }
