@@ -321,7 +321,7 @@ topicNum = QBean.getTopicID(topic);
                 typeString = rs.getType();
             }
 			
-            if (count > 0 && count != 26 && count !=50 && count !=51)
+            if (count > 0 && count != 26 && count !=51)
                 stateList.append("<br />");
 						
 			if (region.compareTo(rs.getAbbreviation()) == 0)
