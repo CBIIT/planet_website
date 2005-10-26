@@ -316,10 +316,10 @@ topicNum = QBean.getTopicID(topic);
                 //count = 0;
             }
             
-			if (typeString.compareTo(rs.getType()) != 0) {
-                stateList.append("<br />");
-                typeString = rs.getType();
-            }
+			//if (typeString.compareTo(rs.getType()) != 0) {
+            //    stateList.append("<br />");
+            //    typeString = rs.getType();
+            //}
 			
             if (count > 0 && count != 26 && count !=51)
                 stateList.append("<br />");
