@@ -253,7 +253,8 @@ if (param != null)
     if (it2.hasNext())
     {
         stateList = new StringBuffer();
-		stateList.append("<table><tr><td valign='top' nowrap>");
+		//stateList.append("<table><tr><td valign='top' nowrap>");
+		stateList.append("<font style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size : 12px; color : AA0000;'><strong>"+rs.getName().trim()+"</strong></font>");
         String typeString = "S";
         int count= 0;
 
