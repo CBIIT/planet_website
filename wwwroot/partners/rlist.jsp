@@ -293,7 +293,7 @@ if (param != null)
 
             count++;
         } while (it2.hasNext());
-        stateList.append("</td></tr><tr><td colspan=2><a href='rlist.jsp?r=ALL&cctopic=" + topic + "' title=\"All states and regions\">View All U.S. Researchers by topic area</a></td></tr></table>");
+        stateList.append("</td></tr><tr><td colspan=3><a href='rlist.jsp?r=ALL&cctopic=" + topic + "' title=\"All states and regions\">View All U.S. Researchers by topic area</a></td></tr></table>");
     }
 	pageTitle = pageTitle + " - " + stateStatic;
 	
