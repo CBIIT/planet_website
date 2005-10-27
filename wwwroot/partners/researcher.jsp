@@ -56,11 +56,11 @@
            //    stateList.append("</td><td valign='bottom' bgcolor='F1F1FD'>");
             //   count = 0;
            //}
-           if (typeString.compareTo(rs.getType()) != 0)
-           {
-               stateList.append("<br />");
-               typeString = rs.getType();
-           }
+          // if (typeString.compareTo(rs.getType()) != 0)
+           //{
+           //    stateList.append("<br />");
+           //    typeString = rs.getType();
+          // }
            stateList.append("\n<br /><a href='rlist.jsp?r="+rs.getAbbreviation()+"&cctopic="+topic+"' class='a1'>"+rs.getName()+"</a>");
 
 		   count++;
