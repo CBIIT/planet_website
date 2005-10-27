@@ -37,12 +37,25 @@
         int count= 0;
         do
         {
+		   
            StateBean rs = (StateBean)it2.next();
-           if (count > 27)
-           {
-               stateList.append("</td><td valign='bottom' bgcolor='F1F1FD'>");
-               count = 0;
-           }
+		   
+		   if (count == 26) {
+                stateList.append("</td><td valign='top' nowrap>");
+                //count = 0;
+            }
+            if (count == 51) {
+                stateList.append("</td><td valign='top' nowrap>");
+                //count = 0;
+            }
+			
+			if (count > 0 && count != 26 && count !=51)
+                stateList.append("<br />");
+          // if (count > 27)
+           //{
+           //    stateList.append("</td><td valign='bottom' bgcolor='F1F1FD'>");
+            //   count = 0;
+           //}
            if (typeString.compareTo(rs.getType()) != 0)
            {
                stateList.append("<br />");
