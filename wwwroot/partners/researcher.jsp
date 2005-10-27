@@ -45,7 +45,7 @@
                 //count = 0;
             }
             if (count == 51) {
-                stateList.append("</td><td valign='top'nowrap>");
+                stateList.append("</td><td valign='top' nowrap>");
                 //count = 0;
             }
 			
@@ -124,7 +124,7 @@
 </td>
 </tr>
 <tr>
-<td valign='top' bgcolor="#F1F1FD"><%= stateList.toString()%><br />
+<td colspan="3" valign='top' bgcolor="#F1F1FD"><%= stateList.toString()%><br />
 
 <td valign='top'>
 <%= htmlString%><br>
