@@ -254,7 +254,7 @@ if (param != null)
     {
         stateList = new StringBuffer();
 		//stateList.append("<table><tr><td valign='top' nowrap>");
-		stateList.append("<font style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size : 12px; color : AA0000;'><strong>"+rs.getName().trim()+"</strong></font>");
+		stateList.append("<table border='0' cellpadding='5' cellspacing='0'><tr><th colspan='2' align='left' valign='top' nowrap>STATES</th><th align='left' valign='top' nowrap>TERRITORIES/TRIBES</th></tr><tr><td valign='top' nowrap>");
         String typeString = "S";
         int count= 0;
 
