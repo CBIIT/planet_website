@@ -263,15 +263,27 @@ if (param != null)
 
 			if (region.compareTo(rs.getAbbreviation()) == 0)
 				stateStatic=rs.getName();
-
-            if (count > 27)
-            {
+				
+			if (count == 26) {
                 stateList.append("</td><td valign='top' nowrap>");
-                count = 0;
+                //count = 0;
             }
-
-            if (count > 0)
+            if (count == 51) {
+                stateList.append("</td><td valign='top' nowrap>");
+                //count = 0;
+            }
+			
+			if (count > 0 && count != 26 && count !=51)
                 stateList.append("<br />");
+
+           // if (count > 27)
+            //{
+            //    stateList.append("</td><td valign='top' nowrap>");
+           //     count = 0;
+           // }
+
+           // if (count > 0)
+              //  stateList.append("<br />");
 
 			if (region.compareTo(rs.getAbbreviation()) == 0)
 				stateList.append("<font style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	color : AA0000; font-size: 12px;'><strong>"+rs.getName().trim()+"</strong></font>");
