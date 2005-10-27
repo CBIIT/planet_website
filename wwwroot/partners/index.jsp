@@ -37,6 +37,9 @@
 	
         stateList = new StringBuffer();
         int count= 0;
+		stateList.append("<tr><th colspan='2' align='left' valign='top' nowrap>STATES</th><th align='left' valign='top' nowrap>TERRITORIES/TRIBES</th></tr><tr><td valign='top' nowrap>");
+
+
         do
         {
            StateBean rs = (StateBean)it2.next();
