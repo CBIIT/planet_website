@@ -41,11 +41,11 @@
            StateBean rs = (StateBean)it2.next();
 		   
 		   if (count == 26) {
-                stateList.append("</td><td valign='top' bgcolor='#F1F1FD'  nowrap>");
+                stateList.append("</td><td valign='top' bgcolor='#F1F1FD' nowrap>");
                 //count = 0;
             }
             if (count == 51) {
-                stateList.append("</td><td valign='top' nowrap>");
+                stateList.append("</td><td valign='top' bgcolor='#F1F1FD' nowrap>");
                 //count = 0;
             }
 			
@@ -61,8 +61,9 @@
            //    stateList.append("<br />");
            //    typeString = rs.getType();
           // }
-           stateList.append("\n<br /><a href='rlist.jsp?r="+rs.getAbbreviation()+"&cctopic="+topic+"' class='a1'>"+rs.getName()+"</a>");
-
+           //stateList.append("\n<br /><a href='rlist.jsp?r="+rs.getAbbreviation()+"&cctopic="+topic+"' class='a1'>"+rs.getName()+"</a>");
+          stateList.append("\n<a href='rlist.jsp?r="+rs.getAbbreviation()+"&cctopic="+topic+"' class='a1'>"+rs.getName()+"</a>");
+		   
 		   count++;
       } while (it2.hasNext());
     stateList.append("</td>");
