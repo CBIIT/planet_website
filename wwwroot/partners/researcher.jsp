@@ -124,7 +124,7 @@
 </td>
 </tr>
 <tr>
-<td colspan="3" valign='top' bgcolor="#F1F1FD"><%= stateList.toString()%><br />
+<td valign='top' bgcolor="#F1F1FD"><%= stateList.toString()%><br />
 
 <td valign='top'>
 <%= htmlString%><br>
