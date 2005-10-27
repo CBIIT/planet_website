@@ -41,7 +41,7 @@
            StateBean rs = (StateBean)it2.next();
 		   
 		   if (count == 26) {
-                stateList.append("</td><td valign='top' nowrap>");
+                stateList.append("</td><td valign='top' bgcolor='#F1F1FD'  nowrap>");
                 //count = 0;
             }
             if (count == 51) {
