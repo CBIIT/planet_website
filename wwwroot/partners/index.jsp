@@ -121,7 +121,7 @@
         <%--= pageTitle--%>
 	 <div style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;">
 		<p><strong>To view, click on map or state name below.</strong></p>
-	
+	</div>
 	    <p>To locate research partners in your state or region go to the  <a href="researcher.jsp?cctopic=0">research partners</a> page.</p>
 		
 	</div>
