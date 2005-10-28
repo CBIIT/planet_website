@@ -128,7 +128,7 @@
 	</td>
 </tr>
 <tr>
-	<td valign='top' bgcolor="#F1F1FD"><%= stateList.toString()%><br /></td>
+	<td valign='top'><%= stateList.toString()%><br /></td>
 	<td valign='top'><%= htmlString%><br></td>
 <tr>
 	<td colspan="3"><a href='list.jsp?r=ALL&cctopic=<%= topic %>'>View all Program Partners</a>
