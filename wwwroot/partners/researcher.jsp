@@ -123,11 +123,11 @@
 </p>
       </div>
 
-<br />
+<!--<br />-->
 </td>
 </tr>
 <tr>
-<td valign='top' bgcolor="#F1F1FD"><%= stateList.toString()%><br />
+<td valign='top'><%= stateList.toString()%><br />
 
 <td valign='top'>
 <%= htmlString%><br>
