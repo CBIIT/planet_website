@@ -123,8 +123,7 @@
 	<p><strong>To view, click on map or state name below.</strong></p>
 	
 	    <p>To locate research partners in your state or region go to the  <a href="researcher.jsp?cctopic=0">research partners</a> page.</p>
-	
-	<<br />
+	<br />
 	</td>
 </tr>
 <tr>
