@@ -51,10 +51,8 @@
             }
 			
             if (count == 51) {
-              // stateList.append("</td><td valign='top' bgcolor='#F1F1FD' nowrap>");
-                
-				
-				 NCIPopChartEmbedder myChart = new NCIPopChartEmbedder();
+              stateList.append("</td><td valign='top' bgcolor='#F1F1FD' nowrap>");
+                 NCIPopChartEmbedder myChart = new NCIPopChartEmbedder();
    				 myChart.appearanceFile = "apfiles/planet/ccpmap.pcxml";
     			 myChart.pcScript = "US.addPCXML(<DefaultShapeSettings><Drilldown URL='list.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultShapeSettings>)";
    				 myChart.height = 449;
