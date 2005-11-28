@@ -48,10 +48,10 @@
                 stateList.append("</td><td valign='top' bgcolor='#F1F1FD' nowrap>");
                 //count = 0;
             }
-            if (count == 51) {
-                stateList.append("</td><td valign='top' bgcolor='#F1F1FD' nowrap>");
-                //count = 0;
-            }
+            //if (count == 51) {
+              //  stateList.append("</td><td valign='top' bgcolor='#F1F1FD' nowrap>");
+               
+            //}
 			
 			if (count > 0 && count != 26 && count !=51)
                 stateList.append("<br />");
