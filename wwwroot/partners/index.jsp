@@ -52,7 +52,20 @@
 			
             if (count == 51) {
               // stateList.append("</td><td valign='top' bgcolor='#F1F1FD' nowrap>");
-                stateList.append("</td></tr><tr><th colspan='2' align='left' valign='top' nowrap bgcolor='#F1F1FD'>TERRITORIES/TRIBES</th></tr><tr><td valign='top' bgcolor='#F1F1FD' nowrap>");
+                stateList.append("</td>");
+				
+				 NCIPopChartEmbedder myChart = new NCIPopChartEmbedder();
+   				 myChart.appearanceFile = "apfiles/planet/ccpmap.pcxml";
+    			 myChart.pcScript = "US.addPCXML(<DefaultShapeSettings><Drilldown URL='list.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultShapeSettings>)";
+   				 myChart.height = 449;
+                 myChart.width = 629;
+                 myChart.imageType = "FLASH";
+                 myChart.fallback = "STRICT";
+                 myChart.returnDescriptiveLink = false;
+                myChart.userAgent = request.getHeader("USER-AGENT");
+                htmlString = myChart.getEmbeddingHTML();
+				
+				stateList.append("</tr><tr><th colspan='2' align='left' valign='top' nowrap bgcolor='#F1F1FD'>TERRITORIES/TRIBES</th></tr><tr><td valign='top' bgcolor='#F1F1FD' nowrap>");
             }
 			
 			if (count == 55) {
@@ -84,16 +97,16 @@
     
     
 
-    NCIPopChartEmbedder myChart = new NCIPopChartEmbedder();
-    myChart.appearanceFile = "apfiles/planet/ccpmap.pcxml";
-    myChart.pcScript = "US.addPCXML(<DefaultShapeSettings><Drilldown URL='list.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultShapeSettings>)";
-    myChart.height = 449;
-    myChart.width = 629;
-    myChart.imageType = "FLASH";
-    myChart.fallback = "STRICT";
-    myChart.returnDescriptiveLink = false;
-    myChart.userAgent = request.getHeader("USER-AGENT");
-    htmlString = myChart.getEmbeddingHTML();
+   // NCIPopChartEmbedder myChart = new NCIPopChartEmbedder();
+   // myChart.appearanceFile = "apfiles/planet/ccpmap.pcxml";
+   // myChart.pcScript = "US.addPCXML(<DefaultShapeSettings><Drilldown URL='list.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultShapeSettings>)";
+    //myChart.height = 449;
+   // myChart.width = 629;
+   // myChart.imageType = "FLASH";
+    //myChart.fallback = "STRICT";
+    //myChart.returnDescriptiveLink = false;
+   // myChart.userAgent = request.getHeader("USER-AGENT");
+   // htmlString = myChart.getEmbeddingHTML();
 %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 
