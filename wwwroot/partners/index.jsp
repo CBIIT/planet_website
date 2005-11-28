@@ -55,6 +55,11 @@
                 stateList.append("</td></tr><tr><th colspan='2' align='left' valign='top' nowrap bgcolor='#F1F1FD'>TERRITORIES/TRIBES</th></tr><tr><td valign='top' bgcolor='#F1F1FD' nowrap>");
             }
 			
+			if (count == 55) {
+                stateList.append("</td><td valign='top' bgcolor='#F1F1FD' nowrap>");
+                //count = 0;
+            }
+			
 			if (count > 0 && count != 26 && count !=51)
                 stateList.append("<br />");
 				
