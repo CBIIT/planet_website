@@ -52,7 +52,7 @@
 			
             if (count == 51) {
               // stateList.append("</td><td valign='top' bgcolor='#F1F1FD' nowrap>");
-                stateList.append("</td><td>");
+                
 				
 				 NCIPopChartEmbedder myChart = new NCIPopChartEmbedder();
    				 myChart.appearanceFile = "apfiles/planet/ccpmap.pcxml";
@@ -64,8 +64,8 @@
                  myChart.returnDescriptiveLink = false;
                 myChart.userAgent = request.getHeader("USER-AGENT");
                 htmlString = myChart.getEmbeddingHTML();
-				
-				stateList.append("</td></tr><tr><th colspan='2' align='left' valign='top' nowrap bgcolor='#F1F1FD'>TERRITORIES/TRIBES</th></tr><tr><td valign='top' bgcolor='#F1F1FD' nowrap>");
+				stateList.append("</td>");
+				stateList.append("</tr><tr><th colspan='2' align='left' valign='top' nowrap bgcolor='#F1F1FD'>TERRITORIES/TRIBES</th></tr><tr><td valign='top' bgcolor='#F1F1FD' nowrap>");
             }
 			
 			if (count == 55) {
