@@ -45,13 +45,13 @@
            StateBean rs = (StateBean)it2.next();
 		   
 		      if (count == 26) {
-                stateList.append("</td><td valign='top' bgcolor='#F1F1FD' nowrap></td></tr>");
+                stateList.append("</td><td valign='top' bgcolor='#F1F1FD' nowrap>");
                 //count = 0;
             }
 			
             if (count == 51) {
-               stateList.append("</td></tr><tr><td valign='top' bgcolor='#F1F1FD' nowrap>");
-               
+              // stateList.append("</td><td valign='top' bgcolor='#F1F1FD' nowrap>");
+                stateList.append("<br><br>");
             }
 			
 			if (count > 0 && count != 26 && count !=51)
@@ -114,7 +114,7 @@
   </tr>
 </table>
 
-<table summary="Links to potential partner list" bgcolor="white" border="0" cellpadding="5" cellspacing="0">
+<table summary="Links to potential partner list" bgcolor="white" border="1" cellpadding="5" cellspacing="0">
 <tr>
 	<td align="left" colspan="3">
 	<h3>Program Partners in Cancer Control</h3>
