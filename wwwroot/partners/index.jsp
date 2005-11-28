@@ -45,13 +45,14 @@
            StateBean rs = (StateBean)it2.next();
 		   
 		      if (count == 26) {
-                stateList.append("</td><td valign='top' bgcolor='#F1F1FD' nowrap>");
+                stateList.append("</td><td valign='top' bgcolor='#F1F1FD' nowrap></td></tr>");
                 //count = 0;
             }
-            //if (count == 51) {
-              //  stateList.append("</td><td valign='top' bgcolor='#F1F1FD' nowrap>");
+			
+            if (count == 51) {
+               stateList.append("</td></tr><tr><td valign='top' bgcolor='#F1F1FD' nowrap>");
                
-            //}
+            }
 			
 			if (count > 0 && count != 26 && count !=51)
                 stateList.append("<br />");
