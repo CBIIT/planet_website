@@ -68,8 +68,8 @@
 	<!--<br />-->
 	</td>
 </tr>
-<tr>
-	<td valign='top'>
+<!--<tr>
+	<td valign='top'>-->
 	<%
    
 
@@ -157,7 +157,7 @@
 	
 	
 	<%= stateList.toString()%><br></td>
-	<td valign="top"><br></td>
+	<!--<td valign="top"><br></td>-->
 <tr>
 	<td colspan="3"><a href='list.jsp?r=ALL&cctopic=<%= topic %>'>View all Program Partners</a>
 </tr>
