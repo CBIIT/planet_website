@@ -5,7 +5,50 @@
 <%@ page import="gov.nci.planet.bean.*" %>
 <%@ page import="java.util.Vector" %>
 <%@ page import="java.util.Iterator" %>
-<%
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<title><%= caption%></title>
+<link href="../styles.css" rel="stylesheet" type="text/css">
+</head>
+<body topmargin="0" leftmargin="0" bgcolor="White">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><p class="banner"><a href="../index.html"><img src="../images/planet_logo.gif" alt="Cancer Control PLANET - Plan, Link, Act, Network with Evidence-based Tools" width="169" height="87" border="0"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p></td>    <td><a href="../index.html"><img src="../images/planet_banner_wider.gif" alt="Cancer Control PLANET - Links to comprehensive cancer control resources for public health professionals" width="500" height="82" border="0"></a></td>
+<td><p><a href="../index.html">Home</a><br>
+        <a href="../contact.html">Contact Us</a><br>
+	<a href="about.html">About This Site</a><br>
+        <a href="../factsheet.pdf">Fact Sheet (PDF)</a><br>
+
+        <a href="../partners.html">PLANET Sponsors</a></p></td>
+  </tr>
+  <tr>
+    <td colspan="3">
+      <hr size="1" noshade>
+	</td>
+  </tr>
+</table>
+
+<table summary="Links to potential partner list" bgcolor="white" border="1" cellpadding="5" cellspacing="0">
+<tr>
+	<td align="left" colspan="3">
+	<h3>Program Partners in Cancer Control</h3>
+	
+        <%--= pageTitle--%>
+	 <div style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;">
+		<p><strong>To view, click on map or state name below.</strong></p>
+	</div>
+	    <p>To locate research partners in your state or region go to the  <a href="researcher.jsp?cctopic=0">research partners</a> page.</p>
+		
+	</div>
+	<!--<br />-->
+	</td>
+</tr>
+<tr>
+	<td valign='top'>
+	<%
     StringBuffer stateList = null;
     String topic = "C";
     String param = null;
@@ -109,48 +152,10 @@
    // myChart.userAgent = request.getHeader("USER-AGENT");
    // htmlString = myChart.getEmbeddingHTML();
 %>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-
-<html>
-<head>
-<title><%= caption%></title>
-<link href="../styles.css" rel="stylesheet" type="text/css">
-</head>
-<body topmargin="0" leftmargin="0" bgcolor="White">
-<table width="100%" border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><p class="banner"><a href="../index.html"><img src="../images/planet_logo.gif" alt="Cancer Control PLANET - Plan, Link, Act, Network with Evidence-based Tools" width="169" height="87" border="0"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p></td>    <td><a href="../index.html"><img src="../images/planet_banner_wider.gif" alt="Cancer Control PLANET - Links to comprehensive cancer control resources for public health professionals" width="500" height="82" border="0"></a></td>
-<td><p><a href="../index.html">Home</a><br>
-        <a href="../contact.html">Contact Us</a><br>
-	<a href="about.html">About This Site</a><br>
-        <a href="../factsheet.pdf">Fact Sheet (PDF)</a><br>
-
-        <a href="../partners.html">PLANET Sponsors</a></p></td>
-  </tr>
-  <tr>
-    <td colspan="3">
-      <hr size="1" noshade>
-	</td>
-  </tr>
-</table>
-
-<table summary="Links to potential partner list" bgcolor="white" border="1" cellpadding="5" cellspacing="0">
-<tr>
-	<td align="left" colspan="3">
-	<h3>Program Partners in Cancer Control</h3>
 	
-        <%--= pageTitle--%>
-	 <div style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;">
-		<p><strong>To view, click on map or state name below.</strong></p>
-	</div>
-	    <p>To locate research partners in your state or region go to the  <a href="researcher.jsp?cctopic=0">research partners</a> page.</p>
-		
-	</div>
-	<!--<br />-->
-	</td>
-</tr>
-<tr>
-	<td valign='top'><%= stateList.toString()%><br></td>
+	
+	
+	<%= stateList.toString()%><br></td>
 	<td valign="top"><br></td>
 <tr>
 	<td colspan="3"><a href='list.jsp?r=ALL&cctopic=<%= topic %>'>View all Program Partners</a>
