@@ -52,7 +52,7 @@
               	stateList.append("</td></tr>");
 				stateList.append("<tr><th colspan='2' bgcolor='#F1F1FD'>&nbsp;</th></tr>");
 				stateList.append("<tr><th colspan='2' align='left' valign='top' nowrap bgcolor='#F1F1FD'>TERRITORIES/TRIBES</th></tr><tr><td valign='top' bgcolor='#F1F1FD' nowrap>");
-                //count = 0;
+			    //count = 0;
             }
 			
 			if (count == 56) {
@@ -125,13 +125,10 @@
 	<h3>Research Partners in Cancer Control</h3>
 
       <div style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;">
-        <p>To view, click on map or state name below.
-	</p></div>
-
-        
+        <p>To view, click on map or state name below.</p>
+	 </div>
       <p>To locate program partners in your state or region go to the <a href="">Program Partners</a> page.</p>
       </div>
-
 	<!--<br />-->
 	</td>
 </tr>
