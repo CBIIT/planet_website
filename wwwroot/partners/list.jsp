@@ -314,15 +314,14 @@ topicNum = QBean.getTopicID(topic);
             }
             if (count == 51) {
               //  stateList.append("</td><td valign='top' nowrap>");
-				 stateList.append("</td>");
+				stateList.append("</td>");
 				stateList.append("</tr><tr><th colspan='2' align='left' valign='top' nowrap bgcolor='#F1F1FD'>TERRITORIES/TRIBES</th></tr><tr><td valign='top' bgcolor='#F1F1FD' nowrap>");
                 //count = 0;
             }
 			
 			if (count == 55) {
                 stateList.append("</td><td valign='top' bgcolor='#F1F1FD' nowrap>");
-				out.println (stateList.toString());
-                //count = 0;
+				//count = 0;
             }
             
 			//if (typeString.compareTo(rs.getType()) != 0) {
