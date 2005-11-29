@@ -108,7 +108,7 @@
                  myChart.returnDescriptiveLink = false;
                 myChart.userAgent = request.getHeader("USER-AGENT");
                 htmlString = myChart.getEmbeddingHTML();
-				
+				out.println (stateList.toString());
 				out.println ("<td></td><td>" + htmlString + "</td>");
 				stateList.append("</tr><tr><th colspan='2' align='left' valign='top' nowrap bgcolor='#F1F1FD'>TERRITORIES/TRIBES</th></tr><tr><td valign='top' bgcolor='#F1F1FD' nowrap>");
             }
@@ -156,7 +156,7 @@
 	
 	
 	
-	<%= stateList.toString()%><br></td>
+	<%'= stateList.toString()%><br></td>
 	<!--<td valign="top"><br></td>-->
 <tr>
 	<td colspan="3"><a href='list.jsp?r=ALL&cctopic=<%= topic %>'>View all Program Partners</a>
