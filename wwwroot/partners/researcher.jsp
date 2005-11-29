@@ -137,7 +137,7 @@
 </tr>
 <tr>
 	<td valign='top'><%= stateList.toString()%></td>
-	<td valign='top'><%= htmlString%></td>
+	<td valign='top' align="left"><%= htmlString%></td>
 </tr>
 <tr>
 	<td colspan="3"><a href='rlist.jsp?r=ALL&cctopic=<%= topic %>'>View all U.S. Researchers by topic area</a></td>
