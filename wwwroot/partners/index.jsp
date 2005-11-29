@@ -38,7 +38,7 @@
         stateList = new StringBuffer();
         int count= 0;
 		//stateList.append("<tr><th colspan='2' align='left' valign='top' nowrap bgcolor='#F1F1FD'>STATES</th><th align='left' valign='top' bgcolor='#F1F1FD' nowrap>TERRITORIES/TRIBES</th></tr><tr><td valign='top' bgcolor='#F1F1FD' nowrap>");
-        stateList.append("<table border='1' cellpadding='5' cellspacing='0'><tr><th colspan='2' align='left' valign='top' nowrap>STATES</th></tr><tr><td valign='top' nowrap>");
+        stateList.append("<table border='1' cellpadding='5' cellspacing='0'><tr><th colspan='2' align='left' valign='top' nowrap bgcolor='#F1F1FD'>STATES</th></tr><tr><td valign='top' nowrap bgcolor='#F1F1FD'>");
 
 
         do
@@ -52,7 +52,7 @@
 			
              if (count == 51) {
               	stateList.append("</td></tr>");
-				stateList.append("<tr><th colspan='2'>&nbsp;</th></tr>");
+				stateList.append("<tr><th colspan='2' bgcolor='#F1F1FD'>&nbsp;</th></tr>");
 				stateList.append("<tr><th colspan='2' align='left' valign='top' nowrap bgcolor='#F1F1FD'>TERRITORIES/TRIBES</th></tr><tr><td valign='top' bgcolor='#F1F1FD' nowrap>");
                 //count = 0;
             }

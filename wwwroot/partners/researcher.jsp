@@ -119,7 +119,7 @@
   </tr>
 </table>
 
-<table summary="Links to potential partner list" bgcolor="white" border="0" cellpadding="5" cellspacing="0">
+<table summary="Links to potential partner list" bgcolor="white" border="0" cellpadding="0" cellspacing="0">
 <tr>
 	<td align="left" colspan="3">
 	<h3>Research Partners in Cancer Control</h3>
