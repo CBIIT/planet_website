@@ -109,7 +109,7 @@
                 myChart.userAgent = request.getHeader("USER-AGENT");
                 htmlString = myChart.getEmbeddingHTML();
 				out.println (stateList.toString());
-				out.println ("<td></td><td>" + htmlString + "</td>");
+				out.println ("<td></td><td valign='top'>" + htmlString + "</td>");
 				stateList.append("</tr><tr><th colspan='2' align='left' valign='top' nowrap bgcolor='#F1F1FD'>TERRITORIES/TRIBES</th></tr><tr><td valign='top' bgcolor='#F1F1FD' nowrap>");
             }
 			
@@ -120,6 +120,8 @@
 			
 			if (count > 0 && count != 26 && count !=51 && count !=55)
                 stateList.append("<br />");
+				
+				out.println (stateList.toString());
 				
            /* comment out 10/26/2005
 		   
