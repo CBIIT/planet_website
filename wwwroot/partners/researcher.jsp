@@ -60,7 +60,7 @@
 				//count = 0;
             }
 			
-			if (count > 0 && count != 26 && count !=51 & count !=55)
+			if (count > 0 && count != 26 && count !=51 & count !=56)
                 stateList.append("<br />");
           // if (count > 27)
            //{
