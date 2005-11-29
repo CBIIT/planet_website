@@ -52,7 +52,7 @@
 			
             if (count == 51) {
                //stateList.append("</td><td valign='top' bgcolor='#F1F1FD' nowrap>");
-              	//stateList.append("</td>");
+              	 stateList.append("</td>");
 				 NCIPopChartEmbedder myChart = new NCIPopChartEmbedder();
    				 myChart.appearanceFile = "apfiles/planet/ccpmap.pcxml";
     			 myChart.pcScript = "US.addPCXML(<DefaultShapeSettings><Drilldown URL='list.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultShapeSettings>)";
@@ -64,7 +64,7 @@
                 myChart.userAgent = request.getHeader("USER-AGENT");
                 htmlString = myChart.getEmbeddingHTML();
 				
-				out.println (htmlString + "</td>");
+				out.println ("<td>" + htmlString + "</td>");
 				stateList.append("</tr><tr><th colspan='2' align='left' valign='top' nowrap bgcolor='#F1F1FD'>TERRITORIES/TRIBES</th></tr><tr><td valign='top' bgcolor='#F1F1FD' nowrap>");
             }
 			
