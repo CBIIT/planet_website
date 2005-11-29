@@ -296,8 +296,9 @@ topicNum = QBean.getTopicID(topic);
     if (it2.hasNext())
     {
         stateList = new StringBuffer();
-		stateList.append("<table border='1' cellpadding='5' cellspacing='0'><tr><th colspan='2' align='left' valign='top' nowrap>STATES</th><th align='left' valign='top' nowrap>TERRITORIES/TRIBES</th></tr><tr><td valign='top' nowrap>");
-        String typeString = "S";
+		//stateList.append("<table border='1' cellpadding='5' cellspacing='0'><tr><th colspan='2' align='left' valign='top' nowrap>STATES</th><th align='left' valign='top' nowrap>TERRITORIES/TRIBES</th></tr><tr><td valign='top' nowrap>");
+        stateList.append("<table border='1' cellpadding='5' cellspacing='0'><tr><th colspan='2' align='left' valign='top' nowrap>STATES</th></tr><tr><td valign='top' nowrap>");
+		String typeString = "S";
         int count= 0;
 		
         do
@@ -312,7 +313,15 @@ topicNum = QBean.getTopicID(topic);
                 //count = 0;
             }
             if (count == 51) {
-                stateList.append("</td><td valign='top' nowrap>");
+              //  stateList.append("</td><td valign='top' nowrap>");
+				 stateList.append("</td>);
+				stateList.append("</tr><tr><th colspan='2' align='left' valign='top' nowrap bgcolor='#F1F1FD'>TERRITORIES/TRIBES</th></tr><tr><td valign='top' bgcolor='#F1F1FD' nowrap>");
+                //count = 0;
+            }
+			
+			if (count == 55) {
+                stateList.append("</td><td valign='top' bgcolor='#F1F1FD' nowrap>");
+				out.println (stateList.toString());
                 //count = 0;
             }
             
@@ -321,7 +330,7 @@ topicNum = QBean.getTopicID(topic);
             //    typeString = rs.getType();
             //}
 			
-            if (count > 0 && count != 26 && count !=51)
+            if (count > 0 && count != 26 && count !=51 && count !=55)
                 stateList.append("<br />");
 						
 			if (region.compareTo(rs.getAbbreviation()) == 0)
