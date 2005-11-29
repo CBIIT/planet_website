@@ -109,7 +109,7 @@
                 myChart.userAgent = request.getHeader("USER-AGENT");
                 htmlString = myChart.getEmbeddingHTML();
 				
-				out.println ("<td>" + htmlString + "</td>");
+				out.println ("<td></td><td>" + htmlString + "</td>");
 				stateList.append("</tr><tr><th colspan='2' align='left' valign='top' nowrap bgcolor='#F1F1FD'>TERRITORIES/TRIBES</th></tr><tr><td valign='top' bgcolor='#F1F1FD' nowrap>");
             }
 			
