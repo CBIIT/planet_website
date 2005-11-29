@@ -6,7 +6,7 @@
 <%@ page import="java.util.Vector" %>
 <%@ page import="java.util.Iterator" %>
 <%
- StringBuffer stateList = null;
+    StringBuffer stateList = null;
     String topic = "C";
     String param = null;
     String htmlString = null;
@@ -27,7 +27,67 @@
     caption = "Cancer Control PLANET - " + topicTitle;
 
     String typeString = "S";
-	%>
+
+    
+    Vector states = QBean.getStateList();
+    Iterator it2 = states.iterator();
+	
+    if (it2.hasNext())
+    {
+	
+        stateList = new StringBuffer();
+        int count= 0;
+		stateList.append("<tr><th colspan='2' align='left' valign='top' nowrap bgcolor='#F1F1FD'>STATES</th><th align='left' valign='top' bgcolor='#F1F1FD' nowrap>TERRITORIES/TRIBES</th></tr><tr><td valign='top' bgcolor='#F1F1FD' nowrap>");
+
+
+        do
+        {
+           StateBean rs = (StateBean)it2.next();
+		   
+		      if (count == 26) {
+                stateList.append("</td><td valign='top' bgcolor='#F1F1FD' nowrap>");
+                //count = 0;
+            }
+            if (count == 51) {
+                stateList.append("</td><td valign='top' bgcolor='#F1F1FD' nowrap>");
+                //count = 0;
+            }
+			
+			if (count > 0 && count != 26 && count !=51)
+                stateList.append("<br />");
+				
+           /* comment out 10/26/2005
+		   
+		   if (count > 27)
+           {
+               stateList.append("</td><td valign='bottom' bgcolor='F1F1FD'>");
+               count = 0;
+           }
+           if (typeString.compareTo(rs.getType()) != 0)
+           {
+               stateList.append("<br />");
+               typeString = rs.getType();
+           } */
+           stateList.append("\n<a href='list.jsp?r="+rs.getAbbreviation()+"&cctopic="+topic+"' class='a1'>"+rs.getName()+"</a>");
+           count++;
+      } while (it2.hasNext());
+    stateList.append("</td>");
+    }
+    
+    
+    
+
+    NCIPopChartEmbedder myChart = new NCIPopChartEmbedder();
+    myChart.appearanceFile = "apfiles/planet/ccpmap.pcxml";
+    myChart.pcScript = "US.addPCXML(<DefaultShapeSettings><Drilldown URL='list.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultShapeSettings>)";
+    myChart.height = 449;
+    myChart.width = 629;
+    myChart.imageType = "FLASH";
+    myChart.fallback = "STRICT";
+    myChart.returnDescriptiveLink = false;
+    myChart.userAgent = request.getHeader("USER-AGENT");
+    htmlString = myChart.getEmbeddingHTML();
+%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 
 <html>
@@ -68,99 +128,9 @@
 	<!--<br />-->
 	</td>
 </tr>
-<!--<tr>
-	<td valign='top'>-->
-	<%
-   
-
-    
-    Vector states = QBean.getStateList();
-    Iterator it2 = states.iterator();
-	
-    if (it2.hasNext())
-    {
-	
-        stateList = new StringBuffer();
-        int count= 0;
-		//stateList.append("<tr><th colspan='2' align='left' valign='top' nowrap bgcolor='#F1F1FD'>STATES</th><th align='left' valign='top' bgcolor='#F1F1FD' nowrap>TERRITORIES/TRIBES</th></tr><tr><td valign='top' bgcolor='#F1F1FD' nowrap>");
-		stateList.append("<tr><th colspan='2' align='left' valign='top' nowrap bgcolor='#F1F1FD'>STATES</th></tr><tr><td valign='top' bgcolor='#F1F1FD' nowrap>");
-
-
-        do
-        {
-           StateBean rs = (StateBean)it2.next();
-		   
-		      if (count == 26) {
-                stateList.append("</td><td valign='top' bgcolor='#F1F1FD' nowrap>");
-                //count = 0;
-            }
-			
-            if (count == 51) {
-               //stateList.append("</td><td valign='top' bgcolor='#F1F1FD' nowrap>");
-              	 stateList.append("</td>");
-				 NCIPopChartEmbedder myChart = new NCIPopChartEmbedder();
-   				 myChart.appearanceFile = "apfiles/planet/ccpmap.pcxml";
-    			 myChart.pcScript = "US.addPCXML(<DefaultShapeSettings><Drilldown URL='list.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultShapeSettings>)";
-   				 myChart.height = 449;
-                 myChart.width = 629;
-                 myChart.imageType = "FLASH";
-                 myChart.fallback = "STRICT";
-                 myChart.returnDescriptiveLink = false;
-                myChart.userAgent = request.getHeader("USER-AGENT");
-                htmlString = myChart.getEmbeddingHTML();
-				out.println (stateList.toString());
-				out.println ("<td></td><td valign='top'>" + htmlString + "</td>");
-				stateList.append("</tr><tr><th colspan='2' align='left' valign='top' nowrap bgcolor='#F1F1FD'>TERRITORIES/TRIBES</th></tr><tr><td valign='top' bgcolor='#F1F1FD' nowrap>");
-           	}
-			
-			if (count == 55) {
-                stateList.append("</td><td valign='top' bgcolor='#F1F1FD' nowrap>");
-				out.println (stateList.toString());
-                //count = 0;
-            }
-			
-			if (count > 0 && count != 26 && count !=51 && count !=55)
-                stateList.append("<br />");
-				
-				
-				
-           /* comment out 10/26/2005
-		   
-		   if (count > 27)
-           {
-               stateList.append("</td><td valign='bottom' bgcolor='F1F1FD'>");
-               count = 0;
-           }
-           if (typeString.compareTo(rs.getType()) != 0)
-           {
-               stateList.append("<br />");
-               typeString = rs.getType();
-           } */
-           stateList.append("\n<a href='list.jsp?r="+rs.getAbbreviation()+"&cctopic="+topic+"' class='a1'>"+rs.getName()+"</a>");
-           count++;
-      } while (it2.hasNext());
-    stateList.append("</td>");
-    }
-    
-    
-    
-
-   // NCIPopChartEmbedder myChart = new NCIPopChartEmbedder();
-   // myChart.appearanceFile = "apfiles/planet/ccpmap.pcxml";
-   // myChart.pcScript = "US.addPCXML(<DefaultShapeSettings><Drilldown URL='list.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultShapeSettings>)";
-    //myChart.height = 449;
-   // myChart.width = 629;
-   // myChart.imageType = "FLASH";
-    //myChart.fallback = "STRICT";
-    //myChart.returnDescriptiveLink = false;
-   // myChart.userAgent = request.getHeader("USER-AGENT");
-   // htmlString = myChart.getEmbeddingHTML();
-%>
-	
-	
-	
-	<!--<br></td>
-	<td valign="top"><br></td>-->
+<tr>
+	<td valign='top'><%= stateList.toString()%><br /></td>
+	<td valign='top'><%= htmlString%><br></td>
 <tr>
 	<td colspan="3"><a href='list.jsp?r=ALL&cctopic=<%= topic %>'>View all Program Partners</a>
 </tr>
