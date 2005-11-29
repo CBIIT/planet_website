@@ -108,14 +108,14 @@
                  myChart.returnDescriptiveLink = false;
                 myChart.userAgent = request.getHeader("USER-AGENT");
                 htmlString = myChart.getEmbeddingHTML();
-				//out.println (stateList.toString());
+				out.println (stateList.toString());
 				out.println ("<td></td><td valign='top'>" + htmlString + "</td>");
 				stateList.append("</tr><tr><th colspan='2' align='left' valign='top' nowrap bgcolor='#F1F1FD'>TERRITORIES/TRIBES</th></tr><tr><td valign='top' bgcolor='#F1F1FD' nowrap>");
-                out.println (stateList.toString());
-			}
+           	}
 			
 			if (count == 55) {
                 stateList.append("</td><td valign='top' bgcolor='#F1F1FD' nowrap>");
+				out.println (stateList.toString());
                 //count = 0;
             }
 			
