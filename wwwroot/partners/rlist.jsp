@@ -253,9 +253,10 @@ if (param != null)
     if (it2.hasNext())
     {
         stateList = new StringBuffer();
-		//stateList.append("<table><tr><td valign='top' nowrap>");
-		stateList.append("<table border='1' cellpadding='5' cellspacing='0'><tr><th colspan='2' align='left' valign='top' nowrap>STATES</th><th align='left' valign='top' nowrap>TERRITORIES/TRIBES</th></tr><tr><td valign='top' nowrap>");
-        String typeString = "S";
+		//stateList.append("<table border='1' cellpadding='5' cellspacing='0'><tr><th colspan='2' align='left' valign='top' nowrap>STATES</th><th align='left' valign='top' nowrap>TERRITORIES/TRIBES</th></tr><tr><td valign='top' nowrap>");
+        stateList.append("<table border='0' cellpadding='5' cellspacing='0'><tr><th colspan='2' align='left' valign='top' nowrap>STATES</th></tr><tr><td valign='top' nowrap>");
+
+		String typeString = "S";
         int count= 0;
 
         do
@@ -269,12 +270,15 @@ if (param != null)
                 stateList.append("</td><td valign='top' nowrap>");
                 //count = 0;
             }
-            if (count == 51) {
-                stateList.append("</td><td valign='top' nowrap>");
+         
+		    if (count == 51) {
+              	stateList.append("</td></tr>");
+				stateList.append("<tr><th colspan='2'>&nbsp;</th></tr>");
+				stateList.append("<tr><th colspan='2' align='left' valign='top' nowrap bgcolor='#F1F1FD'>TERRITORIES/TRIBES</th></tr><tr><td valign='top' bgcolor='#F1F1FD' nowrap>");
                 //count = 0;
             }
 			
-			if (count > 0 && count != 26 && count !=51)
+			if (count > 0 && count != 26 && count !=51 && count !=55)
                 stateList.append("<br />");
 
            // if (count > 27)
