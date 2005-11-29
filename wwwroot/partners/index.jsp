@@ -5,7 +5,29 @@
 <%@ page import="gov.nci.planet.bean.*" %>
 <%@ page import="java.util.Vector" %>
 <%@ page import="java.util.Iterator" %>
+<%
+ StringBuffer stateList = null;
+    String topic = "C";
+    String param = null;
+    String htmlString = null;
+    String caption = null;
+    String pageTitle = "";
 
+    param = request.getParameter("cctopic");
+    if (param != null)
+        // The database expects the topic to be an uppercase character.
+        // Uppercase it here so we don't have to uppercase it every time
+        // we use it.
+        topic = param.toUpperCase();
+  
+    QueryBean QBean = new QueryBean();
+    // Find the page title to use based on the topic
+    String topicTitle = QBean.getTopicDescription(topic);
+    pageTitle = "Locate " + topicTitle + " Partners in Your State or Region";
+    caption = "Cancer Control PLANET - " + topicTitle;
+
+    String typeString = "S";
+	%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 
 <html>
@@ -49,27 +71,7 @@
 <tr>
 	<td valign='top'>
 	<%
-    StringBuffer stateList = null;
-    String topic = "C";
-    String param = null;
-    String htmlString = null;
-    String caption = null;
-    String pageTitle = "";
-
-    param = request.getParameter("cctopic");
-    if (param != null)
-        // The database expects the topic to be an uppercase character.
-        // Uppercase it here so we don't have to uppercase it every time
-        // we use it.
-        topic = param.toUpperCase();
-  
-    QueryBean QBean = new QueryBean();
-    // Find the page title to use based on the topic
-    String topicTitle = QBean.getTopicDescription(topic);
-    pageTitle = "Locate " + topicTitle + " Partners in Your State or Region";
-    caption = "Cancer Control PLANET - " + topicTitle;
-
-    String typeString = "S";
+   
 
     
     Vector states = QBean.getStateList();
