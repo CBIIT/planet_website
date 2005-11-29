@@ -63,7 +63,8 @@
                  myChart.returnDescriptiveLink = false;
                 myChart.userAgent = request.getHeader("USER-AGENT");
                 htmlString = myChart.getEmbeddingHTML();
-				out.println ("the chart is " + htmlstring);
+				
+				out.println ("the chart is " + htmlString);
 				stateList.append("</tr><tr><th colspan='2' align='left' valign='top' nowrap bgcolor='#F1F1FD'>TERRITORIES/TRIBES</th></tr><tr><td valign='top' bgcolor='#F1F1FD' nowrap>");
             }
 			
