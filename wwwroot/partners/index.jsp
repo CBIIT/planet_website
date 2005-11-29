@@ -121,7 +121,7 @@
 			if (count > 0 && count != 26 && count !=51 && count !=55)
                 stateList.append("<br />");
 				
-				out.println (stateList.toString());
+				
 				
            /* comment out 10/26/2005
 		   
