@@ -43,7 +43,28 @@
 		   
            StateBean rs = (StateBean)it2.next();
 		   
-		   if (count == 26) {
+		     if (count == 26) {
+                stateList.append("</td><td valign='top' bgcolor='#F1F1FD' nowrap>");
+                //count = 0;
+            }
+			
+             if (count == 51) {
+              	stateList.append("</td></tr>");
+				stateList.append("<tr><th colspan='2' bgcolor='#F1F1FD'>&nbsp;</th></tr>");
+				stateList.append("<tr><th colspan='2' align='left' valign='top' nowrap bgcolor='#F1F1FD'>TERRITORIES/TRIBES</th></tr><tr><td valign='top' bgcolor='#F1F1FD' nowrap>");
+                //count = 0;
+            }
+			
+			if (count == 56) {
+                stateList.append("</td><td valign='top' bgcolor='#F1F1FD' nowrap>");
+				//count = 0;
+            }
+			
+			if (count > 0 && count != 26 && count !=51  && count !=56)
+                stateList.append("<br />");
+				
+		   
+		 /*  if (count == 26) {
                 stateList.append("</td><td valign='top' bgcolor='#F1F1FD' nowrap>");
                 //count = 0;
             }
@@ -61,7 +82,7 @@
             }
 			
 			if (count > 0 && count != 26 && count !=51 & count !=56)
-                stateList.append("<br />");
+                stateList.append("<br />"); */
           
 		  /* if (count > 27)
            {
