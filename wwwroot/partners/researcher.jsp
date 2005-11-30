@@ -36,7 +36,7 @@
         stateList = new StringBuffer();
         int count= 0;
 		//stateList.append("<tr><th colspan='2' align='left' valign='top' nowrap bgcolor='#F1F1FD'>STATES</th><th align='left' valign='top' bgcolor='#F1F1FD' nowrap>TERRITORIES/TRIBES</th></tr><tr><td valign='top' bgcolor='#F1F1FD' nowrap>");
-        stateList.append("<table border='1' cellpadding='5' cellspacing='0'><tr><th colspan='2' align='left' valign='top' nowrap bgcolor='#F1F1FD'>STATES</th></tr><tr><td valign='top' nowrap  bgcolor='#F1F1FD'>");
+        stateList.append("<table border='0' cellpadding='5' cellspacing='0'><tr><th colspan='2' align='left' valign='top' nowrap bgcolor='#F1F1FD'>STATES</th></tr><tr><td valign='top' nowrap bgcolor='#F1F1FD'>");
 
         do
         {
@@ -52,7 +52,7 @@
               	stateList.append("</td></tr>");
 				stateList.append("<tr><th colspan='2' bgcolor='#F1F1FD'>&nbsp;</th></tr>");
 				stateList.append("<tr><th colspan='2' align='left' valign='top' nowrap bgcolor='#F1F1FD'>TERRITORIES/TRIBES</th></tr><tr><td valign='top' bgcolor='#F1F1FD' nowrap>");
-			    //count = 0;
+                //count = 0;
             }
 			
 			if (count == 56) {
@@ -119,9 +119,9 @@
   </tr>
 </table>
 
-<table summary="Links to potential partner list" bgcolor="white" border="1" cellpadding="5" cellspacing="0">
+<table summary="Links to potential partner list" bgcolor="white" border="0" cellpadding="5" cellspacing="0">
 <tr>
-	<td colspan="2">
+	<td align="left" colspan="2">
 	<h3>Research Partners in Cancer Control</h3>
 
       <div style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;">
