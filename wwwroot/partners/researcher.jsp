@@ -67,13 +67,13 @@
            {
                stateList.append("</td><td valign='bottom' bgcolor='F1F1FD'>");
                count = 0;
-           } */
+           } 
          
 		  if (typeString.compareTo(rs.getType()) != 0)
            {
                stateList.append("<br />");
                typeString = rs.getType();
-           }
+           }*/
            //stateList.append("\n<br /><a href='rlist.jsp?r="+rs.getAbbreviation()+"&cctopic="+topic+"' class='a1'>"+rs.getName()+"</a>");
           stateList.append("\n<a href='rlist.jsp?r="+rs.getAbbreviation()+"&cctopic="+topic+"' class='a1'>"+rs.getName()+"</a>");
 		   
@@ -137,9 +137,8 @@
 <tr>
 	<td valign='top'><%= stateList.toString()%><br /></td>
 	<td valign='top'><%= htmlString%><br /></td>
-</tr>
 <tr>
-	<td colspan="3"><a href='rlist.jsp?r=ALL&cctopic=<%= topic %>'>View all U.S. Researchers by topic area</a></td>
+	<td colspan="3"><a href='rlist.jsp?r=ALL&cctopic=<%= topic %>'>View all U.S. Researchers by topic area</a><br /></td>
 </tr>
 <tr>
 	<td colspan="3">The list of research partners was compiled based on those individuals who had received a grant during the fiscal year period from 1998-2003 and who have permitted their contact information to be listed as a resource for comprehensive cancer control planning and implementation within their state.
