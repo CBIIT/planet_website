@@ -23,7 +23,7 @@
     QueryBean QBean = new QueryBean();
     // Find the page title to use based on the topic
     String topicTitle = QBean.getTopicDescription(ccTopic);
-    pageTitle = "Locate " + topicTitle + " Partners in Your State or Region.";
+    pageTitle = "Locate " + topicTitle + " Partners in Your State or Region";
     caption = "Cancer Control PLANET - " + topicTitle;
 
     String typeString = "S";
@@ -60,7 +60,7 @@
 				//count = 0;
             }
 			
-			if (count > 0 && count != 26 && count !=51 & count !=56)
+			if (count > 0 && count != 26 && count !=51 && count !=56)
                 stateList.append("<br />"); 
           
 		  /* if (count > 27)
