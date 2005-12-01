@@ -79,9 +79,8 @@
 		   
 		   count++;
       } while (it2.hasNext());
-   	stateList.append("</td></tr>");
-	//stateList.append("</td>");
-    }
+   	stateList.append("</td></tr></table>");
+	}
 
     NCIPopChartEmbedder myChart = new NCIPopChartEmbedder();
     myChart.appearanceFile = "apfiles/planet/ccpmap.pcxml";
