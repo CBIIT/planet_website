@@ -85,18 +85,16 @@
     }
     
     
-    
-
     NCIPopChartEmbedder myChart = new NCIPopChartEmbedder();
     myChart.appearanceFile = "apfiles/planet/ccpmap.pcxml";
-    myChart.pcScript = "US.addPCXML(<DefaultShapeSettings><Drilldown URL='list.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultShapeSettings>)";
+    myChart.pcScript = "US.addPCXML(<DefaultShapeSettings><Drilldown URL='rlist.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultShapeSettings>)";
     myChart.height = 449;
     myChart.width = 629;
     myChart.imageType = "FLASH";
     myChart.fallback = "STRICT";
     myChart.returnDescriptiveLink = false;
     myChart.userAgent = request.getHeader("USER-AGENT");
-    htmlString = myChart.getEmbeddingHTML();
+    htmlString = myChart.getEmbeddingHTML(); 
 %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 
@@ -108,8 +106,9 @@
 <body topmargin="0" leftmargin="0" bgcolor="White">
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
-    <td><p class="banner"><a href="../index.html"><img src="../images/planet_logo.gif" alt="Cancer Control PLANET - Plan, Link, Act, Network with Evidence-based Tools" width="169" height="87" border="0"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p></td>    <td><a href="../index.html"><img src="../images/planet_banner_wider.gif" alt="Cancer Control PLANET - Links to comprehensive cancer control resources for public health professionals" width="500" height="82" border="0"></a></td>
-<td><p><a href="../index.html">Home</a><br>
+    <td><p class="banner"><a href="../index.html"><img src="../images/planet_logo.gif" alt="Cancer Control PLANET - Plan, Link, Act, Network with Evidence-based Tools" width="169" height="87" border="0"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p></td>
+    <td><a href="../index.html"><img src="../images/planet_banner_wider.gif" alt="Cancer Control PLANET - Links to comprehensive cancer control resources for public health professionals" width="500" height="82" border="0"></a></td>
+    <td><p><a href="../index.html">Home</a><br>
         <a href="../contact.html">Contact Us</a><br>
 	<a href="about.html">About This Site</a><br>
         <a href="../factsheet.pdf">Fact Sheet (PDF)</a><br>
@@ -123,7 +122,7 @@
   </tr>
 </table>
 
-<table summary="Links to potential partner list" bgcolor="white" border="1" cellpadding="5" cellspacing="0" width="80%">
+<table summary="Links to potential partner list" bgcolor="white" border="0" cellpadding="5" cellspacing="0" width="90%">
 <tr>
 	<td align="left" colspan="2">
 	<h3>Research Partners in Cancer Control</h3>
