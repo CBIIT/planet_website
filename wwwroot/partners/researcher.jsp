@@ -38,7 +38,7 @@
         stateList = new StringBuffer();
         int count= 0;
 		//stateList.append("<tr><th colspan='2' align='left' valign='top' nowrap bgcolor='#F1F1FD'>STATES</th><th align='left' valign='top' bgcolor='#F1F1FD' nowrap>TERRITORIES/TRIBES</th></tr><tr><td valign='top' bgcolor='#F1F1FD' nowrap>");
-        stateList.append("<table border='0'  width='100%' cellpadding='5' cellspacing='0'><tr><th colspan='2' align='left' valign='top' nowrap bgcolor='#F1F1FD'>STATES</th></tr><tr><td valign='top' nowrap bgcolor='#F1F1FD'>");
+        stateList.append("<table border='0' cellpadding='5' cellspacing='0'><tr><th colspan='2' align='left' valign='top' nowrap bgcolor='#F1F1FD'>STATES</th></tr><tr><td valign='top' nowrap bgcolor='#F1F1FD'>");
 
 
         do
@@ -126,16 +126,12 @@
 <table summary="Links to potential partner list" bgcolor="white" border="1" cellpadding="5" cellspacing="0" width="80%">
 <tr>
 	<td align="left" colspan="2">
-	<h3>Program Partners in Cancer Control</h3>
-	
-        <%--= pageTitle--%>
-	 <div style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;">
-		<p><strong>To view, click on map or state name below.</strong></p>
-	</div>
-	    <p>To locate research partners in your state or region go to the  <a href="researcher.jsp?cctopic=0">research partners</a> page.</p>
-		
-	</div>
-	<!--<br />-->
+	<h3>Research Partners in Cancer Control</h3>
+
+      <div style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;">
+        <p>To view, click on map or state name below.</p>
+	 </div>
+      <p>To locate program partners in your state or region go to the <a href="">Program Partners</a> page.</p>
 	</td>
 </tr>
 <tr>
