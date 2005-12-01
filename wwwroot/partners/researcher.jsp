@@ -36,7 +36,7 @@
         stateList = new StringBuffer();
         int count= 0;
 		//stateList.append("<tr><th colspan='2' align='left' valign='top' nowrap bgcolor='#F1F1FD'>STATES</th><th align='left' valign='top' bgcolor='#F1F1FD' nowrap>TERRITORIES/TRIBES</th></tr><tr><td valign='top' bgcolor='#F1F1FD' nowrap>");
-        stateList.append("<table border='0' cellpadding='5' cellspacing='0'><tr><th colspan='2' align='left' valign='top' nowrap bgcolor='#F1F1FD'>STATES</th></tr><tr><td valign='top' nowrap bgcolor='#F1F1FD'>");
+        stateList.append("<table border='1' cellpadding='5' cellspacing='0'><tr><th colspan='2' align='left' valign='top' nowrap bgcolor='#F1F1FD'>STATES</th></tr><tr><td valign='top' nowrap bgcolor='#F1F1FD'>");
 
         do
         {
@@ -50,9 +50,8 @@
              
 			if (count == 51) {
 			 //stateList.append("</td><td valign='top' bgcolor='#F1F1FD' nowrap>");
-              stateList.append("</td></tr><tr><th colspan='2' bgcolor='#F1F1FD'>&nbsp;</th></tr>");
-				//stateList.append("<tr><th colspan='2' bgcolor='#F1F1FD'>&nbsp;</th></tr>");
-				stateList.append("<tr><th colspan='2' align='left' valign='top' nowrap bgcolor='#F1F1FD'>TERRITORIES/TRIBES</th></tr><tr><td valign='top' bgcolor='#F1F1FD' nowrap>");
+              stateList.append("</td></tr><tr><td colspan='2' bgcolor='#F1F1FD'>&nbsp;</td></tr>");
+			  stateList.append("<tr><th colspan='2' align='left' valign='top' nowrap bgcolor='#F1F1FD'>TERRITORIES/TRIBES</th></tr><tr><td valign='top' bgcolor='#F1F1FD' nowrap>");
                 //count = 0;
             }
 			
@@ -62,8 +61,7 @@
             }
 			
 			if (count > 0 && count != 26 && count !=51 && count !=56)
-			//if (count > 0 && count != 26 && count !=51)
-                stateList.append("<br />"); 
+			    stateList.append("<br />"); 
           
 		  /* if (count > 27)
            {
