@@ -81,7 +81,7 @@
 		   
 		   count++;
       } while (it2.hasNext());
-   	stateList.append("</td>");
+   	stateList.append("</td></tr></table>");
 	}
 	
 		
