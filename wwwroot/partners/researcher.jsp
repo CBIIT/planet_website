@@ -38,7 +38,7 @@
         stateList = new StringBuffer();
         int count= 0;
 		//stateList.append("<tr><th colspan='2' align='left' valign='top' nowrap bgcolor='#F1F1FD'>STATES</th><th align='left' valign='top' bgcolor='#F1F1FD' nowrap>TERRITORIES/TRIBES</th></tr><tr><td valign='top' bgcolor='#F1F1FD' nowrap>");
-        stateList.append("<table border='0' cellpadding='5' cellspacing='0'><tr><th colspan='2' align='left' valign='top' nowrap bgcolor='#F1F1FD'>STATES</th></tr><tr><td valign='top' nowrap bgcolor='#F1F1FD'>");
+        stateList.append("<table border='0'  width='100%' cellpadding='5' cellspacing='0'><tr><th colspan='2' align='left' valign='top' nowrap bgcolor='#F1F1FD'>STATES</th></tr><tr><td valign='top' nowrap bgcolor='#F1F1FD'>");
 
 
         do
@@ -123,7 +123,7 @@
   </tr>
 </table>
 
-<table summary="Links to potential partner list" bgcolor="white" border="1" cellpadding="5" cellspacing="0">
+<table summary="Links to potential partner list" bgcolor="white" border="1" cellpadding="5" cellspacing="0" width="80%">
 <tr>
 	<td align="left" colspan="2">
 	<h3>Program Partners in Cancer Control</h3>
