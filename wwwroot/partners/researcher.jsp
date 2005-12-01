@@ -143,7 +143,8 @@
 	<td valign='top'><%= htmlString%><br></td>
 <tr>
 	<td colspan="3"><a href="rlist.jsp?r=ALL&cctopic=<%= topic %>">View all U.S. Researchers by topic area</a>
-	<p>The list of research partners was compiled based on those individuals who had received a grant during the fiscal year period from 1998-2003 and who have permitted their contact information to be listed as a resource for comprehensive cancer control planning and implementation within their state.</p>
+	<!--<p>The list of research partners was compiled based on those individuals who had received a grant during the fiscal year period from 1998-2003 and who have permitted their contact information to be listed as a resource for comprehensive cancer control planning and implementation within their state.</p>-->
+	</td>
 </tr>
 </table>
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
