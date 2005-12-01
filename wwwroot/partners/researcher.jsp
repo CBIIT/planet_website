@@ -35,8 +35,8 @@
     {
         stateList = new StringBuffer();
         int count= 0;
-		stateList.append("<tr><th colspan='2' align='left' valign='top' nowrap bgcolor='#F1F1FD'>STATES</th><th align='left' valign='top' bgcolor='#F1F1FD' nowrap>TERRITORIES/TRIBES</th></tr><tr><td valign='top' bgcolor='#F1F1FD' nowrap>");
-       // stateList.append("<table border='0' cellpadding='5' cellspacing='0'><tr><th colspan='2' align='left' valign='top' nowrap bgcolor='#F1F1FD'>STATES</th></tr><tr><td valign='top' nowrap bgcolor='#F1F1FD'>");
+		//stateList.append("<tr><th colspan='2' align='left' valign='top' nowrap bgcolor='#F1F1FD'>STATES</th><th align='left' valign='top' bgcolor='#F1F1FD' nowrap>TERRITORIES/TRIBES</th></tr><tr><td valign='top' bgcolor='#F1F1FD' nowrap>");
+        stateList.append("<table border='0' cellpadding='5' cellspacing='0'><tr><th colspan='2' align='left' valign='top' nowrap bgcolor='#F1F1FD'>STATES</th></tr><tr><td valign='top' nowrap bgcolor='#F1F1FD'>");
 
         do
         {
@@ -50,8 +50,8 @@
              
 			if (count == 51) {
 			 //stateList.append("</td><td valign='top' bgcolor='#F1F1FD' nowrap>");
-              stateList.append("</td></tr>");
-				stateList.append("<tr><th colspan='2' bgcolor='#F1F1FD'>&nbsp;</th></tr>");
+              stateList.append("</td></tr><tr><th colspan='2' bgcolor='#F1F1FD'>&nbsp;</th></tr>");
+				//stateList.append("<tr><th colspan='2' bgcolor='#F1F1FD'>&nbsp;</th></tr>");
 				stateList.append("<tr><th colspan='2' align='left' valign='top' nowrap bgcolor='#F1F1FD'>TERRITORIES/TRIBES</th></tr><tr><td valign='top' bgcolor='#F1F1FD' nowrap>");
                 //count = 0;
             }
@@ -81,8 +81,8 @@
 		   
 		   count++;
       } while (it2.hasNext());
-    stateList.append("</td>");
-	//stateList.append("</td></tr></table>");
+   // stateList.append("</td>");
+	stateList.append("</td></tr></table>");
     }
 
     NCIPopChartEmbedder myChart = new NCIPopChartEmbedder();
