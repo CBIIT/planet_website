@@ -35,7 +35,7 @@
     {
         stateList = new StringBuffer();
         //stateList.append("<tr><th colspan='2' align='left' valign='top' nowrap bgcolor='#F1F1FD'>STATES</th><th align='left' valign='top' bgcolor='#F1F1FD' nowrap>TERRITORIES/TRIBES</th></tr><tr><td valign='top' bgcolor='#F1F1FD' nowrap>");
-        stateList.append("<table border='1' cellpadding='5' cellspacing='0' bgcolor='#F1F1FD'><tr><th colspan='2' align='left' valign='top' nowrap bgcolor='#F1F1FD'>STATES</th></tr><tr><td valign='top' nowrap bgcolor='#F1F1FD'>");
+        stateList.append("<table border='0' cellpadding='5' cellspacing='0'><tr><th colspan='2' align='left' valign='top' nowrap bgcolor='#F1F1FD'>STATES</th></tr><tr><td valign='top' nowrap bgcolor='#F1F1FD'>");
         int count= 0;
 		
         do
@@ -49,8 +49,7 @@
             }
              
 			if (count == 51) {
-			 //stateList.append("</td><td valign='top' bgcolor='#F1F1FD' nowrap>");
-              stateList.append("</td></tr><tr><td colspan='2' bgcolor='#F1F1FD'>&nbsp;</td></tr>");
+			  stateList.append("</td></tr><tr><td colspan='2' bgcolor='#F1F1FD'>&nbsp;</td></tr>");
 			  stateList.append("<tr><th colspan='2' align='left' valign='top' nowrap bgcolor='#F1F1FD'>TERRITORIES/TRIBES</th></tr><tr><td valign='top' bgcolor='#F1F1FD' nowrap>");
                 //count = 0;
             }
@@ -62,8 +61,10 @@
 			
 			if (count > 0 && count != 26 && count !=51 && count !=56)
 			    stateList.append("<br />"); 
-          
-		  /* if (count > 27)
+				
+				
+							
+	     /* if (count > 27)
            {
                stateList.append("</td><td valign='bottom' bgcolor='F1F1FD'>");
                count = 0;
@@ -81,9 +82,11 @@
       } while (it2.hasNext());
    	stateList.append("</td></tr></table>");
 	}
-
-
-  
+	
+	
+	
+	
+	  
     NCIPopChartEmbedder myChart = new NCIPopChartEmbedder();
     myChart.appearanceFile = "apfiles/planet/ccpmap.pcxml";
     myChart.pcScript = "US.addPCXML(<DefaultShapeSettings><Drilldown URL='rlist.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultShapeSettings>)";
