@@ -125,7 +125,7 @@
 
 <table summary="Links to potential partner list" bgcolor="white" border="1" cellpadding="5" cellspacing="0">
 <tr>
-	<td align="left" colspan="3">
+	<td align="left" colspan="2">
 	<h3>Research Partners in Cancer Control</h3>
 
       <div style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;">
@@ -137,7 +137,7 @@
 <tr>
 	<td valign="top"><%= stateList.toString()%><br /></td>
 	<td valign="top"><%= htmlString%><br></td>
-	<td valign="top">&nbsp;</td>
+	<td>&nbsp;</td>
 </tr>
 <tr>
 	<td colspan="2"><a href="rlist.jsp?r=ALL&cctopic=<%= topic %>">View all U.S. Researchers by topic area</a><br /><br /></td>
