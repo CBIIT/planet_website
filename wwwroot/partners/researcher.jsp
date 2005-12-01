@@ -125,7 +125,7 @@
 
 <table summary="Links to potential partner list" bgcolor="white" border="0" cellpadding="5" cellspacing="0">
 <tr>
-	<td align="left" colspan="3">
+	<td align="left" colspan="2">
 	<h3>Program Partners in Cancer Control</h3>
 	
         <%--= pageTitle--%>
@@ -142,8 +142,9 @@
 	<td valign='top'><%= stateList.toString()%><br /></td>
 	<td valign='top'><%= htmlString%><br></td>
 <tr>
-	<td colspan="3"><a href="rlist.jsp?r=ALL&cctopic=<%= topic %>">View all U.S. Researchers by topic area</a>
-	<!--<p>The list of research partners was compiled based on those individuals who had received a grant during the fiscal year period from 1998-2003 and who have permitted their contact information to be listed as a resource for comprehensive cancer control planning and implementation within their state.</p>-->
+	<td colspan="2"><a href="rlist.jsp?r=ALL&cctopic=<%= topic %>">View all U.S. Researchers by topic area</a>
+	<br /><br/>
+	The list of research partners was compiled based on those individuals who had received a grant during the fiscal year period from 1998-2003 and who have permitted their contact information to be listed as a resource for comprehensive cancer control planning and implementation within their state.
 	</td>
 </tr>
 </table>
