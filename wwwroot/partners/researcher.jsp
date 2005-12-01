@@ -145,7 +145,7 @@
 	<td colspan="2"><a href="rlist.jsp?r=ALL&cctopic=<%= topic %>">View all U.S. Researchers by topic area</a></td>
 </tr>
 <tr> 
-    <td></td>
+    <td colspan="2">test</td>
 </tr>
 </table>
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
