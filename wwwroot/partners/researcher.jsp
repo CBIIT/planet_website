@@ -34,10 +34,10 @@
     if (it2.hasNext())
     {
         stateList = new StringBuffer();
-        int count= 0;
-		//stateList.append("<tr><th colspan='2' align='left' valign='top' nowrap bgcolor='#F1F1FD'>STATES</th><th align='left' valign='top' bgcolor='#F1F1FD' nowrap>TERRITORIES/TRIBES</th></tr><tr><td valign='top' bgcolor='#F1F1FD' nowrap>");
+        //stateList.append("<tr><th colspan='2' align='left' valign='top' nowrap bgcolor='#F1F1FD'>STATES</th><th align='left' valign='top' bgcolor='#F1F1FD' nowrap>TERRITORIES/TRIBES</th></tr><tr><td valign='top' bgcolor='#F1F1FD' nowrap>");
         stateList.append("<table border='1' cellpadding='5' cellspacing='0' bgcolor='#F1F1FD'><tr><th colspan='2' align='left' valign='top' nowrap bgcolor='#F1F1FD'>STATES</th></tr><tr><td valign='top' nowrap bgcolor='#F1F1FD'>");
-
+        int count= 0;
+		
         do
         {
 		   
@@ -79,8 +79,8 @@
 		   
 		   count++;
       } while (it2.hasNext());
-   //stateList.append("</td>");
-	stateList.append("</td></tr></table>");
+   	stateList.append("</td></tr></table>");
+	//stateList.append("</td>");
     }
 
     NCIPopChartEmbedder myChart = new NCIPopChartEmbedder();
@@ -92,7 +92,8 @@
     myChart.fallback = "STRICT";
     myChart.returnDescriptiveLink = false;
     myChart.userAgent = request.getHeader("USER-AGENT");
-    htmlString = myChart.getEmbeddingHTML();%>
+    htmlString = myChart.getEmbeddingHTML();
+%>
 	
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
