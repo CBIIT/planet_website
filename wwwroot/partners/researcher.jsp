@@ -14,21 +14,19 @@
     String pageTitle = "";
 
     param = request.getParameter("cctopic");
+	
     if (param != null)
-        // The database expects the topic to be an uppercase character.
-        // Uppercase it here so we don't have to uppercase it every time
-        // we use it.
-        topic = param.toUpperCase();
-  
+       topic = Integer.parseInt(param);
+		ccTopic = new Integer(topic);
+
     QueryBean QBean = new QueryBean();
     // Find the page title to use based on the topic
-    String topicTitle = QBean.getTopicDescription(topic);
+    String topicTitle = QBean.getTopicDescription(ccTopic);
     pageTitle = "Locate " + topicTitle + " Partners in Your State or Region";
     caption = "Cancer Control PLANET - " + topicTitle;
 
     String typeString = "S";
 
-    
     Vector states = QBean.getStateList();
     Iterator it2 = states.iterator();
 	
@@ -77,7 +75,8 @@
                stateList.append("<br />");
                typeString = rs.getType();
            } */
-           stateList.append("\n<a href='list.jsp?r="+rs.getAbbreviation()+"&cctopic="+topic+"' class='a1'>"+rs.getName()+"</a>");
+              //stateList.append("\n<br /><a href='rlist.jsp?r="+rs.getAbbreviation()+"&cctopic="+topic+"' class='a1'>"+rs.getName()+"</a>");
+           stateList.append("\n<a href='rlist.jsp?r="+rs.getAbbreviation()+"&cctopic="+topic+"' class='a1'>"+rs.getName()+"</a>");
            count++;
       } while (it2.hasNext());
     //stateList.append("</td>");
