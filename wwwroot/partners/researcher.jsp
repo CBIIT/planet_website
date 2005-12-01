@@ -7,9 +7,10 @@
 <%@ page import="java.util.Iterator" %>
 <%
     StringBuffer stateList = null;
-    String topic = "C";
+	int topic = 0;
+	Integer ccTopic = new Integer(0);
     String param = null;
-    String htmlString = null;
+	String htmlString = null;
     String caption = null;
     String pageTitle = "";
 
