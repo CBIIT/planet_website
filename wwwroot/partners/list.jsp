@@ -210,7 +210,7 @@ topicNum = QBean.getTopicID(topic);
                 outString.append(endTD);
             }
             if (rs.getTitle() != null && rs.getTitle().compareTo("") != 0)
-                outString.append(beginTD+rs.getTitle().trim()+endTD);
+                outString.append(beginTD+ "<b>" + rs.getTitle().trim()+ "/b>" + endTD);
 
             if (rs.getOrg1() != null && rs.getOrg1().compareTo("") != 0)
                 outString.append(beginTD+rs.getOrg1().trim()+endTD);
