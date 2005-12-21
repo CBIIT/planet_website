@@ -403,7 +403,7 @@ topicNum = QBean.getTopicID(topic);
 <td valign="top" colspan="3" style="font-family : Arial, Helvetica, Verdana, Geneva, sans-serif; font-size: 14px;	font-weight: bold; color: #000000;">View Program Partners in another state / territory:</td>
 </tr>
 <tr>
-<td valign='top' nowrap>
+<td valign='top'>
 < stateList.toString()%>
 </td>
 </tr>
