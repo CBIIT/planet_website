@@ -129,7 +129,7 @@ topicNum = QBean.getTopicID(topic);
                 partnerString = rs.getPartnerAbbreviation();
                 typeString = rs.getType();
 				typeDesc = rs.getTypeDescription();
-                outString.append("<p><table border='0' cellspacing='0' cellpadding='0' width='100%'>");
+                outString.append("<p><table border='1' cellspacing='0' cellpadding='0' width='100%'>");
                 
                 outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'>"+rs.getPartnerName()+endTD);
                 //outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;fon align='left'>"+rs.getPartnerName()+endTD);
@@ -298,7 +298,7 @@ topicNum = QBean.getTopicID(topic);
     if (it2.hasNext())
     {
         stateList = new StringBuffer();
-		//stateList.append("<table border='0' cellpadding='5' cellspacing='0'><tr><th colspan='2' align='left' valign='top'>STATES</th><th align='left' valign='top' nowrap>TERRITORIES/TRIBES</th></tr><tr><td valign='top' nowrap>");
+		//stateList.append("<table border='0' cellpadding='5' cellspacing='0'><tr><th colspan='2' align='left' valign='top' nowrap>STATES</th><th align='left' valign='top' nowrap>TERRITORIES/TRIBES</th></tr><tr><td valign='top' nowrap>");
         stateList.append("<table border='0' cellpadding='5' cellspacing='0'><tr><th colspan='2' align='left' valign='top' nowrap>STATES</th></tr><tr><td valign='top' nowrap>");
 		String typeString = "S";
         int count= 0;
