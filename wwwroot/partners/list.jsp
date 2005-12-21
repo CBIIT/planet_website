@@ -335,7 +335,7 @@ topicNum = QBean.getTopicID(topic);
                 stateList.append("<br />");
                 
              //if (count > 0 && count != 26 && count !=51 && count !=56)
-               if (count > 51 &&  count !=58){
+               if (count > 51){
                 stateList.append("<br /><br />");
                 }
             }
