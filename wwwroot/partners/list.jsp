@@ -428,7 +428,7 @@ topicNum = QBean.getTopicID(topic);
 </table>
 </table> -->
 
-<table bgcolor="white" border="1" cellpadding="0" cellspacing="0">
+<table bgcolor="white" border="0" cellpadding="0" cellspacing="0">
 <tr>
 <td valign="top" align="left" colspan="3"><div style="font-family : Arial, Helvetica, Verdana, Geneva, sans-serif; font-size: 20px; font-weight: bold; color: #000000;"><%= partnerText%></div><br>
 <p>To locate research partners in <%= stateStatic%> go to the  <a href="rlist.jsp?r=<%= region%>&cctopic=<%= topicNum%>">research partners</a> page.</p>
@@ -440,8 +440,8 @@ topicNum = QBean.getTopicID(topic);
 <td colspan="5">&nbsp;</td>
 </tr>
 <tr>
-<td valign="top" width="25%" bgcolor="#F1F1FD"><%= stateList.toString()%></td>
-<td valign="top" width="5%" bgcolor="#F1F1FD">&nbsp;</td>
+<td valign="top" width="28%" bgcolor="#F1F1FD"><%= stateList.toString()%></td>
+<td valign="top" width="2%">&nbsp;</td>
 <td valign="top" width="25%"><%= outString.toString()%></td>
 <td valign="top" width="5%">&nbsp;</td>
 <td valign="top" width="40%"><%= htmlString%></td>
