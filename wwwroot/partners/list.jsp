@@ -298,7 +298,7 @@ topicNum = QBean.getTopicID(topic);
     if (it2.hasNext())
     {
         stateList = new StringBuffer();
-		//stateList.append("<table border='0' cellpadding='5' cellspacing='0'><tr><th colspan='2' align='left' valign='top' nowrap>STATES</th><th align='left' valign='top' nowrap>TERRITORIES/TRIBES</th></tr><tr><td valign='top' nowrap>");
+		//stateList.append("<table border='0' cellpadding='5' cellspacing='0' width='100%'><tr><th colspan='2' align='left' valign='top' nowrap>STATES</th><th align='left' valign='top' nowrap>TERRITORIES/TRIBES</th></tr><tr><td valign='top' nowrap>");
         stateList.append("<table border='1' cellpadding='5' cellspacing='0'><tr><th colspan='2' align='left' valign='top' width='100%'>STATES</th></tr><tr><td valign='top' nowrap>");
 		String typeString = "S";
         int count= 0;
@@ -320,9 +320,10 @@ topicNum = QBean.getTopicID(topic);
 				stateList.append("<tr><th colspan='2' align='left' valign='top' bgcolor='#F1F1FD'>TERRITORIES/TRIBES</th></tr><tr><td valign='top' colspan='2'  bgcolor='#F1F1FD'>");
                 //count = 0;
             }
-			
+
+			//comment out 01/10/2005
 			//if (count == 56) {
-             //   stateList.append("</td><td valign='top' colspan='2' bgcolor='#F1F1FD'>");
+            //   stateList.append("</td><td valign='top' colspan='2' bgcolor='#F1F1FD'>");
 			// }
             
 			//if (typeString.compareTo(rs.getType()) != 0) {
