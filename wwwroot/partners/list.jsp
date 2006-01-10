@@ -350,7 +350,7 @@ topicNum = QBean.getTopicID(topic);
 			count++;
         } while (it2.hasNext());
 
-        stateList.append("</td></tr><tr><td colspan=2><a href='list.jsp?r=ALL&cctopic=" + topic + "' title=\"All states and regions\">View All U.S. Partners</a></td></tr></table>");
+        stateList.append("<br/><br/></td></tr><tr><td colspan=2><a href='list.jsp?r=ALL&cctopic=" + topic + "' title=\"All states and regions\">View All U.S. Partners</a></td></tr></table>");
     }
 
 		pageTitle = pageTitle + " - " + stateStatic;
