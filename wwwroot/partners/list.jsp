@@ -322,7 +322,7 @@ topicNum = QBean.getTopicID(topic);
             }
 			
 			if (count == 56) {
-                stateList.append("</td><td valign='top' bgcolor='#F1F1FD'>");
+                stateList.append("</td><td valign='top' colspan='2' bgcolor='#F1F1FD'>");
 				//count = 0;
             }
             
@@ -331,14 +331,15 @@ topicNum = QBean.getTopicID(topic);
             //    typeString = rs.getType();
             //}
 			
-            if (count > 0 && count != 26 && count !=51 && count !=56) {
-                stateList.append("<br />");
+            
+           //comment out 01/10/2005
+           //if (count > 0 && count != 26 && count !=51 && count !=56) {
+            //    stateList.append("<br />");
                 
-             //if (count > 0 && count != 26 && count !=51 && count !=56)
-               if (count > 51){
-                stateList.append("<br /><br />");
-                }
-            }
+             //    if (count > 51){
+             //   stateList.append("<br /><br />");
+             //   }
+           // }
 						
 			if (region.compareTo(rs.getAbbreviation()) == 0)
 				stateList.append("<font style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size : 12px; color : AA0000;'><strong>"+rs.getName().trim()+"</strong></font>");
