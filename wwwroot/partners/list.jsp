@@ -334,7 +334,8 @@ topicNum = QBean.getTopicID(topic);
             
            //comment out 01/10/2005
            //if (count > 0 && count != 26 && count !=51 && count !=56) {
-            //    stateList.append("<br />");
+           if (count > 0 && count != 26 && count !=51 ) {
+               stateList.append("<br />");
                 
              //    if (count > 51){
              //   stateList.append("<br /><br />");
