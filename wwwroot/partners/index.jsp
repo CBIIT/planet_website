@@ -38,7 +38,7 @@
         stateList = new StringBuffer();
         int count= 0;
 		//stateList.append("<tr><th colspan='2' align='left' valign='top' nowrap bgcolor='#F1F1FD'>STATES</th><th align='left' valign='top' bgcolor='#F1F1FD' nowrap>TERRITORIES/TRIBES</th></tr><tr><td valign='top' bgcolor='#F1F1FD' nowrap>");
-        stateList.append("<table border='0' cellpadding='5' cellspacing='0'><tr><th colspan='2' align='left' valign='top' nowrap bgcolor='#F1F1FD'>STATES</th></tr><tr><td valign='top' nowrap bgcolor='#F1F1FD'>");
+        stateList.append("<table border='0' cellpadding='5' cellspacing='0'><tr><th colspan='2' align='left' valign='top' nowrap>STATES</th></tr><tr><td valign='top' nowrap bgcolor='#F1F1FD'>");
 
 
         do
@@ -46,14 +46,14 @@
            StateBean rs = (StateBean)it2.next();
 		   
 		      if (count == 26) {
-                stateList.append("</td><td valign='top' bgcolor='#F1F1FD' nowrap>");
+                stateList.append("</td><td valign='top' nowrap>");
                 //count = 0;
             }
 			
              if (count == 51) {
               	stateList.append("</td></tr>");
-				stateList.append("<tr><th colspan='2' bgcolor='#F1F1FD'>&nbsp;</th></tr>");
-				stateList.append("<tr><th colspan='2' align='left' valign='top' nowrap bgcolor='#F1F1FD'>TERRITORIES/TRIBES</th></tr><tr><td valign='top' bgcolor='#F1F1FD' nowrap>");
+				stateList.append("<tr><th colspan='2' >&nbsp;</th></tr>");
+				stateList.append("<tr><th colspan='2' align='left' valign='top' nowrap>TERRITORIES/TRIBES</th></tr><tr><td valign='top' nowrap>");
                 //count = 0;
             }
 			
