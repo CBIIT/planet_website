@@ -283,17 +283,18 @@ if (param != null)
 				//count = 0;
             }
 			
-			if (count > 0 && count != 26 && count !=51 && count !=56)
-                stateList.append("<br />");
-
-           // if (count > 27)
-            //{
-            //    stateList.append("</td><td valign='top' nowrap>");
-           //     count = 0;
-           // }
-
-           // if (count > 0)
+			
+			//commented out 01/19/06
+			//if (count > 0 && count != 26 && count !=51 && count !=56)
               //  stateList.append("<br />");
+              if (count > 0 && count != 26 && count !=51 ) {
+               stateList.append("<br />");
+                
+             //    if (count > 51){
+             //   stateList.append("<br /><br />");
+             //   }
+            }
+        
 
 			if (region.compareTo(rs.getAbbreviation()) == 0)
 				stateList.append("<font style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	color : AA0000; font-size: 12px;'><strong>"+rs.getName().trim()+"</strong></font>");

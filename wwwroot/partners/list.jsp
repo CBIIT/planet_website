@@ -442,7 +442,7 @@ topicNum = QBean.getTopicID(topic);
 <td colspan="5">&nbsp;</td>
 </tr>
 <tr>
-<td valign="top" width="28%" bgcolor="#F1F1FD"><%= stateList.toString()%></td>
+<td valign="top" width="28%"><%= stateList.toString()%></td>
 <td valign="top" width="2%">&nbsp;</td>
 <td valign="top" width="28%"><%= outString.toString()%></td>
 <td valign="top" width="2%">&nbsp;</td>
