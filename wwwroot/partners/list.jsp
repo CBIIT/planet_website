@@ -441,12 +441,11 @@ topicNum = QBean.getTopicID(topic);
 <tr>
 <td colspan="5">&nbsp;</td>
 </tr>
- <tr>
-	<td valign="top" colspan="2"><div  style="font-family: Arial, Helvetica, Verdana, Geneva, sans-serif; font-size: 20px; font-weight: bold; color: #000000;"><%= researcherText%></div><br>
-	<p>To locate program partners in <%= stateStatic%> go to the <a href="list.jsp?r=<%= region%>&cctopic=<%= topicLet%>">Program Partners</a> page.</td>
-	<td valign="top" align="right">&nbsp;</td>
-  </tr>
-
+<tr>
+<td valign="top" width="28%"><%= stateList.toString()%></td>
+<td valign="top" width="2%">&nbsp;</td>
+<td valign="top" width="70%"><%= outString.toString()%></td>
+</tr>
 </table>
 
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
