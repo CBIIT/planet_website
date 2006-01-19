@@ -120,11 +120,11 @@ StringBuffer pcScript = null;
 <table summary="Links to state cancer control plans" bgcolor="white" border="0" cellpadding="5" cellspacing="0">
 <tr>
 <td align="left" colspan="3">
-<div style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 16px;	font-weight: bold;color : #000000;">
+<div style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif; font-size : 16px; font-weight: bold;color : #000000;">
 <%= pageTitle%>
 </div>
 
-<div style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;">
+<div style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif; font-size : 14px; font-weight: bold; color : #000000;">
 To view, click on map or state name below.
 </div>
 
