@@ -441,11 +441,17 @@ topicNum = QBean.getTopicID(topic);
 <tr>
 <td colspan="5">&nbsp;</td>
 </tr>
-<tr>
-<td valign="top" width="28%"><%= stateList.toString()%></td>
-<td valign="top" width="2%">&nbsp;</td>
-<td valign="top" width="70%"><%= outString.toString()%></td>
-</tr>
+</table>
+
+
+<table bgcolor="white" border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+	<td colspan="3">&nbsp;</td>
+  </tr>
+  <tr>
+	<td valign="top" style="font-family : Arial, Helvetica, Verdana, Geneva, sans-serif; font-size: 14px; font-weight: color : #000000;" nowrap bgcolor="F1F1FD"><%= stateList.toString()%></td>
+	<td valign="top" colspan="2" align="left"><table cellspacing="5"><%= topicString.toString()%></table><%= outString.toString()%></td>
+  </tr>
 </table>
 
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
