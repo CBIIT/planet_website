@@ -58,8 +58,11 @@ topicNum = QBean.getTopicID(topic);
     String beginTD = "<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;' align=\"left\">";
     String endTD = "</td></tr>";
     
-    
-    if (partners!=null)
+	//added 01/23/06
+    outString = new StringBuffer("<table border='0' cellspacing='0' cellpadding='5'><tr><td valign='top' colspan='2'>");
+ 	//end 01/23/06  
+
+ if (partners!=null)
     {
     	Iterator it = partners.iterator();
 	    outString = new StringBuffer();
@@ -285,6 +288,9 @@ topicNum = QBean.getTopicID(topic);
         } while (it.hasNext());
 
 		outString.append("</table>");
+		//added 01/23/06
+        outString.append("</td></tr></table>");
+
     } //end of if statement
 	else {
 		outString = new StringBuffer();
