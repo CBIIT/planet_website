@@ -154,7 +154,7 @@ if (param != null)
 				
                 researcherId = rs.getResearcherId();
                 researcherString = rs.getStateAbbreviation();
-                outString.append("<td valign='top'><table border='0' cellspacing='0' cellpadding='0'>");
+                outString.append("<td valign='top'><table border='1' cellspacing='0' cellpadding='0'>");
                 outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif; font-size: 12;font-weight: bold;color: #000000;' align='left' valign='top'>"+rs.getResearcherName());
 					
 					if (rs.getDegree() != null && rs.getDegree().compareTo("") != 0)
