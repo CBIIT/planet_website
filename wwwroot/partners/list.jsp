@@ -59,7 +59,7 @@ topicNum = QBean.getTopicID(topic);
     String endTD = "</td></tr>";
     
 	//added 01/23/06
-    outString = new StringBuffer("<table border='0' cellspacing='0' cellpadding='5'><tr><td valign='top' colspan='2'>");
+    outString = new StringBuffer("<table border='1' cellspacing='0' cellpadding='5'><tr><td valign='top' colspan='2'>");
  	//end 01/23/06  
 
  if (partners!=null)
@@ -87,7 +87,7 @@ topicNum = QBean.getTopicID(topic);
                 typeString = rs.getType();
                 stateName = rs.getStateName();
 				typeDesc = rs.getTypeDescription();
-                outString.append("<table border='0' cellspacing='0' cellpadding='0' width='100%'>");
+                outString.append("<table border='1' cellspacing='0' cellpadding='0' width='100%'>");
                 outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'><font style='font-family : Arial, Helvetica, Verdana, Geneva,  sans-serif;	font-size : 12px;	font-weight: bold; color : #AA0000;'>"+stateName+"</font><br><br>"+rs.getPartnerName()+endTD);
 
                 outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;font-style: normal;' align='left'>");
