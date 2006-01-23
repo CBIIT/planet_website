@@ -66,7 +66,7 @@ if (param != null)
     String endTD = "</td></tr>";
 	
 
-		outString = new StringBuffer("<table border='0' cellspacing='0' cellpadding='5'>");
+		outString = new StringBuffer("<table border='1' cellspacing='0' cellpadding='5'>");
 		topicString = new StringBuffer("<tr><td valign='top' style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size: 14px; font-weight: bold; color : #000000;' colspan='2'><a name='top'></a>View by Topic:</td></tr><tr><td valign='top' style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size : 12;'>");
 	
     if (researchers!=null)
