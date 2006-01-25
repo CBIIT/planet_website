@@ -59,10 +59,7 @@ topicNum = QBean.getTopicID(topic);
     String beginTD = "<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;' align=\"left\">";
     String endTD = "</td></tr>";
     
-	//added 01/23/06
-    outString = new StringBuffer("<table border='1' cellspacing='0' cellpadding='5'><tr><td valign='top' colspan='2'>");
- 	//end 01/23/06  
-
+	
  if (partners!=null)
     {
     	Iterator it = partners.iterator();
@@ -82,6 +79,11 @@ topicNum = QBean.getTopicID(topic);
             {
                 if (count > 1)
                     outString.append("</table></p>");
+
+
+//added 01/23/06
+    outString = new StringBuffer("<table border='1' cellspacing='0' cellpadding='5'><tr><td valign='top' colspan='2'>");
+ 	//end 01/23/06
 
                 partnerId = rs.getPartnerId();
                 partnerString = rs.getPartnerAbbreviation();
@@ -296,18 +298,21 @@ topicNum = QBean.getTopicID(topic);
 			typeDesc = rs.getTypeDescription();
             count ++;
 			addedContact = 0;
+
+
+		//added 01/23/06
+        outString.append("</td></tr></table>");
+		//end of 01/23/06
         } while (it.hasNext());
 
 		outString.append("</table>");
-		
-    } //end of if statement
+		} //end of if statement
 	else {
 		outString = new StringBuffer();
 		outString.append("No records found.");
 	}
 
-    //added 01/23/06
-        outString.append("</td></tr></table>");
+    
 
     Vector states = QBean.getStateList();
     
