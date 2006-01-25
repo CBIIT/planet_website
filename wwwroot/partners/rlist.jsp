@@ -228,7 +228,9 @@ if (param != null)
             }
 
 	         cellCount++;
-		     count ++;       
+		     count ++;    
+
+ outString.append("count: " + count + " cellcount: " + cellcount   
 	     } while (it.hasNext());
 
 		 topicString.append("</td></tr>");
