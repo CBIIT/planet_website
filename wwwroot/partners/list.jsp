@@ -299,14 +299,15 @@ topicNum = QBean.getTopicID(topic);
         } while (it.hasNext());
 
 		outString.append("</table>");
-		//added 01/23/06
-        outString.append("</td></tr></table>");
-
+		
     } //end of if statement
 	else {
 		outString = new StringBuffer();
 		outString.append("No records found.");
 	}
+
+    //added 01/23/06
+        outString.append("</td></tr></table>");
 
     Vector states = QBean.getStateList();
     
