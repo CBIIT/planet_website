@@ -20,6 +20,7 @@ String topicDesc = "";
 String partnerText = "";
 String typeDesc = "";
 int topicNum = 0;
+int cellCount = 0; //added 01/25/06
 
 if (param != null)
     region = param.toUpperCase();
@@ -282,6 +283,16 @@ topicNum = QBean.getTopicID(topic);
             }
 
             outString.append("<tr><td height='10'>&nbsp;</td></tr>");
+
+			
+					if (((cellCount % 2) != 0) && (count != 1))
+						outString.append("</tr>");
+					else {
+						outString.append("<td>&nbsp;</td></tr>");
+						cellCount++;
+						}
+
+
 			typeDesc = rs.getTypeDescription();
             count ++;
 			addedContact = 0;
