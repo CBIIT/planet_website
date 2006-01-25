@@ -132,7 +132,7 @@ if (param != null)
 						outString.append("<br />");
 					
 					outString.append("<a name='"+topicID+"'></a>"+topicDesc+"</td></tr>");
-	                outString.append("<tr><td><table border='1' cellspacing='0' cellpadding='0'>");
+	                outString.append("<tr><td><table border='0' cellspacing='0' cellpadding='0'>");
 					outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif; font-size: 12;font-weight: bold;color: #000000;' align='left' valign='top'>"+rs.getResearcherName());
 					
 					if (rs.getDegree() != null && rs.getDegree().compareTo("") != 0)
