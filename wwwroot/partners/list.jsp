@@ -316,11 +316,11 @@ topicNum = QBean.getTopicID(topic);
             count ++;
 			cellCount++; //added 01/26/2006
 			addedContact = 0;
-//01/25/06 outString.append("count: "+count+" cellcount: "+cellCount);  
+			//01/25/06 outString.append("count: "+count+" cellcount: "+cellCount);  
         } while (it.hasNext());
 
 		//outString.append("</table>"); 01/26/06
-          outString.append("</td></tr></table>");
+        //  outString.append("</td></tr></table>");
 		} //end of if statement
 	else {
 		outString = new StringBuffer();
