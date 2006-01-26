@@ -61,7 +61,6 @@ topicNum = QBean.getTopicID(topic);
     
 	//added 01/26/06
 	outString = new StringBuffer("<table border='1' cellspacing='0' cellpadding='2'>");
-	//outString = new StringBuffer("<tr><td valign='top' style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size: 14px; font-weight: bold; color : #000000;' colspan='2'><a name='top'></a>View by Topic:</td></tr><tr><td valign='top' style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size : 12;'>");
 	//end 01/26/06
 	
  if (partners!=null)
@@ -145,10 +144,10 @@ topicNum = QBean.getTopicID(topic);
 				//added 01/26/2006
                  if ((cellCount % 2) != 0 ) 
                  outString.append("</tr><tr>");
-				//else {
-					//outString.append("<td>&nbsp;</td></tr>");
-					//cellCount++;
-				//}
+				else {
+					outString.append("<td>&nbsp;</td></tr>");
+					cellCount++;
+				}
                  //end of 01/26/2006
 
                 partnerId = rs.getPartnerId();
