@@ -89,7 +89,7 @@ topicNum = QBean.getTopicID(topic);
 				//else {
 					//outString.append("<td>&nbsp;</td></tr>");
 					//cellCount++;
-				}
+				//}
 
 		        partnerId = rs.getPartnerId();
                 partnerString = rs.getPartnerAbbreviation();
