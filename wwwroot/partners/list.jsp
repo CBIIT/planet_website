@@ -87,10 +87,10 @@ topicNum = QBean.getTopicID(topic);
 
                 if ((cellCount % 2) != 0 ) //added 01/26/2006
                  outString.append("</tr><tr>");
-				//else {
-					//outString.append("<td>&nbsp;</td></tr>");
-					//cellCount++;
-				//}
+				else {
+					outString.append("<td>&nbsp;</td></tr>");
+					cellCount++;
+				}
 
 		        partnerId = rs.getPartnerId();
                 partnerString = rs.getPartnerAbbreviation();
@@ -145,6 +145,10 @@ topicNum = QBean.getTopicID(topic);
 				//added 01/26/2006
                 if ((cellCount % 2) != 0 ) 
                  outString.append("</tr><tr>");
+				else {
+					outString.append("<td>&nbsp;</td></tr>");
+					cellCount++;
+				}
                  //end of 01/26/2006
 
                 partnerId = rs.getPartnerId();
@@ -316,11 +320,12 @@ topicNum = QBean.getTopicID(topic);
             count ++;
 			cellCount++; //added 01/26/2006
 			addedContact = 0;
-			//01/25/06 outString.append("count: "+count+" cellcount: "+cellCount);  
+			//01/25/06 
+           outString.append("count: "+count+" cellcount: "+cellCount);  
         } while (it.hasNext());
 
 		//outString.append("</table>"); 01/26/06
-        //  outString.append("</td></tr></table>");
+          outString.append("</td></tr></table>");
 		} //end of if statement
 	else {
 		outString = new StringBuffer();
