@@ -305,6 +305,9 @@ topicNum = QBean.getTopicID(topic);
             }
 
             outString.append("<tr><td height='10'>&nbsp;</td></tr>");
+           //01/26/2006
+					 if (((cellCount % 2) != 0) && (count != 1))
+						outString.append("</tr>");
 
 			 typeDesc = rs.getTypeDescription();
             count ++;
@@ -331,7 +334,7 @@ topicNum = QBean.getTopicID(topic);
 
     //added 01/26/06
  	// outString.append("</table>");
-   //edn 01/26/06
+   //end 01/26/06
 
     Vector states = QBean.getStateList();
     
