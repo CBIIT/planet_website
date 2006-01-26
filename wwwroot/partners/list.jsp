@@ -329,7 +329,7 @@ topicNum = QBean.getTopicID(topic);
 
 
      //01/26/2006
-					 if (((cellCount % 2) != 0) 
+					 if ((cellCount % 2) != 0) 
 						outString.append("</tr>");
 					// else {
 						//outString.append("<td>&nbsp;</td></tr>");
