@@ -409,7 +409,7 @@ topicNum = QBean.getTopicID(topic);
 <link href="../styles.css" rel="stylesheet" type="text/css">
 </head>
 <body topmargin="0" leftmargin="0" bgcolor="White">
-<table width="100%" border="1" cellspacing="0" cellpadding="0">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
     <td><p class="banner"><a href="../index.html"><img src="../images/planet_logo.gif" alt="Cancer Control PLANET - Plan, Link, Act, Network with Evidence-based Tools" width="169" height="87" border="0"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p></td>    <td><a href="../index.html"><img src="../images/planet_banner_wider.gif" alt="Cancer Control PLANET - Links to comprehensive cancer control resources for public health professionals" width="500" height="82" border="0"></a></td>
 	<td><p><a href="../index.html">Home</a><br>
@@ -452,21 +452,19 @@ topicNum = QBean.getTopicID(topic);
 </table>
 </table> -->
 
-<table bgcolor="white" border="0" cellpadding="0" cellspacing="0">
+<table bgcolor="white" border="1" cellpadding="0" cellspacing="0">
 <tr>
-<td valign="top" align="left" colspan="3"><div style="font-family : Arial, Helvetica, Verdana, Geneva, sans-serif; font-size: 20px; font-weight: bold; color: #000000;"><%= partnerText%></div><br>
-<p>To locate research partners in <%= stateStatic%> go to the  <a href="rlist.jsp?r=<%= region%>&cctopic=<%= topicNum%>">research partners</a> page.</p>
-
-</td>
-<td valign="top" style="font-family : Arial, Helvetica, Verdana, Geneva, sans-serif; font-size: 14px; font-weight: bold; color: #000000;" align="right" colspan="2">&nbsp;</td>
+	<td valign="top" align="left" colspan="3"><div style="font-family : Arial, Helvetica, Verdana, Geneva, sans-serif; font-size: 20px; font-weight: bold; color: #000000;"><%= partnerText%></div><br>
+		<p>To locate research partners in <%= stateStatic%> go to the  <a href="rlist.jsp?r=<%= region%>&cctopic=<%= topicNum%>">research partners</a> page.</p>
+	</td>
+	<td valign="top" style="font-family : Arial, Helvetica, Verdana, Geneva, sans-serif; font-size: 14px; font-weight: bold; color: #000000;" align="right" colspan="2">&nbsp;</td>
 </tr>
 <tr>
-<td colspan="5">&nbsp;</td>
+	<td colspan="5">&nbsp;</td>
 </tr>
 <tr>
-<td valign="top" width="28%"><%= stateList.toString()%></td>
-<td valign="top" width="2%">&nbsp;</td>
-<td valign="top" width="70%"><%= outString.toString()%></td>
+	<td valign="top"><%= stateList.toString()%></td>
+	<td valign="top" colspan="2" align="left"><%= outString.toString()%></td>
 </tr>
 </table>
 
