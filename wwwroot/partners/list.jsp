@@ -306,16 +306,17 @@ topicNum = QBean.getTopicID(topic);
 			    //01/26/2006
 					 if (((cellCount % 2) != 0) && (count != 1))
 						outString.append("</tr>");
-					else {
-						outString.append("<td>&nbsp;</td></tr>");
-						cellCount++;
-						}
+					//else {
+						//outString.append("<td>&nbsp;</td></tr>");
+						//cellCount++;
+						//}
 
 
 			typeDesc = rs.getTypeDescription();
             count ++;
 			cellCount++; //added 01/26/2006
 			addedContact = 0;
+//01/25/06 outString.append("count: "+count+" cellcount: "+cellCount);  
         } while (it.hasNext());
 
 		//outString.append("</table>"); 01/26/06
