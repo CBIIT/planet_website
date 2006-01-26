@@ -60,8 +60,8 @@ topicNum = QBean.getTopicID(topic);
     String endTD = "</td></tr>";
     
 	//added 01/26/06
-	outString = new StringBuffer("<table border='1' cellspacing='0' cellpadding='2'>");
-	outString = new StringBuffer("<tr><td valign='top' style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size: 14px; font-weight: bold; color : #000000;' colspan='2'><a name='top'></a>View by Topic:</td></tr><tr><td valign='top' style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size : 12;'>");
+	//outString = new StringBuffer("<table border='1' cellspacing='0' cellpadding='2'>");
+	//outString = new StringBuffer("<tr><td valign='top' style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size: 14px; font-weight: bold; color : #000000;' colspan='2'><a name='top'></a>View by Topic:</td></tr><tr><td valign='top' style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size : 12;'>");
 	//end 01/26/06
 	
  if (partners!=null)
@@ -315,7 +315,7 @@ topicNum = QBean.getTopicID(topic);
         } while (it.hasNext());
 
 		//outString.append("</table>"); 01/26/06
-          outString.append("</td></tr></table>");
+         // outString.append("</td></tr></table>");
 		} //end of if statement
 	else {
 		outString = new StringBuffer();
