@@ -61,7 +61,7 @@ topicNum = QBean.getTopicID(topic);
     
 	//added 01/26/06
 	//outString = new StringBuffer("<table border='1' cellspacing='0' cellpadding='2'>");
-	//outString = new StringBuffer("<tr><td valign='top' style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size: 14px; font-weight: bold; color : #000000;' colspan='2'><a name='top'></a>View by Topic:</td></tr><tr><td valign='top' style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size : 12;'>");
+	outString = new StringBuffer("<tr><td valign='top' style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size: 14px; font-weight: bold; color : #000000;' colspan='2'><a name='top'></a>View by Topic:</td></tr><tr><td valign='top' style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size : 12;'>");
 	//end 01/26/06
 	
  if (partners!=null)
@@ -99,8 +99,8 @@ topicNum = QBean.getTopicID(topic);
 				typeDesc = rs.getTypeDescription();
                 //modified 01/26/2006
                 outString.append("<table border='1' cellspacing='0' cellpadding='0' width='100%'>");
-				//outString.append("<td><table border='1' cellspacing='0' cellpadding='0' width='100%'>");
-                outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'><font style='font-family : Arial, Helvetica, Verdana, Geneva,  sans-serif;	font-size : 12px;	font-weight: bold; color : #AA0000;'>"+stateName+"</font><br><br>"+rs.getPartnerName()+endTD);
+				outString.append("<td><table border='1' cellspacing='0' cellpadding='0' width='100%'>");
+                //outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'><font style='font-family : Arial, Helvetica, Verdana, Geneva,  sans-serif;	font-size : 12px;	font-weight: bold; color : #AA0000;'>"+stateName+"</font><br><br>"+rs.getPartnerName()+endTD);
 
                 outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;font-style: normal;' align='left'>");
                 outString.append("<u>" + typeDesc);
