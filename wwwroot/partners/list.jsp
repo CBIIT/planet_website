@@ -327,7 +327,7 @@ topicNum = QBean.getTopicID(topic);
 	}
 
     //added 01/26/06
- 	 outString.append("</table>");
+ 	 //outString.append("</table>");
    //edn 01/26/06
 
     Vector states = QBean.getStateList();
