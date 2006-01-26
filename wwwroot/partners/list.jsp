@@ -81,11 +81,7 @@ topicNum = QBean.getTopicID(topic);
                     outString.append("</table></p>");
 
 
-		//added 01/23/06
-    	//outString = new StringBuffer("<table border='1' cellspacing='0' cellpadding='5'><tr><td valign='top' colspan='2'>");
- 		//end 01/23/06
-
-                partnerId = rs.getPartnerId();
+		        partnerId = rs.getPartnerId();
                 partnerString = rs.getPartnerAbbreviation();
                 typeString = rs.getType();
                 stateName = rs.getStateName();
@@ -297,12 +293,8 @@ topicNum = QBean.getTopicID(topic);
 
 			typeDesc = rs.getTypeDescription();
             count ++;
+			cellCount++; //added 01/26/2006
 			addedContact = 0;
-
-
-		//added 01/23/06
-        //outString.append("</td></tr></table>");
-		//end of 01/23/06
         } while (it.hasNext());
 
 		outString.append("</table>");
