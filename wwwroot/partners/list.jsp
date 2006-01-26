@@ -144,10 +144,10 @@ topicNum = QBean.getTopicID(topic);
 				//added 01/26/2006
                  if ((cellCount % 2) != 0 ) 
                  outString.append("</tr><tr>");
-				else {
-					outString.append("<td>&nbsp;</td></tr>");
-					cellCount++;
-				}
+				//else {
+					//outString.append("<td>&nbsp;</td></tr>");
+					//cellCount++;
+				//}
                  //end of 01/26/2006
 
                 partnerId = rs.getPartnerId();
