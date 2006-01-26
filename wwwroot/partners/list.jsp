@@ -80,13 +80,17 @@ topicNum = QBean.getTopicID(topic);
                 if (count > 1)
                     outString.append("</table></p>");
 
+                if ((cellcount % 2) ! = 0 )
+                 outString.append("</tr><tr>");
+
 
 		        partnerId = rs.getPartnerId();
                 partnerString = rs.getPartnerAbbreviation();
                 typeString = rs.getType();
                 stateName = rs.getStateName();
 				typeDesc = rs.getTypeDescription();
-                outString.append("<table border='1' cellspacing='0' cellpadding='0' width='100%'>");
+                //outString.append("<table border='1' cellspacing='0' cellpadding='0' width='100%'>");
+outString.append("<td><table border='1' cellspacing='0' cellpadding='0' width='100%'>");
                 outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'><font style='font-family : Arial, Helvetica, Verdana, Geneva,  sans-serif;	font-size : 12px;	font-weight: bold; color : #AA0000;'>"+stateName+"</font><br><br>"+rs.getPartnerName()+endTD);
 
                 outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;font-style: normal;' align='left'>");
