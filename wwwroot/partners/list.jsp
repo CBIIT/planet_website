@@ -317,7 +317,7 @@ topicNum = QBean.getTopicID(topic);
         } while (it.hasNext());
 
 		//outString.append("</table>"); 01/26/06
-         // outString.append("</td></tr></table>");
+          outString.append("</td></tr></table>");
 		} //end of if statement
 	else {
 		outString = new StringBuffer();
