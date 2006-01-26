@@ -143,8 +143,8 @@ topicNum = QBean.getTopicID(topic);
                  //outString.append("</table></td>");
                  
 				//added 01/26/2006
-                // if ((cellCount % 2) != 0 ) 
-                // outString.append("</tr><tr>");
+                 if ((cellCount % 2) != 0 ) 
+                 outString.append("</tr><tr>");
 				//else {
 					//outString.append("<td>&nbsp;</td></tr>");
 					//cellCount++;
@@ -312,7 +312,7 @@ topicNum = QBean.getTopicID(topic);
 						outString.append("</tr>");
 					// else {
 						//outString.append("<td>&nbsp;</td></tr>");
-						/cellCount++;
+						//cellCount++;
 						//}
 
 
@@ -329,8 +329,8 @@ topicNum = QBean.getTopicID(topic);
 
 
      	//01/26/2006
-		// if ((cellCount % 2) == 0) 
-				//outString.append("<td>&nbsp;</td>");
+		if ((cellCount % 2) == 0) 
+				outString.append("<td>&nbsp;</td>");
         //end of 01/26/2006
 		
 		} //end of if statement
