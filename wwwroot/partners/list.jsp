@@ -148,7 +148,7 @@ topicNum = QBean.getTopicID(topic);
 				//else {
 					//outString.append("<td>&nbsp;</td></tr>");
 					//cellCount++;
-				}
+				//}
                  //end of 01/26/2006
 
                 partnerId = rs.getPartnerId();
