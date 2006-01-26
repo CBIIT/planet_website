@@ -328,18 +328,10 @@ topicNum = QBean.getTopicID(topic);
           outString.append("</td></tr></table>");
 
 
-     //01/26/2006
-					 if ((cellCount % 2) == 0) 
-						outString.append("<td>&nbsp;</td>");
-					// else {
-						//outString.append("<td>&nbsp;</td></tr>");
-						/cellCount++;
-						//}
-
-
-
-
-
+     	//01/26/2006
+		 if ((cellCount % 2) == 0) 
+				outString.append("<td>&nbsp;</td>");//end of 01/26/2006
+		
 		} //end of if statement
 	else {
 		outString = new StringBuffer();
