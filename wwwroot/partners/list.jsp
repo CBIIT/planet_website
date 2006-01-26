@@ -60,7 +60,7 @@ topicNum = QBean.getTopicID(topic);
     String endTD = "</td></tr>";
     
 	//added 01/26/06
-	//outString = new StringBuffer("<table border='1' cellspacing='0' cellpadding='2'>");
+	outString = new StringBuffer("<table border='1' cellspacing='0' cellpadding='2'>");
 	outString = new StringBuffer("<tr><td valign='top' style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size: 14px; font-weight: bold; color : #000000;' colspan='2'><a name='top'></a>View by Topic:</td></tr><tr><td valign='top' style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size : 12;'>");
 	//end 01/26/06
 	
