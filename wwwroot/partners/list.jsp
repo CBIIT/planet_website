@@ -60,7 +60,7 @@ topicNum = QBean.getTopicID(topic);
     String endTD = "</td></tr>";
     
 	//added 01/26/06
-	outString = new StringBuffer("<table border='1' cellspacing='0' cellpadding='2'>");
+	//outString = new StringBuffer("<table border='1' cellspacing='0' cellpadding='2'>");
 	//end 01/26/06
 	
  if (partners!=null)
@@ -86,10 +86,10 @@ topicNum = QBean.getTopicID(topic);
 
                 if ((cellCount % 2) != 0 ) //added 01/26/2006
                  outString.append("</tr><tr>");
-				//else {
-					//outString.append("<td>&nbsp;</td></tr>");
-					//cellCount++;
-				//}
+				else {
+					outString.append("<td>&nbsp;</td></tr>");
+					cellCount++;
+				}
 
 		        partnerId = rs.getPartnerId();
                 partnerString = rs.getPartnerAbbreviation();
@@ -330,7 +330,7 @@ topicNum = QBean.getTopicID(topic);
 	}
 
     //added 01/26/06
- 	 outString.append("</table>");
+ 	// outString.append("</table>");
    //edn 01/26/06
 
     Vector states = QBean.getStateList();
