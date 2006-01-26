@@ -80,13 +80,12 @@ topicNum = QBean.getTopicID(topic);
                 if (count > 1)
                     outString.append("</table></p>");
 
-                if ((cellCount % 2) != 0 )
+                if ((cellCount % 2) != 0 ) //added 01/26/2006
                  outString.append("</tr><tr>");
 				else {
-						outString.append("<td>&nbsp;</td></tr>");
-						cellCount++;
-						}
-
+					outString.append("<td>&nbsp;</td></tr>");
+					cellCount++;
+				}
 
 		        partnerId = rs.getPartnerId();
                 partnerString = rs.getPartnerAbbreviation();
@@ -94,7 +93,7 @@ topicNum = QBean.getTopicID(topic);
                 stateName = rs.getStateName();
 				typeDesc = rs.getTypeDescription();
                 //outString.append("<table border='1' cellspacing='0' cellpadding='0' width='100%'>");
-outString.append("<td><table border='1' cellspacing='0' cellpadding='0' width='100%'>");
+				outString.append("<td><table border='1' cellspacing='0' cellpadding='0' width='100%'>");
                 outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'><font style='font-family : Arial, Helvetica, Verdana, Geneva,  sans-serif;	font-size : 12px;	font-weight: bold; color : #AA0000;'>"+stateName+"</font><br><br>"+rs.getPartnerName()+endTD);
 
                 outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;font-style: normal;' align='left'>");
@@ -410,10 +409,10 @@ outString.append("<td><table border='1' cellspacing='0' cellpadding='0' width='1
 <link href="../styles.css" rel="stylesheet" type="text/css">
 </head>
 <body topmargin="0" leftmargin="0" bgcolor="White">
-<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<table width="100%" border="1" cellspacing="0" cellpadding="0">
   <tr>
     <td><p class="banner"><a href="../index.html"><img src="../images/planet_logo.gif" alt="Cancer Control PLANET - Plan, Link, Act, Network with Evidence-based Tools" width="169" height="87" border="0"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p></td>    <td><a href="../index.html"><img src="../images/planet_banner_wider.gif" alt="Cancer Control PLANET - Links to comprehensive cancer control resources for public health professionals" width="500" height="82" border="0"></a></td>
-<td><p><a href="../index.html">Home</a><br>
+	<td><p><a href="../index.html">Home</a><br>
         <a href="../contact.html">Contact Us</a><br>
 		<a href="http://ccplanetraining.cancer.gov" onclick="javascript:popWindow('http://ccplanetraining.cancer.gov', 'name','725','400','yes'); return false;">On-line Training</a><br />
  	    <a href="about.html">About This Site</a><br>
