@@ -319,6 +319,7 @@ topicNum = QBean.getTopicID(topic);
       		typeDesc = rs.getTypeDescription();
             count ++;
 			cellCount++; //added 01/26/2006
+			rowColCount++;
 			addedContact = 0;
 			outString.append("count: "+count+" cellcount: "+cellCount+" rowColCount: "+rowColCount);  //01/25/06
         } while (it.hasNext());
