@@ -325,7 +325,8 @@ topicNum = QBean.getTopicID(topic);
         } while (it.hasNext());
 
 		outString.append("</tr></table>");
-          //outString.append("</td></tr></table>"); 01/26/06
+          //outString.append("</td></tr></table>"); 
+		//01/26/06
 
 
      	//01/26/2006
