@@ -70,10 +70,13 @@ topicNum = QBean.getTopicID(topic);
         String typeString = "";
         String typeOutput = "";
 		int addedContact = 0;
-        int rowColCount = 0; //each row only allow to have two columns //added 01/27/06
+       
 				
          do
         {
+
+            int rowColCount = 0; //each row only allow to have two columns, added 01/27/06 
+
 	        PartnerBean rs = (PartnerBean)it.next();
 			typeDesc = rs.getTypeDescription();
             if (stateName.compareTo(rs.getStateName().trim()) != 0)
@@ -316,7 +319,6 @@ topicNum = QBean.getTopicID(topic);
       		typeDesc = rs.getTypeDescription();
             count ++;
 			cellCount++; //added 01/26/2006
-			rowColCount++; //added 01/27/2006
 			addedContact = 0;
 			outString.append("count: "+count+" cellcount: "+cellCount+" rowColCount: "+rowColCount);  //01/25/06
         } while (it.hasNext());
