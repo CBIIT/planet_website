@@ -196,12 +196,8 @@ topicNum = QBean.getTopicID(topic);
 
                      //added 01/27/2006
                  if (((cellCount % 2) != 0) && (count != 1))
-                 outString.append("</tr><tr>");
-				//else {
-					//outString.append("<td>&nbsp;</td></tr>");
-					//cellCount++;
-				//}
-                 //end of 01/27/2006
+                 outString.append("</tr><tr>testType");
+				  //end of 01/27/2006
 
 
 				typeDesc = rs.getTypeDescription();
