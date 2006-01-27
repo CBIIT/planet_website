@@ -317,7 +317,7 @@ topicNum = QBean.getTopicID(topic);
             count ++;
 			cellCount++; //added 01/26/2006
 			addedContact = 0;
-			outString.append("count: "+count+" cellcount: "+cellCount+" rowColCount: "+rowColCount);  //01/25/06
+			outString.append("count: "+count+" cellcount: "+cellCount);  //01/25/06
         } while (it.hasNext());
 		
         outString.append("</td></tr></table>"); //added on 01/26/06
