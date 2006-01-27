@@ -305,7 +305,7 @@ topicNum = QBean.getTopicID(topic);
 
 			    //01/26/2006
 					// if (((cellCount % 2) != 0) && (count != 1))
-					 if (((cellCount % 2) != 0) && (count != 1))
+					 if (((cellCount % 2) != 0) && (cellCount != 1))
 						outString.append("</tr>");
 					 //else {
 						//outString.append("<td>&nbsp;</td></tr>");
@@ -325,9 +325,8 @@ topicNum = QBean.getTopicID(topic);
          
      	//01/26/2006
 		if ((cellCount % 2) == 0) 
-				outString.append("<td>&nbsp;</td>");
+				outString.append("<td>&nbsp;</td></tr>");
         //end of 01/26/2006
-		outString.append("</tr><tr><td colspan='2' style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif; font-size: 12px;color: #000000;' align='left' valign='top'><a href='#top' style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif; font-size: 12px;'>[Top of Page]</a></td></tr></table></td></tr></table>");
 
 		} //end of if statement
 	else {
