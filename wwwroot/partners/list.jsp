@@ -77,9 +77,9 @@ topicNum = QBean.getTopicID(topic);
 			typeDesc = rs.getTypeDescription();
             if (stateName.compareTo(rs.getStateName().trim()) != 0)
             {
-                //if (count > 1)
+                if (count > 1)
                    // outString.append("</table></p>"); //01/26/2006
-					//outString.append("</table></td>");
+					outString.append("</table></td>");
 
                 if ((cellCount % 2) != 0 ) //added 01/26/2006
                  outString.append("</tr><tr>");
@@ -137,8 +137,7 @@ topicNum = QBean.getTopicID(topic);
                   //modified 01/26/2006  
 				  outString.append("</table></td>");
                  // outString.append("</table></p>");
-                 //outString.append("</table></td>");
-                 
+                              
 				//added 01/26/2006
                  if ((cellCount % 2) != 0 ) 
                  outString.append("</tr><tr>");
