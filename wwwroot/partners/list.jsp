@@ -311,16 +311,14 @@ topicNum = QBean.getTopicID(topic);
 						//outString.append("<td>&nbsp;</td></tr>");
 						//cellCount++;
 						//}
-outString.append("</td></tr></table>"); //added on 01/26/06
-
-			typeDesc = rs.getTypeDescription();
+      		typeDesc = rs.getTypeDescription();
             count ++;
 			cellCount++; //added 01/26/2006
 			addedContact = 0;
 			outString.append("count: "+count+" cellcount: "+cellCount);  //01/25/06
         } while (it.hasNext());
 		
-        // outString.append("</td></tr></table>"); //added on 01/26/06
+        outString.append("</td></tr></table>"); //added on 01/26/06
          outString.append("</tr></table>"); 
          
      	//01/26/2006
