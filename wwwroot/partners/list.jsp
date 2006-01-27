@@ -60,7 +60,7 @@ topicNum = QBean.getTopicID(topic);
     String endTD = "</td></tr>";
     
 	//added 01/26/06
-	 outString = new StringBuffer("<table border='9' cellspacing='0' cellpadding='2'><tr>");
+	 //outString = new StringBuffer("<table border='9' cellspacing='0' cellpadding='2'><tr>");
 	//outString = new StringBuffer("<tr><td valign='top' style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size: 14px; font-weight: bold; color : #000000;' colspan='2'><a name='top'></a>View by Topic:</td></tr><tr><td valign='top' style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size : 12;'>");
 	//end 01/26/06
 	
@@ -87,10 +87,10 @@ topicNum = QBean.getTopicID(topic);
 
                 if ((cellCount % 2) != 0 ) //added 01/26/2006
                  outString.append("</tr><tr>");
-				else {
-					outString.append("<td>&nbsp;</td></tr>");
-					cellCount++;
-				}
+				//else {
+					//outString.append("<td>&nbsp;</td></tr>");
+					//cellCount++;
+				//}
 
 		        partnerId = rs.getPartnerId();
                 partnerString = rs.getPartnerAbbreviation();
