@@ -95,7 +95,7 @@ topicNum = QBean.getTopicID(topic);
                 stateName = rs.getStateName();
 				typeDesc = rs.getTypeDescription();
                 //modified 01/26/2006
-                outString.append("<table border='2' cellspacing='0' cellpadding='0' width='100%'><tr>");
+                outString.append("<table border='0' cellspacing='0' cellpadding='0' width='100%'><tr>");
 				outString.append("<td valign='top' width='50%'><table border='0' cellspacing='0' cellpadding='0' width='100%'>");
                 //outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'><font style='font-family : Arial, Helvetica, Verdana, Geneva,  sans-serif;	font-size : 12px;	font-weight: bold; color : #AA0000;'>"+stateName+"</font><br><br>"+rs.getPartnerName()+endTD);
 
@@ -202,11 +202,6 @@ topicNum = QBean.getTopicID(topic);
 				
                 if (partnerString.equals("CDC") && !typeString.equals("W"))
                 {
-                     //added 01/27/2006
-                 if (((cellCount % 2) != 0) && (count != 1))
-                 outString.append("</tr><tr>testType");
-				  //end of 01/27/2006
-
                     if (topic.compareTo("C") != 0)
                        outString.append(" Health Department Contact");
                     else {
@@ -218,14 +213,7 @@ topicNum = QBean.getTopicID(topic);
                 }
 
 				if (typeDesc.equals("Regional") && (addedContact != 1)) {
-
-     //added 01/27/2006
-                 if (((cellCount % 2) != 0) && (count != 1))
-                 outString.append("</tr><tr>testType");
-				  //end of 01/27/2006
-
-
-					outString.append(" Contact");
+   					outString.append(" Contact");
 					addedContact = 1;
 				}
 				
@@ -331,7 +319,7 @@ topicNum = QBean.getTopicID(topic);
             count ++;
 			cellCount++; //added 01/26/2006
 			addedContact = 0;
-			outString.append("count: "+count+" cellcount: "+cellCount);  //01/25/06
+			//outString.append("count: "+count+" cellcount: "+cellCount);  //01/25/06
         } while (it.hasNext());
 		
         outString.append("</td></tr></table>"); //added on 01/26/06
