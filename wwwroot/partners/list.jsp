@@ -70,14 +70,11 @@ topicNum = QBean.getTopicID(topic);
         String typeString = "";
         String typeOutput = "";
 		int addedContact = 0;
-       
-				
+       				
          do
         {
 
-            int rowColCount = 0; //each row only allow to have two columns, added 01/27/06 
-
-	        PartnerBean rs = (PartnerBean)it.next();
+            PartnerBean rs = (PartnerBean)it.next();
 			typeDesc = rs.getTypeDescription();
             if (stateName.compareTo(rs.getStateName().trim()) != 0)
             {
@@ -85,8 +82,8 @@ topicNum = QBean.getTopicID(topic);
                    // outString.append("</table></p>"); //01/26/2006
 					outString.append("</table></td>");
 
-               // if ((cellCount % 2) != 0 ) //added 01/26/2006
-                // outString.append("</tr><tr>");
+               if ((cellCount % 2) != 0 ) //added 01/26/2006
+                 outString.append("</tr><tr>");
 				//else {
 					//outString.append("<td>&nbsp;</td></tr>");
 					//cellCount++;
@@ -308,8 +305,8 @@ topicNum = QBean.getTopicID(topic);
             outString.append("<tr><td height='10'>&nbsp;</td></tr>");
 
 			    //01/26/2006
-					// if (((cellCount % 2) != 0) && (count != 1))
-						//outString.append("</tr>");
+					 if (((cellCount % 2) != 0) && (count != 1))
+						outString.append("</tr>");
 					 //else {
 						//outString.append("<td>&nbsp;</td></tr>");
 						//cellCount++;
@@ -319,7 +316,6 @@ topicNum = QBean.getTopicID(topic);
       		typeDesc = rs.getTypeDescription();
             count ++;
 			cellCount++; //added 01/26/2006
-			rowColCount++;
 			addedContact = 0;
 			outString.append("count: "+count+" cellcount: "+cellCount+" rowColCount: "+rowColCount);  //01/25/06
         } while (it.hasNext());
