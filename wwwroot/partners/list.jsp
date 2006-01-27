@@ -319,13 +319,10 @@ topicNum = QBean.getTopicID(topic);
 			//01/25/06 
            outString.append("count: "+count+" cellcount: "+cellCount);  
         } while (it.hasNext());
-
-		//outString.append("</tr></table>");
-         outString.append("</td></tr></table>"); 
+		
+         outString.append("</td></tr></table>"); //added on 01/26/06
          outString.append("</tr></table>"); 
-         //01/26/06
-
-
+         
      	//01/26/2006
 		if ((cellCount % 2) == 0) 
 				outString.append("<td>&nbsp;</td>");
