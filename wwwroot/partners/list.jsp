@@ -71,8 +71,7 @@ topicNum = QBean.getTopicID(topic);
         String typeOutput = "";
 		int addedContact = 0;
 				
-        outString.append("<table border='2' cellspacing='0' cellpadding='0' width='100%'><tr>");
-        do
+         do
         {
 	        PartnerBean rs = (PartnerBean)it.next();
 			typeDesc = rs.getTypeDescription();
@@ -95,7 +94,7 @@ topicNum = QBean.getTopicID(topic);
                 stateName = rs.getStateName();
 				typeDesc = rs.getTypeDescription();
                 //modified 01/26/2006
-                //outString.append("<table border='2' cellspacing='0' cellpadding='0' width='100%'><tr>");
+                outString.append("<table border='2' cellspacing='0' cellpadding='0' width='100%'><tr>");
 				outString.append("<td><table border='1' cellspacing='0' cellpadding='0' width='100%'>");
                 //outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'><font style='font-family : Arial, Helvetica, Verdana, Geneva,  sans-serif;	font-size : 12px;	font-weight: bold; color : #AA0000;'>"+stateName+"</font><br><br>"+rs.getPartnerName()+endTD);
 
@@ -311,6 +310,9 @@ topicNum = QBean.getTopicID(topic);
 						//outString.append("<td>&nbsp;</td></tr>");
 						//cellCount++;
 						//}
+ outString.append("</td></tr></table>"); //added on 01/26/06
+         outString.append("</tr></table>"); 
+
       		typeDesc = rs.getTypeDescription();
             count ++;
 			cellCount++; //added 01/26/2006
@@ -318,8 +320,8 @@ topicNum = QBean.getTopicID(topic);
 			outString.append("count: "+count+" cellcount: "+cellCount);  //01/25/06
         } while (it.hasNext());
 		
-        outString.append("</td></tr></table>"); //added on 01/26/06
-         outString.append("</tr></table>"); 
+        //outString.append("</td></tr></table>"); //added on 01/26/06
+       //  outString.append("</tr></table>"); 
          
      	//01/26/2006
 		if ((cellCount % 2) == 0) 
