@@ -324,8 +324,9 @@ topicNum = QBean.getTopicID(topic);
            outString.append("count: "+count+" cellcount: "+cellCount);  
         } while (it.hasNext());
 
-		outString.append("</tr></table>");
-          //outString.append("</td></tr></table>"); 
+		//outString.append("</tr></table>");
+         outString.append("</td></tr></table>"); 
+         outString.append("</tr></table>"); 
          //01/26/06
 
 
@@ -341,7 +342,7 @@ topicNum = QBean.getTopicID(topic);
 	}
 
     //added 01/26/06
- 	 outString.append("</tr></table>");
+ 	 //outString.append("</tr></table>");
    //edn 01/26/06
 
     Vector states = QBean.getStateList();
