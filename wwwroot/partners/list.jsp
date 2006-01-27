@@ -304,8 +304,8 @@ topicNum = QBean.getTopicID(topic);
             outString.append("<tr><td height='10'>&nbsp;</td></tr>");
 
 			    //01/26/2006
-					 if (((cellCount % 2) != 0) && (count != 1))
-						outString.append("</tr>");
+					// if (((cellCount % 2) != 0) && (count != 1))
+						//outString.append("</tr>");
 					 //else {
 						//outString.append("<td>&nbsp;</td></tr>");
 						//cellCount++;
