@@ -83,10 +83,10 @@ topicNum = QBean.getTopicID(topic);
 
                 if ((cellCount % 2) != 0 ) //added 01/26/2006
                  outString.append("</tr><tr>");
-				//else {
+				else {
 					//outString.append("<td>&nbsp;</td></tr>");
-					//cellCount++;
-				//}
+					cellCount++;
+				}
 
 		        partnerId = rs.getPartnerId();
                 partnerString = rs.getPartnerAbbreviation();
@@ -316,8 +316,7 @@ topicNum = QBean.getTopicID(topic);
             count ++;
 			cellCount++; //added 01/26/2006
 			addedContact = 0;
-			//01/25/06 
-           outString.append("count: "+count+" cellcount: "+cellCount);  
+			outString.append("count: "+count+" cellcount: "+cellCount);  //01/25/06
         } while (it.hasNext());
 		
          outString.append("</td></tr></table>"); //added on 01/26/06
