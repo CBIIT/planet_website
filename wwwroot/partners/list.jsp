@@ -318,12 +318,10 @@ topicNum = QBean.getTopicID(topic);
 			addedContact = 0;
 			//01/25/06 
            outString.append("count: "+count+" cellcount: "+cellCount);  
-
-  outString.append("</td></tr></table>"); 
         } while (it.hasNext());
 
 		//outString.append("</tr></table>");
-         //outString.append("</td></tr></table>"); 
+         outString.append("</td></tr></table>"); 
          outString.append("</tr></table>"); 
          //01/26/06
 
