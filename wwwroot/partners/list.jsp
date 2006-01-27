@@ -135,7 +135,7 @@ topicNum = QBean.getTopicID(topic);
 
                 if (count > 1)
                   //modified 01/26/2006  
-				  outString.append("</table></p></td>");
+				  outString.append("</table></td>");
                  // outString.append("</table></p>");
                  //outString.append("</table></td>");
                  
@@ -153,7 +153,7 @@ topicNum = QBean.getTopicID(topic);
                 typeString = rs.getType();
 				typeDesc = rs.getTypeDescription();
                 //outString.append("<p><table border='0' cellspacing='0' cellpadding='0' width='100%'>");
-                outString.append("<td><p><table border='0' cellspacing='0' cellpadding='0' width='100%'>");
+                outString.append("<td><table border='0' cellspacing='0' cellpadding='0' width='100%'>");
                 
                 outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'>"+rs.getPartnerName()+endTD);
                 //outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;fon align='left'>"+rs.getPartnerName()+endTD);
