@@ -82,12 +82,12 @@ topicNum = QBean.getTopicID(topic);
                    // outString.append("</table></p>"); //01/26/2006
 					outString.append("</table></td>");
 
-              if ((cellCount % 2) != 0 && (cellCount != 1) ) //added 01/26/2006
-                outString.append("</tr><tr>");
-			else {
-					outString.append("<td>&nbsp;</td></tr>");
-					cellCount++;
-				}
+              	//if ((cellCount % 2) != 0 && (cellCount != 1) ) //added 01/26/2006
+                	//outString.append("</tr><tr>");
+				//else {
+					//outString.append("<td>&nbsp;</td></tr>");
+					//cellCount++;
+				//}
 
 		        partnerId = rs.getPartnerId();
                 partnerString = rs.getPartnerAbbreviation();
@@ -95,7 +95,7 @@ topicNum = QBean.getTopicID(topic);
                 stateName = rs.getStateName();
 				typeDesc = rs.getTypeDescription();
                 //modified 01/26/2006
-                outString.append("<table border='1' cellspacing='0' cellpadding='0' width='100%'><tr>");
+                outString.append("<table border='1' cellspacing='0' cellpadding='2' width='100%'><tr>");
 				outString.append("<td valign='top' width='50%'><table border='0' cellspacing='0' cellpadding='0' width='100%'>");
                 outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'><font style='font-family : Arial, Helvetica, Verdana, Geneva,  sans-serif;	font-size : 12px;	font-weight: bold; color : #AA0000;'>"+stateName+"</font><br><br>"+rs.getPartnerName()+endTD);
 
@@ -147,7 +147,7 @@ topicNum = QBean.getTopicID(topic);
                 typeString = rs.getType();
 				typeDesc = rs.getTypeDescription();
                 //outString.append("<p><table border='0' cellspacing='0' cellpadding='0' width='100%'>");
-				//outString.append("parentid: "+partnerId+"getpartenid: ");
+				outString.append("parentid: "+partnerId+"getpartenid: ");
                 outString.append("<td valign='top' width='50%'><table border='0' cellspacing='0' cellpadding='0' width='100%'>");
                 
                 outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'>"+rs.getPartnerName()+endTD);
