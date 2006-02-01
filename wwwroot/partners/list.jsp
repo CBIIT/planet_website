@@ -183,8 +183,8 @@ topicNum = QBean.getTopicID(topic);
 				}
                 // Close the underlining and the table cell.
                 outString.append("</u>" + endTD);
-                    columncount++;
-outString.append("columncount: " + columncount);
+                    columnCount++;
+					outString.append("columncount: " + columnCount);
             }
 
             if (typeString.compareTo(rs.getType().trim()) != 0)
