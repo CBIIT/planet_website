@@ -66,7 +66,7 @@ if (param != null)
     String endTD = "</td></tr>";
 	
 
-		outString = new StringBuffer("<table cellspacing='0' cellpadding='5'>");
+		outString = new StringBuffer("<table border='1' cellspacing='0' cellpadding='5'>");
 		topicString = new StringBuffer("<tr><td valign='top' style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size: 14px; font-weight: bold; color : #000000;' colspan='2'><a name='top'></a>View by Topic:</td></tr><tr><td valign='top' style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size : 12;'>");
 	
     if (researchers!=null)
@@ -228,7 +228,9 @@ if (param != null)
             }
 
 	         cellCount++;
-		     count ++;       
+		     count ++;    
+
+           //01/25/06 outString.append("count: "+count+" cellcount: "+cellCount);  
 	     } while (it.hasNext());
 
 		 topicString.append("</td></tr>");
@@ -253,9 +255,10 @@ if (param != null)
     if (it2.hasNext())
     {
         stateList = new StringBuffer();
-		//stateList.append("<table><tr><td valign='top' nowrap>");
-		stateList.append("<table border='0' cellpadding='5' cellspacing='0'><tr><th colspan='2' align='left' valign='top' nowrap>STATES</th><th align='left' valign='top' nowrap>TERRITORIES/TRIBES</th></tr><tr><td valign='top' nowrap>");
-        String typeString = "S";
+		//stateList.append("<table border='1' cellpadding='5' cellspacing='0'><tr><th colspan='2' align='left' valign='top' nowrap>STATES</th><th align='left' valign='top' nowrap>TERRITORIES/TRIBES</th></tr><tr><td valign='top' nowrap>");
+        stateList.append("<table border='0' cellpadding='5' cellspacing='0'><tr><th colspan='2' align='left' valign='top' nowrap>States</th></tr><tr><td valign='top' nowrap>");
+
+		String typeString = "S";
         int count= 0;
 
         do
@@ -269,22 +272,31 @@ if (param != null)
                 stateList.append("</td><td valign='top' nowrap>");
                 //count = 0;
             }
-            if (count == 51) {
-                stateList.append("</td><td valign='top' nowrap>");
+         
+		    if (count == 51) {
+              	stateList.append("</td></tr>");
+				stateList.append("<tr><th colspan='2'>&nbsp;</th></tr>");
+				stateList.append("<tr><th colspan='2' align='left' valign='top' nowrap bgcolor='#F1F1FD'>Territories / Tribes</th></tr><tr><td valign='top' bgcolor='#F1F1FD' nowrap>");
                 //count = 0;
             }
 			
-			if (count > 0 && count != 26 && count !=51)
-                stateList.append("<br />");
-
-           // if (count > 27)
-            //{
-            //    stateList.append("</td><td valign='top' nowrap>");
-           //     count = 0;
+			//if (count == 56) {
+            //    stateList.append("</td><td valign='top' bgcolor='#F1F1FD' nowrap>");
+				//count = 0;
            // }
-
-           // if (count > 0)
+			
+			
+			//commented out 01/19/06
+			//if (count > 0 && count != 26 && count !=51 && count !=56)
               //  stateList.append("<br />");
+              if (count > 0 && count != 26 && count !=51 ) {
+               stateList.append("<br />");
+                
+             //    if (count > 51){
+             //   stateList.append("<br /><br />");
+             //   }
+            }
+        
 
 			if (region.compareTo(rs.getAbbreviation()) == 0)
 				stateList.append("<font style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	color : AA0000; font-size: 12px;'><strong>"+rs.getName().trim()+"</strong></font>");
@@ -321,6 +333,7 @@ if (param != null)
     <td><a href="../index.html"><img src="../images/planet_banner2.gif" alt="Cancer Control PLANET - Links to resources for cancer control planning" width="369" height="82" border="0"></a></td>
     <td><p><a href="../index.html">Home</a><br>
         <a href="../contact.html">Contact Us</a><br>
+		<a href="http://ccplanetraining.cancer.gov" onclick="javascript:popWindow('http://ccplanetraining.cancer.gov', 'name','725','400','yes'); return false;">On-line Training</a><br />
 		<a href="..about.html">About This Site</a><br>
         <a href="../factsheet.pdf">Fact Sheet (PDF)</a><br>
         <a href="../partners.html">PLANET Sponsors</a></p></td>
@@ -343,8 +356,10 @@ if (param != null)
 	<td colspan="3">&nbsp;</td>
   </tr>
   <tr>
-	<td valign="top" style="font-family : Arial, Helvetica, Verdana, Geneva, sans-serif; font-size: 14px; font-weight: color : #000000;" nowrap bgcolor="F1F1FD"><%= stateList.toString()%></td>
-	<td valign="top" colspan="2" align="left"><table cellspacing="5"><%= topicString.toString()%></table><%= outString.toString()%></td>
+	<td valign="top" style="font-family : Arial, Helvetica, Verdana, Geneva, sans-serif; font-size: 14px; font-weight: color : #000000;" nowrap bgcolor="F1F1FD">
+		<%= stateList.toString()%></td>
+	<td valign="top" colspan="2" align="left">
+<table cellspacing="5"><%= topicString.toString()%></table><%= outString.toString()%></td>
   </tr>
 </table>
 
