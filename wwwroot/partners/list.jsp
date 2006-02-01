@@ -78,19 +78,16 @@ topicNum = QBean.getTopicID(topic);
 			typeDesc = rs.getTypeDescription();
             if (stateName.compareTo(rs.getStateName().trim()) != 0)
             {
-               //added 02/01/2006
-                  
-       
                 if (count > 1)
                    // outString.append("</table></p>"); //01/26/2006
 					outString.append("</table></td>");
 
-               //if ((cellCount % 2) != 0 ) //added 01/26/2006
-                // outString.append("</tr><tr>");
-				//else {
-					//outString.append("<td>&nbsp;</td></tr>");
-					//cellCount++;
-				//}
+              if ((cellCount % 2) != 0 && (cellCount != 1) ) //added 01/26/2006
+                outString.append("</tr><tr>");
+			else {
+					outString.append("<td>&nbsp;</td></tr>");
+					cellCount++;
+				}
 
 		        partnerId = rs.getPartnerId();
                 partnerString = rs.getPartnerAbbreviation();
@@ -145,16 +142,7 @@ topicNum = QBean.getTopicID(topic);
                if (cellCount == 2)
 					outString.append("</tr><tr>");  
                               
-				//added 01/26/2006
-                 if (((cellCount % 2) != 0) && (cellCount != 1))
-                 outString.append("</tr><tr>");
-				//else {
-					//outString.append("<td>&nbsp;</td></tr>");
-					//cellCount++;
-				//}
-                 //end of 01/26/2006
-
-                partnerId = rs.getPartnerId();
+				partnerId = rs.getPartnerId();
                 partnerString = rs.getPartnerAbbreviation();
                 typeString = rs.getType();
 				typeDesc = rs.getTypeDescription();
