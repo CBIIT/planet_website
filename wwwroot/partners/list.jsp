@@ -80,7 +80,7 @@ topicNum = QBean.getTopicID(topic);
             {
                //added 02/01/2006
                if (cellCount == 2)
-					topicString.append("</tr><tr>");       
+					outString.append("</tr><tr>");       
        
                 if (count > 1)
                    // outString.append("</table></p>"); //01/26/2006
