@@ -305,7 +305,7 @@ topicNum = QBean.getTopicID(topic);
     {
         stateList = new StringBuffer();
 		//stateList.append("<table border='0' cellpadding='5' cellspacing='0'><tr><th colspan='2' align='left' valign='top' nowrap>STATES</th><th align='left' valign='top' nowrap>TERRITORIES/TRIBES</th></tr><tr><td valign='top' nowrap>");
-        stateList.append("<table border='0' cellpadding='5' cellspacing='0' width='100%'><tr><th colspan='2' align='left' valign='top' width='100%'>STATES</th></tr><tr><td valign='top' nowrap>");
+        stateList.append("<table border='0' cellpadding='5' cellspacing='0' width='100%'><tr><th colspan='2' align='left' valign='top' width='100%'>States</th></tr><tr><td valign='top' nowrap>");
 		String typeString = "S";
         int count= 0;
 		
@@ -323,7 +323,7 @@ topicNum = QBean.getTopicID(topic);
             if (count == 51) {
               	stateList.append("</td></tr>");
 				stateList.append("<tr><th colspan='2'>&nbsp;</th></tr>");
-				stateList.append("<tr><th colspan='2' align='left' valign='top'>TERRITORIES/TRIBES</th></tr><tr><td valign='top' colspan='2'>");
+				stateList.append("<tr><th colspan='2' align='left' valign='top'>Territories / Tribes</th></tr><tr><td valign='top' colspan='2'>");
                 //count = 0;
             }
 
