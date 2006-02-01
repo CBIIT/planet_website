@@ -79,12 +79,14 @@ topicNum = QBean.getTopicID(topic);
             if (stateName.compareTo(rs.getStateName().trim()) != 0)
             {
                //added 02/01/2006
-               if (cellCount == 2)
-					outString.append("</tr><tr>");       
+                  
        
                 if (count > 1)
                    // outString.append("</table></p>"); //01/26/2006
 					outString.append("</table></td>");
+
+  if (cellCount == 2)
+					outString.append("</tr><tr>");  
 
                //if ((cellCount % 2) != 0 ) //added 01/26/2006
                 // outString.append("</tr><tr>");
