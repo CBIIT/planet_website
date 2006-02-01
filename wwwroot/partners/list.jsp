@@ -133,6 +133,7 @@ topicNum = QBean.getTopicID(topic);
 
             if (partnerId != rs.getPartnerId())
             {
+                int columnCount = 0; //added 01/25/06
 
                 if (count > 1)
                   //modified 01/26/2006  
@@ -147,8 +148,7 @@ topicNum = QBean.getTopicID(topic);
                 typeString = rs.getType();
 				typeDesc = rs.getTypeDescription();
                 //outString.append("<p><table border='0' cellspacing='0' cellpadding='0' width='100%'>");
-				outString.append("parentid: "+partnerId+"getpartenid: "+getPartnerId);
-                outString.append("<td valign='top' width='50%'><table border='0' cellspacing='0' cellpadding='0' width='100%'>");
+				 outString.append("<td valign='top' width='50%'><table border='0' cellspacing='0' cellpadding='0' width='100%'>");
                 
                 outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'>"+rs.getPartnerName()+endTD);
                 //outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;fon align='left'>"+rs.getPartnerName()+endTD);
@@ -183,6 +183,8 @@ topicNum = QBean.getTopicID(topic);
 				}
                 // Close the underlining and the table cell.
                 outString.append("</u>" + endTD);
+                    columncount++;
+outString.append("columncount: " + columncount)
             }
 
             if (typeString.compareTo(rs.getType().trim()) != 0)
