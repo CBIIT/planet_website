@@ -53,7 +53,7 @@
              if (count == 51) {
               	stateList.append("</td></tr>");
 				stateList.append("<tr><th colspan='2' >&nbsp;</th></tr>");
-				stateList.append("<tr><th colspan='2' align='left' valign='top' nowrap>Territories / Tribes</th></tr><tr><td valign='top' nowrap>");
+				stateList.append("<tr><th colspan='2' align='left' valign='top' nowrap>Territories / Tribes</th></tr><tr><td colspan='2' valign='top' nowrap>");
                 //count = 0;
             }
 			
