@@ -20,6 +20,7 @@ String topicDesc = "";
 String partnerText = "";
 String typeDesc = "";
 int topicNum = 0;
+int cellCount = 0; //added 01/25/06
 
 if (param != null)
     region = param.toUpperCase();
@@ -58,10 +59,7 @@ topicNum = QBean.getTopicID(topic);
     String beginTD = "<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;' align=\"left\">";
     String endTD = "</td></tr>";
     
-	//added 01/23/06
-    outString = new StringBuffer("<table border='1' cellspacing='0' cellpadding='5'><tr><td valign='top' colspan='2'>");
- 	//end 01/23/06  
-
+		
  if (partners!=null)
     {
     	Iterator it = partners.iterator();
@@ -72,23 +70,34 @@ topicNum = QBean.getTopicID(topic);
         String typeString = "";
         String typeOutput = "";
 		int addedContact = 0;
-				
-        do
+       				
+         do
         {
-	        PartnerBean rs = (PartnerBean)it.next();
+
+            PartnerBean rs = (PartnerBean)it.next();
 			typeDesc = rs.getTypeDescription();
             if (stateName.compareTo(rs.getStateName().trim()) != 0)
             {
                 if (count > 1)
-                    outString.append("</table></p>");
+                   // outString.append("</table></p>"); //01/26/2006
+					outString.append("</table></td>");
 
-                partnerId = rs.getPartnerId();
+               //if ((cellCount % 2) != 0 ) //added 01/26/2006
+                // outString.append("</tr><tr>");
+				//else {
+					//outString.append("<td>&nbsp;</td></tr>");
+					//cellCount++;
+				//}
+
+		        partnerId = rs.getPartnerId();
                 partnerString = rs.getPartnerAbbreviation();
                 typeString = rs.getType();
                 stateName = rs.getStateName();
 				typeDesc = rs.getTypeDescription();
-                outString.append("<table border='0' cellspacing='0' cellpadding='0' width='100%'>");
-                outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'><font style='font-family : Arial, Helvetica, Verdana, Geneva,  sans-serif;	font-size : 12px;	font-weight: bold; color : #AA0000;'>"+stateName+"</font><br><br>"+rs.getPartnerName()+endTD);
+                //modified 01/26/2006
+                outString.append("<table border='0' cellspacing='0' cellpadding='0' width='100%'><tr>");
+				outString.append("<td valign='top' width='50%'><table border='0' cellspacing='0' cellpadding='0' width='100%'>");
+                //outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'><font style='font-family : Arial, Helvetica, Verdana, Geneva,  sans-serif;	font-size : 12px;	font-weight: bold; color : #AA0000;'>"+stateName+"</font><br><br>"+rs.getPartnerName()+endTD);
 
                 outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;font-style: normal;' align='left'>");
                 outString.append("<u>" + typeDesc);
@@ -126,13 +135,26 @@ topicNum = QBean.getTopicID(topic);
             {
 
                 if (count > 1)
-                   outString.append("</table></p>");
+                  //modified 01/26/2006  
+				  outString.append("</table></td>");
+                 // outString.append("</table></p>");
+                              
+				//added 01/26/2006
+                 if (((cellCount % 2) != 0) && (count != 1))
+                 outString.append("</tr><tr>");
+				//else {
+					//outString.append("<td>&nbsp;</td></tr>");
+					//cellCount++;
+				//}
+                 //end of 01/26/2006
 
                 partnerId = rs.getPartnerId();
                 partnerString = rs.getPartnerAbbreviation();
                 typeString = rs.getType();
 				typeDesc = rs.getTypeDescription();
-                outString.append("<p><table border='0' cellspacing='0' cellpadding='0' width='100%'>");
+                //outString.append("<p><table border='0' cellspacing='0' cellpadding='0' width='100%'>");
+				//outString.append("parentid: "+partnerId+"getpartenid: ");
+                outString.append("<td valign='top' width='50%'><table border='0' cellspacing='0' cellpadding='0' width='100%'>");
                 
                 outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'>"+rs.getPartnerName()+endTD);
                 //outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;fon align='left'>"+rs.getPartnerName()+endTD);
@@ -171,7 +193,8 @@ topicNum = QBean.getTopicID(topic);
 
             if (typeString.compareTo(rs.getType().trim()) != 0)
             {
-				typeDesc = rs.getTypeDescription();
+
+                typeDesc = rs.getTypeDescription();
                 outString.append("<tr><td height='20'>&nbsp;</td></tr>");
                 outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;font-style: normal;' align='left'>");
                 outString.append("<u>" + rs.getTypeDescription());
@@ -190,7 +213,7 @@ topicNum = QBean.getTopicID(topic);
                 }
 
 				if (typeDesc.equals("Regional") && (addedContact != 1)) {
-					outString.append(" Contact");
+   					outString.append(" Contact");
 					addedContact = 1;
 				}
 				
@@ -282,16 +305,32 @@ topicNum = QBean.getTopicID(topic);
             }
 
             outString.append("<tr><td height='10'>&nbsp;</td></tr>");
-			typeDesc = rs.getTypeDescription();
+
+			    //01/26/2006
+					// if (((cellCount % 2) != 0) && (count != 1))
+						//outString.append("</tr>");
+					 //else {
+						//outString.append("<td>&nbsp;</td></tr>");
+						//cellCount++;
+					//}
+ 
+
+      		typeDesc = rs.getTypeDescription();
             count ++;
+			cellCount++; //added 01/26/2006
 			addedContact = 0;
+			//outString.append("count: "+count+" cellcount: "+cellCount);  //01/25/06
         } while (it.hasNext());
+		
+        outString.append("</td></tr></table>"); //added on 01/26/06
+        outString.append("</tr></table>"); 
+         
+     	//01/26/2006
+		if ((cellCount % 2) == 0) 
+				outString.append("<td>&nbsp;</td></tr>");
+        //end of 01/26/2006
 
-		outString.append("</table>");
-		//added 01/23/06
-        outString.append("</td></tr></table>");
-
-    } //end of if statement
+		} //end of if statement
 	else {
 		outString = new StringBuffer();
 		outString.append("No records found.");
@@ -305,7 +344,7 @@ topicNum = QBean.getTopicID(topic);
     {
         stateList = new StringBuffer();
 		//stateList.append("<table border='0' cellpadding='5' cellspacing='0'><tr><th colspan='2' align='left' valign='top' nowrap>STATES</th><th align='left' valign='top' nowrap>TERRITORIES/TRIBES</th></tr><tr><td valign='top' nowrap>");
-        stateList.append("<table border='0' cellpadding='5' cellspacing='0' width='100%'><tr><th colspan='2' align='left' valign='top' width='100%'>States</th></tr><tr><td valign='top' nowrap>");
+        stateList.append("<table border='0' cellpadding='5' cellspacing='0' width='100%'><tr><th colspan='2' align='left' valign='top' width='100%'>STATES</th></tr><tr><td valign='top' nowrap>");
 		String typeString = "S";
         int count= 0;
 		
@@ -323,7 +362,7 @@ topicNum = QBean.getTopicID(topic);
             if (count == 51) {
               	stateList.append("</td></tr>");
 				stateList.append("<tr><th colspan='2'>&nbsp;</th></tr>");
-				stateList.append("<tr><th colspan='2' align='left' valign='top'>Territories / Tribes</th></tr><tr><td valign='top' colspan='2'>");
+				stateList.append("<tr><th colspan='2' align='left' valign='top'>TERRITORIES/TRIBES</th></tr><tr><td valign='top' colspan='2'>");
                 //count = 0;
             }
 
@@ -396,7 +435,7 @@ topicNum = QBean.getTopicID(topic);
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
     <td><p class="banner"><a href="../index.html"><img src="../images/planet_logo.gif" alt="Cancer Control PLANET - Plan, Link, Act, Network with Evidence-based Tools" width="169" height="87" border="0"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p></td>    <td><a href="../index.html"><img src="../images/planet_banner_wider.gif" alt="Cancer Control PLANET - Links to comprehensive cancer control resources for public health professionals" width="500" height="82" border="0"></a></td>
-<td><p><a href="../index.html">Home</a><br>
+	<td><p><a href="../index.html">Home</a><br>
         <a href="../contact.html">Contact Us</a><br>
 		<a href="http://ccplanetraining.cancer.gov" onclick="javascript:popWindow('http://ccplanetraining.cancer.gov', 'name','725','400','yes'); return false;">On-line Training</a><br />
  	    <a href="about.html">About This Site</a><br>
@@ -436,7 +475,7 @@ topicNum = QBean.getTopicID(topic);
 </table>
 </table> -->
 
-<table bgcolor="white" border="0" cellpadding="0" cellspacing="0" width="100%">
+<table bgcolor="white" border="0" cellpadding="0" cellspacing="0">
 <tr>
 	<td valign="top" align="left" colspan="3"><div style="font-family : Arial, Helvetica, Verdana, Geneva, sans-serif; font-size: 20px; font-weight: bold; color: #000000;"><%= partnerText%></div><br>
 		<p>To locate research partners in <%= stateStatic%> go to the  <a href="rlist.jsp?r=<%= region%>&cctopic=<%= topicNum%>">research partners</a> page.</p>
@@ -444,12 +483,11 @@ topicNum = QBean.getTopicID(topic);
 	<td valign="top" style="font-family : Arial, Helvetica, Verdana, Geneva, sans-serif; font-size: 14px; font-weight: bold; color: #000000;" align="right" colspan="2">&nbsp;</td>
 </tr>
 <tr>
-	<td colspan="3">&nbsp;</td>
+	<td colspan="5">&nbsp;</td>
 </tr>
 <tr>
-	<td valign="top" width="28%"><%= stateList.toString()%></td>
-	<td valign="top" width="2%">&nbsp;</td>
-	<td valign="top" width="70%"><%= outString.toString()%></td>
+	<td valign="top"><%= stateList.toString()%></td>
+	<td valign="top" colspan="2" align="left"><%= outString.toString()%></td>
 </tr>
 </table>
 
