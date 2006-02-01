@@ -21,6 +21,7 @@ String partnerText = "";
 String typeDesc = "";
 int topicNum = 0;
 int cellCount = 0; //added 01/25/06
+ int columnCount = 0; //added 01/25/06
 
 if (param != null)
     region = param.toUpperCase();
@@ -133,8 +134,6 @@ topicNum = QBean.getTopicID(topic);
 
             if (partnerId != rs.getPartnerId())
             {
-                int columnCount = 0; //added 01/25/06
-
                 if (count > 1)
                   //modified 01/26/2006  
 				  outString.append("</table></td>");
