@@ -184,7 +184,7 @@ topicNum = QBean.getTopicID(topic);
                 // Close the underlining and the table cell.
                 outString.append("</u>" + endTD);
                     columncount++;
-outString.append("columncount: " + columncount)
+outString.append("columncount: " + columncount);
             }
 
             if (typeString.compareTo(rs.getType().trim()) != 0)
