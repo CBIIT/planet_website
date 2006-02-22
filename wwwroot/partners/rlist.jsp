@@ -312,7 +312,7 @@ if (param != null)
 	pageTitle = pageTitle + " - " + stateStatic;
 	
 		if (stateStatic.compareTo("the US") == 0) {
-			stateStatic = "All States";
+			stateStatic = "All States, all states";
 			researcherText="Research Partners - <font style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif; font-size: 20px; font-weight: bold; color: #AA0000;'>"+staticTopic+"</font>";
 		}
 		else
