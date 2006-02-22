@@ -83,7 +83,7 @@ if (param != null)
 		int researcherCount = 0;
 			
 		if (ccTopic == 0)
-			staticTopic = "all states, all topics";
+			staticTopic = "all topics";
 		else
 			staticTopic = QBean.getTopicDescription(topic);
 			
