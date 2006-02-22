@@ -133,14 +133,14 @@
       <div style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;">
         <p>To view, click on map or state name below.</p>
 	 </div>
-      <p>To locate program partners in your state or region go to the <a href="">Program Partners</a> page.</p>
+      <p>To locate program partners in your state or region go to the <a href="">Program Partners</a> page.<br><br></p>
 	</td>
 </tr>
 <tr>
 	<td valign='top' colspan="2"><%= stateList.toString()%><br /></td>
 	<td valign='top'><%= htmlString%><br></td>
 <tr>
-	<td colspan="3"><a href="rlist.jsp?r=ALL&cctopic=<%= topic %>">View all U.S. Researchers by topic area</a></td>
+	<td colspan="3" bgcolor='#F1F1FD><a href="rlist.jsp?r=ALL&cctopic=<%= topic %>">View all U.S. Researchers by topic area</a></td>
 </tr>
 <tr> 
     <td colspan="3">The list of research partners was compiled based on those individuals who had received a grant during the fiscal year period from 1998-2003 and who have permitted their contact information to be listed as a resource for comprehensive cancer control planning and implementation within their state.</td>
@@ -152,7 +152,6 @@
 	<div align="center">
           <a href="../index.html">Home</a>&nbsp;&nbsp;&nbsp;
           <a href="../contact.html">Contact Us</a>&nbsp;&nbsp;&nbsp;
-		  <a href="http://ccplanetraining.cancer.gov" onclick="javascript:popWindow('http://ccplanetraining.cancer.gov', 'name','725','400','yes'); return false;">On-line Training</a><br />
           <a href="../about.html">About this Site</a>&nbsp;&nbsp;&nbsp;
           <a href="../partners.html">PLANET Sponsors</a>&nbsp;&nbsp;&nbsp;
           <a href="../privacy.html">Privacy Policy</a>&nbsp;&nbsp;&nbsp;
