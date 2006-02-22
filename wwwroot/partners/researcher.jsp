@@ -137,7 +137,7 @@
 	</td>
 </tr>
 <tr>
-	<td valign='top' colspan="2"><%= stateList.toString()%><br /></td>
+	<td valign='top' colspan="2"><%= stateList.toString()%></td>
 	<td valign='top'><%= htmlString%></td>
 </tr>
 <tr>
