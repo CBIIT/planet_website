@@ -66,7 +66,8 @@ if (param != null)
     String endTD = "</td></tr>";
 	
 
-		outString = new StringBuffer("<table border='0' cellspacing='0' cellpadding='5'>");
+		//outString = new StringBuffer("<table border='0' cellspacing='0' cellpadding='5'>");
+        outString = new StringBuffer("<table border='0' cellspacing='0' cellpadding='5'><tr><td>Research Partners are listed in alphabetical order by state<br><br></td></tr>");
 		topicString = new StringBuffer("<tr><td valign='top' style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size: 14px; font-weight: bold; color : #000000;' colspan='2'><a name='top'></a>View by Topic:</td></tr><tr><td valign='top' style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size : 12;'>");
 	
     if (researchers!=null)
@@ -345,10 +346,7 @@ if (param != null)
 </table>
 
 <table bgcolor="white" border="0" cellpadding="0" cellspacing="0" width="100%">
-  <tr>
-       <td valign="top" colspan="2">Research Partners are listed in alphabetical order by state<br></td>
-  </tr>
-  <tr>
+   <tr>
 	<td valign="top" colspan="2"><div  style="font-family: Arial, Helvetica, Verdana, Geneva, sans-serif; font-size: 20px; font-weight: bold; color: #000000;"><%= researcherText%></div><br>
 	<p>To locate program partners in <%= stateStatic%> go to the <a href="list.jsp?r=<%= region%>&cctopic=<%= topicLet%>">Program Partners</a> page.</td>
 	<td valign="top" align="right">&nbsp;</td>
