@@ -342,6 +342,9 @@ if (param != null)
   <tr>
     <td colspan="3"><hr size="1" noshade></td>
   </tr>
+ <tr>
+    <td colspan="3">Research Partners are listed in alphabetical order by state</td>
+  </tr>
 </table>
 
 <table bgcolor="white" border="0" cellpadding="0" cellspacing="0" width="100%">
