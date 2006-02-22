@@ -369,7 +369,7 @@ if (param != null)
 		<%= stateList.toString()%></td>
    <td valign="top" width="2%">&nbsp;</td>
 	<td valign="top" align="left" width="70%">
-		<table cellspacing="5"><%= topicString.toString()%></table><%= outString.toString()%></td>
+		<table cellspacing="5"><%= topicString.toString()%></table>Research Partners are listed in alphabetical order by state<%= outString.toString()%></td>
   </tr>
 </table>
 
