@@ -135,7 +135,7 @@
 	 <div style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;">
 		<p><strong>To view, click on map or state name below.</strong></p>
 	</div>
-	    <p>To locate research partners in your state or region go to the  <a href="researcher.jsp?cctopic=0">research partners</a> page.</p>
+	    <p>To locate research partners in your state or region go to the  <a href="researcher.jsp?cctopic=0">Research Partners</a> page.</p>
 		
 	</div>
 	<!--<br />-->
@@ -145,7 +145,7 @@
 	<td valign='top' colspan="2"><%= stateList.toString()%><br /></td>
 	<td valign='top'><%= htmlString%><br></td>
 <tr>
-	<td colspan="3"><a href='list.jsp?r=ALL&cctopic=<%= topic %>'>View all Program Partners</a>
+	<td colspan="3"><a href='list.jsp?r=ALL&cctopic=<%= topic %>'>View all U.S. Program Partners</a>
 </tr>
 </table>
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
