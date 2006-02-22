@@ -67,7 +67,7 @@ if (param != null)
 	
 
 		//outString = new StringBuffer("<table border='0' cellspacing='0' cellpadding='5'>");
-        outString = new StringBuffer("<table border='0' cellspacing='0' cellpadding='5'><tr><td>Research Partners are listed in alphabetical order by state<br><br></td></tr>");
+        outString = new StringBuffer("<table border='0' cellspacing='0' cellpadding='5'><tr><td style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size : 12;'>Research Partners are listed in alphabetical order by state<br><br></td></tr>");
 		topicString = new StringBuffer("<tr><td valign='top' style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size: 14px; font-weight: bold; color : #000000;' colspan='2'><a name='top'></a>View by Topic:</td></tr><tr><td valign='top' style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size : 12;'>");
 	
     if (researchers!=null)
@@ -83,7 +83,7 @@ if (param != null)
 		int researcherCount = 0;
 			
 		if (ccTopic == 0)
-			staticTopic = "all topics";
+			staticTopic = "all states, all topics";
 		else
 			staticTopic = QBean.getTopicDescription(topic);
 			
@@ -323,7 +323,7 @@ if (param != null)
 			researcherText="Research Partners - <font style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif; font-size: 20px; font-weight: bold; color: #AA0000;'>"+staticTopic+"</font>";
 		}
 		else
-			researcherText="Research Partners - <font style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif; font-weight: bold; font-size: 20px; color: AA0000;'>"+stateStatic+"<font style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif; font-weight: bold; 	font-size: 20px; color: AA0000;'>," +staticTopic+"</font></font>";
+			researcherText="Research Partners - <font style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif; font-weight: bold; font-size: 20px; color: AA0000;'>"+stateStatic+"<font style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif; font-weight: bold; 	font-size: 20px; color: AA0000;'>, all topics </font></font>";
 
 	if (topicString.length() == 0) {
   		topicString = new StringBuffer("<tr><td><font style='family: Arial, Helvetica, Verdana, Geneva, sans-serif;	size: 14px; weight: bold; color: #000000;'>Research partners not currently available in "+stateStatic+".</font></td></tr>");
@@ -369,7 +369,7 @@ if (param != null)
 		<%= stateList.toString()%></td>
    <td valign="top" width="2%">&nbsp;</td>
 	<td valign="top" align="left" width="70%">
-		<table cellspacing="5"><%= topicString.toString()%></table>Research Partners are listed in alphabetical order by state<%= outString.toString()%></td>
+		<table cellspacing="5"><%= topicString.toString()%></table><%= outString.toString()%></td>
   </tr>
 </table>
 
