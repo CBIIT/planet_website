@@ -110,7 +110,7 @@ topicNum = QBean.getTopicID(topic);
                 }
 
 				if (typeDesc.equals("Regional") && (addedContact != 1)) {
-					'outString.append(" Contact");
+					outString.append(" Contact");
 					addedContact = 1;
 				}
 				
@@ -158,7 +158,7 @@ topicNum = QBean.getTopicID(topic);
 							}
                 }
 				if (typeDesc.equals("Regional") && (addedContact != 1)) {
-					'outString.append(" Contact");
+					outString.append(" Contact");
 					addedContact = 1;
 				}
 				
@@ -191,7 +191,7 @@ topicNum = QBean.getTopicID(topic);
                 }
 
 				if (typeDesc.equals("Regional") && (addedContact != 1)) {
-					'outString.append(" Contact");
+					outString.append(" Contact");
 					addedContact = 1;
 				}
 				
