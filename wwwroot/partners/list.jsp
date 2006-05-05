@@ -152,7 +152,7 @@ topicNum = QBean.getTopicID(topic);
                             outString.append(" Health Department Contact");
                         else {
 								if (addedContact != 1) {
-                            		outString.append(" Contact");
+                  outString.append(" Contact");
 									addedContact = 1;
 								}
 							}
@@ -184,7 +184,7 @@ topicNum = QBean.getTopicID(topic);
                        outString.append(" Health Department Contact");
                     else {
 								if (addedContact != 1) {
-                            		outString.append(" Contact");
+                  outString.append(" Contact");
 									addedContact = 1;
 								}
 							}
