@@ -24,7 +24,7 @@ int topicNum = 0;
 if (param != null) {
     region = param.toUpperCase();
 }
-	
+
 param = request.getParameter("cctopic");
 
 if (param != null) {
@@ -37,30 +37,29 @@ Vector partners = null;
 QueryBean QBean = new QueryBean();
 topicNum = QBean.getTopicID(topic);
 
-	
-    // Find the page title to use based on the topic
-	if (topic.compareTo("C") != 0){
-		topicDesc = QBean.getTopicDescription(topic);
-	}
+// Find the page title to use based on the topic
+if (topic.compareTo("C") != 0) {
+topicDesc = QBean.getTopicDescription(topic);
+} //end if (topic.compareTo("C") != 0)
 
-    String pageTitle = topicDesc + " Partners";
-    caption = "Cancer Control PLANET - " + pageTitle;
+String pageTitle = topicDesc + " Partners";
+caption = "Cancer Control PLANET - " + pageTitle;
 
-    if (region.equals("ALL")) {
-        pcScript = "US.addPCXML(<DefaultShapeSettings><Properties FillColor='#B20000'/><Drilldown URL='list.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultShapeSettings>)";
-        partners = QBean.getPartners(topic.toUpperCase());
-		stateStatic="the US";
-    } else {
-        pcScript = "US.setShapeValues("+region.trim()+",1)US.addPCXML(<DefaultShapeSettings><Drilldown URL='list.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultShapeSettings>)@_END";
-        partners = QBean.getPartners(topic.toUpperCase(), region);
-    }
+if (region.equals("ALL")) {
+    pcScript = "US.addPCXML(<DefaultShapeSettings><Properties FillColor='#B20000'/><Drilldown URL='list.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultShapeSettings>)";
+    partners = QBean.getPartners(topic.toUpperCase());
+stateStatic="the US";
+} else {
+    pcScript = "US.setShapeValues("+region.trim()+",1)US.addPCXML(<DefaultShapeSettings><Drilldown URL='list.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultShapeSettings>)@_END";
+    partners = QBean.getPartners(topic.toUpperCase(), region);
+} //end if (region.equals("ALL"))
 
-    String beginTD = "<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;' align=\"left\">";
-    String endTD = "</td></tr>";
-    
-	//added 01/23/06
-    outString = new StringBuffer("<table border='1' cellspacing='0' cellpadding='5'><tr><td valign='top' colspan='2'>");
- 	//end 01/23/06  
+String beginTD = "<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;' align=\"left\">";
+String endTD = "</td></tr>";
+
+//added 01/23/06
+outString = new StringBuffer("<table border='1' cellspacing='0' cellpadding='5'><tr><td valign='top' colspan='2'>");
+//end 01/23/06  
 
  if (partners!=null) {
     	Iterator it = partners.iterator();
@@ -78,7 +77,7 @@ topicNum = QBean.getTopicID(topic);
             if (stateName.compareTo(rs.getStateName().trim()) != 0) { //This is a new state
                 if (count > 1) {
                     outString.append("</table></p>");
-				}
+				}//end if (count > 1)
 
                 partnerId = rs.getPartnerId();
                 partnerString = rs.getPartnerAbbreviation();
@@ -104,29 +103,29 @@ topicNum = QBean.getTopicID(topic);
 						} else {
 								addedContact = 1;
                             	outString.append(" Contact");
-						}
-					}
-                }
+						} //end if (topic.equals("P"))
+					} //end if (topic.equals("T"))
+                } //end if (partnerString.equals("CDC") && !typeString.equals("W"))
 
 				if (typeDesc.equals("Regional") && (addedContact != 1)) {
 					outString.append(" Contact");
 					addedContact = 1;
-				}
+				}//end if (typeDesc.equals("Regional") && (addedContact != 1))
 				
 				if (typeDesc.equals("State") && (addedContact != 1)) {
 					outString.append(" Contact");
 					addedContact = 1;
-				}
+				}//end if (typeDesc.equals("State") && (addedContact != 1))
 				
                 // Close the underlining and the table cell.
                 outString.append("</u>"+endTD);
-            }
+            }//end if (stateName.compareTo(rs.getStateName().trim()) != 0)
 
             if (partnerId != rs.getPartnerId()) {
 
                 if (count > 1) {
                    outString.append("</table></p>");
-				}
+				}//end if (count > 1)
 
                 partnerId = rs.getPartnerId();
                 partnerString = rs.getPartnerAbbreviation();
@@ -153,22 +152,23 @@ topicNum = QBean.getTopicID(topic);
 								if (addedContact != 1) {
 									outString.append(" Contact");
 									addedContact = 1;
-								}
-						}
-					}
-                }
+								}//end if (addedContact != 1)
+						}//end if (topic.equals("P"))
+					}//end if (topic.equals("T"))
+                }//end if (partnerString.equals("CDC") && !typeString.equals("W"))
 				if (typeDesc.equals("Regional") && (addedContact != 1)) {
 					outString.append(" Contact");
 					addedContact = 1;
-				}
+				}//end if (typeDesc.equals("Regional") && (addedContact != 1))
 				
 				if (typeDesc.equals("State") && (addedContact != 1)) {
 					outString.append(" Contact");
 					addedContact = 1;
-				}
+				}//if (typeDesc.equals("State") && (addedContact != 1))
+				
                 // Close the underlining and the table cell.
                 outString.append("</u>" + endTD);
-            }
+            }//end if (partnerId != rs.getPartnerId())
 
             if (typeString.compareTo(rs.getType().trim()) != 0) {
 				typeDesc = rs.getTypeDescription();
@@ -185,34 +185,35 @@ topicNum = QBean.getTopicID(topic);
 								if (addedContact != 1) {
 									outString.append(" Contact");
 									addedContact = 1;
-								}
-					}
-                }
+								}//end if (addedContact != 1)
+					}//end if (topic.compareTo("C") != 0)
+                }//end if (partnerString.equals("CDC") && !typeString.equals("W"))
 
 				if (typeDesc.equals("Regional") && (addedContact != 1)) {
 					outString.append(" Contact");
 					addedContact = 1;
-				}
+				}//end if (typeDesc.equals("Regional") && (addedContact != 1))
 				
 				if (typeDesc.equals("State") && (addedContact != 1)) {
 					outString.append(" Contact");
 					addedContact = 1;
-				}
+				}//end if (typeDesc.equals("State") && (addedContact != 1))
 
                 // Close the underlining and the table cell.
                 outString.append("</u>" + endTD);
                 typeString = rs.getType();
 				typeDesc = rs.getTypeDescription();
-            }
+            }//end if (typeString.compareTo(rs.getType().trim()) != 0)
 
             if (rs.getContactName() != null && rs.getContactName().compareTo("") != 0) {
                 outString.append(beginTD+rs.getContactName().trim());
 
                 if (rs.getDegree() != null && rs.getDegree().compareTo("") != 0) {
                     outString.append(", "+rs.getDegree());
-				}
+				}// end if (rs.getDegree() != null && rs.getDegree().compareTo("") != 0)
                 outString.append(endTD);
-            }
+            }//end if (rs.getContactName() != null && rs.getContactName().compareTo("") != 0)
+			
             if (rs.getTitle() != null && rs.getTitle().compareTo("") != 0)
                 outString.append(beginTD+rs.getTitle().trim()+endTD);
 
@@ -251,30 +252,31 @@ topicNum = QBean.getTopicID(topic);
                     urlStr = "http://"+rs.getOrgurl().trim();
                 } else {
                     urlStr = rs.getOrgurl().trim();
-				}
+				}//end if (rs.getOrgurl().indexOf("http://") < 0)
 
                 // Don't display "Web site:" field header for tobacco, breast cancer, and cervical cancer contacts.
                 if (partnerString.equals("CDC") && (topic.equals("T") || topic.equals("B") || topic.equals("V"))) {
                    outString.append(beginTD+"<a href=\""+urlStr+"\" target=\"_blank\" class='a1'>"+urlStr+"</a>"+endTD);
                 } else {
                     outString.append(beginTD+"Web site:  <a href=\""+urlStr+"\" target=\"_blank\" class='a1'>"+urlStr+"</a>"+endTD);
-				}
-
+				}//end if (partnerString.equals("CDC") && (topic.equals("T") || topic.equals("B") || topic.equals("V")))
+			}//end if (rs.getOrgurl() != null && rs.getOrgurl().compareTo("") != 0)
+			
             if (rs.getOrgurl2() != null && rs.getOrgurl2().compareTo("") != 0) {
                 String urlStr = "";
                 if (rs.getOrgurl2().indexOf("http://") < 0) {
                     urlStr = "http://"+rs.getOrgurl2().trim();
 				} else {
                     urlStr = rs.getOrgurl2().trim();
-				}
+				}//end (rs.getOrgurl2().indexOf("http://") < 0)
 
                 // Don't display Web site: field header for tobacco, breast cancer, and cervical cancer contacts.
                 if (partnerString.equals("CDC") && (topic.equals("T") || topic.equals("B") || topic.equals("V"))) {
                    outString.append(beginTD+"<a href=\""+urlStr+"\" target=\"_blank\" class='a1'>"+urlStr+"</a>"+endTD);
                 } else {
                     outString.append(beginTD+"Web site:  <a href=\""+urlStr+"\" target=\"_blank\" class='a1'>"+urlStr+"</a>"+endTD);
-				}
-            }
+				}//end if (partnerString.equals("CDC") && (topic.equals("T") || topic.equals("B") || topic.equals("V")))
+            }//end if (rs.getOrgurl2() != null && rs.getOrgurl2().compareTo("") != 0)
 
             outString.append("<tr><td height='10'>&nbsp;</td></tr>");
 			typeDesc = rs.getTypeDescription();
@@ -334,8 +336,8 @@ topicNum = QBean.getTopicID(topic);
             
            //comment out 01/10/2005
            //if (count > 0 && count != 26 && count !=51 && count !=56) {
-           if (count > 0 && count != 26 && count !=51 ) {
-               stateList.append("<br />");
+			if (count > 0 && count != 26 && count !=51 ) {
+				stateList.append("<br />");
                 
              //    if (count > 51){
              //   stateList.append("<br /><br />");
