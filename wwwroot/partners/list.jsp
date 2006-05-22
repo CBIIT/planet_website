@@ -46,11 +46,11 @@ String pageTitle = topicDesc + " Partners";
 caption = "Cancer Control PLANET - " + pageTitle;
 
 if (region.equals("ALL")) {
-    pcScript = "US.addPCXML(<DefaultShapeSettings><Properties FillColor='#B20000'/><Drilldown URL='list.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultShapeSettings>)";
+    //pcScript = "US.addPCXML(<DefaultShapeSettings><Properties FillColor='#B20000'/><Drilldown URL='list.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultShapeSettings>)";
     partners = QBean.getPartners(topic.toUpperCase());
 stateStatic="the US";
 } else {
-    pcScript = "US.setShapeValues("+region.trim()+",1)US.addPCXML(<DefaultShapeSettings><Drilldown URL='list.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultShapeSettings>)@_END";
+    //pcScript = "US.setShapeValues("+region.trim()+",1)US.addPCXML(<DefaultShapeSettings><Drilldown URL='list.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultShapeSettings>)@_END";
     partners = QBean.getPartners(topic.toUpperCase(), region);
 } //end if (region.equals("ALL"))
 
@@ -380,16 +380,16 @@ if (it2.hasNext()) {
 		}
 //*****************************************************
 
-NCIPopChartEmbedder myChart = new NCIPopChartEmbedder();
-myChart.appearanceFile = "apfiles/planet/ccpmap_small.pcxml";
-myChart.pcScript = pcScript;
-myChart.height = 360;
-myChart.width = 505;
-myChart.imageType = "FLASH";
-myChart.fallback = "STRICT";
-myChart.returnDescriptiveLink = false;
-myChart.userAgent = request.getHeader("USER-AGENT");
-htmlString = myChart.getEmbeddingHTML();%>
+//NCIPopChartEmbedder myChart = new NCIPopChartEmbedder();
+//myChart.appearanceFile = "apfiles/planet/ccpmap_small.pcxml";
+//myChart.pcScript = pcScript;
+//myChart.height = 360;
+//myChart.width = 505;
+//myChart.imageType = "FLASH";
+//myChart.fallback = "STRICT";
+//myChart.returnDescriptiveLink = false;
+//myChart.userAgent = request.getHeader("USER-AGENT");
+//htmlString = myChart.getEmbeddingHTML();%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
 <head>
@@ -416,32 +416,6 @@ htmlString = myChart.getEmbeddingHTML();%>
 	</td>
   </tr>
 </table>
-<!-- <table bgcolor="white" border="0" cellpadding="0" cellspacing="0">
-<tr>
-<td valign='top'>
-<table bgcolor='white' border='0' cellpadding="5" cellspacing="0">
-<tr>
-<td valign="top" colspan="3" style="font-family : Arial, Helvetica, Verdana, Geneva, sans-serif; font-size: 14px;	font-weight: bold; color: #000000;">View Program Partners in another state / territory:</td>
-</tr>
-<tr>
-<td valign='top'>
-< stateList.toString()%>
-</td>
-</tr>
-</table>
-</td>
-<td width="2" valign='top'>&nbsp;</td>
-<td valign='top'><table><tr><td>< outString.toString()%></td></tr></table></td>
-
-<td valign="top" colspan="3" style="font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size: 14px;	font-weight: bold; color: #000000;" align="right"><a href="rlist.jsp?r=< region%>&cctopic=0">View Research Partners in < stateStatic%></a>
-< htmlString%><br>
-<a href="javascript:window.close()">Close Window</a>
-
-</td>
-
-</tr>
-</table>
-</table> -->
 
 <table bgcolor="white" border="0" cellpadding="0" cellspacing="0" width="100%">
 <tr>
