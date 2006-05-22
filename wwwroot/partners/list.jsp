@@ -84,21 +84,23 @@ if (partners!=null) { //We have partners
                 typeString = rs.getType();
                 stateName = rs.getStateName();
 				typeDesc = rs.getTypeDescription();
-				
+
 				//*******************************************
 				//*** Display State Name and Partner Name ***
                 //*******************************************
 				outString.append("<table border='0' cellspacing='0' cellpadding='0' width='100%'>");
                 //outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'><font style='font-family : Arial, Helvetica, Verdana, Geneva,  sans-serif;	font-size : 12px;	font-weight: bold; color : #AA0000;'>"+stateName+"</font><br><br>"+rs.getPartnerName()+endTD);
 				outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'>"+rs.getPartnerName()+endTD);
+                //*******************************************
 
+                //*******************************************
+				//*** Display Contact Type ***
+                //*******************************************
+				// For state and territory contacts we may need to tack on some additional information.
+				// outString.append(partnerString + " - " + typeString + " - " + topic + " - " + typeDesc + " - ");
                 outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;font-style: normal;' align='left'>");
                 outString.append("<u>" + typeDesc);
-				//*******************************************
-                
-                // For state and territory contacts we may need to tack on some additional information.
-				// outString.append(partnerString + " - " + typeString + " - " + topic + " - " + typeDesc + " - ");
-                if (partnerString.equals("CDC") && !typeString.equals("W")) {
+				if (partnerString.equals("CDC") && !typeString.equals("W")) {
                     if (topic.equals("T")) {
                         outString.append(" Health Department Web Site");
 					} else if (topic.equals("P")) {
@@ -109,7 +111,7 @@ if (partners!=null) { //We have partners
                         outString.append(" Contact");
 					} //end if (topic.equals("T"))
                 } //end if (partnerString.equals("CDC") && !typeString.equals("W"))
-
+				
 				if (typeDesc.equals("Regional") && (addedContact != 1)) {
 					outString.append(" Contact");
 					addedContact = 1;
@@ -122,8 +124,9 @@ if (partners!=null) { //We have partners
 				
                 // Close the underlining and the table cell.
                 outString.append("</u>"+endTD);
+				//*******************************************
             }//end if (stateName.compareTo(rs.getStateName().trim()) != 0)
-
+                
             if (partnerId != rs.getPartnerId()) {
 
                 if (count > 1) {
@@ -137,7 +140,6 @@ if (partners!=null) { //We have partners
                 outString.append("<p><table border='0' cellspacing='0' cellpadding='0' width='100%'>");
                 
                 outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'>"+rs.getPartnerName()+endTD);
-                //outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;fon align='left'>"+rs.getPartnerName()+endTD);
 
                 outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;style: bold;' align='left'>");
                 outString.append("<u>" + rs.getTypeDescription());
@@ -147,18 +149,15 @@ if (partners!=null) { //We have partners
                 if (partnerString.equals("CDC") && !typeString.equals("W")) {
                     if (topic.equals("T")) {
                         outString.append(" Health Department Web Site");
-                    } else {
-                        if (topic.equals("P")) {
-                            outString.append(" Health Department Contact");
-							addedContact = 1;
-                        } else {
-								if (addedContact != 1) {
-									outString.append(" Contact");
-									addedContact = 1;
-								}//end if (addedContact != 1)
-						}//end if (topic.equals("P"))
+                    } else if (topic.equals("P")) {
+                        outString.append(" Health Department Contact");
+						addedContact = 1;
+                    } else if (addedContact != 1) {
+						outString.append(" Contact");
+						addedContact = 1;
 					}//end if (topic.equals("T"))
                 }//end if (partnerString.equals("CDC") && !typeString.equals("W"))
+				
 				if (typeDesc.equals("Regional") && (addedContact != 1)) {
 					outString.append(" Contact");
 					addedContact = 1;
@@ -296,8 +295,10 @@ else { //No partners returned!
 	outString.append("No records found.");
 }//end if (partners!=null)
 
+//****************************************************
+//*****  SHOW STATE and TERRITORIES/TRIBES LIST  *****
+//****************************************************
 Vector states = QBean.getStateList();
-
 Iterator it2 = states.iterator();
 
 if (it2.hasNext()) {
@@ -356,9 +357,13 @@ if (it2.hasNext()) {
 
         stateList.append("<br/><br/></td></tr><tr><td colspan=2><a href='list.jsp?r=ALL&cctopic=" + topic + "' title=\"All states and regions\">View all U.S. Program Partners</a></td></tr></table>");
 }//end if (it2.hasNext())
+//****************************************************
+//*****  END STATE and TERRITORIES/TRIBES LIST   *****
+//****************************************************
 
 		pageTitle = pageTitle + " - " + stateStatic;
 		
+//****************** Page Header/Title ****************
 		if (stateStatic.compareTo("the US") == 0) {
 			stateStatic = "All States";
 
@@ -373,6 +378,7 @@ if (it2.hasNext()) {
 				partnerText="Program Partners - <font style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size: 20px; font-weight: bold; color : #AA0000;'>"+stateStatic+"</font>";
 			}
 		}
+//*****************************************************
 
 NCIPopChartEmbedder myChart = new NCIPopChartEmbedder();
 myChart.appearanceFile = "apfiles/planet/ccpmap_small.pcxml";
