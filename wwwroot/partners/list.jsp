@@ -88,8 +88,8 @@ topicNum = QBean.getTopicID(topic);
                 stateName = rs.getStateName();
 				typeDesc = rs.getTypeDescription();
                 outString.append("<table border='0' cellspacing='0' cellpadding='0' width='100%'>");
-                outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'><font style='font-family : Arial, Helvetica, Verdana, Geneva,  sans-serif;	font-size : 12px;	font-weight: bold; color : #AA0000;'>"+stateName+"</font><br><br>"+rs.getPartnerName()+endTD);
-				//outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'>"+rs.getPartnerName()+endTD);
+                //outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'><font style='font-family : Arial, Helvetica, Verdana, Geneva,  sans-serif;	font-size : 12px;	font-weight: bold; color : #AA0000;'>"+stateName+"</font><br><br>"+rs.getPartnerName()+endTD);
+				outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'>"+rs.getPartnerName()+endTD);
 
                 outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;font-style: normal;' align='left'>");
                 outString.append("<u>" + typeDesc);
@@ -103,6 +103,7 @@ topicNum = QBean.getTopicID(topic);
                     else
                         if (topic.equals("P"))
                             outString.append(" Health Department Contact");
+							addedContact = 1;
                         else {
 								addedContact = 1;
                             	outString.append(" Contact");
@@ -150,9 +151,10 @@ topicNum = QBean.getTopicID(topic);
                     else
                         if (topic.equals("P"))
                             outString.append(" Health Department Contact");
+							addedContact = 1;
                         else {
 								if (addedContact != 1) {
-                  outString.append(" Contact");
+									outString.append(" Contact");
 									addedContact = 1;
 								}
 							}
@@ -182,12 +184,13 @@ topicNum = QBean.getTopicID(topic);
                 {
                     if (topic.compareTo("C") != 0)
                        outString.append(" Health Department Contact");
+					   addedContact = 1;
                     else {
 								if (addedContact != 1) {
-                  outString.append(" Contact");
+									outString.append(" Contact");
 									addedContact = 1;
 								}
-							}
+					}
                 }
 
 				if (typeDesc.equals("Regional") && (addedContact != 1)) {
@@ -256,7 +259,7 @@ topicNum = QBean.getTopicID(topic);
                 else
                     urlStr = rs.getOrgurl().trim();
 
-                // Don't display Web site: field header for tobacco, breast cancer, and cervical cancer contacts.
+                // Don't display "Web site:" field header for tobacco, breast cancer, and cervical cancer contacts.
                 if (partnerString.equals("CDC") && (topic.equals("T") || topic.equals("B") || topic.equals("V")))
                 {
                    outString.append(beginTD+"<a href=\""+urlStr+"\" target=\"_blank\" class='a1'>"+urlStr+"</a>"+endTD);
