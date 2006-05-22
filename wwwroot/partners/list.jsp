@@ -149,10 +149,10 @@ topicNum = QBean.getTopicID(topic);
                     if (topic.equals("T"))
                         outString.append(" Health Department Web Site");
                     else
-                        if (topic.equals("P"))
+                        if (topic.equals("P")) {
                             outString.append(" Health Department Contact");
 							addedContact = 1;
-                        else {
+                        } else {
 								if (addedContact != 1) {
 									outString.append(" Contact");
 									addedContact = 1;
@@ -182,10 +182,10 @@ topicNum = QBean.getTopicID(topic);
 				
                 if (partnerString.equals("CDC") && !typeString.equals("W"))
                 {
-                    if (topic.compareTo("C") != 0)
+                    if (topic.compareTo("C") != 0) {
                        outString.append(" Health Department Contact");
 					   addedContact = 1;
-                    else {
+                    } else {
 								if (addedContact != 1) {
 									outString.append(" Contact");
 									addedContact = 1;
@@ -209,13 +209,12 @@ topicNum = QBean.getTopicID(topic);
 				typeDesc = rs.getTypeDescription();
             }
 
-            if (rs.getContactName() != null && rs.getContactName().compareTo("") != 0)
-            {
+            if (rs.getContactName() != null && rs.getContactName().compareTo("") != 0){
                 outString.append(beginTD+rs.getContactName().trim());
 
-                if (rs.getDegree() != null && rs.getDegree().compareTo("") != 0)
+                if (rs.getDegree() != null && rs.getDegree().compareTo("") != 0){
                     outString.append(", "+rs.getDegree());
-
+				}
                 outString.append(endTD);
             }
             if (rs.getTitle() != null && rs.getTitle().compareTo("") != 0)
@@ -254,19 +253,19 @@ topicNum = QBean.getTopicID(topic);
             if (rs.getOrgurl() != null && rs.getOrgurl().compareTo("") != 0)
             {
                 String urlStr = "";
-                if (rs.getOrgurl().indexOf("http://") < 0)
+                if (rs.getOrgurl().indexOf("http://") < 0) {
                     urlStr = "http://"+rs.getOrgurl().trim();
-                else
+                } else {
                     urlStr = rs.getOrgurl().trim();
+				}
 
                 // Don't display "Web site:" field header for tobacco, breast cancer, and cervical cancer contacts.
                 if (partnerString.equals("CDC") && (topic.equals("T") || topic.equals("B") || topic.equals("V")))
                 {
                    outString.append(beginTD+"<a href=\""+urlStr+"\" target=\"_blank\" class='a1'>"+urlStr+"</a>"+endTD);
-                }
-                else
+                } else {
                     outString.append(beginTD+"Web site:  <a href=\""+urlStr+"\" target=\"_blank\" class='a1'>"+urlStr+"</a>"+endTD);
-            }
+				}
 
             if (rs.getOrgurl2() != null && rs.getOrgurl2().compareTo("") != 0)
             {
@@ -280,9 +279,9 @@ topicNum = QBean.getTopicID(topic);
                 if (partnerString.equals("CDC") && (topic.equals("T") || topic.equals("B") || topic.equals("V")))
                 {
                    outString.append(beginTD+"<a href=\""+urlStr+"\" target=\"_blank\" class='a1'>"+urlStr+"</a>"+endTD);
-                }
-                else
+                } else {
                     outString.append(beginTD+"Web site:  <a href=\""+urlStr+"\" target=\"_blank\" class='a1'>"+urlStr+"</a>"+endTD);
+				}
             }
 
             outString.append("<tr><td height='10'>&nbsp;</td></tr>");
