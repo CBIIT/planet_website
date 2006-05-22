@@ -61,7 +61,7 @@ String endTD = "</td></tr>";
 outString = new StringBuffer("<table border='1' cellspacing='0' cellpadding='5'><tr><td valign='top' colspan='2'>");
 //end 01/23/06  
 
- if (partners!=null) {
+if (partners!=null) {
     	Iterator it = partners.iterator();
 	    outString = new StringBuffer();
         String partnerString = "";
@@ -261,7 +261,7 @@ outString = new StringBuffer("<table border='1' cellspacing='0' cellpadding='5'>
                     outString.append(beginTD+"Web site:  <a href=\""+urlStr+"\" target=\"_blank\" class='a1'>"+urlStr+"</a>"+endTD);
 				}//end if (partnerString.equals("CDC") && (topic.equals("T") || topic.equals("B") || topic.equals("V")))
 			}//end if (rs.getOrgurl() != null && rs.getOrgurl().compareTo("") != 0)
-			
+
             if (rs.getOrgurl2() != null && rs.getOrgurl2().compareTo("") != 0) {
                 String urlStr = "";
                 if (rs.getOrgurl2().indexOf("http://") < 0) {
@@ -287,18 +287,17 @@ outString = new StringBuffer("<table border='1' cellspacing='0' cellpadding='5'>
 		outString.append("</table>");
 		//added 01/23/06
         outString.append("</td></tr></table>");
+}
+else {
+	outString = new StringBuffer();
+	outString.append("No records found.");
+}//end if (partners!=null)
 
-    } //end of if statement
-	else {
-		outString = new StringBuffer();
-		outString.append("No records found.");
-	}
+Vector states = QBean.getStateList();
 
-    Vector states = QBean.getStateList();
-    
-    Iterator it2 = states.iterator();
-	
-    if (it2.hasNext()) {
+Iterator it2 = states.iterator();
+
+if (it2.hasNext()) {
         stateList = new StringBuffer();
 		//stateList.append("<table border='0' cellpadding='5' cellspacing='0'><tr><th colspan='2' align='left' valign='top' nowrap>STATES</th><th align='left' valign='top' nowrap>TERRITORIES/TRIBES</th></tr><tr><td valign='top' nowrap>");
         stateList.append("<table border='0' cellpadding='5' cellspacing='0' width='100%'><tr><th colspan='2' align='left' valign='top' width='100%'>States</th></tr><tr><td valign='top' nowrap>");
@@ -310,18 +309,18 @@ outString = new StringBuffer("<table border='1' cellspacing='0' cellpadding='5'>
 			
 			if (region.compareTo(rs.getAbbreviation()) == 0) {
 				stateStatic=rs.getName();
-			}
+			}//end if (region.compareTo(rs.getAbbreviation()) == 0)
 				
             if (count == 26) {
                 stateList.append("</td><td valign='top' nowrap>");
                 //count = 0;
-            }
+            }//end if (count == 26) 
             if (count == 51) {
               	stateList.append("</td></tr>");
 				stateList.append("<tr><th colspan='2'>&nbsp;</th></tr>");
 				stateList.append("<tr><th colspan='2' align='left' valign='top'>Territories / Tribes</th></tr><tr><td valign='top' colspan='2'>");
                 //count = 0;
-            }
+            }//end if (count == 51)
 
 			//comment out 01/10/2005
 			//if (count == 56) {
@@ -342,18 +341,18 @@ outString = new StringBuffer("<table border='1' cellspacing='0' cellpadding='5'>
              //    if (count > 51){
              //   stateList.append("<br /><br />");
              //   }
-            }
+            }//end if (count > 0 && count != 26 && count !=51 )
 						
 			if (region.compareTo(rs.getAbbreviation()) == 0) {
 				stateList.append("<font style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size : 12px; color : AA0000;'><strong>"+rs.getName().trim()+"</strong></font>");
 			} else {
 	            stateList.append("<a href='list.jsp?r="+rs.getAbbreviation()+"&cctopic="+topic.toUpperCase()+"' class='a1' title='"+rs.getName().trim()+"'>"+rs.getName()+"</a>");
-			}
+			}//end if (region.compareTo(rs.getAbbreviation()) == 0)
 			count++;
         } while (it2.hasNext());
 
         stateList.append("<br/><br/></td></tr><tr><td colspan=2><a href='list.jsp?r=ALL&cctopic=" + topic + "' title=\"All states and regions\">View all U.S. Program Partners</a></td></tr></table>");
-    }
+}//end if (it2.hasNext())
 
 		pageTitle = pageTitle + " - " + stateStatic;
 		
@@ -364,24 +363,24 @@ outString = new StringBuffer("<table border='1' cellspacing='0' cellpadding='5'>
 				partnerText=topicDesc+" and Other Program Partners - <font style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size : 20px;	font-weight: bold; color : #AA0000;'>All States</font>";	
 			else
 				partnerText="Program Partners - <font style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size: 20px; font-weight: bold; color : #AA0000;'>All States</font>";
+		} else {
+			if (topicDesc.compareTo("") != 0) {
+				partnerText=topicDesc+" and Other Program Partners - <font style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size: 20px; font-weight: bold; color : #AA0000;'>"+stateStatic+"</font>";
+			} else {
+				partnerText="Program Partners - <font style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size: 20px; font-weight: bold; color : #AA0000;'>"+stateStatic+"</font>";
+			}
 		}
-		else
-				if (topicDesc.compareTo("") != 0)
-					partnerText=topicDesc+" and Other Program Partners - <font style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size: 20px; font-weight: bold; color : #AA0000;'>"+stateStatic+"</font>";
-				else
-					partnerText="Program Partners - <font style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size: 20px; font-weight: bold; color : #AA0000;'>"+stateStatic+"</font>";
 
-    NCIPopChartEmbedder myChart = new NCIPopChartEmbedder();
-    myChart.appearanceFile = "apfiles/planet/ccpmap_small.pcxml";
-    myChart.pcScript = pcScript;
-    myChart.height = 360;
-    myChart.width = 505;
-    myChart.imageType = "FLASH";
-    myChart.fallback = "STRICT";
-    myChart.returnDescriptiveLink = false;
-    myChart.userAgent = request.getHeader("USER-AGENT");
-    htmlString = myChart.getEmbeddingHTML();
-%>
+NCIPopChartEmbedder myChart = new NCIPopChartEmbedder();
+myChart.appearanceFile = "apfiles/planet/ccpmap_small.pcxml";
+myChart.pcScript = pcScript;
+myChart.height = 360;
+myChart.width = 505;
+myChart.imageType = "FLASH";
+myChart.fallback = "STRICT";
+myChart.returnDescriptiveLink = false;
+myChart.userAgent = request.getHeader("USER-AGENT");
+htmlString = myChart.getEmbeddingHTML();%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
 <head>
