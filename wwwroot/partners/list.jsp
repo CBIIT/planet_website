@@ -75,7 +75,7 @@ if (partners!=null) { //We have partners
 	        PartnerBean rs = (PartnerBean)it.next();
 			typeDesc = rs.getTypeDescription();
             if (stateName.compareTo(rs.getStateName().trim()) != 0) { //This is a new state
-                if (count > 1) {
+                if (count > 1) {//We have already displayed our first result
                     outString.append("</table></p>");
 				}//end if (count > 1)
 
@@ -127,7 +127,7 @@ if (partners!=null) { //We have partners
 				//*******************************************
             }//end if (stateName.compareTo(rs.getStateName().trim()) != 0)
                 
-            if (partnerId != rs.getPartnerId()) {
+            if (partnerId != rs.getPartnerId()) { //If new partner
 
                 if (count > 1) {
                    outString.append("</table></p>");
