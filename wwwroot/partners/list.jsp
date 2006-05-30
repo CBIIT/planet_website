@@ -48,8 +48,8 @@ caption = "Cancer Control PLANET - " + pageTitle;
 if (region.equals("ALL")) {
     //pcScript = "US.addPCXML(<DefaultShapeSettings><Properties FillColor='#B20000'/><Drilldown URL='list.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultShapeSettings>)";
     partners = QBean.getPartners(topic.toUpperCase());
-stateStatic="the US";
-QBean.GetCountbyPartner();
+	stateStatic="the US";
+	QBean.GetCountbyPartner();
 } else {
     //pcScript = "US.setShapeValues("+region.trim()+",1)US.addPCXML(<DefaultShapeSettings><Drilldown URL='list.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultShapeSettings>)@_END";
     partners = QBean.getPartners(topic.toUpperCase(), region);
