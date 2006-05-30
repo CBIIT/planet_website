@@ -126,7 +126,7 @@ if (partners!=null) { //We have partners
                 outString.append("</u>"+endTD);
 				//*******************************************
             }//end if (stateName.compareTo(rs.getStateName().trim()) != 0)
-                
+            outString.append("<tr><td>pId="+partnerId+",rs.pId="+endTD);
             if (partnerId != rs.getPartnerId()) { //If new partner
 
                 if (count > 1) {
