@@ -49,6 +49,7 @@ if (region.equals("ALL")) {
     //pcScript = "US.addPCXML(<DefaultShapeSettings><Properties FillColor='#B20000'/><Drilldown URL='list.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultShapeSettings>)";
     partners = QBean.getPartners(topic.toUpperCase());
 stateStatic="the US";
+QBean.GetCountbyPartner()
 } else {
     //pcScript = "US.setShapeValues("+region.trim()+",1)US.addPCXML(<DefaultShapeSettings><Drilldown URL='list.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultShapeSettings>)@_END";
     partners = QBean.getPartners(topic.toUpperCase(), region);
@@ -126,7 +127,7 @@ if (partners!=null) { //We have partners
                 outString.append("</u>"+endTD);
 				//*******************************************
             }//end if (stateName.compareTo(rs.getStateName().trim()) != 0)
-                
+            outString.append("<tr><td>pId="+partnerId+",rs.pId="+endTD);
             if (partnerId != rs.getPartnerId()) { //If new partner
 
                 if (count > 1) {
