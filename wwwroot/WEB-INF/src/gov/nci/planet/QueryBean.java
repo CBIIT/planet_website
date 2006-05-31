@@ -260,7 +260,7 @@ public class QueryBean {
 	}
 
 	public Vector GetCountbyPartner() {
-		RestultSet rs = null;
+		ResultSet rs = null;
 		Connection conn = null;
 		CallableStatement stmt = null;
 		Vector partnercounts = null;
@@ -328,7 +328,7 @@ public class QueryBean {
 	}
 
 	public Vector GetCountbyPartner(String stateAbbreviation) {
-		RestultSet rs = null;
+		ResultSet rs = null;
 		Connection conn = null;
 		CallableStatement stmt = null;
 		Vector partnercounts = null;

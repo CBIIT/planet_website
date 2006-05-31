@@ -307,7 +307,7 @@ public class PartnerBean {
 	/**
 	 * @return Returns the ACS_count.
 	 */
-	public String getACS_count() {
+	public int getACS_count() {
 		return ACS_count;
 	}
 	/**
@@ -319,7 +319,7 @@ public class PartnerBean {
 	/**
 	 * @return Returns the ACOS_count.
 	 */
-	public String getACOS_count() {
+	public int getACOS_count() {
 		return ACOS_count;
 	}
 	/**
@@ -331,7 +331,7 @@ public class PartnerBean {
 	/**
 	 * @return Returns the CDC_count.
 	 */
-	public String getCDC_count() {
+	public int getCDC_count() {
 		return CDC_count;
 	}
 	/**
@@ -343,7 +343,7 @@ public class PartnerBean {
 	/**
 	 * @return Returns the CIS_count.
 	 */
-	public String getCIS_count() {
+	public int getCIS_count() {
 		return CIS_count;
 	}
 	/**
