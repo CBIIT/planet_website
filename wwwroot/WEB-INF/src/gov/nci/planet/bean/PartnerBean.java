@@ -35,6 +35,11 @@ public class PartnerBean {
 	private String addressState;
 	private String zip;
 	private String contactName;
+	private String partnerCount;
+	private int ACS_count;
+	private int ACOS_count;
+	private int CDC_count;
+	private int CIS_count;
 	/**
 	 * @return Returns the address1.
 	 */
@@ -298,5 +303,53 @@ public class PartnerBean {
 	 */
 	public void setContactName(String contactName) {
 		this.contactName = contactName;
+	}
+	/**
+	 * @return Returns the ACS_count.
+	 */
+	public String getACS_count() {
+		return ACS_count;
+	}
+	/**
+	 * @param ACS_count the ACS_count to set.
+	 */
+	public void setACS_count(int ACS_count) {
+		this.ACS_count = ACS_count;
+	}
+	/**
+	 * @return Returns the ACOS_count.
+	 */
+	public String getACOS_count() {
+		return ACOS_count;
+	}
+	/**
+	 * @param ACOS_count the ACOS_count to set.
+	 */
+	public void setACOS_count(int ACOS_count) {
+		this.ACOS_count = ACOS_count;
+	}
+	/**
+	 * @return Returns the CDC_count.
+	 */
+	public String getCDC_count() {
+		return CDC_count;
+	}
+	/**
+	 * @param CDC_count the CDC_count to set.
+	 */
+	public void setCDC_count(int CDC_count) {
+		this.CDC_count = CDC_count;
+	}
+	/**
+	 * @return Returns the CIS_count.
+	 */
+	public String getCIS_count() {
+		return CIS_count;
+	}
+	/**
+	 * @param CIS_count the CIS_count to set.
+	 */
+	public void setCIS_count(int CIS_count) {
+		this.CIS_count = CIS_count;
 	}
 }

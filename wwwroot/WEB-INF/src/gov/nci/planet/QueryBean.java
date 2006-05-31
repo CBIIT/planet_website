@@ -8,7 +8,7 @@ import gov.nci.util.ConnPoolBean;
 import gov.nci.planet.bean.*;
 
 public class QueryBean {
-	
+
 	public QueryBean(){
 	}
 
@@ -18,43 +18,43 @@ public class QueryBean {
 		Connection conn =null;
 		CallableStatement stmt =null;
 		Vector stateList = null;
-		
+
 		try {
 			conn = ConnPoolBean.getConnection();
 			stmt = conn.prepareCall("{call dccps.planet_pkg.GetStateList(?)}");
 			stmt.registerOutParameter(1, OracleTypes.CURSOR);
 			stmt.execute();
 			rs = (ResultSet)stmt.getObject(1);
-			
+
 			String typeString = "S";
 			String topic = "C";
-			
-			
+
+
 			if (rs.next())
 			{
-				
+
 				stateList = new Vector();
 				int count= 0;
 				do
 				{
 					StateBean state = new StateBean();
-					
+
 					state.setType(rs.getString("type"));
 					state.setName(rs.getString("name"));
 					state.setAbbreviation(rs.getString("abbreviation"));
-					
+
 					stateList.add(state);
-					
+
 				} while (rs.next());
 			}
-			
+
 		    rs.close();
 		    rs = null;
 		    stmt.close();
 		    stmt = null;
 		    //conn.close(); // Return to connection pool
 		    //conn = null;  // Make sure we don't close it twice
-		    
+
 		    //ConnPoolBean.closeConnection(conn);
 
 		} catch (SQLException e) {
@@ -86,17 +86,17 @@ public class QueryBean {
 				conn = null;
 			}
 		}
-		
+
 		return stateList;
-	}	
-	
+	}
+
 	public String getTopicDescription(String topic) {
-		
+
 		ResultSet rs = null;
 		Connection conn =null;
 		CallableStatement stmt =null;
 		String topicTitle = null;
-		
+
 		try {
 			conn = ConnPoolBean.getConnection();
 			stmt = conn.prepareCall("{? = call dccps.planet_pkg.GetTopicDescription(?)}");
@@ -104,13 +104,13 @@ public class QueryBean {
 			stmt.setString(2, topic);
 			stmt.execute();
 			topicTitle = stmt.getString(1);
-			
-		 
+
+
 		    stmt.close();
 		    stmt = null;
 		    //conn.close(); // Return to connection pool
 		    //conn = null;  // Make sure we don't close it twice
-		    
+
 		    //ConnPoolBean.closeConnection(conn);
 
 		} catch (SQLException e) {
@@ -143,31 +143,31 @@ public class QueryBean {
 			}
 		}
 
-		
+
 		return topicTitle;
 	}
-	
+
 	public String getTopicID(Integer topicIN) {
 		ResultSet rs = null;
 		Connection conn =null;
 		CallableStatement stmt =null;
 		String topicID = null;
-		
+
 		try {
 			conn = ConnPoolBean.getConnection();
-				
+
 			stmt = conn.prepareCall("{? = call dccps.planet_pkg.GetTopicID(?)}");
 			stmt.registerOutParameter(1, Types.VARCHAR);
 			stmt.setInt(2, topicIN.intValue());
 			stmt.execute();
 			topicID =  stmt.getString(1);
-			
-		    
+
+
 		    stmt.close();
 		    stmt = null;
 		    //conn.close(); // Return to connection pool
 		    //conn = null;  // Make sure we don't close it twice
-		    
+
 		    //ConnPoolBean.closeConnection(conn);
 
 		} catch (SQLException e) {
@@ -199,31 +199,31 @@ public class QueryBean {
 				conn = null;
 			}
 		}
-		
+
 		return topicID;
 	}
-	
+
 	public int getTopicID(String topicIN) {
 		ResultSet rs = null;
 		Connection conn =null;
 		CallableStatement stmt =null;
 		int topicID = 0;
-		
+
 		try {
 			conn = ConnPoolBean.getConnection();
-			
+
 			stmt = conn.prepareCall("{? = call dccps.planet_pkg.GetTopicID(?)}");
 			stmt.registerOutParameter(1, Types.INTEGER);
 			stmt.setString(2, topicIN);
 			stmt.execute();
 			topicID = stmt.getInt(1);
-			
-		    
+
+
 		    stmt.close();
 		    stmt = null;
 		    //conn.close(); // Return to connection pool
 		    //conn = null;  // Make sure we don't close it twice
-		    
+
 		    //ConnPoolBean.closeConnection(conn);
 
 		} catch (SQLException e) {
@@ -258,16 +258,153 @@ public class QueryBean {
 
 		return topicID;
 	}
-	
+
+	public Vector GetCountbyPartner() {
+		RestultSet rs = null;
+		Connection conn = null;
+		CallableStatement stmt = null;
+		Vector partnercounts = null;
+
+		try {
+			conn = ConnPoolBean.getConnection();
+
+			stmt = conn.prepareCall("{call dccps.planet_pkg.GetCountbyPartner(?)}");
+			stmt.registerOutParameter(1, OracleTypes.CURSOR);
+			stmt.execute();
+			rs = (ResultSet) stmt.getObject(1);
+			if(rs.next())
+			{
+				partnercounts = new Vector();
+					do
+					{
+						PartnerBean partnerBean = new PartnerBean();
+
+						// set the values of the bean
+						partnerBean.setACS_count(rs.getInt("ACS_count"));
+						partnerBean.setACOS_count(rs.getInt("ACOS_count"));
+						partnerBean.setCDC_count(rs.getInt("CDC_count"));
+						partnerBean.setCIS_count(rs.getInt("CIS_count"));
+
+						// add them to the vector
+						partnercounts.add(PartnerBean);
+					} while (rs.next());
+			}
+		    rs.close();
+		    rs = null;
+		    stmt.close();
+		    stmt = null;
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			if (rs!= null){
+				try {
+					rs.close();
+				} catch (SQLException ee){
+					ee.printStackTrace();
+				}
+				rs = null;
+			}
+			if (stmt!=null){
+				try {
+					stmt.close();
+				} catch (SQLException ee){
+					ee.printStackTrace();
+				}
+				stmt = null;
+			}
+			if (conn!=null) {
+				try {
+					//conn.close();
+					ConnPoolBean.closeConnection(conn);
+				} catch (SQLException ee){
+					ee.printStackTrace();
+				}
+				conn = null;
+			}
+		}
+
+		return partnercounts;
+	}
+
+	public Vector GetCountbyPartner(String stateAbbreviation) {
+		RestultSet rs = null;
+		Connection conn = null;
+		CallableStatement stmt = null;
+		Vector partnercounts = null;
+
+		try {
+			conn = ConnPoolBean.getConnection();
+
+			stmt = conn.prepareCall("{call dccps.planet_pkg.GetCountbyPartner(?,?)}");
+			stmt.setString(1, stateAbbreviation);
+			stmt.registerOutParameter(2, OracleTypes.CURSOR);
+			stmt.execute();
+			rs = (ResultSet) stmt.getObject(2);
+			if(rs.next())
+			{
+				partnercounts = new Vector();
+					do
+					{
+						PartnerBean partnerBean = new PartnerBean();
+
+						// set the values of the bean
+						partnerBean.setACS_count(rs.getInt("ACS_count"));
+						partnerBean.setACOS_count(rs.getInt("ACOS_count"));
+						partnerBean.setCDC_count(rs.getInt("CDC_count"));
+						partnerBean.setCIS_count(rs.getInt("CIS_count"));
+
+						// add them to the vector
+						partnercounts.add(PartnerBean);
+					} while (rs.next());
+			}
+		    rs.close();
+		    rs = null;
+		    stmt.close();
+		    stmt = null;
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			if (rs!= null){
+				try {
+					rs.close();
+				} catch (SQLException ee){
+					ee.printStackTrace();
+				}
+				rs = null;
+			}
+			if (stmt!=null){
+				try {
+					stmt.close();
+				} catch (SQLException ee){
+					ee.printStackTrace();
+				}
+				stmt = null;
+			}
+			if (conn!=null) {
+				try {
+					//conn.close();
+					ConnPoolBean.closeConnection(conn);
+				} catch (SQLException ee){
+					ee.printStackTrace();
+				}
+				conn = null;
+			}
+		}
+
+		return partnercounts;
+	}
+
 	public Vector getPartners(String topic) {
 		ResultSet rs = null;
 		Connection conn =null;
 		CallableStatement stmt =null;
 		Vector partners = null;
-		
+
 		try {
 			conn = ConnPoolBean.getConnection();
-		
+
 			stmt = conn.prepareCall("{call dccps.planet_pkg.GetPartners(?, ?)}");
 			stmt.setString(1, topic);
 			stmt.registerOutParameter(2, OracleTypes.CURSOR);
@@ -279,7 +416,7 @@ public class QueryBean {
 		        do
 		        {
 		        	PartnerBean partnerBean = new PartnerBean();
-		        	
+
 		        	// set the values of the bean
 		        	partnerBean.setAddress1(rs.getString("address1"));
 		        	partnerBean.setAddress2(rs.getString("address2"));
@@ -303,20 +440,20 @@ public class QueryBean {
 		        	partnerBean.setAddressState(rs.getString("address_state"));
 					partnerBean.setZip(rs.getString("zip"));
 					partnerBean.setContactName(rs.getString("contact_name"));
-		        	
+
 		        	// add them to the vector
 		        	partners.add(partnerBean);
-			
+
 		        } while (rs.next());
 		    }
-			
+
 		    rs.close();
 		    rs = null;
 		    stmt.close();
 		    stmt = null;
 		    //conn.close(); // Return to connection pool
 		    //conn = null;  // Make sure we don't close it twice
-		    
+
 		    //ConnPoolBean.closeConnection(conn);
 
 		} catch (SQLException e) {
@@ -351,31 +488,31 @@ public class QueryBean {
 
 		return partners;
 	}
-	
+
 	public Vector getPartners(String topic, String stateAbbreviation) {
-		
+
 		ResultSet rs = null;
 		Connection conn =null;
 		CallableStatement stmt =null;
 		Vector partners = null;
-		
+
 		try {
 			conn = ConnPoolBean.getConnection();
-		
+
 			stmt = conn.prepareCall("{call dccps.planet_pkg.GetPartners(?, ?, ?)}");
 			stmt.setString(1, topic);
 			stmt.setString(2, stateAbbreviation);
 			stmt.registerOutParameter(3, OracleTypes.CURSOR);
 			stmt.execute();
 			rs = (ResultSet) stmt.getObject(3);
-			
+
 			if (rs.next())
 		    {
 				partners = new Vector();
 		        do
 		        {
 		        	PartnerBean partnerBean = new PartnerBean();
-		        	
+
 		        	// set the values of the bean
 		        	partnerBean.setAddress1(rs.getString("address1"));
 		        	partnerBean.setAddress2(rs.getString("address2"));
@@ -397,22 +534,22 @@ public class QueryBean {
 		        	partnerBean.setType(rs.getString("type"));
 		        	partnerBean.setTypeDescription(rs.getString("type_description"));
 		        	partnerBean.setAddressState(rs.getString("address_state"));
-					partnerBean.setZip(rs.getString("zip"));
+		        	partnerBean.setZip(rs.getString("zip"));
 		        	partnerBean.setContactName(rs.getString("contact_name"));
-		        	
+
 		        	// add them to the vector
 		        	partners.add(partnerBean);
-			
+
 		        } while (rs.next());
 		    }
-			
+
 		    rs.close();
 		    rs = null;
 		    stmt.close();
 		    stmt = null;
 		    //conn.close(); // Return to connection pool
 		    //conn = null;  // Make sure we don't close it twice
-		    
+
 		    //ConnPoolBean.closeConnection(conn);
 
 		} catch (SQLException e) {
@@ -446,29 +583,29 @@ public class QueryBean {
 		}
 
 		return partners;
-		
+
 	}
-	
+
 	public String getTopicDescription(Integer topic) {
 		ResultSet rs = null;
 		Connection conn =null;
 		CallableStatement stmt =null;
 		String desc = null;
-		
+
 		try {
 			conn = ConnPoolBean.getConnection();
-			
+
 			stmt = conn.prepareCall("{? = call dccps.planet_pkg.GetTopicDescription(?)}");
 			stmt.registerOutParameter(1, Types.VARCHAR);
 			stmt.setInt(2, topic.intValue());
 			stmt.execute();
 			desc = stmt.getString(1);
-			
+
 		    stmt.close();
 		    stmt = null;
 		    //conn.close(); // Return to connection pool
 		    //conn = null;  // Make sure we don't close it twice
-		    
+
 		    //ConnPoolBean.closeConnection(conn);
 
 		} catch (SQLException e) {
@@ -500,34 +637,34 @@ public class QueryBean {
 				conn = null;
 			}
 		}
-		
+
 		return desc;
 	}
-	
+
 	public Vector getResearchers(Integer topic) {
 		ResultSet rs = null;
 		Connection conn =null;
 		CallableStatement stmt =null;
 		Vector researchers = null;
-		
+
 		try {
 			conn = ConnPoolBean.getConnection();
-			
-			
-			
+
+
+
 			stmt = conn.prepareCall("{call dccps.planet_pkg.GetResearchers(?, ?)}");
 			stmt.setInt(1, topic.intValue());
 			stmt.registerOutParameter(2, OracleTypes.CURSOR);
 			stmt.execute();
 			rs = (ResultSet) stmt.getObject(2);
-			
+
 			if (rs.next())
 		    {
 				researchers = new Vector();
 		        do
 		        {
 		        	ResearcherBean researcherBean = new ResearcherBean();
-		        	
+
 		        	// set the values of the bean
 		        	researcherBean.setAddress1(rs.getString("address1"));
 		        	researcherBean.setAddress2(rs.getString("address2"));
@@ -545,26 +682,26 @@ public class QueryBean {
 		        	researcherBean.setTitle(rs.getString("title"));
 		        	researcherBean.setAddressState(rs.getString("address_state"));
 		        	researcherBean.setZip(rs.getString("zip"));
-		        	
+
 		        	researcherBean.setStateAbbreviation(rs.getString("state_abbreviation"));
 		        	researcherBean.setResearcherId(rs.getInt("researcher_id"));
 		        	researcherBean.setResearcherName(rs.getString("researcher_name"));
-		        	
+
 		        	researcherBean.setTopicId(rs.getInt("topic_id"));
-		        	
+
 		        	// add them to the vector
 		        	researchers.add(researcherBean);
-			
+
 		        } while (rs.next());
 		    }
-			
+
 		    rs.close();
 		    rs = null;
 		    stmt.close();
 		    stmt = null;
 		    //conn.close(); // Return to connection pool
 		    //conn = null;  // Make sure we don't close it twice
-		    
+
 		    //ConnPoolBean.closeConnection(conn);
 
 		} catch (SQLException e) {
@@ -599,31 +736,31 @@ public class QueryBean {
 
 		return researchers;
 	}
-	
+
 	public Vector getResearchers(Integer topic, String stateAbbreviation) {
-		
+
 		ResultSet rs = null;
 		Connection conn =null;
 		CallableStatement stmt =null;
 		Vector researchers = null;
-		
+
 		try {
 			conn = ConnPoolBean.getConnection();
-			
+
 			stmt = conn.prepareCall("{call dccps.planet_pkg.GetResearchers(?, ?, ?)}");
 			stmt.setInt(1, topic.intValue());
 			stmt.setString(2, stateAbbreviation);
 			stmt.registerOutParameter(3, OracleTypes.CURSOR);
 			stmt.execute();
 			rs = (ResultSet) stmt.getObject(3);
-			
+
 			if (rs.next())
 		    {
 				researchers = new Vector();
 		        do
 		        {
 		        	ResearcherBean researcherBean = new ResearcherBean();
-		        	
+
 		        	// set the values of the bean
 		        	researcherBean.setAddress1(rs.getString("address1"));
 		        	researcherBean.setAddress2(rs.getString("address2"));
@@ -641,26 +778,26 @@ public class QueryBean {
 		        	researcherBean.setTitle(rs.getString("title"));
 		        	researcherBean.setAddressState(rs.getString("address_state"));
 		        	researcherBean.setZip(rs.getString("zip"));
-		        	
+
 		        	researcherBean.setStateAbbreviation(rs.getString("state_abbreviation"));
 		        	researcherBean.setResearcherId(rs.getInt("researcher_id"));
 		        	researcherBean.setResearcherName(rs.getString("researcher_name"));
-		        	
+
 		        	researcherBean.setTopicId(rs.getInt("topic_id"));
-		        	
+
 		        	// add them to the vector
 		        	researchers.add(researcherBean);
-			
+
 		        } while (rs.next());
 		    }
-			
+
 		    rs.close();
 		    rs = null;
 		    stmt.close();
 		    stmt = null;
 		    //conn.close(); // Return to connection pool
 		    //conn = null;  // Make sure we don't close it twice
-		    
+
 		    //ConnPoolBean.closeConnection(conn);
 
 		} catch (SQLException e) {
@@ -693,50 +830,50 @@ public class QueryBean {
 			}
 		}
 
-		return researchers;		
+		return researchers;
 	}
-	
+
 	public Vector getStatePlans() throws SQLException {
 
 		ResultSet rs = null;
 		Connection conn =null;
 		CallableStatement stmt =null;
 		Vector statePlans = null;
-		
+
 		try {
 			conn = ConnPoolBean.getConnection();
-			
+
 			stmt = conn.prepareCall("{call dccps.planet_pkg.GetStatePlans(?)}");
 			stmt.registerOutParameter(1, OracleTypes.CURSOR);
 			stmt.execute();
 			rs = (ResultSet) stmt.getObject(1);
-			
+
 			if (rs.next())
 		    {
 				statePlans = new Vector();
 		        do
 		        {
-		        	StatePlanBean statePlanBean = new StatePlanBean();		        	
+		        	StatePlanBean statePlanBean = new StatePlanBean();
 		        	// set the values of the bean
 		        	statePlanBean.setPlanStatus(rs.getInt("plan_status"));
 		        	statePlanBean.setPlanType(rs.getString("plan_type"));
 		        	statePlanBean.setPlanUrl(rs.getString("plan_URL"));
 		        	statePlanBean.setName(rs.getString("name"));
 		        	statePlanBean.setState(rs.getString("state"));
-		        	
+
 		        	// add them to the vector
 		        	statePlans.add(statePlanBean);
-			
+
 		        } while (rs.next());
 		    }
-			
+
 		    rs.close();
 		    rs = null;
 		    stmt.close();
 		    stmt = null;
 		    //conn.close(); // Return to connection pool
 		    //conn = null;  // Make sure we don't close it twice
-		    
+
 		    //ConnPoolBean.closeConnection(conn);
 
 		} catch (SQLException e) {
@@ -770,8 +907,8 @@ public class QueryBean {
 		}
 
 		return statePlans;
-		
-		
+
+
 	}
 
 	public void saveFeedback(String feedbackText, String email, String phone)
@@ -780,10 +917,10 @@ public class QueryBean {
 		Connection conn =null;
 		CallableStatement stmt =null;
 		Vector statePlans = null;
-		
+
 		try {
 			conn = ConnPoolBean.getConnection();
-			
+
 			stmt = conn
 				.prepareCall("{call dccps.products_order_pkg.save_feedback(?, ?, ?, ?)}");
 			stmt.setString(1, feedbackText);
