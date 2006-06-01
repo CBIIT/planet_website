@@ -259,7 +259,7 @@ public class QueryBean {
 		return topicID;
 	}
 
-	public Vector GetCountbyPartner() {
+	public Vector getCountbyPartner() {
 		ResultSet rs = null;
 		Connection conn = null;
 		CallableStatement stmt = null;
@@ -286,7 +286,7 @@ public class QueryBean {
 						partnerBean.setCIS_count(rs.getInt("CIS_count"));
 
 						// add them to the vector
-						partnercounts.add(PartnerBean);
+						partnercounts.add(partnerBean);
 					} while (rs.next());
 			}
 		    rs.close();
@@ -327,7 +327,7 @@ public class QueryBean {
 		return partnercounts;
 	}
 
-	public Vector GetCountbyPartner(String stateAbbreviation) {
+	public Vector getCountbyPartner(String stateAbbreviation) {
 		ResultSet rs = null;
 		Connection conn = null;
 		CallableStatement stmt = null;
@@ -355,7 +355,7 @@ public class QueryBean {
 						partnerBean.setCIS_count(rs.getInt("CIS_count"));
 
 						// add them to the vector
-						partnercounts.add(PartnerBean);
+						partnercounts.add(partnerBean);
 					} while (rs.next());
 			}
 		    rs.close();
@@ -440,7 +440,7 @@ public class QueryBean {
 		        	partnerBean.setAddressState(rs.getString("address_state"));
 		        	partnerBean.setZip(rs.getString("zip"));
 		        	partnerBean.setContactName(rs.getString("contact_name"));
-		        	parnterBean.setRegion(rs.getString("region"));
+		        	partnerBean.setRegion(rs.getString("region"));
 
 		        	// add them to the vector
 		        	partners.add(partnerBean);
@@ -537,7 +537,7 @@ public class QueryBean {
 		        	partnerBean.setAddressState(rs.getString("address_state"));
 		        	partnerBean.setZip(rs.getString("zip"));
 		        	partnerBean.setContactName(rs.getString("contact_name"));
-		        	parnterBean.setRegion(rs.getString("region"));
+		        	partnerBean.setRegion(rs.getString("region"));
 
 		        	// add them to the vector
 		        	partners.add(partnerBean);
