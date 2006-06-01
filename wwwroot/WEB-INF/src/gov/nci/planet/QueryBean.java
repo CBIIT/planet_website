@@ -438,8 +438,9 @@ public class QueryBean {
 		        	partnerBean.setType(rs.getString("type"));
 		        	partnerBean.setTypeDescription(rs.getString("type_description"));
 		        	partnerBean.setAddressState(rs.getString("address_state"));
-					partnerBean.setZip(rs.getString("zip"));
-					partnerBean.setContactName(rs.getString("contact_name"));
+		        	partnerBean.setZip(rs.getString("zip"));
+		        	partnerBean.setContactName(rs.getString("contact_name"));
+		        	parnterBean.setRegion(rs.getString("region"));
 
 		        	// add them to the vector
 		        	partners.add(partnerBean);
@@ -536,6 +537,7 @@ public class QueryBean {
 		        	partnerBean.setAddressState(rs.getString("address_state"));
 		        	partnerBean.setZip(rs.getString("zip"));
 		        	partnerBean.setContactName(rs.getString("contact_name"));
+		        	parnterBean.setRegion(rs.getString("region"));
 
 		        	// add them to the vector
 		        	partners.add(partnerBean);

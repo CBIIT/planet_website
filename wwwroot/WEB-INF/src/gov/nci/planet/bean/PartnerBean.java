@@ -36,6 +36,7 @@ public class PartnerBean {
 	private String zip;
 	private String contactName;
 	private String partnerCount;
+	private String Region;
 	private int ACS_count;
 	private int ACOS_count;
 	private int CDC_count;
@@ -303,6 +304,18 @@ public class PartnerBean {
 	 */
 	public void setContactName(String contactName) {
 		this.contactName = contactName;
+	}
+	/**
+	 * @return Returns the Region.
+	 */
+	public String getRegion() {
+		return Region;
+	}
+	/**
+	 * @param Region the Region to set.
+	 */
+	public void setRegion(String Region) {
+		this.Region = Region;
 	}
 	/**
 	 * @return Returns the ACS_count.
