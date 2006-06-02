@@ -51,6 +51,10 @@ if (region.equals("ALL")) {
     partners = QBean.getPartners(topic.toUpperCase());
 stateStatic="the US";
 	partnerCount = QBean.getCountbyPartner();///
+	int ACS_count = partnerCount.ACS_count;
+	int ACOS_count = partnerCount.ACOS_count;
+	int CDC_count = partnerCount.CDC_count;
+	int CIS_count = partnerCount.CIS_count;
 } else {
     //pcScript = "US.setShapeValues("+region.trim()+",1)US.addPCXML(<DefaultShapeSettings><Drilldown URL='list.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultShapeSettings>)@_END";
     partners = QBean.getPartners(topic.toUpperCase(), region);
