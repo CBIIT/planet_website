@@ -50,7 +50,7 @@ if (region.equals("ALL")) {
     //pcScript = "US.addPCXML(<DefaultShapeSettings><Properties FillColor='#B20000'/><Drilldown URL='list.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultShapeSettings>)";
     partners = QBean.getPartners(topic.toUpperCase());
 stateStatic="the US";
-	partnerCount = QBean.getCountbyPartner();///
+	partnerCount = QBean.getCountbyPartner();//
 	int ACS_count = getACS_count;
 	int ACOS_count= QBean.getACOS_count;
 	int CDC_count = partners.getCDC_count;
