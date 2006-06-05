@@ -36,10 +36,10 @@ StringBuffer stateList = null;
 Vector partners = null;
 Vector partnerCount = null;
 QueryBean QBean = new QueryBean();
-//PartnerBean PBean = new PartnerBean();
+PartnerBean PBean = new PartnerBean();
 
-Iterator itP = partnerCount.iterator();
-PartnerBean PBean = (PartnerBean)itP.next();
+Iterator itP = PBean.iterator();
+//PartnerBean PBean = (PartnerBean)itP.next();
 topicNum = QBean.getTopicID(topic);
 
 // Find the page title to use based on the topic
@@ -56,9 +56,9 @@ if (region.equals("ALL")) {
 	//partnerCount = PBean.getPartners(topic.toUpperCase());
 	stateStatic="the US";
 	//Iterator rst = PBean.iterator();
-	partnerCount = PBean.getCountbyPartner();
+	//partnerCount = PBean.getCountbyPartner();
 	int ACS_count = PBean.getACS_count;
-	int ACOS_count= PBeant.getACOS_count(); // where rst is an instance of PartnerBean
+	int ACOS_count= PBean.getACOS_count(); // where rst is an instance of PartnerBean
 	int CDC_count = PBean.getCDC_count;
 	int CIS_count = PBean.getCIS_count;
 	
