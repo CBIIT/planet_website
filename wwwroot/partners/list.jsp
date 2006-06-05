@@ -47,8 +47,8 @@ if (partnerCount!=null) {
 	int ACOS_count= PBean.getACOS_count(); // where rst is an instance of PartnerBean
 	int CDC_count = PBean.getCDC_count();
 	int CIS_count = PBean.getCIS_count();
-	} while (itP.hasNext());
 	System.out.println("ACS=" + ACS_count);
+	} while (itP.hasNext());
 }
 
 
