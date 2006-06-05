@@ -47,7 +47,7 @@ if (partnerCount!=null) {
 	int ACOS_count= PBean.getACOS_count(); // where rst is an instance of PartnerBean
 	int CDC_count = PBean.getCDC_count();
 	int CIS_count = PBean.getCIS_count();
-	System.out.println("ACS=" + ACS_count);
+	%> ACS=<% System.out.println(ACS_count);
 	} while (itP.hasNext());
 }
 
@@ -448,7 +448,7 @@ if (it2.hasNext()) {
 	<td colspan="3">&nbsp;</td>
 </tr>
 <tr>
-	<td valign="top" width="28%"><% System.out.println(" Test ");%><%= stateList.toString()%></td>
+	<td valign="top" width="28%"><%= stateList.toString()%></td>
 	<td valign="top" width="2%">&nbsp;</td>
 	<td valign="top" width="70%"><%= outString.toString()%></td>
 </tr>
