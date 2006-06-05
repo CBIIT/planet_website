@@ -5,7 +5,9 @@
 <%@ page import="gov.nci.planet.bean.*" %>
 <%@ page import="java.util.Vector" %>
 <%@ page import="java.util.Iterator" %>
-<%String region = "ALL";
+
+<%
+String region = "ALL";
 String pcScript = "";
 String topic = "C";
 String htmlString = null;
@@ -18,18 +20,8 @@ String topicDesc = "";
 String partnerText = "";
 String typeDesc = "";
 int topicNum = 0;
-%>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<html>
-<head>
-<title><%= caption%></title>
-<link href="../styles.css" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="/fsrscripts/triggerParams.js"></script> 
-<script type="text/javascript" src="/fsrscripts/stdLauncher.js"></script>
-<script type="text/javascript">Poll();</script>
-</head>
-<body topmargin="0" leftmargin="0" bgcolor="White">
-<%if (param != null) {
+
+if (param != null) {
     region = param.toUpperCase();
 }
 
@@ -46,17 +38,19 @@ Vector partnerCount = null;
 QueryBean QBean = new QueryBean();
 PartnerBean PBean = new PartnerBean();
 topicNum = QBean.getTopicID(topic);
-System.out.println(" Test ");
+int ACS_count = 0;
+int ACOS_count= 0;
+int CDC_count = 0;
+int CIS_count = 0;
 
 if (partnerCount!=null) {
 	Iterator itP = partnerCount.iterator();
 	do {
 	//PBean = (PartnerBean)itP.next();
-	int ACS_count = PBean.getACS_count();
-	int ACOS_count= PBean.getACOS_count(); // where rst is an instance of PartnerBean
-	int CDC_count = PBean.getCDC_count();
-	int CIS_count = PBean.getCIS_count();
-	%> ACS=<% System.out.println(ACS_count);
+	ACS_count = PBean.getACS_count();
+	ACOS_count= PBean.getACOS_count(); // where rst is an instance of PartnerBean
+	CDC_count = PBean.getCDC_count();
+	CIS_count = PBean.getCIS_count();
 	} while (itP.hasNext());
 }
 
@@ -419,6 +413,16 @@ if (it2.hasNext()) {
 //myChart.returnDescriptiveLink = false;
 //myChart.userAgent = request.getHeader("USER-AGENT");
 //htmlString = myChart.getEmbeddingHTML();%>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title><%= caption%></title>
+<link href="../styles.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="/fsrscripts/triggerParams.js"></script> 
+<script type="text/javascript" src="/fsrscripts/stdLauncher.js"></script>
+<script type="text/javascript">Poll();</script>
+</head>
+<body topmargin="0" leftmargin="0" bgcolor="White">
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
     <td><p class="banner"><a href="../index.html"><img src="../images/planet_logo.gif" alt="Cancer Control PLANET - Plan, Link, Act, Network with Evidence-based Tools" width="169" height="87" border="0"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p></td>    <td><a href="../index.html"><img src="../images/planet_banner_wider.gif" alt="Cancer Control PLANET - Links to comprehensive cancer control resources for public health professionals" width="500" height="82" border="0"></a></td>
@@ -449,7 +453,8 @@ if (it2.hasNext()) {
 <tr>
 	<td valign="top" width="28%"><%= stateList.toString()%></td>
 	<td valign="top" width="2%">&nbsp;</td>
-	<td valign="top" width="70%"><%= outString.toString()%></td>
+	<td valign="top" width="70%"><%= outString.toString()%><BR>
+	<%= ACS_count %><%= ACOS_count%><%= CDC_count%><%= CIS_count%></td>
 </tr>
 </table>
 
