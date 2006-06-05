@@ -39,6 +39,7 @@ QueryBean QBean = new QueryBean();
 PartnerBean PBean = new PartnerBean();
 topicNum = QBean.getTopicID(topic);
 System.out.println(" Test ");
+
 if (partnerCount!=null) {
 	Iterator itP = partnerCount.iterator();
 	do {
