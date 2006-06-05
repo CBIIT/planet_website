@@ -38,7 +38,7 @@ Vector partnerCount = null;
 QueryBean QBean = new QueryBean();
 PartnerBean PBean = new PartnerBean();
 topicNum = QBean.getTopicID(topic);
-
+System.out.println("Test")
 if (partnerCount!=null) {
 	Iterator itP = partnerCount.iterator();
 	do {
@@ -48,7 +48,7 @@ if (partnerCount!=null) {
 	int CDC_count = PBean.getCDC_count();
 	int CIS_count = PBean.getCIS_count();
 	} while (itP.hasNext());
-	%><%= ACS_count%><%
+	System.out.println("ACS=" + ACS_count)
 }
 
 
