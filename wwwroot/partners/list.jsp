@@ -36,7 +36,7 @@ StringBuffer stateList = null;
 Vector partners = null;
 Vector partnerCount = null;
 QueryBean QBean = new QueryBean();
-PartnerBean PBean = new PartnerBean();
+//PartnerBean PBean = new PartnerBean();
 
 Iterator itP = partnerCount.iterator();
 PartnerBean PBean = (PartnerBean)itP.next();
