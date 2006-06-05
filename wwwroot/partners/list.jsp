@@ -38,7 +38,7 @@ Vector partnerCount = null;
 QueryBean QBean = new QueryBean();
 PartnerBean PBean = new PartnerBean();
 topicNum = QBean.getTopicID(topic);
-System.out.print(" Test ");
+System.out.println(" Test ");
 if (partnerCount!=null) {
 	Iterator itP = partnerCount.iterator();
 	do {
@@ -448,7 +448,7 @@ if (it2.hasNext()) {
 	<td colspan="3">&nbsp;</td>
 </tr>
 <tr>
-	<td valign="top" width="28%"><%= stateList.toString()%></td>
+	<td valign="top" width="28%"><% System.out.println(" Test ");%><%= stateList.toString()%></td>
 	<td valign="top" width="2%">&nbsp;</td>
 	<td valign="top" width="70%"><%= outString.toString()%></td>
 </tr>
