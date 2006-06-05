@@ -37,10 +37,16 @@ Vector partners = null;
 Vector partnerCount = null;
 QueryBean QBean = new QueryBean();
 PartnerBean PBean = new PartnerBean();
-
-Iterator itP = partnerCount.iterator();
-PBean = (PartnerBean)itP.next();
 topicNum = QBean.getTopicID(topic);
+
+if (partnerCount!=null) {
+	Iterator itP = partnerCount.iterator();
+	do {
+	PBean = (PartnerBean)itP.next();
+	} while (itP.hasNext());
+	
+}
+
 
 // Find the page title to use based on the topic
 if (topic.compareTo("C") != 0) {
