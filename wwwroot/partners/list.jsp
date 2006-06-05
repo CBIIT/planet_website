@@ -6,8 +6,7 @@
 <%@ page import="java.util.Vector" %>
 <%@ page import="java.util.Iterator" %>
 
-<%
-String region = "ALL";
+<%String region = "ALL";
 String pcScript = "";
 String topic = "C";
 String htmlString = null;
@@ -37,6 +36,8 @@ Vector partners = null;
 Vector partnerCount = null;
 QueryBean QBean = new QueryBean();
 PartnerBean PBean = new PartnerBean();
+Iterator itP = PBean.iterator();
+Iterator itP2 = partnerCount.iterator();
 topicNum = QBean.getTopicID(topic);
 int ACS_count = 0;
 int ACOS_count= 0;
@@ -44,7 +45,7 @@ int CDC_count = 0;
 int CIS_count = 0;
 
 if (partnerCount!=null) {
-	Iterator itP = partnerCount.iterator();
+	
 	do {
 	//PBean = (PartnerBean)itP.next();
 	ACS_count = PBean.getACS_count();
@@ -453,8 +454,8 @@ if (it2.hasNext()) {
 <tr>
 	<td valign="top" width="28%"><%= stateList.toString()%></td>
 	<td valign="top" width="2%">&nbsp;</td>
-	<td valign="top" width="70%"><%= outString.toString()%><BR>
-	<%= ACS_count %><%= ACOS_count%><%= CDC_count%><%= CIS_count%></td>
+	<td valign="top" width="70%"><%= ACS_count %><%= ACOS_count%><%= CDC_count%><%= CIS_count%><BR>
+	<%= outString.toString()%></td>
 </tr>
 </table>
 
