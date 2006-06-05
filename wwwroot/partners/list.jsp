@@ -29,8 +29,7 @@ int topicNum = 0;
 <script type="text/javascript">Poll();</script>
 </head>
 <body topmargin="0" leftmargin="0" bgcolor="White">
-<%
-if (param != null) {
+<%if (param != null) {
     region = param.toUpperCase();
 }
 
