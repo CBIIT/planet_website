@@ -5,16 +5,6 @@
 <%@ page import="gov.nci.planet.bean.*" %>
 <%@ page import="java.util.Vector" %>
 <%@ page import="java.util.Iterator" %>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<html>
-<head>
-<title><%= caption%></title>
-<link href="../styles.css" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="/fsrscripts/triggerParams.js"></script> 
-<script type="text/javascript" src="/fsrscripts/stdLauncher.js"></script>
-<script type="text/javascript">Poll();</script>
-</head>
-<body topmargin="0" leftmargin="0" bgcolor="White">
 <%String region = "ALL";
 String pcScript = "";
 String topic = "C";
@@ -28,7 +18,18 @@ String topicDesc = "";
 String partnerText = "";
 String typeDesc = "";
 int topicNum = 0;
-
+%>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title><%= caption%></title>
+<link href="../styles.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="/fsrscripts/triggerParams.js"></script> 
+<script type="text/javascript" src="/fsrscripts/stdLauncher.js"></script>
+<script type="text/javascript">Poll();</script>
+</head>
+<body topmargin="0" leftmargin="0" bgcolor="White">
+<%
 if (param != null) {
     region = param.toUpperCase();
 }
