@@ -42,7 +42,11 @@ topicNum = QBean.getTopicID(topic);
 if (partnerCount!=null) {
 	Iterator itP = partnerCount.iterator();
 	do {
-	PBean = (PartnerBean)itP.next();
+	//PBean = (PartnerBean)itP.next();
+	int ACS_count = PBean.getACS_count();
+	int ACOS_count= PBean.getACOS_count(); // where rst is an instance of PartnerBean
+	int CDC_count = PBean.getCDC_count();
+	int CIS_count = PBean.getCIS_count();
 	} while (itP.hasNext());
 	
 }
@@ -63,10 +67,7 @@ if (region.equals("ALL")) {
 	stateStatic="the US";
 	//Iterator rst = PBean.iterator();
 	//partnerCount = PBean.getCountbyPartner();
-	int ACS_count = PBean.getACS_count();
-	int ACOS_count= PBean.getACOS_count(); // where rst is an instance of PartnerBean
-	int CDC_count = PBean.getCDC_count();
-	int CIS_count = PBean.getCIS_count();
+	
 	
 } else {
     //pcScript = "US.setShapeValues("+region.trim()+",1)US.addPCXML(<DefaultShapeSettings><Drilldown URL='list.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultShapeSettings>)@_END";
