@@ -48,7 +48,7 @@ if (partnerCount!=null) {
 	int CDC_count = PBean.getCDC_count();
 	int CIS_count = PBean.getCIS_count();
 	} while (itP.hasNext());
-	
+	%><%= ACS_count%><%
 }
 
 
