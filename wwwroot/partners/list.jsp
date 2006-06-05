@@ -36,13 +36,16 @@ Vector partners = null;
 Vector partnerCount = null;
 QueryBean QBean = new QueryBean();
 PartnerBean PBean = new PartnerBean();
-Iterator itP = PBean.iterator();
+//Iterator itP = PBean.iterator();//gives can't resolve symbol error
 Iterator itP2 = partnerCount.iterator();
+
 topicNum = QBean.getTopicID(topic);
 int ACS_count = 0;
 int ACOS_count= 0;
 int CDC_count = 0;
 int CIS_count = 0;
+
+ACS_count = PBean.getACS_count();
 
 if (partnerCount!=null) {
 	
