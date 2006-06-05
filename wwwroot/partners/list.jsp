@@ -37,6 +37,9 @@ Vector partners = null;
 Vector partnerCount = null;
 QueryBean QBean = new QueryBean();
 PartnerBean PBean = new PartnerBean();
+
+Iterator itP = partnerCount.iterator();
+PartnerBean PBean = (PartnerBean)itP.next();
 topicNum = QBean.getTopicID(topic);
 
 // Find the page title to use based on the topic
@@ -52,12 +55,12 @@ if (region.equals("ALL")) {
     partners = QBean.getPartners(topic.toUpperCase());
 	//partnerCount = PBean.getPartners(topic.toUpperCase());
 	stateStatic="the US";
-	Iterator rst = PBean.iterator();
-	partnerCount = PBean.getCountbyPartner();//
-	int ACS_count = getACS_count;//
-	int ACOS_count= rst.getACOS_count(); // where rst is an instance of PartnerBean
-	int CDC_count = partners.getCDC_count;
-	int CIS_count = partnerCount.getCIS_count;
+	//Iterator rst = PBean.iterator();
+	partnerCount = PBean.getCountbyPartner();
+	int ACS_count = PBean.getACS_count;
+	int ACOS_count= PBeant.getACOS_count(); // where rst is an instance of PartnerBean
+	int CDC_count = PBean.getCDC_count;
+	int CIS_count = PBean.getCIS_count;
 	
 } else {
     //pcScript = "US.setShapeValues("+region.trim()+",1)US.addPCXML(<DefaultShapeSettings><Drilldown URL='list.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultShapeSettings>)@_END";
