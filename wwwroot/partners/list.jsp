@@ -36,6 +36,7 @@ StringBuffer stateList = null;
 Vector partners = null;
 Vector partnerCount = null;
 QueryBean QBean = new QueryBean();
+PartnerBean PBean = new PartnerBean();
 topicNum = QBean.getTopicID(topic);
 
 // Find the page title to use based on the topic
@@ -49,10 +50,12 @@ caption = "Cancer Control PLANET - " + pageTitle;
 if (region.equals("ALL")) {
     //pcScript = "US.addPCXML(<DefaultShapeSettings><Properties FillColor='#B20000'/><Drilldown URL='list.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultShapeSettings>)";
     partners = QBean.getPartners(topic.toUpperCase());
-stateStatic="the US";
+	partnerCount = PBean.getPartners(topic.toUpperCase());
+	stateStatic="the US";
+	Iterator rst = partnerCount.iterator();
 	partnerCount = QBean.getCountbyPartner();//
 	int ACS_count = getACS_count;//
-	int ACOS_count= QBean.getACOS_count;
+	int ACOS_count= rst.getACOS_count(); // where rst is an instance of PartnerBean
 	int CDC_count = partners.getCDC_count;
 	int CIS_count = partnerCount.getCIS_count;
 	
