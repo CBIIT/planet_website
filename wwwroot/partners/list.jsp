@@ -50,10 +50,10 @@ caption = "Cancer Control PLANET - " + pageTitle;
 if (region.equals("ALL")) {
     //pcScript = "US.addPCXML(<DefaultShapeSettings><Properties FillColor='#B20000'/><Drilldown URL='list.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultShapeSettings>)";
     partners = QBean.getPartners(topic.toUpperCase());
-	partnerCount = PBean.getPartners(topic.toUpperCase());
+	//partnerCount = PBean.getPartners(topic.toUpperCase());
 	stateStatic="the US";
-	Iterator rst = partnerCount.iterator();
-	partnerCount = QBean.getCountbyPartner();//
+	Iterator rst = PBean.iterator();
+	partnerCount = PBean.getCountbyPartner();//
 	int ACS_count = getACS_count;//
 	int ACOS_count= rst.getACOS_count(); // where rst is an instance of PartnerBean
 	int CDC_count = partners.getCDC_count;
