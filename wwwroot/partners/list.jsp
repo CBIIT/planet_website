@@ -52,8 +52,7 @@ int totACS_count = 0;
 int totACOS_count = 0;
 int totCDC_count = 0;
 int totCIS_count = 0;
-
-ACS_count = PBean.getACS_count();
+int numVectors = 0;
 
 if (partnerCount!=null) {
 	do {
@@ -75,6 +74,7 @@ if (partnerCount!=null) {
 	if (CIS_count > 0) {
 	totCIS_count = totCIS_count + 1;
 	}
+	numVectors = numVectors + 1;
 	} while (itP.hasNext());
 } 
 
@@ -476,7 +476,7 @@ if (it2.hasNext()) {
 	<td valign="top" width="28%"><%= stateList.toString()%></td>
 	<td valign="top" width="2%">&nbsp;</td>
 	<td valign="top" width="70%"><%= ACS_count %>,<%= ACOS_count%>,<%= CDC_count%>,<%= CIS_count%><BR>
-	<%= totACS_count %>,<%= totACOS_count%>,<%= totCDC_count%>,<%= totCIS_count%><BR>
+	<%= totACS_count %>,<%= totACOS_count%>,<%= totCDC_count%>,<%= totCIS_count%>; <%= numVectors%><BR>
 	<%= outString.toString()%></td>
 </tr>
 </table>
