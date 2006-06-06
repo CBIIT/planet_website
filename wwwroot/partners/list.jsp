@@ -41,9 +41,7 @@ PartnerBean PBean = new PartnerBean();
 //PBean = QueryBean.getCountbyPartner();
 //Iterator itP = QueryBean.getCountbyPartner();
 Vector partnerCount = QBean.getCountbyPartner();
-iterator itP = partnerCount.iterator();
-//Vector states = QBean.getStateList();
-//Iterator it2 = states.iterator();
+Iterator itP = partnerCount.iterator();
 
 topicNum = QBean.getTopicID(topic);
 int ACS_count = 0;
