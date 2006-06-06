@@ -59,7 +59,8 @@ if (partnerCount!=null) {
 	CDC_count = PBean.getCDC_count();
 	CIS_count = PBean.getCIS_count();
 	} while (itP.hasNext());
-}
+} 
+
 
 // Find the page title to use based on the topic
 if (topic.compareTo("C") != 0) {
