@@ -19,6 +19,15 @@ String topicDesc = "";
 String partnerText = "";
 String typeDesc = "";
 int topicNum = 0;
+int ACS_count = 0;
+int ACOS_count = 0;
+int CDC_count = 0;
+int CIS_count = 0;
+int totACS_count = 0;
+int totACOS_count = 0;
+int totCDC_count = 0;
+int totCIS_count = 0;
+int numVectors = 0;
 
 if (param != null) {
     region = param.toUpperCase();
@@ -36,47 +45,8 @@ Vector partners = null;
 //Vector partnerCount = null;
 QueryBean QBean = new QueryBean();
 PartnerBean PBean = new PartnerBean();
-//Iterator itP = PBean.iterator();//gives can't resolve symbol error
-//Iterator itP2 = partnerCount.iterator();
-//PBean = QueryBean.getCountbyPartner();
-//Iterator itP = QueryBean.getCountbyPartner();
-Vector partnerCount = QBean.getCountbyPartner();
-Iterator itP = partnerCount.iterator();
 
 topicNum = QBean.getTopicID(topic);
-int ACS_count = 0;
-int ACOS_count = 0;
-int CDC_count = 0;
-int CIS_count = 0;
-int totACS_count = 0;
-int totACOS_count = 0;
-int totCDC_count = 0;
-int totCIS_count = 0;
-int numVectors = 0;
-
-if (partnerCount!=null) {
-	do {
-	PBean = (PartnerBean)itP.next();
-	//StateBean rs = (StateBean)it2.next();
-	ACS_count = PBean.getACS_count();
-	ACOS_count = PBean.getACOS_count(); // where rst is an instance of PartnerBean
-	CDC_count = PBean.getCDC_count();
-	CIS_count = PBean.getCIS_count();
-	if (ACS_count > 0) {
-	totACS_count = totACS_count + 1;
-	}
-	if (ACOS_count > 0) {
-	totACOS_count = totACOS_count + 1;
-	}
-	if (CDC_count > 0) {
-	totCDC_count = totCDC_count + 1;
-	}
-	if (CIS_count > 0) {
-	totCIS_count = totCIS_count + 1;
-	}
-	numVectors = numVectors + 1;
-	} while (itP.hasNext());
-} 
 
 // Find the page title to use based on the topic
 if (topic.compareTo("C") != 0) {
@@ -89,15 +59,34 @@ caption = "Cancer Control PLANET - " + pageTitle;
 if (region.equals("ALL")) {
     //pcScript = "US.addPCXML(<DefaultShapeSettings><Properties FillColor='#B20000'/><Drilldown URL='list.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultShapeSettings>)";
     partners = QBean.getPartners(topic.toUpperCase());
-	//partnerCount = PBean.getPartners(topic.toUpperCase());
 	stateStatic="the US";
-	//Iterator rst = PBean.iterator();
-	//partnerCount = PBean.getCountbyPartner();
+	
+	Vector partnerCount = QBean.getCountbyPartner();
+	Iterator itP = partnerCount.iterator();
 	
 } else {
     //pcScript = "US.setShapeValues("+region.trim()+",1)US.addPCXML(<DefaultShapeSettings><Drilldown URL='list.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultShapeSettings>)@_END";
     partners = QBean.getPartners(topic.toUpperCase(), region);
+	Vector partnerCount = QBean.getCountbyPartner(region);
+	Iterator itP = partnerCount.iterator();
+
 } //end if (region.equals("ALL"))
+
+if (partnerCount!=null) {
+	do {
+	PBean = (PartnerBean)itP.next();
+
+	ACS_count = PBean.getACS_count();
+	ACOS_count = PBean.getACOS_count();
+	CDC_count = PBean.getCDC_count();
+	CIS_count = PBean.getCIS_count();
+	if (ACS_count > 0) {totACS_count = totACS_count + 1;}
+	if (ACOS_count > 0) {totACOS_count = totACOS_count + 1;}
+	if (CDC_count > 0) {totCDC_count = totCDC_count + 1;}
+	if (CIS_count > 0) {totCIS_count = totCIS_count + 1;}
+	numVectors = numVectors + 1;
+	} while (itP.hasNext());
+} 
 
 String beginTD = "<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;' align=\"left\">";
 String endTD = "</td></tr>";
