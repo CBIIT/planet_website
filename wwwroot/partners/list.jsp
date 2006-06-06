@@ -120,8 +120,8 @@ if (partners!=null) { //We have partners
 				//*** Display State Name and Partner Name ***
                 //*******************************************
 				outString.append("<table border='0' cellspacing='0' cellpadding='0' width='100%'>");
-                //outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'><font style='font-family : Arial, Helvetica, Verdana, Geneva,  sans-serif;	font-size : 12px;	font-weight: bold; color : #AA0000;'>"+stateName+"</font><br><br>"+rs.getPartnerName()+endTD);
-				outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'>"+rs.getPartnerName()+endTD);
+                outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'><font style='font-family : Arial, Helvetica, Verdana, Geneva,  sans-serif;	font-size : 12px;	font-weight: bold; color : #AA0000;'>"+stateName+"</font><br><br>"+rs.getPartnerName()+endTD);
+				//outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'>"+rs.getPartnerName()+endTD);
                 //*******************************************
 
                 //*******************************************
@@ -461,7 +461,7 @@ if (it2.hasNext()) {
 <tr>
 	<td valign="top" width="28%"><%= stateList.toString()%></td>
 	<td valign="top" width="2%">&nbsp;</td>
-	<td valign="top" width="70%"><%= ACS_count %><%= ACOS_count%><%= CDC_count%><%= CIS_count%><BR>
+	<td valign="top" width="70%"><%= ACS_count %>,<%= ACOS_count%>,<%= CDC_count%>,<%= CIS_count%><BR>
 	<%= outString.toString()%></td>
 </tr>
 </table>
