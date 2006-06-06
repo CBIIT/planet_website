@@ -42,7 +42,7 @@ if (param != null) {
 StringBuffer outString = null;
 StringBuffer stateList = null;
 Vector partners = null;
-//Vector partnerCount = null;
+Vector partnerCount = null;
 QueryBean QBean = new QueryBean();
 PartnerBean PBean = new PartnerBean();
 
@@ -61,13 +61,13 @@ if (region.equals("ALL")) {
     partners = QBean.getPartners(topic.toUpperCase());
 	stateStatic="the US";
 	
-	Vector partnerCount = QBean.getCountbyPartner();
+	partnerCount = QBean.getCountbyPartner();
 	Iterator itP = partnerCount.iterator();
 	
 } else {
     //pcScript = "US.setShapeValues("+region.trim()+",1)US.addPCXML(<DefaultShapeSettings><Drilldown URL='list.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultShapeSettings>)@_END";
     partners = QBean.getPartners(topic.toUpperCase(), region);
-	Vector partnerCount = QBean.getCountbyPartner(region);
+	partnerCount = QBean.getCountbyPartner(region);
 	Iterator itP = partnerCount.iterator();
 
 } //end if (region.equals("ALL"))
