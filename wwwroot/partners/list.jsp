@@ -40,7 +40,7 @@ PartnerBean PBean = new PartnerBean();
 //Iterator itP2 = partnerCount.iterator();
 //PBean = QueryBean.getCountbyPartner();
 Iterator itP = QueryBean.getCountbyPartner();
-
+//
 topicNum = QBean.getTopicID(topic);
 int ACS_count = 0;
 int ACOS_count= 0;
