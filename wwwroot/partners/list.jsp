@@ -175,9 +175,9 @@ if (partners!=null) { //We have partners
 				typeDesc = rs.getTypeDescription();
                 outString.append("<p><table border='1' cellspacing='0' cellpadding='0' width='100%'>");
                 
-                outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'>"+rs.getPartnerName()+endTD);
+                outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'>"+rs.getPartnerName()+"<br>");
 
-                outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;style: bold;' align='left'>");
+                //outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;style: bold;' align='left'>");
                 outString.append("<u>" + rs.getTypeDescription());
                 
                 // For state and territory contacts we may need to tack on some additional information.
@@ -205,13 +205,12 @@ if (partners!=null) { //We have partners
 				}//if (typeDesc.equals("State") && (addedContact != 1))
 				
                 // Close the underlining and the table cell.
-                outString.append("</u>" + endTD);
+                outString.append("</u>" + "<br>");
             }//end if (partnerId != rs.getPartnerId())
 
             if (typeString.compareTo(rs.getType().trim()) != 0) {
 				typeDesc = rs.getTypeDescription();
-                outString.append("<tr><td height='20'>&nbsp;</td></tr>");
-                outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;font-style: normal;' align='left'>");
+                outString.append("<br>");
                 outString.append("<u>" + rs.getTypeDescription());
 				//outString.append(partnerString + " - " + typeString + " - " + topic + " - " + typeDesc + " - ");
 				
@@ -238,7 +237,7 @@ if (partners!=null) { //We have partners
 				}//end if (typeDesc.equals("State") && (addedContact != 1))
 
                 // Close the underlining and the table cell.
-                outString.append("</u>" + endTD);
+                outString.append("</u><br>");
                 typeString = rs.getType();
 				typeDesc = rs.getTypeDescription();
             }//end if (typeString.compareTo(rs.getType().trim()) != 0)
