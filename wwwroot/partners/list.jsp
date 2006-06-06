@@ -177,7 +177,6 @@ if (partners!=null) { //We have partners
                 
                 outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;color: #000000;' align='left'><b>"+rs.getPartnerName()+"</b><br>");
 
-                //outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;style: bold;' align='left'>");
                 outString.append("<u>" + rs.getTypeDescription());
                 
                 // For state and territory contacts we may need to tack on some additional information.
@@ -243,7 +242,7 @@ if (partners!=null) { //We have partners
             }//end if (typeString.compareTo(rs.getType().trim()) != 0)
 
             if (rs.getContactName() != null && rs.getContactName().compareTo("") != 0) {
-                outString.append(beginTD+rs.getContactName().trim());
+                outString.append(rs.getContactName().trim());
 
                 if (rs.getDegree() != null && rs.getDegree().compareTo("") != 0) {
                     outString.append(", "+rs.getDegree());
