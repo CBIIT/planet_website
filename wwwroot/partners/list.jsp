@@ -37,8 +37,9 @@ Vector partnerCount = null;
 QueryBean QBean = new QueryBean();
 PartnerBean PBean = new PartnerBean();
 //Iterator itP = PBean.iterator();//gives can't resolve symbol error
-Iterator itP2 = partnerCount.iterator();
-PBean = QueryBean.getCountbyPartner();
+//Iterator itP2 = partnerCount.iterator();
+//PBean = QueryBean.getCountbyPartner();
+Iterator itP = QueryBean.getCountbyPartner();
 
 topicNum = QBean.getTopicID(topic);
 int ACS_count = 0;
