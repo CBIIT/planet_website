@@ -43,6 +43,7 @@ StringBuffer outString = null;
 StringBuffer stateList = null;
 Vector partners = null;
 Vector partnerCount = null;
+
 QueryBean QBean = new QueryBean();
 PartnerBean PBean = new PartnerBean();
 
