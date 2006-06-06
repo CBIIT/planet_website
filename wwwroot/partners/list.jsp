@@ -54,7 +54,8 @@ ACS_count = PBean.getACS_count();
 if (partnerCount!=null) {
 	
 	do {
-	//PBean = (PartnerBean)itP.next();
+	PBean = (PartnerBean)itP.next();
+	//StateBean rs = (StateBean)it2.next();
 	ACS_count = PBean.getACS_count();
 	ACOS_count= PBean.getACOS_count(); // where rst is an instance of PartnerBean
 	CDC_count = PBean.getCDC_count();
