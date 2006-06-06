@@ -175,7 +175,7 @@ if (partners!=null) { //We have partners
 				typeDesc = rs.getTypeDescription();
                 outString.append("<p><table border='1' cellspacing='0' cellpadding='0' width='100%'>");
                 
-                outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'>"+rs.getPartnerName()+"<br>");
+                outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;color: #000000;' align='left'><b>"+rs.getPartnerName()+"</b><br>");
 
                 //outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;style: bold;' align='left'>");
                 outString.append("<u>" + rs.getTypeDescription());
@@ -248,39 +248,39 @@ if (partners!=null) { //We have partners
                 if (rs.getDegree() != null && rs.getDegree().compareTo("") != 0) {
                     outString.append(", "+rs.getDegree());
 				}// end if (rs.getDegree() != null && rs.getDegree().compareTo("") != 0)
-                outString.append(endTD);//
+                outString.append("<br>");
             }//end if (rs.getContactName() != null && rs.getContactName().compareTo("") != 0)
 			
             if (rs.getTitle() != null && rs.getTitle().compareTo("") != 0)
-                outString.append(beginTD+rs.getTitle().trim()+endTD);
+                outString.append(rs.getTitle().trim()+"<br>");
 
             if (rs.getOrg1() != null && rs.getOrg1().compareTo("") != 0)
-                outString.append(beginTD+rs.getOrg1().trim()+endTD);
+                outString.append(rs.getOrg1().trim()+"<br>");
 
             if (rs.getOrg2() != null && rs.getOrg2().compareTo("") != 0)
-                outString.append(beginTD+rs.getOrg2().trim()+endTD);
+                outString.append(rs.getOrg2().trim()+"<br>");
 
             if (rs.getAddress1() != null && rs.getAddress1().compareTo("") != 0)
-                outString.append(beginTD+rs.getAddress1().trim()+endTD);
+                outString.append(rs.getAddress1().trim()+"<br>");
 
             if (rs.getAddress2() != null && rs.getAddress2().compareTo("") != 0)
-                outString.append(beginTD+rs.getAddress2().trim()+endTD);
+                outString.append(rs.getAddress2().trim()+"<br>");
 
             if (rs.getCity() != null && rs.getCity().compareTo("") != 0)
-                outString.append(beginTD+rs.getCity().trim()+", "+rs.getAddressState()+" "+rs.getZip().trim()+endTD);
+                outString.append(rs.getCity().trim()+", "+rs.getAddressState()+" "+rs.getZip().trim()+"<br>");
 
             if (rs.getPhone() != null && rs.getPhone().compareTo("") != 0)
-                    outString.append(beginTD+"Phone:  "+rs.getPhone().trim()+endTD);
+                    outString.append("Phone:  "+rs.getPhone().trim()+"<br>");
 
             if (rs.getFax() != null && rs.getFax().compareTo("") != 0)
-                    outString.append(beginTD+"Fax:  "+rs.getFax().trim()+endTD);
+                    outString.append("Fax:  "+rs.getFax().trim()+"<br>");
 
             if (rs.getCell() != null && rs.getCell().compareTo("") != 0)
-                    outString.append(beginTD+"Cell:  "+rs.getCell().trim()+endTD);
+                    outString.append("Cell:  "+rs.getCell().trim()+"<br>");
 
             if (rs.getEmail() != null && rs.getEmail().compareTo("") != 0) {
                 String emailStr = rs.getEmail().trim();
-                outString.append(beginTD+"Email:  <a href=\"mailto:"+emailStr+"\" class='a1'>"+emailStr+"</a>"+endTD);
+                outString.append("Email:  <a href=\"mailto:"+emailStr+"\" class='a1'>"+emailStr+"</a>"+"<br>");
             }
 			
 			//*** Organization URL #1 **********
@@ -294,9 +294,9 @@ if (partners!=null) { //We have partners
 
                 // Don't display "Web site:" field header for tobacco, breast cancer, and cervical cancer contacts.
                 if (partnerString.equals("CDC") && (topic.equals("T") || topic.equals("B") || topic.equals("V"))) {
-                   outString.append(beginTD+"<a href=\""+urlStr+"\" target=\"_blank\" class='a1'>"+urlStr+"</a>"+endTD);
+                   outString.append("<a href=\""+urlStr+"\" target=\"_blank\" class='a1'>"+urlStr+"</a>"+"<br>");
                 } else {
-                    outString.append(beginTD+"Web site:  <a href=\""+urlStr+"\" target=\"_blank\" class='a1'>"+urlStr+"</a>"+endTD);
+                    outString.append("Web site:  <a href=\""+urlStr+"\" target=\"_blank\" class='a1'>"+urlStr+"</a>"+"<br>");
 				}//end if (partnerString.equals("CDC") && (topic.equals("T") || topic.equals("B") || topic.equals("V")))
 			}//end if (rs.getOrgurl() != null && rs.getOrgurl().compareTo("") != 0)
 
@@ -311,13 +311,13 @@ if (partners!=null) { //We have partners
 
                 // Don't display Web site: field header for tobacco, breast cancer, and cervical cancer contacts.
                 if (partnerString.equals("CDC") && (topic.equals("T") || topic.equals("B") || topic.equals("V"))) {
-                   outString.append(beginTD+"<a href=\""+urlStr+"\" target=\"_blank\" class='a1'>"+urlStr+"</a>"+endTD);
+                   outString.append("<a href=\""+urlStr+"\" target=\"_blank\" class='a1'>"+urlStr+"</a>"+"<br>");
                 } else {
-                    outString.append(beginTD+"Web site:  <a href=\""+urlStr+"\" target=\"_blank\" class='a1'>"+urlStr+"</a>"+endTD);
+                    outString.append("Web site:  <a href=\""+urlStr+"\" target=\"_blank\" class='a1'>"+urlStr+"</a>"+"<br>");
 				}//end if (partnerString.equals("CDC") && (topic.equals("T") || topic.equals("B") || topic.equals("V")))
             }//end if (rs.getOrgurl2() != null && rs.getOrgurl2().compareTo("") != 0)
 
-            outString.append("<tr><td height='10'>&nbsp;</td></tr>");
+            outString.append(endTD+"<tr><td height='10'>&nbsp;</td></tr>");
 			typeDesc = rs.getTypeDescription();
             count ++;
 			addedContact = 0;
