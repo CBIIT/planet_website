@@ -77,7 +77,6 @@ if (region.equals("ALL")) {
 	//Iterator rst = PBean.iterator();
 	//partnerCount = PBean.getCountbyPartner();
 	
-	
 } else {
     //pcScript = "US.setShapeValues("+region.trim()+",1)US.addPCXML(<DefaultShapeSettings><Drilldown URL='list.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultShapeSettings>)@_END";
     partners = QBean.getPartners(topic.toUpperCase(), region);
