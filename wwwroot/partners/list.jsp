@@ -248,7 +248,7 @@ if (partners!=null) { //We have partners
                 if (rs.getDegree() != null && rs.getDegree().compareTo("") != 0) {
                     outString.append(", "+rs.getDegree());
 				}// end if (rs.getDegree() != null && rs.getDegree().compareTo("") != 0)
-                outString.append(endTD);
+                outString.append(endTD);//
             }//end if (rs.getContactName() != null && rs.getContactName().compareTo("") != 0)
 			
             if (rs.getTitle() != null && rs.getTitle().compareTo("") != 0)
