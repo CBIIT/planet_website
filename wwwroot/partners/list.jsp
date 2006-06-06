@@ -317,7 +317,7 @@ if (partners!=null) { //We have partners
 				}//end if (partnerString.equals("CDC") && (topic.equals("T") || topic.equals("B") || topic.equals("V")))
             }//end if (rs.getOrgurl2() != null && rs.getOrgurl2().compareTo("") != 0)
 
-            outString.append(endTD+"<tr><td height='10'>&nbsp;</td></tr>");
+            outString.append(endTD+"<p>&nbsp;</p>");
 			typeDesc = rs.getTypeDescription();
             count ++;
 			addedContact = 0;
@@ -326,8 +326,7 @@ if (partners!=null) { //We have partners
 		outString.append("</table>");
 		//added 01/23/06
         outString.append("</td></tr></table>");
-}
-else { //No partners returned!
+} else { //No partners returned!
 	outString = new StringBuffer();
 	outString.append("No records found.");
 }//end if (partners!=null)
