@@ -63,7 +63,6 @@ if (partnerCount!=null) {
 	} while (itP.hasNext());
 } 
 
-
 // Find the page title to use based on the topic
 if (topic.compareTo("C") != 0) {
 topicDesc = QBean.getTopicDescription(topic);
