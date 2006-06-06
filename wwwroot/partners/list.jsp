@@ -45,21 +45,36 @@ Iterator itP = partnerCount.iterator();
 
 topicNum = QBean.getTopicID(topic);
 int ACS_count = 0;
-int ACOS_count= 0;
+int ACOS_count = 0;
 int CDC_count = 0;
 int CIS_count = 0;
+int totACS_count = 0;
+int totACOS_count = 0;
+int totCDC_count = 0;
+int totCIS_count = 0;
 
 ACS_count = PBean.getACS_count();
 
 if (partnerCount!=null) {
-	
 	do {
 	PBean = (PartnerBean)itP.next();
 	//StateBean rs = (StateBean)it2.next();
 	ACS_count = PBean.getACS_count();
-	ACOS_count= PBean.getACOS_count(); // where rst is an instance of PartnerBean
+	ACOS_count = PBean.getACOS_count(); // where rst is an instance of PartnerBean
 	CDC_count = PBean.getCDC_count();
 	CIS_count = PBean.getCIS_count();
+	if (ACS_count > 0) {
+	totACS_count = totACS_count + 1;
+	}
+	if (ACOS_count > 0) {
+	totACOS_count = totACOS_count + 1;
+	}
+	if (CDC_count > 0) {
+	totCDC_count = totCDC_count + 1;
+	}
+	if (CIS_count > 0) {
+	totCIS_count = totCIS_count + 1;
+	}
 	} while (itP.hasNext());
 } 
 
@@ -461,6 +476,7 @@ if (it2.hasNext()) {
 	<td valign="top" width="28%"><%= stateList.toString()%></td>
 	<td valign="top" width="2%">&nbsp;</td>
 	<td valign="top" width="70%"><%= ACS_count %>,<%= ACOS_count%>,<%= CDC_count%>,<%= CIS_count%><BR>
+	<%= totACS_count %>,<%= totACOS_count%>,<%= totCDC_count%>,<%= totCIS_count%><BR>
 	<%= outString.toString()%></td>
 </tr>
 </table>
