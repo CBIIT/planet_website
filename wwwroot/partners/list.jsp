@@ -39,8 +39,9 @@ PartnerBean PBean = new PartnerBean();
 //Iterator itP = PBean.iterator();//gives can't resolve symbol error
 //Iterator itP2 = partnerCount.iterator();
 //PBean = QueryBean.getCountbyPartner();
-Iterator itP = QueryBean.getCountbyPartner();
-//
+//Iterator itP = QueryBean.getCountbyPartner();
+partnerCount = QueryBean.getCountbyPartner();
+
 topicNum = QBean.getTopicID(topic);
 int ACS_count = 0;
 int ACOS_count= 0;
@@ -59,7 +60,6 @@ if (partnerCount!=null) {
 	CIS_count = PBean.getCIS_count();
 	} while (itP.hasNext());
 }
-
 
 // Find the page title to use based on the topic
 if (topic.compareTo("C") != 0) {
