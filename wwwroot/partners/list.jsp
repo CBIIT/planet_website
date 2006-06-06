@@ -62,17 +62,18 @@ if (region.equals("ALL")) {
 	stateStatic="the US";
 	
 	partnerCount = QBean.getCountbyPartner();
-	Iterator itP = partnerCount.iterator();
 	
 } else {
     //pcScript = "US.setShapeValues("+region.trim()+",1)US.addPCXML(<DefaultShapeSettings><Drilldown URL='list.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultShapeSettings>)@_END";
     partners = QBean.getPartners(topic.toUpperCase(), region);
 	partnerCount = QBean.getCountbyPartner(region);
-	Iterator itP = partnerCount.iterator();
 
 } //end if (region.equals("ALL"))
-
+	
 if (partnerCount!=null) {
+
+	Iterator itP = partnerCount.iterator();
+	
 	do {
 	PBean = (PartnerBean)itP.next();
 
