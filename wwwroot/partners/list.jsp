@@ -477,9 +477,9 @@ if (it2.hasNext()) {
 <tr>
 	<td valign="top" width="28%"><%= stateList.toString()%></td>
 	<td valign="top" width="2%">&nbsp;</td>
-	<td valign="top" width="70%"><%= ACS_count %>,<%= ACOS_count%>,<%= CDC_count%>,<%= CIS_count%><BR>
-	<!--- < %= totACS_count %>,< %= totACOS_count%>,< %= totCDC_count%>,< %= totCIS_count%>; < %= numVectors%><BR>
-	< %= outString.toString()%> ---></td>
+	<td valign="top" width="70%"><!--- < %= ACS_count %>,< %= ACOS_count%>,< %= CDC_count%>,< %= CIS_count%><BR>
+	< %= totACS_count %>,< %= totACOS_count%>,< %= totCDC_count%>,< %= totCIS_count%>; < %= numVectors%><BR> --->
+	<%= outString.toString()%></td>
 </tr>
 </table>
 
