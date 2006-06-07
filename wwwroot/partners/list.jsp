@@ -175,7 +175,7 @@ if (partners!=null) { //We have partners
                 partnerString = rs.getPartnerAbbreviation();
                 typeString = rs.getType();
 				typeDesc = rs.getTypeDescription();
-                outString.append("<p>");
+                outString.append("<p style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;color: #000000;' align='left'>");
                 //<table border='1' cellspacing='0' cellpadding='0' width='100%'>"
                 //outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;color: #000000;' align='left'><b>"+rs.getPartnerName()+"</b><br>");
 				outString.append("<b>"+rs.getPartnerName()+"</b><br>");
