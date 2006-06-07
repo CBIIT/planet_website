@@ -122,7 +122,7 @@ if (partners!=null) { //We have partners
 				if (rs.getPartnerAbbreviation() != rs2.getPartnerAbbreviation())
 					contactPlural = 1;
 			}
-			rs = (PartnerBean)it.last(); //Retreat to last partner record
+			rs = (PartnerBean)it.previous(); //Retreat to last partner record
 			
 			typeDesc = rs.getTypeDescription();
             if (stateName.compareTo(rs.getStateName().trim()) != 0) { //This is a new state
