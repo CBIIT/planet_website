@@ -105,7 +105,7 @@ if (partners!=null) { //We have partners
         int count = 1;
         String typeString = "";
         String typeOutput = "";
-		int addedContact = 0;
+		int addedContact = 0; //We added "Contact" already if = 1
 		int stateCount = 0; //num of states displayed so far
 		
 		outString.append("<table border='0' cellspacing='2' cellpadding='2' width='100%'>");
