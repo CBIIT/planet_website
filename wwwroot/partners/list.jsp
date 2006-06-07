@@ -121,9 +121,9 @@ if (partners!=null) { //We have partners
 			if (stateName.compareTo(rs.getStateName().trim()) != 0) { //This is a new state
 				stateCount = stateCount + 1; //increment the state count
 				
-				if (stateCount == 33) { //We have displayed half of the states, switch to 2nd column
+				if (stateCount == 33) //We have displayed half of the states, switch to 2nd column
 					outString.append(endTD+"</table></td><td valign='top' width='50%'><table border='0' cellspacing='0' cellpadding='0' width='100%'><tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;' align='left'>");//Column 2 Table
-				}
+
                 if (count > 1) {//We have already displayed our first result
                     outString.append("</p>");
 				}//end if (count > 1)
