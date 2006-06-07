@@ -181,10 +181,11 @@ if (partners!=null) { //We have partners
                    outString.append("</p>");
 				}//end if (count > 1)
 
-				if (region != "ALL" && partnerCount == 3) { //We have displayed two partners (state view only), switch to 2nd column
+				if (region != "ALL" && numPartnersDisplayed == 3) { //We have displayed two partners (state view only), switch to 2nd column
 					outString.append(endTD+"</table></td><td valign='top' width='50%'><table border='0' cellspacing='0' cellpadding='0' width='100%'><tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;' align='left'>");//Column 2 Table
 				}
 
+				
                 partnerId = rs.getPartnerId();
                 partnerString = rs.getPartnerAbbreviation();
                 typeString = rs.getType();
