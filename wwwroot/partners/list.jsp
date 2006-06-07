@@ -107,7 +107,6 @@ if (partners!=null) { //We have partners
         String typeOutput = "";
 		int addedContact = 0;
 		int stateCount = 0; //num of states displayed so far
-		int contactPlural = 0;
 		
 		outString.append("<table border='0' cellspacing='2' cellpadding='2' width='100%'>");
         outString.append("<tr><td valign='top' width='50%' style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;' align='left'>");
@@ -115,16 +114,7 @@ if (partners!=null) { //We have partners
         outString.append("<tr><td valign='top' style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;' align='left'>");
 		
         do { //do once, then loop while (it.hasNext() {
-	        PartnerBean rs = (PartnerBean)it.next(); //Advance to next partner record
-			PartnerBean rs2 = (PartnerBean)it.next(); //Advance to next partner record
-			
-			if (rs.getPartnerAbbreviation() != null && rs.getPartnerAbbreviation().compareTo("") != 0 && rs2.getPartnerAbbreviation() != null && rs2.getPartnerAbbreviation().compareTo("") != 0) {
-				if (rs.getPartnerAbbreviation() != rs2.getPartnerAbbreviation())
-					contactPlural = 1;
-			}
-			rs = (PartnerBean)it.previous(); //Retreat to last partner record
-			
-			typeDesc = rs.getTypeDescription();
+	        typeDesc = rs.getTypeDescription();
             if (stateName.compareTo(rs.getStateName().trim()) != 0) { //This is a new state
 				stateCount = stateCount + 1; //increment the state count
 				if (stateCount == 33) { //We have displayed half of the states, switch to 2nd column
@@ -158,21 +148,21 @@ if (partners!=null) { //We have partners
                     if (topic.equals("T")) {
                         outString.append(" Health Department Web Site");
 					} else if (topic.equals("P")) {
-						outString.append(" Health Department Contact");
+						outString.append(" Health Department Contact(s)");
 						addedContact = 1;
 					} else { //Is CDC, and not type W, and not topic T,P
 						addedContact = 1;
-                        outString.append(" Contact");
+                        outString.append(" Contact(s)");
 					} //end if (topic.equals("T"))
                 } //end if (partnerString.equals("CDC") && !typeString.equals("W"))
 				
 				if (typeDesc.equals("Regional") && (addedContact != 1)) {
-					outString.append(" Contact");
+					outString.append(" Contact(s)");
 					addedContact = 1;
 				}//end if (typeDesc.equals("Regional") && (addedContact != 1))
 				
 				if (typeDesc.equals("State") && (addedContact != 1)) {
-					outString.append(" Contact");
+					outString.append(" Contact(s)");
 					addedContact = 1;
 				}//end if (typeDesc.equals("State") && (addedContact != 1))
 				
@@ -205,21 +195,21 @@ if (partners!=null) { //We have partners
                     if (topic.equals("T")) {
                         outString.append(" Health Department Web Site");
                     } else if (topic.equals("P")) {
-                        outString.append(" Health Department Contact");
+                        outString.append(" Health Department Contact(s)");
 						addedContact = 1;
                     } else if (addedContact != 1) {
-						outString.append(" Contact");
+						outString.append(" Contact(s)");
 						addedContact = 1;
 					}//end if (topic.equals("T"))
                 }//end if (partnerString.equals("CDC") && !typeString.equals("W"))
 				
 				if (typeDesc.equals("Regional") && (addedContact != 1)) {
-					outString.append(" Contact");
+					outString.append(" Contact(s)");
 					addedContact = 1;
 				}//end if (typeDesc.equals("Regional") && (addedContact != 1))
 				
 				if (typeDesc.equals("State") && (addedContact != 1)) {
-					outString.append(" Contact");
+					outString.append(" Contact(s)");
 					addedContact = 1;
 				}//if (typeDesc.equals("State") && (addedContact != 1))
 				
@@ -235,23 +225,23 @@ if (partners!=null) { //We have partners
 				
                 if (partnerString.equals("CDC") && !typeString.equals("W")) {
                     if (topic.compareTo("C") != 0) {
-                       outString.append(" Health Department Contact");
+                       outString.append(" Health Department Contact(s)");
 					   addedContact = 1;
                     } else {
 								if (addedContact != 1) {
-									outString.append(" Contact");
+									outString.append(" Contact(s)");
 									addedContact = 1;
 								}//end if (addedContact != 1)
 					}//end if (topic.compareTo("C") != 0)
                 }//end if (partnerString.equals("CDC") && !typeString.equals("W"))
 
 				if (typeDesc.equals("Regional") && (addedContact != 1)) {
-					outString.append(" Contact");
+					outString.append(" Contact(s)");
 					addedContact = 1;
 				}//end if (typeDesc.equals("Regional") && (addedContact != 1))
 				
 				if (typeDesc.equals("State") && (addedContact != 1)) {
-					outString.append(" Contact");
+					outString.append(" Contact(s)");
 					addedContact = 1;
 				}//end if (typeDesc.equals("State") && (addedContact != 1))
 
@@ -343,7 +333,6 @@ if (partners!=null) { //We have partners
 			typeDesc = rs.getTypeDescription();
             count ++;
 			addedContact = 0;
-			contactPlural = 0;
         } while (it.hasNext());
 
 		outString.append(endTD+"</table>"+endTD+"</table>");
