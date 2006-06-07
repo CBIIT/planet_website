@@ -107,6 +107,7 @@ if (partners!=null) { //We have partners
         String typeOutput = "";
 		int addedContact = 0;
 		int stateCount = 0; //num of states displayed so far
+		int contactPlural = 0;
 		
 		outString.append("<table border='0' cellspacing='2' cellpadding='2' width='100%'>");
         outString.append("<tr><td valign='top' width='50%' style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;' align='left'>");
@@ -116,7 +117,12 @@ if (partners!=null) { //We have partners
         do { //do once, then loop while (it.hasNext() {
 	        PartnerBean rs = (PartnerBean)it.next(); //Advance to next partner record
 			PartnerBean rs2 = (PartnerBean)it.next(); //Advance to next partner record
-			PartnerBean rs = (PartnerBean)it.last(); //Retreat to last partner record
+			
+			if (rs.getPartnerAbbreviation() != null && rs.getPartnerAbbreviation().compareTo("") != 0 && rs2.getPartnerAbbreviation() != null && rs2.getPartnerAbbreviation().compareTo("") != 0) {
+				if (rs.getPartnerAbbreviation() != rs2.getPartnerAbbreviation())
+					contactPlural = 1;
+			}
+			rs = (PartnerBean)it.last(); //Retreat to last partner record
 			
 			typeDesc = rs.getTypeDescription();
             if (stateName.compareTo(rs.getStateName().trim()) != 0) { //This is a new state
@@ -337,6 +343,7 @@ if (partners!=null) { //We have partners
 			typeDesc = rs.getTypeDescription();
             count ++;
 			addedContact = 0;
+			contactPlural = 0;
         } while (it.hasNext());
 
 		outString.append(endTD+"</table>"+endTD+"</table>");
