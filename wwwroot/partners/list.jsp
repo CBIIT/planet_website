@@ -108,18 +108,18 @@ if (partners!=null) { //We have partners
 		int addedContact = 0;
 		int stateCount = 0;
 		
-		outString.append("<table border='1' cellspacing='2' cellpadding='2' width='100%'>");
-        outString.append("<tr><td width='50%' style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;' align='left'>");
+		outString.append("<table border='0' cellspacing='2' cellpadding='2' width='100%'>");
+        outString.append("<tr><td valign='top' width='50%' style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;' align='left'>");
 		outString.append("<table border='1' cellspacing='0' cellpadding='0' width='100%'>");
-        outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;' align='left'>");
+        outString.append("<tr><td valign='top' style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;' align='left'>");
 		
         do { //do once, then loop while (it.hasNext() {
 	        PartnerBean rs = (PartnerBean)it.next();
 			typeDesc = rs.getTypeDescription();
             if (stateName.compareTo(rs.getStateName().trim()) != 0) { //This is a new state
 				stateCount = stateCount + 1;
-				if (stateCount == 29) { //We have displayed half of the states, switch to 2nd column
-					outString.append(endTD+"</table></td><td width='50%'><table border='1' cellspacing='0' cellpadding='0' width='100%'><tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;' align='left'>");
+				if (stateCount == 32) { //We have displayed half of the states, switch to 2nd column
+					outString.append(endTD+"</table></td><td valign='top' width='50%'><table border='1' cellspacing='0' cellpadding='0' width='100%'><tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;' align='left'>");
 				}
                 if (count > 1) {//We have already displayed our first result
                     outString.append("</p>");
@@ -478,8 +478,8 @@ if (it2.hasNext()) {
 	<td valign="top" width="28%"><%= stateList.toString()%></td>
 	<td valign="top" width="2%">&nbsp;</td>
 	<td valign="top" width="70%"><%= ACS_count %>,<%= ACOS_count%>,<%= CDC_count%>,<%= CIS_count%><BR>
-	<%= totACS_count %>,<%= totACOS_count%>,<%= totCDC_count%>,<%= totCIS_count%>; <%= numVectors%><BR>
-	<%= outString.toString()%></td>
+	<!--- < %= totACS_count %>,< %= totACOS_count%>,< %= totCDC_count%>,< %= totCIS_count%>; < %= numVectors%><BR>
+	< %= outString.toString()%> ---></td>
 </tr>
 </table>
 
