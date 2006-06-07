@@ -106,7 +106,10 @@ if (partners!=null) { //We have partners
         String typeString = "";
         String typeOutput = "";
 		int addedContact = 0;
+		int stateCount = 0;
 		
+		outString.append("<table border='1' cellspacing='2' cellpadding='2' width='100%'>");
+        outString.append("<tr><td width='50%' style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;' align='left'>");
 		outString.append("<table border='1' cellspacing='0' cellpadding='0' width='100%'>");
         outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;' align='left'>");
 		
@@ -114,6 +117,10 @@ if (partners!=null) { //We have partners
 	        PartnerBean rs = (PartnerBean)it.next();
 			typeDesc = rs.getTypeDescription();
             if (stateName.compareTo(rs.getStateName().trim()) != 0) { //This is a new state
+				stateCount = stateCount + 1;
+				if (stateCount = 29) { //We have displayed half of the states, switch to 2nd column
+					outString.append(endTD+"</table></td><td width='50%'><table border='1' cellspacing='0' cellpadding='0' width='100%'><tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;' align='left'>");
+				}
                 if (count > 1) {//We have already displayed our first result
                     outString.append("</p>");
 				}//end if (count > 1)
@@ -326,7 +333,7 @@ if (partners!=null) { //We have partners
 			addedContact = 0;
         } while (it.hasNext());
 
-		outString.append(endTD+"</table>");
+		outString.append(endTD+"</table>"+endTD+"</table>");
 		//added 01/23/06
         outString.append("</td></tr></table>");
 }
