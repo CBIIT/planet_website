@@ -179,7 +179,7 @@ if (partners!=null) { //We have partners
 
                 //outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;style: bold;' align='left'>");
                 outString.append("<u>" + rs.getTypeDescription());
-
+                
                 // For state and territory contacts we may need to tack on some additional information.
 				//outString.append(partnerString + " - " + typeString + " - " + topic + " - " + typeDesc + " - ");
                 if (partnerString.equals("CDC") && !typeString.equals("W")) {
@@ -317,7 +317,7 @@ if (partners!=null) { //We have partners
 				}//end if (partnerString.equals("CDC") && (topic.equals("T") || topic.equals("B") || topic.equals("V")))
             }//end if (rs.getOrgurl2() != null && rs.getOrgurl2().compareTo("") != 0)
 
-            outString.append(endTD+"<p>&nbsp;</p>");
+            outString.append(endTD+"<tr><td height='10'>&nbsp;</td></tr>");
 			typeDesc = rs.getTypeDescription();
             count ++;
 			addedContact = 0;
@@ -326,7 +326,8 @@ if (partners!=null) { //We have partners
 		outString.append("</table>");
 		//added 01/23/06
         outString.append("</td></tr></table>");
-} else { //No partners returned!
+}
+else { //No partners returned!
 	outString = new StringBuffer();
 	outString.append("No records found.");
 }//end if (partners!=null)
@@ -398,7 +399,7 @@ if (it2.hasNext()) {
 //****************************************************
 
 		pageTitle = pageTitle + " - " + stateStatic;
-
+		
 //****************** Page Header/Title ****************
 		if (stateStatic.compareTo("the US") == 0) {
 			stateStatic = "All States";
