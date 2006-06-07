@@ -243,7 +243,7 @@ if (partners!=null) { //We have partners
             }//end if (typeString.compareTo(rs.getType().trim()) != 0)
 
             if (rs.getContactName() != null && rs.getContactName().compareTo("") != 0) {
-                outString.append(beginTD+rs.getContactName().trim());
+                outString.append(rs.getContactName().trim());
 
                 if (rs.getDegree() != null && rs.getDegree().compareTo("") != 0) {
                     outString.append(", "+rs.getDegree());
@@ -317,13 +317,13 @@ if (partners!=null) { //We have partners
 				}//end if (partnerString.equals("CDC") && (topic.equals("T") || topic.equals("B") || topic.equals("V")))
             }//end if (rs.getOrgurl2() != null && rs.getOrgurl2().compareTo("") != 0)
 
-            outString.append("<br><br>"+endTD);
+            outString.append("<br><br>");
 			typeDesc = rs.getTypeDescription();
             count ++;
 			addedContact = 0;
         } while (it.hasNext());
 
-		outString.append("</table>");
+		outString.append(endTD+"</table>");
 		//added 01/23/06
         outString.append("</td></tr></table>");
 }
