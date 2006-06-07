@@ -112,7 +112,7 @@ if (partners!=null) { //We have partners
 			typeDesc = rs.getTypeDescription();
             if (stateName.compareTo(rs.getStateName().trim()) != 0) { //This is a new state
                 if (count > 1) {//We have already displayed our first result
-                    outString.append("</table></p>");
+                    outString.append("</p>");
 				}//end if (count > 1)
 
                 partnerId = rs.getPartnerId();
