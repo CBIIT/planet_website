@@ -252,8 +252,11 @@ if (partners!=null) { //We have partners
 				typeDesc = rs.getTypeDescription();
             }//end if (typeString.compareTo(rs.getType().trim()) != 0)
 
+            if (rs.getRegion() != null && rs.getRegion().compareTo("") != 0)
+                outString.append("<i>"+rs.getRegion().trim()+"</i><br>");
+
             if (rs.getContactName() != null && rs.getContactName().compareTo("") != 0) {
-                outString.append(rs.getContactName().trim());
+				outString.append(rs.getContactName().trim());
 
                 if (rs.getDegree() != null && rs.getDegree().compareTo("") != 0) {
                     outString.append(", "+rs.getDegree());
