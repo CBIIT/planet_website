@@ -114,8 +114,10 @@ if (partners!=null) { //We have partners
         outString.append("<tr><td valign='top' style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;' align='left'>");
 		
         do { //do once, then loop while (it.hasNext() {
-	        typeDesc = rs.getTypeDescription();
-            if (stateName.compareTo(rs.getStateName().trim()) != 0) { //This is a new state
+	        PartnerBean rs = (PartnerBean)it.next(); //Advance to next partner record
+			typeDesc = rs.getTypeDescription();
+            
+			if (stateName.compareTo(rs.getStateName().trim()) != 0) { //This is a new state
 				stateCount = stateCount + 1; //increment the state count
 				if (stateCount == 33) { //We have displayed half of the states, switch to 2nd column
 					outString.append(endTD+"</table></td><td valign='top' width='50%'><table border='0' cellspacing='0' cellpadding='0' width='100%'><tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;' align='left'>");//Column 2 Table
