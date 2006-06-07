@@ -110,7 +110,7 @@ if (partners!=null) { //We have partners
 		
 		outString.append("<table border='0' cellspacing='2' cellpadding='2' width='100%'>");
         outString.append("<tr><td valign='top' width='50%' style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;' align='left'>");
-		outString.append("<table border='1' cellspacing='0' cellpadding='0' width='100%'>");
+		outString.append("<table border='0' cellspacing='0' cellpadding='0' width='100%'>");
         outString.append("<tr><td valign='top' style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;' align='left'>");
 		
         do { //do once, then loop while (it.hasNext() {
@@ -118,8 +118,8 @@ if (partners!=null) { //We have partners
 			typeDesc = rs.getTypeDescription();
             if (stateName.compareTo(rs.getStateName().trim()) != 0) { //This is a new state
 				stateCount = stateCount + 1;
-				if (stateCount == 32) { //We have displayed half of the states, switch to 2nd column
-					outString.append(endTD+"</table></td><td valign='top' width='50%'><table border='1' cellspacing='0' cellpadding='0' width='100%'><tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;' align='left'>");
+				if (stateCount == 33) { //We have displayed half of the states, switch to 2nd column
+					outString.append(endTD+"</table></td><td valign='top' width='50%'><table border='0' cellspacing='0' cellpadding='0' width='100%'><tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;' align='left'>");
 				}
                 if (count > 1) {//We have already displayed our first result
                     outString.append("</p>");
