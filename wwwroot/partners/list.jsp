@@ -106,20 +106,23 @@ if (partners!=null) { //We have partners
         String typeString = "";
         String typeOutput = "";
 		int addedContact = 0;
-		int stateCount = 0;
+		int stateCount = 0; //num of states displayed so far
 		
 		outString.append("<table border='0' cellspacing='2' cellpadding='2' width='100%'>");
         outString.append("<tr><td valign='top' width='50%' style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;' align='left'>");
-		outString.append("<table border='0' cellspacing='0' cellpadding='0' width='100%'>");
+		outString.append("<table border='0' cellspacing='0' cellpadding='0' width='100%'>");//Column 1 Table
         outString.append("<tr><td valign='top' style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;' align='left'>");
 		
         do { //do once, then loop while (it.hasNext() {
-	        PartnerBean rs = (PartnerBean)it.next();
+	        PartnerBean rs = (PartnerBean)it.next(); //Advance to next partner record
+			PartnerBean rs2 = (PartnerBean)it.next(); //Advance to next partner record
+			PartnerBean rs = (PartnerBean)it.last(); //Retreat to last partner record
+			
 			typeDesc = rs.getTypeDescription();
             if (stateName.compareTo(rs.getStateName().trim()) != 0) { //This is a new state
-				stateCount = stateCount + 1;
+				stateCount = stateCount + 1; //increment the state count
 				if (stateCount == 33) { //We have displayed half of the states, switch to 2nd column
-					outString.append(endTD+"</table></td><td valign='top' width='50%'><table border='0' cellspacing='0' cellpadding='0' width='100%'><tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;' align='left'>");
+					outString.append(endTD+"</table></td><td valign='top' width='50%'><table border='0' cellspacing='0' cellpadding='0' width='100%'><tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;' align='left'>");//Column 2 Table
 				}
                 if (count > 1) {//We have already displayed our first result
                     outString.append("</p>");
