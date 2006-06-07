@@ -317,7 +317,7 @@ if (partners!=null) { //We have partners
 				}//end if (partnerString.equals("CDC") && (topic.equals("T") || topic.equals("B") || topic.equals("V")))
             }//end if (rs.getOrgurl2() != null && rs.getOrgurl2().compareTo("") != 0)
 
-            outString.append(endTD+"<tr><td height='10'>&nbsp;</td></tr>");
+            outString.append("<br><br>"+endTD);
 			typeDesc = rs.getTypeDescription();
             count ++;
 			addedContact = 0;
