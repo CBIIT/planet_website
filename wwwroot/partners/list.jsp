@@ -108,19 +108,19 @@ if (partners!=null) { //We have partners
 		int addedContact = 0; //We added "Contact" already if = 1
 		int stateCount = 0; //num of states displayed so far
 		int numPartnersDisplayed = 1; //num of displayed partners for the state
-		
+
 		outString.append("<table border='0' cellspacing='2' cellpadding='2' width='100%'>");
         outString.append("<tr><td valign='top' width='50%' style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;' align='left'>");
 		outString.append("<table border='0' cellspacing='0' cellpadding='0' width='100%'>");//Column 1 Table
         outString.append("<tr><td valign='top' style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;' align='left'>");
-		
+
         do { //do once, then loop while (it.hasNext() {
 	        PartnerBean rs = (PartnerBean)it.next(); //Advance to next partner record
 			typeDesc = rs.getTypeDescription();
-            
+
 			if (stateName.compareTo(rs.getStateName().trim()) != 0) { //This is a new state
 				stateCount = stateCount + 1; //increment the state count
-				
+
 				if (stateCount == 33) //We have displayed half of the states, switch to 2nd column
 					outString.append(endTD+"</table></td><td valign='top' width='50%'><table border='0' cellspacing='0' cellpadding='0' width='100%'><tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;' align='left'>");//Column 2 Table
 
@@ -159,22 +159,22 @@ if (partners!=null) { //We have partners
                         outString.append(" Contact(s)");
 					} //end if (topic.equals("T"))
                 } //end if (partnerString.equals("CDC") && !typeString.equals("W"))
-				
+
 				if (typeDesc.equals("Regional") && (addedContact != 1)) {
 					outString.append(" Contact(s)");
 					addedContact = 1;
 				}//end if (typeDesc.equals("Regional") && (addedContact != 1))
-				
+
 				if (typeDesc.equals("State") && (addedContact != 1)) {
 					outString.append(" Contact(s)");
 					addedContact = 1;
 				}//end if (typeDesc.equals("State") && (addedContact != 1))
-				
+
                 // Close the underlining and the table cell.
                 outString.append("</u>"+"<br>");
 				//*******************************************
             }//end if (stateName.compareTo(rs.getStateName().trim()) != 0)
-                
+
             if (partnerId != rs.getPartnerId()) { //If new partner
 				numPartnersDisplayed = numPartnersDisplayed + 1;
                 if (count > 1) {
@@ -184,7 +184,7 @@ if (partners!=null) { //We have partners
 				if (region != "ALL" && partnerCount == 3) { //We have displayed two partners (state view only), switch to 2nd column
 					outString.append(endTD+"</table></td><td valign='top' width='50%'><table border='0' cellspacing='0' cellpadding='0' width='100%'><tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;' align='left'>");//Column 2 Table
 				}
-				
+
                 partnerId = rs.getPartnerId();
                 partnerString = rs.getPartnerAbbreviation();
                 typeString = rs.getType();
@@ -196,7 +196,7 @@ if (partners!=null) { //We have partners
 
                 //outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;style: bold;' align='left'>");
                 outString.append("<u>" + rs.getTypeDescription());
-                
+
                 // For state and territory contacts we may need to tack on some additional information.
 				//outString.append(partnerString + " - " + typeString + " - " + topic + " - " + typeDesc + " - ");
                 if (partnerString.equals("CDC") && !typeString.equals("W")) {
@@ -210,17 +210,17 @@ if (partners!=null) { //We have partners
 						addedContact = 1;
 					}//end if (topic.equals("T"))
                 }//end if (partnerString.equals("CDC") && !typeString.equals("W"))
-				
+
 				if (typeDesc.equals("Regional") && (addedContact != 1)) {
 					outString.append(" Contact(s)");
 					addedContact = 1;
 				}//end if (typeDesc.equals("Regional") && (addedContact != 1))
-				
+
 				if (typeDesc.equals("State") && (addedContact != 1)) {
 					outString.append(" Contact(s)");
 					addedContact = 1;
 				}//if (typeDesc.equals("State") && (addedContact != 1))
-				
+
                 // Close the underlining and the table cell.
                 outString.append("</u>" + "<br>");
             }//end if (partnerId != rs.getPartnerId())
@@ -230,7 +230,7 @@ if (partners!=null) { //We have partners
                 outString.append("<br>");
                 outString.append("<u>" + rs.getTypeDescription());
 				//outString.append(partnerString + " - " + typeString + " - " + topic + " - " + typeDesc + " - ");
-				
+
                 if (partnerString.equals("CDC") && !typeString.equals("W")) {
                     if (topic.compareTo("C") != 0) {
                        outString.append(" Health Department Contact(s)");
@@ -247,7 +247,7 @@ if (partners!=null) { //We have partners
 					outString.append(" Contact(s)");
 					addedContact = 1;
 				}//end if (typeDesc.equals("Regional") && (addedContact != 1))
-				
+
 				if (typeDesc.equals("State") && (addedContact != 1)) {
 					outString.append(" Contact(s)");
 					addedContact = 1;
@@ -270,7 +270,7 @@ if (partners!=null) { //We have partners
 				}// end if (rs.getDegree() != null && rs.getDegree().compareTo("") != 0)
                 outString.append("<br>");
             }//end if (rs.getContactName() != null && rs.getContactName().compareTo("") != 0)
-			
+
             if (rs.getTitle() != null && rs.getTitle().compareTo("") != 0)
                 outString.append(rs.getTitle().trim()+"<br>");
 
@@ -302,7 +302,7 @@ if (partners!=null) { //We have partners
                 String emailStr = rs.getEmail().trim();
                 outString.append("Email:  <a href=\"mailto:"+emailStr+"\" class='a1'>"+emailStr+"</a>"+"<br>");
             }
-			
+
 			//*** Organization URL #1 **********
             if (rs.getOrgurl() != null && rs.getOrgurl().compareTo("") != 0) {
                 String urlStr = "";
@@ -364,14 +364,14 @@ if (it2.hasNext()) {
         stateList.append("<table border='0' cellpadding='5' cellspacing='0' width='100%'><tr><th colspan='2' align='left' valign='top' width='100%'>States</th></tr><tr><td valign='top' nowrap>");
 		String typeString = "S";
         int count= 0;
-		
+
         do {
 			StateBean rs = (StateBean)it2.next();
-			
+
 			if (region.compareTo(rs.getAbbreviation()) == 0) {
 				stateStatic=rs.getName();
 			}//end if (region.compareTo(rs.getAbbreviation()) == 0)
-				
+
             if (count == 26) {
                 stateList.append("</td><td valign='top' nowrap>");
                 //count = 0;
@@ -387,23 +387,22 @@ if (it2.hasNext()) {
 			//if (count == 56) {
             //   stateList.append("</td><td valign='top' colspan='2' bgcolor='#F1F1FD'>");
 			// }
-            
+
 			//if (typeString.compareTo(rs.getType()) != 0) {
             //    stateList.append("<br />");
             //    typeString = rs.getType();
             //}
-			
-            
+
            //comment out 01/10/2005
            //if (count > 0 && count != 26 && count !=51 && count !=56) {
 			if (count > 0 && count != 26 && count !=51 ) {
 				stateList.append("<br />");
-                
+
              //    if (count > 51){
              //   stateList.append("<br /><br />");
              //   }
             }//end if (count > 0 && count != 26 && count !=51 )
-						
+
 			if (region.compareTo(rs.getAbbreviation()) == 0) {
 				stateList.append("<font style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size : 12px; color : AA0000;'><strong>"+rs.getName().trim()+"</strong></font>");
 			} else {
@@ -419,7 +418,7 @@ if (it2.hasNext()) {
 //****************************************************
 
 		pageTitle = pageTitle + " - " + stateStatic;
-		
+
 //****************** Page Header/Title ****************
 		if (stateStatic.compareTo("the US") == 0) {
 			stateStatic = "All States";
