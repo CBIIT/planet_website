@@ -398,7 +398,7 @@ if (it2.hasNext()) {
 //****************************************************
 
 		pageTitle = pageTitle + " - " + stateStatic;
-		
+
 //****************** Page Header/Title ****************
 		if (stateStatic.compareTo("the US") == 0) {
 			stateStatic = "All States";
