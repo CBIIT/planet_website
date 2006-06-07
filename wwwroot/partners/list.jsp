@@ -125,7 +125,7 @@ if (partners!=null) { //We have partners
 				//*** Display State Name and Partner Name ***
                 //*******************************************
 				outString.append("<table border='1' cellspacing='0' cellpadding='0' width='100%'>");
-                outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'><font color: #AA0000;'>"+stateName+"</font><br><br>"+rs.getPartnerName()+"<br>");
+                outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'><span class="light_red">"+stateName+"</span><br><br>"+rs.getPartnerName()+"<br>");
 				//outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'>"+rs.getPartnerName()+endTD);
                 //*******************************************
 
