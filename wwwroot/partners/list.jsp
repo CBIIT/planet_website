@@ -107,6 +107,7 @@ if (partners!=null) { //We have partners
         String typeOutput = "";
 		int addedContact = 0; //We added "Contact" already if = 1
 		int stateCount = 0; //num of states displayed so far
+		int partnerCount = 1; //num of displayed partners for the state
 		
 		outString.append("<table border='0' cellspacing='2' cellpadding='2' width='100%'>");
         outString.append("<tr><td valign='top' width='50%' style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;' align='left'>");
@@ -175,11 +176,15 @@ if (partners!=null) { //We have partners
             }//end if (stateName.compareTo(rs.getStateName().trim()) != 0)
                 
             if (partnerId != rs.getPartnerId()) { //If new partner
-
+				partnerCount = partnerCount + 1;
                 if (count > 1) {
                    outString.append("</p>");
 				}//end if (count > 1)
 
+				if (region != "ALL" && partnerCount == 3) { //We have displayed two partners (state view only), switch to 2nd column
+					outString.append(endTD+"</table></td><td valign='top' width='50%'><table border='0' cellspacing='0' cellpadding='0' width='100%'><tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;' align='left'>");//Column 2 Table
+				}
+				
                 partnerId = rs.getPartnerId();
                 partnerString = rs.getPartnerAbbreviation();
                 typeString = rs.getType();
