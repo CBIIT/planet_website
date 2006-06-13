@@ -141,7 +141,6 @@ if (partners!=null) { //We have partners
                 //*******************************************
 				outString.append(endTD+"<tr><td style='font-size: 12;color:#AA0000;'><b><font color=' #AA0000'>"+stateName+"</font></b><br><br>"+endTD);//Show State
 				outString.append(beginTD+"<b>"+rs.getPartnerName()+"</b><br>"); //Show Partner
-				//outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'>"+rs.getPartnerName()+endTD);
                 //*******************************************
 
                 //*******************************************
