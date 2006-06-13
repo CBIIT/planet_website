@@ -98,25 +98,33 @@ outString = new StringBuffer("<table border='1' cellspacing='0' cellpadding='5'>
 //end 01/23/06  
 
 if (partners!=null) { //We have partners
-    	Iterator it = partners.iterator();
-	    outString = new StringBuffer();
-        String partnerString = "";
-        int partnerId = 0;
-        int count = 1;
-        String typeString = "";
-        String typeOutput = "";
-		int addedContact = 0; //We added "Contact" already if = 1
-		int stateCount = 0; //num of states displayed so far
-		int numPartnersDisplayed = 1; //num of displayed partners for the state
+   	Iterator it = partners.iterator();
+    outString = new StringBuffer();
+    String partnerString = "";
+    int partnerId = 0;
+    int count = 1;
+    String typeString = "";
+    String typeOutput = "";
+	int addedContact = 0; //We added "Contact" already if = 1
+	int stateCount = 0; //num of states displayed so far
+	int numPartnersDisplayed = 1; //num of displayed partners for the state
 
-		outString.append("<table border='0' cellspacing='2' cellpadding='2' width='100%'>");
-        outString.append("<tr><td valign='top' width='50%' style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;' align='left'>");
-		outString.append("<table border='0' cellspacing='0' cellpadding='0' width='100%'>");//Column 1 Table
-        outString.append("<tr><td valign='top' style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;' align='left'>");
+	outString.append("<table border='0' cellspacing='2' cellpadding='2' width='100%'>");
+    outString.append("<tr><td valign='top' width='50%' style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;' align='left'>");
+	outString.append("<table border='0' cellspacing='0' cellpadding='0' width='100%'>");//Column 1 Table
+    outString.append("<tr><td valign='top' style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;' align='left'>");
 
-        do { //do once, then loop while (it.hasNext() {
-	        PartnerBean rs = (PartnerBean)it.next(); //Advance to next partner record
-			typeDesc = rs.getTypeDescription();
+    do { //do once, then loop while (it.hasNext() {
+    	PartnerBean rs = (PartnerBean)it.next(); //Advance to next partner record
+		
+		typeDesc = rs.getTypeDescription();
+        partnerId = rs.getPartnerId();
+        partnerString = rs.getPartnerAbbreviation();
+        typeString = rs.getType();
+        stateName = rs.getStateName();
+		typeDesc = rs.getTypeDescription();
+
+		if !(partnerString.equals("CDC") && (topic.equals("B") || topic.equals("V") || topic.equals("R") || topic.equals("I")) {// Only show Partner name if not CDC, or if CDC and BVRI(br. cerv. colo, or IDM)
 
 			if (stateName.compareTo(rs.getStateName().trim()) != 0) { //This is a new state
 				stateCount = stateCount + 1; //increment the state count
@@ -128,16 +136,11 @@ if (partners!=null) { //We have partners
                     outString.append("</p>");
 				}//end if (count > 1)
 
-                partnerId = rs.getPartnerId();
-                partnerString = rs.getPartnerAbbreviation();
-                typeString = rs.getType();
-                stateName = rs.getStateName();
-				typeDesc = rs.getTypeDescription();
-
 				//*******************************************
 				//*** Display State Name and Partner Name ***
                 //*******************************************
-				outString.append(endTD+"<tr><td style='font-size: 12;color:#AA0000;'><b><font color=' #AA0000'>"+stateName+"</font></b><br><br>"+endTD+beginTD+"<b>"+rs.getPartnerName()+"</b><br>");
+				outString.append(endTD+"<tr><td style='font-size: 12;color:#AA0000;'><b><font color=' #AA0000'>"+stateName+"</font></b><br><br>"+endTD)//Show State
+				outString.append(beginTD+"<b>"+rs.getPartnerName()+"</b><br>"); //Show Partner
 				//outString.append("<tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;font-weight: bold;color: #000000;' align='left'>"+rs.getPartnerName()+endTD);
                 //*******************************************
 
@@ -236,10 +239,10 @@ if (partners!=null) { //We have partners
                        outString.append(" Health Department Contact(s)");
 					   addedContact = 1;
                     } else {
-								if (addedContact != 1) {
-									outString.append(" Contact(s)");
-									addedContact = 1;
-								}//end if (addedContact != 1)
+						if (addedContact != 1) {
+							outString.append(" Contact(s)");
+							addedContact = 1;
+						}//end if (addedContact != 1)
 					}//end if (topic.compareTo("C") != 0)
                 }//end if (partnerString.equals("CDC") && !typeString.equals("W"))
 
@@ -341,11 +344,14 @@ if (partners!=null) { //We have partners
 			typeDesc = rs.getTypeDescription();
             count ++;
 			addedContact = 0;
-        } while (it.hasNext());
+			
+		} //end if !(partnerString.equals("CDC") && (topic.equals("B") || topic.equals("V") .....
 
-		outString.append(endTD+"</table>"+endTD+"</table>");
-		//added 01/23/06
-        outString.append("</td></tr></table>");
+    } while (it.hasNext());
+
+	outString.append(endTD+"</table>"+endTD+"</table>");
+	//added 01/23/06
+    outString.append("</td></tr></table>");
 }
 else { //No partners returned!
 	outString = new StringBuffer();
