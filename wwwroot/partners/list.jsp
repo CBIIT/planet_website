@@ -124,7 +124,7 @@ if (partners!=null) { //We have partners
         stateName = rs.getStateName();
 		typeDesc = rs.getTypeDescription();
 
-		if !(partnerString.equals("CDC") && (topic.equals("B") || topic.equals("V") || topic.equals("R") || topic.equals("I"))) {// Only show Partner name if not CDC, or if CDC and BVRI(br. cerv. colo, or IDM)
+		if (!partnerString.equals("CDC") || (partnerString.equals("CDC") && (topic.equals("B") || topic.equals("V") || topic.equals("R") || topic.equals("I")))) {// Only show Partner name if not CDC, or if CDC and BVRI(br., cerv., colo, or IDM)
 
 			if (stateName.compareTo(rs.getStateName().trim()) != 0) { //This is a new state
 				stateCount = stateCount + 1; //increment the state count
