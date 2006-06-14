@@ -82,10 +82,10 @@ if (partnerCount!=null) {
 	ACOS_count = PBean.getACOS_count();
 	CDC_count = PBean.getCDC_count();
 	CIS_count = PBean.getCIS_count();
-	if (ACS_count > 0) {totACS_count = totACS_count + 1;}
-	if (ACOS_count > 0) {totACOS_count = totACOS_count + 1;}
-	if (CDC_count > 0) {totCDC_count = totCDC_count + 1;}
-	if (CIS_count > 0) {totCIS_count = totCIS_count + 1;}
+	if (ACS_count > 0) {totACS_count ++;}
+	if (ACOS_count > 0) {totACOS_count ++;}
+	if (CDC_count > 0) {totCDC_count ++;}
+	if (CIS_count > 0) {totCIS_count ++;}
 	numVectors = numVectors + 1;
 	} while (itP.hasNext());
 } 
@@ -121,7 +121,7 @@ if (partners!=null) { //We have partners
 		if (!partnerString.equals("CDC") || (partnerString.equals("CDC") && (topic.equals("B") || topic.equals("V") || topic.equals("R") || topic.equals("I")))) {// Only show Partner name if not CDC, or if CDC and BVRI(br., cerv., colo, or IDM)
 
 			if (stateName.compareTo(rs.getStateName().trim()) != 0) { //This is a new state
-				stateCount = stateCount + 1; //increment the state count
+				stateCount ++; //increment the state count
 
 				if (stateCount == 33) //We have displayed half of the states, switch to 2nd column
 					outString.append(endTD+"</table></td><td valign='top' width='50%'><table border='0' cellspacing='0' cellpadding='0' width='100%'><tr><td style='font-family: Arial, Helvetica, Verdana, Geneva, sans-serif;font-size: 12;' align='left'>");//Column 2 Table
@@ -176,11 +176,9 @@ if (partners!=null) { //We have partners
                 outString.append("</u>"+"<br>");
 				//*******************************************
             }//end if (stateName.compareTo(rs.getStateName().trim()) != 0)
-		}
 
-		if (!partnerString.equals("CDC") || (partnerString.equals("CDC") && (topic.equals("B") || topic.equals("V") || topic.equals("R") || topic.equals("I")))) {// Only show Partner name if not CDC, or if CDC and BVRI(br., cerv., colo, or IDM)
             if (partnerId != rs.getPartnerId()) { //If new partner
-				numPartnersDisplayed = numPartnersDisplayed + 1;
+				numPartnersDisplayed ++;
                 if (count > 1) {
                    outString.append("</p>");
 				}//end if (count > 1)
