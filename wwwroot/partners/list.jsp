@@ -176,7 +176,9 @@ if (partners!=null) { //We have partners
                 outString.append("</u>"+"<br>");
 				//*******************************************
             }//end if (stateName.compareTo(rs.getStateName().trim()) != 0)
+		}
 
+		if (!partnerString.equals("CDC") || (partnerString.equals("CDC") && (topic.equals("B") || topic.equals("V") || topic.equals("R") || topic.equals("I")))) {// Only show Partner name if not CDC, or if CDC and BVRI(br., cerv., colo, or IDM)
             if (partnerId != rs.getPartnerId()) { //If new partner
 				numPartnersDisplayed = numPartnersDisplayed + 1;
                 if (count > 1) {
