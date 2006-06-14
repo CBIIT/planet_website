@@ -117,7 +117,8 @@ if (partners!=null) { //We have partners
     do { //do once, then loop while (it.hasNext() {
     	PartnerBean rs = (PartnerBean)it.next(); //Advance to next partner record
 		typeDesc = rs.getTypeDescription();
-
+		partnerString = rs.getPartnerAbbreviation();
+                
 		outString.append("Partnerstring="+partnerString+" topic="+topic+"<BR>");
 		if (!partnerString.equals("CDC") || (partnerString.equals("CDC") && (topic.equals("B") || topic.equals("V") || topic.equals("R") || topic.equals("I")))) {// Only show Partner name if not CDC, or if CDC and BVRI(br., cerv., colo, or IDM)
 
@@ -132,7 +133,6 @@ if (partners!=null) { //We have partners
 				}//end if (count > 1)
 
                 partnerId = rs.getPartnerId();
-                partnerString = rs.getPartnerAbbreviation();
                 typeString = rs.getType();
                 stateName = rs.getStateName();
 				typeDesc = rs.getTypeDescription();
