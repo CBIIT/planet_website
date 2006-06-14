@@ -120,7 +120,7 @@ if (partners!=null) { //We have partners
 		partnerString = rs.getPartnerAbbreviation();
                 
 		//outString.append("Partnerstring="+partnerString+" topic="+topic+"<BR>");
-		if (!partnerString.equals("CDC") || (partnerString.equals("CDC") && (topic.equals("C") || topic.equals("B") || topic.equals("V") || topic.equals("R") || topic.equals("I")))) {// Only show Partner name if not CDC, or if CDC and BVRI(br., cerv., colo, or IDM)
+		if (!partnerString.equals("CDC") || (partnerString.equals("CDC") && (topic.equals("C") || topic.equals("B") || topic.equals("V") || topic.equals("R") || topic.equals("I")))) {// Only show Partner name if not CDC, or if CDC and C,B,V,R,I(C=All, Breast, cerV., coloRectal, or Idm)
 
 			if (stateName.compareTo(rs.getStateName().trim()) != 0) { //This is a new state
 				stateCount ++; //increment the state count
