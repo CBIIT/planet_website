@@ -36,8 +36,8 @@
 	
         stateList = new StringBuffer();
         int count= 0;
-		//stateList.append("<tr><th colspan='2' align='left' valign='top' nowrap bgcolor='#F1F1FD'>States</th><th align='left' valign='top' bgcolor='#F1F1FD' nowrap>TERRITORIES/TRIBES</th></tr><tr><td valign='top' bgcolor='#F1F1FD' nowrap>");
-        stateList.append("<table border='0' cellpadding='5' cellspacing='0' width='100%'><tr><th colspan='2' align='left' valign='top' nowrap bgcolor='#F1F1FD'>States</th></tr><tr><td valign='top' nowrap bgcolor='#F1F1FD'>");
+		//stateList.append("<tr><th colspan='2' align='left' valign='top' nowrap>States</th><th align='left' valign='top' nowrap>TERRITORIES/TRIBES</th></tr><tr><td valign='top' nowrap>");
+        stateList.append("<table border='0' cellpadding='5' cellspacing='0' width='100%'><tr><th colspan='2' align='left' valign='top' nowrap>States</th></tr><tr><td valign='top' nowrap>");
 
 
         do
@@ -45,20 +45,20 @@
            StateBean rs = (StateBean)it2.next();
 		   
 		      if (count == 26) {
-                stateList.append("</td><td valign='top' bgcolor='#F1F1FD' nowrap>");
+                stateList.append("</td><td valign='top' nowrap>");
                 //count = 0;
             }
 			
              if (count == 51) {
               	stateList.append("</td></tr>");
-				stateList.append("<tr><th colspan='2' bgcolor='#F1F1FD'>&nbsp;</th></tr>");
-				stateList.append("<tr><th colspan='2' align='left' valign='top' nowrap bgcolor='#F1F1FD'>Territories / Tribes</th></tr><tr><td colspan='2' valign='top' bgcolor='#F1F1FD' nowrap>");
+				stateList.append("<tr><th colspan='2'>&nbsp;</th></tr>");
+				stateList.append("<tr><th colspan='2' align='left' valign='top' nowrap>Territories / Tribes</th></tr><tr><td colspan='2' valign='top'  nowrap>");
                 //count = 0;
             }
 			
 			/*comment out 02/01/2006
                 if (count == 56) {
-                stateList.append("</td><td valign='top' bgcolor='#F1F1FD' nowrap>");
+                stateList.append("</td><td valign='top' nowrap>");
 				//count = 0;
             } */
 			
@@ -69,7 +69,7 @@
 		   
 		   if (count > 27)
            {
-               stateList.append("</td><td valign='bottom' bgcolor='F1F1FD'>");
+               stateList.append("</td><td valign='bottom'>");
                count = 0;
            }
            if (typeString.compareTo(rs.getType()) != 0)
@@ -144,7 +144,7 @@
 	<td valign='top'><%= htmlString%><br></td>
 </tr>
 <tr>
-	<td colspan="1" bgcolor="#F1F1FD"><a href="rlist.jsp?r=ALL&cctopic=<%= topic %>">View all U.S. Researchers by topic area</a></td>
+	<td colspan="1"><a href="rlist.jsp?r=ALL&cctopic=<%= topic %>">View all U.S. Researchers by topic area</a></td>
 </tr>
 <tr> 
     <td colspan="3">The list of research partners was compiled based on those individuals who had received a grant during the fiscal year period from 1998-2003 and who have permitted their contact information to be listed as a resource for comprehensive cancer control planning and implementation within their state.</td>
