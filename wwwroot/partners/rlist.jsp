@@ -368,7 +368,7 @@ if (param != null)
 	<td colspan="3">&nbsp;</td>
   </tr>
   <tr>
-	<td width="28%" valign="top" style="font-family : Arial, Helvetica, Verdana, Geneva, sans-serif; font-size: 14px; font-weight: color : #000000;" nowrap bgcolor="F1F1FD">
+	<td width="28%" valign="top" style="font-family : Arial, Helvetica, Verdana, Geneva, sans-serif; font-size: 14px; font-weight: color : #000000;" nowrap>
 		<%= stateList.toString()%></td>
    <td valign="top" width="2%">&nbsp;</td>
 	<td valign="top" align="left" width="70%">

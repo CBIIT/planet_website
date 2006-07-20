@@ -140,7 +140,7 @@
 	</td>
 </tr>
 <tr>
-	<td valign='top' colspan="2" bgcolor="#F1F1FD"><%= stateList.toString()%><br /></td>
+	<td valign='top' colspan="2"><%= stateList.toString()%><br /></td>
 	<td valign='top'><%= htmlString%><br></td>
 </tr>
 <tr>
