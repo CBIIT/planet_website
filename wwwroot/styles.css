@@ -117,6 +117,10 @@ a {
 	font-weight : normal;
 }
 
+.small12 {
+	font-size: 12px;
+}
+
 .white {
 	color: #FFF;
 	font-weight : bold;

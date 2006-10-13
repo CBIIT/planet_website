@@ -68,7 +68,7 @@ StringBuffer pcScript = null;
        {
        				stateList.append("<br />");
            //create the text link
-           stateList.append("<a href='"+ rs.getPlanUrl().trim()+"' class='a1'  title='"+rs.getName().trim()+"' target='_blank'>"+rs.getName()+"</a>&nbsp;<span class='small'>("+ rs.getPlanPeriod()+")</span>");
+           stateList.append("<a href='"+ rs.getPlanUrl().trim()+"' class='a1'  title='"+rs.getName().trim()+"' target='_blank'>"+rs.getName()+"</a>&nbsp;<span class='small12'>("+ rs.getPlanPeriod()+")</span>");
            //create the link on the map
            if (rs.getState().equals("PI") || rs.getState().equals("CN") || rs.getState().equals("FD") || rs.getState().equals("SP") || rs.getState().equals("AN"))
            {
