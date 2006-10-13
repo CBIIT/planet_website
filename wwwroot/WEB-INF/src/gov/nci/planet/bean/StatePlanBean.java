@@ -13,8 +13,9 @@ package gov.nci.planet.bean;
  * Window - Preferences - Java - Code Generation - Code and Comments
  */
 public class StatePlanBean {
-	
+
 	private int planStatus;
+	private String planPeriod;
 	private String planType;
 	private String planUrl;
 	private String name;
@@ -43,6 +44,18 @@ public class StatePlanBean {
 	 */
 	public void setPlanStatus(int planStatus) {
 		this.planStatus = planStatus;
+	}
+	/**
+	 * @return Returns the planPeriod.
+	 */
+	public String getPlanPeriod() {
+		return planPeriod;
+	}
+	/**
+	 * @param planPeriod The planPeriod to set.
+	 */
+	public void setPlanPeriod(String planPeriod) {
+		this.planPeriod = planPeriod;
 	}
 	/**
 	 * @return Returns the planType.

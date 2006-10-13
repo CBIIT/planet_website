@@ -858,6 +858,7 @@ public class QueryBean {
 		        	StatePlanBean statePlanBean = new StatePlanBean();
 		        	// set the values of the bean
 		        	statePlanBean.setPlanStatus(rs.getInt("plan_status"));
+		        	statePlanBean.setPlanPeriod(rs.getString("plan_period"));
 		        	statePlanBean.setPlanType(rs.getString("plan_type"));
 		        	statePlanBean.setPlanUrl(rs.getString("plan_URL"));
 		        	statePlanBean.setName(rs.getString("name"));
