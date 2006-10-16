@@ -70,7 +70,7 @@ StringBuffer pcScript = null;
            //create the text link
            stateList.append("<a href='"+ rs.getPlanUrl().trim()+"' class='a1'  title='"+rs.getName().trim()+"' target='_blank'>"+rs.getName()+"</a>");
 					 if (rs.getPlanPeriod() != null)
-					 { stateList.append("&nbsp;<span class='small12'>("+ rs.getPlanPeriod()+")</span>");
+					 { stateList.append("&nbsp;<span class='small12'>(Plan period: "+ rs.getPlanPeriod()+")</span>");
 					 }
 					 
            //create the link on the map
@@ -129,7 +129,7 @@ StringBuffer pcScript = null;
 </div>
 
 <p><div style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif; font-size : 12px; color : #000000;">
-To view, click on map or state name below.  List shows state name followed by (plan period).
+To view, click on map or state name below.  List shows state name followed by plan period.
 </div>
 
 </td>
