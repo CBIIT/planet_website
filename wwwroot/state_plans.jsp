@@ -128,8 +128,8 @@ StringBuffer pcScript = null;
 <%= pageTitle%>
 </div>
 
-<div style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif; font-size : 14px; font-weight: bold; color : #000000;">
-To view, click on map or state name below.
+<p><div style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif; font-size : 12px; color : #000000;">
+To view, click on map or state name below.  List shows state name followed by (plan period).
 </div>
 
 </td>
