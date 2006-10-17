@@ -66,7 +66,7 @@ StringBuffer pcScript = null;
 
        if (rs.getPlanStatus() == 1)
        {
-       				stateList.append("State (Plan Period)<br />");
+       				stateList.append("<br />");
            //create the text link
            stateList.append("<a href='"+ rs.getPlanUrl().trim()+"' class='a1'  title='"+rs.getName().trim()+"' target='_blank'>"+rs.getName()+"</a>");
 					 if (rs.getPlanPeriod() != null)
@@ -136,6 +136,7 @@ To view, click on map or state name below.  List shows state name followed by pl
 </tr>
 <tr>
 <td valign='top'>
+State (plan period)
 <%= stateList.toString()%>
 <td valign='top'>
 <br>
