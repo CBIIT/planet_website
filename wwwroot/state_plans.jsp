@@ -47,7 +47,7 @@ StringBuffer pcScript = null;
        //*******************************
        if (count > 27)
        {
-        stateList.append("</td><td valign='top'>");
+        stateList.append("</td><td valign='top'>State (Plan Period)");
         count = 0;
        }
        //******************************
@@ -66,11 +66,11 @@ StringBuffer pcScript = null;
 
        if (rs.getPlanStatus() == 1)
        {
-       				stateList.append("<br />");
+       				stateList.append("State (Plan Period)<br />");
            //create the text link
            stateList.append("<a href='"+ rs.getPlanUrl().trim()+"' class='a1'  title='"+rs.getName().trim()+"' target='_blank'>"+rs.getName()+"</a>");
 					 if (rs.getPlanPeriod() != null)
-					 { stateList.append("&nbsp;<span class='small12'>(Years: "+ rs.getPlanPeriod()+")</span>");
+					 { stateList.append("&nbsp;<span class='small12'>("+ rs.getPlanPeriod()+")</span>");
 					 }
 					 
            //create the link on the map
