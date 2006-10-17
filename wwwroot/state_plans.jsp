@@ -47,7 +47,7 @@ StringBuffer pcScript = null;
        //*******************************
        if (count > 27)
        {
-        stateList.append("</td><td valign='top'><div class='small12'><strong>State (plan period)</strong></div>");
+        stateList.append("</td><td valign='top'><span class='small12'><strong>State/Tribe/Territory (plan period)</strong></span>");
         count = 0;
        }
        //******************************
@@ -136,7 +136,7 @@ To view, click on map or state name below.  List shows state name followed by pl
 </tr>
 <tr>
 <td valign='top'>
-<div class="small12"><strong>State (plan period)</strong></div>
+<span class="small12"><strong>State (plan period)</strong></span>
 <%= stateList.toString()%>
 <td valign='top'>
 <br>
