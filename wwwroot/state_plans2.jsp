@@ -47,7 +47,7 @@ StringBuffer pcScript = null;
        //*******************************
        if (count > 27)
        {
-        stateList.append("</td><td valign='top'>");
+        stateList.append("</td><td valign='top'><span class='small12'><strong>State/Tribe/Territory (plan period)</strong></span>");
         count = 0;
        }
        //******************************
@@ -68,12 +68,9 @@ StringBuffer pcScript = null;
        {
        				stateList.append("<br />");
            //create the text link
-           stateList.append("<a href='"+ rs.getPlanUrl().trim()+"' class='a1'  title='"+rs.getName().trim());
+           stateList.append("<a href='"+ rs.getPlanUrl().trim()+"' class='a1'  title='"+rs.getName().trim()+"' target='_blank'>"+rs.getName()+"</a>");
 					 if (rs.getPlanPeriod() != null)
-					 { 
-					 stateList.append(" (Plan period: "+ rs.getPlanPeriod()+")' target='_blank'>"+rs.getName()+"</a>");
-					 }else{
-					 stateList.append("' target='_blank'>"+rs.getName()+"</a>")
+					 { stateList.append("&nbsp;<span class='small12'>("+ rs.getPlanPeriod()+")</span>");
 					 }
 					 
            //create the link on the map
@@ -112,7 +109,7 @@ StringBuffer pcScript = null;
     <td><a href="index.html"><img src="images/planet_banner_wider.gif" alt="Cancer Control PLANET - Links to comprehensive cancer control resources for public health professionals" width="500" height="82" border="0"></a></td>
     <td><p><a href="index.html">Home</a><br>
 	<a href="contact.html">Contact Us</a><br>
-	<a href="http://ccplanetraining.cancer.gov" onclick="javascript:popWindow('http://ccplanetraining.cancer.gov', 'name','725','400','yes'); return false;">On-line Training</a><br />
+	<a href="http://ccplanetraining.cancer.gov" onClick="javascript:popWindow('http://ccplanetraining.cancer.gov', 'name','725','400','yes'); return false;">On-line Training</a><br />
 	<a href="about.html">About This Site</a><br>
     <a href="factsheet.pdf">Fact Sheet (PDF)</a><br>
     <a href="partners.html">PLANET Sponsors</a></p></td>
@@ -139,6 +136,7 @@ To view, click on map or state name below.  List shows state name followed by pl
 </tr>
 <tr>
 <td valign='top'>
+<span class="small12"><strong>State (plan period)</strong></span>
 <%= stateList.toString()%>
 <td valign='top'>
 <br>
@@ -159,7 +157,7 @@ out.print(htmlString);
 	<div align="center">
           <a href="index.html">Home</a>&nbsp;&nbsp;&nbsp;
           <a href="contact.html">Contact Us</a>&nbsp;&nbsp;&nbsp;
-		  <a href="http://ccplanetraining.cancer.gov" onclick="javascript:popWindow('http://ccplanetraining.cancer.gov', 'name','725','400','yes'); return false;">On-line Training</a><br />
+		  <a href="http://ccplanetraining.cancer.gov" onClick="javascript:popWindow('http://ccplanetraining.cancer.gov', 'name','725','400','yes'); return false;">On-line Training</a><br />
           <a href="about.html">About this Site</a>&nbsp;&nbsp;&nbsp;
           <a href="partners.html">PLANET Sponsors</a>&nbsp;&nbsp;&nbsp;
           <a href="privacy.html">Privacy Policy</a>&nbsp;&nbsp;&nbsp;
