@@ -73,7 +73,7 @@ StringBuffer pcScript = null;
 					 { 
 					 stateList.append(" (Plan period: "+ rs.getPlanPeriod()+")' target='_blank'>"+rs.getName()+"</a>");
 					 }else{
-					 stateList.append("' target='_blank'>"+rs.getName()+"</a>")
+					 stateList.append("' target='_blank'>"+rs.getName()+"</a>");
 					 }
 					 
            //create the link on the map
