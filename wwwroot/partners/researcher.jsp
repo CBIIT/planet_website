@@ -88,8 +88,7 @@
     
     NCIPopChartEmbedder myChart = new NCIPopChartEmbedder();
     myChart.appearanceFile = "apfiles/planet/ccpmap.pcxml";
-    myChart.pcScript = "US.addPCXML(<DefaultShapeSettings Type='Circle' Width='8' Height='8'><Properties FillColor='#cec8ee'/><Label Text='%_NAME' LeaderColor='Black'/><Drilldown URL='list.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultShapeSettings>
-<DefaultBackgroundShapeSettings Type='Rectangle' Width='15' Height='15'><Properties FillColor='#cec8ee'/><Label Text='%_NAME' HJustification='Center' LeaderColor='Black'/><Drilldown URL='list.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultBackgroundShapeSettings>)";
+    myChart.pcScript = "US.addPCXML(<DefaultShapeSettings Type='Circle' Width='8' Height='8'><Properties FillColor='#cec8ee'/><Label Text='%_NAME' LeaderColor='Black'/><Drilldown URL='list.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultShapeSettings><DefaultBackgroundShapeSettings Type='Rectangle' Width='15' Height='15'><Properties FillColor='#cec8ee'/><Label Text='%_NAME' HJustification='Center' LeaderColor='Black'/><Drilldown URL='list.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultBackgroundShapeSettings>)";
     myChart.height = 449;
     myChart.width = 629;
     myChart.imageType = "FLASH";
