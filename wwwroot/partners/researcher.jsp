@@ -15,7 +15,7 @@
     String pageTitle = "";
 
     param = request.getParameter("cctopic");
-	
+
     if (param != null)
        topic = Integer.parseInt(param);
 		ccTopic = new Integer(topic);
@@ -30,10 +30,10 @@
 
     Vector states = QBean.getStateList();
     Iterator it2 = states.iterator();
-	
+
     if (it2.hasNext())
     {
-	
+
         stateList = new StringBuffer();
         int count= 0;
 		//stateList.append("<tr><th colspan='2' align='left' valign='top' nowrap>States</th><th align='left' valign='top' nowrap>TERRITORIES/TRIBES</th></tr><tr><td valign='top' nowrap>");
@@ -43,30 +43,30 @@
         do
         {
            StateBean rs = (StateBean)it2.next();
-		   
+
 		      if (count == 26) {
                 stateList.append("</td><td valign='top' nowrap>");
                 //count = 0;
             }
-			
+
              if (count == 51) {
               	stateList.append("</td></tr>");
 				stateList.append("<tr><th colspan='2'>&nbsp;</th></tr>");
 				stateList.append("<tr><th colspan='2' align='left' valign='top' nowrap>Territories / Tribes</th></tr><tr><td colspan='2' valign='top'  nowrap>");
                 //count = 0;
             }
-			
+
 			/*comment out 02/01/2006
                 if (count == 56) {
                 stateList.append("</td><td valign='top' nowrap>");
 				//count = 0;
             } */
-			
+
 			if (count > 0 && count != 26 && count !=51)
                 stateList.append("<br />");
-				
+
            /* comment out 10/26/2005
-		   
+
 		   if (count > 27)
            {
                stateList.append("</td><td valign='bottom'>");
@@ -84,18 +84,18 @@
     //stateList.append("</td>");
 	 stateList.append("</td></tr></table>");
     }
-    
-    
+
+
     NCIPopChartEmbedder myChart = new NCIPopChartEmbedder();
     myChart.appearanceFile = "apfiles/planet/ccpmap.pcxml";
-    myChart.pcScript = "US.addPCXML(<DefaultShapeSettings Type='Circle' Width='8' Height='8'><Properties FillColor='#cec8ee'/><Label Text='%_NAME' LeaderColor='Black'/><Drilldown URL='list.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultShapeSettings><DefaultBackgroundShapeSettings Type='Rectangle' Width='15' Height='15'><Properties FillColor='#cec8ee'/><Label Text='%_NAME' HJustification='Center' LeaderColor='Black'/><Drilldown URL='list.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultBackgroundShapeSettings>)";
+    myChart.pcScript = "US.addPCXML(<DefaultShapeSettings Type='Circle' Width='8' Height='8'><Properties FillColor='#cec8ee'/><Label Text='%_NAME' LeaderColor='Black'/><Drilldown URL='rlist.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultShapeSettings><DefaultBackgroundShapeSettings Type='Rectangle' Width='15' Height='15'><Properties FillColor='#cec8ee'/><Label Text='%_NAME' HJustification='Center' LeaderColor='Black'/><Drilldown URL='list.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultBackgroundShapeSettings>)";
     myChart.height = 449;
     myChart.width = 629;
     myChart.imageType = "FLASH";
     myChart.fallback = "STRICT";
     myChart.returnDescriptiveLink = false;
     myChart.userAgent = request.getHeader("USER-AGENT");
-    htmlString = myChart.getEmbeddingHTML(); 
+    htmlString = myChart.getEmbeddingHTML();
 %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 
@@ -103,7 +103,7 @@
 <head>
 <title><%= caption%></title>
 <link href="../styles.css" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="/fsrscripts/triggerParams.js"></script> 
+<script type="text/javascript" src="/fsrscripts/triggerParams.js"></script>
 <script type="text/javascript" src="/fsrscripts/stdLauncher.js"></script>
 <script type="text/javascript">Poll();</script>
 </head>
@@ -146,7 +146,7 @@
 <tr>
 	<td colspan="1"><a href="rlist.jsp?r=ALL&cctopic=<%= topic %>">View all U.S. Researchers by topic area</a></td>
 </tr>
-<tr> 
+<tr>
     <td colspan="3">The list of research partners was compiled based on those individuals who had received a grant during the fiscal year period from 1998-2003 and who have permitted their contact information to be listed as a resource for comprehensive cancer control planning and implementation within their state.</td>
 </tr>
 </table>
