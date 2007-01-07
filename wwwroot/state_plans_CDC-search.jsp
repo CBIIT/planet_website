@@ -150,7 +150,7 @@ To view, click on map or state name below.  List shows state name followed by pl
 <%= stateList.toString()%>
 <td valign='top'>
   <div align="right">
-  <table width="80%" cellpadding="5" cellspacing="0" border="0">
+  <table width="90%" cellpadding="5" cellspacing="0" border="0">
       <tr valign="top">
     <td align="left"><p><strong><a href="http://broadband.ngcits.com/cccsearch/">Quick Search</a></strong> (State Plans by Topic)<br />
       <form name="form1">
