@@ -153,18 +153,19 @@ To view, click on map or state name below.  List shows state name followed by pl
 <td align="left"><p><strong><a href="http://broadband.ngcits.com/cccsearch/">Quick Search</a></strong> (State Plans by Topic)<br />
   <form name="form1">
     <select name="menu1" onChange="MM_jumpMenu('parent',this,0)">
-      <option value="http://broadband.ngcits.com/cccsearch/Default.aspx?PageID=7&KW=" selected>Chronic disease programs</option>
-      <option value="http://broadband.ngcits.com/cccsearch/Default.aspx?PageID=7&KW=">Education</option>
-      <option value="http://broadband.ngcits.com/cccsearch/Default.aspx?PageID=7&KW="Evaluation"">Evaluation</option>
-      <option value="http://broadband.ngcits.com/cccsearch/Default.aspx?PageID=7&KW="Health%20disparities"">Health disparities</option>
+			<option selected>** Select a topic **</option>
+      <option value="http://broadband.ngcits.com/cccsearch/Default.aspx?PageID=7&KW=Chronic disease programs">Chronic disease programs</option>
+      <option value="http://broadband.ngcits.com/cccsearch/Default.aspx?PageID=7&KW=Education">Education</option>
+      <option value="http://broadband.ngcits.com/cccsearch/Default.aspx?PageID=7&KW=Evaluation">Evaluation</option>
+      <option value="http://broadband.ngcits.com/cccsearch/Default.aspx?PageID=7&KW=Health%20disparities">Health disparities</option>
       <option value="http://broadband.ngcits.com/cccsearch/Default.aspx?PageID=7&FLG=ANY&KW=Partnerships%20partners">Partnerships or partners</option>
-      <option value="http://broadband.ngcits.com/cccsearch/Default.aspx?PageID=7&KW="Patient%20Care"%20%20or%20"Patient%20Services"">Patient care/services</option>
-      <option value="http://broadband.ngcits.com/cccsearch/Default.aspx?PageID=7&KW="Prevention"">Prevention</option>
-      <option value="http://broadband.ngcits.com/cccsearch/Default.aspx?PageID=7&KW="Quality%20of%20Life"">Quality of life</option>
-      <option value="http://broadband.ngcits.com/cccsearch/Default.aspx?PageID=7&KW="Research"">Research</option>
-      <option value="http://broadband.ngcits.com/cccsearch/Default.aspx?PageID=7&KW="Screening"">Screening</option>
-      <option value="http://broadband.ngcits.com/cccsearch/Default.aspx?PageID=7&KW="Survivorship"">Survivorship</option>
-      <option value="http://broadband.ngcits.com/cccsearch/Default.aspx?PageID=7&KW="Treatment"">Treatment</option>
+      <option value="http://broadband.ngcits.com/cccsearch/Default.aspx?PageID=7&KW=Patient%20Care%20%20or%20Patient%20Services">Patient care/services</option>
+      <option value="http://broadband.ngcits.com/cccsearch/Default.aspx?PageID=7&KW=Prevention">Prevention</option>
+      <option value="http://broadband.ngcits.com/cccsearch/Default.aspx?PageID=7&KW=Quality%20of%20Life">Quality of life</option>
+      <option value="http://broadband.ngcits.com/cccsearch/Default.aspx?PageID=7&KW=Research">Research</option>
+      <option value="http://broadband.ngcits.com/cccsearch/Default.aspx?PageID=7&KW=Screening">Screening</option>
+      <option value="http://broadband.ngcits.com/cccsearch/Default.aspx?PageID=7&KW=Survivorship">Survivorship</option>
+      <option value="http://broadband.ngcits.com/cccsearch/Default.aspx?PageID=7&KW=Treatment">Treatment</option>
         </select>
   </form></td>
 <td align="right"><strong><a href="http://broadband.ngcits.com/cccsearch/Default.aspx?PageID=5">Advanced Search</a></strong></td>
