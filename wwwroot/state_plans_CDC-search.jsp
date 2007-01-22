@@ -141,7 +141,7 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
 
 <p><div style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif; font-size : 12px; color : #000000;">
 To view, click on map or state name below.  <br>
-List shows state name followed by plan period.
+Hover over state name to see plan period.
 </div>
 
 </td>
@@ -175,7 +175,7 @@ List shows state name followed by plan period.
       </tr>
   </table>
   </div>
-  <p align="right">&nbsp;</p></td>
+  </td>
 </tr>
 <tr>
 <td valign='top'>
