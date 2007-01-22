@@ -140,7 +140,8 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
 </div>
 
 <p><div style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif; font-size : 12px; color : #000000;">
-To view, click on map or state name below.  List shows state name followed by plan period.
+To view, click on map or state name below.  <br>
+List shows state name followed by plan period.
 </div>
 
 </td>
@@ -152,7 +153,12 @@ To view, click on map or state name below.  List shows state name followed by pl
   <div align="right">
   <table width="90%" cellpadding="5" cellspacing="0" border="0">
       <tr valign="top">
-    <td align="left"><p><strong><a href="http://broadband.ngcits.com/cccsearch/">Quick Search</a></strong> (State Plans by Topic)<br />
+        <td colspan="2" align="left" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif; font-size : 12px; color : #000000;"> You can search through the plans using one of two options provided: </td>
+        </tr>
+      <tr valign="top">
+    <td align="left"><p><strong><a href="http://broadband.ngcits.com/cccsearch/">Quick Search</a> of State Plans by Topic
+
+</a></strong><br />
       <form name="form1">
         <select name="menu1" onChange="MM_jumpMenu('parent',this,0)">
 			    <option selected>** Select a topic **</option>
