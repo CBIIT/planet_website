@@ -153,11 +153,11 @@ Hover over state name to see plan period.
         <td colspan="3" align="left" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif; font-size : 12px; color : #000000;" valign="top"><br /><br />
           You can search to find plans mentioning a topic of your choice in one of three ways: </td>
       </tr>
+	    <form name="form1">
       <tr valign="top">
         <td align="left"><p>
-          <input type="text" name="textfield">
-            
-          </td><form name="form1">
+		   <input type="text" name="textfield"><input type="button" name="Go" Value="Go">
+         </td>
         <td align="left"><select name="menu1" onChange="MM_jumpMenu('parent',this,0)">
           <option selected>** Select a topic **</option>
           <option value="http://broadband.ngcits.com/cccsearch/Default.aspx?PageID=7&KW=Chronic disease programs">Chronic disease programs</option>
