@@ -156,7 +156,7 @@ Hover over state name to see plan period.
 	   
       <tr valign="top">
         <td align="left">
-		   <input type="text" name="keyword" value="">&nbsp;<a href=""http://broadband.ngcits.com/cccsearch/Default.aspx?PageID=7&KW=cancer&FLG=ALL">Go</a>
+		   <input type="text" name="keyword" value="">&nbsp;<a href="http://broadband.ngcits.com/cccsearch/Default.aspx?PageID=7&KW=cancer&FLG=ALL">Go</a>
          </td> 
 		<form name="form1">
         <td align="left"><select name="menu1" onChange="MM_jumpMenu('parent',this,0)">
