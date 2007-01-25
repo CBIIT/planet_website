@@ -7,7 +7,7 @@
 <%@ page import="java.util.Iterator" %>
 <%
 
-string strkeyword
+string strkeyword;
 
 strkeyword = req.getParamerter("txtKeyword")
 
