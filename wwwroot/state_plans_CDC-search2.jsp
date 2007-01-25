@@ -6,14 +6,11 @@
 <%@ page import="java.util.Vector" %>
 <%@ page import="java.util.Iterator" %>
 <%
-
-string strkeyword;
+String strkeyword;
 
 strkeyword = request.getParamerter("txtKeyword");
 
-
 response.sendRedirect("http://broadband.ngcits.com/cccsearch/Default.aspx?PageID=7&KW=" + strkeyword + "&FLG=ALL&");
-
 %>
 <html>
 <head>
