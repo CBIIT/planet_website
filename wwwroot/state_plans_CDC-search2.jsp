@@ -6,7 +6,13 @@
 <%@ page import="java.util.Vector" %>
 <%@ page import="java.util.Iterator" %>
 <%
-response.sendRedirect("http://www.yahoo.com");
+
+string strkeyword
+
+strkeyword = req.getParamerter("txtKeyword")
+
+
+response.sendRedirect("http://broadband.ngcits.com/cccsearch/Default.aspx?PageID=7&KW=" + strkeyword + "&FLG=ALL&");
 
 %>
 <html>

@@ -157,7 +157,7 @@ Hover over state name to see plan period.
       <tr valign="top">
 	  <form action="state_plans_CDC-search2.jsp" method="post"  name="form2">
         <td align="left">
-		   <input type="text" name="SearchRequest">&nbsp;<input type="Submit" name="Submit" value="Go">
+		   <input type="text" name="txtKeyword">&nbsp;<input type="Submit" name="Submit" value="Go">
 		   <!--<a href="http://broadband.ngcits.com/cccsearch/Default.aspx?PageID=7&FLG=ALL">Go</a>-->
          </td> 
 		 </form>
