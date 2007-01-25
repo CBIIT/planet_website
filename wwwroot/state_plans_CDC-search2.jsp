@@ -11,7 +11,7 @@ response.sendRedirect("http://www.yahoo.com");
 %>
 <html>
 <head>
-<title><%= caption%></title>
+<title></title>
 <link href="styles.css" rel="stylesheet" type="text/css">
 
 </head>
