@@ -150,19 +150,12 @@ Hover over state name to see plan period.
 <td align="left"><div align="right">
   <table width="90%" cellpadding="5" cellspacing="0" border="0">
       <tr valign="top">
-        <td colspan="3" align="left" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif; font-size : 12px; color : #000000;" valign="top"><br /><br />
-          You can search to find plans mentioning a topic of your choice in one of three ways: </td>
+        <td colspan="2" align="left" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif; font-size : 12px; color : #000000;" valign="top"><br /><br />          </td>
       </tr>
 	   
       <tr valign="top">
-	  <form action="state_plans_CDC-search2.jsp" method="post"  name="form2">
-        <td align="left">
-		   <input type="text" name="txtKeyword">&nbsp;<input type="Submit" name="Submit" value="Go">
-		   <!--<a href="http://broadband.ngcits.com/cccsearch/Default.aspx?PageID=7&FLG=ALL">Go</a>-->
-         </td> 
-		 </form>
 		<form name="form1">
-        <td align="left"><select name="menu1" onChange="MM_jumpMenu('parent',this,0)">
+        <td align="left"><strong>Search for: </strong>          <select name="menu1" onChange="MM_jumpMenu('parent',this,0)">
           <option selected>** Select a topic **</option>
           <option value="http://broadband.ngcits.com/cccsearch/Default.aspx?PageID=7&KW=Chronic disease programs">Chronic disease programs</option>
           <option value="http://broadband.ngcits.com/cccsearch/Default.aspx?PageID=7&KW=Education">Education</option>
@@ -176,9 +169,10 @@ Hover over state name to see plan period.
           <option value="http://broadband.ngcits.com/cccsearch/Default.aspx?PageID=7&KW=Screening">Screening</option>
           <option value="http://broadband.ngcits.com/cccsearch/Default.aspx?PageID=7&KW=Survivorship">Survivorship</option>
           <option value="http://broadband.ngcits.com/cccsearch/Default.aspx?PageID=7&KW=Treatment">Treatment</option>
-        </select></td>
+        </select>
+          &nbsp;&nbsp;<strong>OR</strong></td>
       </form>
-        <td align="right"><strong><a href="http://broadband.ngcits.com/cccsearch/Default.aspx?PageID=5">Advanced&nbsp;Search</a></strong></td>
+        <td align="right"><strong><a href="http://broadband.ngcits.com/cccsearch/Default.aspx">CDC&nbsp;Plans&nbsp;Search</a></strong></td>
       </tr>
   </table>
   </div>
