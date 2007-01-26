@@ -8,9 +8,9 @@
 <%
 String strkeyword;
 
-strkeyword = request.getParamerter("txtKeyword");
+strkeyword = request.getParameter("txtKeyword");
 
-response.sendRedirect("http://broadband.ngcits.com/cccsearch/Default.aspx?PageID=7&KW=" + strkeyword + "&FLG=ALL&");
+response.sendRedirect("http://broadband.ngcits.com/cccsearch/Default.aspx?PageID=7&KW=" + strkeyword + "&FLG=ALL");
 %>
 <html>
 <head>
