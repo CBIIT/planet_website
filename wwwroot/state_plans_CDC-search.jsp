@@ -170,9 +170,9 @@ Hover over state name to see plan period.
           <option value="http://broadband.ngcits.com/cccsearch/Default.aspx?PageID=7&KW=Survivorship">Survivorship</option>
           <option value="http://broadband.ngcits.com/cccsearch/Default.aspx?PageID=7&KW=Treatment">Treatment</option>
         </select>
-          &nbsp;&nbsp;<strong>OR</strong></td>
+          &nbsp;&nbsp;<strong>OR <a href="http://broadband.ngcits.com/cccsearch/Default.aspx">CDC&nbsp;Plans&nbsp;Search</a></strong></td>
       </form>
-        <td align="right"><strong><a href="http://broadband.ngcits.com/cccsearch/Default.aspx">CDC&nbsp;Plans&nbsp;Search</a></strong></td>
+        <td><div align="left"><strong></strong></div></td>
       </tr>
   </table>
   </div>
