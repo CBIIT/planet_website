@@ -3,7 +3,7 @@
 <%@ page import="gov.nci.planet.QueryBean" %>
 <html>
 <head>
-<title>Cancer Control PLANET</title>
+<title>Cancer Control P.L.A.N.E.T.</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 <link href="styles.css" rel="stylesheet" type="text/css">
 </head>
@@ -11,13 +11,13 @@
 <body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
-    <td><p class="banner"><a href="index.html"><img src="images/planet_logo.gif" alt="Cancer Control PLANET - Plan, Link, Act, Network with Evidence-based Tools" width="169" height="87" border="0"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p></td>
-        <td><a href="index.html"><img src="images/planet_banner_wider.gif" alt="Cancer Control PLANET - Links to comprehensive cancer control resources for public health professionals" width="500" height="82" border="0"></a></td>
+    <td><p class="banner"><a href="index.html"><img src="images/planet_logo.gif" alt="Cancer Control P.L.A.N.E.T. - Plan, Link, Act, Network with Evidence-based Tools" width="169" height="87" border="0"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p></td>
+        <td><a href="index.html"><img src="images/planet_banner_wider.gif" alt="Cancer Control P.L.A.N.E.T. - Links to comprehensive cancer control resources for public health professionals" width="500" height="82" border="0"></a></td>
 
     <td><p><a href="index.html">Home</a><br>
         <a href="contact.html">Contact Us</a><br>        <a href="about.html">About This Site</a><br>
         <a href="factsheet.pdf">Fact Sheet (PDF)</a><br>
-        <a href="partners.html">PLANET Sponsors</a></p></td>
+        <a href="partners.html">P.L.A.N.E.T. Sponsors</a></p></td>
   </tr>
 </table>
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -32,7 +32,7 @@
 
 <p>For general cancer information, please visit <a href="http://www.cancer.gov">Cancer.gov</a>.</p>
 
-		<p>You may also provide feedback here on the Cancer Control PLANET.</p>
+		<p>You may also provide feedback here on the Cancer Control P.L.A.N.E.T.</p>
 			<table width="100%" border="0" cellspacing="0" cellpadding="6">
         <tr>
           <td width="50%" colspan="3">
@@ -89,7 +89,7 @@
 </table>
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
-    <td><hr size="1" noshade><div align="center"><a href="index.html">Home</a>&nbsp;&nbsp;&nbsp; <a href="contact.html">Contact Us</a>&nbsp;&nbsp;&nbsp; <a href="about.html">About this Site</a>&nbsp;&nbsp;&nbsp; <a href="partners.html">PLANET Sponsors</a>&nbsp;&nbsp;&nbsp; <a href="privacy.html">Privacy  Policy</a>&nbsp;&nbsp;&nbsp; <a href="disclaimer.html">Disclaimer</a>&nbsp;&nbsp;&nbsp; <a href="accessibility.html">Accessibility</a><br></div></td>
+    <td><hr size="1" noshade><div align="center"><a href="index.html">Home</a>&nbsp;&nbsp;&nbsp; <a href="contact.html">Contact Us</a>&nbsp;&nbsp;&nbsp; <a href="about.html">About this Site</a>&nbsp;&nbsp;&nbsp; <a href="partners.html">P.L.A.N.E.T. Sponsors</a>&nbsp;&nbsp;&nbsp; <a href="privacy.html">Privacy  Policy</a>&nbsp;&nbsp;&nbsp; <a href="disclaimer.html">Disclaimer</a>&nbsp;&nbsp;&nbsp; <a href="accessibility.html">Accessibility</a><br></div></td>
   </tr>
 </table>
 </body>

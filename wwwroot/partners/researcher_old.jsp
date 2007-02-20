@@ -73,13 +73,13 @@
 <body topmargin="0" leftmargin="0" bgcolor="White">
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
-    <td><p class="banner"><a href="../index.html"><img src="../images/planet_logo.gif" alt="Cancer Control PLANET - Plan, Link, Act, Network with Evidence-based Tools" width="169" height="87" border="0"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p></td>    <td><a href="../index.html"><img src="../images/planet_banner_wider.gif" alt="Cancer Control PLANET - Links to comprehensive cancer control resources for public health professionals" width="500" height="82" border="0"></a></td>
+    <td><p class="banner"><a href="../index.html"><img src="../images/planet_logo.gif" alt="Cancer Control P.L.A.N.E.T. - Plan, Link, Act, Network with Evidence-based Tools" width="169" height="87" border="0"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p></td>    <td><a href="../index.html"><img src="../images/planet_banner_wider.gif" alt="Cancer Control P.L.A.N.E.T. - Links to comprehensive cancer control resources for public health professionals" width="500" height="82" border="0"></a></td>
 <td><p><a href="../index.html">Home</a><br>
         <a href="../contact.html">Contact Us</a><br>
 	<a href="about.html">About This Site</a><br>
         <a href="../factsheet.pdf">Fact Sheet (PDF)</a><br>
 
-        <a href="../partners.html">PLANET Sponsors</a></p></td>
+        <a href="../partners.html">P.L.A.N.E.T. Sponsors</a></p></td>
   </tr>
   <tr>
     <td colspan="3">
@@ -126,7 +126,7 @@ To view, click on map or state name below.
           <a href="../index.html">Home</a>&nbsp;&nbsp;&nbsp;
           <a href="../contact.html">Contact Us</a>&nbsp;&nbsp;&nbsp;
           <a href="../about.html">About this Site</a>&nbsp;&nbsp;&nbsp;
-          <a href="../partners.html">PLANET Sponsors</a>&nbsp;&nbsp;&nbsp;
+          <a href="../partners.html">P.L.A.N.E.T. Sponsors</a>&nbsp;&nbsp;&nbsp;
           <a href="../privacy.html">Privacy Policy</a>&nbsp;&nbsp;&nbsp;
           <a href="../disclaimer.html">Disclaimer</a>&nbsp;&nbsp;&nbsp;
           <a href="../accessibility.html">Accessibility</a><br>
