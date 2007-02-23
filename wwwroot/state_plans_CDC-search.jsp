@@ -202,7 +202,7 @@ out.print(htmlString);
           <a href="contact.html">Contact Us</a>&nbsp;&nbsp;&nbsp;
 		  <a href="http://ccplanetraining.cancer.gov" onclick="javascript:popWindow('http://ccplanetraining.cancer.gov', 'name','725','400','yes'); return false;">On-line Training</a><br />
           <a href="about.html">About this Site</a>&nbsp;&nbsp;&nbsp;
-          <a href="partners.html">P.L.A.N.E.T. Sponsors</a>&nbsp;&nbsp;&nbsp;
+          <a href="partners.html">Sponsors</a>&nbsp;&nbsp;&nbsp;
           <a href="privacy.html">Privacy Policy</a>&nbsp;&nbsp;&nbsp;
           <a href="disclaimer.html">Disclaimer</a>&nbsp;&nbsp;&nbsp;
           <a href="accessibility.html">Accessibility</a><br>

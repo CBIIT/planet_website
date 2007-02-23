@@ -346,7 +346,7 @@ else
     <td><hr size="1" noshade>
 	<div align="center"><a href="../index.html">Home</a>&nbsp;&nbsp;&nbsp; <a href="../contact.html">Contact Us</a>&nbsp;&nbsp;&nbsp;
     <a href="../about.html">About this Site</a>&nbsp;&nbsp;&nbsp;
-        <a href="../partners.html">P.L.A.N.E.T. Sponsors</a>&nbsp;&nbsp;&nbsp; <a href="../privacy.html">Privacy
+        <a href="../partners.html">Sponsors</a>&nbsp;&nbsp;&nbsp; <a href="../privacy.html">Privacy
         Policy</a>&nbsp;&nbsp;&nbsp; <a href="../disclaimer.html">Disclaimer</a>&nbsp;&nbsp;&nbsp; <a href="../accessibility.html">Accessibility</a><br>
       </div></td>
   </tr>
