@@ -273,7 +273,7 @@ if (param != null)
 	<a href="about.html">About This Site</a><br>
         <a href="../factsheet.pdf">Fact Sheet (PDF)</a><br>
 
-        <a href="../partners.html">P.L.A.N.E.T. Sponsors</a></p></td>
+        <a href="../partners.html">Sponsors</a></p></td>
   </tr>
     <tr>
     <td colspan="3">

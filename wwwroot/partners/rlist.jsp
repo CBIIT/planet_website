@@ -348,7 +348,7 @@ if (param != null)
 		<a href="http://ccplanetraining.cancer.gov" onclick="javascript:popWindow('http://ccplanetraining.cancer.gov', 'name','725','400','yes'); return false;">On-line Training</a><br />
 		<a href="..about.html">About This Site</a><br>
         <a href="../factsheet.pdf">Fact Sheet (PDF)</a><br>
-        <a href="../partners.html">P.L.A.N.E.T. Sponsors</a></p></td>
+        <a href="../partners.html">Sponsors</a></p></td>
   </tr>
   <tr>
     <td colspan="3"><hr size="1" noshade></td>
