@@ -334,9 +334,6 @@ if (param != null)
 <head>
 <title><%= pageTitle%></title>
 <link href="../styles.css" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="/fsrscripts/triggerParams.js"></script> 
-<script type="text/javascript" src="/fsrscripts/stdLauncher.js"></script>
-<script type="text/javascript">Poll();</script>
 </head>
 <body topmargin="0" leftmargin="0" bgcolor="White">
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
