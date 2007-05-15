@@ -28,7 +28,7 @@
           <td><hr size="1" noshade>
 		  <h3>Contact Us</h3>
 
-    <p>Your comments, questions, and suggestions are appreciated. Please direct them to <a href="mailto:ccplanet@mail.nih.gov">ccplanet@mail.nih.gov</a>.  </p>
+    <p>Your comments, questions, and suggestions are appreciated.</p>
 
 <p>For general cancer information, please visit <a href="http://www.cancer.gov">Cancer.gov</a>.</p>
 
