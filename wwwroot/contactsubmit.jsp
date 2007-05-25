@@ -1,6 +1,48 @@
 <%@ page import="java.sql.*" %>
 <%@ page import="oracle.jdbc.*" %>
 <%@ page import="gov.nci.planet.QueryBean" %>
+
+<%
+ 	Boolean lb_submit = true;
+ 	String ls_feedback = (request.getParameter("feedback")).trim();
+ 	String ls_email = (request.getParameter("email")).trim();
+ 	String ls_phone = (request.getParameter("phone")).trim();
+	
+	if ((ls_feedback.contains("<")) == true) {
+		lb_submit = false;
+	}
+	
+	if (lb_submit == true) {
+		if ((ls_feedback.contains(">")) == true) {
+			lb_submit = false;
+		}
+	}
+	
+	if (lb_submit == true) {
+		if ((ls_email.contains("<")) == true) {
+			lb_submit = false;
+		}
+	}
+	
+	if (lb_submit == true) {
+		if ((ls_email.contains(">")) == true) {
+			lb_submit = false;
+		}
+	}
+	
+	if (lb_submit == true) {
+		if ((ls_phone.contains("<")) == true) {
+			lb_submit = false;
+		}
+	}
+	
+	if (lb_submit == true) {
+		if ((ls_phone.contains(">")) == true) {
+			lb_submit = false;
+		}
+	}
+%>
+
 <html>
 <head>
 <title>Cancer Control P.L.A.N.E.T.</title>
@@ -43,36 +85,44 @@
     String email = request.getParameter("email");
     String phone = request.getParameter("phone");
 
-    if (feedback == null || feedback.equals(""))
-    {
-%>
-          <p>No information entered -- please enter your comments on the <a href="contact.html">contact page</a>.</p>
-<%
-    }
-    else
-    {
-%>
-			<table border="0" cellpadding="6" cellspacing="0" align="center" width="50%"><!-- Confirm Page -->
-			<tr>
-				<td valign="top">Comments:</td>
-				<td width="100%" align="left" valign="top"><%=feedback%></td>
-			</tr>
-			<tr>
-				<td valign="top">Email:</td>
-				<td align="left" valign="top"><%=email%></td>
-			</tr>
-			<tr>
-				<td valign="top">Phone:</td>
-				<td align="left" valign="top"><%=phone%></td>
-			</tr>
-			</table><!-- End of Confirm Page -->
-
-<%
-        // Write feedback to database.
-        QueryBean QBean = new QueryBean();
-        QBean.saveFeedback(feedback, email, phone);
-        //QBean.close();
-    }
+	if (lb_submit == true) {
+	    if (feedback == null || feedback.equals(""))
+	    {
+	%>
+	          <p>No information entered -- please enter your comments on the <a href="contact.html">contact page</a>.</p>
+	<%
+	    }
+	    else
+	    {
+	%>
+				<table border="0" cellpadding="6" cellspacing="0" align="center" width="50%"><!-- Confirm Page -->
+				<tr>
+					<td valign="top">Comments:</td>
+					<td width="100%" align="left" valign="top"><%=feedback%></td>
+				</tr>
+				<tr>
+					<td valign="top">Email:</td>
+					<td align="left" valign="top"><%=email%></td>
+				</tr>
+				<tr>
+					<td valign="top">Phone:</td>
+					<td align="left" valign="top"><%=phone%></td>
+				</tr>
+				</table><!-- End of Confirm Page -->
+	
+	<%
+	        // Write feedback to database.
+	        QueryBean QBean = new QueryBean();
+	        QBean.saveFeedback(feedback, email, phone);
+	        //QBean.close();
+	    }
+	}
+	else
+	{
+		%>
+	    	<p>The information entered is not acceptable -- please enter your comments on the <a href="contact.html">contact page</a>.</p>
+		<%
+	}
 %>
         </td>
         </tr>
