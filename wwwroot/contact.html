@@ -10,11 +10,26 @@
 {
    if (document.form1.feedback.value.length < 1) {
         window.alert("Please enter your comments.");
-        document.form1.feedback.focus();
 		return false;
    	}
-
+   	else
+   	{
+   		var re = new RegExp("((\%3C)|<)((\%2F)|\/)*[a-zA-Z0-9\%]+((\%3E)|>)");
+   		if (document.form1.feedback.value.match(re)) {
+	    window.alert("Bad Data Entered");
+		return false;
+	  }
+	  else if (document.form1.phone.value.match(re)) {
+	    window.alert("Bad Data Entered");
+		return false;
+	  }
+	  else if (document.form1.email.value.match(re)) {
+	    window.alert("Bad Data Entered");
+		return false;
+	  }
+   	}
 }
+
  //-->
 </SCRIPT>
 </head>
@@ -73,7 +88,7 @@
 						<td align="left" colspan="2">&nbsp;</td>
 					</tr>
 					<tr>
-						<td align="left" colspan="2"><input type="submit" name="Submit" value="Submit Comments">
+						<td align="left" colspan="2"><input type="submit" name="Submit" value="Submit Comments"">
 						<input type="reset" name="reset" value="Clear Form"></td>
 					</tr>
 					</form>
