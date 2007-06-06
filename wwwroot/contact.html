@@ -61,7 +61,12 @@
 		<p>For general cancer information, visit the National Cancer Institute at <a href="http://www.cancer.gov">cancer.gov</a>, the Centers for Disease Control and Prevention at <a href="http://www.cdc.gov/cancer/">www.cdc.gov/cancer/</a>, and the American Cancer Society at <a href="http://cancer.org">cancer.org</a>.</p>
 
 		<p>You may also provide feedback on the Cancer Control P.L.A.N.E.T. below.</p>
-        
+		
+		<script>
+		if (window.location.search.length > 0)
+			document.write(unescape("<div class='red'>" + window.location.search.substr(1) + "</div>"));
+		</script>
+		
         <table border="0" cellspacing="0" cellpadding="0"><!-- feedback form -->
 				<form method="post" action="contactsubmit.jsp" id="form1" name="form1" onSubmit="return CheckInput();">
           <tr>

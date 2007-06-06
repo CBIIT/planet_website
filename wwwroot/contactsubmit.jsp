@@ -1,7 +1,6 @@
 <%@ page import="java.sql.*" %>
 <%@ page import="oracle.jdbc.*" %>
 <%@ page import="gov.nci.planet.QueryBean" %>
-
 <html>
 <head>
 <title>Cancer Control P.L.A.N.E.T.</title>
@@ -46,34 +45,38 @@
 
     if (feedback == null || feedback.equals(""))
     {
-		%>
-	      <p>No information entered -- please enter your comments on the <a href="contact.html">contact page</a>.</p>
-		<%
+%>
+          <p>No information entered -- please enter your comments on the <a href="contact.html">contact page</a>.</p>
+<%
     }
     else
     {
-		%>
+%>
 			<table border="0" cellpadding="6" cellspacing="0" align="center" width="50%"><!-- Confirm Page -->
-				<tr>
-					<td valign="top">Comments:</td>
-					<td width="100%" align="left" valign="top"><%=feedback%></td>
-				</tr>
-				<tr>
-					<td valign="top">Email:</td>
-					<td align="left" valign="top"><%=email%></td>
-				</tr>
-				<tr>
-					<td valign="top">Phone:</td>
-					<td align="left" valign="top"><%=phone%></td>
-				</tr>
+			<tr>
+				<td valign="top">Comments:</td>
+				<td width="100%" align="left" valign="top"><%=feedback%></td>
+			</tr>
+			<tr>
+				<td valign="top">Email:</td>
+				<td align="left" valign="top"><%=email%></td>
+			</tr>
+			<tr>
+				<td valign="top">Phone:</td>
+				<td align="left" valign="top"><%=phone%></td>
+			</tr>
 			</table><!-- End of Confirm Page -->
-	
-		<%
-        // Write feedback to database.
-        QueryBean QBean = new QueryBean();
-        QBean.saveFeedback(feedback, email, phone);
-        //QBean.close();
-	    }
+
+<%
+		try{
+	        // Write feedback to database.
+	        QueryBean QBean = new QueryBean();
+	        QBean.saveFeedback(feedback, email, phone);
+	        //QBean.close();
+		} catch (Exception e) {
+			response.sendRedirect(response.encodeRedirectURL("contact.html?" + e.getMessage()));
+		}
+    }
 %>
         </td>
         </tr>

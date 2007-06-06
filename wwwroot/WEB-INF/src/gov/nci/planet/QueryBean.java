@@ -5,7 +5,10 @@ import java.util.Vector;
 
 import oracle.jdbc.*;
 import gov.nci.util.ConnPoolBean;
+import gov.nci.exception.ParameterException;
 import gov.nci.planet.bean.*;
+
+import gov.nci.validator.*;			// HF (3/30/2007) - CR #39829.  
 
 public class QueryBean {
 
@@ -914,48 +917,63 @@ public class QueryBean {
 
 	}
 
-	public void saveFeedback(String feedbackText, String email, String phone)
-					throws SQLException {
-
-		Connection conn =null;
-		CallableStatement stmt =null;
-		Vector statePlans = null;
-
+	//	 HF (3/30/2007) - CR #39829 - Changed throws to Exception, since now throwing multiple types.
+	public void saveFeedback(String feedbackText, String email, String phone) throws Exception 
+	{
+		// HF (3/30/2007) - CR #39829.  Reject the incoming string if it contains HTML tags
+		// (suspected cross-site scripting) or suspected SQL injection.
+		
+		boolean bSafe = false;
 		try {
-			conn = ConnPoolBean.getConnection();
-
-			stmt = conn
-				.prepareCall("{call dccps.products_order_pkg.save_feedback(?, ?, ?, ?)}");
-			stmt.setString(1, feedbackText);
-			stmt.setString(2, email);
-			stmt.setString(3, phone);
-			stmt.setString(4, "PLANET");
-			stmt.execute();
-
-		    stmt.close();
-		    stmt = null;
-
-		} catch (SQLException e) {
-			e.printStackTrace();
-		} finally {
-			if (stmt!=null){
-				try {
-					stmt.close();
-				} catch (SQLException ee){
-					ee.printStackTrace();
-				}
-				stmt = null;
-			}
-			if (conn!=null) {
-				try {
-					//conn.close();
-					ConnPoolBean.closeConnection(conn);
-				} catch (SQLException ee){
-					ee.printStackTrace();
-				}
-				conn = null;
-			}
+			ParameterValidator pv = new ParameterValidator();
+			bSafe = pv.validateSafe(feedbackText);
+		} catch (Exception e) {
+			throw e;
 		}
+
+		if (bSafe == true)
+    	{
+			Connection conn =null;
+			CallableStatement stmt =null;
+			Vector statePlans = null;
+	
+			try {
+				conn = ConnPoolBean.getConnection();
+	
+				stmt = conn
+					.prepareCall("{call dccps.products_order_pkg.save_feedback(?, ?, ?, ?)}");
+				stmt.setString(1, feedbackText);
+				stmt.setString(2, email);
+				stmt.setString(3, phone);
+				stmt.setString(4, "PLANET");
+				stmt.execute();
+	
+			    stmt.close();
+			    stmt = null;
+	
+			} catch (SQLException e) {
+				e.printStackTrace();
+			} finally {
+				if (stmt!=null){
+					try {
+						stmt.close();
+					} catch (SQLException ee){
+						ee.printStackTrace();
+					}
+					stmt = null;
+				}
+				if (conn!=null) {
+					try {
+						//conn.close();
+						ConnPoolBean.closeConnection(conn);
+					} catch (SQLException ee){
+						ee.printStackTrace();
+					}
+					conn = null;
+				}
+			}
+    	} else
+    		throw new ParameterException ("Please remove any special characters such as '<' and '>' and resubmit your comments.");
 	}
 
 	/*
