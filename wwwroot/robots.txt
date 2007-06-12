@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /state_plans.jsp
+
+User-agent: *
+Disallow: /partners/
+ 
+User-agent: *
+Disallow: /atlas/
