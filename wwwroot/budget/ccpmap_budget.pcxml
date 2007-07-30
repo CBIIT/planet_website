@@ -1,0 +1,650 @@
+<?xml version='1.0' encoding='ISO-8859-1' ?>
+
+<Chart Version='4.40.00' Width='629' Height='465'>
+
+	<Map Name='US' Top='11' Left='-1' Width='611' Height='418' CVersion='3'>
+		<Properties MapType='Combo' NativeWidth='799' NativeHeight='547' HideShapesWithNoData='False' UseOriginalColors='False' UseBackgroundRanges='True' AutoScaleRanges='False' AutoScaleByPercent='False' AutoScaleBackgroundRanges='False' AutoScaleBackgroundByPercent='False' LastLayerModified='Shapes'/>
+		<DefaultShapeSettings  Type='Circle' Width='8' Height='8'>
+			<Properties FillColor='#b2b2b2' FillType='Pattern' PatternType='DiagonalBottomToTop'/>
+			<Label Text='%_NAME' LeaderColor='Black'/>
+			<Drilldown FillColor='White' ZoomPercent='120'/>
+		</DefaultShapeSettings>
+		<DefaultBackgroundShapeSettings  Type='Rectangle' Width='15' Height='15'>
+			<Properties FillColor='#cc0000'/>
+			<Label Text='%_NAME' HJustification='Center' LeaderColor='Black'/>
+			<Drilldown FillColor='White'/>
+		</DefaultBackgroundShapeSettings>
+		<MapShapeItem Name='AK' LongName='Alaska' X='20.0' Y='359.0' OrigWidth='200' OrigHeight='128' OrigColor='#ccffcc' Parent='US' Code='02' NameClass='State' Value='No Data'>
+			<ItemShapeSettings  Type='Polygon' Top='285' Left='14' Width='153' Height='98'>
+				<MapProperties PolyMinX='20.0' PolyMinY='359.0' OverrideTextSettings='True'/>
+				<Path>
+					<MoveTo X='62.0' Y='55.0'/><LineTo X='60.0' Y='53.0'/><LineTo X='57.0' Y='52.0'/><LineTo X='56.0' Y='51.0'/><LineTo X='57.0' Y='49.0'/><LineTo X='59.0' Y='51.0'/><LineTo X='62.0' Y='51.0'/><LineTo X='62.0' Y='52.0'/><LineTo X='64.0' Y='54.0'/><LineTo X='66.0' Y='54.0'/><LineTo X='66.0' Y='55.0'/><LineTo X='63.0' Y='56.0'/><LineTo X='62.0' Y='55.0'/>
+					<MoveTo X='180.0' Y='97.0'/><LineTo X='182.0' Y='104.0'/><LineTo X='181.0' Y='104.0'/><LineTo X='180.0' Y='102.0'/><LineTo X='180.0' Y='101.0'/><LineTo X='179.0' Y='100.0'/><LineTo X='179.0' Y='99.0'/><LineTo X='178.0' Y='98.0'/><LineTo X='177.0' Y='96.0'/><LineTo X='180.0' Y='97.0'/>
+					<MoveTo X='181.0' Y='95.0'/><LineTo X='180.0' Y='91.0'/><LineTo X='181.0' Y='91.0'/><LineTo X='184.0' Y='95.0'/><LineTo X='182.0' Y='92.0'/><LineTo X='182.0' Y='94.0'/><LineTo X='183.0' Y='95.0'/><LineTo X='182.0' Y='98.0'/><LineTo X='181.0' Y='98.0'/><LineTo X='181.0' Y='95.0'/>
+					<MoveTo X='183.0' Y='101.0'/><LineTo X='182.0' Y='100.0'/><LineTo X='184.0' Y='100.0'/><LineTo X='185.0' Y='104.0'/><LineTo X='184.0' Y='103.0'/><LineTo X='184.0' Y='102.0'/><LineTo X='183.0' Y='101.0'/>
+					<MoveTo X='185.0' Y='99.0'/><LineTo X='184.0' Y='98.0'/><LineTo X='187.0' Y='98.0'/><LineTo X='186.0' Y='99.0'/><LineTo X='186.0' Y='100.0'/><LineTo X='186.0' Y='102.0'/><LineTo X='184.0' Y='99.0'/><LineTo X='185.0' Y='99.0'/>
+					<MoveTo X='178.0' Y='92.0'/><LineTo X='179.0' Y='94.0'/><LineTo X='179.0' Y='96.0'/><LineTo X='176.0' Y='94.0'/><LineTo X='177.0' Y='96.0'/><LineTo X='176.0' Y='97.0'/><LineTo X='174.0' Y='94.0'/><LineTo X='175.0' Y='94.0'/><LineTo X='174.0' Y='92.0'/><LineTo X='174.0' Y='93.0'/><LineTo X='177.0' Y='92.0'/><LineTo X='178.0' Y='92.0'/>
+					<MoveTo X='189.0' Y='104.0'/><LineTo X='192.0' Y='107.0'/><LineTo X='191.0' Y='107.0'/><LineTo X='193.0' Y='109.0'/><LineTo X='194.0' Y='112.0'/><LineTo X='193.0' Y='112.0'/><LineTo X='192.0' Y='110.0'/><LineTo X='188.0' Y='109.0'/><LineTo X='189.0' Y='108.0'/><LineTo X='189.0' Y='107.0'/><LineTo X='187.0' Y='107.0'/><LineTo X='187.0' Y='104.0'/><LineTo X='186.0' Y='105.0'/><LineTo X='188.0' Y='103.0'/><LineTo X='189.0' Y='104.0'/>
+					<MoveTo X='195.0' Y='108.0'/><LineTo X='196.0' Y='107.0'/><LineTo X='197.0' Y='109.0'/><LineTo X='197.0' Y='108.0'/><LineTo X='195.0' Y='104.0'/><LineTo X='194.0' Y='105.0'/><LineTo X='194.0' Y='107.0'/><LineTo X='195.0' Y='108.0'/><LineTo X='195.0' Y='106.0'/><LineTo X='195.0' Y='108.0'/>
+					<MoveTo X='49.0' Y='124.0'/><LineTo X='52.0' Y='121.0'/><LineTo X='55.0' Y='120.0'/><LineTo X='55.0' Y='121.0'/><LineTo X='49.0' Y='124.0'/>
+					<MoveTo X='56.0' Y='121.0'/><LineTo X='57.0' Y='121.0'/><LineTo X='59.0' Y='119.0'/><LineTo X='59.0' Y='118.0'/><LineTo X='62.0' Y='118.0'/><LineTo X='61.0' Y='120.0'/><LineTo X='57.0' Y='121.0'/><LineTo X='56.0' Y='121.0'/>
+					<MoveTo X='68.0' Y='115.0'/><LineTo X='70.0' Y='113.0'/><LineTo X='73.0' Y='112.0'/><LineTo X='75.0' Y='115.0'/><LineTo X='71.0' Y='115.0'/><LineTo X='69.0' Y='117.0'/><LineTo X='68.0' Y='116.0'/><LineTo X='68.0' Y='115.0'/>
+					<MoveTo X='108.0' Y='101.0'/><LineTo X='110.0' Y='99.0'/><LineTo X='111.0' Y='99.0'/><LineTo X='111.0' Y='101.0'/><LineTo X='111.0' Y='97.0'/><LineTo X='114.0' Y='98.0'/><LineTo X='114.0' Y='97.0'/><LineTo X='116.0' Y='99.0'/><LineTo X='117.0' Y='100.0'/><LineTo X='117.0' Y='101.0'/><LineTo X='115.0' Y='100.0'/><LineTo X='115.0' Y='101.0'/><LineTo X='114.0' Y='102.0'/><LineTo X='112.0' Y='103.0'/><LineTo X='112.0' Y='104.0'/><LineTo X='110.0' Y='105.0'/><LineTo X='110.0' Y='103.0'/><LineTo X='110.0' Y='102.0'/><LineTo X='109.0' Y='104.0'/><LineTo X='108.0' Y='101.0'/>
+					<MoveTo X='66.0' Y='76.0'/><LineTo X='72.0' Y='76.0'/><LineTo X='71.0' Y='79.0'/><LineTo X='68.0' Y='79.0'/><LineTo X='66.0' Y='76.0'/>
+					<MoveTo X='74.0' Y='74.0'/><LineTo X='75.0' Y='74.0'/><LineTo X='77.0' Y='75.0'/><LineTo X='75.0' Y='77.0'/><LineTo X='74.0' Y='75.0'/><LineTo X='74.0' Y='74.0'/>
+					<MoveTo X='156.0' Y='78.0'/><LineTo X='149.0' Y='12.0'/><LineTo X='149.0' Y='13.0'/><LineTo X='143.0' Y='9.0'/><LineTo X='142.0' Y='10.0'/><LineTo X='141.0' Y='10.0'/><LineTo X='138.0' Y='11.0'/><LineTo X='136.0' Y='9.0'/><LineTo X='133.0' Y='10.0'/><LineTo X='127.0' Y='7.0'/><LineTo X='124.0' Y='8.0'/><LineTo X='124.0' Y='7.0'/><LineTo X='120.0' Y='7.0'/><LineTo X='120.0' Y='5.0'/><LineTo X='118.0' Y='4.0'/><LineTo X='117.0' Y='4.0'/><LineTo X='115.0' Y='5.0'/><LineTo X='113.0' Y='4.0'/><LineTo X='113.0' Y='2.0'/><LineTo X='112.0' Y='2.0'/><LineTo X='111.0' Y='3.0'/><LineTo X='111.0' Y='2.0'/><LineTo X='108.0' Y='0.0'/><LineTo X='105.0' Y='4.0'/><LineTo X='102.0' Y='4.0'/><LineTo X='102.0' Y='3.0'/><LineTo X='100.0' Y='4.0'/><LineTo X='100.0' Y='7.0'/><LineTo X='99.0' Y='7.0'/><LineTo X='99.0' Y='5.0'/><LineTo X='94.0' Y='8.0'/><LineTo X='93.0' Y='8.0'/><LineTo X='93.0' Y='9.0'/><LineTo X='91.0' Y='10.0'/><LineTo X='91.0' Y='11.0'/><LineTo X='90.0' Y='13.0'/><LineTo X='87.0' Y='16.0'/><LineTo X='81.0' Y='16.0'/><LineTo X='80.0' Y='18.0'/><LineTo X='79.0' Y='19.0'/><LineTo X='85.0' Y='26.0'/><LineTo X='86.0' Y='30.0'/><LineTo X='88.0' Y='31.0'/><LineTo X='89.0' Y='31.0'/><LineTo X='91.0' Y='31.0'/><LineTo X='91.0' Y='33.0'/><LineTo X='92.0' Y='35.0'/><LineTo X='92.0' Y='34.0'/><LineTo X='95.0' Y='35.0'/><LineTo X='97.0' Y='35.0'/><LineTo X='98.0' Y='36.0'/><LineTo X='94.0' Y='37.0'/><LineTo X='93.0' Y='35.0'/><LineTo X='91.0' Y='35.0'/><LineTo X='90.0' Y='34.0'/><LineTo X='90.0' Y='36.0'/><LineTo X='91.0' Y='36.0'/><LineTo X='93.0' Y='37.0'/><LineTo X='92.0' Y='37.0'/><LineTo X='90.0' Y='39.0'/><LineTo X='89.0' Y='38.0'/><LineTo X='85.0' Y='38.0'/><LineTo X='84.0' Y='36.0'/><LineTo X='85.0' Y='36.0'/><LineTo X='85.0' Y='34.0'/><LineTo X='86.0' Y='34.0'/><LineTo X='83.0' Y='33.0'/><LineTo X='79.0' Y='35.0'/><LineTo X='78.0' Y='35.0'/><LineTo X='72.0' Y='38.0'/><LineTo X='71.0' Y='38.0'/><LineTo X='73.0' Y='40.0'/><LineTo X='77.0' Y='42.0'/><LineTo X='75.0' Y='43.0'/><LineTo X='74.0' Y='42.0'/><LineTo X='76.0' Y='47.0'/><LineTo X='80.0' Y='49.0'/><LineTo X='83.0' Y='48.0'/><LineTo X='85.0' Y='50.0'/><LineTo X='85.0' Y='49.0'/><LineTo X='85.0' Y='48.0'/><LineTo X='86.0' Y='51.0'/><LineTo X='88.0' Y='48.0'/><LineTo X='92.0' Y='47.0'/><LineTo X='92.0' Y='50.0'/><LineTo X='90.0' Y='50.0'/><LineTo X='91.0' Y='51.0'/><LineTo X='92.0' Y='54.0'/><LineTo X='90.0' Y='57.0'/><LineTo X='87.0' Y='57.0'/><LineTo X='84.0' Y='59.0'/><LineTo X='80.0' Y='59.0'/><LineTo X='78.0' Y='61.0'/><LineTo X='76.0' Y='62.0'/><LineTo X='75.0' Y='63.0'/><LineTo X='74.0' Y='66.0'/><LineTo X='72.0' Y='66.0'/><LineTo X='72.0' Y='68.0'/><LineTo X='75.0' Y='68.0'/><LineTo X='73.0' Y='69.0'/><LineTo X='74.0' Y='69.0'/><LineTo X='74.0' Y='72.0'/><LineTo X='77.0' Y='72.0'/><LineTo X='76.0' Y='73.0'/><LineTo X='79.0' Y='74.0'/><LineTo X='78.0' Y='75.0'/><LineTo X='76.0' Y='78.0'/><LineTo X='78.0' Y='80.0'/><LineTo X='77.0' Y='80.0'/><LineTo X='77.0' Y='82.0'/><LineTo X='80.0' Y='82.0'/><LineTo X='83.0' Y='79.0'/><LineTo X='82.0' Y='78.0'/><LineTo X='84.0' Y='76.0'/><LineTo X='86.0' Y='75.0'/><LineTo X='83.0' Y='78.0'/><LineTo X='85.0' Y='84.0'/><LineTo X='83.0' Y='86.0'/><LineTo X='84.0' Y='87.0'/><LineTo X='84.0' Y='89.0'/><LineTo X='84.0' Y='90.0'/><LineTo X='87.0' Y='88.0'/><LineTo X='89.0' Y='86.0'/><LineTo X='89.0' Y='89.0'/><LineTo X='91.0' Y='89.0'/><LineTo X='93.0' Y='93.0'/><LineTo X='94.0' Y='92.0'/><LineTo X='94.0' Y='90.0'/><LineTo X='95.0' Y='90.0'/><LineTo X='97.0' Y='91.0'/><LineTo X='101.0' Y='88.0'/><LineTo X='98.0' Y='94.0'/><LineTo X='98.0' Y='95.0'/><LineTo X='97.0' Y='98.0'/><LineTo X='93.0' Y='103.0'/><LineTo X='90.0' Y='104.0'/><LineTo X='86.0' Y='107.0'/><LineTo X='86.0' Y='109.0'/><LineTo X='85.0' Y='108.0'/><LineTo X='83.0' Y='107.0'/><LineTo X='79.0' Y='110.0'/><LineTo X='76.0' Y='112.0'/><LineTo X='74.0' Y='114.0'/><LineTo X='76.0' Y='114.0'/><LineTo X='77.0' Y='113.0'/><LineTo X='78.0' Y='113.0'/><LineTo X='80.0' Y='113.0'/><LineTo X='82.0' Y='110.0'/><LineTo X='82.0' Y='111.0'/><LineTo X='83.0' Y='112.0'/><LineTo X='86.0' Y='111.0'/><LineTo X='88.0' Y='109.0'/><LineTo X='89.0' Y='111.0'/><LineTo X='90.0' Y='109.0'/><LineTo X='93.0' Y='108.0'/><LineTo X='93.0' Y='107.0'/><LineTo X='96.0' Y='106.0'/><LineTo X='95.0' Y='105.0'/><LineTo X='97.0' Y='105.0'/><LineTo X='98.0' Y='104.0'/><LineTo X='99.0' Y='104.0'/><LineTo X='102.0' Y='101.0'/><LineTo X='101.0' Y='101.0'/><LineTo X='104.0' Y='99.0'/><LineTo X='105.0' Y='98.0'/><LineTo X='106.0' Y='98.0'/><LineTo X='110.0' Y='95.0'/><LineTo X='110.0' Y='94.0'/><LineTo X='113.0' Y='92.0'/><LineTo X='113.0' Y='91.0'/><LineTo X='111.0' Y='89.0'/><LineTo X='110.0' Y='90.0'/><LineTo X='111.0' Y='87.0'/><LineTo X='112.0' Y='87.0'/><LineTo X='114.0' Y='85.0'/><LineTo X='114.0' Y='84.0'/><LineTo X='115.0' Y='81.0'/><LineTo X='116.0' Y='82.0'/><LineTo X='119.0' Y='77.0'/><LineTo X='123.0' Y='74.0'/><LineTo X='124.0' Y='68.0'/><LineTo X='124.0' Y='71.0'/><LineTo X='123.0' Y='74.0'/><LineTo X='125.0' Y='75.0'/><LineTo X='125.0' Y='76.0'/><LineTo X='124.0' Y='76.0'/><LineTo X='121.0' Y='78.0'/><LineTo X='120.0' Y='81.0'/><LineTo X='119.0' Y='85.0'/><LineTo X='121.0' Y='85.0'/><LineTo X='121.0' Y='86.0'/><LineTo X='119.0' Y='87.0'/><LineTo X='118.0' Y='88.0'/><LineTo X='121.0' Y='89.0'/><LineTo X='121.0' Y='88.0'/><LineTo X='124.0' Y='86.0'/><LineTo X='124.0' Y='88.0'/><LineTo X='126.0' Y='84.0'/><LineTo X='126.0' Y='85.0'/><LineTo X='127.0' Y='83.0'/><LineTo X='127.0' Y='84.0'/><LineTo X='129.0' Y='84.0'/><LineTo X='131.0' Y='82.0'/><LineTo X='130.0' Y='82.0'/><LineTo X='132.0' Y='80.0'/><LineTo X='130.0' Y='80.0'/><LineTo X='131.0' Y='78.0'/><LineTo X='130.0' Y='78.0'/><LineTo X='132.0' Y='75.0'/><LineTo X='133.0' Y='75.0'/><LineTo X='133.0' Y='76.0'/><LineTo X='135.0' Y='76.0'/><LineTo X='136.0' Y='76.0'/><LineTo X='136.0' Y='77.0'/><LineTo X='138.0' Y='79.0'/><LineTo X='139.0' Y='79.0'/><LineTo X='141.0' Y='81.0'/><LineTo X='143.0' Y='81.0'/><LineTo X='146.0' Y='83.0'/><LineTo X='155.0' Y='82.0'/><LineTo X='155.0' Y='83.0'/><LineTo X='159.0' Y='84.0'/><LineTo X='161.0' Y='81.0'/><LineTo X='163.0' Y='82.0'/><LineTo X='162.0' Y='83.0'/><LineTo X='162.0' Y='84.0'/><LineTo X='161.0' Y='84.0'/><LineTo X='160.0' Y='85.0'/><LineTo X='165.0' Y='87.0'/><LineTo X='166.0' Y='86.0'/><LineTo X='166.0' Y='85.0'/><LineTo X='162.0' Y='81.0'/><LineTo X='160.0' Y='79.0'/><LineTo X='159.0' Y='80.0'/><LineTo X='156.0' Y='80.0'/><LineTo X='156.0' Y='78.0'/>
+					<MoveTo X='167.0' Y='85.0'/><LineTo X='169.0' Y='87.0'/><LineTo X='170.0' Y='87.0'/><LineTo X='172.0' Y='86.0'/><LineTo X='172.0' Y='83.0'/><LineTo X='175.0' Y='81.0'/><LineTo X='180.0' Y='87.0'/><LineTo X='181.0' Y='87.0'/><LineTo X='192.0' Y='100.0'/><LineTo X='195.0' Y='101.0'/><LineTo X='200.0' Y='103.0'/><LineTo X='200.0' Y='108.0'/><LineTo X='198.0' Y='110.0'/><LineTo X='198.0' Y='111.0'/><LineTo X='197.0' Y='109.0'/><LineTo X='198.0' Y='108.0'/><LineTo X='198.0' Y='107.0'/><LineTo X='195.0' Y='102.0'/><LineTo X='193.0' Y='104.0'/><LineTo X='193.0' Y='107.0'/><LineTo X='192.0' Y='106.0'/><LineTo X='192.0' Y='103.0'/><LineTo X='193.0' Y='102.0'/><LineTo X='190.0' Y='99.0'/><LineTo X='188.0' Y='99.0'/><LineTo X='187.0' Y='98.0'/><LineTo X='188.0' Y='97.0'/><LineTo X='185.0' Y='97.0'/><LineTo X='186.0' Y='96.0'/><LineTo X='186.0' Y='95.0'/><LineTo X='183.0' Y='92.0'/><LineTo X='182.0' Y='92.0'/><LineTo X='182.0' Y='90.0'/><LineTo X='179.0' Y='90.0'/><LineTo X='178.0' Y='90.0'/><LineTo X='177.0' Y='90.0'/><LineTo X='175.0' Y='90.0'/><LineTo X='174.0' Y='87.0'/><LineTo X='174.0' Y='88.0'/><LineTo X='171.0' Y='87.0'/><LineTo X='174.0' Y='90.0'/><LineTo X='174.0' Y='91.0'/><LineTo X='173.0' Y='92.0'/><LineTo X='170.0' Y='91.0'/><LineTo X='166.0' Y='87.0'/><LineTo X='166.0' Y='85.0'/><LineTo X='167.0' Y='85.0'/>
+					<MoveTo X='0.0' Y='117.0'/><LineTo X='3.0' Y='120.0'/><LineTo X='2.0' Y='120.0'/><LineTo X='0.0' Y='117.0'/>
+					<MoveTo X='195.0' Y='117.0'/><LineTo X='196.0' Y='116.0'/><LineTo X='196.0' Y='121.0'/><LineTo X='194.0' Y='123.0'/><LineTo X='193.0' Y='121.0'/><LineTo X='194.0' Y='120.0'/><LineTo X='192.0' Y='120.0'/><LineTo X='190.0' Y='116.0'/><LineTo X='192.0' Y='116.0'/><LineTo X='193.0' Y='116.0'/><LineTo X='194.0' Y='118.0'/><LineTo X='194.0' Y='117.0'/><LineTo X='195.0' Y='117.0'/>
+					<MoveTo X='196.0' Y='125.0'/><LineTo X='195.0' Y='124.0'/><LineTo X='194.0' Y='123.0'/><LineTo X='196.0' Y='121.0'/><LineTo X='196.0' Y='123.0'/><LineTo X='197.0' Y='123.0'/><LineTo X='197.0' Y='126.0'/><LineTo X='198.0' Y='126.0'/><LineTo X='200.0' Y='128.0'/><LineTo X='196.0' Y='125.0'/>
+				</Path>
+				<Label Position='Relative' X='95' Y='40' HJustification='Center' LeaderColor='Black'/>
+			</ItemShapeSettings>
+		</MapShapeItem>
+		<MapShapeItem Name='AL' LongName='Alabama' X='539.0' Y='300.0' OrigWidth='55' OrigHeight='90' OrigColor='#ffcccc' Parent='US' Code='01' NameClass='State' Value='No Data'>
+			<ItemShapeSettings  Type='Polygon' Top='240' Left='411' Width='42' Height='69'>
+				<MapProperties PolyMinX='539.0' PolyMinY='300.0' OverrideTextSettings='True'/>
+				<Path>
+					<MoveTo X='2.0' Y='88.0'/><LineTo X='5.0' Y='88.0'/><LineTo X='6.0' Y='87.0'/><LineTo X='8.0' Y='78.0'/><LineTo X='10.0' Y='87.0'/><LineTo X='9.0' Y='89.0'/><LineTo X='10.0' Y='90.0'/><LineTo X='18.0' Y='87.0'/><LineTo X='18.0' Y='82.0'/><LineTo X='14.0' Y='79.0'/><LineTo X='14.0' Y='76.0'/><LineTo X='55.0' Y='72.0'/><LineTo X='53.0' Y='69.0'/><LineTo X='53.0' Y='59.0'/><LineTo X='52.0' Y='56.0'/><LineTo X='52.0' Y='52.0'/><LineTo X='54.0' Y='49.0'/><LineTo X='53.0' Y='48.0'/><LineTo X='53.0' Y='46.0'/><LineTo X='50.0' Y='42.0'/><LineTo X='38.0' Y='0.0'/><LineTo X='0.0' Y='3.0'/><LineTo X='1.0' Y='5.0'/><LineTo X='2.0' Y='88.0'/>
+				</Path>
+				<Label Position='Relative' X='25' Y='42' HJustification='Center' LeaderColor='Black'/>
+			</ItemShapeSettings>
+		</MapShapeItem>
+		<MapShapeItem Name='AR' LongName='Arkansas' X='443.0' Y='277.0' OrigWidth='73' OrigHeight='66' OrigColor='#ffcccc' Parent='US' Code='05' NameClass='State' Value='No Data'>
+			<ItemShapeSettings  Type='Polygon' Top='222' Left='337' Width='56' Height='50'>
+				<MapProperties PolyMinX='443.0' PolyMinY='277.0' OverrideTextSettings='True'/>
+				<Path>
+					<MoveTo X='0.0' Y='2.0'/><LineTo X='2.0' Y='55.0'/><LineTo X='3.0' Y='56.0'/><LineTo X='8.0' Y='56.0'/><LineTo X='9.0' Y='66.0'/><LineTo X='53.0' Y='65.0'/><LineTo X='53.0' Y='63.0'/><LineTo X='54.0' Y='62.0'/><LineTo X='52.0' Y='60.0'/><LineTo X='53.0' Y='57.0'/><LineTo X='51.0' Y='55.0'/><LineTo X='53.0' Y='54.0'/><LineTo X='51.0' Y='53.0'/><LineTo X='54.0' Y='51.0'/><LineTo X='54.0' Y='48.0'/><LineTo X='53.0' Y='47.0'/><LineTo X='56.0' Y='46.0'/><LineTo X='56.0' Y='45.0'/><LineTo X='55.0' Y='44.0'/><LineTo X='57.0' Y='42.0'/><LineTo X='58.0' Y='42.0'/><LineTo X='58.0' Y='40.0'/><LineTo X='60.0' Y='39.0'/><LineTo X='61.0' Y='33.0'/><LineTo X='62.0' Y='33.0'/><LineTo X='62.0' Y='31.0'/><LineTo X='65.0' Y='30.0'/><LineTo X='66.0' Y='27.0'/><LineTo X='66.0' Y='26.0'/><LineTo X='67.0' Y='25.0'/><LineTo X='67.0' Y='21.0'/><LineTo X='68.0' Y='18.0'/><LineTo X='70.0' Y='16.0'/><LineTo X='69.0' Y='14.0'/><LineTo X='72.0' Y='13.0'/><LineTo X='72.0' Y='12.0'/><LineTo X='71.0' Y='11.0'/><LineTo X='73.0' Y='11.0'/><LineTo X='72.0' Y='9.0'/><LineTo X='62.0' Y='10.0'/><LineTo X='67.0' Y='4.0'/><LineTo X='65.0' Y='0.0'/><LineTo X='0.0' Y='2.0'/>
+				</Path>
+				<Label Position='Relative' X='25' Y='30' HJustification='Center' LeaderColor='Black'/>
+			</ItemShapeSettings>
+		</MapShapeItem>
+		<MapShapeItem Name='AZ' LongName='Arizona' X='134.0' Y='242.0' OrigWidth='99' OrigHeight='116' OrigColor='#ffdfbf' Parent='US' Code='04' NameClass='State' Value='No Data'>
+			<ItemShapeSettings  Type='Polygon' Top='195' Left='101' Width='76' Height='89'>
+				<MapProperties PolyMinX='134.0' PolyMinY='242.0' OverrideTextSettings='True'/>
+				<Path>
+					<MoveTo X='99.0' Y='12.0'/><LineTo X='83.0' Y='116.0'/><LineTo X='54.0' Y='111.0'/><LineTo X='0.0' Y='78.0'/><LineTo X='0.0' Y='76.0'/><LineTo X='1.0' Y='75.0'/><LineTo X='4.0' Y='76.0'/><LineTo X='6.0' Y='72.0'/><LineTo X='3.0' Y='69.0'/><LineTo X='4.0' Y='67.0'/><LineTo X='3.0' Y='65.0'/><LineTo X='7.0' Y='61.0'/><LineTo X='8.0' Y='58.0'/><LineTo X='9.0' Y='54.0'/><LineTo X='10.0' Y='53.0'/><LineTo X='11.0' Y='51.0'/><LineTo X='16.0' Y='49.0'/><LineTo X='15.0' Y='45.0'/><LineTo X='13.0' Y='44.0'/><LineTo X='11.0' Y='37.0'/><LineTo X='11.0' Y='32.0'/><LineTo X='12.0' Y='32.0'/><LineTo X='13.0' Y='21.0'/><LineTo X='14.0' Y='18.0'/><LineTo X='13.0' Y='17.0'/><LineTo X='16.0' Y='14.0'/><LineTo X='19.0' Y='15.0'/><LineTo X='20.0' Y='17.0'/><LineTo X='21.0' Y='17.0'/><LineTo X='24.0' Y='15.0'/><LineTo X='27.0' Y='0.0'/><LineTo X='99.0' Y='12.0'/>
+				</Path>
+				<Label Position='Relative' X='54' Y='55' HJustification='Center' LeaderColor='Black'/>
+			</ItemShapeSettings>
+		</MapShapeItem>
+		<MapShapeItem Name='CA' LongName='California' X='36.0' Y='117.0' OrigWidth='114' OrigHeight='201' OrigColor='#ffcccc' Parent='US' Code='06' NameClass='State' Value='No Data'>
+			<ItemShapeSettings  Type='Polygon' Top='100' Left='26' Width='87' Height='154'>
+				<MapProperties PolyMinX='36.0' PolyMinY='117.0' OverrideTextSettings='True'/>
+				<Path>
+					<MoveTo X='25.0' Y='159.0'/><LineTo X='24.0' Y='158.0'/><LineTo X='27.0' Y='158.0'/><LineTo X='27.0' Y='161.0'/><LineTo X='25.0' Y='159.0'/>
+					<MoveTo X='30.0' Y='158.0'/><LineTo X='32.0' Y='160.0'/><LineTo X='35.0' Y='161.0'/><LineTo X='34.0' Y='161.0'/><LineTo X='31.0' Y='162.0'/><LineTo X='30.0' Y='161.0'/><LineTo X='30.0' Y='158.0'/>
+					<MoveTo X='44.0' Y='182.0'/><LineTo X='47.0' Y='187.0'/><LineTo X='45.0' Y='187.0'/><LineTo X='44.0' Y='183.0'/><LineTo X='44.0' Y='182.0'/>
+					<MoveTo X='50.0' Y='69.0'/><LineTo X='64.0' Y='16.0'/><LineTo X='11.0' Y='0.0'/><LineTo X='10.0' Y='11.0'/><LineTo X='6.0' Y='21.0'/><LineTo X='1.0' Y='25.0'/><LineTo X='0.0' Y='29.0'/><LineTo X='1.0' Y='31.0'/><LineTo X='4.0' Y='43.0'/><LineTo X='3.0' Y='45.0'/><LineTo X='2.0' Y='58.0'/><LineTo X='7.0' Y='70.0'/><LineTo X='6.0' Y='74.0'/><LineTo X='8.0' Y='77.0'/><LineTo X='10.0' Y='79.0'/><LineTo X='12.0' Y='79.0'/><LineTo X='13.0' Y='75.0'/><LineTo X='17.0' Y='76.0'/><LineTo X='19.0' Y='78.0'/><LineTo X='16.0' Y='79.0'/><LineTo X='14.0' Y='80.0'/><LineTo X='15.0' Y='88.0'/><LineTo X='12.0' Y='84.0'/><LineTo X='12.0' Y='82.0'/><LineTo X='11.0' Y='82.0'/><LineTo X='10.0' Y='83.0'/><LineTo X='10.0' Y='94.0'/><LineTo X='12.0' Y='97.0'/><LineTo X='15.0' Y='98.0'/><LineTo X='16.0' Y='101.0'/><LineTo X='15.0' Y='104.0'/><LineTo X='13.0' Y='105.0'/><LineTo X='12.0' Y='109.0'/><LineTo X='21.0' Y='129.0'/><LineTo X='22.0' Y='130.0'/><LineTo X='21.0' Y='133.0'/><LineTo X='23.0' Y='135.0'/><LineTo X='24.0' Y='137.0'/><LineTo X='23.0' Y='140.0'/><LineTo X='22.0' Y='147.0'/><LineTo X='29.0' Y='150.0'/><LineTo X='32.0' Y='153.0'/><LineTo X='35.0' Y='153.0'/><LineTo X='39.0' Y='157.0'/><LineTo X='40.0' Y='159.0'/><LineTo X='45.0' Y='164.0'/><LineTo X='47.0' Y='163.0'/><LineTo X='48.0' Y='163.0'/><LineTo X='50.0' Y='166.0'/><LineTo X='51.0' Y='170.0'/><LineTo X='54.0' Y='171.0'/><LineTo X='63.0' Y='184.0'/><LineTo X='64.0' Y='187.0'/><LineTo X='63.0' Y='197.0'/><LineTo X='98.0' Y='201.0'/><LineTo X='99.0' Y='200.0'/><LineTo X='102.0' Y='201.0'/><LineTo X='104.0' Y='197.0'/><LineTo X='101.0' Y='194.0'/><LineTo X='102.0' Y='192.0'/><LineTo X='101.0' Y='190.0'/><LineTo X='105.0' Y='186.0'/><LineTo X='106.0' Y='183.0'/><LineTo X='107.0' Y='179.0'/><LineTo X='108.0' Y='178.0'/><LineTo X='109.0' Y='176.0'/><LineTo X='114.0' Y='174.0'/><LineTo X='113.0' Y='170.0'/><LineTo X='111.0' Y='169.0'/><LineTo X='109.0' Y='162.0'/><LineTo X='109.0' Y='160.0'/><LineTo X='50.0' Y='69.0'/>
+				</Path>
+				<Label Position='Relative' X='43' Y='101' HJustification='Center' LeaderColor='Black'/>
+			</ItemShapeSettings>
+		</MapShapeItem>
+		<MapShapeItem Name='CO' LongName='Colorado' X='233.0' Y='181.0' OrigWidth='107' OrigHeight='85' OrigColor='#ffdfbf' Parent='US' Code='08' NameClass='State' Value='No Data'>
+			<ItemShapeSettings  Type='Polygon' Top='149' Left='177' Width='82' Height='65'>
+				<MapProperties PolyMinX='233.0' PolyMinY='181.0' OverrideTextSettings='True'/>
+				<Path>
+					<MoveTo X='71.0' Y='82.0'/><LineTo X='0.0' Y='73.0'/><LineTo X='11.0' Y='0.0'/><LineTo X='107.0' Y='11.0'/><LineTo X='102.0' Y='85.0'/><LineTo X='71.0' Y='82.0'/>
+				</Path>
+				<Label Position='Relative' X='54' Y='42' HJustification='Center' LeaderColor='Black'/>
+			</ItemShapeSettings>
+		</MapShapeItem>
+		<MapShapeItem Name='CT' LongName='Connecticut' X='727.0' Y='138.0' OrigWidth='25' OrigHeight='25' OrigColor='#ffdfbf' Parent='US' Code='09' NameClass='State' Value='No Data'>
+			<ItemShapeSettings  Type='Polygon' Top='116' Left='554' Width='19' Height='19'>
+				<MapProperties PolyMinX='727.0' PolyMinY='138.0' OverrideTextSettings='True'/>
+				<Path>
+					<MoveTo X='2.0' Y='25.0'/><LineTo X='10.0' Y='20.0'/><LineTo X='11.0' Y='18.0'/><LineTo X='12.0' Y='17.0'/><LineTo X='16.0' Y='17.0'/><LineTo X='25.0' Y='13.0'/><LineTo X='25.0' Y='11.0'/><LineTo X='23.0' Y='0.0'/><LineTo X='10.0' Y='3.0'/><LineTo X='9.0' Y='4.0'/><LineTo X='0.0' Y='6.0'/><LineTo X='2.0' Y='19.0'/><LineTo X='4.0' Y='20.0'/><LineTo X='1.0' Y='23.0'/><LineTo X='2.0' Y='25.0'/>
+				</Path>
+				<Label Position='Relative' X='45' Y='23' HJustification='Center' FillOn='True' BorderType='Thin' FillColor='#cc0000' SourcePointX='13' SourcePointY='10' LeaderColor='Black' FillWithShapeColor='True'/>
+			</ItemShapeSettings>
+		</MapShapeItem>
+		<MapShapeItem Name='DC' LongName='District of Columbia' X='689.0' Y='209.0' OrigWidth='4' OrigHeight='3' OrigColor='#ccffcc' Parent='US' Code='11' NameClass='State' Value='No Data'>
+			<ItemShapeSettings  Type='Polygon' Top='170' Left='525' Width='3' Height='2'>
+				<MapProperties PolyMinX='689.0' PolyMinY='209.0' OverrideTextSettings='True'/>
+				<Path>
+					<MoveTo X='2.0' Y='3.0'/><LineTo X='2.0' Y='2.0'/><LineTo X='0.0' Y='1.0'/><LineTo X='1.0' Y='0.0'/><LineTo X='4.0' Y='1.0'/><LineTo X='2.0' Y='3.0'/>
+				</Path>
+				<Label Position='Relative' X='50' Y='50' HJustification='Center' FillOn='True' BorderType='Thin' FillColor='#cc0000' SourcePointX='1' SourcePointY='2' LeaderColor='Black' FillWithShapeColor='True'/>
+			</ItemShapeSettings>
+		</MapShapeItem>
+		<MapShapeItem Name='DE' LongName='Delaware' X='705.0' Y='189.0' OrigWidth='16' OrigHeight='26' OrigColor='#ccffcc' Parent='US' Code='10' NameClass='State' Value='No Data'>
+			<ItemShapeSettings  Type='Polygon' Top='155' Left='538' Width='12' Height='20'>
+				<MapProperties PolyMinX='705.0' PolyMinY='189.0' OverrideTextSettings='True'/>
+				<Path>
+					<MoveTo X='0.0' Y='3.0'/><LineTo X='3.0' Y='0.0'/><LineTo X='5.0' Y='1.0'/><LineTo X='5.0' Y='2.0'/><LineTo X='4.0' Y='4.0'/><LineTo X='5.0' Y='5.0'/><LineTo X='5.0' Y='7.0'/><LineTo X='16.0' Y='22.0'/><LineTo X='15.0' Y='24.0'/><LineTo X='6.0' Y='26.0'/><LineTo X='0.0' Y='3.0'/>
+				</Path>
+				<Label Position='Relative' X='45' Y='22' HJustification='Center' FillOn='True' BorderType='Thin' FillColor='#cc0000' SourcePointX='6' SourcePointY='16' LeaderColor='Black' FillWithShapeColor='True'/>
+			</ItemShapeSettings>
+		</MapShapeItem>
+		<MapShapeItem Name='FL' LongName='Florida' X='553.0' Y='370.0' OrigWidth='131' OrigHeight='112' OrigColor='#ccffcc' Parent='US' Code='12' NameClass='State' Value='No Data'>
+			<ItemShapeSettings  Type='Polygon' Top='293' Left='421' Width='100' Height='86'>
+				<MapProperties PolyMinX='553.0' PolyMinY='370.0' OverrideTextSettings='True'/>
+				<Path>
+					<MoveTo X='130.0' Y='98.0'/><LineTo X='129.0' Y='97.0'/><LineTo X='126.0' Y='102.0'/><LineTo X='127.0' Y='103.0'/><LineTo X='130.0' Y='98.0'/>
+					<MoveTo X='115.0' Y='110.0'/><LineTo X='113.0' Y='110.0'/><LineTo X='110.0' Y='112.0'/><LineTo X='107.0' Y='112.0'/><LineTo X='108.0' Y='111.0'/><LineTo X='113.0' Y='108.0'/><LineTo X='115.0' Y='110.0'/>
+					<MoveTo X='4.0' Y='17.0'/><LineTo X='6.0' Y='15.0'/><LineTo X='9.0' Y='13.0'/><LineTo X='10.0' Y='14.0'/><LineTo X='9.0' Y='16.0'/><LineTo X='21.0' Y='13.0'/><LineTo X='22.0' Y='14.0'/><LineTo X='21.0' Y='16.0'/><LineTo X='34.0' Y='21.0'/><LineTo X='39.0' Y='26.0'/><LineTo X='47.0' Y='23.0'/><LineTo X='51.0' Y='21.0'/><LineTo X='53.0' Y='19.0'/><LineTo X='54.0' Y='17.0'/><LineTo X='58.0' Y='17.0'/><LineTo X='61.0' Y='18.0'/><LineTo X='67.0' Y='23.0'/><LineTo X='68.0' Y='23.0'/><LineTo X='69.0' Y='26.0'/><LineTo X='70.0' Y='26.0'/><LineTo X='74.0' Y='30.0'/><LineTo X='79.0' Y='32.0'/><LineTo X='80.0' Y='33.0'/><LineTo X='83.0' Y='55.0'/><LineTo X='85.0' Y='53.0'/><LineTo X='87.0' Y='54.0'/><LineTo X='86.0' Y='60.0'/><LineTo X='87.0' Y='64.0'/><LineTo X='94.0' Y='72.0'/><LineTo X='97.0' Y='71.0'/><LineTo X='98.0' Y='76.0'/><LineTo X='99.0' Y='75.0'/><LineTo X='99.0' Y='78.0'/><LineTo X='102.0' Y='81.0'/><LineTo X='105.0' Y='87.0'/><LineTo X='107.0' Y='88.0'/><LineTo X='109.0' Y='88.0'/><LineTo X='111.0' Y='89.0'/><LineTo X='115.0' Y='95.0'/><LineTo X='116.0' Y='100.0'/><LineTo X='117.0' Y='100.0'/><LineTo X='124.0' Y='99.0'/><LineTo X='128.0' Y='96.0'/><LineTo X='131.0' Y='95.0'/><LineTo X='130.0' Y='94.0'/><LineTo X='131.0' Y='81.0'/><LineTo X='129.0' Y='65.0'/><LineTo X='117.0' Y='45.0'/><LineTo X='116.0' Y='38.0'/><LineTo X='107.0' Y='26.0'/><LineTo X='96.0' Y='2.0'/><LineTo X='96.0' Y='1.0'/><LineTo X='89.0' Y='0.0'/><LineTo X='88.0' Y='1.0'/><LineTo X='89.0' Y='4.0'/><LineTo X='89.0' Y='8.0'/><LineTo X='87.0' Y='8.0'/><LineTo X='85.0' Y='5.0'/><LineTo X='44.0' Y='7.0'/><LineTo X='41.0' Y='2.0'/><LineTo X='0.0' Y='6.0'/><LineTo X='0.0' Y='9.0'/><LineTo X='4.0' Y='12.0'/><LineTo X='4.0' Y='17.0'/>
+				</Path>
+				<Label Position='Relative' X='82' Y='41' HJustification='Center' LeaderColor='Black'/>
+			</ItemShapeSettings>
+		</MapShapeItem>
+		<MapShapeItem Name='GA' LongName='Georgia' X='577.0' Y='295.0' OrigWidth='79' OrigHeight='83' OrigColor='#ffdfbf' Parent='US' Code='13' NameClass='State' Value='No Data'>
+			<ItemShapeSettings  Type='Polygon' Top='236' Left='440' Width='60' Height='63'>
+				<MapProperties PolyMinX='577.0' PolyMinY='295.0' OverrideTextSettings='True'/>
+				<Path>
+					<MoveTo X='72.0' Y='76.0'/><LineTo X='72.0' Y='71.0'/><LineTo X='78.0' Y='51.0'/><LineTo X='79.0' Y='50.0'/><LineTo X='75.0' Y='49.0'/><LineTo X='74.0' Y='45.0'/><LineTo X='72.0' Y='42.0'/><LineTo X='69.0' Y='41.0'/><LineTo X='67.0' Y='34.0'/><LineTo X='62.0' Y='32.0'/><LineTo X='61.0' Y='29.0'/><LineTo X='59.0' Y='28.0'/><LineTo X='59.0' Y='26.0'/><LineTo X='54.0' Y='23.0'/><LineTo X='53.0' Y='21.0'/><LineTo X='48.0' Y='19.0'/><LineTo X='45.0' Y='15.0'/><LineTo X='42.0' Y='10.0'/><LineTo X='40.0' Y='10.0'/><LineTo X='35.0' Y='6.0'/><LineTo X='36.0' Y='3.0'/><LineTo X='37.0' Y='2.0'/><LineTo X='38.0' Y='0.0'/><LineTo X='0.0' Y='5.0'/><LineTo X='12.0' Y='47.0'/><LineTo X='15.0' Y='51.0'/><LineTo X='15.0' Y='53.0'/><LineTo X='16.0' Y='54.0'/><LineTo X='14.0' Y='57.0'/><LineTo X='14.0' Y='61.0'/><LineTo X='15.0' Y='64.0'/><LineTo X='15.0' Y='74.0'/><LineTo X='20.0' Y='82.0'/><LineTo X='61.0' Y='80.0'/><LineTo X='63.0' Y='83.0'/><LineTo X='65.0' Y='83.0'/><LineTo X='65.0' Y='79.0'/><LineTo X='64.0' Y='76.0'/><LineTo X='65.0' Y='75.0'/><LineTo X='72.0' Y='76.0'/>
+				</Path>
+				<Label Position='Relative' X='36' Y='42' HJustification='Center' LeaderColor='Black'/>
+			</ItemShapeSettings>
+		</MapShapeItem>
+		<MapShapeItem Name='HI' LongName='Hawaii' X='225.0' Y='421.0' OrigWidth='97' OrigHeight='66' OrigColor='#fff4cc' Parent='US' Code='15' NameClass='State' Value='No Data'>
+			<ItemShapeSettings  Type='Polygon' Top='332' Left='171' Width='74' Height='50'>
+				<MapProperties PolyMinX='225.0' PolyMinY='421.0' OverrideTextSettings='True'/>
+				<Path>
+					<MoveTo X='2.0' Y='0.0'/><LineTo X='7.0' Y='0.0'/><LineTo X='8.0' Y='4.0'/><LineTo X='5.0' Y='7.0'/><LineTo X='0.0' Y='5.0'/><LineTo X='0.0' Y='4.0'/><LineTo X='2.0' Y='0.0'/>
+					<MoveTo X='31.0' Y='14.0'/><LineTo X='31.0' Y='13.0'/><LineTo X='32.0' Y='12.0'/><LineTo X='39.0' Y='17.0'/><LineTo X='34.0' Y='18.0'/><LineTo X='32.0' Y='17.0'/><LineTo X='30.0' Y='14.0'/><LineTo X='31.0' Y='14.0'/>
+					<MoveTo X='48.0' Y='20.0'/><LineTo X='48.0' Y='21.0'/><LineTo X='57.0' Y='20.0'/><LineTo X='58.0' Y='22.0'/><LineTo X='55.0' Y='23.0'/><LineTo X='50.0' Y='22.0'/><LineTo X='47.0' Y='21.0'/><LineTo X='48.0' Y='20.0'/>
+					<MoveTo X='64.0' Y='25.0'/><LineTo X='66.0' Y='24.0'/><LineTo X='72.0' Y='28.0'/><LineTo X='72.0' Y='30.0'/><LineTo X='69.0' Y='32.0'/><LineTo X='66.0' Y='32.0'/><LineTo X='63.0' Y='27.0'/><LineTo X='59.0' Y='25.0'/><LineTo X='60.0' Y='23.0'/><LineTo X='64.0' Y='25.0'/>
+					<MoveTo X='75.0' Y='40.0'/><LineTo X='77.0' Y='40.0'/><LineTo X='79.0' Y='41.0'/><LineTo X='81.0' Y='41.0'/><LineTo X='89.0' Y='44.0'/><LineTo X='91.0' Y='47.0'/><LineTo X='93.0' Y='48.0'/><LineTo X='96.0' Y='52.0'/><LineTo X='97.0' Y='54.0'/><LineTo X='96.0' Y='58.0'/><LineTo X='91.0' Y='57.0'/><LineTo X='88.0' Y='58.0'/><LineTo X='81.0' Y='66.0'/><LineTo X='79.0' Y='65.0'/><LineTo X='77.0' Y='62.0'/><LineTo X='74.0' Y='49.0'/><LineTo X='76.0' Y='45.0'/><LineTo X='76.0' Y='43.0'/><LineTo X='75.0' Y='40.0'/>
+					<MoveTo X='53.0' Y='26.0'/><LineTo X='52.0' Y='26.0'/><LineTo X='55.0' Y='26.0'/><LineTo X='56.0' Y='28.0'/><LineTo X='55.0' Y='29.0'/><LineTo X='53.0' Y='27.0'/><LineTo X='53.0' Y='26.0'/><LineTo X='53.0' Y='27.0'/><LineTo X='53.0' Y='26.0'/>
+				</Path>
+				<Label Position='Relative' X='32' Y='48' HJustification='Center' FillOn='True' BorderType='Thin' FillColor='#cc0000' LeaderColor='Black' FillWithShapeColor='True'/>
+			</ItemShapeSettings>
+		</MapShapeItem>
+		<MapShapeItem Name='IA' LongName='Iowa' X='415.0' Y='149.0' OrigWidth='88' OrigHeight='58' OrigColor='#ffcccc' Parent='US' Code='19' NameClass='State' Value='No Data'>
+			<ItemShapeSettings  Type='Polygon' Top='124' Left='316' Width='67' Height='44'>
+				<MapProperties PolyMinX='415.0' PolyMinY='149.0' OverrideTextSettings='True'/>
+				<Path>
+					<MoveTo X='72.0' Y='0.0'/><LineTo X='75.0' Y='14.0'/><LineTo X='80.0' Y='15.0'/><LineTo X='81.0' Y='18.0'/><LineTo X='84.0' Y='20.0'/><LineTo X='84.0' Y='22.0'/><LineTo X='88.0' Y='24.0'/><LineTo X='88.0' Y='27.0'/><LineTo X='87.0' Y='30.0'/><LineTo X='86.0' Y='31.0'/><LineTo X='85.0' Y='34.0'/><LineTo X='81.0' Y='37.0'/><LineTo X='76.0' Y='38.0'/><LineTo X='75.0' Y='41.0'/><LineTo X='78.0' Y='44.0'/><LineTo X='78.0' Y='46.0'/><LineTo X='76.0' Y='49.0'/><LineTo X='75.0' Y='52.0'/><LineTo X='72.0' Y='54.0'/><LineTo X='72.0' Y='57.0'/><LineTo X='71.0' Y='58.0'/><LineTo X='67.0' Y='53.0'/><LineTo X='11.0' Y='54.0'/><LineTo X='11.0' Y='53.0'/><LineTo X='10.0' Y='52.0'/><LineTo X='11.0' Y='49.0'/><LineTo X='10.0' Y='43.0'/><LineTo X='9.0' Y='43.0'/><LineTo X='10.0' Y='41.0'/><LineTo X='9.0' Y='40.0'/><LineTo X='9.0' Y='38.0'/><LineTo X='8.0' Y='37.0'/><LineTo X='7.0' Y='37.0'/><LineTo X='7.0' Y='32.0'/><LineTo X='6.0' Y='30.0'/><LineTo X='6.0' Y='29.0'/><LineTo X='4.0' Y='25.0'/><LineTo X='3.0' Y='19.0'/><LineTo X='2.0' Y='19.0'/><LineTo X='1.0' Y='16.0'/><LineTo X='0.0' Y='14.0'/><LineTo X='2.0' Y='7.0'/><LineTo X='2.0' Y='6.0'/><LineTo X='1.0' Y='5.0'/><LineTo X='1.0' Y='0.0'/><LineTo X='72.0' Y='0.0'/>
+				</Path>
+				<Label Position='Relative' X='38' Y='22' HJustification='Center' LeaderColor='Black'/>
+			</ItemShapeSettings>
+		</MapShapeItem>
+		<MapShapeItem Name='ID' LongName='Idaho' X='140.0' Y='18.0' OrigWidth='87' OrigHeight='141' OrigColor='#ffdfbf' Parent='US' Code='16' NameClass='State' Value='No Data'>
+			<ItemShapeSettings  Type='Polygon' Top='24' Left='106' Width='67' Height='108'>
+				<MapProperties PolyMinX='140.0' PolyMinY='18.0' OverrideTextSettings='True'/>
+				<Path>
+					<MoveTo X='39.0' Y='133.0'/><LineTo X='79.0' Y='141.0'/><LineTo X='87.0' Y='95.0'/><LineTo X='84.0' Y='90.0'/><LineTo X='82.0' Y='91.0'/><LineTo X='82.0' Y='94.0'/><LineTo X='79.0' Y='93.0'/><LineTo X='77.0' Y='93.0'/><LineTo X='77.0' Y='92.0'/><LineTo X='74.0' Y='92.0'/><LineTo X='72.0' Y='91.0'/><LineTo X='70.0' Y='93.0'/><LineTo X='65.0' Y='92.0'/><LineTo X='64.0' Y='93.0'/><LineTo X='62.0' Y='92.0'/><LineTo X='61.0' Y='85.0'/><LineTo X='59.0' Y='85.0'/><LineTo X='58.0' Y='83.0'/><LineTo X='57.0' Y='82.0'/><LineTo X='58.0' Y='80.0'/><LineTo X='56.0' Y='74.0'/><LineTo X='56.0' Y='69.0'/><LineTo X='52.0' Y='69.0'/><LineTo X='49.0' Y='70.0'/><LineTo X='46.0' Y='68.0'/><LineTo X='47.0' Y='65.0'/><LineTo X='47.0' Y='64.0'/><LineTo X='49.0' Y='62.0'/><LineTo X='49.0' Y='57.0'/><LineTo X='50.0' Y='57.0'/><LineTo X='50.0' Y='55.0'/><LineTo X='53.0' Y='48.0'/><LineTo X='50.0' Y='48.0'/><LineTo X='49.0' Y='46.0'/><LineTo X='48.0' Y='45.0'/><LineTo X='47.0' Y='42.0'/><LineTo X='45.0' Y='41.0'/><LineTo X='43.0' Y='35.0'/><LineTo X='41.0' Y='34.0'/><LineTo X='39.0' Y='31.0'/><LineTo X='39.0' Y='29.0'/><LineTo X='40.0' Y='28.0'/><LineTo X='40.0' Y='26.0'/><LineTo X='37.0' Y='20.0'/><LineTo X='41.0' Y='3.0'/><LineTo X='29.0' Y='0.0'/><LineTo X='18.0' Y='46.0'/><LineTo X='19.0' Y='50.0'/><LineTo X='18.0' Y='51.0'/><LineTo X='19.0' Y='57.0'/><LineTo X='22.0' Y='59.0'/><LineTo X='22.0' Y='62.0'/><LineTo X='13.0' Y='74.0'/><LineTo X='11.0' Y='75.0'/><LineTo X='8.0' Y='80.0'/><LineTo X='7.0' Y='83.0'/><LineTo X='10.0' Y='84.0'/><LineTo X='9.0' Y='87.0'/><LineTo X='9.0' Y='89.0'/><LineTo X='8.0' Y='92.0'/><LineTo X='0.0' Y='125.0'/><LineTo X='39.0' Y='133.0'/>
+				</Path>
+				<Label Position='Relative' X='36' Y='93' HJustification='Center' LeaderColor='Black'/>
+			</ItemShapeSettings>
+		</MapShapeItem>
+		<MapShapeItem Name='IL' LongName='Illinois' X='486.0' Y='165.0' OrigWidth='57' OrigHeight='103' OrigColor='#ffdfbf' Parent='US' Code='17' NameClass='State' Value='No Data'>
+			<ItemShapeSettings  Type='Polygon' Top='137' Left='370' Width='44' Height='79'>
+				<MapProperties PolyMinX='486.0' PolyMinY='165.0' OverrideTextSettings='True'/>
+				<Path>
+					<MoveTo X='48.0' Y='3.0'/><LineTo X='48.0' Y='0.0'/><LineTo X='10.0' Y='2.0'/><LineTo X='13.0' Y='4.0'/><LineTo X='13.0' Y='6.0'/><LineTo X='17.0' Y='8.0'/><LineTo X='17.0' Y='11.0'/><LineTo X='16.0' Y='14.0'/><LineTo X='15.0' Y='15.0'/><LineTo X='14.0' Y='18.0'/><LineTo X='10.0' Y='21.0'/><LineTo X='5.0' Y='22.0'/><LineTo X='4.0' Y='25.0'/><LineTo X='7.0' Y='28.0'/><LineTo X='7.0' Y='30.0'/><LineTo X='5.0' Y='33.0'/><LineTo X='4.0' Y='36.0'/><LineTo X='1.0' Y='38.0'/><LineTo X='1.0' Y='41.0'/><LineTo X='0.0' Y='42.0'/><LineTo X='0.0' Y='46.0'/><LineTo X='2.0' Y='53.0'/><LineTo X='10.0' Y='61.0'/><LineTo X='13.0' Y='68.0'/><LineTo X='14.0' Y='68.0'/><LineTo X='16.0' Y='67.0'/><LineTo X='20.0' Y='69.0'/><LineTo X='19.0' Y='71.0'/><LineTo X='19.0' Y='73.0'/><LineTo X='17.0' Y='78.0'/><LineTo X='17.0' Y='81.0'/><LineTo X='22.0' Y='85.0'/><LineTo X='24.0' Y='85.0'/><LineTo X='30.0' Y='90.0'/><LineTo X='30.0' Y='92.0'/><LineTo X='31.0' Y='95.0'/><LineTo X='30.0' Y='98.0'/><LineTo X='31.0' Y='98.0'/><LineTo X='33.0' Y='101.0'/><LineTo X='34.0' Y='101.0'/><LineTo X='36.0' Y='103.0'/><LineTo X='37.0' Y='103.0'/><LineTo X='36.0' Y='101.0'/><LineTo X='38.0' Y='98.0'/><LineTo X='45.0' Y='100.0'/><LineTo X='47.0' Y='99.0'/><LineTo X='45.0' Y='96.0'/><LineTo X='45.0' Y='94.0'/><LineTo X='51.0' Y='92.0'/><LineTo X='50.0' Y='89.0'/><LineTo X='51.0' Y='86.0'/><LineTo X='51.0' Y='84.0'/><LineTo X='51.0' Y='82.0'/><LineTo X='51.0' Y='81.0'/><LineTo X='52.0' Y='80.0'/><LineTo X='51.0' Y='78.0'/><LineTo X='52.0' Y='77.0'/><LineTo X='53.0' Y='77.0'/><LineTo X='54.0' Y='74.0'/><LineTo X='56.0' Y='73.0'/><LineTo X='56.0' Y='72.0'/><LineTo X='57.0' Y='68.0'/><LineTo X='57.0' Y='64.0'/><LineTo X='55.0' Y='62.0'/><LineTo X='56.0' Y='60.0'/><LineTo X='55.0' Y='58.0'/><LineTo X='56.0' Y='57.0'/><LineTo X='53.0' Y='13.0'/><LineTo X='48.0' Y='3.0'/>
+				</Path>
+				<Label Position='Relative' X='33' Y='45' HJustification='Center' LeaderColor='Black'/>
+			</ItemShapeSettings>
+		</MapShapeItem>
+		<MapShapeItem Name='IN' LongName='Indiana' X='536.0' Y='174.0' OrigWidth='46' OrigHeight='78' OrigColor='#fff4cc' Parent='US' Code='18' NameClass='State' Value='No Data'>
+			<ItemShapeSettings  Type='Polygon' Top='143' Left='408' Width='35' Height='60'>
+				<MapProperties PolyMinX='536.0' PolyMinY='174.0' OverrideTextSettings='True'/>
+				<Path>
+					<MoveTo X='8.0' Y='5.0'/><LineTo X='3.0' Y='4.0'/><LineTo X='6.0' Y='48.0'/><LineTo X='5.0' Y='49.0'/><LineTo X='6.0' Y='51.0'/><LineTo X='5.0' Y='53.0'/><LineTo X='7.0' Y='55.0'/><LineTo X='7.0' Y='59.0'/><LineTo X='6.0' Y='63.0'/><LineTo X='6.0' Y='64.0'/><LineTo X='4.0' Y='65.0'/><LineTo X='3.0' Y='68.0'/><LineTo X='2.0' Y='68.0'/><LineTo X='1.0' Y='69.0'/><LineTo X='2.0' Y='71.0'/><LineTo X='2.0' Y='72.0'/><LineTo X='1.0' Y='73.0'/><LineTo X='1.0' Y='75.0'/><LineTo X='0.0' Y='76.0'/><LineTo X='2.0' Y='78.0'/><LineTo X='3.0' Y='75.0'/><LineTo X='5.0' Y='76.0'/><LineTo X='7.0' Y='76.0'/><LineTo X='8.0' Y='76.0'/><LineTo X='8.0' Y='75.0'/><LineTo X='10.0' Y='74.0'/><LineTo X='15.0' Y='76.0'/><LineTo X='16.0' Y='74.0'/><LineTo X='20.0' Y='74.0'/><LineTo X='21.0' Y='75.0'/><LineTo X='23.0' Y='73.0'/><LineTo X='23.0' Y='71.0'/><LineTo X='25.0' Y='69.0'/><LineTo X='26.0' Y='69.0'/><LineTo X='26.0' Y='70.0'/><LineTo X='30.0' Y='72.0'/><LineTo X='31.0' Y='70.0'/><LineTo X='32.0' Y='66.0'/><LineTo X='34.0' Y='65.0'/><LineTo X='35.0' Y='62.0'/><LineTo X='38.0' Y='60.0'/><LineTo X='37.0' Y='57.0'/><LineTo X='39.0' Y='56.0'/><LineTo X='41.0' Y='57.0'/><LineTo X='43.0' Y='55.0'/><LineTo X='46.0' Y='55.0'/><LineTo X='46.0' Y='53.0'/><LineTo X='45.0' Y='52.0'/><LineTo X='44.0' Y='50.0'/><LineTo X='45.0' Y='49.0'/><LineTo X='40.0' Y='0.0'/><LineTo X='11.0' Y='3.0'/><LineTo X='8.0' Y='5.0'/>
+				</Path>
+				<Label Position='Relative' X='22' Y='36' HJustification='Center' LeaderColor='Black'/>
+			</ItemShapeSettings>
+		</MapShapeItem>
+		<MapShapeItem Name='KS' LongName='Kansas' X='335.0' Y='210.0' OrigWidth='108' OrigHeight='60' OrigColor='#ffcccc' Parent='US' Code='20' NameClass='State' Value='No Data'>
+			<ItemShapeSettings  Type='Polygon' Top='171' Left='255' Width='83' Height='46'>
+				<MapProperties PolyMinX='335.0' PolyMinY='210.0' OverrideTextSettings='True'/>
+				<Path>
+					<MoveTo X='4.0' Y='0.0'/><LineTo X='0.0' Y='56.0'/><LineTo X='108.0' Y='60.0'/><LineTo X='107.0' Y='20.0'/><LineTo X='104.0' Y='19.0'/><LineTo X='103.0' Y='16.0'/><LineTo X='100.0' Y='13.0'/><LineTo X='102.0' Y='9.0'/><LineTo X='104.0' Y='9.0'/><LineTo X='103.0' Y='6.0'/><LineTo X='100.0' Y='7.0'/><LineTo X='96.0' Y='4.0'/><LineTo X='4.0' Y='0.0'/>
+				</Path>
+				<Label Position='Relative' X='53' Y='30' HJustification='Center' LeaderColor='Black'/>
+			</ItemShapeSettings>
+		</MapShapeItem>
+		<MapShapeItem Name='KY' LongName='Kentucky' X='518.0' Y='222.0' OrigWidth='107' OrigHeight='55' OrigColor='#ffcccc' Parent='US' Code='21' NameClass='State' Value='No Data'>
+			<ItemShapeSettings  Type='Polygon' Top='180' Left='395' Width='82' Height='42'>
+				<MapProperties PolyMinX='518.0' PolyMinY='222.0' OverrideTextSettings='True'/>
+				<Path>
+					<MoveTo X='84.0' Y='44.0'/><LineTo X='92.0' Y='42.0'/><LineTo X='93.0' Y='40.0'/><LineTo X='96.0' Y='38.0'/><LineTo X='96.0' Y='37.0'/><LineTo X='98.0' Y='35.0'/><LineTo X='98.0' Y='34.0'/><LineTo X='107.0' Y='25.0'/><LineTo X='105.0' Y='25.0'/><LineTo X='102.0' Y='23.0'/><LineTo X='102.0' Y='21.0'/><LineTo X='99.0' Y='19.0'/><LineTo X='99.0' Y='18.0'/><LineTo X='96.0' Y='15.0'/><LineTo X='97.0' Y='13.0'/><LineTo X='96.0' Y='10.0'/><LineTo X='94.0' Y='8.0'/><LineTo X='92.0' Y='7.0'/><LineTo X='91.0' Y='4.0'/><LineTo X='88.0' Y='7.0'/><LineTo X='86.0' Y='8.0'/><LineTo X='82.0' Y='6.0'/><LineTo X='81.0' Y='8.0'/><LineTo X='79.0' Y='8.0'/><LineTo X='77.0' Y='6.0'/><LineTo X='72.0' Y='5.0'/><LineTo X='70.0' Y='2.0'/><LineTo X='68.0' Y='0.0'/><LineTo X='66.0' Y='1.0'/><LineTo X='64.0' Y='0.0'/><LineTo X='62.0' Y='2.0'/><LineTo X='63.0' Y='4.0'/><LineTo X='64.0' Y='5.0'/><LineTo X='64.0' Y='7.0'/><LineTo X='61.0' Y='7.0'/><LineTo X='59.0' Y='9.0'/><LineTo X='57.0' Y='8.0'/><LineTo X='55.0' Y='9.0'/><LineTo X='56.0' Y='12.0'/><LineTo X='53.0' Y='14.0'/><LineTo X='52.0' Y='17.0'/><LineTo X='50.0' Y='18.0'/><LineTo X='49.0' Y='22.0'/><LineTo X='48.0' Y='24.0'/><LineTo X='44.0' Y='22.0'/><LineTo X='44.0' Y='21.0'/><LineTo X='43.0' Y='21.0'/><LineTo X='41.0' Y='21.0'/><LineTo X='41.0' Y='23.0'/><LineTo X='41.0' Y='25.0'/><LineTo X='39.0' Y='27.0'/><LineTo X='38.0' Y='26.0'/><LineTo X='34.0' Y='26.0'/><LineTo X='33.0' Y='28.0'/><LineTo X='28.0' Y='26.0'/><LineTo X='26.0' Y='27.0'/><LineTo X='26.0' Y='28.0'/><LineTo X='25.0' Y='28.0'/><LineTo X='23.0' Y='28.0'/><LineTo X='21.0' Y='27.0'/><LineTo X='20.0' Y='30.0'/><LineTo X='19.0' Y='29.0'/><LineTo X='18.0' Y='32.0'/><LineTo X='19.0' Y='35.0'/><LineTo X='13.0' Y='37.0'/><LineTo X='13.0' Y='39.0'/><LineTo X='15.0' Y='42.0'/><LineTo X='13.0' Y='43.0'/><LineTo X='6.0' Y='41.0'/><LineTo X='4.0' Y='44.0'/><LineTo X='5.0' Y='46.0'/><LineTo X='5.0' Y='49.0'/><LineTo X='3.0' Y='53.0'/><LineTo X='1.0' Y='52.0'/><LineTo X='0.0' Y='55.0'/><LineTo X='21.0' Y='53.0'/><LineTo X='20.0' Y='50.0'/><LineTo X='24.0' Y='50.0'/><LineTo X='42.0' Y='49.0'/><LineTo X='43.0' Y='48.0'/><LineTo X='84.0' Y='44.0'/>
+				</Path>
+				<Label Position='Relative' X='55' Y='25' HJustification='Center' LeaderColor='Black'/>
+			</ItemShapeSettings>
+		</MapShapeItem>
+		<MapShapeItem Name='LA' LongName='Louisiana' X='452.0' Y='342.0' OrigWidth='79' OrigHeight='72' OrigColor='#fff4cc' Parent='US' Code='22' NameClass='State' Value='No Data'>
+			<ItemShapeSettings  Type='Polygon' Top='272' Left='344' Width='60' Height='55'>
+				<MapProperties PolyMinX='452.0' PolyMinY='342.0' OverrideTextSettings='True'/>
+				<Path>
+					<MoveTo X='71.0' Y='50.0'/><LineTo X='62.0' Y='47.0'/><LineTo X='58.0' Y='49.0'/><LineTo X='58.0' Y='52.0'/><LineTo X='60.0' Y='54.0'/><LineTo X='63.0' Y='53.0'/><LineTo X='65.0' Y='52.0'/><LineTo X='67.0' Y='52.0'/><LineTo X='68.0' Y='55.0'/><LineTo X='69.0' Y='55.0'/><LineTo X='74.0' Y='52.0'/><LineTo X='75.0' Y='52.0'/><LineTo X='75.0' Y='57.0'/><LineTo X='72.0' Y='59.0'/><LineTo X='70.0' Y='62.0'/><LineTo X='73.0' Y='65.0'/><LineTo X='78.0' Y='67.0'/><LineTo X='79.0' Y='69.0'/><LineTo X='79.0' Y='70.0'/><LineTo X='75.0' Y='72.0'/><LineTo X='72.0' Y='68.0'/><LineTo X='69.0' Y='67.0'/><LineTo X='67.0' Y='65.0'/><LineTo X='65.0' Y='65.0'/><LineTo X='64.0' Y='67.0'/><LineTo X='63.0' Y='70.0'/><LineTo X='58.0' Y='69.0'/><LineTo X='57.0' Y='70.0'/><LineTo X='55.0' Y='69.0'/><LineTo X='53.0' Y='71.0'/><LineTo X='49.0' Y='69.0'/><LineTo X='46.0' Y='69.0'/><LineTo X='43.0' Y='64.0'/><LineTo X='41.0' Y='64.0'/><LineTo X='39.0' Y='62.0'/><LineTo X='34.0' Y='60.0'/><LineTo X='31.0' Y='60.0'/><LineTo X='31.0' Y='62.0'/><LineTo X='29.0' Y='64.0'/><LineTo X='12.0' Y='61.0'/><LineTo X='3.0' Y='62.0'/><LineTo X='2.0' Y='60.0'/><LineTo X='5.0' Y='55.0'/><LineTo X='6.0' Y='54.0'/><LineTo X='5.0' Y='50.0'/><LineTo X='6.0' Y='48.0'/><LineTo X='5.0' Y='47.0'/><LineTo X='8.0' Y='42.0'/><LineTo X='8.0' Y='39.0'/><LineTo X='8.0' Y='38.0'/><LineTo X='8.0' Y='35.0'/><LineTo X='7.0' Y='35.0'/><LineTo X='6.0' Y='32.0'/><LineTo X='6.0' Y='31.0'/><LineTo X='4.0' Y='30.0'/><LineTo X='5.0' Y='29.0'/><LineTo X='3.0' Y='27.0'/><LineTo X='3.0' Y='24.0'/><LineTo X='0.0' Y='20.0'/><LineTo X='0.0' Y='1.0'/><LineTo X='44.0' Y='0.0'/><LineTo X='44.0' Y='1.0'/><LineTo X='45.0' Y='2.0'/><LineTo X='44.0' Y='5.0'/><LineTo X='44.0' Y='7.0'/><LineTo X='45.0' Y='9.0'/><LineTo X='45.0' Y='10.0'/><LineTo X='48.0' Y='13.0'/><LineTo X='47.0' Y='16.0'/><LineTo X='45.0' Y='16.0'/><LineTo X='46.0' Y='19.0'/><LineTo X='42.0' Y='22.0'/><LineTo X='41.0' Y='27.0'/><LineTo X='40.0' Y='30.0'/><LineTo X='37.0' Y='33.0'/><LineTo X='39.0' Y='36.0'/><LineTo X='38.0' Y='38.0'/><LineTo X='68.0' Y='36.0'/><LineTo X='66.0' Y='42.0'/><LineTo X='67.0' Y='44.0'/><LineTo X='69.0' Y='46.0'/><LineTo X='71.0' Y='50.0'/>
+				</Path>
+				<Label Position='Relative' X='23' Y='35' HJustification='Center' LeaderColor='Black'/>
+			</ItemShapeSettings>
+		</MapShapeItem>
+		<MapShapeItem Name='MA' LongName='Massachusetts' X='727.0' Y='120.0' OrigWidth='50' OrigHeight='28' OrigColor='#ffcccc' Parent='US' Code='25' NameClass='State' Value='No Data'>
+			<ItemShapeSettings  Type='Polygon' Top='102' Left='554' Width='38' Height='21'>
+				<MapProperties PolyMinX='727.0' PolyMinY='120.0' OverrideTextSettings='True'/>
+				<Path>
+					<MoveTo X='38.0' Y='27.0'/><LineTo X='40.0' Y='28.0'/><LineTo X='40.0' Y='27.0'/><LineTo X='44.0' Y='26.0'/><LineTo X='43.0' Y='24.0'/><LineTo X='41.0' Y='24.0'/><LineTo X='40.0' Y='25.0'/><LineTo X='39.0' Y='27.0'/><LineTo X='38.0' Y='27.0'/>
+					<MoveTo X='0.0' Y='24.0'/><LineTo X='0.0' Y='10.0'/><LineTo X='26.0' Y='4.0'/><LineTo X='30.0' Y='0.0'/><LineTo X='32.0' Y='0.0'/><LineTo X='35.0' Y='4.0'/><LineTo X='34.0' Y='5.0'/><LineTo X='33.0' Y='9.0'/><LineTo X='34.0' Y='11.0'/><LineTo X='37.0' Y='12.0'/><LineTo X='38.0' Y='15.0'/><LineTo X='40.0' Y='15.0'/><LineTo X='41.0' Y='18.0'/><LineTo X='47.0' Y='18.0'/><LineTo X='48.0' Y='17.0'/><LineTo X='48.0' Y='13.0'/><LineTo X='50.0' Y='17.0'/><LineTo X='47.0' Y='20.0'/><LineTo X='42.0' Y='22.0'/><LineTo X='41.0' Y='21.0'/><LineTo X='40.0' Y='21.0'/><LineTo X='35.0' Y='25.0'/><LineTo X='34.0' Y='25.0'/><LineTo X='33.0' Y='23.0'/><LineTo X='30.0' Y='21.0'/><LineTo X='28.0' Y='17.0'/><LineTo X='10.0' Y='21.0'/><LineTo X='9.0' Y='22.0'/><LineTo X='0.0' Y='24.0'/>
+				</Path>
+				<Label Position='Relative' X='55' Y='-5' HJustification='Center' FillOn='True' BorderType='Thin' FillColor='#cc0000' SourcePointX='24' SourcePointY='10' LeaderColor='Black' FillWithShapeColor='True'/>
+			</ItemShapeSettings>
+		</MapShapeItem>
+		<MapShapeItem Name='MD' LongName='Maryland' X='654.0' Y='192.0' OrigWidth='66' OrigHeight='32' OrigColor='#ffdfbf' Parent='US' Code='24' NameClass='State' Value='No Data'>
+			<ItemShapeSettings  Type='Polygon' Top='157' Left='499' Width='50' Height='24'>
+				<MapProperties PolyMinX='654.0' PolyMinY='192.0' OverrideTextSettings='True'/>
+				<Path>
+					<MoveTo X='0.0' Y='10.0'/><LineTo X='2.0' Y='19.0'/><LineTo X='6.0' Y='13.0'/><LineTo X='8.0' Y='13.0'/><LineTo X='10.0' Y='9.0'/><LineTo X='11.0' Y='11.0'/><LineTo X='15.0' Y='11.0'/><LineTo X='15.0' Y='9.0'/><LineTo X='17.0' Y='8.0'/><LineTo X='18.0' Y='7.0'/><LineTo X='21.0' Y='8.0'/><LineTo X='23.0' Y='8.0'/><LineTo X='23.0' Y='9.0'/><LineTo X='24.0' Y='10.0'/><LineTo X='24.0' Y='11.0'/><LineTo X='25.0' Y='11.0'/><LineTo X='26.0' Y='13.0'/><LineTo X='28.0' Y='13.0'/><LineTo X='30.0' Y='14.0'/><LineTo X='29.0' Y='15.0'/><LineTo X='35.0' Y='18.0'/><LineTo X='36.0' Y='17.0'/><LineTo X='39.0' Y='18.0'/><LineTo X='37.0' Y='20.0'/><LineTo X='36.0' Y='27.0'/><LineTo X='42.0' Y='28.0'/><LineTo X='43.0' Y='28.0'/><LineTo X='50.0' Y='31.0'/><LineTo X='48.0' Y='27.0'/><LineTo X='46.0' Y='25.0'/><LineTo X='47.0' Y='25.0'/><LineTo X='45.0' Y='20.0'/><LineTo X='45.0' Y='13.0'/><LineTo X='44.0' Y='12.0'/><LineTo X='48.0' Y='7.0'/><LineTo X='50.0' Y='3.0'/><LineTo X='51.0' Y='4.0'/><LineTo X='51.0' Y='6.0'/><LineTo X='48.0' Y='10.0'/><LineTo X='49.0' Y='13.0'/><LineTo X='48.0' Y='16.0'/><LineTo X='50.0' Y='17.0'/><LineTo X='51.0' Y='20.0'/><LineTo X='50.0' Y='22.0'/><LineTo X='50.0' Y='24.0'/><LineTo X='53.0' Y='27.0'/><LineTo X='56.0' Y='27.0'/><LineTo X='59.0' Y='32.0'/><LineTo X='65.0' Y='29.0'/><LineTo X='65.0' Y='27.0'/><LineTo X='66.0' Y='23.0'/><LineTo X='66.0' Y='21.0'/><LineTo X='57.0' Y='23.0'/><LineTo X='51.0' Y='0.0'/><LineTo X='0.0' Y='10.0'/>
+				</Path>
+				<Label Position='Relative' X='80' Y='40' HJustification='Center' FillOn='True' BorderType='Thin' FillColor='#cc0000' SourcePointX='40' SourcePointY='12' LeaderColor='Black' FillWithShapeColor='True'/>
+			</ItemShapeSettings>
+		</MapShapeItem>
+		<MapShapeItem Name='ME' LongName='Maine' X='744.0' Y='32.0' OrigWidth='55' OrigHeight='84' OrigColor='#fff4cc' Parent='US' Code='23' NameClass='State' Value='No Data'>
+			<ItemShapeSettings  Type='Polygon' Top='35' Left='567' Width='42' Height='64'>
+				<MapProperties PolyMinX='744.0' PolyMinY='32.0' OverrideTextSettings='True'/>
+				<Path>
+					<MoveTo X='0.0' Y='46.0'/><LineTo X='2.0' Y='45.0'/><LineTo X='4.0' Y='45.0'/><LineTo X='4.0' Y='44.0'/><LineTo X='6.0' Y='44.0'/><LineTo X='5.0' Y='41.0'/><LineTo X='7.0' Y='37.0'/><LineTo X='7.0' Y='15.0'/><LineTo X='10.0' Y='4.0'/><LineTo X='11.0' Y='2.0'/><LineTo X='12.0' Y='2.0'/><LineTo X='16.0' Y='5.0'/><LineTo X='19.0' Y='5.0'/><LineTo X='23.0' Y='3.0'/><LineTo X='24.0' Y='0.0'/><LineTo X='25.0' Y='0.0'/><LineTo X='33.0' Y='4.0'/><LineTo X='40.0' Y='28.0'/><LineTo X='44.0' Y='28.0'/><LineTo X='46.0' Y='34.0'/><LineTo X='51.0' Y='34.0'/><LineTo X='52.0' Y='33.0'/><LineTo X='53.0' Y='37.0'/><LineTo X='53.0' Y='39.0'/><LineTo X='54.0' Y='39.0'/><LineTo X='55.0' Y='40.0'/><LineTo X='54.0' Y='42.0'/><LineTo X='46.0' Y='47.0'/><LineTo X='46.0' Y='49.0'/><LineTo X='43.0' Y='51.0'/><LineTo X='41.0' Y='54.0'/><LineTo X='38.0' Y='53.0'/><LineTo X='36.0' Y='54.0'/><LineTo X='34.0' Y='52.0'/><LineTo X='33.0' Y='52.0'/><LineTo X='32.0' Y='53.0'/><LineTo X='32.0' Y='62.0'/><LineTo X='30.0' Y='62.0'/><LineTo X='29.0' Y='65.0'/><LineTo X='28.0' Y='66.0'/><LineTo X='26.0' Y='65.0'/><LineTo X='25.0' Y='69.0'/><LineTo X='21.0' Y='69.0'/><LineTo X='17.0' Y='80.0'/><LineTo X='15.0' Y='84.0'/><LineTo X='13.0' Y='83.0'/><LineTo X='13.0' Y='81.0'/><LineTo X='10.0' Y='79.0'/><LineTo X='0.0' Y='46.0'/>
+				</Path>
+				<Label Position='Relative' X='22' Y='32' HJustification='Center' LeaderColor='Black'/>
+			</ItemShapeSettings>
+		</MapShapeItem>
+		<MapShapeItem Name='MI' LongName='Michigan' X='495.0' Y='73.0' OrigWidth='110' OrigHeight='104' OrigColor='#ccffcc' Parent='US' Code='26' NameClass='State' Value='No Data'>
+			<ItemShapeSettings  Type='Polygon' Top='66' Left='377' Width='84' Height='79'>
+				<MapProperties PolyMinX='495.0' PolyMinY='73.0' OverrideTextSettings='True'/>
+				<Path>
+					<MoveTo X='48.0' Y='30.0'/><LineTo X='50.0' Y='29.0'/><LineTo X='50.0' Y='33.0'/><LineTo X='51.0' Y='33.0'/><LineTo X='55.0' Y='28.0'/><LineTo X='62.0' Y='26.0'/><LineTo X='63.0' Y='24.0'/><LineTo X='66.0' Y='23.0'/><LineTo X='72.0' Y='25.0'/><LineTo X='73.0' Y='26.0'/><LineTo X='75.0' Y='26.0'/><LineTo X='75.0' Y='23.0'/><LineTo X='78.0' Y='25.0'/><LineTo X='83.0' Y='23.0'/><LineTo X='83.0' Y='22.0'/><LineTo X='79.0' Y='20.0'/><LineTo X='77.0' Y='14.0'/><LineTo X='72.0' Y='15.0'/><LineTo X='68.0' Y='14.0'/><LineTo X='67.0' Y='10.0'/><LineTo X='65.0' Y='10.0'/><LineTo X='63.0' Y='12.0'/><LineTo X='54.0' Y='13.0'/><LineTo X='48.0' Y='18.0'/><LineTo X='42.0' Y='17.0'/><LineTo X='40.0' Y='18.0'/><LineTo X='35.0' Y='13.0'/><LineTo X='31.0' Y='11.0'/><LineTo X='26.0' Y='12.0'/><LineTo X='25.0' Y='14.0'/><LineTo X='24.0' Y='10.0'/><LineTo X='32.0' Y='2.0'/><LineTo X='32.0' Y='0.0'/><LineTo X='29.0' Y='1.0'/><LineTo X='14.0' Y='13.0'/><LineTo X='8.0' Y='15.0'/><LineTo X='3.0' Y='18.0'/><LineTo X='0.0' Y='19.0'/><LineTo X='3.0' Y='20.0'/><LineTo X='4.0' Y='23.0'/><LineTo X='23.0' Y='28.0'/><LineTo X='25.0' Y='27.0'/><LineTo X='30.0' Y='29.0'/><LineTo X='30.0' Y='31.0'/><LineTo X='33.0' Y='32.0'/><LineTo X='35.0' Y='33.0'/><LineTo X='35.0' Y='36.0'/><LineTo X='34.0' Y='39.0'/><LineTo X='37.0' Y='38.0'/><LineTo X='36.0' Y='42.0'/><LineTo X='39.0' Y='43.0'/><LineTo X='46.0' Y='31.0'/><LineTo X='48.0' Y='30.0'/>
+					<MoveTo X='103.0' Y='91.0'/><LineTo X='105.0' Y='87.0'/><LineTo X='105.0' Y='84.0'/><LineTo X='107.0' Y='82.0'/><LineTo X='110.0' Y='82.0'/><LineTo X='110.0' Y='73.0'/><LineTo X='108.0' Y='71.0'/><LineTo X='106.0' Y='63.0'/><LineTo X='101.0' Y='56.0'/><LineTo X='96.0' Y='59.0'/><LineTo X='94.0' Y='63.0'/><LineTo X='91.0' Y='65.0'/><LineTo X='89.0' Y='65.0'/><LineTo X='89.0' Y='64.0'/><LineTo X='90.0' Y='59.0'/><LineTo X='93.0' Y='56.0'/><LineTo X='95.0' Y='50.0'/><LineTo X='92.0' Y='41.0'/><LineTo X='93.0' Y='38.0'/><LineTo X='91.0' Y='35.0'/><LineTo X='89.0' Y='34.0'/><LineTo X='86.0' Y='33.0'/><LineTo X='80.0' Y='30.0'/><LineTo X='74.0' Y='29.0'/><LineTo X='71.0' Y='29.0'/><LineTo X='70.0' Y='31.0'/><LineTo X='70.0' Y='34.0'/><LineTo X='72.0' Y='35.0'/><LineTo X='71.0' Y='36.0'/><LineTo X='66.0' Y='38.0'/><LineTo X='66.0' Y='44.0'/><LineTo X='64.0' Y='46.0'/><LineTo X='63.0' Y='41.0'/><LineTo X='58.0' Y='46.0'/><LineTo X='56.0' Y='50.0'/><LineTo X='57.0' Y='58.0'/><LineTo X='55.0' Y='59.0'/><LineTo X='54.0' Y='69.0'/><LineTo X='59.0' Y='79.0'/><LineTo X='60.0' Y='87.0'/><LineTo X='55.0' Y='101.0'/><LineTo X='52.0' Y='104.0'/><LineTo X='81.0' Y='101.0'/><LineTo X='81.0' Y='102.0'/><LineTo X='100.0' Y='100.0'/><LineTo X='103.0' Y='94.0'/><LineTo X='103.0' Y='91.0'/>
+				</Path>
+				<Label Position='Relative' X='60' Y='65' HJustification='Center' LeaderColor='Black'/>
+			</ItemShapeSettings>
+		</MapShapeItem>
+		<MapShapeItem Name='MN' LongName='Minnesota' X='409.0' Y='42.0' OrigWidth='94' OrigHeight='107' OrigColor='#ccffcc' Parent='US' Code='27' NameClass='State' Value='No Data'>
+			<ItemShapeSettings  Type='Polygon' Top='43' Left='311' Width='72' Height='82'>
+				<MapProperties PolyMinX='409.0' PolyMinY='42.0' OverrideTextSettings='True'/>
+				<Path>
+					<MoveTo X='89.0' Y='29.0'/><LineTo X='94.0' Y='24.0'/><LineTo X='89.0' Y='22.0'/><LineTo X='83.0' Y='23.0'/><LineTo X='80.0' Y='21.0'/><LineTo X='73.0' Y='23.0'/><LineTo X='70.0' Y='22.0'/><LineTo X='68.0' Y='20.0'/><LineTo X='61.0' Y='17.0'/><LineTo X='60.0' Y='15.0'/><LineTo X='55.0' Y='13.0'/><LineTo X='49.0' Y='13.0'/><LineTo X='48.0' Y='14.0'/><LineTo X='45.0' Y='14.0'/><LineTo X='39.0' Y='12.0'/><LineTo X='34.0' Y='12.0'/><LineTo X='29.0' Y='0.0'/><LineTo X='26.0' Y='0.0'/><LineTo X='26.0' Y='8.0'/><LineTo X='0.0' Y='7.0'/><LineTo X='2.0' Y='13.0'/><LineTo X='1.0' Y='15.0'/><LineTo X='1.0' Y='22.0'/><LineTo X='5.0' Y='32.0'/><LineTo X='5.0' Y='44.0'/><LineTo X='6.0' Y='45.0'/><LineTo X='5.0' Y='50.0'/><LineTo X='7.0' Y='56.0'/><LineTo X='8.0' Y='64.0'/><LineTo X='4.0' Y='69.0'/><LineTo X='6.0' Y='72.0'/><LineTo X='8.0' Y='73.0'/><LineTo X='9.0' Y='74.0'/><LineTo X='9.0' Y='107.0'/><LineTo X='78.0' Y='107.0'/><LineTo X='77.0' Y='101.0'/><LineTo X='76.0' Y='99.0'/><LineTo X='70.0' Y='95.0'/><LineTo X='69.0' Y='92.0'/><LineTo X='66.0' Y='90.0'/><LineTo X='64.0' Y='89.0'/><LineTo X='62.0' Y='89.0'/><LineTo X='61.0' Y='87.0'/><LineTo X='58.0' Y='86.0'/><LineTo X='56.0' Y='84.0'/><LineTo X='57.0' Y='81.0'/><LineTo X='56.0' Y='78.0'/><LineTo X='57.0' Y='78.0'/><LineTo X='57.0' Y='74.0'/><LineTo X='58.0' Y='72.0'/><LineTo X='57.0' Y='69.0'/><LineTo X='55.0' Y='67.0'/><LineTo X='57.0' Y='63.0'/><LineTo X='63.0' Y='60.0'/><LineTo X='62.0' Y='49.0'/><LineTo X='63.0' Y='49.0'/><LineTo X='64.0' Y='47.0'/><LineTo X='65.0' Y='48.0'/><LineTo X='84.0' Y='30.0'/><LineTo X='89.0' Y='29.0'/>
+				</Path>
+				<Label Position='Relative' X='25' Y='45' HJustification='Center' LeaderColor='Black'/>
+			</ItemShapeSettings>
+		</MapShapeItem>
+		<MapShapeItem Name='MO' LongName='Missouri' X='426.0' Y='202.0' OrigWidth='97' OrigHeight='85' OrigColor='#fff4cc' Parent='US' Code='29' NameClass='State' Value='No Data'>
+			<ItemShapeSettings  Type='Polygon' Top='165' Left='324' Width='74' Height='65'>
+				<MapProperties PolyMinX='426.0' PolyMinY='202.0' OverrideTextSettings='True'/>
+				<Path>
+					<MoveTo X='0.0' Y='1.0'/><LineTo X='0.0' Y='2.0'/><LineTo X='1.0' Y='3.0'/><LineTo X='2.0' Y='7.0'/><LineTo X='4.0' Y='8.0'/><LineTo X='5.0' Y='12.0'/><LineTo X='9.0' Y='15.0'/><LineTo X='12.0' Y='14.0'/><LineTo X='13.0' Y='17.0'/><LineTo X='11.0' Y='17.0'/><LineTo X='9.0' Y='21.0'/><LineTo X='12.0' Y='24.0'/><LineTo X='13.0' Y='27.0'/><LineTo X='16.0' Y='28.0'/><LineTo X='17.0' Y='77.0'/><LineTo X='82.0' Y='75.0'/><LineTo X='84.0' Y='79.0'/><LineTo X='79.0' Y='85.0'/><LineTo X='89.0' Y='84.0'/><LineTo X='90.0' Y='82.0'/><LineTo X='91.0' Y='79.0'/><LineTo X='91.0' Y='77.0'/><LineTo X='91.0' Y='74.0'/><LineTo X='92.0' Y='76.0'/><LineTo X='93.0' Y='72.0'/><LineTo X='95.0' Y='73.0'/><LineTo X='97.0' Y='69.0'/><LineTo X='97.0' Y='66.0'/><LineTo X='96.0' Y='66.0'/><LineTo X='94.0' Y='64.0'/><LineTo X='93.0' Y='64.0'/><LineTo X='91.0' Y='61.0'/><LineTo X='90.0' Y='61.0'/><LineTo X='91.0' Y='58.0'/><LineTo X='90.0' Y='55.0'/><LineTo X='90.0' Y='53.0'/><LineTo X='84.0' Y='48.0'/><LineTo X='82.0' Y='48.0'/><LineTo X='77.0' Y='44.0'/><LineTo X='77.0' Y='41.0'/><LineTo X='79.0' Y='36.0'/><LineTo X='79.0' Y='34.0'/><LineTo X='80.0' Y='32.0'/><LineTo X='76.0' Y='30.0'/><LineTo X='74.0' Y='31.0'/><LineTo X='73.0' Y='31.0'/><LineTo X='70.0' Y='24.0'/><LineTo X='62.0' Y='16.0'/><LineTo X='60.0' Y='9.0'/><LineTo X='60.0' Y='5.0'/><LineTo X='56.0' Y='0.0'/><LineTo X='0.0' Y='1.0'/>
+				</Path>
+				<Label Position='Relative' X='40' Y='35' HJustification='Center' LeaderColor='Black'/>
+			</ItemShapeSettings>
+		</MapShapeItem>
+		<MapShapeItem Name='MS' LongName='Mississippi' X='489.0' Y='303.0' OrigWidth='52' OrigHeight='89' OrigColor='#ffdfbf' Parent='US' Code='28' NameClass='State' Value='No Data'>
+			<ItemShapeSettings  Type='Polygon' Top='242' Left='372' Width='40' Height='68'>
+				<MapProperties PolyMinX='489.0' PolyMinY='303.0' OverrideTextSettings='True'/>
+				<Path>
+					<MoveTo X='52.0' Y='85.0'/><LineTo X='43.0' Y='85.0'/><LineTo X='40.0' Y='87.0'/><LineTo X='37.0' Y='87.0'/><LineTo X='34.0' Y='89.0'/><LineTo X='32.0' Y='85.0'/><LineTo X='30.0' Y='83.0'/><LineTo X='29.0' Y='81.0'/><LineTo X='31.0' Y='75.0'/><LineTo X='1.0' Y='77.0'/><LineTo X='2.0' Y='75.0'/><LineTo X='0.0' Y='72.0'/><LineTo X='3.0' Y='69.0'/><LineTo X='4.0' Y='66.0'/><LineTo X='5.0' Y='61.0'/><LineTo X='9.0' Y='58.0'/><LineTo X='8.0' Y='55.0'/><LineTo X='10.0' Y='55.0'/><LineTo X='11.0' Y='52.0'/><LineTo X='8.0' Y='49.0'/><LineTo X='8.0' Y='48.0'/><LineTo X='7.0' Y='46.0'/><LineTo X='7.0' Y='44.0'/><LineTo X='8.0' Y='41.0'/><LineTo X='7.0' Y='40.0'/><LineTo X='7.0' Y='37.0'/><LineTo X='8.0' Y='36.0'/><LineTo X='6.0' Y='34.0'/><LineTo X='7.0' Y='31.0'/><LineTo X='5.0' Y='29.0'/><LineTo X='7.0' Y='28.0'/><LineTo X='5.0' Y='27.0'/><LineTo X='8.0' Y='25.0'/><LineTo X='8.0' Y='22.0'/><LineTo X='7.0' Y='21.0'/><LineTo X='10.0' Y='20.0'/><LineTo X='10.0' Y='19.0'/><LineTo X='9.0' Y='18.0'/><LineTo X='11.0' Y='16.0'/><LineTo X='12.0' Y='16.0'/><LineTo X='12.0' Y='14.0'/><LineTo X='14.0' Y='13.0'/><LineTo X='15.0' Y='7.0'/><LineTo X='16.0' Y='7.0'/><LineTo X='16.0' Y='5.0'/><LineTo X='19.0' Y='4.0'/><LineTo X='18.0' Y='2.0'/><LineTo X='50.0' Y='0.0'/><LineTo X='51.0' Y='2.0'/><LineTo X='52.0' Y='85.0'/>
+				</Path>
+				<Label Position='Relative' X='25' Y='41' HJustification='Center' LeaderColor='Black'/>
+			</ItemShapeSettings>
+		</MapShapeItem>
+		<MapShapeItem Name='MT' LongName='Montana' X='177.0' Y='21.0' OrigWidth='149' OrigHeight='95' OrigColor='#ffcccc' Parent='US' Code='30' NameClass='State' Value='No Data'>
+			<ItemShapeSettings  Type='Polygon' Top='27' Left='134' Width='114' Height='73'>
+				<MapProperties PolyMinX='177.0' PolyMinY='21.0' OverrideTextSettings='True'/>
+				<Path>
+					<MoveTo X='52.0' Y='83.0'/><LineTo X='50.0' Y='92.0'/><LineTo X='47.0' Y='87.0'/><LineTo X='45.0' Y='88.0'/><LineTo X='45.0' Y='91.0'/><LineTo X='42.0' Y='90.0'/><LineTo X='40.0' Y='90.0'/><LineTo X='40.0' Y='89.0'/><LineTo X='37.0' Y='89.0'/><LineTo X='35.0' Y='88.0'/><LineTo X='33.0' Y='90.0'/><LineTo X='28.0' Y='89.0'/><LineTo X='27.0' Y='90.0'/><LineTo X='25.0' Y='89.0'/><LineTo X='24.0' Y='82.0'/><LineTo X='22.0' Y='82.0'/><LineTo X='21.0' Y='80.0'/><LineTo X='20.0' Y='79.0'/><LineTo X='21.0' Y='77.0'/><LineTo X='19.0' Y='71.0'/><LineTo X='19.0' Y='66.0'/><LineTo X='15.0' Y='66.0'/><LineTo X='12.0' Y='67.0'/><LineTo X='9.0' Y='65.0'/><LineTo X='10.0' Y='62.0'/><LineTo X='10.0' Y='61.0'/><LineTo X='12.0' Y='59.0'/><LineTo X='12.0' Y='54.0'/><LineTo X='13.0' Y='54.0'/><LineTo X='13.0' Y='52.0'/><LineTo X='16.0' Y='45.0'/><LineTo X='13.0' Y='45.0'/><LineTo X='12.0' Y='43.0'/><LineTo X='11.0' Y='42.0'/><LineTo X='10.0' Y='39.0'/><LineTo X='8.0' Y='38.0'/><LineTo X='6.0' Y='32.0'/><LineTo X='4.0' Y='31.0'/><LineTo X='2.0' Y='28.0'/><LineTo X='2.0' Y='26.0'/><LineTo X='3.0' Y='25.0'/><LineTo X='3.0' Y='23.0'/><LineTo X='0.0' Y='17.0'/><LineTo X='4.0' Y='0.0'/><LineTo X='28.0' Y='5.0'/><LineTo X='76.0' Y='14.0'/><LineTo X='149.0' Y='23.0'/><LineTo X='142.0' Y='95.0'/><LineTo X='52.0' Y='83.0'/>
+				</Path>
+				<Label Position='Relative' X='79' Y='40' HJustification='Center' LeaderColor='Black'/>
+			</ItemShapeSettings>
+		</MapShapeItem>
+		<MapShapeItem Name='NC' LongName='North Carolina' X='596.0' Y='247.0' OrigWidth='130' OrigHeight='59' OrigColor='#ffcccc' Parent='US' Code='37' NameClass='State' Value='No Data'>
+			<ItemShapeSettings  Type='Polygon' Top='199' Left='454' Width='99' Height='45'>
+				<MapProperties PolyMinX='596.0' PolyMinY='247.0' OverrideTextSettings='True'/>
+				<Path>
+					<MoveTo X='121.0' Y='32.0'/><LineTo X='122.0' Y='33.0'/><LineTo X='126.0' Y='28.0'/><LineTo X='121.0' Y='32.0'/>
+					<MoveTo X='127.0' Y='27.0'/><LineTo X='130.0' Y='26.0'/><LineTo X='129.0' Y='18.0'/><LineTo X='124.0' Y='11.0'/><LineTo X='124.0' Y='12.0'/><LineTo X='129.0' Y='19.0'/><LineTo X='129.0' Y='25.0'/><LineTo X='127.0' Y='27.0'/>
+					<MoveTo X='36.0' Y='15.0'/><LineTo X='35.0' Y='20.0'/><LineTo X='36.0' Y='21.0'/><LineTo X='34.0' Y='21.0'/><LineTo X='33.0' Y='22.0'/><LineTo X='31.0' Y='26.0'/><LineTo X='28.0' Y='26.0'/><LineTo X='24.0' Y='30.0'/><LineTo X='23.0' Y='28.0'/><LineTo X='21.0' Y='30.0'/><LineTo X='21.0' Y='31.0'/><LineTo X='19.0' Y='31.0'/><LineTo X='18.0' Y='34.0'/><LineTo X='16.0' Y='35.0'/><LineTo X='12.0' Y='39.0'/><LineTo X='8.0' Y='39.0'/><LineTo X='6.0' Y='41.0'/><LineTo X='4.0' Y='42.0'/><LineTo X='4.0' Y='45.0'/><LineTo X='1.0' Y='46.0'/><LineTo X='0.0' Y='46.0'/><LineTo X='0.0' Y='50.0'/><LineTo X='19.0' Y='48.0'/><LineTo X='24.0' Y='47.0'/><LineTo X='29.0' Y='43.0'/><LineTo X='49.0' Y='42.0'/><LineTo X='49.0' Y='43.0'/><LineTo X='51.0' Y='42.0'/><LineTo X='53.0' Y='45.0'/><LineTo X='53.0' Y='47.0'/><LineTo X='70.0' Y='45.0'/><LineTo X='90.0' Y='59.0'/><LineTo X='96.0' Y='57.0'/><LineTo X='101.0' Y='54.0'/><LineTo X='103.0' Y='47.0'/><LineTo X='110.0' Y='41.0'/><LineTo X='115.0' Y='40.0'/><LineTo X='119.0' Y='36.0'/><LineTo X='119.0' Y='33.0'/><LineTo X='116.0' Y='33.0'/><LineTo X='115.0' Y='34.0'/><LineTo X='115.0' Y='32.0'/><LineTo X='117.0' Y='28.0'/><LineTo X='111.0' Y='26.0'/><LineTo X='114.0' Y='25.0'/><LineTo X='116.0' Y='24.0'/><LineTo X='117.0' Y='25.0'/><LineTo X='118.0' Y='25.0'/><LineTo X='119.0' Y='26.0'/><LineTo X='122.0' Y='26.0'/><LineTo X='126.0' Y='19.0'/><LineTo X='125.0' Y='15.0'/><LineTo X='124.0' Y='14.0'/><LineTo X='122.0' Y='19.0'/><LineTo X='120.0' Y='14.0'/><LineTo X='114.0' Y='17.0'/><LineTo X='112.0' Y='17.0'/><LineTo X='110.0' Y='11.0'/><LineTo X='111.0' Y='10.0'/><LineTo X='112.0' Y='14.0'/><LineTo X='113.0' Y='14.0'/><LineTo X='119.0' Y='11.0'/><LineTo X='119.0' Y='10.0'/><LineTo X='122.0' Y='10.0'/><LineTo X='124.0' Y='11.0'/><LineTo X='120.0' Y='5.0'/><LineTo X='120.0' Y='0.0'/><LineTo X='36.0' Y='15.0'/>
+				</Path>
+				<Label Position='Relative' X='65' Y='23' HJustification='Center' LeaderColor='Black'/>
+			</ItemShapeSettings>
+		</MapShapeItem>
+		<MapShapeItem Name='ND' LongName='North Dakota' X='321.0' Y='44.0' OrigWidth='96' OrigHeight='61' OrigColor='#fff4cc' Parent='US' Code='38' NameClass='State' Value='No Data'>
+			<ItemShapeSettings  Type='Polygon' Top='44' Left='244' Width='73' Height='47'>
+				<MapProperties PolyMinX='321.0' PolyMinY='44.0' OverrideTextSettings='True'/>
+				<Path>
+					<MoveTo X='38.0' Y='3.0'/><LineTo X='5.0' Y='0.0'/><LineTo X='0.0' Y='55.0'/><LineTo X='96.0' Y='61.0'/><LineTo X='95.0' Y='54.0'/><LineTo X='93.0' Y='48.0'/><LineTo X='94.0' Y='43.0'/><LineTo X='93.0' Y='42.0'/><LineTo X='93.0' Y='30.0'/><LineTo X='89.0' Y='20.0'/><LineTo X='89.0' Y='13.0'/><LineTo X='90.0' Y='11.0'/><LineTo X='88.0' Y='5.0'/><LineTo X='38.0' Y='3.0'/>
+				</Path>
+				<Label Position='Relative' X='46' Y='31' HJustification='Center' LeaderColor='Black'/>
+			</ItemShapeSettings>
+		</MapShapeItem>
+		<MapShapeItem Name='NE' LongName='Nebraska' X='312.0' Y='153.0' OrigWidth='119' OrigHeight='61' OrigColor='#ccffcc' Parent='US' Code='31' NameClass='State' Value='No Data'>
+			<ItemShapeSettings  Type='Polygon' Top='127' Left='237' Width='91' Height='47'>
+				<MapProperties PolyMinX='312.0' PolyMinY='153.0' OverrideTextSettings='True'/>
+				<Path>
+					<MoveTo X='4.0' Y='0.0'/><LineTo X='0.0' Y='37.0'/><LineTo X='28.0' Y='39.0'/><LineTo X='27.0' Y='57.0'/><LineTo X='119.0' Y='61.0'/><LineTo X='118.0' Y='57.0'/><LineTo X='116.0' Y='56.0'/><LineTo X='115.0' Y='52.0'/><LineTo X='114.0' Y='51.0'/><LineTo X='114.0' Y='49.0'/><LineTo X='113.0' Y='48.0'/><LineTo X='114.0' Y='45.0'/><LineTo X='113.0' Y='39.0'/><LineTo X='112.0' Y='39.0'/><LineTo X='113.0' Y='37.0'/><LineTo X='112.0' Y='36.0'/><LineTo X='112.0' Y='34.0'/><LineTo X='111.0' Y='33.0'/><LineTo X='110.0' Y='33.0'/><LineTo X='110.0' Y='28.0'/><LineTo X='109.0' Y='26.0'/><LineTo X='109.0' Y='25.0'/><LineTo X='107.0' Y='21.0'/><LineTo X='106.0' Y='15.0'/><LineTo X='103.0' Y='14.0'/><LineTo X='102.0' Y='12.0'/><LineTo X='96.0' Y='9.0'/><LineTo X='95.0' Y='8.0'/><LineTo X='87.0' Y='8.0'/><LineTo X='85.0' Y='9.0'/><LineTo X='84.0' Y='9.0'/><LineTo X='80.0' Y='6.0'/><LineTo X='78.0' Y='5.0'/><LineTo X='4.0' Y='0.0'/>
+				</Path>
+				<Label Position='Relative' X='58' Y='30' HJustification='Center' LeaderColor='Black'/>
+			</ItemShapeSettings>
+		</MapShapeItem>
+		<MapShapeItem Name='NH' LongName='New Hampshire' X='735.0' Y='78.0' OrigWidth='24' OrigHeight='50' OrigColor='#ccffcc' Parent='US' Code='33' NameClass='State' Value='No Data'>
+			<ItemShapeSettings  Type='Polygon' Top='70' Left='561' Width='18' Height='38'>
+				<MapProperties PolyMinX='735.0' PolyMinY='78.0' OverrideTextSettings='True'/>
+				<Path>
+					<MoveTo X='24.0' Y='38.0'/><LineTo X='22.0' Y='37.0'/><LineTo X='22.0' Y='35.0'/><LineTo X='19.0' Y='33.0'/><LineTo X='9.0' Y='0.0'/><LineTo X='6.0' Y='2.0'/><LineTo X='5.0' Y='7.0'/><LineTo X='5.0' Y='8.0'/><LineTo X='4.0' Y='11.0'/><LineTo X='6.0' Y='14.0'/><LineTo X='6.0' Y='15.0'/><LineTo X='4.0' Y='19.0'/><LineTo X='1.0' Y='20.0'/><LineTo X='2.0' Y='27.0'/><LineTo X='0.0' Y='35.0'/><LineTo X='1.0' Y='45.0'/><LineTo X='1.0' Y='48.0'/><LineTo X='3.0' Y='50.0'/><LineTo X='18.0' Y='46.0'/><LineTo X='22.0' Y='42.0'/><LineTo X='24.0' Y='42.0'/><LineTo X='24.0' Y='38.0'/>
+				</Path>
+				<Label Position='Relative' X='-5' Y='-17' HJustification='Center' FillOn='True' BorderType='Thin' FillColor='#cc0000' SourcePointX='13' SourcePointY='31' LeaderColor='Black' FillWithShapeColor='True'/>
+			</ItemShapeSettings>
+		</MapShapeItem>
+		<MapShapeItem Name='NJ' LongName='New Jersey' X='709.0' Y='159.0' OrigWidth='20' OrigHeight='44' OrigColor='#fff4cc' Parent='US' Code='34' NameClass='State' Value='No Data'>
+			<ItemShapeSettings  Type='Polygon' Top='132' Left='541' Width='15' Height='34'>
+				<MapProperties PolyMinX='709.0' PolyMinY='159.0' OverrideTextSettings='True'/>
+				<Path>
+					<MoveTo X='1.0' Y='35.0'/><LineTo X='5.0' Y='39.0'/><LineTo X='7.0' Y='39.0'/><LineTo X='9.0' Y='40.0'/><LineTo X='11.0' Y='40.0'/><LineTo X='13.0' Y='44.0'/><LineTo X='18.0' Y='32.0'/><LineTo X='18.0' Y='31.0'/><LineTo X='19.0' Y='30.0'/><LineTo X='19.0' Y='24.0'/><LineTo X='20.0' Y='23.0'/><LineTo X='20.0' Y='18.0'/><LineTo X='18.0' Y='16.0'/><LineTo X='16.0' Y='15.0'/><LineTo X='15.0' Y='14.0'/><LineTo X='17.0' Y='5.0'/><LineTo X='5.0' Y='0.0'/><LineTo X='2.0' Y='6.0'/><LineTo X='2.0' Y='10.0'/><LineTo X='1.0' Y='13.0'/><LineTo X='1.0' Y='16.0'/><LineTo X='3.0' Y='16.0'/><LineTo X='4.0' Y='18.0'/><LineTo X='5.0' Y='18.0'/><LineTo X='9.0' Y='22.0'/><LineTo X='5.0' Y='27.0'/><LineTo X='5.0' Y='29.0'/><LineTo X='2.0' Y='30.0'/><LineTo X='0.0' Y='34.0'/><LineTo X='1.0' Y='35.0'/>
+				</Path>
+				<Label Position='Relative' X='35' Y='25' HJustification='Center' FillOn='True' BorderType='Thin' FillColor='#cc0000' SourcePointX='11' SourcePointY='21' LeaderColor='Black' FillWithShapeColor='True'/>
+			</ItemShapeSettings>
+		</MapShapeItem>
+		<MapShapeItem Name='NM' LongName='New Mexico' X='217.0' Y='254.0' OrigWidth='103' OrigHeight='106' OrigColor='#ffcccc' Parent='US' Code='35' NameClass='State' Value='No Data'>
+			<ItemShapeSettings  Type='Polygon' Top='205' Left='164' Width='79' Height='81'>
+				<MapProperties PolyMinX='217.0' PolyMinY='254.0' OverrideTextSettings='True'/>
+				<Path>
+					<MoveTo X='39.0' Y='100.0'/><LineTo X='39.0' Y='97.0'/><LineTo X='95.0' Y='103.0'/><LineTo X='102.0' Y='20.0'/><LineTo X='103.0' Y='11.0'/><LineTo X='16.0' Y='0.0'/><LineTo X='0.0' Y='104.0'/><LineTo X='13.0' Y='106.0'/><LineTo X='14.0' Y='97.0'/><LineTo X='39.0' Y='100.0'/>
+				</Path>
+				<Label Position='Relative' X='50' Y='48' HJustification='Center' LeaderColor='Black'/>
+			</ItemShapeSettings>
+		</MapShapeItem>
+		<MapShapeItem Name='NV' LongName='Nevada' X='86.0' Y='133.0' OrigWidth='93' OrigHeight='144' OrigColor='#fff4cc' Parent='US' Code='32' NameClass='State' Value='No Data'>
+			<ItemShapeSettings  Type='Polygon' Top='112' Left='64' Width='71' Height='110'>
+				<MapProperties PolyMinX='86.0' PolyMinY='133.0' OverrideTextSettings='True'/>
+				<Path>
+					<MoveTo X='0.0' Y='53.0'/><LineTo X='14.0' Y='0.0'/><LineTo X='93.0' Y='18.0'/><LineTo X='72.0' Y='124.0'/><LineTo X='69.0' Y='126.0'/><LineTo X='68.0' Y='126.0'/><LineTo X='67.0' Y='124.0'/><LineTo X='64.0' Y='123.0'/><LineTo X='61.0' Y='126.0'/><LineTo X='62.0' Y='127.0'/><LineTo X='61.0' Y='130.0'/><LineTo X='60.0' Y='141.0'/><LineTo X='59.0' Y='141.0'/><LineTo X='59.0' Y='144.0'/><LineTo X='0.0' Y='53.0'/>
+				</Path>
+				<Label Position='Relative' X='46' Y='54' HJustification='Center' LeaderColor='Black'/>
+			</ItemShapeSettings>
+		</MapShapeItem>
+		<MapShapeItem Name='NY' LongName='New York' X='643.0' Y='90.0' OrigWidth='110' OrigHeight='81' OrigColor='#ccffcc' Parent='US' Code='36' NameClass='State' Value='No Data'>
+			<ItemShapeSettings  Type='Polygon' Top='79' Left='490' Width='84' Height='62'>
+				<MapProperties PolyMinX='643.0' PolyMinY='90.0' OverrideTextSettings='True'/>
+				<Path>
+					<MoveTo X='105.0' Y='65.0'/><LineTo X='101.0' Y='70.0'/><LineTo X='90.0' Y='74.0'/><LineTo X='86.0' Y='77.0'/><LineTo X='84.0' Y='79.0'/><LineTo X='84.0' Y='81.0'/><LineTo X='86.0' Y='80.0'/><LineTo X='87.0' Y='80.0'/><LineTo X='110.0' Y='67.0'/><LineTo X='107.0' Y='67.0'/><LineTo X='102.0' Y='70.0'/><LineTo X='105.0' Y='66.0'/><LineTo X='105.0' Y='65.0'/>
+					<MoveTo X='84.0' Y='76.0'/><LineTo X='85.0' Y='75.0'/><LineTo X='86.0' Y='73.0'/><LineTo X='85.0' Y='71.0'/><LineTo X='88.0' Y='68.0'/><LineTo X='86.0' Y='67.0'/><LineTo X='84.0' Y='54.0'/><LineTo X='84.0' Y='40.0'/><LineTo X='81.0' Y='26.0'/><LineTo X='80.0' Y='24.0'/><LineTo X='79.0' Y='26.0'/><LineTo X='78.0' Y='25.0'/><LineTo X='79.0' Y='23.0'/><LineTo X='76.0' Y='17.0'/><LineTo X='77.0' Y='13.0'/><LineTo X='77.0' Y='10.0'/><LineTo X='75.0' Y='7.0'/><LineTo X='74.0' Y='0.0'/><LineTo X='53.0' Y='5.0'/><LineTo X='46.0' Y='13.0'/><LineTo X='44.0' Y='19.0'/><LineTo X='40.0' Y='24.0'/><LineTo X='40.0' Y='25.0'/><LineTo X='42.0' Y='25.0'/><LineTo X='43.0' Y='26.0'/><LineTo X='43.0' Y='27.0'/><LineTo X='41.0' Y='28.0'/><LineTo X='43.0' Y='30.0'/><LineTo X='43.0' Y='34.0'/><LineTo X='40.0' Y='35.0'/><LineTo X='36.0' Y='39.0'/><LineTo X='26.0' Y='43.0'/><LineTo X='24.0' Y='41.0'/><LineTo X='19.0' Y='41.0'/><LineTo X='7.0' Y='47.0'/><LineTo X='10.0' Y='53.0'/><LineTo X='7.0' Y='58.0'/><LineTo X='0.0' Y='66.0'/><LineTo X='0.0' Y='71.0'/><LineTo X='59.0' Y='60.0'/><LineTo X='61.0' Y='62.0'/><LineTo X='64.0' Y='62.0'/><LineTo X='65.0' Y='66.0'/><LineTo X='66.0' Y='68.0'/><LineTo X='70.0' Y='68.0'/><LineTo X='71.0' Y='69.0'/><LineTo X='83.0' Y='74.0'/><LineTo X='83.0' Y='79.0'/><LineTo X='84.0' Y='76.0'/>
+				</Path>
+				<Label Position='Relative' X='45' Y='33' HJustification='Center' LeaderColor='Black'/>
+			</ItemShapeSettings>
+		</MapShapeItem>
+		<MapShapeItem Name='OH' LongName='Ohio' X='576.0' Y='163.0' OrigWidth='61' OrigHeight='69' OrigColor='#ffdfbf' Parent='US' Code='39' NameClass='State' Value='No Data'>
+			<ItemShapeSettings  Type='Polygon' Top='135' Left='439' Width='47' Height='53'>
+				<MapProperties PolyMinX='576.0' PolyMinY='163.0' OverrideTextSettings='True'/>
+				<Path>
+					<MoveTo X='54.0' Y='1.0'/><LineTo X='42.0' Y='10.0'/><LineTo X='37.0' Y='11.0'/><LineTo X='33.0' Y='13.0'/><LineTo X='25.0' Y='12.0'/><LineTo X='23.0' Y='11.0'/><LineTo X='19.0' Y='10.0'/><LineTo X='0.0' Y='12.0'/><LineTo X='5.0' Y='60.0'/><LineTo X='6.0' Y='59.0'/><LineTo X='8.0' Y='60.0'/><LineTo X='10.0' Y='59.0'/><LineTo X='12.0' Y='61.0'/><LineTo X='14.0' Y='64.0'/><LineTo X='19.0' Y='65.0'/><LineTo X='21.0' Y='67.0'/><LineTo X='23.0' Y='67.0'/><LineTo X='24.0' Y='65.0'/><LineTo X='28.0' Y='67.0'/><LineTo X='31.0' Y='64.0'/><LineTo X='33.0' Y='63.0'/><LineTo X='34.0' Y='66.0'/><LineTo X='36.0' Y='67.0'/><LineTo X='38.0' Y='69.0'/><LineTo X='42.0' Y='68.0'/><LineTo X='42.0' Y='65.0'/><LineTo X='43.0' Y='65.0'/><LineTo X='42.0' Y='62.0'/><LineTo X='44.0' Y='57.0'/><LineTo X='46.0' Y='59.0'/><LineTo X='47.0' Y='58.0'/><LineTo X='48.0' Y='58.0'/><LineTo X='47.0' Y='55.0'/><LineTo X='48.0' Y='55.0'/><LineTo X='49.0' Y='52.0'/><LineTo X='52.0' Y='49.0'/><LineTo X='53.0' Y='50.0'/><LineTo X='59.0' Y='44.0'/><LineTo X='59.0' Y='38.0'/><LineTo X='60.0' Y='38.0'/><LineTo X='60.0' Y='35.0'/><LineTo X='61.0' Y='30.0'/><LineTo X='60.0' Y='27.0'/><LineTo X='61.0' Y='24.0'/><LineTo X='57.0' Y='0.0'/><LineTo X='54.0' Y='1.0'/>
+				</Path>
+				<Label Position='Relative' X='24' Y='30' HJustification='Center' LeaderColor='Black'/>
+			</ItemShapeSettings>
+		</MapShapeItem>
+		<MapShapeItem Name='OK' LongName='Oklahoma' X='319.0' Y='265.0' OrigWidth='126' OrigHeight='67' OrigColor='#ccffcc' Parent='US' Code='40' NameClass='State' Value='No Data'>
+			<ItemShapeSettings  Type='Polygon' Top='213' Left='242' Width='96' Height='51'>
+				<MapProperties PolyMinX='319.0' PolyMinY='265.0' OverrideTextSettings='True'/>
+				<Path>
+					<MoveTo X='44.0' Y='12.0'/><LineTo X='43.0' Y='48.0'/><LineTo X='44.0' Y='48.0'/><LineTo X='48.0' Y='51.0'/><LineTo X='49.0' Y='51.0'/><LineTo X='52.0' Y='50.0'/><LineTo X='54.0' Y='53.0'/><LineTo X='55.0' Y='55.0'/><LineTo X='58.0' Y='55.0'/><LineTo X='61.0' Y='57.0'/><LineTo X='63.0' Y='56.0'/><LineTo X='65.0' Y='58.0'/><LineTo X='67.0' Y='57.0'/><LineTo X='71.0' Y='57.0'/><LineTo X='71.0' Y='59.0'/><LineTo X='73.0' Y='60.0'/><LineTo X='73.0' Y='62.0'/><LineTo X='74.0' Y='62.0'/><LineTo X='78.0' Y='60.0'/><LineTo X='79.0' Y='62.0'/><LineTo X='80.0' Y='62.0'/><LineTo X='81.0' Y='63.0'/><LineTo X='85.0' Y='62.0'/><LineTo X='84.0' Y='64.0'/><LineTo X='85.0' Y='65.0'/><LineTo X='87.0' Y='63.0'/><LineTo X='86.0' Y='63.0'/><LineTo X='91.0' Y='61.0'/><LineTo X='92.0' Y='63.0'/><LineTo X='96.0' Y='64.0'/><LineTo X='98.0' Y='66.0'/><LineTo X='98.0' Y='64.0'/><LineTo X='101.0' Y='63.0'/><LineTo X='104.0' Y='62.0'/><LineTo X='106.0' Y='63.0'/><LineTo X='106.0' Y='62.0'/><LineTo X='109.0' Y='61.0'/><LineTo X='110.0' Y='62.0'/><LineTo X='113.0' Y='63.0'/><LineTo X='114.0' Y='61.0'/><LineTo X='118.0' Y='63.0'/><LineTo X='120.0' Y='65.0'/><LineTo X='126.0' Y='67.0'/><LineTo X='124.0' Y='5.0'/><LineTo X='1.0' Y='0.0'/><LineTo X='0.0' Y='9.0'/><LineTo X='44.0' Y='12.0'/>
+				</Path>
+				<Label Position='Relative' X='75' Y='28' HJustification='Center' LeaderColor='Black'/>
+			</ItemShapeSettings>
+		</MapShapeItem>
+		<MapShapeItem Name='OR' LongName='Oregon' X='47.0' Y='45.0' OrigWidth='115' OrigHeight='98' OrigColor='#ccffcc' Parent='US' Code='41' NameClass='State' Value='5.0'>
+			<ItemShapeSettings  Type='Polygon' Top='45' Left='34' Width='88' Height='75'>
+				<MapProperties PolyMinX='47.0' PolyMinY='45.0' OverrideTextSettings='True'/>
+				<Path>
+					<MoveTo X='53.0' Y='88.0'/><LineTo X='0.0' Y='72.0'/><LineTo X='1.0' Y='55.0'/><LineTo X='5.0' Y='50.0'/><LineTo X='8.0' Y='47.0'/><LineTo X='22.0' Y='13.0'/><LineTo X='23.0' Y='11.0'/><LineTo X='26.0' Y='0.0'/><LineTo X='32.0' Y='1.0'/><LineTo X='34.0' Y='3.0'/><LineTo X='35.0' Y='2.0'/><LineTo X='37.0' Y='5.0'/><LineTo X='37.0' Y='13.0'/><LineTo X='42.0' Y='16.0'/><LineTo X='46.0' Y='16.0'/><LineTo X='49.0' Y='15.0'/><LineTo X='55.0' Y='17.0'/><LineTo X='56.0' Y='19.0'/><LineTo X='64.0' Y='19.0'/><LineTo X='65.0' Y='20.0'/><LineTo X='76.0' Y='20.0'/><LineTo X='78.0' Y='19.0'/><LineTo X='84.0' Y='21.0'/><LineTo X='85.0' Y='20.0'/><LineTo X='111.0' Y='26.0'/><LineTo X='112.0' Y='30.0'/><LineTo X='115.0' Y='32.0'/><LineTo X='115.0' Y='35.0'/><LineTo X='106.0' Y='47.0'/><LineTo X='104.0' Y='48.0'/><LineTo X='101.0' Y='53.0'/><LineTo X='100.0' Y='56.0'/><LineTo X='103.0' Y='57.0'/><LineTo X='102.0' Y='60.0'/><LineTo X='102.0' Y='62.0'/><LineTo X='101.0' Y='65.0'/><LineTo X='93.0' Y='98.0'/><LineTo X='53.0' Y='88.0'/>
+				</Path>
+				<Label Position='Relative' X='57' Y='53' HJustification='Center' LeaderColor='Black'/>
+			</ItemShapeSettings>
+		</MapShapeItem>
+		<MapShapeItem Name='PA' LongName='Pennsylvania' X='633.0' Y='150.0' OrigWidth='85' OrigHeight='54' OrigColor='#ffcccc' Parent='US' Code='42' NameClass='State' Value='No Data'>
+			<ItemShapeSettings  Type='Polygon' Top='125' Left='483' Width='65' Height='41'>
+				<MapProperties PolyMinX='633.0' PolyMinY='150.0' OverrideTextSettings='True'/>
+				<Path>
+					<MoveTo X='85.0' Y='31.0'/><LineTo X='81.0' Y='27.0'/><LineTo X='80.0' Y='27.0'/><LineTo X='79.0' Y='25.0'/><LineTo X='77.0' Y='25.0'/><LineTo X='77.0' Y='22.0'/><LineTo X='78.0' Y='19.0'/><LineTo X='78.0' Y='15.0'/><LineTo X='81.0' Y='9.0'/><LineTo X='80.0' Y='8.0'/><LineTo X='76.0' Y='8.0'/><LineTo X='75.0' Y='6.0'/><LineTo X='74.0' Y='2.0'/><LineTo X='71.0' Y='2.0'/><LineTo X='69.0' Y='0.0'/><LineTo X='10.0' Y='11.0'/><LineTo X='10.0' Y='6.0'/><LineTo X='8.0' Y='8.0'/><LineTo X='5.0' Y='8.0'/><LineTo X='0.0' Y='13.0'/><LineTo X='7.0' Y='54.0'/><LineTo X='21.0' Y='52.0'/><LineTo X='72.0' Y='42.0'/><LineTo X='75.0' Y='39.0'/><LineTo X='77.0' Y='40.0'/><LineTo X='78.0' Y='39.0'/><LineTo X='81.0' Y='38.0'/><LineTo X='81.0' Y='36.0'/><LineTo X='85.0' Y='31.0'/>
+				</Path>
+				<Label Position='Relative' X='38' Y='20' HJustification='Center' LeaderColor='Black'/>
+			</ItemShapeSettings>
+		</MapShapeItem>
+		<MapShapeItem Name='RI' LongName='Rhode Island' X='750.0' Y='137.0' OrigWidth='9' OrigHeight='14' OrigColor='#fff4cc' Parent='US' Code='44' NameClass='State' Value='No Data'>
+			<ItemShapeSettings  Type='Polygon' Top='115' Left='572' Width='7' Height='11'>
+				<MapProperties PolyMinX='750.0' PolyMinY='137.0' OverrideTextSettings='True'/>
+				<Path>
+					<MoveTo X='2.0' Y='14.0'/><LineTo X='8.0' Y='10.0'/><LineTo X='9.0' Y='5.0'/><LineTo X='7.0' Y='4.0'/><LineTo X='5.0' Y='0.0'/><LineTo X='0.0' Y='1.0'/><LineTo X='2.0' Y='12.0'/><LineTo X='2.0' Y='14.0'/>
+				</Path>
+				<Label Position='Relative' X='38' Y='5' HJustification='Center' FillOn='True' BorderType='Thin' FillColor='#cc0000' SourcePointX='3' SourcePointY='5' LeaderColor='Black' FillWithShapeColor='True'/>
+			</ItemShapeSettings>
+		</MapShapeItem>
+		<MapShapeItem Name='SC' LongName='South Carolina' X='612.0' Y='289.0' OrigWidth='74' OrigHeight='56' OrigColor='#fff4cc' Parent='US' Code='45' NameClass='State' Value='No Data'>
+			<ItemShapeSettings  Type='Polygon' Top='231' Left='466' Width='57' Height='43'>
+				<MapProperties PolyMinX='612.0' PolyMinY='289.0' OverrideTextSettings='True'/>
+				<Path>
+					<MoveTo X='44.0' Y='56.0'/><LineTo X='43.0' Y='54.0'/><LineTo X='47.0' Y='52.0'/><LineTo X='48.0' Y='51.0'/><LineTo X='45.0' Y='47.0'/><LineTo X='45.0' Y='46.0'/><LineTo X='55.0' Y='44.0'/><LineTo X='62.0' Y='37.0'/><LineTo X='63.0' Y='35.0'/><LineTo X='66.0' Y='32.0'/><LineTo X='67.0' Y='30.0'/><LineTo X='66.0' Y='28.0'/><LineTo X='67.0' Y='27.0'/><LineTo X='70.0' Y='21.0'/><LineTo X='74.0' Y='19.0'/><LineTo X='74.0' Y='17.0'/><LineTo X='54.0' Y='3.0'/><LineTo X='37.0' Y='5.0'/><LineTo X='37.0' Y='3.0'/><LineTo X='35.0' Y='0.0'/><LineTo X='33.0' Y='1.0'/><LineTo X='33.0' Y='0.0'/><LineTo X='13.0' Y='1.0'/><LineTo X='8.0' Y='5.0'/><LineTo X='3.0' Y='6.0'/><LineTo X='2.0' Y='8.0'/><LineTo X='1.0' Y='9.0'/><LineTo X='0.0' Y='12.0'/><LineTo X='5.0' Y='16.0'/><LineTo X='7.0' Y='16.0'/><LineTo X='10.0' Y='21.0'/><LineTo X='13.0' Y='25.0'/><LineTo X='18.0' Y='27.0'/><LineTo X='19.0' Y='29.0'/><LineTo X='24.0' Y='32.0'/><LineTo X='24.0' Y='34.0'/><LineTo X='26.0' Y='35.0'/><LineTo X='27.0' Y='38.0'/><LineTo X='32.0' Y='40.0'/><LineTo X='34.0' Y='47.0'/><LineTo X='37.0' Y='48.0'/><LineTo X='39.0' Y='51.0'/><LineTo X='40.0' Y='55.0'/><LineTo X='44.0' Y='56.0'/>
+				</Path>
+				<Label Position='Relative' X='35' Y='20' HJustification='Center' LeaderColor='Black'/>
+			</ItemShapeSettings>
+		</MapShapeItem>
+		<MapShapeItem Name='SD' LongName='South Dakota' X='316.0' Y='99.0' OrigWidth='102' OrigHeight='69' OrigColor='#ffdfbf' Parent='US' Code='46' NameClass='State' Value='No Data'>
+			<ItemShapeSettings  Type='Polygon' Top='86' Left='240' Width='78' Height='53'>
+				<MapProperties PolyMinX='316.0' PolyMinY='99.0' OverrideTextSettings='True'/>
+				<Path>
+					<MoveTo X='5.0' Y='0.0'/><LineTo X='0.0' Y='54.0'/><LineTo X='74.0' Y='59.0'/><LineTo X='80.0' Y='63.0'/><LineTo X='81.0' Y='63.0'/><LineTo X='83.0' Y='62.0'/><LineTo X='91.0' Y='62.0'/><LineTo X='92.0' Y='63.0'/><LineTo X='98.0' Y='66.0'/><LineTo X='101.0' Y='69.0'/><LineTo X='100.0' Y='66.0'/><LineTo X='99.0' Y='64.0'/><LineTo X='101.0' Y='57.0'/><LineTo X='101.0' Y='56.0'/><LineTo X='100.0' Y='55.0'/><LineTo X='100.0' Y='50.0'/><LineTo X='102.0' Y='50.0'/><LineTo X='102.0' Y='17.0'/><LineTo X='101.0' Y='16.0'/><LineTo X='99.0' Y='15.0'/><LineTo X='97.0' Y='12.0'/><LineTo X='101.0' Y='7.0'/><LineTo X='101.0' Y='6.0'/><LineTo X='5.0' Y='0.0'/>
+				</Path>
+				<Label Position='Relative' X='51' Y='30' HJustification='Center' LeaderColor='Black'/>
+			</ItemShapeSettings>
+		</MapShapeItem>
+		<MapShapeItem Name='TN' LongName='Tennessee' X='507.0' Y='262.0' OrigWidth='125' OrigHeight='43' OrigColor='#ccffcc' Parent='US' Code='47' NameClass='State' Value='No Data'>
+			<ItemShapeSettings  Type='Polygon' Top='211' Left='386' Width='96' Height='33'>
+				<MapProperties PolyMinX='507.0' PolyMinY='262.0' OverrideTextSettings='True'/>
+				<Path>
+					<MoveTo X='125.0' Y='0.0'/><LineTo X='95.0' Y='4.0'/><LineTo X='54.0' Y='8.0'/><LineTo X='53.0' Y='9.0'/><LineTo X='35.0' Y='10.0'/><LineTo X='31.0' Y='10.0'/><LineTo X='32.0' Y='13.0'/><LineTo X='11.0' Y='15.0'/><LineTo X='11.0' Y='16.0'/><LineTo X='10.0' Y='14.0'/><LineTo X='10.0' Y='17.0'/><LineTo X='10.0' Y='19.0'/><LineTo X='9.0' Y='22.0'/><LineTo X='8.0' Y='24.0'/><LineTo X='9.0' Y='26.0'/><LineTo X='7.0' Y='26.0'/><LineTo X='8.0' Y='27.0'/><LineTo X='8.0' Y='28.0'/><LineTo X='5.0' Y='29.0'/><LineTo X='6.0' Y='31.0'/><LineTo X='5.0' Y='32.0'/><LineTo X='4.0' Y='33.0'/><LineTo X='3.0' Y='36.0'/><LineTo X='3.0' Y='40.0'/><LineTo X='2.0' Y='41.0'/><LineTo X='2.0' Y='42.0'/><LineTo X='0.0' Y='43.0'/><LineTo X='32.0' Y='41.0'/><LineTo X='70.0' Y='38.0'/><LineTo X='89.0' Y='35.0'/><LineTo X='89.0' Y='31.0'/><LineTo X='90.0' Y='31.0'/><LineTo X='93.0' Y='30.0'/><LineTo X='93.0' Y='27.0'/><LineTo X='95.0' Y='26.0'/><LineTo X='97.0' Y='24.0'/><LineTo X='101.0' Y='24.0'/><LineTo X='105.0' Y='20.0'/><LineTo X='107.0' Y='19.0'/><LineTo X='108.0' Y='16.0'/><LineTo X='110.0' Y='16.0'/><LineTo X='110.0' Y='15.0'/><LineTo X='112.0' Y='13.0'/><LineTo X='113.0' Y='15.0'/><LineTo X='117.0' Y='11.0'/><LineTo X='120.0' Y='11.0'/><LineTo X='122.0' Y='7.0'/><LineTo X='123.0' Y='6.0'/><LineTo X='125.0' Y='6.0'/><LineTo X='124.0' Y='5.0'/><LineTo X='125.0' Y='0.0'/>
+				</Path>
+				<Label Position='Relative' X='57' Y='21' HJustification='Center' LeaderColor='Black'/>
+			</ItemShapeSettings>
+		</MapShapeItem>
+		<MapShapeItem Name='TX' LongName='Texas' X='256.0' Y='274.0' OrigWidth='204' OrigHeight='200' OrigColor='#ffdfbf' Parent='US' Code='48' NameClass='State' Value='No Data'>
+			<ItemShapeSettings  Type='Polygon' Top='220' Left='194' Width='156' Height='153'>
+				<MapProperties PolyMinX='256.0' PolyMinY='274.0' OverrideTextSettings='True'/>
+				<Path>
+					<MoveTo X='0.0' Y='80.0'/><LineTo X='4.0' Y='83.0'/><LineTo X='6.0' Y='87.0'/><LineTo X='9.0' Y='89.0'/><LineTo X='11.0' Y='93.0'/><LineTo X='24.0' Y='105.0'/><LineTo X='27.0' Y='120.0'/><LineTo X='30.0' Y='126.0'/><LineTo X='42.0' Y='136.0'/><LineTo X='49.0' Y='138.0'/><LineTo X='58.0' Y='124.0'/><LineTo X='61.0' Y='123.0'/><LineTo X='64.0' Y='124.0'/><LineTo X='77.0' Y='125.0'/><LineTo X='89.0' Y='138.0'/><LineTo X='93.0' Y='152.0'/><LineTo X='98.0' Y='157.0'/><LineTo X='100.0' Y='163.0'/><LineTo X='105.0' Y='167.0'/><LineTo X='109.0' Y='181.0'/><LineTo X='114.0' Y='189.0'/><LineTo X='119.0' Y='192.0'/><LineTo X='123.0' Y='193.0'/><LineTo X='128.0' Y='196.0'/><LineTo X='136.0' Y='197.0'/><LineTo X='141.0' Y='199.0'/><LineTo X='147.0' Y='200.0'/><LineTo X='147.0' Y='199.0'/><LineTo X='146.0' Y='198.0'/><LineTo X='143.0' Y='192.0'/><LineTo X='141.0' Y='182.0'/><LineTo X='143.0' Y='181.0'/><LineTo X='143.0' Y='177.0'/><LineTo X='140.0' Y='176.0'/><LineTo X='140.0' Y='175.0'/><LineTo X='143.0' Y='174.0'/><LineTo X='143.0' Y='175.0'/><LineTo X='145.0' Y='174.0'/><LineTo X='146.0' Y='168.0'/><LineTo X='144.0' Y='165.0'/><LineTo X='148.0' Y='165.0'/><LineTo X='150.0' Y='162.0'/><LineTo X='150.0' Y='161.0'/><LineTo X='148.0' Y='161.0'/><LineTo X='148.0' Y='160.0'/><LineTo X='151.0' Y='158.0'/><LineTo X='152.0' Y='159.0'/><LineTo X='155.0' Y='155.0'/><LineTo X='159.0' Y='154.0'/><LineTo X='159.0' Y='153.0'/><LineTo X='157.0' Y='151.0'/><LineTo X='158.0' Y='149.0'/><LineTo X='160.0' Y='151.0'/><LineTo X='161.0' Y='149.0'/><LineTo X='162.0' Y='150.0'/><LineTo X='164.0' Y='150.0'/><LineTo X='165.0' Y='148.0'/><LineTo X='165.0' Y='151.0'/><LineTo X='171.0' Y='149.0'/><LineTo X='164.0' Y='153.0'/><LineTo X='164.0' Y='154.0'/><LineTo X='179.0' Y='145.0'/><LineTo X='182.0' Y='139.0'/><LineTo X='182.0' Y='130.0'/><LineTo X='183.0' Y='129.0'/><LineTo X='184.0' Y='129.0'/><LineTo X='185.0' Y='132.0'/><LineTo X='187.0' Y='132.0'/><LineTo X='186.0' Y='133.0'/><LineTo X='184.0' Y='134.0'/><LineTo X='185.0' Y='135.0'/><LineTo X='194.0' Y='130.0'/><LineTo X='199.0' Y='130.0'/><LineTo X='198.0' Y='128.0'/><LineTo X='201.0' Y='123.0'/><LineTo X='202.0' Y='122.0'/><LineTo X='201.0' Y='118.0'/><LineTo X='202.0' Y='116.0'/><LineTo X='201.0' Y='115.0'/><LineTo X='204.0' Y='110.0'/><LineTo X='204.0' Y='107.0'/><LineTo X='204.0' Y='106.0'/><LineTo X='204.0' Y='103.0'/><LineTo X='203.0' Y='103.0'/><LineTo X='202.0' Y='100.0'/><LineTo X='202.0' Y='99.0'/><LineTo X='200.0' Y='98.0'/><LineTo X='201.0' Y='97.0'/><LineTo X='199.0' Y='95.0'/><LineTo X='199.0' Y='92.0'/><LineTo X='196.0' Y='88.0'/><LineTo X='195.0' Y='59.0'/><LineTo X='190.0' Y='59.0'/><LineTo X='189.0' Y='58.0'/><LineTo X='183.0' Y='56.0'/><LineTo X='181.0' Y='54.0'/><LineTo X='177.0' Y='52.0'/><LineTo X='176.0' Y='54.0'/><LineTo X='173.0' Y='53.0'/><LineTo X='172.0' Y='52.0'/><LineTo X='169.0' Y='53.0'/><LineTo X='169.0' Y='54.0'/><LineTo X='167.0' Y='53.0'/><LineTo X='164.0' Y='54.0'/><LineTo X='161.0' Y='55.0'/><LineTo X='161.0' Y='57.0'/><LineTo X='159.0' Y='55.0'/><LineTo X='155.0' Y='54.0'/><LineTo X='154.0' Y='52.0'/><LineTo X='149.0' Y='54.0'/><LineTo X='150.0' Y='54.0'/><LineTo X='148.0' Y='56.0'/><LineTo X='147.0' Y='55.0'/><LineTo X='148.0' Y='53.0'/><LineTo X='144.0' Y='54.0'/><LineTo X='143.0' Y='53.0'/><LineTo X='142.0' Y='53.0'/><LineTo X='141.0' Y='51.0'/><LineTo X='137.0' Y='53.0'/><LineTo X='136.0' Y='53.0'/><LineTo X='136.0' Y='51.0'/><LineTo X='134.0' Y='50.0'/><LineTo X='134.0' Y='48.0'/><LineTo X='130.0' Y='48.0'/><LineTo X='128.0' Y='49.0'/><LineTo X='126.0' Y='47.0'/><LineTo X='124.0' Y='48.0'/><LineTo X='121.0' Y='46.0'/><LineTo X='118.0' Y='46.0'/><LineTo X='117.0' Y='44.0'/><LineTo X='115.0' Y='41.0'/><LineTo X='112.0' Y='42.0'/><LineTo X='111.0' Y='42.0'/><LineTo X='107.0' Y='39.0'/><LineTo X='106.0' Y='39.0'/><LineTo X='107.0' Y='3.0'/><LineTo X='63.0' Y='0.0'/><LineTo X='56.0' Y='83.0'/><LineTo X='0.0' Y='77.0'/><LineTo X='0.0' Y='80.0'/>
+				</Path>
+				<Label Position='Relative' X='100' Y='85' HJustification='Center' LeaderColor='Black'/>
+			</ItemShapeSettings>
+		</MapShapeItem>
+		<MapShapeItem Name='UT' LongName='Utah' X='161.0' Y='151.0' OrigWidth='83' OrigHeight='103' OrigColor='#ccffcc' Parent='US' Code='49' NameClass='State' Value='No Data'>
+			<ItemShapeSettings  Type='Polygon' Top='126' Left='122' Width='63' Height='79'>
+				<MapProperties PolyMinX='161.0' PolyMinY='151.0' OverrideTextSettings='True'/>
+				<Path>
+					<MoveTo X='58.0' Y='8.0'/><LineTo X='55.0' Y='26.0'/><LineTo X='83.0' Y='30.0'/><LineTo X='72.0' Y='103.0'/><LineTo X='0.0' Y='91.0'/><LineTo X='18.0' Y='0.0'/><LineTo X='58.0' Y='8.0'/>
+				</Path>
+				<Label Position='Relative' X='39' Y='55' HJustification='Center' LeaderColor='Black'/>
+			</ItemShapeSettings>
+		</MapShapeItem>
+		<MapShapeItem Name='VA' LongName='Virginia' X='602.0' Y='204.0' OrigWidth='117' OrigHeight='62' OrigColor='#fff4cc' Parent='US' Code='51' NameClass='State' Value='No Data'>
+			<ItemShapeSettings  Type='Polygon' Top='166' Left='459' Width='89' Height='47'>
+				<MapProperties PolyMinX='602.0' PolyMinY='204.0' OverrideTextSettings='True'/>
+				<Path>
+					<MoveTo X='111.0' Y='20.0'/><LineTo X='112.0' Y='20.0'/><LineTo X='112.0' Y='22.0'/><LineTo X='111.0' Y='22.0'/><LineTo X='109.0' Y='30.0'/><LineTo X='112.0' Y='35.0'/><LineTo X='114.0' Y='34.0'/><LineTo X='117.0' Y='17.0'/><LineTo X='111.0' Y='20.0'/>
+					<MoveTo X='30.0' Y='58.0'/><LineTo X='0.0' Y='62.0'/><LineTo X='8.0' Y='60.0'/><LineTo X='9.0' Y='58.0'/><LineTo X='12.0' Y='56.0'/><LineTo X='12.0' Y='55.0'/><LineTo X='14.0' Y='53.0'/><LineTo X='14.0' Y='52.0'/><LineTo X='23.0' Y='43.0'/><LineTo X='24.0' Y='46.0'/><LineTo X='29.0' Y='48.0'/><LineTo X='32.0' Y='47.0'/><LineTo X='32.0' Y='45.0'/><LineTo X='35.0' Y='47.0'/><LineTo X='39.0' Y='45.0'/><LineTo X='41.0' Y='43.0'/><LineTo X='44.0' Y='41.0'/><LineTo X='45.0' Y='42.0'/><LineTo X='47.0' Y='40.0'/><LineTo X='47.0' Y='39.0'/><LineTo X='47.0' Y='37.0'/><LineTo X='50.0' Y='30.0'/><LineTo X='51.0' Y='27.0'/><LineTo X='52.0' Y='25.0'/><LineTo X='53.0' Y='19.0'/><LineTo X='55.0' Y='19.0'/><LineTo X='55.0' Y='20.0'/><LineTo X='59.0' Y='21.0'/><LineTo X='62.0' Y='12.0'/><LineTo X='64.0' Y='13.0'/><LineTo X='65.0' Y='10.0'/><LineTo X='67.0' Y='9.0'/><LineTo X='69.0' Y='5.0'/><LineTo X='69.0' Y='0.0'/><LineTo X='77.0' Y='4.0'/><LineTo X='78.0' Y='1.0'/><LineTo X='80.0' Y='1.0'/><LineTo X='82.0' Y='2.0'/><LineTo X='81.0' Y='3.0'/><LineTo X='89.0' Y='7.0'/><LineTo X='89.0' Y='10.0'/><LineTo X='88.0' Y='10.0'/><LineTo X='88.0' Y='12.0'/><LineTo X='87.0' Y='15.0'/><LineTo X='88.0' Y='16.0'/><LineTo X='92.0' Y='17.0'/><LineTo X='95.0' Y='19.0'/><LineTo X='102.0' Y='21.0'/><LineTo X='103.0' Y='22.0'/><LineTo X='104.0' Y='27.0'/><LineTo X='103.0' Y='28.0'/><LineTo X='104.0' Y='30.0'/><LineTo X='105.0' Y='30.0'/><LineTo X='104.0' Y='33.0'/><LineTo X='105.0' Y='34.0'/><LineTo X='107.0' Y='37.0'/><LineTo X='104.0' Y='39.0'/><LineTo X='104.0' Y='40.0'/><LineTo X='107.0' Y='41.0'/><LineTo X='108.0' Y='40.0'/><LineTo X='113.0' Y='40.0'/><LineTo X='114.0' Y='43.0'/><LineTo X='30.0' Y='58.0'/>
+				</Path>
+				<Label Position='Relative' X='60' Y='27' HJustification='Center' LeaderColor='Black'/>
+			</ItemShapeSettings>
+		</MapShapeItem>
+		<MapShapeItem Name='VT' LongName='Vermont' X='717.0' Y='85.0' OrigWidth='24' OrigHeight='45' OrigColor='#fff4cc' Parent='US' Code='50' NameClass='State' Value='No Data'>
+			<ItemShapeSettings  Type='Polygon' Top='75' Left='547' Width='18' Height='34'>
+				<MapProperties PolyMinX='717.0' PolyMinY='85.0' OverrideTextSettings='True'/>
+				<Path>
+					<MoveTo X='21.0' Y='43.0'/><LineTo X='19.0' Y='41.0'/><LineTo X='19.0' Y='38.0'/><LineTo X='18.0' Y='28.0'/><LineTo X='20.0' Y='20.0'/><LineTo X='19.0' Y='13.0'/><LineTo X='22.0' Y='12.0'/><LineTo X='24.0' Y='8.0'/><LineTo X='24.0' Y='7.0'/><LineTo X='22.0' Y='4.0'/><LineTo X='23.0' Y='1.0'/><LineTo X='23.0' Y='0.0'/><LineTo X='0.0' Y='5.0'/><LineTo X='1.0' Y='12.0'/><LineTo X='3.0' Y='15.0'/><LineTo X='3.0' Y='18.0'/><LineTo X='2.0' Y='22.0'/><LineTo X='5.0' Y='28.0'/><LineTo X='4.0' Y='30.0'/><LineTo X='5.0' Y='31.0'/><LineTo X='6.0' Y='29.0'/><LineTo X='7.0' Y='31.0'/><LineTo X='10.0' Y='45.0'/><LineTo X='21.0' Y='43.0'/>
+				</Path>
+				<Label Position='Relative' X='-20' Y='-15' HJustification='Center' FillOn='True' BorderType='Thin' FillColor='#cc0000' SourcePointX='9' SourcePointY='19' LeaderColor='Black' FillWithShapeColor='True'/>
+			</ItemShapeSettings>
+		</MapShapeItem>
+		<MapShapeItem Name='WA' LongName='Washington' X='73.0' Y='0.0' OrigWidth='96' OrigHeight='71' OrigColor='#fff4cc' Parent='US' Code='53' NameClass='State' Value='No Data'>
+			<ItemShapeSettings  Type='Polygon' Top='11' Left='54' Width='73' Height='54'>
+				<MapProperties PolyMinX='73.0' PolyMinY='0.0' OverrideTextSettings='True'/>
+				<Path>
+					<MoveTo X='96.0' Y='18.0'/><LineTo X='85.0' Y='64.0'/><LineTo X='86.0' Y='68.0'/><LineTo X='85.0' Y='69.0'/><LineTo X='85.0' Y='71.0'/><LineTo X='59.0' Y='65.0'/><LineTo X='58.0' Y='66.0'/><LineTo X='52.0' Y='64.0'/><LineTo X='50.0' Y='65.0'/><LineTo X='39.0' Y='65.0'/><LineTo X='38.0' Y='64.0'/><LineTo X='30.0' Y='64.0'/><LineTo X='29.0' Y='62.0'/><LineTo X='23.0' Y='60.0'/><LineTo X='20.0' Y='61.0'/><LineTo X='16.0' Y='61.0'/><LineTo X='11.0' Y='58.0'/><LineTo X='11.0' Y='50.0'/><LineTo X='6.0' Y='44.0'/><LineTo X='2.0' Y='43.0'/><LineTo X='0.0' Y='41.0'/><LineTo X='2.0' Y='36.0'/><LineTo X='2.0' Y='40.0'/><LineTo X='4.0' Y='35.0'/><LineTo X='2.0' Y='33.0'/><LineTo X='5.0' Y='29.0'/><LineTo X='3.0' Y='29.0'/><LineTo X='3.0' Y='14.0'/><LineTo X='1.0' Y='10.0'/><LineTo X='2.0' Y='6.0'/><LineTo X='5.0' Y='3.0'/><LineTo X='17.0' Y='12.0'/><LineTo X='20.0' Y='12.0'/><LineTo X='23.0' Y='14.0'/><LineTo X='25.0' Y='15.0'/><LineTo X='25.0' Y='17.0'/><LineTo X='24.0' Y='19.0'/><LineTo X='23.0' Y='19.0'/><LineTo X='18.0' Y='24.0'/><LineTo X='18.0' Y='26.0'/><LineTo X='19.0' Y='27.0'/><LineTo X='20.0' Y='25.0'/><LineTo X='26.0' Y='20.0'/><LineTo X='28.0' Y='21.0'/><LineTo X='28.0' Y='22.0'/><LineTo X='30.0' Y='16.0'/><LineTo X='30.0' Y='12.0'/><LineTo X='28.0' Y='9.0'/><LineTo X='31.0' Y='8.0'/><LineTo X='31.0' Y='6.0'/><LineTo X='33.0' Y='7.0'/><LineTo X='33.0' Y='5.0'/><LineTo X='30.0' Y='4.0'/><LineTo X='29.0' Y='0.0'/><LineTo X='96.0' Y='18.0'/>
+				</Path>
+				<Label Position='Relative' X='53' Y='33' HJustification='Center' LeaderColor='Black'/>
+			</ItemShapeSettings>
+		</MapShapeItem>
+		<MapShapeItem Name='WI' LongName='Wisconsin' X='464.0' Y='86.0' OrigWidth='76' OrigHeight='81' OrigColor='#fff4cc' Parent='US' Code='55' NameClass='State' Value='No Data'>
+			<ItemShapeSettings  Type='Polygon' Top='76' Left='353' Width='58' Height='62'>
+				<MapProperties PolyMinX='464.0' PolyMinY='86.0' OverrideTextSettings='True'/>
+				<Path>
+					<MoveTo X='71.0' Y='50.0'/><LineTo X='72.0' Y='41.0'/><LineTo X='76.0' Y='29.0'/><LineTo X='75.0' Y='27.0'/><LineTo X='72.0' Y='31.0'/><LineTo X='72.0' Y='35.0'/><LineTo X='70.0' Y='36.0'/><LineTo X='65.0' Y='41.0'/><LineTo X='67.0' Y='35.0'/><LineTo X='70.0' Y='30.0'/><LineTo X='67.0' Y='29.0'/><LineTo X='68.0' Y='25.0'/><LineTo X='65.0' Y='26.0'/><LineTo X='66.0' Y='23.0'/><LineTo X='66.0' Y='20.0'/><LineTo X='64.0' Y='19.0'/><LineTo X='61.0' Y='18.0'/><LineTo X='61.0' Y='16.0'/><LineTo X='56.0' Y='14.0'/><LineTo X='54.0' Y='15.0'/><LineTo X='35.0' Y='10.0'/><LineTo X='34.0' Y='7.0'/><LineTo X='31.0' Y='6.0'/><LineTo X='27.0' Y='5.0'/><LineTo X='26.0' Y='6.0'/><LineTo X='26.0' Y='1.0'/><LineTo X='24.0' Y='0.0'/><LineTo X='16.0' Y='5.0'/><LineTo X='11.0' Y='6.0'/><LineTo X='10.0' Y='4.0'/><LineTo X='9.0' Y='3.0'/><LineTo X='8.0' Y='5.0'/><LineTo X='7.0' Y='5.0'/><LineTo X='8.0' Y='16.0'/><LineTo X='2.0' Y='19.0'/><LineTo X='0.0' Y='23.0'/><LineTo X='2.0' Y='25.0'/><LineTo X='3.0' Y='28.0'/><LineTo X='2.0' Y='30.0'/><LineTo X='2.0' Y='34.0'/><LineTo X='1.0' Y='34.0'/><LineTo X='2.0' Y='37.0'/><LineTo X='1.0' Y='40.0'/><LineTo X='3.0' Y='42.0'/><LineTo X='6.0' Y='43.0'/><LineTo X='7.0' Y='45.0'/><LineTo X='9.0' Y='45.0'/><LineTo X='11.0' Y='46.0'/><LineTo X='14.0' Y='48.0'/><LineTo X='15.0' Y='51.0'/><LineTo X='21.0' Y='55.0'/><LineTo X='22.0' Y='57.0'/><LineTo X='26.0' Y='77.0'/><LineTo X='31.0' Y='78.0'/><LineTo X='32.0' Y='81.0'/><LineTo X='70.0' Y='79.0'/><LineTo X='68.0' Y='65.0'/><LineTo X='71.0' Y='50.0'/>
+				</Path>
+				<Label Position='Relative' X='36' Y='43' HJustification='Center' LeaderColor='Black'/>
+			</ItemShapeSettings>
+		</MapShapeItem>
+		<MapShapeItem Name='WV' LongName='West Virginia' X='614.0' Y='187.0' OrigWidth='66' OrigHeight='65' OrigColor='#ccffcc' Parent='US' Code='54' NameClass='State' Value='No Data'>
+			<ItemShapeSettings  Type='Polygon' Top='153' Left='468' Width='50' Height='50'>
+				<MapProperties PolyMinX='614.0' PolyMinY='187.0' OverrideTextSettings='True'/>
+				<Path>
+					<MoveTo X='4.0' Y='44.0'/><LineTo X='4.0' Y='41.0'/><LineTo X='5.0' Y='41.0'/><LineTo X='4.0' Y='38.0'/><LineTo X='6.0' Y='33.0'/><LineTo X='8.0' Y='35.0'/><LineTo X='9.0' Y='34.0'/><LineTo X='10.0' Y='34.0'/><LineTo X='9.0' Y='31.0'/><LineTo X='10.0' Y='31.0'/><LineTo X='11.0' Y='28.0'/><LineTo X='14.0' Y='25.0'/><LineTo X='15.0' Y='26.0'/><LineTo X='21.0' Y='20.0'/><LineTo X='21.0' Y='14.0'/><LineTo X='22.0' Y='14.0'/><LineTo X='22.0' Y='11.0'/><LineTo X='23.0' Y='6.0'/><LineTo X='22.0' Y='3.0'/><LineTo X='23.0' Y='0.0'/><LineTo X='26.0' Y='17.0'/><LineTo X='40.0' Y='15.0'/><LineTo X='42.0' Y='24.0'/><LineTo X='46.0' Y='18.0'/><LineTo X='48.0' Y='18.0'/><LineTo X='50.0' Y='14.0'/><LineTo X='51.0' Y='16.0'/><LineTo X='55.0' Y='16.0'/><LineTo X='55.0' Y='14.0'/><LineTo X='57.0' Y='13.0'/><LineTo X='58.0' Y='12.0'/><LineTo X='61.0' Y='13.0'/><LineTo X='63.0' Y='13.0'/><LineTo X='63.0' Y='14.0'/><LineTo X='64.0' Y='15.0'/><LineTo X='64.0' Y='16.0'/><LineTo X='65.0' Y='16.0'/><LineTo X='66.0' Y='18.0'/><LineTo X='65.0' Y='21.0'/><LineTo X='57.0' Y='17.0'/><LineTo X='57.0' Y='22.0'/><LineTo X='55.0' Y='26.0'/><LineTo X='53.0' Y='27.0'/><LineTo X='52.0' Y='30.0'/><LineTo X='50.0' Y='29.0'/><LineTo X='47.0' Y='38.0'/><LineTo X='43.0' Y='37.0'/><LineTo X='43.0' Y='36.0'/><LineTo X='41.0' Y='36.0'/><LineTo X='40.0' Y='42.0'/><LineTo X='39.0' Y='44.0'/><LineTo X='38.0' Y='47.0'/><LineTo X='35.0' Y='54.0'/><LineTo X='35.0' Y='56.0'/><LineTo X='35.0' Y='57.0'/><LineTo X='33.0' Y='59.0'/><LineTo X='32.0' Y='58.0'/><LineTo X='29.0' Y='60.0'/><LineTo X='27.0' Y='62.0'/><LineTo X='23.0' Y='64.0'/><LineTo X='20.0' Y='62.0'/><LineTo X='20.0' Y='64.0'/><LineTo X='17.0' Y='65.0'/><LineTo X='12.0' Y='63.0'/><LineTo X='11.0' Y='60.0'/><LineTo X='9.0' Y='60.0'/><LineTo X='6.0' Y='58.0'/><LineTo X='6.0' Y='56.0'/><LineTo X='3.0' Y='54.0'/><LineTo X='3.0' Y='53.0'/><LineTo X='0.0' Y='50.0'/><LineTo X='1.0' Y='48.0'/><LineTo X='0.0' Y='45.0'/><LineTo X='4.0' Y='44.0'/>
+				</Path>
+				<Label Position='Relative' X='20' Y='30' HJustification='Center' LeaderColor='Black'/>
+			</ItemShapeSettings>
+		</MapShapeItem>
+		<MapShapeItem Name='WY' LongName='Wyoming' X='216.0' Y='104.0' OrigWidth='103' OrigHeight='86' OrigColor='#fff4cc' Parent='US' Code='56' NameClass='State' Value='No Data'>
+			<ItemShapeSettings  Type='Polygon' Top='90' Left='164' Width='79' Height='66'>
+				<MapProperties PolyMinX='216.0' PolyMinY='104.0' OverrideTextSettings='True'/>
+				<Path>
+					<MoveTo X='13.0' Y='0.0'/><LineTo X='0.0' Y='73.0'/><LineTo X='28.0' Y='77.0'/><LineTo X='96.0' Y='86.0'/><LineTo X='103.0' Y='12.0'/><LineTo X='13.0' Y='0.0'/>
+				</Path>
+				<Label Position='Relative' X='52' Y='43' HJustification='Center' LeaderColor='Black'/>
+			</ItemShapeSettings>
+		</MapShapeItem>
+		<MapShapeItem Name='PI' LongName='Northwest Portland Area Indian Health Board' X='78.46154' Y='54.961723' Parent='OR' Code='99' NameClass='State' Value='1.0'>
+			<ItemShapeSettings  Type='Circle' Top='49' Left='55' Diameter='8'>
+				<MapProperties OverrideLabelText='True' OverrideLabelFont='True' OverrideTextSettings='True'/>
+				<Label Text='Northwest Portland Area Indian Health Board' Position='Relative' X='10' Y='0' WrapWidth='75' Font='Size:10.0; Style:Italic;' FrameAlignment='RightTop' LeaderColor='Black'/>
+			</ItemShapeSettings>
+		</MapShapeItem>
+		<MapShapeItem Name='AN' Description='Alaska Native Tribal Health Consortium' LongName='' X='147.76923' Y='429.22488' Parent='AK' Code='' NameClass='' Value='0.0'>
+			<ItemShapeSettings  Type='Circle' Top='335' Left='107' Diameter='8'>
+				<MapProperties OverrideLabelText='True' OverrideLabelFont='True' OverrideTextSettings='True'/>
+				<Label Text='Alaska Native Tribal Health Consortium' Position='Relative' X='16' Y='14' WrapWidth='75' TopMargin='15' LeftMargin='10' Font='Size:10.0; Style:Italic;' FrameAlignment='CenterTop' LeaderColor='Black'/>
+			</ItemShapeSettings>
+		</MapShapeItem>
+		<MapShapeItem Name='SP' Description='South Puget Intertribal Planning Agency' LongName='' X='86.30769' Y='24.863636' Parent='WA' Code='' NameClass='' Value='0.0'>
+			<ItemShapeSettings  Type='Circle' Top='25' Left='61' Diameter='8'>
+				<MapProperties OverrideLabelText='True' OverrideLabelFont='True' OverrideTextSettings='True'/>
+				<Label Text='South Puget Intertribal Planning Agency' Position='Relative' X='17' Y='1' WrapWidth='75' TopMargin='0' Font='Size:10.0; Style:Italic;' FrameAlignment='RightCenter' LeaderColor='Black'/>
+			</ItemShapeSettings>
+		</MapShapeItem>
+		<MapShapeItem Name='AB' LongName='Aberdeen Area Tribal' X='337.3846' Y='137.40431' Parent='SD' Code='' NameClass='State' Value='0.0'>
+			<ItemShapeSettings  Type='Circle' Top='112' Left='252' Diameter='8'>
+				<MapProperties OverrideLabelText='True' OverrideLabelFont='True' OverrideTextSettings='True'/>
+				<Label Text='Aberdeen Area Tribal' Position='Relative' X='60' Y='-25' WrapWidth='75' Font='Size:10.0; Style:Italic;' FrameAlignment='RightTop' LeaderColor='Black'/>
+			</ItemShapeSettings>
+		</MapShapeItem>
+		<MapShapeItem Name='FD' Description='Fond Du Lac Reservation' LongName='' X='466.84616' Y='85.05981' Parent='MN' Code='' NameClass='' Value='0.0'>
+			<ItemShapeSettings  Type='Circle' Top='71' Left='352' Diameter='8'>
+				<MapProperties OverrideLabelText='True' OverrideLabelFont='True' OverrideTextSettings='True'/>
+				<Label Text='Fond Du Lac Reservation' Position='Relative' X='27' Y='-28' WrapWidth='75' Font='Size:10.0; Style:Italic;' FrameAlignment='LeftTop' LeaderColor='Black'/>
+			</ItemShapeSettings>
+		</MapShapeItem>
+		<MapShapeItem Name='CN' Description='Cherokee Nation' LongName='' X='432.84616' Y='282.66028' Parent='OK' Code='' NameClass='' Value='0.0'>
+			<ItemShapeSettings  Type='Circle' Top='222' Left='326' Diameter='8'>
+				<MapProperties OverrideLabelText='True' OverrideLabelFont='True' OverrideTextSettings='True'/>
+				<Label Text='Cherokee Nation' Position='Left' WrapWidth='50' Font='Size:10.0; Style:Italic;' FrameAlignment='RightCenter' LeaderColor='Black'/>
+			</ItemShapeSettings>
+		</MapShapeItem>
+		<MapShapeItem Name='AS' Description='American Samoa' LongName='' X='96.76923' Y='535.2225' Parent='' Code='' NameClass='' Value='0.0'>
+			<ItemShapeSettings  Type='Rectangle' Top='415' Left='57' Width='32' Height='8'>
+				<MapProperties OverrideLabelText='True' OverrideLabelFont='True' OverrideShapeSettings='True' OverrideTextSettings='True'/>
+				<Properties FillColor='#b2b2b2' FillType='Pattern' PatternType='DiagonalBottomToTop' Description='American Samoa'/>
+				<Label Text='American Samoa' Position='Right' WrapWidth='80' Font='Size:10.0; Style:Italic;' FrameAlignment='LeftCenter' LeaderColor='Black'/>
+			</ItemShapeSettings>
+		</MapShapeItem>
+		<MapShapeItem Name='GU' Description='Guam' LongName='' X='287.69232' Y='535.2225' Parent='' Code='' NameClass='' Value='0.0'>
+			<ItemShapeSettings  Type='Rectangle' Top='415' Left='203' Width='32' Height='8'>
+				<MapProperties OverrideLabelText='True' OverrideLabelFont='True' OverrideShapeSettings='True' OverrideTextSettings='True'/>
+				<Properties FillColor='#b2b2b2' FillType='Pattern' PatternType='DiagonalBottomToTop' Description='Guam'/>
+				<Label Text='Guam' Position='Right' WrapWidth='80' Font='Size:10.0; Style:Italic;' FrameAlignment='LeftCenter' LeaderColor='Black'/>
+			</ItemShapeSettings>
+		</MapShapeItem>
+		<MapShapeItem Name='PR' Description='Puerto Rico' LongName='' X='481.23077' Y='535.2225' Parent='' Code='' NameClass='' Value='0.0'>
+			<ItemShapeSettings  Type='Rectangle' Top='415' Left='351' Width='32' Height='8'>
+				<MapProperties OverrideLabelText='True' OverrideLabelFont='True' OverrideShapeSettings='True' OverrideTextSettings='True'/>
+				<Properties FillColor='#b2b2b2' FillType='Pattern' PatternType='DiagonalBottomToTop' Description='Puerto Rico'/>
+				<Label Text='Puerto Rico' Position='Right' WrapWidth='80' Font='Size:10.0; Style:Italic;' FrameAlignment='LeftCenter' LeaderColor='Black'/>
+			</ItemShapeSettings>
+		</MapShapeItem>
+		<MapShapeItem Name='PW' Description='Palau' LongName='' X='673.46155' Y='535.2225' Parent='' Code='' NameClass='' Value='0.0'>
+			<ItemShapeSettings  Type='Rectangle' Top='415' Left='498' Width='32' Height='8'>
+				<MapProperties OverrideLabelText='True' OverrideLabelFont='True' OverrideShapeSettings='True' OverrideTextSettings='True'/>
+				<Properties FillColor='#b2b2b2' FillType='Pattern' PatternType='DiagonalBottomToTop' Description='Palau'/>
+				<Label Text='Palau' Position='Right' WrapWidth='80' Font='Size:10.0; Style:Italic;' FrameAlignment='LeftCenter' LeaderColor='Black'/>
+			</ItemShapeSettings>
+		</MapShapeItem>
+		<MapShapeItem Name='FM' Description='Federated States of Micronesia' LongName='' X='96.76923' Y='573.17224' Parent='' Code='' NameClass='' Value='0.0'>
+			<ItemShapeSettings  Type='Rectangle' Top='444' Left='57' Width='32' Height='8'>
+				<MapProperties OverrideLabelText='True' OverrideLabelFont='True' OverrideShapeSettings='True' OverrideTextSettings='True'/>
+				<Properties FillColor='#b2b2b2' FillType='Pattern' PatternType='DiagonalBottomToTop' Description='Federated States of Micronesia'/>
+				<Label Text='Federated States of Micronesia' Position='Right' WrapWidth='80' Font='Size:10.0; Style:Italic;' FrameAlignment='LeftCenter' LeaderColor='Black'/>
+			</ItemShapeSettings>
+		</MapShapeItem>
+		<MapShapeItem Name='MP' Description='Northern Mariana Islands' LongName='' X='287.69232' Y='573.17224' Parent='' Code='' NameClass='' Value='0.0'>
+			<ItemShapeSettings  Type='Rectangle' Top='444' Left='203' Width='32' Height='8'>
+				<MapProperties OverrideLabelText='True' OverrideLabelFont='True' OverrideShapeSettings='True' OverrideTextSettings='True'/>
+				<Properties FillColor='#b2b2b2' FillType='Pattern' PatternType='DiagonalBottomToTop' Description='Northern Mariana Islands'/>
+				<Label Text='Northern Mariana Islands' Position='Right' WrapWidth='80' Font='Size:10.0; Style:Italic;' FrameAlignment='LeftCenter' LeaderColor='Black'/>
+			</ItemShapeSettings>
+		</MapShapeItem>
+		<MapShapeItem Name='MH' Description='Marshall Islands' LongName='' X='481.23077' Y='573.17224' Parent='' Code='' NameClass='' Value='0.0'>
+			<ItemShapeSettings  Type='Rectangle' Top='444' Left='351' Width='32' Height='8'>
+				<MapProperties OverrideLabelText='True' OverrideLabelFont='True' OverrideShapeSettings='True' OverrideTextSettings='True'/>
+				<Properties FillColor='#b2b2b2' FillType='Pattern' PatternType='DiagonalBottomToTop' Description='Marshall Islands'/>
+				<Label Text='Marshall Islands' Position='Right' WrapWidth='80' Font='Size:10.0; Style:Italic;' FrameAlignment='LeftCenter' LeaderColor='Black'/>
+			</ItemShapeSettings>
+		</MapShapeItem>
+		<MapShapeItem Name='VI' Description='Virgin Islands' LongName='' X='673.46155' Y='571.86365' Parent='' Code='' NameClass='' Value='0.0'>
+			<ItemShapeSettings  Type='Rectangle' Top='444' Left='498' Width='32' Height='8'>
+				<MapProperties OverrideLabelText='True' OverrideLabelFont='True' OverrideShapeSettings='True' OverrideTextSettings='True'/>
+				<Properties FillColor='#b2b2b2' FillType='Pattern' PatternType='DiagonalBottomToTop' Description='Virgin Islands'/>
+				<Label Text='Virgin Islands' Position='Right' WrapWidth='80' Font='Size:10.0; Style:Italic;' FrameAlignment='LeftCenter' LeaderColor='Black'/>
+			</ItemShapeSettings>
+		</MapShapeItem>
+		<HTMLTable TableAttributes='border=&#x27;3&#x27; cellspacing=&#x27;0&#x27; cellpadding=&#x27;3&#x27;' HeaderTR='align=&#x27;center&#x27;' HeaderTR2='align=&#x27;center&#x27;' DataTR='align=&#x27;center&#x27;' FooterTR='align=&#x27;center&#x27;' FooterTH='align=&#x27;center&#x27;' />
+	</Map>
+
+	<Textbox Name='textbox' Top='357' Left='373' Width='120' Height='22' CVersion='3'>
+		<Properties AutoWidth='False' AutoHeight='False' AutoSizeText='True' BorderType='None' TransparentFill='True' Font='Name:Helvetica;'/>
+		<Text>CCC Budget Available</Text>
+	</Textbox>
+
+	<Image Name='bitmap6' Top='355' Left='354' Width='17' Height='23' CVersion='3' ImageName='img_bitmap6'>
+		<Properties KeepProportions='False'/>
+	</Image>
+
+	<Image Name='bitmap7' Top='21' Left='548' Width='17' Height='23' CVersion='3' ImageName='img_bitmap6'>
+		<Properties KeepProportions='False'/>
+		<Drilldown URL='./budget_files/NH.zip' Target='_new' HighlightMode='Transparent'/>
+	</Image>
+
+	<Image Name='bitmap8' Top='130' Left='328' Width='17' Height='23' CVersion='3' ImageName='img_bitmap6'>
+		<Properties KeepProportions='False'/>
+		<Drilldown URL='redirectIE6.jsp?./budget_files/Iowa Comprehensive Cancer Control Budget.xls' Target='_new' HighlightMode='Transparent'/>
+	</Image>
+
+	<Image Name='bitmap9' Top='167' Left='597' Width='17' Height='23' CVersion='3' ImageName='img_bitmap6'>
+		<Properties KeepProportions='False'/>
+		<Drilldown URL='./budget_files/dcc_year2_rpt.pdf' Target='_new' HighlightMode='Transparent'/>
+	</Image>
+
+	<Image Name='bitmap10' Top='104' Left='179' Width='17' Height='23' CVersion='3' ImageName='img_bitmap6'>
+		<Properties KeepProportions='False'/>
+		<Drilldown URL='./budget_files/Wyoming Comprehensive Cancer Control Budget.pdf' Target='_new' HighlightMode='Outline'/>
+	</Image>
+
+	<ChartBitmap Name='img_bitmap6' NativeWidth='69' NativeHeight='95' UniqueID='1966959009_69_95'>eNrtnOGtwjAMhNmJndipO7ETT0GKhPqA2vE5uStG8r8C6Vc7cc5OH5fL5VFWVhazX/4Uk2JSTIrJ
+2ZgwzffFpJgUk2KiyOR+vz9t27an3W63p1ny6n5t/27/LUUmfezWe/fa9XqF88li0sbYxjt7n9Z9
+iIlJpk942TAwYWDxLq5WMGn/y6x7eLlEmbDzGImlKBMlnczqLxEmivqhhcsoE7b5FKmrjnyvxaay
+1tyeJ5qJso9YYsjLBL3O9Lzz6JqZ65CXCdJHXp/VUfxncEEwQfrIPqYtY0fH7CdfWcVkH8/W58nG
+BOm/o5pSdAwW/UWNicVXo7qTh0nm/Oa9NlNvU2TCpMcWk1wm+zlflQlSX225hidnY2WCziVfuRST
+/7qpKpNVOmMx+RxjWXU/pn0xS92PTT+J8kHU/c6qs+3X9tlM2Gs6kbpoRLdX0KlH/Say/qlo1V6/
+ieYEKlyO6hfoGroKl7ZOzey1UKmDWbgg82mWfpwVdcAzxBOy5uX1m/bfK/raImv1rL1o56PgKyv2
+50z+885XVmsWfY/LNN8q9JbP9hUFJtlrvCKT7PzHWldhZJLZF6TOBJ0T7vN9VSboXOcMTNDxk8mk
+5xv780tHv4nsO5vJJHJOa7T/kpEJMv9mZeJdd5Bz2Tc9R4kJei7z7s+ZejCz4vaTxrVyLR5hgs6n
+Pfvz7J6p0X3xjH53D5Os/nbvWpx97tXKBMnDG8czaxVH95mlWyK0xzOc24nkBYr9BKvONKmfe7P0
+G/za2TdLLf2Xzo1aey4iWoFSHM08h67AZXZPDns/war3WjDOMyzvP2GolzO+J2dFvRzdN6zy3q2e
+W5zhvVtZtYwVYykmxaSYFBNVJkyfYlJMonFcVlZmsj91PWmh
+</ChartBitmap>
+	<Project HTMLHeight='449' HTMLWidth='629' UsePCScriptInSampleCode='True'>
+	</Project>
+
+</Chart>
