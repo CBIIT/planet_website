@@ -130,7 +130,7 @@ StringBuffer pcScript = null;
 <%= pageTitle%>
 </div>
 
-<p><div style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif; font-size : 12px; color : #000000;">To locate Cancer Control Budgets, go to the <a href="http://ccplanet.cancer.gov/budget/indexOrig.jsp">Budgets</a> page.</div></p>
+<p><div style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif; font-size : 12px; color : #000000;">To locate Cancer Control Budgets, go to the <a href="http://ccplanet.cancer.gov/budget/indexOrig.jsp" style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif; font-size : 12px;">Budgets</a> page.</div></p>
 
 <p><div style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif; font-size : 12px; color : #000000;">
 To view, click on map or state name below.  <!-- List shows state name followed by plan period. --></div></p>
