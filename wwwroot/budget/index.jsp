@@ -26,6 +26,8 @@
   </tr>
 </table>
 
+<div STYLE="display: block; position: relative; left: 50px">
+
 <table summary="Links to province cancer control plans" bgcolor="white" border="0" cellpadding="5" cellspacing="0">
 <tr>
 <td align="left" colspan="3">
@@ -43,92 +45,32 @@ To view, click on map or state name below.
 </tr>
 <tr>
 <td valign='top'><table border='0' cellpadding='5' cellspacing='0' width='100%'><tr><th colspan='2' align='left' valign='top' nowrap>States</th></tr><tr><td valign='top' nowrap style='font-family:Arial, Helvetica, Verdana, Geneva, sans-serif;font-size:12px;'>
-Alabama<br />
-Alaska<br />
-Arizona<br />
-
-Arkansas<br />
-California<br />
-Colorado<br />
-Connecticut<br />
-<a href="./budget_files/dcc_year2_rpt.pdf" class="a1" target="_blank">Delaware</a><br />
-District of Columbia<br />
-Florida<br />
-Georgia<br />
-Hawaii<br />
-
-Idaho<br />
-Illinois<br />
-Indiana<br />
+<%  
+//<a href="./budget_files/dcc_year2_rpt.pdf" class="a1" target="_blank">Delaware</a><br />
+%>
 <a href="./budget_files/Iowa Comprehensive Cancer Control Budget.xls" class="a1" target="_blank">Iowa</a><br />
-Kansas<br />
-Kentucky<br />
-Louisiana<br />
-Maine<br />
-Maryland<br />
-
-Massachusetts<br />
-Michigan<br />
-Minnesota<br />
-Mississippi<br />
-Missouri</td><td valign='top' nowrap style='font-family:Arial, Helvetica, Verdana, Geneva, sans-serif;font-size:12px;'>
-Montana<br />
-Nebraska<br />
-Nevada<br />
 <a href="./budget_files/NH.zip" class="a1" target="_blank">New Hampshire</a><br />
-
-New Jersey<br />
-New Mexico<br />
-New York<br />
-North Carolina<br />
-North Dakota<br />
-Ohio<br />
-Oklahoma<br />
-Oregon<br />
-Pennsylvania<br />
-
-Rhode Island<br />
-South Carolina<br />
-South Dakota<br />
-Tennessee<br />
-Texas<br />
-Utah<br />
-Vermont<br />
-Virginia<br />
-Washington<br />
-
-West Virginia<br />
-Wisconsin<br />
 <a href="./budget_files/Wyoming Comprehensive Cancer Control Budget.pdf" class="a1" target="_blank">Wyoming</a></td></tr>
-<!--<tr><th colspan='2' >&nbsp;</th></tr><tr><th colspan='2' align='left' valign='top' nowrap>Territories / Tribes</th></tr><tr><td colspan='2' valign='top' nowrap style='font-family:Arial, Helvetica, Verdana, Geneva, sans-serif;font-size:12px;'>
-Aberdeen Area Tribal<br />
-Alaska Native Tribal Health Consortium<br />
-American Samoa<br />
-Cherokee Nation<br />
-Commonwealth of the Northern Mariana Islands<br />
-
-Federated States of Micronesia<br />
-Fond du Lac Reservation<br />
-Guam<br />
-Northwest Portland Area Indian Health Board<br />
-Puerto Rico<br />
-Republic of Palau<br />
-Republic of the Marshall Islands<br />
-South Puget Intertribal Planning Agency<br />
-Virgin Islands</td></tr>--></table><br />
+</table><br />
 </td>
 	<td valign='top'>
 <%  
     String htmlString = "";
     StringBuffer pcScript = new StringBuffer();
-    String[] entity = {"DE", "IA","NH","WY"};
-    String[] docs = {"dcc_year2_rpt.pdf", "Iowa Comprehensive Cancer Control Budget.xls", "NH.zip", "Wyoming Comprehensive Cancer Control Budget.pdf"};
+//    String[] entity = {"DE", "IA","NH","WY"};
+    String[] entity = {"IA","NH","WY"};
+//    String[] docs = {"dcc_year2_rpt.pdf", "Iowa Comprehensive Cancer Control Budget.xls", "NH.zip", "Wyoming Comprehensive Cancer Control Budget.pdf"};
+    String[] docs = {"Iowa Comprehensive Cancer Control Budget.xls", "NH.zip", "Wyoming Comprehensive Cancer Control Budget.pdf"};
+    String[] prefix = {"", "redirectIE6.jsp?", "", ""};
+//    String[] prefix = {"", "indexOrig.jsp?", "", ""};
+	
     try
     {
     	for (int i=0; i<entity.length; i++)
 	{
     		// HF (6/22/07) CR #39949 - changed link from absolute URL (./budget_files/) to relative (./budget_files).
-    		pcScript.append("US_" + entity[i] + ".SetValue(1)US_" + entity[i] + ".AddPCXML(<ItemShapeSettings><MapProperties OverrideDrilldownSettings='True'/><Drilldown URL='./budget_files/" + docs[i] + "' Target='_blank' FillColor='White' ZoomPercent='110'/></ItemShapeSettings>)");
+//    		pcScript.append("US_" + entity[i] + ".SetValue(1)US_" + entity[i] + ".AddPCXML(<ItemShapeSettings><MapProperties OverrideDrilldownSettings='True'/><Drilldown URL='" + prefix[i] + "./budget_files/" + docs[i] + "' Target='_blank' FillColor='White' ZoomPercent='110'/></ItemShapeSettings>)");
+    		pcScript.append("US_" + entity[i] + ".SetValue(1)US_" + entity[i] + ".AddPCXML(<ItemShapeSettings><MapProperties OverrideDrilldownSettings='True'/><Drilldown URL='" + prefix[i] + "./budget_files/" + docs[i] + "' Target='_self' FillColor='White' ZoomPercent='110'/></ItemShapeSettings>)");
 	}
     	
         // CordaEmbedder theChart = new CordaEmbedder();		// HF (6/22/07) CR #39949 - replaced CordaEmbedder with our derived class, NCIPopChartEmbedder.
@@ -164,6 +106,7 @@ Virgin Islands</td></tr>--></table><br />
 </td>
 </tr>
 </table>
+</div>
 
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
@@ -181,5 +124,6 @@ Virgin Islands</td></tr>--></table><br />
     </td>
   </tr>
 </table>
+<script type="text/javascript" src="ieupdate.js"></script>
 </body></html>
 
