@@ -922,16 +922,25 @@ public class QueryBean {
 	{
 		// HF (3/30/2007) - CR #39829.  Reject the incoming string if it contains HTML tags
 		// (suspected cross-site scripting) or suspected SQL injection.
-		
-		boolean bSafe = false;
+		//	 HF (8/09/2007) - CR #40085.  Also validate the phone and email.  
+		boolean textValidated = false;
+		boolean phoneValidated = false;
+		boolean emailValidated = false;
+		ParameterValidator pv = null;
 		try {
-			ParameterValidator pv = new ParameterValidator();
-			bSafe = pv.validateSafe(feedbackText);
+			pv = new ParameterValidator();
+			textValidated = pv.validateSafe(feedbackText);
+			if (textValidated)
+			{
+				phoneValidated = pv.validatePhone(phone);
+				if (phoneValidated)
+					emailValidated = pv.validateEmail(email);
+			}
 		} catch (Exception e) {
 			throw e;
 		}
 
-		if (bSafe == true)
+		if (textValidated && phoneValidated && emailValidated)
     	{
 			Connection conn =null;
 			CallableStatement stmt =null;
@@ -973,7 +982,7 @@ public class QueryBean {
 				}
 			}
     	} else
-    		throw new ParameterException ("Please remove any special characters such as '<' and '>' and resubmit your comments.");
+    		throw new ParameterException (pv.getErrorMessage());
 	}
 
 	/*
