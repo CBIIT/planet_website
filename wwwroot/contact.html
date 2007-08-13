@@ -30,13 +30,17 @@ function CheckInput()
 	    window.alert("Please remove any special characters such as '<' and '>'.");
 		return false;
 	  }
-	  else if (!document.form1.phone.value.match(phonePattern)) {
-	    window.alert("Please enter a valid phone number (e.g., 8005551212, (800)555-1212 x1234, 800-555-1212 x123).");
-		return false;
+	  else if (document.form1.phone.value.length > 1) {
+	  	if (!document.form1.phone.value.match(phonePattern)) {
+	    	window.alert("Please enter a valid phone number (e.g., 8005551212, (800)555-1212 x1234, 800-555-1212 x123).");
+			return false;
+		}
 	  }
-	  else if (!document.form1.email.value.match(emailPattern)) {
-	    window.alert("Please enter a valid email address.");
-		return false;
+	  else if (document.form1.email.value.length > 1) {
+	  	if (!document.form1.email.value.match(emailPattern)) {
+	    	window.alert("Please enter a valid email address.");
+			return false;
+		}
 	  }
    	}
 }
