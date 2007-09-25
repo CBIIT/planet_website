@@ -18,6 +18,7 @@ String stateStatic = "";
 String topicDesc = "";
 String partnerText = "";
 String typeDesc = "";
+String headerText = "";
 int topicNum = 0;
 int ACS_count = 0;
 int ACOS_count = 0;
@@ -429,11 +430,15 @@ if (it2.hasNext()) {
 		if (stateStatic.compareTo("the US") == 0) {
 			stateStatic = "All States";
 
+			headerText = "<p>If you need assistance in identifying cancer survivorship programs and resources, please contact any of the partners listed for your state.</p>";
+
 			if (topicDesc.compareTo("") != 0)
 				partnerText=topicDesc+" and Other Program Partners - <font style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size : 20px;	font-weight: bold; color : #AA0000;'>All States</font>";	
 			else
 				partnerText="Program Partners - <font style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size: 20px; font-weight: bold; color : #AA0000;'>All States</font>";
 		} else {
+			headerText = "<p>If you need assistance in identifying cancer survivorship programs and resources, please contact any of the partners listed on this page.</p>";
+			
 			if (topicDesc.compareTo("") != 0) {
 				partnerText=topicDesc+" and Other Program Partners - <font style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size: 20px; font-weight: bold; color : #AA0000;'>"+stateStatic+"</font>";
 			} else {
@@ -463,8 +468,9 @@ if (it2.hasNext()) {
   <tr>
     <td><p class="banner"><a href="../index.html"><img src="../images/planet_logo.gif" alt="Cancer Control P.L.A.N.E.T. - Plan, Link, Act, Network with Evidence-based Tools" width="169" height="87" border="0"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p></td>    <td><a href="../index.html"><img src="../images/planet_banner_wider.gif" alt="Cancer Control P.L.A.N.E.T. - Links to comprehensive cancer control resources for public health professionals" width="500" height="82" border="0"></a></td>
 <td><p><a href="../index.html">Home</a><br>
-        <a href="../contact.html">Contact Us</a><br>		< a href="http://ccplanetraining.cancer.gov" onclick="javascript:popWindow('http://ccplanetraining.cancer.gov', 'name','725','400','yes'); return false;">On-line Training</a><br />
- 	    <a href="../about.html">About This Site</a><br>
+        <a href="../contact.html">Contact Us</a><br>
+		<a href="http://ccplanetraining.cancer.gov" onclick="javascript:popWindow('http://ccplanetraining.cancer.gov', 'name','725','400','yes'); return false;">On-line Training</a><br />
+ 	    <a href="about.html">About This Site</a><br>
         <a href="../factsheet.pdf">Fact Sheet (PDF)</a><br>
         <a href="../partners.html">Sponsors</a></p></td>
   </tr>
@@ -478,6 +484,7 @@ if (it2.hasNext()) {
 <table bgcolor="white" border="0" cellpadding="0" cellspacing="0" width="100%">
 <tr>
 	<td valign="top" align="left" colspan="3"><div style="font-family : Arial, Helvetica, Verdana, Geneva, sans-serif; font-size: 20px; font-weight: bold; color: #000000;"><%= partnerText%></div><br>
+		<%= headerText %>
 		<p>To locate research partners in <%= stateStatic%> go to the  <a href="rlist.jsp?r=<%= region%>&cctopic=<%= topicNum%>">Research Partners</a> page.</p>
 	</td>
 	<td valign="top" style="font-family : Arial, Helvetica, Verdana, Geneva, sans-serif; font-size: 14px; font-weight: bold; color: #000000;" align="right" colspan="2">&nbsp;</td>
