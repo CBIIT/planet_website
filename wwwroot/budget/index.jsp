@@ -45,9 +45,8 @@ To view, click on map or state name below.
 </tr>
 <tr>
 <td valign='top'><table border='0' cellpadding='5' cellspacing='0' width='100%'><tr><th colspan='2' align='left' valign='top' nowrap>States</th></tr><tr><td valign='top' nowrap style='font-family:Arial, Helvetica, Verdana, Geneva, sans-serif;font-size:12px;'>
-<%  
-//<a href="./budget_files/dcc_year2_rpt.pdf" class="a1" target="_blank">Delaware</a><br />
-%>
+
+<a href="./budget_files/Delaware_Cancer_Control_Budget.pdf" class="a1" target="_blank">Delaware</a><br />
 <a href="./budget_files/Iowa Comprehensive Cancer Control Budget.xls" class="a1" target="_blank">Iowa</a><br />
 <a href="./budget_files/NH.zip" class="a1" target="_blank">New Hampshire</a><br />
 <a href="./budget_files/Wyoming Comprehensive Cancer Control Budget.pdf" class="a1" target="_blank">Wyoming</a></td></tr>
@@ -57,10 +56,12 @@ To view, click on map or state name below.
 <%  
     String htmlString = "";
     StringBuffer pcScript = new StringBuffer();
-//    String[] entity = {"DE", "IA","NH","WY"};
-    String[] entity = {"IA","NH","WY"};
-//    String[] docs = {"dcc_year2_rpt.pdf", "Iowa Comprehensive Cancer Control Budget.xls", "NH.zip", "Wyoming Comprehensive Cancer Control Budget.pdf"};
-    String[] docs = {"Iowa Comprehensive Cancer Control Budget.xls", "NH.zip", "Wyoming Comprehensive Cancer Control Budget.pdf"};
+    
+// HF (10/26/07) CR #40359 - reenable DE. 
+//  String[] entity = {"IA","NH","WY"};
+//  String[] docs = {"Iowa Comprehensive Cancer Control Budget.xls", "NH.zip", "Wyoming Comprehensive Cancer Control Budget.pdf"};
+    String[] entity = {"DE", "IA","NH","WY"};
+    String[] docs = {"Delaware_Cancer_Control_Budget.pdf", "Iowa Comprehensive Cancer Control Budget.xls", "NH.zip", "Wyoming Comprehensive Cancer Control Budget.pdf"};
     String[] prefix = {"", "redirectIE6.jsp?", "", ""};
 //    String[] prefix = {"", "indexOrig.jsp?", "", ""};
 	
