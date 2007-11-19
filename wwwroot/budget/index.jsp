@@ -11,12 +11,12 @@
 <body topmargin="0" leftmargin="0" bgcolor="White">
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
-    <td><p class="banner"><a href="awredir.pl?url=http://cancercontrolplanet.cancer.gov/index.html"><img src="awredir.pl?url=http://cancercontrolplanet.cancer.gov/images/planet_logo.gif" alt="Cancer Control P.L.A.N.E.T. - Plan, Link, Act, Network with Evidence-based Tools" width="169" height="87" border="0"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p></td>    <td><a href="awredir.pl?url=http://cancercontrolplanet.cancer.gov/index.html"><img src="awredir.pl?url=http://cancercontrolplanet.cancer.gov/images/planet_banner_wider.gif" alt="Cancer Control P.L.A.N.E.T. - Links to comprehensive cancer control resources for public health professionals" width="500" height="82" border="0"></a></td>
-<td><p><a href="awredir.pl?url=http://cancercontrolplanet.cancer.gov/contact.html">Contact Us</a><br>
+    <td><p class="banner"><a href="http://cancercontrolplanet.cancer.gov/index.html"><img src="http://cancercontrolplanet.cancer.gov/images/planet_logo.gif" alt="Cancer Control P.L.A.N.E.T. - Plan, Link, Act, Network with Evidence-based Tools" width="169" height="87" border="0"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p></td>    <td><a href="ahttp://cancercontrolplanet.cancer.gov/index.html"><img src="http://cancercontrolplanet.cancer.gov/images/planet_banner_wider.gif" alt="Cancer Control P.L.A.N.E.T. - Links to comprehensive cancer control resources for public health professionals" width="500" height="82" border="0"></a></td>
+<td><p><a href="http://cancercontrolplanet.cancer.gov/contact.html">Contact Us</a><br>
 		<a href="awredir.pl?url=http://ccplanetraining.cancer.gov" onclick="javascript:popWindow('awredir.pl?url=http://ccplanetraining.cancer.gov', 'name','725','400','yes'); return false;">On-line Training</a><br />
 	    <a href="about.html">About This Site</a><br>
-        <a href="awredir.pl?url=http://cancercontrolplanet.cancer.gov/factsheet.pdf">Fact Sheet (PDF)</a><br>
-        <a href="awredir.pl?url=http://cancercontrolplanet.cancer.gov/partners.html">Sponsors</a></p></td>
+        <a href="http://cancercontrolplanet.cancer.gov/factsheet.pdf">Fact Sheet (PDF)</a><br>
+        <a href="http://cancercontrolplanet.cancer.gov/partners.html">Sponsors</a></p></td>
   </tr>
   <tr>
     <td colspan="3">
@@ -113,14 +113,14 @@ To view, click on map or state name below.
   <tr>
     <td><hr size="1" noshade>
 	<div align="center">
-          <a href="awredir.pl?url=http://cancercontrolplanet.cancer.gov/index.html">Home</a>&nbsp;&nbsp;&nbsp;
-          <a href="awredir.pl?url=http://cancercontrolplanet.cancer.gov/contact.html">Contact Us</a>&nbsp;&nbsp;&nbsp;
-          <a href="awredir.pl?url=http://cancercontrolplanet.cancer.gov/about.html">About this Site</a>&nbsp;&nbsp;&nbsp;
-          <a href="awredir.pl?url=http://cancercontrolplanet.cancer.gov/partners.html">Sponsors</a>&nbsp;&nbsp;&nbsp;
+          <a href="ahttp://cancercontrolplanet.cancer.gov/index.html">Home</a>&nbsp;&nbsp;&nbsp;
+          <a href="http://cancercontrolplanet.cancer.gov/contact.html">Contact Us</a>&nbsp;&nbsp;&nbsp;
+          <a href="http://cancercontrolplanet.cancer.gov/about.html">About this Site</a>&nbsp;&nbsp;&nbsp;
+          <a href="http://cancercontrolplanet.cancer.gov/partners.html">Sponsors</a>&nbsp;&nbsp;&nbsp;
 
-          <a href="awredir.pl?url=http://cancercontrolplanet.cancer.gov/privacy.html">Privacy Policy</a>&nbsp;&nbsp;&nbsp;
-          <a href="awredir.pl?url=http://cancercontrolplanet.cancer.gov/disclaimer.html">Disclaimer</a>&nbsp;&nbsp;&nbsp;
-          <a href="awredir.pl?url=http://cancercontrolplanet.cancer.gov/accessibility.html">Accessibility</a><br>
+          <a href="http://cancercontrolplanet.cancer.gov/privacy.html">Privacy Policy</a>&nbsp;&nbsp;&nbsp;
+          <a href="http://cancercontrolplanet.cancer.gov/disclaimer.html">Disclaimer</a>&nbsp;&nbsp;&nbsp;
+          <a href="http://cancercontrolplanet.cancer.gov/accessibility.html">Accessibility</a><br>
       </div>
     </td>
   </tr>
