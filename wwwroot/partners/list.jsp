@@ -310,11 +310,11 @@ if (partners!=null) { //We have partners
 			//*** Organization URL #1 **********
             if (rs.getOrgurl() != null && rs.getOrgurl().compareTo("") != 0) {
                 String urlStr = "";
-                if (rs.getOrgurl().indexOf("http://") < 0) {
-                    urlStr = "http://"+rs.getOrgurl().trim();
+                if (rs.getOrgurl().indexOf("awredir.pl?url=http://") < 0) {
+                    urlStr = "awredir.pl?url=http://"+rs.getOrgurl().trim();
                 } else {
                     urlStr = rs.getOrgurl().trim();
-				}//end if (rs.getOrgurl().indexOf("http://") < 0)
+				}//end if (rs.getOrgurl().indexOf("awredir.pl?url=http://") < 0)
 
                 // Don't display "Web site:" field header for tobacco, breast cancer, and cervical cancer contacts.
                 if (partnerString.equals("CDC") && (topic.equals("T") || topic.equals("B") || topic.equals("V"))) {
@@ -327,11 +327,11 @@ if (partners!=null) { //We have partners
             //*** Organization URL #2 **********
             if (rs.getOrgurl2() != null && rs.getOrgurl2().compareTo("") != 0) {
                 String urlStr = "";
-                if (rs.getOrgurl2().indexOf("http://") < 0) {
-                    urlStr = "http://"+rs.getOrgurl2().trim();
+                if (rs.getOrgurl2().indexOf("awredir.pl?url=http://") < 0) {
+                    urlStr = "awredir.pl?url=http://"+rs.getOrgurl2().trim();
 				} else {
                     urlStr = rs.getOrgurl2().trim();
-				}//end (rs.getOrgurl2().indexOf("http://") < 0)
+				}//end (rs.getOrgurl2().indexOf("awredir.pl?url=http://") < 0)
 
                 // Don't display Web site: field header for tobacco, breast cancer, and cervical cancer contacts.
                 if (partnerString.equals("CDC") && (topic.equals("T") || topic.equals("B") || topic.equals("V"))) {
@@ -469,7 +469,7 @@ if (it2.hasNext()) {
     <td><p class="banner"><a href="../index.html"><img src="../images/planet_logo.gif" alt="Cancer Control P.L.A.N.E.T. - Plan, Link, Act, Network with Evidence-based Tools" width="169" height="87" border="0"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p></td>    <td><a href="../index.html"><img src="../images/planet_banner_wider.gif" alt="Cancer Control P.L.A.N.E.T. - Links to comprehensive cancer control resources for public health professionals" width="500" height="82" border="0"></a></td>
 <td><p><a href="../index.html">Home</a><br>
         <a href="../contact.html">Contact Us</a><br>
-		<a href="http://ccplanetraining.cancer.gov" onclick="javascript:popWindow('http://ccplanetraining.cancer.gov', 'name','725','400','yes'); return false;">On-line Training</a><br />
+		<a href="awredir.pl?url=http://ccplanetraining.cancer.gov" onclick="javascript:popWindow('awredir.pl?url=http://ccplanetraining.cancer.gov', 'name','725','400','yes'); return false;">On-line Training</a><br />
  	    <a href="about.html">About This Site</a><br>
         <a href="../factsheet.pdf">Fact Sheet (PDF)</a><br>
         <a href="../partners.html">Sponsors</a></p></td>

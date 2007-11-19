@@ -6,17 +6,17 @@
 <html>
 <head>
 <title>State, Tribe and Territory Implementation Budgets</title>
-<link href="http://ccplanet.cancer.gov/styles.css" rel="stylesheet" type="text/css">
+<link href="awredir.pl?url=http://ccplanet.cancer.gov/styles.css" rel="stylesheet" type="text/css">
 </head>
 <body topmargin="0" leftmargin="0" bgcolor="White">
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
-    <td><p class="banner"><a href="http://cancercontrolplanet.cancer.gov/index.html"><img src="http://cancercontrolplanet.cancer.gov/images/planet_logo.gif" alt="Cancer Control P.L.A.N.E.T. - Plan, Link, Act, Network with Evidence-based Tools" width="169" height="87" border="0"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p></td>    <td><a href="http://cancercontrolplanet.cancer.gov/index.html"><img src="http://cancercontrolplanet.cancer.gov/images/planet_banner_wider.gif" alt="Cancer Control P.L.A.N.E.T. - Links to comprehensive cancer control resources for public health professionals" width="500" height="82" border="0"></a></td>
-<td><p><a href="http://cancercontrolplanet.cancer.gov/contact.html">Contact Us</a><br>
-		<a href="http://ccplanetraining.cancer.gov" onclick="javascript:popWindow('http://ccplanetraining.cancer.gov', 'name','725','400','yes'); return false;">On-line Training</a><br />
+    <td><p class="banner"><a href="awredir.pl?url=http://cancercontrolplanet.cancer.gov/index.html"><img src="awredir.pl?url=http://cancercontrolplanet.cancer.gov/images/planet_logo.gif" alt="Cancer Control P.L.A.N.E.T. - Plan, Link, Act, Network with Evidence-based Tools" width="169" height="87" border="0"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p></td>    <td><a href="awredir.pl?url=http://cancercontrolplanet.cancer.gov/index.html"><img src="awredir.pl?url=http://cancercontrolplanet.cancer.gov/images/planet_banner_wider.gif" alt="Cancer Control P.L.A.N.E.T. - Links to comprehensive cancer control resources for public health professionals" width="500" height="82" border="0"></a></td>
+<td><p><a href="awredir.pl?url=http://cancercontrolplanet.cancer.gov/contact.html">Contact Us</a><br>
+		<a href="awredir.pl?url=http://ccplanetraining.cancer.gov" onclick="javascript:popWindow('awredir.pl?url=http://ccplanetraining.cancer.gov', 'name','725','400','yes'); return false;">On-line Training</a><br />
 	    <a href="about.html">About This Site</a><br>
-        <a href="http://cancercontrolplanet.cancer.gov/factsheet.pdf">Fact Sheet (PDF)</a><br>
-        <a href="http://cancercontrolplanet.cancer.gov/partners.html">Sponsors</a></p></td>
+        <a href="awredir.pl?url=http://cancercontrolplanet.cancer.gov/factsheet.pdf">Fact Sheet (PDF)</a><br>
+        <a href="awredir.pl?url=http://cancercontrolplanet.cancer.gov/partners.html">Sponsors</a></p></td>
   </tr>
   <tr>
     <td colspan="3">
@@ -37,7 +37,7 @@ State, Tribe and Territory Implementation Budgets
 
 <p><div style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif; font-size : 12px; color : #000000;">
 To view, click on map or state name below.
-<p>To locate Cancer Control Plans go to the  <a href="http://ccplanet.cancer.gov/state_plans.jsp">Plans</a> page.</p>
+<p>To locate Cancer Control Plans go to the  <a href="awredir.pl?url=http://ccplanet.cancer.gov/state_plans.jsp">Plans</a> page.</p>
 
 </div>
 
@@ -82,12 +82,12 @@ To view, click on map or state name below.
         theChart.width=629;
 
 		//change the following to hit your optimap server/commport or redirector/clustermonitor address
-// HF (6/22/07) CR #39949 	theChart.externalServerAddress = "http://procyon.cit.nih.gov:2001";
-// HF (6/22/07) CR #39949         theChart.internalCommPortAddress = "http://procyon.cit.nih.gov:2002";
+// HF (6/22/07) CR #39949 	theChart.externalServerAddress = "awredir.pl?url=http://procyon.cit.nih.gov:2001";
+// HF (6/22/07) CR #39949         theChart.internalCommPortAddress = "awredir.pl?url=http://procyon.cit.nih.gov:2002";
 	//theChart.isPostRequest = true;
-// HF (6/22/07) CR #39949        theChart.externalServerAddress = "http://127.0.0.1:2001";
-        //theChart.externalServerAddress = "http://192.168.2.8:8080/corda/server/";
-// HF (6/22/07) CR #39949         theChart.internalCommPortAddress = "http://127.0.0.1:2002";
+// HF (6/22/07) CR #39949        theChart.externalServerAddress = "awredir.pl?url=http://127.0.0.1:2001";
+        //theChart.externalServerAddress = "awredir.pl?url=http://192.168.2.8:8080/corda/server/";
+// HF (6/22/07) CR #39949         theChart.internalCommPortAddress = "awredir.pl?url=http://127.0.0.1:2002";
 
 	      theChart.userAgent = request.getHeader("USER-AGENT");
 	      theChart.pcScript = pcScript.toString();
@@ -113,14 +113,14 @@ To view, click on map or state name below.
   <tr>
     <td><hr size="1" noshade>
 	<div align="center">
-          <a href="http://cancercontrolplanet.cancer.gov/index.html">Home</a>&nbsp;&nbsp;&nbsp;
-          <a href="http://cancercontrolplanet.cancer.gov/contact.html">Contact Us</a>&nbsp;&nbsp;&nbsp;
-          <a href="http://cancercontrolplanet.cancer.gov/about.html">About this Site</a>&nbsp;&nbsp;&nbsp;
-          <a href="http://cancercontrolplanet.cancer.gov/partners.html">Sponsors</a>&nbsp;&nbsp;&nbsp;
+          <a href="awredir.pl?url=http://cancercontrolplanet.cancer.gov/index.html">Home</a>&nbsp;&nbsp;&nbsp;
+          <a href="awredir.pl?url=http://cancercontrolplanet.cancer.gov/contact.html">Contact Us</a>&nbsp;&nbsp;&nbsp;
+          <a href="awredir.pl?url=http://cancercontrolplanet.cancer.gov/about.html">About this Site</a>&nbsp;&nbsp;&nbsp;
+          <a href="awredir.pl?url=http://cancercontrolplanet.cancer.gov/partners.html">Sponsors</a>&nbsp;&nbsp;&nbsp;
 
-          <a href="http://cancercontrolplanet.cancer.gov/privacy.html">Privacy Policy</a>&nbsp;&nbsp;&nbsp;
-          <a href="http://cancercontrolplanet.cancer.gov/disclaimer.html">Disclaimer</a>&nbsp;&nbsp;&nbsp;
-          <a href="http://cancercontrolplanet.cancer.gov/accessibility.html">Accessibility</a><br>
+          <a href="awredir.pl?url=http://cancercontrolplanet.cancer.gov/privacy.html">Privacy Policy</a>&nbsp;&nbsp;&nbsp;
+          <a href="awredir.pl?url=http://cancercontrolplanet.cancer.gov/disclaimer.html">Disclaimer</a>&nbsp;&nbsp;&nbsp;
+          <a href="awredir.pl?url=http://cancercontrolplanet.cancer.gov/accessibility.html">Accessibility</a><br>
       </div>
     </td>
   </tr>
