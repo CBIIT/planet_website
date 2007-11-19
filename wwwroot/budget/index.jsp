@@ -6,7 +6,7 @@
 <html>
 <head>
 <title>State, Tribe and Territory Implementation Budgets</title>
-<link href="awredir.pl?url=http://ccplanet.cancer.gov/styles.css" rel="stylesheet" type="text/css">
+<link href="http://ccplanet.cancer.gov/styles.css" rel="stylesheet" type="text/css">
 </head>
 <body topmargin="0" leftmargin="0" bgcolor="White">
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -82,12 +82,12 @@ To view, click on map or state name below.
         theChart.width=629;
 
 		//change the following to hit your optimap server/commport or redirector/clustermonitor address
-// HF (6/22/07) CR #39949 	theChart.externalServerAddress = "awredir.pl?url=http://procyon.cit.nih.gov:2001";
-// HF (6/22/07) CR #39949         theChart.internalCommPortAddress = "awredir.pl?url=http://procyon.cit.nih.gov:2002";
+// HF (6/22/07) CR #39949 	theChart.externalServerAddress = "http://procyon.cit.nih.gov:2001";
+// HF (6/22/07) CR #39949         theChart.internalCommPortAddress = "http://procyon.cit.nih.gov:2002";
 	//theChart.isPostRequest = true;
-// HF (6/22/07) CR #39949        theChart.externalServerAddress = "awredir.pl?url=http://127.0.0.1:2001";
-        //theChart.externalServerAddress = "awredir.pl?url=http://192.168.2.8:8080/corda/server/";
-// HF (6/22/07) CR #39949         theChart.internalCommPortAddress = "awredir.pl?url=http://127.0.0.1:2002";
+// HF (6/22/07) CR #39949        theChart.externalServerAddress = "http://127.0.0.1:2001";
+        //theChart.externalServerAddress = "http://192.168.2.8:8080/corda/server/";
+// HF (6/22/07) CR #39949         theChart.internalCommPortAddress = "http://127.0.0.1:2002";
 
 	      theChart.userAgent = request.getHeader("USER-AGENT");
 	      theChart.pcScript = pcScript.toString();
