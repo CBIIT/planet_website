@@ -37,7 +37,7 @@ State, Tribe and Territory Implementation Budgets
 
 <p><div style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif; font-size : 12px; color : #000000;">
 To view, click on map or state name below.
-<p>To locate Cancer Control Plans go to the  <a href="url=http://ccplanet.cancer.gov/state_plans.jsp">Plans</a> page.</p>
+<p>To locate Cancer Control Plans go to the  <a href="http://ccplanet.cancer.gov/state_plans.jsp">Plans</a> page.</p>
 
 </div>
 
