@@ -310,34 +310,34 @@ if (partners!=null) { //We have partners
 			//*** Organization URL #1 **********
             if (rs.getOrgurl() != null && rs.getOrgurl().compareTo("") != 0) {
                 String urlStr = "";
-                if (rs.getOrgurl().indexOf("awredir.pl?url=http://") < 0) {
-                    urlStr = "awredir.pl?url=http://"+rs.getOrgurl().trim();
+                if (rs.getOrgurl().indexOf("http://") < 0) {
+                    urlStr = "http://"+rs.getOrgurl().trim();
                 } else {
                     urlStr = rs.getOrgurl().trim();
-				}//end if (rs.getOrgurl().indexOf("awredir.pl?url=http://") < 0)
+				}//end if (rs.getOrgurl().indexOf("http://") < 0)
 
                 // Don't display "Web site:" field header for tobacco, breast cancer, and cervical cancer contacts.
                 if (partnerString.equals("CDC") && (topic.equals("T") || topic.equals("B") || topic.equals("V"))) {
-                   outString.append("<a href=\""+urlStr+"\" target=\"_blank\" class='a1'>"+urlStr+"</a>"+"<br>");
+                   outString.append("<a href=\"awredir.pl?url="+urlStr+"\" target=\"_blank\" class='a1'>"+urlStr+"</a>"+"<br>");
                 } else {
-                    outString.append("Web site:  <a href=\""+urlStr+"\" target=\"_blank\" class='a1'>"+urlStr+"</a>"+"<br>");
+                    outString.append("Web site:  <a href=\"awredir.pl?url="+urlStr+"\" target=\"_blank\" class='a1'>"+urlStr+"</a>"+"<br>");
 				}//end if (partnerString.equals("CDC") && (topic.equals("T") || topic.equals("B") || topic.equals("V")))
 			}//end if (rs.getOrgurl() != null && rs.getOrgurl().compareTo("") != 0)
 
             //*** Organization URL #2 **********
             if (rs.getOrgurl2() != null && rs.getOrgurl2().compareTo("") != 0) {
                 String urlStr = "";
-                if (rs.getOrgurl2().indexOf("awredir.pl?url=http://") < 0) {
-                    urlStr = "awredir.pl?url=http://"+rs.getOrgurl2().trim();
+                if (rs.getOrgurl2().indexOf("http://") < 0) {
+                    urlStr = "http://"+rs.getOrgurl2().trim();
 				} else {
                     urlStr = rs.getOrgurl2().trim();
-				}//end (rs.getOrgurl2().indexOf("awredir.pl?url=http://") < 0)
+				}//end (rs.getOrgurl2().indexOf("http://") < 0)
 
                 // Don't display Web site: field header for tobacco, breast cancer, and cervical cancer contacts.
                 if (partnerString.equals("CDC") && (topic.equals("T") || topic.equals("B") || topic.equals("V"))) {
-                   outString.append("<a href=\""+urlStr+"\" target=\"_blank\" class='a1'>"+urlStr+"</a>"+"<br>");
+                   outString.append("<a href=\"awredir.pl?url="+urlStr+"\" target=\"_blank\" class='a1'>"+urlStr+"</a>"+"<br>");
                 } else {
-                    outString.append("Web site:  <a href=\""+urlStr+"\" target=\"_blank\" class='a1'>"+urlStr+"</a>"+"<br>");
+                    outString.append("Web site:  <a href=\"awredir.pl?url="+urlStr+"\" target=\"_blank\" class='a1'>"+urlStr+"</a>"+"<br>");
 				}//end if (partnerString.equals("CDC") && (topic.equals("T") || topic.equals("B") || topic.equals("V")))
             }//end if (rs.getOrgurl2() != null && rs.getOrgurl2().compareTo("") != 0)
 

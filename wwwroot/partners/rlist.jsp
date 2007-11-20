@@ -195,8 +195,8 @@ if (param != null)
             if (rs.getOrgurl() != null && rs.getOrgurl().compareTo("") != 0)
             {
                 String urlStr = "";
-                if (rs.getOrgurl().indexOf("awredir.pl?url=http://") < 0)
-                    urlStr = "awredir.pl?url=http://"+rs.getOrgurl().trim();
+                if (rs.getOrgurl().indexOf("url=http://") < 0)
+                    urlStr = "http://"+rs.getOrgurl().trim();
                 else
                     urlStr = rs.getOrgurl().trim();
 
@@ -204,17 +204,17 @@ if (param != null)
 				
                 if (researcherString.equals("CDC") && (topic.equals("1") || topic.equals("4") || topic.equals("5")))
                 {
-                  outString.append(beginTD+"<a href=\""+urlStr+"\" target=\"_blank\" class='a1'>"+urlStr+"</a>"+endTD);
+                  outString.append(beginTD+"<a href=\"awredir.pl?url="+urlStr+"\" target=\"_blank\" class='a1'>"+urlStr+"</a>"+endTD);
                 }
                else
-                 outString.append(beginTD+"Web site:  <a href=\""+urlStr+"\" target=\"_blank\" class='a1'>"+urlStr+"</a>"+endTD);
+                 outString.append(beginTD+"Web site:  <a href=\"awredir.pl?url="+urlStr+"\" target=\"_blank\" class='a1'>"+urlStr+"</a>"+endTD);
             }
 
             if (rs.getOrgurl2() != null && rs.getOrgurl2().compareTo("") != 0)
             {
                 String urlStr = "";
-                if (rs.getOrgurl2().indexOf("awredir.pl?url=http://") < 0)
-                    urlStr = "awredir.pl?url=http://"+rs.getOrgurl2().trim();
+                if (rs.getOrgurl2().indexOf("http://") < 0)
+                    urlStr = "http://"+rs.getOrgurl2().trim();
                 else
                     urlStr = rs.getOrgurl2().trim();
 
@@ -222,10 +222,10 @@ if (param != null)
 
                if (researcherString.equals("CDC") && (topic.equals("1") || topic.equals("4") || topic.equals("5")))
                 {
-                   outString.append(beginTD+"<a href=\""+urlStr+"\" target=\"_blank\" class='a1'>"+urlStr+"</a>"+endTD);
+                   outString.append(beginTD+"<a href=\"awredir.pl?url="+urlStr+"\" target=\"_blank\" class='a1'>"+urlStr+"</a>"+endTD);
                 }
                 else
-                    outString.append(beginTD+"Web site:  <a href=\""+urlStr+"\" target=\"_blank\" class='a1'>"+urlStr+"</a>"+endTD);
+                    outString.append(beginTD+"Web site:  <a href=\"awredir.pl?url="+urlStr+"\" target=\"_blank\" class='a1'>"+urlStr+"</a>"+endTD);
             }
 
 	         cellCount++;
