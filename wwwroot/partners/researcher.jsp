@@ -101,7 +101,7 @@
 
 <html>
 <head>
-<title><%= caption%></title>
+<title><%= pageTitle%></title>
 <link href="../styles.css" rel="stylesheet" type="text/css">
 </head>
 <body topmargin="0" leftmargin="0" bgcolor="White">
