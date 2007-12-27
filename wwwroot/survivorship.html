@@ -5,6 +5,21 @@
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 <link href="styles.css" rel="stylesheet" type="text/css">
 <script language="JavaScript" src="popwindow.js" type="text/javascript"></script>
+      <script language="javascript">
+function toggle(obj) {
+	var el = document.getElementById("links");
+//	var sp = document.getElementById("spacer");
+	if ( el.style.display != 'none' ) {
+		el.style.display = 'none';
+	//	sp.style.display = '';
+	}
+	else {
+	// 	sp.style.display = 'none';
+		el.style.display = '';
+	}
+}
+			</script>
+      
 </head>
 
 <body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
@@ -14,7 +29,7 @@
         <td><a href="index.html"><img src="images/planet_banner_wider.gif" alt="Cancer Control P.L.A.N.E.T. - Links to comprehensive cancer control resources for public health professionals" width="500" height="82" border="0"></a></td>
 
     <td><p><a href="index.html">Home</a><br>
-        <a href="contact.html">Contact Us</a><br>	<a href="awredir.pl?url=http://ccplanetraining.cancer.gov" onclick="javascript:popWindow('awredir.pl?url=http://ccplanetraining.cancer.gov', 'name','725','400','yes'); return false;">On-line Training</a><br />
+        <a href="contact.html">Contact Us</a><br>	<a href="awredir.pl?url=http://ccplanetraining.cancer.gov" onClick="javascript:popWindow('awredir.pl?url=http://ccplanetraining.cancer.gov', 'name','725','400','yes'); return false;">On-line Training</a><br />
 		<a href="about.html">About This Site</a><br>
         <a href="factsheet.pdf">Fact Sheet (PDF)</a><br>
         <a href="sponsors.html">Sponsors</a></p></td>
@@ -140,38 +155,49 @@
 	  <td width="15"><img src="images/bullet_black.gif" alt="" width="15" height="13" border="0"></td>
 	  <td><a href="meta-analysis-effectspsychosocial-interventions-survivaltime.pdf">Survival Time</a></td>
 	</tr>
-  </table>
-</td>
+  </table></td>
 <td>&nbsp;</td>
 </tr>
 <tr> 
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
-<td>&nbsp;</td>
+<td></td>
 <td>
   <table width="100%" cellpadding="2" cellspacing="0">
     <tr valign="top">
-	  <td width="15"><img src="images/bullet_black.gif" alt="" width="15" height="13" border="0"></td>
-	  <td><a href="meta-ana-review-telax-training-reduce-treat-relate-symp.pdf">Relaxation Training &#38; Treatment-Related Symptoms</a></td>
-	</tr>
+      <td width="15"><img src="images/bullet_black.gif" alt="" width="15" height="13" border="0"></td>
+      <td  valign="top">
+      
+       <table width="100%" cellpadding="2" cellspacing="0">
+    <tr valign="top">
+      <td colspan="2"> <a href="javascript:toggle();">Survival</a>&nbsp;</td>
+    </tr>
+   
   </table>
-</td>
-<td>&nbsp;</td>
-</tr>
-<tr> 
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>
-  <table width="100%" cellpadding="2" cellspacing="0">
+      
+     
+      
+      </td>
+    </tr>
+    
+    
+    <tr valign="top"  id="links"  style="display:none;">
+      <td>&nbsp;</td>
+      <td>
+      
+      <table width="100%" cellpadding="2" cellspacing="0">
+    <tr valign="top">
+      <td><img src="images/bullet_black.gif" alt="" width="15" height="13" border="0"></td>
+      <td><a href="meta-ana-review-telax-training-reduce-treat-relate-symp.pdf">Relaxation Training &#38; Treatment-Related Symptoms</a></td>
+    </tr>
     <tr valign="top">
 	  <td width="15"><img src="images/bullet_black.gif" alt="" width="15" height="13" border="0"></td>
 	  <td><a href="meta-ana-psychosocial-interventions-depress-anx-qol.pdf">Depression, Anxiety, &#38; Quality of Life</a></td>
 	</tr>
-  </table>
-</td>
+  </table>   </td>
+    </tr>
+  </table></td>
 <td>&nbsp;</td>
 </tr>
 <!-- <tr>
@@ -217,8 +243,7 @@
 	  <td width="15"><img src="images/bullet_black.gif" alt="" width="15" height="13" border="0"></td>
 	  <td><a href="meta-analysiseffects-psychosocialintervent.pdf">Effects of Psychosocial Interventions with Adult Cancer Patients: A Meta-Analysis of Randomized Experiments</a></td>
 	</tr>
-  </table>
-</td>
+  </table></td>
 <td>&nbsp;</td>
 </tr>
 <tr> 
@@ -232,8 +257,7 @@
 	  <td width="15"><img src="images/bullet_black.gif" alt="" width="15" height="13" border="0"></td>
 	  <td><a href="effects-psychosocial-interventions-qol.pdf">Effects of Psychosocial Interventions on Quality of Life in Adult Cancer Patients: Meta Analysis of 37 Published Controlled Outcome Studies</a></td>
 	</tr>
-  </table>
-</td>
+  </table></td>
 <td>&nbsp;</td>
 </tr>
 <tr> 
@@ -255,8 +279,7 @@
 	  <td width="15"><img src="images/bullet_black.gif" alt="" width="15" height="13" border="0"></td>
 	  <td><a href="meta-analysis-effect-psychoedu-inter-pain-adults-cancer.pdf">Effects of Psychoeducational Interventions on Pain</a></td>
 	</tr>
-  </table>
-</td>
+  </table></td>
 <td>&nbsp;</td>
 </tr>
 <tr> 
@@ -302,8 +325,7 @@
 	  <td width="15"><img src="images/bullet_black.gif" alt="" width="15" height="13" border="0"></td>
 	  <td><a href="re-article-psychosocial-concerns-inter-cancer-survivors.pdf">Psychosocial Concerns and Interventions for Cancer Survivors</a></td>
 	</tr>
-  </table>
-</td>
+  </table></td>
 <td>&nbsp;</td>
 </tr>
 <!-- <tr>                 
@@ -320,8 +342,7 @@
 </tr>  
 <tr> 
 <td>&nbsp;</td>
-<td colspan="5" valign="top"><strong>Additional Reviews from Evidence-based Practice Centers (Agency for Healthcare Research and Quality (AHRQ)) are available on</strong> <a href="awredir.pl?url=http://www.ahrq.gov/clinic/epcindex.htm#hematology" onclick="javascript:popWindow('awredir.pl?url=http://www.ahrq.gov/clinic/epcindex.htm#hematology'); return false;">http://www.ahrq.gov/clinic/epcindex.htm#hematology</a>
-</td>
+<td colspan="5" valign="top"><strong>Additional Reviews from Evidence-based Practice Centers (Agency for Healthcare Research and Quality (AHRQ)) are available on</strong> <a href="awredir.pl?url=http://www.ahrq.gov/clinic/epcindex.htm#hematology" onClick="javascript:popWindow('awredir.pl?url=http://www.ahrq.gov/clinic/epcindex.htm#hematology'); return false;">http://www.ahrq.gov/clinic/epcindex.htm#hematology</a></td>
 </tr>  
 <tr>                 
 <td>&nbsp;</td>
@@ -350,7 +371,7 @@ Research-tested Intervention Programs
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 <td valign="top"><img src="images/bullet_black.gif" alt="" width="15" height="13" border="0"></td>
-<td valign="top"><a href="awredir.pl?url=http://rtips.cancer.gov/rtips/rtips_search.do?topicid=12&choice=default&cg=" onclick="javascript:popWindow('awredir.pl?url=http://rtips.cancer.gov/rtips/rtips_search.do?topicid=12&choice=default&cg='); return false;">Survivorship</a></td>
+<td valign="top"><a href="awredir.pl?url=http://rtips.cancer.gov/rtips/rtips_search.do?topicid=12&choice=default&cg=" onClick="javascript:popWindow('awredir.pl?url=http://rtips.cancer.gov/rtips/rtips_search.do?topicid=12&choice=default&cg='); return false;">Survivorship</a></td>
 <td valign="top">&nbsp;</td>
 </tr>
               
@@ -421,7 +442,7 @@ Research-tested Intervention Programs
 <td>Guidance for linking research and practice</td>
 <td>&nbsp;</td>
 </tr>  -->  
-            </table> </td>
+          </table> </td>
         </tr>
       </table>
 	</td>
