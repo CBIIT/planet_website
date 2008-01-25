@@ -30,7 +30,7 @@
 
     <p>Your comments, questions, and suggestions are appreciated.</p>
 
-<p>For general cancer information, please visit <a href="awredir.pl?url=http://www.cancer.gov">Cancer.gov</a>.</p>
+<p>For general cancer information, please visit <a href="/cgi-bin/awredir.pl?url=http://www.cancer.gov">Cancer.gov</a>.</p>
 
 		<p>You may also provide feedback here on the Cancer Control P.L.A.N.E.T.</p>
 			<table width="100%" border="0" cellspacing="0" cellpadding="6">
