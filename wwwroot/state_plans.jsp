@@ -38,17 +38,23 @@ StringBuffer pcScript = null;
      if (it.hasNext())
      {
       stateList = new StringBuffer();
+			String typeString = "S";
+			stateList.append("<table border='0' cellpadding='5' cellspacing='0' width='100%'><tr><th colspan='3' align='left' valign='top' nowrap>States</th></tr><tr><td valign='top' nowrap>");
 
-      String typeString = "S";
       do
       {
        StatePlanBean rs = (StatePlanBean)it.next();
        //the following lines are used to create can be added back in when the list gets over 27 states
        //*******************************
-       if (count > 27)
+       if (count == 17)
        {
         stateList.append("</td><td valign='top'>");
-        count = 0;
+        //count = 0;
+       }
+			 if (count == 34)
+       {
+        stateList.append("</td><td valign='top'>");
+        //count = 0;
        }
        //******************************
 
@@ -56,7 +62,8 @@ StringBuffer pcScript = null;
        //******************************
        if (rs.getPlanStatus() == 1 && (typeString.toUpperCase().compareTo(rs.getPlanType().toUpperCase()) != 0))
        {
-          stateList.append("<br>");
+         stateList.append("<tr><th colspan='3' >&nbsp;</th></tr>");
+				stateList.append("<tr><th colspan='3' align='left' valign='top' nowrap>Territories / Tribes</th></tr><tr><td colspan='3' valign='top' nowrap>");
           typeString = rs.getPlanType();
        }
        //******************************
@@ -87,6 +94,7 @@ StringBuffer pcScript = null;
        }
 
       }while (it.hasNext());
+			stateList.append("</td></tr></table>");
      }
 
      NCIPopChartEmbedder myChart = new NCIPopChartEmbedder();
@@ -111,7 +119,7 @@ StringBuffer pcScript = null;
     <td><p class="banner"><a href="index.html"><img src="images/planet_logo.gif" alt="Cancer Control P.L.A.N.E.T. - Plan, Link, Act, Network with Evidence-based Tools" width="169" height="87" border="0"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p></td>
     <td><a href="index.html"><img src="images/planet_banner_wider.gif" alt="Cancer Control P.L.A.N.E.T. - Links to comprehensive cancer control resources for public health professionals" width="500" height="82" border="0"></a></td>
     <td><p><a href="index.html">Home</a><br>
-	<a href="contact.html">Contact Us</a><br>	<a href="/cgi-bin/awredir.pl?url=http://ccplanetraining.cancer.gov" onclick="javascript:popWindow('/cgi-bin/awredir.pl?url=http://ccplanetraining.cancer.gov', 'name','725','400','yes'); return false;">On-line Training</a><br />
+	<a href="contact.html">Contact Us</a><br>	<a href="/cgi-bin/awredir.pl?url=http://ccplanetraining.cancer.gov" onClick="javascript:popWindow('/cgi-bin/awredir.pl?url=http://ccplanetraining.cancer.gov', 'name','725','400','yes'); return false;">On-line Training</a><br />
 	<a href="about.html">About This Site</a><br>
     <a href="factsheet.pdf">Fact Sheet (PDF)</a><br>
     <a href="partners.html">P.L.A.N.E.T. Sponsors</a></p></td>
@@ -123,14 +131,12 @@ StringBuffer pcScript = null;
   </tr>
 </table>
 
-<table summary="Links to state cancer control plans" bgcolor="white" border="0" cellpadding="5" cellspacing="0">
+<table summary="Links to state cancer control plans" bgcolor="white" border="0" cellpadding="5" cellspacing="0" width="100%">
 <tr>
-<td align="left" colspan="3">
-<div style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif; font-size : 16px; font-weight: bold;color : #000000;">
-<%= pageTitle%>
-</div>
+<td align="left" colspan="2">
+<div style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif; font-size : 16px; font-weight: bold;color : #000000;"><%= pageTitle%></div>
 
-<p><div style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif; font-size : 12px; color : #000000;">
+<p><div style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif; font-size : 14px; color : #000000; font-weight: bold;">
 To view, click on map or state name below.  <!-- List shows state name followed by plan period. -->
 </div>
 
@@ -139,6 +145,7 @@ To view, click on map or state name below.  <!-- List shows state name followed 
 <tr>
 <td valign='top'>
 <%= stateList.toString()%>
+</td>
 <td valign='top'>
 <br>
 <%
@@ -157,7 +164,7 @@ out.print(htmlString);
     <td><hr size="1" noshade>
 	<div align="center">
           <a href="index.html">Home</a>&nbsp;&nbsp;&nbsp;
-          <a href="contact.html">Contact Us</a>&nbsp;&nbsp;&nbsp;	<a href="/cgi-bin/awredir.pl?url=http://ccplanetraining.cancer.gov" onclick="javascript:popWindow('/cgi-bin/awredir.pl?url=http://ccplanetraining.cancer.gov', 'name','725','400','yes'); return false;">On-line Training</a><br />
+          <a href="contact.html">Contact Us</a>&nbsp;&nbsp;&nbsp;	<a href="/cgi-bin/awredir.pl?url=http://ccplanetraining.cancer.gov" onClick="javascript:popWindow('/cgi-bin/awredir.pl?url=http://ccplanetraining.cancer.gov', 'name','725','400','yes'); return false;">On-line Training</a><br />
           <a href="about.html">About this Site</a>&nbsp;&nbsp;&nbsp;
           <a href="partners.html">Sponsors</a>&nbsp;&nbsp;&nbsp;
           <a href="privacy.html">Privacy Policy</a>&nbsp;&nbsp;&nbsp;
