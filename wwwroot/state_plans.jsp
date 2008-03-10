@@ -73,24 +73,32 @@ StringBuffer pcScript = null;
 
        if (rs.getPlanStatus() == 1)
        {
-       				stateList.append("<br />");
-           //create the text link
-           stateList.append("<a href='"+ rs.getPlanUrl().trim()+"' class='a1'  title='"+rs.getName().trim());
-					 if (rs.getPlanPeriod() != null)
-					 { 
-					 stateList.append(" (Plan period: "+ rs.getPlanPeriod()+")' target='_blank'>"+rs.getName()+"</a>");
-					 }else{
-					 stateList.append("' target='_blank'>"+rs.getName()+"</a>");
-					 }
-					 
-           //create the link on the map
-           if (rs.getState().equals("PI") || rs.getState().equals("CN") || rs.getState().equals("FD") || rs.getState().equals("SP") || rs.getState().equals("AN"))
-           {
-	           pcScript.append("US.addPCXML(<MapShapeItem Name='"+rs.getState()+"' Value='1'><ItemShapeSettings  Type='Circle' Diameter='8'><MapProperties OverrideDrilldownSettings='True'/><Drilldown URL='"+rs.getPlanUrl()+"' Target='_blank' FillColor='White' ZoomPercent='120'/></ItemShapeSettings></MapShapeItem>)");
-           }else{
-	           pcScript.append("US.addPCXML(<MapShapeItem Name='"+rs.getState()+"' Value='1'><ItemShapeSettings><MapProperties OverrideDrilldownSettings='True'/><Drilldown URL='"+rs.getPlanUrl()+"' Target='_blank' FillColor='White' ZoomPercent='120'/></ItemShapeSettings></MapShapeItem>)");
-           }
-           count++;
+			//indent
+			if (rs.getName().equals("Chuuk State") || rs.getName().equals("Korsae") || rs.getName().equals("Pohnpei") || rs.getName().equals("Yap State"))
+			{
+				stateList.append("&nbsp;&nbsp;&nbsp;");
+			}
+
+			//create the text link
+			stateList.append("<a href='"+ rs.getPlanUrl().trim()+"' class='a1'  title='"+rs.getName().trim());
+
+			if (rs.getPlanPeriod() != null)
+			{ 
+				stateList.append(" (Plan period: "+ rs.getPlanPeriod()+")' target='_blank'>"+rs.getName()+"</a>");
+			}else{
+				stateList.append("' target='_blank'>"+rs.getName()+"</a>");
+			}
+
+			stateList.append("<br />");
+
+			//create the link on the map
+			if (rs.getState().equals("PI") || rs.getState().equals("CN") || rs.getState().equals("FD") || rs.getState().equals("SP") || rs.getState().equals("AN"))
+			{
+			    pcScript.append("US.addPCXML(<MapShapeItem Name='"+rs.getState()+"' Value='1'><ItemShapeSettings  Type='Circle' Diameter='8'><MapProperties OverrideDrilldownSettings='True'/><Drilldown URL='"+rs.getPlanUrl()+"' Target='_blank' FillColor='White' ZoomPercent='120'/></ItemShapeSettings></MapShapeItem>)");
+			}else{
+			    pcScript.append("US.addPCXML(<MapShapeItem Name='"+rs.getState()+"' Value='1'><ItemShapeSettings><MapProperties OverrideDrilldownSettings='True'/><Drilldown URL='"+rs.getPlanUrl()+"' Target='_blank' FillColor='White' ZoomPercent='120'/></ItemShapeSettings></MapShapeItem>)");
+			}
+			count++;
        }
 
       }while (it.hasNext());
