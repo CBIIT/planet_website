@@ -39,7 +39,7 @@ StringBuffer pcScript = null;
      {
       stateList = new StringBuffer();
 			String typeString = "S";
-			stateList.append("<table border='0' cellpadding='5' cellspacing='0' width='100%'><tr><th colspan='3' align='left' valign='top' nowrap>States</th></tr><tr><td valign='top' nowrap>");
+			stateList.append("<table border='0' cellpadding='5' cellspacing='0' width='100%'><tr><th colspan='3' align='left' valign='top' nowrap>States</th><th colspan='1' align='left' valign='top' nowrap>Territories / Tribes</th></tr><tr><td valign='top' nowrap>");
 
       do
       {
@@ -51,22 +51,19 @@ StringBuffer pcScript = null;
         stateList.append("</td><td valign='top'>");
         //count = 0;
        }
-			 if (count == 34)
+		if (count == 34)
+       {
+        stateList.append("</td><td valign='top'>");
+        //count = 0;
+       }
+       if (count == 50)
        {
         stateList.append("</td><td valign='top'>");
         //count = 0;
        }
        //******************************
 
-       //the next section is to separate the Territories from the States
-       //******************************
-       if (rs.getPlanStatus() == 1 && (typeString.toUpperCase().compareTo(rs.getPlanType().toUpperCase()) != 0))
-       {
-         stateList.append("<tr><th colspan='3' >&nbsp;</th></tr>");
-				stateList.append("<tr><th colspan='3' align='left' valign='top' nowrap>Territories / Tribes</th></tr><tr><td colspan='3' valign='top' nowrap>");
-          typeString = rs.getPlanType();
-       }
-       //******************************
+       
 
        //if (count > 0)
        //	stateList.append("<br />");
@@ -104,17 +101,6 @@ StringBuffer pcScript = null;
       }while (it.hasNext());
 			stateList.append("</td></tr></table>");
      }
-
-     NCIPopChartEmbedder myChart = new NCIPopChartEmbedder();
-     myChart.appearanceFile = "apfiles/planet/ccpmap_tribe.pcxml";
-     myChart.pcScript = pcScript.toString();
-     myChart.height = 449;
-     myChart.width = 629;
-     myChart.imageType = "FLASH";
-     myChart.fallback = "STRICT";
-     myChart.returnDescriptiveLink = false;
-     myChart.userAgent = request.getHeader("USER-AGENT");
-     htmlString = myChart.getEmbeddingHTML();
 %>
 <html>
 <head>
@@ -142,28 +128,13 @@ StringBuffer pcScript = null;
 <table summary="Links to state cancer control plans" bgcolor="white" border="0" cellpadding="5" cellspacing="0" width="100%">
 <tr>
 <td align="left" colspan="2">
-<div style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif; font-size : 16px; font-weight: bold;color : #000000;"><%= pageTitle%></div>
-
-<p><div style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif; font-size : 14px; color : #000000; font-weight: bold;">
-To view, click on map or state name below.  <!-- List shows state name followed by plan period. -->
-</div>
-
+<p><div style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif; font-size : 16px; font-weight: bold;color : #000000;"><%= pageTitle%></div></p>
+<p><div style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif; font-size : 14px; font-weight: bold;color : #000000;">(No link indicates that a cancer control plan is currently not available)</div></p>
 </td>
 </tr>
 <tr>
 <td valign='top'>
 <%= stateList.toString()%>
-</td>
-<td valign='top'>
-<br>
-<%
-//if there is only one column of state names, add a lot of padding for the map
-if (count < 28)
- 	out.print("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
-else //otherwise only add a couple of spaces for padding
-	out.print("&nbsp;&nbsp;");
-out.print(htmlString);
-%>
 </td>
 </tr>
 </table>

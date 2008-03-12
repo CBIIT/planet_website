@@ -27,7 +27,6 @@
     caption = "Cancer Control P.L.A.N.E.T. - " + topicTitle;
 
     String typeString = "S";
-
     
     Vector states = QBean.getStateList();
     Iterator it2 = states.iterator();
@@ -38,22 +37,30 @@
         stateList = new StringBuffer();
         int count= 0;
 		//stateList.append("<tr><th colspan='2' align='left' valign='top' nowrap bgcolor='#F1F1FD'>STATES</th><th align='left' valign='top' bgcolor='#F1F1FD' nowrap>TERRITORIES/TRIBES</th></tr><tr><td valign='top' bgcolor='#F1F1FD' nowrap>");
-        stateList.append("<table border='0' cellpadding='5' cellspacing='0' width='100%'><tr><th colspan='2' align='left' valign='top' nowrap>States</th></tr><tr><td valign='top' nowrap>");
-
+        stateList.append("<table border='0' cellpadding='5' cellspacing='0' width='100%'><tr><th colspan='3' align='left' valign='top' nowrap>States</th><th colspan='1' align='left' valign='top' nowrap>Territories / Tribes</th></tr><tr><td valign='top' nowrap>");
 
         do
         {
            StateBean rs = (StateBean)it2.next();
 		   
-		      if (count == 26) {
+		      if (count == 17) {
                 stateList.append("</td><td valign='top' nowrap>");
                 //count = 0;
             }
 			
-             if (count == 51) {
+			 if (count == 34) {
+                stateList.append("</td><td valign='top' nowrap>");
+                //count = 0;
+            }
+			
+             /*if (count == 51) {
               	stateList.append("</td></tr>");
-				stateList.append("<tr><th colspan='2' >&nbsp;</th></tr>");
-				stateList.append("<tr><th colspan='2' align='left' valign='top' nowrap>Territories / Tribes</th></tr><tr><td colspan='2' valign='top' nowrap>");
+				stateList.append("<tr><th colspan='1' align='left' valign='top' nowrap>Territories / Tribes</th></tr><tr><td colspan='2' valign='top' nowrap>");
+                //count = 0;
+            }*/
+			
+			 if (count == 51) {
+                stateList.append("</td><td valign='top' nowrap>");
                 //count = 0;
             }
 			
@@ -62,15 +69,15 @@
 				//count = 0;
             }*/
 			
-			//if (count > 0 && count != 26 && count !=51  && count !=56)
-			if (count > 0 && count != 26 && count !=51 )
+			//if (count > 0 && count != 17 && count != 34 && count !=51  && count !=56)
+			if (count > 0 && count != 17 && count != 34 && count !=51 )
                 stateList.append("<br />");
 				
-			//if (count > 0 && count != 26 && count !=51 ) {
+			//if (count > 0 && count != 17 && count != 34 && count !=51 ) {
              //  stateList.append("<br />");
            /* comment out 10/26/2005
 		   
-		   if (count > 27)
+		   if (count > 18)
            {
                stateList.append("</td><td valign='bottom' bgcolor='F1F1FD'>");
                count = 0;
@@ -86,20 +93,6 @@
     //stateList.append("</td>");
 	 stateList.append("</td></tr></table>");
     }
-    
-    
-    
-
-    NCIPopChartEmbedder myChart = new NCIPopChartEmbedder();
-    myChart.appearanceFile = "apfiles/planet/ccpmap.pcxml";
-    myChart.pcScript = "US.addPCXML(<DefaultShapeSettings  Type='Circle' Width='8' Height='8'><Properties FillColor='#cec8ee'/><Label Text='%_NAME' LeaderColor='Black'/><Drilldown URL='list.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultShapeSettings><DefaultBackgroundShapeSettings  Type='Rectangle' Width='15' Height='15'><Properties FillColor='#cec8ee'/><Label Text='%_NAME' HJustification='Center' LeaderColor='Black'/><Drilldown URL='list.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultBackgroundShapeSettings>)";
-    myChart.height = 449;
-    myChart.width = 629;
-    myChart.imageType = "FLASH";
-    myChart.fallback = "STRICT";
-    myChart.returnDescriptiveLink = false;
-    myChart.userAgent = request.getHeader("USER-AGENT");
-    htmlString = myChart.getEmbeddingHTML();
 %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 
@@ -130,11 +123,7 @@
 	<td align="left" colspan="3">
 	<h3>Program Partners in Cancer Control</h3>
 	
-        <%--= pageTitle--%>
-	 <div style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size : 14px;	font-weight: bold; color : #000000;">
-		<p><strong>To view, click on map or state name below.</strong></p>
-	</div>
-	    <p>To locate research partners in your state or region go to the  <a href="researcher.jsp?cctopic=0">Research Partners</a> page.</p>
+    <p>To locate research partners in your state or region go to the <a href="researcher.jsp?cctopic=0">Research Partners</a> page.</p>
 		
 	</div>
 	<!--<br />-->
@@ -142,10 +131,6 @@
 </tr>
 <tr>
 	<td valign='top' colspan="2"><%= stateList.toString()%><br /></td>
-	<td valign='top'><%= htmlString%><br></td>
-<tr>
-	<td colspan="3"><a href='list.jsp?r=ALL&cctopic=<%= topic %>'>View all U.S. Program Partners</a>
-</tr>
 </table>
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
