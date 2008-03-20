@@ -37,69 +37,138 @@ StringBuffer pcScript = null;
 
      if (it.hasNext())
      {
-      stateList = new StringBuffer();
-			String typeString = "S";
-			stateList.append("<table border='0' cellpadding='5' cellspacing='0' width='100%'><tr><th colspan='3' align='left' valign='top' nowrap>States</th><th colspan='1' align='left' valign='top' nowrap>Territories / Tribes</th></tr><tr><td valign='top' nowrap>");
+		stateList = new StringBuffer();
+		String typeString = "S";
+		stateList.append("<table border='0' cellpadding='5' cellspacing='0' width='100%'><tr><th colspan='3' align='left' valign='top' nowrap>States</th><th colspan='1' align='left' valign='top' nowrap>Tribes</th></tr><tr><td valign='top' nowrap>");
 
-      do
-      {
-       StatePlanBean rs = (StatePlanBean)it.next();
-       //the following lines are used to create can be added back in when the list gets over 27 states
-       //*******************************
-       if (count == 17)
-       {
-        stateList.append("</td><td valign='top'>");
-        //count = 0;
-       }
-		if (count == 34)
-       {
-        stateList.append("</td><td valign='top'>");
-        //count = 0;
-       }
-       if (count == 50)
-       {
-        stateList.append("</td><td valign='top'>");
-        //count = 0;
-       }
-       //******************************
-
-       
-
-       //if (count > 0)
-       //	stateList.append("<br />");
-
-       if (rs.getPlanStatus() == 1)
-       {
-			//indent
-			if (rs.getName().equals("Chuuk State") || rs.getName().equals("Korsae") || rs.getName().equals("Pohnpei") || rs.getName().equals("Yap State"))
+		do
+		{
+			StatePlanBean rs = (StatePlanBean)it.next();
+			
+			if (rs.getPlanType().equals("S"))
 			{
-				stateList.append("&nbsp;&nbsp;&nbsp;");
+			
+			   //the following lines are used to create can be added back in when the list gets over 27 states
+			   //*******************************
+			   if (count == 17)
+			   {
+			    stateList.append("</td><td valign='top'>");
+			    //count = 0;
+			   }
+				if (count == 34)
+			   {
+			    stateList.append("</td><td valign='top'>");
+			    //count = 0;
+			   }
+			   if (count == 51)
+			   {
+			    stateList.append("</td><td valign='top'>");
+			    //count = 0;
+			   }
+	       
+		       //******************************
+		       if (rs.getPlanStatus() == 1)
+		       {
+					//indent
+					if (rs.getName().equals("Chuuk State") || rs.getName().equals("Korsae") || rs.getName().equals("Pohnpei") || rs.getName().equals("Yap State"))
+					{
+						stateList.append("&nbsp;&nbsp;&nbsp;");
+					}
+		
+					//create the text link
+					stateList.append("<a href='"+ rs.getPlanUrl().trim()+"' class='a1'  title='"+rs.getName().trim());
+		
+					if (rs.getPlanPeriod() != null)
+					{ 
+						stateList.append(" (Plan period: "+ rs.getPlanPeriod()+")' target='_blank'>"+rs.getName()+"</a>");
+					}else{
+						stateList.append("' target='_blank'>"+rs.getName()+"</a>");
+					}
+		
+					stateList.append("<br />");
+		
+					count++;
+		       }
 			}
-
-			//create the text link
-			stateList.append("<a href='"+ rs.getPlanUrl().trim()+"' class='a1'  title='"+rs.getName().trim());
-
-			if (rs.getPlanPeriod() != null)
-			{ 
-				stateList.append(" (Plan period: "+ rs.getPlanPeriod()+")' target='_blank'>"+rs.getName()+"</a>");
-			}else{
-				stateList.append("' target='_blank'>"+rs.getName()+"</a>");
-			}
-
-			stateList.append("<br />");
-
-			//create the link on the map
-			if (rs.getState().equals("PI") || rs.getState().equals("CN") || rs.getState().equals("FD") || rs.getState().equals("SP") || rs.getState().equals("AN"))
+		}while (it.hasNext());
+      
+		//Tribes
+		Iterator itb = statePlans.iterator();
+		stateList.append("</td><td valign='top'>");
+      	do
+		{
+			StatePlanBean rsb = (StatePlanBean)itb.next();
+			
+			if (rsb.getPlanType().equals("B"))
 			{
-			    pcScript.append("US.addPCXML(<MapShapeItem Name='"+rs.getState()+"' Value='1'><ItemShapeSettings  Type='Circle' Diameter='8'><MapProperties OverrideDrilldownSettings='True'/><Drilldown URL='"+rs.getPlanUrl()+"' Target='_blank' FillColor='White' ZoomPercent='120'/></ItemShapeSettings></MapShapeItem>)");
-			}else{
-			    pcScript.append("US.addPCXML(<MapShapeItem Name='"+rs.getState()+"' Value='1'><ItemShapeSettings><MapProperties OverrideDrilldownSettings='True'/><Drilldown URL='"+rs.getPlanUrl()+"' Target='_blank' FillColor='White' ZoomPercent='120'/></ItemShapeSettings></MapShapeItem>)");
+			   //stateList.append("</td><td valign='top'>");
+	       
+		       //******************************
+		       if (rsb.getPlanStatus() == 1)
+		       {
+					//indent
+					if (rsb.getName().equals("Chuuk State") || rsb.getName().equals("Korsae") || rsb.getName().equals("Pohnpei") || rsb.getName().equals("Yap State"))
+					{
+						stateList.append("&nbsp;&nbsp;&nbsp;");
+					}
+		
+					//create the text link
+					stateList.append("<a href='"+ rsb.getPlanUrl().trim()+"' class='a1'  title='"+rsb.getName().trim());
+		
+					if (rsb.getPlanPeriod() != null)
+					{ 
+						stateList.append(" (Plan period: "+ rsb.getPlanPeriod()+")' target='_blank'>"+rsb.getName()+"</a>");
+					}else{
+						stateList.append("' target='_blank'>"+rsb.getName()+"</a>");
+					}
+		
+					stateList.append("<br />");
+		
+					count++;
+		       }
 			}
-			count++;
-       }
-
-      }while (it.hasNext());
-			stateList.append("</td></tr></table>");
+		}while (itb.hasNext());
+      
+		//Territories
+		stateList.append("<br><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><th colspan='1' align='left' valign='top' nowrap>Territories</th></tr></table>");
+		
+       	Iterator itt = statePlans.iterator();
+		
+      	do
+		{
+			StatePlanBean rst = (StatePlanBean)itt.next();
+			
+			if (rst.getPlanType().equals("T"))
+			{
+				//stateList.append("</td><td valign='top'>");
+	       	
+		       //******************************
+		       if (rst.getPlanStatus() == 1)
+		       {
+					//indent
+					if (rst.getName().equals("Chuuk State") || rst.getName().equals("Korsae") || rst.getName().equals("Pohnpei") || rst.getName().equals("Yap State"))
+					{
+						stateList.append("&nbsp;&nbsp;&nbsp;");
+					}
+		
+					//create the text link
+					stateList.append("<a href='"+ rst.getPlanUrl().trim()+"' class='a1'  title='"+rst.getName().trim());
+		
+					if (rst.getPlanPeriod() != null)
+					{ 
+						stateList.append(" (Plan period: "+ rst.getPlanPeriod()+")' target='_blank'>"+rst.getName()+"</a>");
+					}else{
+						stateList.append("' target='_blank'>"+rst.getName()+"</a>");
+					}
+		
+					stateList.append("<br />");
+		
+					count++;
+		       }
+			}
+		}while (itt.hasNext());
+       	
+		stateList.append("</td></tr></table>");
      }
 %>
 <html>
