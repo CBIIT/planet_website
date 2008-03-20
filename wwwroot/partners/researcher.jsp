@@ -37,12 +37,14 @@
         stateList = new StringBuffer();
         int count= 0;
 		//stateList.append("<tr><th colspan='2' align='left' valign='top' nowrap bgcolor='#F1F1FD'>STATES</th><th align='left' valign='top' bgcolor='#F1F1FD' nowrap>TERRITORIES/TRIBES</th></tr><tr><td valign='top' bgcolor='#F1F1FD' nowrap>");
-        stateList.append("<table border='0' cellpadding='5' cellspacing='0' width='100%'><tr><th colspan='3' align='left' valign='top' nowrap>States</th><th colspan='1' align='left' valign='top' nowrap>Territories / Tribes</th></tr><tr><td valign='top' nowrap>");
+        stateList.append("<table border='0' cellpadding='5' cellspacing='0' width='100%'><tr><th colspan='3' align='left' valign='top' nowrap>States</th><th colspan='1' align='left' valign='top' nowrap>Tribes</th></tr><tr><td valign='top' nowrap>");
 
         do
         {
            StateBean rs = (StateBean)it2.next();
 		   
+		   if (rs.getType().equals("S"))
+		   {
 		      if (count == 17) {
                 stateList.append("</td><td valign='top' nowrap>");
                 //count = 0;
@@ -89,10 +91,48 @@
            } */
            stateList.append("\n<a href='list.jsp?r="+rs.getAbbreviation()+"&cctopic="+topic+"' class='a1'>"+rs.getName()+"</a>");
            count++;
+           }
       } while (it2.hasNext());
-    //stateList.append("</td>");
-	 stateList.append("</td></tr></table>");
-    }
+    
+    //Tribes
+    Iterator itb = states.iterator();
+    stateList.append("</td><td valign='top'>");
+    
+    do
+    {
+		StateBean rsb = (StateBean)itb.next();
+		
+		if (rsb.getName().equals(""))
+		{
+			stateList.append("No Tribes are currently available.");
+		}
+		
+		if (rsb.getType().equals("B"))
+		{
+			stateList.append("<br />");
+			stateList.append("\n<a href='list.jsp?r="+rsb.getAbbreviation()+"&cctopic="+topic+"' class='a1'>"+rsb.getName()+"</a>");
+			count++;
+		}
+	} while (itb.hasNext());
+	
+    //Territories
+    Iterator itt = states.iterator();
+    stateList.append("<br /><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><th colspan='1' align='left' valign='top' nowrap>Territories</th></tr></table>");
+    
+    do
+	{
+		StateBean rst = (StateBean)itt.next();
+		
+		if (rst.getType().equals("T"))
+		{
+			stateList.append("\n<a href='list.jsp?r="+rst.getAbbreviation()+"&cctopic="+topic+"' class='a1'>"+rst.getName()+"</a>");
+			stateList.append("<br />");
+			count++;
+		}
+	} while (itt.hasNext());
+    
+	stateList.append("</td></tr></table>");
+	}
 %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 
@@ -126,7 +166,7 @@
 	<td align="left" colspan="3">
 	<h3>Research Partners in Cancer Control</h3>
 
-    <p>To locate program partners in your state or region go to the <a href="">Program Partners</a> page.<br><br></p>
+    <p>To locate program partners in your state or region go to the <a href="index.jsp?cctopic=0">Program Partners</a> page.</p>
 	</td>
 </tr>
 <tr>
