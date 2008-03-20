@@ -89,7 +89,7 @@
                stateList.append("<br />");
                typeString = rs.getType();
            } */
-           stateList.append("\n<a href='list.jsp?r="+rs.getAbbreviation()+"&cctopic="+topic+"' class='a1'>"+rs.getName()+"</a>");
+           stateList.append("\n<a href='rlist.jsp?r="+rs.getAbbreviation()+"&cctopic="+topic+"' class='a1'>"+rs.getName()+"</a>");
            count++;
            }
       } while (it2.hasNext());
@@ -102,15 +102,10 @@
     {
 		StateBean rsb = (StateBean)itb.next();
 		
-		if (rsb.getName().equals(""))
-		{
-			stateList.append("No Tribes are currently available.");
-		}
-		
 		if (rsb.getType().equals("B"))
 		{
+			stateList.append("\n<a href='rlist.jsp?r="+rsb.getAbbreviation()+"&cctopic="+topic+"' class='a1'>"+rsb.getName()+"</a>");
 			stateList.append("<br />");
-			stateList.append("\n<a href='list.jsp?r="+rsb.getAbbreviation()+"&cctopic="+topic+"' class='a1'>"+rsb.getName()+"</a>");
 			count++;
 		}
 	} while (itb.hasNext());
@@ -125,7 +120,7 @@
 		
 		if (rst.getType().equals("T"))
 		{
-			stateList.append("\n<a href='list.jsp?r="+rst.getAbbreviation()+"&cctopic="+topic+"' class='a1'>"+rst.getName()+"</a>");
+			stateList.append("\n<a href='rlist.jsp?r="+rst.getAbbreviation()+"&cctopic="+topic+"' class='a1'>"+rst.getName()+"</a>");
 			stateList.append("<br />");
 			count++;
 		}

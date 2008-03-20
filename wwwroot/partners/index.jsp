@@ -102,15 +102,10 @@
     {
 		StateBean rsb = (StateBean)itb.next();
 		
-		if (rsb.getName().equals(""))
-		{
-			stateList.append("No Tribes are currently available.");
-		}
-		
 		if (rsb.getType().equals("B"))
 		{
-			stateList.append("<br />");
 			stateList.append("\n<a href='list.jsp?r="+rsb.getAbbreviation()+"&cctopic="+topic+"' class='a1'>"+rsb.getName()+"</a>");
+			stateList.append("<br />");
 			count++;
 		}
 	} while (itb.hasNext());
