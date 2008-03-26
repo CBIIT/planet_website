@@ -89,7 +89,7 @@
                stateList.append("<br />");
                typeString = rs.getType();
            } */
-           stateList.append("\n<a href='list.jsp?r="+rs.getAbbreviation()+"&cctopic="+topic+"' class='a1'>"+rs.getName()+"</a>");
+           stateList.append("\n<a href='list.jsp?r="+rs.getAbbreviation()+"&cctopic="+topic+"'>"+rs.getName()+"</a>");
            count++;
            }
       } while (it2.hasNext());
@@ -104,7 +104,7 @@
 		
 		if (rsb.getType().equals("B"))
 		{
-			stateList.append("\n<a href='list.jsp?r="+rsb.getAbbreviation()+"&cctopic="+topic+"' class='a1'>"+rsb.getName()+"</a>");
+			stateList.append("\n<a href='list.jsp?r="+rsb.getAbbreviation()+"&cctopic="+topic+"'>"+rsb.getName()+"</a>");
 			stateList.append("<br />");
 			count++;
 		}
@@ -120,7 +120,7 @@
 		
 		if (rst.getType().equals("T"))
 		{
-			stateList.append("\n<a href='list.jsp?r="+rst.getAbbreviation()+"&cctopic="+topic+"' class='a1'>"+rst.getName()+"</a>");
+			stateList.append("\n<a href='list.jsp?r="+rst.getAbbreviation()+"&cctopic="+topic+"'>"+rst.getName()+"</a>");
 			stateList.append("<br />");
 			count++;
 		}

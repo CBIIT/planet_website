@@ -89,7 +89,7 @@
                stateList.append("<br />");
                typeString = rs.getType();
            } */
-           stateList.append("\n<a href='rlist.jsp?r="+rs.getAbbreviation()+"&cctopic="+topic+"' class='a1'>"+rs.getName()+"</a>");
+           stateList.append("\n<a href='rlist.jsp?r="+rs.getAbbreviation()+"&cctopic="+topic+"'>"+rs.getName()+"</a>");
            count++;
            }
       } while (it2.hasNext());
@@ -104,7 +104,7 @@
 		
 		if (rsb.getType().equals("B"))
 		{
-			stateList.append("\n<a href='rlist.jsp?r="+rsb.getAbbreviation()+"&cctopic="+topic+"' class='a1'>"+rsb.getName()+"</a>");
+			stateList.append("\n<a href='rlist.jsp?r="+rsb.getAbbreviation()+"&cctopic="+topic+"'>"+rsb.getName()+"</a>");
 			stateList.append("<br />");
 			count++;
 		}
@@ -120,7 +120,7 @@
 		
 		if (rst.getType().equals("T"))
 		{
-			stateList.append("\n<a href='rlist.jsp?r="+rst.getAbbreviation()+"&cctopic="+topic+"' class='a1'>"+rst.getName()+"</a>");
+			stateList.append("\n<a href='rlist.jsp?r="+rst.getAbbreviation()+"&cctopic="+topic+"'>"+rst.getName()+"</a>");
 			stateList.append("<br />");
 			count++;
 		}
@@ -168,7 +168,7 @@
 	<td valign='top' colspan="2"><%= stateList.toString()%><br /></td>
 </tr>
 <tr>
-    <td colspan="3">The list of research partners was compiled based on those individuals who had received a grant during the fiscal year period from 1998-2006 and who have permitted their contact information to be listed as a resource for comprehensive cancer control planning and implementation within their state.</td>
+    <td colspan="3">The list of research partners was compiled based on those individuals who had received a grant during the fiscal year period from 1998-2006 and who have permitted their contact information to be listed as a resource for comprehensive cancer control planning and implementation within their state, tribe, or territory.</td>
 </tr>
 </table>
 <table width="100%" border="0" cellspacing="0" cellpadding="0">

@@ -76,7 +76,7 @@ StringBuffer pcScript = null;
 					}
 		
 					//create the text link
-					stateList.append("<a href='"+ rs.getPlanUrl().trim()+"' class='a1'  title='"+rs.getName().trim());
+					stateList.append("<a href='"+ rs.getPlanUrl().trim()+"' title='"+rs.getName().trim());
 		
 					if (rs.getPlanPeriod() != null)
 					{ 
@@ -91,7 +91,7 @@ StringBuffer pcScript = null;
 		       }
 			}
 		}while (it.hasNext());
-      
+
 		//Tribes
 		Iterator itb = statePlans.iterator();
 		stateList.append("</td><td valign='top'>");
@@ -107,13 +107,13 @@ StringBuffer pcScript = null;
 		       if (rsb.getPlanStatus() == 1)
 		       {
 					//indent
-					if (rsb.getName().equals("Chuuk State") || rsb.getName().equals("Korsae") || rsb.getName().equals("Pohnpei") || rsb.getName().equals("Yap State"))
+					if (rsb.getName().equals("Chuuk State") || rsb.getName().equals("Kosrae") || rsb.getName().equals("Pohnpei") || rsb.getName().equals("Yap State"))
 					{
 						stateList.append("&nbsp;&nbsp;&nbsp;");
 					}
 		
 					//create the text link
-					stateList.append("<a href='"+ rsb.getPlanUrl().trim()+"' class='a1'  title='"+rsb.getName().trim());
+					stateList.append("<a href='"+ rsb.getPlanUrl().trim()+"' title='"+rsb.getName().trim());
 		
 					if (rsb.getPlanPeriod() != null)
 					{ 
@@ -152,7 +152,7 @@ StringBuffer pcScript = null;
 					}
 		
 					//create the text link
-					stateList.append("<a href='"+ rst.getPlanUrl().trim()+"' class='a1'  title='"+rst.getName().trim());
+					stateList.append("<a href='"+ rst.getPlanUrl().trim()+"' title='"+rst.getName().trim());
 		
 					if (rst.getPlanPeriod() != null)
 					{ 
@@ -212,13 +212,14 @@ StringBuffer pcScript = null;
     <td><hr size="1" noshade>
 	<div align="center">
           <a href="index.html">Home</a>&nbsp;&nbsp;&nbsp;
-          <a href="contact.html">Contact Us</a>&nbsp;&nbsp;&nbsp;	<a href="/cgi-bin/awredir.pl?url=http://ccplanetraining.cancer.gov" onClick="javascript:popWindow('/cgi-bin/awredir.pl?url=http://ccplanetraining.cancer.gov', 'name','725','400','yes'); return false;">On-line Training</a><br />
+          <a href="contact.html">Contact Us</a>&nbsp;&nbsp;&nbsp;
           <a href="about.html">About this Site</a>&nbsp;&nbsp;&nbsp;
           <a href="partners.html">Sponsors</a>&nbsp;&nbsp;&nbsp;
           <a href="privacy.html">Privacy Policy</a>&nbsp;&nbsp;&nbsp;
           <a href="disclaimer.html">Disclaimer</a>&nbsp;&nbsp;&nbsp;
           <a href="accessibility.html">Accessibility</a><br>
-      </div></td>
+      </div>
+    </td>
   </tr>
 </table>
 </body></html>
