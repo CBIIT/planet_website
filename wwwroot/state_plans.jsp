@@ -70,7 +70,7 @@ StringBuffer pcScript = null;
 		       if (rs.getPlanStatus() == 1)
 		       {
 					//indent
-					if (rs.getName().equals("Chuuk State") || rs.getName().equals("Korsae") || rs.getName().equals("Pohnpei") || rs.getName().equals("Yap State"))
+					if (rs.getName().equals("Chuuk State") || rs.getName().equals("Kosrae") || rs.getName().equals("Pohnpei") || rs.getName().equals("Yap State"))
 					{
 						stateList.append("&nbsp;&nbsp;&nbsp;");
 					}
@@ -146,7 +146,7 @@ StringBuffer pcScript = null;
 		       if (rst.getPlanStatus() == 1)
 		       {
 					//indent
-					if (rst.getName().equals("Chuuk State") || rst.getName().equals("Korsae") || rst.getName().equals("Pohnpei") || rst.getName().equals("Yap State"))
+					if (rst.getName().equals("Chuuk State") || rst.getName().equals("Kosrae") || rst.getName().equals("Pohnpei") || rst.getName().equals("Yap State"))
 					{
 						stateList.append("&nbsp;&nbsp;&nbsp;");
 					}
