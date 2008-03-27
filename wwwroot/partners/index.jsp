@@ -159,9 +159,6 @@
 	<h3>Program Partners in Cancer Control</h3>
 	
     <p>To locate research partners in your state or region go to the <a href="researcher.jsp?cctopic=0">Research Partners</a> page.</p>
-		
-	</div>
-	<!--<br />-->
 	</td>
 </tr>
 <tr>
