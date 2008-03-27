@@ -69,12 +69,6 @@ StringBuffer pcScript = null;
 		       //******************************
 		       if (rs.getPlanStatus() == 1)
 		       {
-					//indent
-					if (rs.getName().equals("Chuuk State") || rs.getName().equals("Kosrae") || rs.getName().equals("Pohnpei") || rs.getName().equals("Yap State"))
-					{
-						stateList.append("&nbsp;&nbsp;&nbsp;");
-					}
-		
 					//create the text link
 					stateList.append("<a href='"+ rs.getPlanUrl().trim()+"' title='"+rs.getName().trim());
 		
@@ -125,12 +119,6 @@ StringBuffer pcScript = null;
 		       }
 		       
 		       stateList.append("<br />");
-		       
-		    	//indent
-				if (rsb.getName().equals("Chuuk State") || rsb.getName().equals("Kosrae") || rsb.getName().equals("Pohnpei") || rsb.getName().equals("Yap State"))
-				{
-					stateList.append("&nbsp;&nbsp;&nbsp;");
-				}
 				
 				count++;
 			}
@@ -148,6 +136,12 @@ StringBuffer pcScript = null;
 			if (rst.getPlanType().equals("T"))
 			{
 			   //stateList.append("</td><td valign='top'>");
+
+		    	//indent
+				if (rst.getName().equals("Chuuk State") || rst.getName().equals("Kosrae") || rst.getName().equals("Pohnpei") || rst.getName().equals("Yap State"))
+				{
+					stateList.append("&nbsp;&nbsp;&nbsp;");
+				}
 	       
 		       //******************************
 		       if (rst.getPlanStatus() == 1)
@@ -171,12 +165,6 @@ StringBuffer pcScript = null;
 		       }
 		       
 		       stateList.append("<br />");
-		       
-		    	//indent
-				if (rst.getName().equals("Chuuk State") || rst.getName().equals("Kosrae") || rst.getName().equals("Pohnpei") || rst.getName().equals("Yap State"))
-				{
-					stateList.append("&nbsp;&nbsp;&nbsp;");
-				}
 				
 				count++;
 			}
