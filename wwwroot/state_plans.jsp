@@ -106,26 +106,33 @@ StringBuffer pcScript = null;
 		       //******************************
 		       if (rsb.getPlanStatus() == 1)
 		       {
-					//indent
-					if (rsb.getName().equals("Chuuk State") || rsb.getName().equals("Kosrae") || rsb.getName().equals("Pohnpei") || rsb.getName().equals("Yap State"))
-					{
-						stateList.append("&nbsp;&nbsp;&nbsp;");
-					}
-		
 					//create the text link
 					stateList.append("<a href='"+ rsb.getPlanUrl().trim()+"' title='"+rsb.getName().trim());
-		
+					
 					if (rsb.getPlanPeriod() != null)
 					{ 
 						stateList.append(" (Plan period: "+ rsb.getPlanPeriod()+")' target='_blank'>"+rsb.getName()+"</a>");
 					}else{
 						stateList.append("' target='_blank'>"+rsb.getName()+"</a>");
 					}
-		
-					stateList.append("<br />");
-		
-					count++;
 		       }
+		       
+		       //******************************
+		       if (rsb.getPlanStatus() != 1)
+		       {
+					//create the text link
+					stateList.append(rsb.getName().trim());
+		       }
+		       
+		       stateList.append("<br />");
+		       
+		    	//indent
+				if (rsb.getName().equals("Chuuk State") || rsb.getName().equals("Kosrae") || rsb.getName().equals("Pohnpei") || rsb.getName().equals("Yap State"))
+				{
+					stateList.append("&nbsp;&nbsp;&nbsp;");
+				}
+				
+				count++;
 			}
 		}while (itb.hasNext());
       
@@ -140,31 +147,38 @@ StringBuffer pcScript = null;
 			
 			if (rst.getPlanType().equals("T"))
 			{
-				//stateList.append("</td><td valign='top'>");
-	       	
+			   //stateList.append("</td><td valign='top'>");
+	       
 		       //******************************
 		       if (rst.getPlanStatus() == 1)
 		       {
-					//indent
-					if (rst.getName().equals("Chuuk State") || rst.getName().equals("Kosrae") || rst.getName().equals("Pohnpei") || rst.getName().equals("Yap State"))
-					{
-						stateList.append("&nbsp;&nbsp;&nbsp;");
-					}
-		
 					//create the text link
 					stateList.append("<a href='"+ rst.getPlanUrl().trim()+"' title='"+rst.getName().trim());
-		
+					
 					if (rst.getPlanPeriod() != null)
 					{ 
 						stateList.append(" (Plan period: "+ rst.getPlanPeriod()+")' target='_blank'>"+rst.getName()+"</a>");
 					}else{
 						stateList.append("' target='_blank'>"+rst.getName()+"</a>");
 					}
-		
-					stateList.append("<br />");
-		
-					count++;
 		       }
+		       
+		       //******************************
+		       if (rst.getPlanStatus() != 1)
+		       {
+					//create the text link
+					stateList.append(rst.getName().trim());
+		       }
+		       
+		       stateList.append("<br />");
+		       
+		    	//indent
+				if (rst.getName().equals("Chuuk State") || rst.getName().equals("Kosrae") || rst.getName().equals("Pohnpei") || rst.getName().equals("Yap State"))
+				{
+					stateList.append("&nbsp;&nbsp;&nbsp;");
+				}
+				
+				count++;
 			}
 		}while (itt.hasNext());
        	
