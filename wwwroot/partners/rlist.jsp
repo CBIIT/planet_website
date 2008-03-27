@@ -250,65 +250,110 @@ if (param != null)
 	  outString = new StringBuffer("<table><tr><td>&nbsp;</td></tr></table>");
 	}  //end of if statement
 
-    Vector states = QBean.getStateList();
+//****************************************************
+//*****  SHOW STATE and TERRITORIES/TRIBES LIST  *****
+//****************************************************
+Vector states = QBean.getStateList();
+Iterator it2 = states.iterator();
 
-    Iterator it2 = states.iterator();
-
-    if (it2.hasNext())
-    {
+if (it2.hasNext()) {
         stateList = new StringBuffer();
-		//stateList.append("<table border='1' cellpadding='5' cellspacing='0'><tr><th colspan='2' align='left' valign='top' nowrap>STATES</th><th align='left' valign='top' nowrap>TERRITORIES/TRIBES</th></tr><tr><td valign='top' nowrap>");
-        stateList.append("<table border='0' cellpadding='5' cellspacing='0' width='100%'><tr><th colspan='2' align='left' valign='top' nowrap>States</th></tr><tr><td valign='top' nowrap>");
-
+        stateList.append("<table border='0' cellpadding='5' cellspacing='0' width='100%'><tr><th colspan='2' align='left' valign='top' width='100%'>States</th></tr><tr><td valign='top' nowrap>");
 		String typeString = "S";
         int count= 0;
 
-        do
-        {
-        	StateBean rs = (StateBean)it2.next();
+        do {
+			StateBean rs = (StateBean)it2.next();
+			
+			if (rs.getType().equals("S"))
+			{
+				if (region.compareTo(rs.getAbbreviation()) == 0) {
+					stateStatic=rs.getName();
+				}
+	
+	            if (count == 26) {
+	                stateList.append("</td><td valign='top' nowrap>");
+	            }
+	            
+	            if (count == 51) {
+	              	stateList.append("</td></tr>");
+					stateList.append("<tr><th colspan='2'>&nbsp;</th></tr>");
+	            }
 
-			if (region.compareTo(rs.getAbbreviation()) == 0)
-				stateStatic=rs.getName();
+				if (count > 0 && count != 26 && count !=51 ) {
+					stateList.append("<br />");
+	            }
+	
+				if (region.compareTo(rs.getAbbreviation()) == 0) {
+					stateList.append("<font style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size : 12px; color : AA0000;'><strong>"+rs.getName().trim()+"</strong></font>");
+				} else {
+		            stateList.append("<a href='rlist.jsp?r="+rs.getAbbreviation()+"&cctopic="+topic+"' class='a1' title='"+rs.getName().trim()+"'>"+rs.getName()+"</a>");
+				}
 				
-			if (count == 26) {
-                stateList.append("</td><td valign='top' nowrap>");
-                //count = 0;
-            }
-         
-		    if (count == 51) {
-              	stateList.append("</td></tr>");
-				stateList.append("<tr><th colspan='2'>&nbsp;</th></tr>");
-				stateList.append("<tr><th colspan='2' align='left' valign='top' nowrap>Territories / Tribes</th></tr><tr><td colspan='2' valign='top'  nowrap>");
-                //count = 0;
-            }
-			
-			//if (count == 56) {
-            //    stateList.append("</td><td valign='top' nowrap>");
-				//count = 0;
-           // }
-			
-			
-			//commented out 01/19/06
-			//if (count > 0 && count != 26 && count !=51 && count !=56)
-              //  stateList.append("<br />");
-              if (count > 0 && count != 26 && count !=51 ) {
-               stateList.append("<br />");
-                
-             //    if (count > 51){
-             //   stateList.append("<br /><br />");
-             //   }
-            }
-        
-
-			if (region.compareTo(rs.getAbbreviation()) == 0)
-				stateList.append("<font style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	color : AA0000; font-size: 12px;'><strong>"+rs.getName().trim()+"</strong></font>");
-			else
-	            stateList.append("<a href='rlist.jsp?r="+rs.getAbbreviation()+"&cctopic="+topic+"' class='a1' title='"+rs.getName().trim()+"'>"+rs.getName()+"</a>");
-
-            count++;
+				count++;
+			}
         } while (it2.hasNext());
-        stateList.append("</td></tr><tr><td colspan=3><a href='rlist.jsp?r=ALL&cctopic=" + topic + "' title=\"All states and regions\">View All U.S. Researchers by topic area</a></td></tr></table>");
-    }
+
+		stateList.append("<tr><th colspan='2' align='left' valign='top' width='100%'>Tribes</th></tr>");
+
+		//Tribes
+    	Iterator itb = states.iterator();
+    	stateList.append("</td><td valign='top' colspan='2'>");
+
+        do {
+			StateBean rsb = (StateBean)itb.next();
+			
+			if (rsb.getType().equals("B"))
+			{
+				if (region.compareTo(rsb.getAbbreviation()) == 0) {
+					stateStatic=rsb.getName();
+				}
+				
+				if (region.compareTo(rsb.getAbbreviation()) == 0) {
+					stateList.append("<font style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size : 12px; color : AA0000;'><strong>"+rsb.getName().trim()+"</strong></font>");
+				} else {
+		            stateList.append("<a href='rlist.jsp?r="+rsb.getAbbreviation()+"&cctopic="+topic+"' class='a1' title='"+rsb.getName().trim()+"'>"+rsb.getName()+"</a>");
+				}
+				
+              	stateList.append("<br />");
+				
+				count++;
+			}
+        } while (itb.hasNext());
+		
+		stateList.append("<tr><th colspan='2' align='left' valign='top' width='100%'>Territories</th></tr>");
+		
+		//Territories
+    	Iterator itt = states.iterator();
+    	stateList.append("</td><td valign='top' colspan='2'>");
+
+        do {
+			StateBean rst = (StateBean)itt.next();
+			
+			if (rst.getType().equals("T"))
+			{
+				if (region.compareTo(rst.getAbbreviation()) == 0) {
+					stateStatic=rst.getName();
+				}
+				
+				if (region.compareTo(rst.getAbbreviation()) == 0) {
+					stateList.append("<font style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size : 12px; color : AA0000;'><strong>"+rst.getName().trim()+"</strong></font>");
+				} else {
+		            stateList.append("<a href='rlist.jsp?r="+rst.getAbbreviation()+"&cctopic="+topic+"' class='a1' title='"+rst.getName().trim()+"'>"+rst.getName()+"</a>");
+				}
+				
+              	stateList.append("<br />");
+				
+				count++;
+			}
+        } while (itt.hasNext());
+
+        stateList.append("<br/><br/></td></tr><tr><td colspan=2><a href='rlist.jsp?r=ALL&cctopic=" + topic + "' title=\"All states and regions\">View all U.S. Program Partners</a></td></tr></table>");
+}//end if (it2.hasNext())
+//****************************************************
+//*****  END STATE and TERRITORIES/TRIBES LIST   *****
+//****************************************************
+
 	pageTitle = pageTitle + " - " + stateStatic;
 	
 		/* if (stateStatic.compareTo("the US") == 0) {

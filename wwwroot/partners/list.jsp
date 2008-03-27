@@ -367,56 +367,95 @@ Iterator it2 = states.iterator();
 
 if (it2.hasNext()) {
         stateList = new StringBuffer();
-		//stateList.append("<table border='0' cellpadding='5' cellspacing='0'><tr><th colspan='2' align='left' valign='top' nowrap>STATES</th><th align='left' valign='top' nowrap>TERRITORIES/TRIBES</th></tr><tr><td valign='top' nowrap>");
         stateList.append("<table border='0' cellpadding='5' cellspacing='0' width='100%'><tr><th colspan='2' align='left' valign='top' width='100%'>States</th></tr><tr><td valign='top' nowrap>");
 		String typeString = "S";
         int count= 0;
 
         do {
 			StateBean rs = (StateBean)it2.next();
+			
+			if (rs.getType().equals("S"))
+			{
+				if (region.compareTo(rs.getAbbreviation()) == 0) {
+					stateStatic=rs.getName();
+				}
+	
+	            if (count == 26) {
+	                stateList.append("</td><td valign='top' nowrap>");
+	            }
+	            
+	            if (count == 51) {
+	              	stateList.append("</td></tr>");
+					stateList.append("<tr><th colspan='2'>&nbsp;</th></tr>");
+	            }
 
-			if (region.compareTo(rs.getAbbreviation()) == 0) {
-				stateStatic=rs.getName();
-			}//end if (region.compareTo(rs.getAbbreviation()) == 0)
-
-            if (count == 26) {
-                stateList.append("</td><td valign='top' nowrap>");
-                //count = 0;
-            }//end if (count == 26) 
-            if (count == 51) {
-              	stateList.append("</td></tr>");
-				stateList.append("<tr><th colspan='2'>&nbsp;</th></tr>");
-				stateList.append("<tr><th colspan='2' align='left' valign='top'>Territories / Tribes</th></tr><tr><td valign='top' colspan='2'>");
-                //count = 0;
-            }//end if (count == 51)
-
-			//comment out 01/10/2005
-			//if (count == 56) {
-            //   stateList.append("</td><td valign='top' colspan='2' bgcolor='#F1F1FD'>");
-			// }
-
-			//if (typeString.compareTo(rs.getType()) != 0) {
-            //    stateList.append("<br />");
-            //    typeString = rs.getType();
-            //}
-
-           //comment out 01/10/2005
-           //if (count > 0 && count != 26 && count !=51 && count !=56) {
-			if (count > 0 && count != 26 && count !=51 ) {
-				stateList.append("<br />");
-
-             //    if (count > 51){
-             //   stateList.append("<br /><br />");
-             //   }
-            }//end if (count > 0 && count != 26 && count !=51 )
-
-			if (region.compareTo(rs.getAbbreviation()) == 0) {
-				stateList.append("<font style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size : 12px; color : AA0000;'><strong>"+rs.getName().trim()+"</strong></font>");
-			} else {
-	            stateList.append("<a href='list.jsp?r="+rs.getAbbreviation()+"&cctopic="+topic.toUpperCase()+"' class='a1' title='"+rs.getName().trim()+"'>"+rs.getName()+"</a>");
-			}//end if (region.compareTo(rs.getAbbreviation()) == 0)
-			count++;
+				if (count > 0 && count != 26 && count !=51 ) {
+					stateList.append("<br />");
+	            }
+	
+				if (region.compareTo(rs.getAbbreviation()) == 0) {
+					stateList.append("<font style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size : 12px; color : AA0000;'><strong>"+rs.getName().trim()+"</strong></font>");
+				} else {
+		            stateList.append("<a href='list.jsp?r="+rs.getAbbreviation()+"&cctopic="+topic.toUpperCase()+"' class='a1' title='"+rs.getName().trim()+"'>"+rs.getName()+"</a>");
+				}
+				
+				count++;
+			}
         } while (it2.hasNext());
+
+		stateList.append("<tr><th colspan='2' align='left' valign='top' width='100%'>Tribes</th></tr>");
+
+		//Tribes
+    	Iterator itb = states.iterator();
+    	stateList.append("</td><td valign='top' colspan='2'>");
+
+        do {
+			StateBean rsb = (StateBean)itb.next();
+			
+			if (rsb.getType().equals("B"))
+			{
+				if (region.compareTo(rsb.getAbbreviation()) == 0) {
+					stateStatic=rsb.getName();
+				}
+				
+				if (region.compareTo(rsb.getAbbreviation()) == 0) {
+					stateList.append("<font style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size : 12px; color : AA0000;'><strong>"+rsb.getName().trim()+"</strong></font>");
+				} else {
+		            stateList.append("<a href='list.jsp?r="+rsb.getAbbreviation()+"&cctopic="+topic.toUpperCase()+"' class='a1' title='"+rsb.getName().trim()+"'>"+rsb.getName()+"</a>");
+				}
+				
+              	stateList.append("<br />");
+				
+				count++;
+			}
+        } while (itb.hasNext());
+		
+		stateList.append("<tr><th colspan='2' align='left' valign='top' width='100%'>Territories</th></tr>");
+		
+		//Territories
+    	Iterator itt = states.iterator();
+    	stateList.append("</td><td valign='top' colspan='2'>");
+
+        do {
+			StateBean rst = (StateBean)itt.next();
+			
+			if (rst.getType().equals("T"))
+			{
+				if (region.compareTo(rst.getAbbreviation()) == 0) {
+					stateStatic=rst.getName();
+				}
+				
+				if (region.compareTo(rst.getAbbreviation()) == 0) {
+					stateList.append("<font style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size : 12px; color : AA0000;'><strong>"+rst.getName().trim()+"</strong></font>");
+				} else {
+		            stateList.append("<a href='list.jsp?r="+rst.getAbbreviation()+"&cctopic="+topic.toUpperCase()+"' class='a1' title='"+rst.getName().trim()+"'>"+rst.getName()+"</a>");
+				}
+				
+              	stateList.append("<br />");
+				
+				count++;
+			}
+        } while (itt.hasNext());
 
         stateList.append("<br/><br/></td></tr><tr><td colspan=2><a href='list.jsp?r=ALL&cctopic=" + topic + "' title=\"All states and regions\">View all U.S. Program Partners</a></td></tr></table>");
 }//end if (it2.hasNext())
