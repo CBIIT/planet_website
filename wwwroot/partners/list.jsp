@@ -367,10 +367,10 @@ Iterator it2 = states.iterator();
 
 if (it2.hasNext()) {
         stateList = new StringBuffer();
-        stateList.append("<table border='0' cellpadding='5' cellspacing='0' width='100%'><tr><th colspan='2' align='left' valign='top' width='100%'>States</th></tr><tr><td valign='top' nowrap>");
+        stateList.append("<table border='0' cellpadding='5' cellspacing='0' width='100%'><tr><th colspan='2' align='left' valign='top' width='100%'>States</th></tr><tr><td colspan=2><a href='list.jsp?r=ALL&cctopic=" + topic + "' title=\"All states and regions\">View all U.S. Program Partners</a></td></tr><tr><td valign='top' nowrap>");
 		String typeString = "S";
         int count= 0;
-
+        
         do {
 			StateBean rs = (StateBean)it2.next();
 			
@@ -457,7 +457,8 @@ if (it2.hasNext()) {
 			}
         } while (itt.hasNext());
 
-        stateList.append("<br/><br/></td></tr><tr><td colspan=2><a href='list.jsp?r=ALL&cctopic=" + topic + "' title=\"All states and regions\">View all U.S. Program Partners</a></td></tr></table>");
+        //stateList.append("<br/><br/></td></tr><tr><td colspan=2><a href='list.jsp?r=ALL&cctopic=" + topic + "' title=\"All states and regions\">View all U.S. Program Partners</a></td></tr></table>");
+        stateList.append("</td></tr></table>");
 }//end if (it2.hasNext())
 //****************************************************
 //*****  END STATE and TERRITORIES/TRIBES LIST   *****
