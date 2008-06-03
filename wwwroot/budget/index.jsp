@@ -126,6 +126,8 @@ To view, click on map or state name below.
     </td>
   </tr>
 </table>
+<!--  HF (6/3/08) CR #41097 
 <script type="text/javascript" src="ieupdate.js"></script>
+ -->
 </body></html>
 
