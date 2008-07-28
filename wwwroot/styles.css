@@ -43,6 +43,13 @@ A.titlelink:active {
 	text-decoration : underline;	
 }
 
+A.breadcrumb {
+	font-family:Arial, Helvetica, Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	color:Blue;
+	font-weight:normal;
+}
+
 a {
 	font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;
 	font-size : 16px;
