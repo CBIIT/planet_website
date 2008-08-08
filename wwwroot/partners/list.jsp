@@ -514,10 +514,8 @@ if (it2.hasNext()) {
         <a href="../factsheet.pdf">Fact Sheet (PDF)</a><br>
         <a href="../partners.html">Sponsors</a></p></td>
   </tr>
-    <tr>
-    <td colspan="3">
-      <hr size="1" noshade>
-	</td>
+  <tr>
+    <td colspan="3" id="breadcrumbs"><a href="index.html">Home</a> &gt; Program Partners in Cancer Control &gt; <%= stateStatic %></td>
   </tr>
 </table>
 

@@ -381,7 +381,7 @@ if (it2.hasNext()) {
 <title>Cancer Control P.L.A.N.E.T. - <%= pageTitle%></title>
 <link href="../styles.css" rel="stylesheet" type="text/css">
 </head>
-<body topmargin="0" leftmargin="0" bgcolor="White">
+<body topmargin="0" leftmargin="0" bgcolor="White"><a name="top"></a>
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
     <td><p class="banner"><a href="../index.html"><img src="../images/planet_logo.gif" alt="Cancer Control P.L.A.N.E.T. - Plan, Link, Act, Network with Evidence-based Tools" width="169" height="87" border="0"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p></td>
@@ -393,7 +393,7 @@ if (it2.hasNext()) {
         <a href="../partners.html">Sponsors</a></p></td>
   </tr>
   <tr>
-    <td colspan="3"><hr size="1" noshade></td>
+    <td colspan="3" id="breadcrumbs"><a href="index.html">Home</a> &gt; Research Partners in Cancer Control &gt; <%= stateStatic %></td>
   </tr>
 </table>
 

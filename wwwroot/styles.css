@@ -132,3 +132,19 @@ a {
 	font-size : 16px;
 	color : #ff0000;
 }
+
+#breadcrumbs {
+	border-top: 1px solid #999;
+	padding-left: 10px;
+	font-size: 11px;
+	color: #666;
+}
+
+#breadcrumbs a {
+	color: #666;
+	font-size: 11px;
+}
+
+#breadcrumbs a:hover {
+	color: #004da2;
+}

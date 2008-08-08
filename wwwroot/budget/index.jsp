@@ -20,21 +20,20 @@
         <a href="../partners.html">Sponsors</a></p></td>
   </tr>
   <tr>
-    <td colspan="3">
-
-      <hr size="1" noshade>
-	</td>
+    <td colspan="3" id="breadcrumbs"><a href="../index.html">Home</a> &gt; State, Tribe and Territory Implementation Budgets</td>
+  </tr>
+  <tr>
+    <td colspan="3" id="breadcrumbs2">&nbsp;</td>
   </tr>
 </table>
 
-<div STYLE="display: block; position: relative; left: 50px">
+<div STYLE="display: block; position: relative; left: 5px">
 
 <table summary="Links to province cancer control plans" bgcolor="white" border="0" cellpadding="5" cellspacing="0">
 <tr>
 <td align="left" colspan="3">
 <div style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif; font-size : 16px; font-weight: bold;color : #000000;">
-State, Tribe and Territory Implementation Budgets
-</div>
+<img src="../images/planet_step5.gif" alt="Step 5" align="absmiddle">&nbsp;State, Tribe and Territory Implementation Budgets</div>
 
 <p><div style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif; font-size : 12px; color : #000000;">
 To view, click on map or state name below.

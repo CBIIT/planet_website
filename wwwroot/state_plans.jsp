@@ -190,12 +190,9 @@ StringBuffer pcScript = null;
     <a href="partners.html">P.L.A.N.E.T. Sponsors</a></p></td>
   </tr>
   <tr>
-    <td colspan="3">
-      <hr size="1" noshade>
-	</td>
+    <td colspan="3" id="breadcrumbs"><a href="index.html">Home</a> &gt; State, Tribe and Territory Plans</td>
   </tr>
 </table>
-
 <table summary="Links to state cancer control plans" bgcolor="white" border="0" cellpadding="5" cellspacing="0" width="100%">
 <tr>
 <td align="left" colspan="2">
