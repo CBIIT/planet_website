@@ -74,9 +74,9 @@ StringBuffer pcScript = null;
 		
 					if (rs.getPlanPeriod() != null)
 					{ 
-						stateList.append(" (Plan period: "+ rs.getPlanPeriod()+")' target='_blank'>"+rs.getName()+"</a>");
+						stateList.append(" (Plan period: "+ rs.getPlanPeriod()+")' target='_blank'>"+rs.getName()+" (PDF)</a>");
 					}else{
-						stateList.append("' target='_blank'>"+rs.getName()+"</a>");
+						stateList.append("' target='_blank'>"+rs.getName()+" (PDF)</a>");
 					}
 		
 					stateList.append("<br />");
@@ -105,9 +105,9 @@ StringBuffer pcScript = null;
 					
 					if (rsb.getPlanPeriod() != null)
 					{ 
-						stateList.append(" (Plan period: "+ rsb.getPlanPeriod()+")' target='_blank'>"+rsb.getName()+"</a>");
+						stateList.append(" (Plan period: "+ rsb.getPlanPeriod()+")' target='_blank'>"+rsb.getName()+" (PDF)</a>");
 					}else{
-						stateList.append("' target='_blank'>"+rsb.getName()+"</a>");
+						stateList.append("' target='_blank'>"+rsb.getName()+" (PDF)</a>");
 					}
 		       }
 		       
@@ -151,9 +151,9 @@ StringBuffer pcScript = null;
 					
 					if (rst.getPlanPeriod() != null)
 					{ 
-						stateList.append(" (Plan period: "+ rst.getPlanPeriod()+")' target='_blank'>"+rst.getName()+"</a>");
+						stateList.append(" (Plan period: "+ rst.getPlanPeriod()+")' target='_blank'>"+rst.getName()+" (PDF)</a>");
 					}else{
-						stateList.append("' target='_blank'>"+rst.getName()+"</a>");
+						stateList.append("' target='_blank'>"+rst.getName()+" (PDF)</a>");
 					}
 		       }
 		       
@@ -184,7 +184,7 @@ StringBuffer pcScript = null;
     <td><p class="banner"><a href="index.html"><img src="images/planet_logo.gif" alt="Cancer Control P.L.A.N.E.T. - Plan, Link, Act, Network with Evidence-based Tools" width="169" height="87" border="0"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p></td>
     <td><a href="index.html"><img src="images/planet_banner_wider.gif" alt="Cancer Control P.L.A.N.E.T. - Links to comprehensive cancer control resources for public health professionals" width="500" height="82" border="0"></a></td>
     <td><p><a href="index.html">Home</a><br>
-	<a href="contact.html">Contact Us</a><br>	<a href="/cgi-bin/awredir.pl?url=http://ccplanetraining.cancer.gov" onClick="javascript:popWindow('/cgi-bin/awredir.pl?url=http://ccplanetraining.cancer.gov', 'name','725','400','yes'); return false;">On-line Training<img src="images/Icon_External_Link.png" alt="External link" width="12" height="12" border="0"></a><br />
+	<a href="contact.html">Contact Us</a><br>	<a href="/cgi-bin/awredir.pl?url=http://ccplanetraining.cancer.gov" onClick="javascript:popWindow('/cgi-bin/awredir.pl?url=http://ccplanetraining.cancer.gov', 'name','925','600','yes'); return false;">On-line Training<img src="images/Icon_External_Link.png" alt="External link" width="12" height="12" border="0"></a><br />
 	<a href="about.html">About This Site</a><br>
     <a href="factsheet.pdf">Fact Sheet (PDF)</a><br>
     <a href="partners.html">P.L.A.N.E.T. Sponsors</a></p></td>
@@ -199,7 +199,7 @@ StringBuffer pcScript = null;
 <table summary="Links to state cancer control plans" bgcolor="white" border="0" cellpadding="5" cellspacing="0" width="100%">
 <tr>
 <td align="left" colspan="2">
-<p><div style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif; font-size : 16px; font-weight: bold;color : #000000;"><%= pageTitle%></div></p>
+<p><div style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif; font-size : 16px; font-weight: bold;color : #000000;"><img src="images/planet_step5.gif" alt="Step 5" align="absmiddle">&nbsp;<%= pageTitle%></div></p>
 <p><div style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif; font-size : 14px; font-weight: bold;color : #000000;">(No link indicates that a cancer control plan is currently not available)</div></p>
 </td>
 </tr>

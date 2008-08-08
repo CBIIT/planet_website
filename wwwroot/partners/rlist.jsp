@@ -68,7 +68,7 @@ if (param != null)
 
 		//outString = new StringBuffer("<table border='0' cellspacing='0' cellpadding='5'>");
         outString = new StringBuffer("<table border='0' cellspacing='0' cellpadding='5'><tr><td style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size : 12;'>Research Partners are listed in alphabetical order by state<br><br></td></tr>");
-		topicString = new StringBuffer("<tr><td valign='top' style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size: 14px; font-weight: bold; color : #000000;' colspan='2'><a name='top'></a>View by Topic:</td></tr><tr><td valign='top' style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size : 12;'>");
+		topicString = new StringBuffer("<tr><td valign='top' style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size: 14px; font-weight: bold; color : #000000;' colspan='2'><a name='top'></a>Topics on this page:</td></tr><tr><td valign='top' style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size : 12;'>");
 	
     if (researchers!=null)
     {
@@ -285,7 +285,7 @@ if (it2.hasNext()) {
 	            }
 	
 				if (region.compareTo(rs.getAbbreviation()) == 0) {
-					stateList.append("<font style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size : 12px; color : AA0000;'><strong>"+rs.getName().trim()+"</strong></font>");
+					stateList.append("<font style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size: 12; color : AA0000;'><strong>&gt;&gt;"+rs.getName().trim()+"&lt;&lt;</strong></font>");
 				} else {
 		            stateList.append("<a href='rlist.jsp?r="+rs.getAbbreviation()+"&cctopic="+topic+"' class='a1' title='"+rs.getName().trim()+"'>"+rs.getName()+"</a>");
 				}
@@ -310,7 +310,7 @@ if (it2.hasNext()) {
 				}
 				
 				if (region.compareTo(rsb.getAbbreviation()) == 0) {
-					stateList.append("<font style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size : 12px; color : AA0000;'><strong>"+rsb.getName().trim()+"</strong></font>");
+					stateList.append("<font style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size: 12; color : AA0000;'><strong>&gt;&gt;"+rsb.getName().trim()+"&lt;&lt;</strong></font>");
 				} else {
 		            stateList.append("<a href='rlist.jsp?r="+rsb.getAbbreviation()+"&cctopic="+topic+"' class='a1' title='"+rsb.getName().trim()+"'>"+rsb.getName()+"</a>");
 				}
@@ -337,7 +337,7 @@ if (it2.hasNext()) {
 				}
 				
 				if (region.compareTo(rst.getAbbreviation()) == 0) {
-					stateList.append("<font style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size : 12px; color : AA0000;'><strong>"+rst.getName().trim()+"</strong></font>");
+					stateList.append("<font style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size: 12; color : AA0000;'><strong>&gt;&gt;"+rst.getName().trim()+"&lt;&lt;</strong></font>");
 				} else {
 		            stateList.append("<a href='rlist.jsp?r="+rst.getAbbreviation()+"&cctopic="+topic+"' class='a1' title='"+rst.getName().trim()+"'>"+rst.getName()+"</a>");
 				}
@@ -387,7 +387,7 @@ if (it2.hasNext()) {
     <td><p class="banner"><a href="../index.html"><img src="../images/planet_logo.gif" alt="Cancer Control P.L.A.N.E.T. - Plan, Link, Act, Network with Evidence-based Tools" width="169" height="87" border="0"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p></td>
     <td><a href="../index.html"><img src="../images/planet_banner_wider.gif" alt="Cancer Control P.L.A.N.E.T. - Links to comprehensive cancer control resources for public health professionals" width="500" height="82" border="0"></a></td>
     <td><p><a href="../index.html">Home</a><br>
-        <a href="../contact.html">Contact Us</a><br>		<a href="/cgi-bin/awredir.pl?url=http://ccplanetraining.cancer.gov" onClick="javascript:popWindow('/cgi-bin/awredir.pl?url=http://ccplanetraining.cancer.gov', 'name','725','400','yes'); return false;">On-line Training</a><br />
+        <a href="../contact.html">Contact Us</a><br>		<a href="/cgi-bin/awredir.pl?url=http://ccplanetraining.cancer.gov" onClick="javascript:popWindow('/cgi-bin/awredir.pl?url=http://ccplanetraining.cancer.gov', 'name','925','600','yes'); return false;">On-line Training</a><br />
 		<a href="../about.html">About This Site</a><br>
         <a href="../factsheet.pdf">Fact Sheet (PDF)</a><br>
         <a href="../partners.html">Sponsors</a></p></td>
@@ -399,7 +399,7 @@ if (it2.hasNext()) {
 
 <table bgcolor="white" border="0" cellpadding="0" cellspacing="0" width="100%">
    <tr>
-	<td valign="top" colspan="2"><div  style="font-family: Arial, Helvetica, Verdana, Geneva, sans-serif; font-size: 20px; font-weight: bold; color: #000000;"><%= researcherText%></div><br>
+	<td valign="top" colspan="2"><div  style="font-family: Arial, Helvetica, Verdana, Geneva, sans-serif; font-size: 20px; font-weight: bold; color: #000000;"><img src="../images/planet_step2.gif" alt="Step 2" align="absmiddle">&nbsp;<%= researcherText%></div><br>
 	<p>To locate program partners in <%= stateStatic%> go to the <a href="list.jsp?r=<%= region%>&cctopic=<%= topicLet%>">Program Partners</a> page.</td>
 	<td valign="top" align="right">&nbsp;</td>
   </tr>

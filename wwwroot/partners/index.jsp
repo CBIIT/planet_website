@@ -141,7 +141,7 @@
   <tr>
     <td><p class="banner"><a href="../index.html"><img src="../images/planet_logo.gif" alt="Cancer Control P.L.A.N.E.T. - Plan, Link, Act, Network with Evidence-based Tools" width="169" height="87" border="0"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p></td>    <td><a href="../index.html"><img src="../images/planet_banner_wider.gif" alt="Cancer Control P.L.A.N.E.T. - Links to comprehensive cancer control resources for public health professionals" width="500" height="82" border="0"></a></td>
 <td><p><a href="../index.html">Home</a><br>
-        <a href="../contact.html">Contact Us</a><br>		<a href="/cgi-bin/awredir.pl?url=http://ccplanetraining.cancer.gov" onclick="javascript:popWindow('/cgi-bin/awredir.pl?url=http://ccplanetraining.cancer.gov', 'name','725','400','yes'); return false;">On-line Training</a><br />
+        <a href="../contact.html">Contact Us</a><br>		<a href="/cgi-bin/awredir.pl?url=http://ccplanetraining.cancer.gov" onClick="javascript:popWindow('/cgi-bin/awredir.pl?url=http://ccplanetraining.cancer.gov', 'name','925','600','yes'); return false;">On-line Training</a><br />
 	    <a href="../about.html">About This Site</a><br>
         <a href="../factsheet.pdf">Fact Sheet (PDF)</a><br>
         <a href="../partners.html">Sponsors</a></p></td>
@@ -156,13 +156,17 @@
 <table summary="Links to potential partner list" bgcolor="white" border="0" cellpadding="5" cellspacing="0" width="100%">
 <tr>
 	<td align="left" colspan="3">
-	<h3>Program Partners in Cancer Control</h3>
+	<h3><img src="../images/planet_step2.gif" alt="Step 2" align="absmiddle">&nbsp;Program Partners in Cancer Control</h3>
 	
     <p>To locate research partners in your state or region go to the <a href="researcher.jsp?cctopic=0">Research Partners</a> page.</p>
 	</td>
 </tr>
 <tr>
 	<td valign='top' colspan="2"><%= stateList.toString()%><br /></td>
+</tr>
+ <tr>
+	<td valign='top' colspan="2"><p>The list of program partners is compiled from organizaitons involved as National Partners for Comprehensive Cancer Control (American Cancer Society, Centers for Disease Control and Prevention, Commission on Cancer and National Cancer Institute).  State/Regional field staff from these organizations have been trained on how to use the Cancer Control P.L.A.N.E.T. web portal and are resources for comprehensive cancer control planning and implementation.  Contacts are updated annually.</p></td>
+</tr>
 </table>
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>

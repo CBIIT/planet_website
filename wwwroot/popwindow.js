@@ -2,7 +2,7 @@
 function popWindow(theurl)
 {
 	theurl = theurl.replace(/\s/g, '+');
-	window.open(theurl,'','toolbar=yes, location=yes, scrollbars=yes, resizable=yes, menubar=1, status=1, width=725, height=400');
+	window.open(theurl,'','toolbar=yes, location=yes, scrollbars=yes, resizable=yes, menubar=1, status=1, width=925, height=600');
 //Removed from above line: 
 }
 
