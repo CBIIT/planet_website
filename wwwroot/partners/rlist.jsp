@@ -393,7 +393,7 @@ if (it2.hasNext()) {
         <a href="../partners.html">Sponsors</a></p></td>
   </tr>
   <tr>
-    <td colspan="3" id="breadcrumbs"><a href="index.html">Home</a> &gt; Research Partners in Cancer Control &gt; <%= stateStatic %></td>
+    <td colspan="3" id="breadcrumbs"><a href="index.html">Home</a> &gt; <a href="researcher.jsp">Research Partners in Cancer Control</a> &gt; <%= stateStatic %></td>
   </tr>
 </table>
 
