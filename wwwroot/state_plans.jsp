@@ -74,9 +74,9 @@ StringBuffer pcScript = null;
 		
 					if (rs.getPlanPeriod() != null)
 					{ 
-						stateList.append(" (Plan period: "+ rs.getPlanPeriod()+")' target='_blank'>"+rs.getName()+" (PDF)</a>");
+						stateList.append(" (Plan period: "+ rs.getPlanPeriod()+")' target='_blank'>"+rs.getName()+"</a>");
 					}else{
-						stateList.append("' target='_blank'>"+rs.getName()+" (PDF)</a>");
+						stateList.append("' target='_blank'>"+rs.getName()+"</a>");
 					}
 		
 					stateList.append("<br />");
@@ -105,9 +105,9 @@ StringBuffer pcScript = null;
 					
 					if (rsb.getPlanPeriod() != null)
 					{ 
-						stateList.append(" (Plan period: "+ rsb.getPlanPeriod()+")' target='_blank'>"+rsb.getName()+" (PDF)</a>");
+						stateList.append(" (Plan period: "+ rsb.getPlanPeriod()+")' target='_blank'>"+rsb.getName()+"</a>");
 					}else{
-						stateList.append("' target='_blank'>"+rsb.getName()+" (PDF)</a>");
+						stateList.append("' target='_blank'>"+rsb.getName()+"</a>");
 					}
 		       }
 		       
@@ -151,9 +151,9 @@ StringBuffer pcScript = null;
 					
 					if (rst.getPlanPeriod() != null)
 					{ 
-						stateList.append(" (Plan period: "+ rst.getPlanPeriod()+")' target='_blank'>"+rst.getName()+" (PDF)</a>");
+						stateList.append(" (Plan period: "+ rst.getPlanPeriod()+")' target='_blank'>"+rst.getName()+"</a>");
 					}else{
-						stateList.append("' target='_blank'>"+rst.getName()+" (PDF)</a>");
+						stateList.append("' target='_blank'>"+rst.getName()+"</a>");
 					}
 		       }
 		       
