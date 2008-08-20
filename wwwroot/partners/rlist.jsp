@@ -388,20 +388,26 @@ if (it2.hasNext()) {
     <td><a href="../index.html"><img src="../images/planet_banner_wider.gif" alt="Cancer Control P.L.A.N.E.T. - Links to comprehensive cancer control resources for public health professionals" width="500" height="82" border="0"></a></td>
     <td><p><a href="../index.html">Home</a><br>
         <a href="../contact.html">Contact Us</a><br>
-        <!-- <a href="/cgi-bin/awredir.pl?url=http://ccplanetraining.cancer.gov" onClick="javascript:popWindow('/cgi-bin/awredir.pl?url=http://ccplanetraining.cancer.gov', 'name','925','600','yes'); return false;">On-line Training</a><br /> -->
-        <a href="http://ccplanetraining.cancer.gov" target="_blank">On-line Training</a><br>
-		<a href="../about.html">About This Site</a><br>
+        <a href="/cgi-bin/awredir.pl?url=http://ccplanetraining.cancer.gov" onclick="javascript:popWindow('/cgi-bin/awredir.pl?url=http://ccplanetraining.cancer.gov', 'name','725','400','yes'); return false;">On-line Training</a><br />
+        <a href="../about.html">About This Site</a><br>
         <a href="../factsheet.pdf">Fact Sheet (PDF)</a><br>
         <a href="../partners.html">Sponsors</a></p></td>
   </tr>
   <tr>
-    <td colspan="3" id="breadcrumbs"><a href="../index.html">Home</a> &gt; <a href="researcher.jsp">Research Partners in Cancer Control</a> &gt; <%= stateStatic %></td>
+    <td colspan="3">
+      <hr size="1" noshade>
+	</td>
+
   </tr>
+
+  <!--tr>
+    <td colspan="3" id="breadcrumbs"><a href="../index.html">Home</a> &gt; <a href="researcher.jsp">Research Partners in Cancer Control</a> &gt; <%= stateStatic %></td>
+  </tr-->
 </table>
 
 <table bgcolor="white" border="0" cellpadding="0" cellspacing="0" width="100%">
    <tr>
-	<td valign="top" colspan="2"><div  style="font-family: Arial, Helvetica, Verdana, Geneva, sans-serif; font-size: 20px; font-weight: bold; color: #000000;"><img src="../images/planet_step2.gif" alt="Step 2" align="absmiddle">&nbsp;<%= researcherText%></div><br>
+	<td valign="top" colspan="2"><div  style="font-family: Arial, Helvetica, Verdana, Geneva, sans-serif; font-size: 20px; font-weight: bold; color: #000000;"><%= researcherText%></div><br>
 	<p>To locate program partners in <%= stateStatic%> go to the <a href="list.jsp?r=<%= region%>&cctopic=<%= topicLet%>">Program Partners</a> page.</td>
 	<td valign="top" align="right">&nbsp;</td>
   </tr>

@@ -515,13 +515,19 @@ if (it2.hasNext()) {
         <a href="../partners.html">Sponsors</a></p></td>
   </tr>
   <tr>
-    <td colspan="3" id="breadcrumbs"><a href="index.html">Home</a> &gt; <a href="index.jsp">Program Partners in Cancer Control</a> &gt; <%= stateStatic %></td>
+    <td colspan="3">
+      <hr size="1" noshade>
+	</td>
+
   </tr>
+  <!--tr>
+    <td colspan="3" id="breadcrumbs"><a href="../index.html">Home</a> &gt; <a href="index.jsp">Program Partners in Cancer Control</a> &gt; <%= stateStatic %></td>
+  </tr-->
 </table>
 
 <table bgcolor="white" border="0" cellpadding="0" cellspacing="0" width="100%">
 <tr>
-	<td valign="top" align="left" colspan="3"><div style="font-family : Arial, Helvetica, Verdana, Geneva, sans-serif; font-size: 20px; font-weight: bold; color: #000000;"><img src="../images/planet_step2.gif" alt="Step 2" align="absmiddle">&nbsp;<%= partnerText%></div><br>
+	<td valign="top" align="left" colspan="3"><div style="font-family : Arial, Helvetica, Verdana, Geneva, sans-serif; font-size: 20px; font-weight: bold; color: #000000;"><%= partnerText%></div><br>
 		<%= headerText %>
 		<p>To locate research partners in <%= stateStatic%> go to the  <a href="rlist.jsp?r=<%= region%>&cctopic=<%= topicNum%>">Research Partners</a> page.</p>
 	</td>

@@ -143,21 +143,28 @@
     <td><a href="../index.html"><img src="../images/planet_banner_wider.gif" alt="Cancer Control P.L.A.N.E.T. - Links to comprehensive cancer control resources for public health professionals" width="500" height="82" border="0"></a></td>
     <td><p><a href="../index.html">Home</a><br />
         <a href="../contact.html">Contact Us</a><br />
-        <a href="/cgi-bin/awredir.pl?url=http://ccplanetraining.cancer.gov" onClick="javascript:popWindow('/cgi-bin/awredir.pl?url=http://ccplanetraining.cancer.gov', 'name','925','600','yes'); return false;"></a><br />
+        <a href="/cgi-bin/awredir.pl?url=http://ccplanetraining.cancer.gov" onClick="javascript:popWindow('/cgi-bin/awredir.pl?url=http://ccplanetraining.cancer.gov', 'name','925','600','yes'); return false;">On-line Training</a><br />
 		<a href="../about.html">About This Site</a><br />
         <a href="../factsheet.pdf">Fact Sheet (PDF)</a><br />
 
         <a href="../partners.html">Sponsors</a></p></td>
   </tr>
-  <tr>
-    <td colspan="3" id="breadcrumbs"><a href="index.html">Home</a> &gt; Research Partners in Cancer Control</td>
-  </tr>
+	<tr>
+		<td colspan="3">
+			<hr size="1" noshade>
+		</td>
+
+	</tr>
+  
+  <!--tr>
+    <td colspan="3" id="breadcrumbs"><a href="../index.html">Home</a> &gt; Research Partners in Cancer Control</td>
+  </tr-->
 </table>
 
 <table summary="Links to potential partner list" bgcolor="white" border="0" cellpadding="5" cellspacing="0">
 <tr>
 	<td align="left" colspan="3">
-	<h3><img src="../images/planet_step2.gif" alt="Step 2" align="absmiddle">&nbsp;Research Partners in Cancer Control</h3>
+	<h3>Research Partners in Cancer Control</h3>
 
     <p>To locate program partners in your state or region go to the <a href="index.jsp?cctopic=0">Program Partners</a> page.</p>
 	</td>
