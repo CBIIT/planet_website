@@ -2,10 +2,13 @@
 function validateForm(fieldNameToValidate)
 {
 	if (document.form1[fieldNameToValidate].value.length > 0) {
+	
    		var sqlInjectionPattern = new RegExp("\\w*((\\%27)|(\\'))((\\%6F)|o|(\\%4F))((\\%72)|r|(\\%52))");
    		var crossSiteScriptingPattern = new RegExp("((\\%3C)|<)(.|\\n)*?((\\%3E)|>)");
    		var phonePattern = new RegExp("\\([0-9]{3}\\)\\s?[0-9]{3}(-|\\s)?[0-9]{4}(\\s(x\\d+)?){0,1}$|^[0-9]{3}-?[0-9]{3}-?[0-9]{4}(\\s(x\\d+)?){0,1}$");
-   		var emailPattern = new RegExp("[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$");
+   		// var emailPattern = new RegExp("[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$");
+   		var emailPattern = new RegExp("[\\w-\\.]+@(?!acme-hack)([\\w-]+\\.)+[\\w-]{2,4}$");
+
    		if (document.form1[fieldNameToValidate].value.match(sqlInjectionPattern)) {
 			window.alert("Please remove any special characters such as '<' and '>'.");
 			return false;
