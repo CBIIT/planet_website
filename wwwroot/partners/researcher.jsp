@@ -173,7 +173,7 @@
 	<td valign='top' colspan="2"><%= stateList.toString()%><br /></td>
 </tr>
 <tr>
-    <td colspan="3">The list of research partners was compiled based on those individuals who had received a grant during the fiscal year period from 1998-2006 and who have permitted their contact information to be listed as a resource for comprehensive cancer control planning and implementation within their state, tribe, or territory.</td>
+    <td colspan="3">The list of research partners was compiled based on those individuals who had received a grant during the fiscal year period from 1998-2007 and who have permitted their contact information to be listed as a resource for comprehensive cancer control planning and implementation within their state, tribe, or territory.</td>
 </tr>
 </table>
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
