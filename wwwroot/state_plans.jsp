@@ -196,14 +196,14 @@ StringBuffer pcScript = null;
 <table summary="Links to state cancer control plans" bgcolor="white" border="0" cellpadding="5" cellspacing="0" width="100%">
 <tr>
 <td align="left" colspan="2">
-<p><div style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif; font-size : 16px; font-weight: bold;color : #000000;"><img src="images/planet_step5.gif" alt="Step 5" align="absmiddle">&nbsp;<%= pageTitle%></div></p>
-<table align="right" width="350" border="0" cellpadding="0" cellspacing="0">
+<p><div style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif; font-size : 16px; font-weight: bold;color : #000000;"><table align="right" width="400" border="0" cellpadding="0" cellspacing="0">
 <tr>
 <td><a href="http://apps.nccd.cdc.gov/CCCSearch/Default/Default.aspx" title-"External link"><img src="images/binocs.jpg" alt="" border="0" align="absmiddle"><strong>Search Cancer Control Plans</strong><img src="images/Icon_External_Link.png" alt="External link" border="0"></a><br />
   <span class="small">  (<strong>Note:</strong> the link above will take you to CDC's search tool.  <strong><br>
   New users</strong>, please click, "Help for new users" on CDC's Web site to learn how to use the search tool.)</span></td>
 </tr>
-</table>
+</table><img src="images/planet_step5.gif" alt="Step 5" align="absmiddle">&nbsp;<%= pageTitle%></div></p>
+
 <p><div style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif; font-size : 14px; font-weight: bold;color : #000000;">(No link indicates that a cancer control plan is currently not available)</div></p>
 </td>
 </tr>
