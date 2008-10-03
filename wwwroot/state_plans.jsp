@@ -81,6 +81,13 @@ StringBuffer pcScript = null;
 		
 					stateList.append("<br />");
 		
+					//Idaho_Childhood_Cancer_Control_Plan.pdf
+					if (rs.getName().equals("Idaho"))
+					{
+						stateList.append("&nbsp;&nbsp;&nbsp;");
+						stateList.append("<a href='state_plans/Idaho_Childhood_Cancer_Control_Plan.pdf' title='Idaho (childhood)' target='_blank'>Idaho (childhood)</a>");
+					}
+					
 					count++;
 		       }
 			}
