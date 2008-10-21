@@ -85,7 +85,7 @@ StringBuffer pcScript = null;
 					if (rs.getName().equals("Idaho"))
 					{
 						stateList.append("&nbsp;&nbsp;&nbsp;");
-						stateList.append("<a href='state_plans/Idaho_Childhood_Cancer_Control_Plan.pdf' title='Idaho (childhood)' target='_blank'>Idaho (childhood)</a>");
+						stateList.append("<a href='state_plans/Idaho_Childhood_Cancer_Control_Plan.pdf' title='Childhood cancer' target='_blank'>Childhood cancer</a>");
 						stateList.append("<br />");
 					}
 					
