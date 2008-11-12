@@ -470,14 +470,14 @@ if (it2.hasNext()) {
 		if (stateStatic.compareTo("the US") == 0) {
 			stateStatic = "All States";
 
-			headerText = "<p>If you need assistance in identifying cancer survivorship programs and resources, please contact any of the partners listed for your state.</p>";
+			//headerText = "<p>If you need assistance in identifying cancer survivorship programs and resources, please contact any of the partners listed for your state.</p>";
 
 			if (topicDesc.compareTo("") != 0)
 				partnerText=topicDesc+" and Other Program Partners - <font style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size : 20px;	font-weight: bold; color : #AA0000;'>All States</font>";	
 			else
 				partnerText="Program Partners - <font style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size: 20px; font-weight: bold; color : #AA0000;'>All States</font>";
 		} else {
-			headerText = "<p>If you need assistance in identifying cancer survivorship programs and resources, please contact any of the partners listed on this page.</p>";
+			//headerText = "<p>If you need assistance in identifying cancer survivorship programs and resources, please contact any of the partners listed on this page.</p>";
 			
 			if (topicDesc.compareTo("") != 0) {
 				partnerText=topicDesc+" and Other Program Partners - <font style='font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;	font-size: 20px; font-weight: bold; color : #AA0000;'>"+stateStatic+"</font>";
@@ -528,8 +528,8 @@ if (it2.hasNext()) {
 <table bgcolor="white" border="0" cellpadding="0" cellspacing="0" width="100%">
 <tr>
 	<td valign="top" align="left" colspan="3"><div style="font-family : Arial, Helvetica, Verdana, Geneva, sans-serif; font-size: 20px; font-weight: bold; color: #000000;"><%= partnerText%></div><br>
-		<%= headerText %>
-		<p>To locate research partners in <%= stateStatic%> go to the  <a href="rlist.jsp?r=<%= region%>&cctopic=<%= topicNum%>">Research Partners</a> page.</p>
+		<!--<= headerText %>-->
+		<!--<p>To locate research partners in <= stateStatic%> go to the  <a href="rlist.jsp?r=<= region%>&cctopic=<= topicNum%>">Research Partners</a> page.</p>-->
 	</td>
 	<td valign="top" style="font-family : Arial, Helvetica, Verdana, Geneva, sans-serif; font-size: 14px; font-weight: bold; color: #000000;" align="right" colspan="2">&nbsp;</td>
 </tr>
