@@ -121,6 +121,10 @@ a {
 	font-size: 12px;
 }
 
+.tight {
+ margin-top: -1em;
+}
+
 .white {
 	color: #FFF;
 	font-weight : bold;
