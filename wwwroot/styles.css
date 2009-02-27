@@ -84,6 +84,11 @@ a {
 	font-size : 13px;
 }
 
+.link-disclaimer {
+	font-family : Arial, Helvetica, Verdana, Geneva, sans-serif;
+	font-size : 11px;
+}
+
 .obj {
 	font-weight : bold;
 	font-size : smaller;
