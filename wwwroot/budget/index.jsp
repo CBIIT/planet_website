@@ -94,6 +94,7 @@ To view, click on map or state name below.
 	      theChart.returnDescriptiveLink = false;
         theChart.extraCTSCommands = "@_NOJSPOPUP";
             theChart.imageType = "FLASH";		// HF (6/22/07) CR #39949 - per Eric Luke, change outputType to imageType (former causes unresolved exception).
+            theChart.addObjectParamTag("allowScriptAccess", "sameDomain");
 	      htmlString += theChart.getEmbeddingHTML();
         
     }
