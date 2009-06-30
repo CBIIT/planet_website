@@ -196,7 +196,8 @@ StringBuffer pcScript = null;
 	<a href="contact.html">Contact Us</a><br>	<a href="/cgi-bin/awredir.pl?url=http://ccplanetraining.cancer.gov" onClick="javascript:popWindow('/cgi-bin/awredir.pl?url=http://ccplanetraining.cancer.gov', 'name','925','600','yes'); return false;">On-line Training</a><br />
 	<a href="about.html">About This Site</a><br>
     <a href="factsheet.pdf">Fact Sheet (PDF)</a><br>
-    <a href="partners.html">P.L.A.N.E.T. Sponsors</a></p></td>
+    <a href="partners.html">P.L.A.N.E.T. Sponsors</a><br />
+    <a href="faq.html">FAQ</a></p></td>
   </tr>
   <tr>
     <td colspan="3" id="breadcrumbs"><a href="index.html">Home</a> &gt; State, Tribe and Territory Plans</td>
