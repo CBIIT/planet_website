@@ -318,9 +318,9 @@ if (partners!=null) { //We have partners
 
                 // Don't display "Web site:" field header for tobacco, breast cancer, and cervical cancer contacts.
                 if (partnerString.equals("CDC") && (topic.equals("T") || topic.equals("B") || topic.equals("V"))) {
-                   outString.append("<a href=\"/cgi-bin/awredir.pl?url="+urlStr+"\" target=\"_blank\" class='a1'>"+urlStr+"</a>"+"<br>");
+                   outString.append("<a href=\""+urlStr+"\" target=\"_blank\" class='a1'>"+urlStr+"</a>"+"<br>");
                 } else {
-                    outString.append("Web site:  <a href=\"/cgi-bin/awredir.pl?url="+urlStr+"\" target=\"_blank\" class='a1'>"+urlStr+"</a>"+"<br>");
+                    outString.append("Web site:  <a href=\""+urlStr+"\" target=\"_blank\" class='a1'>"+urlStr+"</a>"+"<br>");
 				}//end if (partnerString.equals("CDC") && (topic.equals("T") || topic.equals("B") || topic.equals("V")))
 			}//end if (rs.getOrgurl() != null && rs.getOrgurl().compareTo("") != 0)
 
@@ -335,9 +335,9 @@ if (partners!=null) { //We have partners
 
                 // Don't display Web site: field header for tobacco, breast cancer, and cervical cancer contacts.
                 if (partnerString.equals("CDC") && (topic.equals("T") || topic.equals("B") || topic.equals("V"))) {
-                   outString.append("<a href=\"/cgi-bin/awredir.pl?url="+urlStr+"\" target=\"_blank\" class='a1'>"+urlStr+"</a>"+"<br>");
+                   outString.append("<a href=\""+urlStr+"\" target=\"_blank\" class='a1'>"+urlStr+"</a>"+"<br>");
                 } else {
-                    outString.append("Web site:  <a href=\"/cgi-bin/awredir.pl?url="+urlStr+"\" target=\"_blank\" class='a1'>"+urlStr+"</a>"+"<br>");
+                    outString.append("Web site:  <a href=\""+urlStr+"\" target=\"_blank\" class='a1'>"+urlStr+"</a>"+"<br>");
 				}//end if (partnerString.equals("CDC") && (topic.equals("T") || topic.equals("B") || topic.equals("V")))
             }//end if (rs.getOrgurl2() != null && rs.getOrgurl2().compareTo("") != 0)
 
