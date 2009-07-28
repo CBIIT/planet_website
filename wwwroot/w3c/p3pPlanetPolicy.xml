@@ -30,8 +30,8 @@ Executive Plaza North</DATA>
 
     <!-- Disputes -->
     <DISPUTES-GROUP>
-		<DISPUTES resolution-type="service" service="http://cancercontrolplanet.cancer.gov/privacy.html" short-description="Dispute Contact: blakek@mail.nih.gov">
-			<LONG-DESCRIPTION>If you believe that our website has collected incorrect information or if you would like to dispute any information, please contact us at the following: Division of Cancer Control and Population Sciences National Cancer Institute 6130 Executive Boulevard Executive Plaza North Rockville, Maryland 20852 Phone: 301-594-6776 Fax: 301-594-6787 E-mail: blakek@mail.nih.gov</LONG-DESCRIPTION> 
+		<DISPUTES resolution-type="service" service="http://cancercontrolplanet.cancer.gov/privacy.html" short-description="Dispute Contact: sanchezgarciama@mail.nih.gov">
+			<LONG-DESCRIPTION>If you believe that our website has collected incorrect information or if you would like to dispute any information, please contact us at the following: Division of Cancer Control and Population Sciences National Cancer Institute 6130 Executive Boulevard Executive Plaza North Rockville, Maryland 20852 Phone: 301-594-1237 Fax: 301-594-6787 E-mail: sanchezgarciama@mail.nih.gov</LONG-DESCRIPTION> 
 			<REMEDIES><correct /></REMEDIES>
 		</DISPUTES>
     </DISPUTES-GROUP>
