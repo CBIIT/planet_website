@@ -144,8 +144,9 @@ if (param != null)
 
             if (researcherId != rs.getResearcherId())
             {
-				topicID = rs.getTopicId();
-				topicDesc = QBean.getTopicDescription(topic);
+            	// HF (9/18/09) CR #42672 - this code is unnecessary.
+				// topicID = rs.getTopicId();
+				// topicDesc = QBean.getTopicDescription(topic);
         
 		        if (count > 1)
                    outString.append("</table></td>");
