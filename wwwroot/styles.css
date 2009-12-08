@@ -159,3 +159,13 @@ a {
 #breadcrumbs a:hover {
 	color: #004da2;
 }
+
+table.border {
+	border-top: 1px solid #333;
+	border-right: 1px solid #333;
+}
+
+table.border td {
+	border-bottom: 1px solid #333;
+	border-left: 1px solid #333;
+}
