@@ -179,3 +179,8 @@ table.border td {
 	color: #9a171d;
 	text-decoration: none;
 }
+
+.seminar-list a:HOVER {
+	color: #0033cc;
+	text-decoration: none;
+}
