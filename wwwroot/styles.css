@@ -172,4 +172,10 @@ table.border td {
 
 .seminar-list {
 	border-bottom: 1px solid #9a171d;
+	margin-bottom: 0px;
+}
+
+.seminar-list a {
+	color: #9a171d;
+	text-decoration: none;
 }
