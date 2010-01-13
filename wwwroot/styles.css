@@ -169,3 +169,7 @@ table.border td {
 	border-bottom: 1px solid #333;
 	border-left: 1px solid #333;
 }
+
+.seminar-list {
+	border-bottom: 1px solid #ff0000;
+}
