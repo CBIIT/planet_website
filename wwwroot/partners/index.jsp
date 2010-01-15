@@ -172,7 +172,7 @@
 	<td valign='top' colspan="2"><%= stateList.toString()%><br /></td>
 </tr>
  <tr>
-	<td valign='top' colspan="2"><p>The list of program partners is compiled from organizaitons involved as National Partners for Comprehensive Cancer Control (American Cancer Society, Centers for Disease Control and Prevention, Commission on Cancer and National Cancer Institute).  State/Regional field staff from these organizations have been trained on how to use the Cancer Control P.L.A.N.E.T. web portal and are resources for comprehensive cancer control planning and implementation.  Contacts are updated annually.</p></td>
+	<td valign='top' colspan="2"><p>The list of program partners is compiled from organizaitons involved as National Partners for Comprehensive Cancer Control (American Cancer Society, Centers for Disease Control and Prevention, and Commission on Cancer).  State/Regional field staff from these organizations have been trained on how to use the Cancer Control P.L.A.N.E.T. web portal and are resources for comprehensive cancer control planning and implementation.  Contacts are updated annually.</p></td>
 </tr>
 </table>
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
