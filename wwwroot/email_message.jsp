@@ -28,7 +28,7 @@ if (request.getServerName().equals("localhost")){
 		articleURL  = "http://localhost:8080/planet/" + articleURL ;
 	} else if (request.getServerName().equals("parsley.cit.nih.gov")){ 
 	      if (request.getContextPath().equals("/planet")) {
-		        articleURL  = "http://parsley.cit.nih.gov/planet/" + articleURL ;
+		        articleURL  = "http://parsley.cit.nih.gov:8080/planet/" + articleURL ;
 		   }
 	
 		//articleURL = reconstructedURL.toString();

@@ -24,10 +24,10 @@
 	
 	
 %>
-   <!-- session articleURL:  <= session.getAttribute("articleURL")%><br />
-	Querystring: <= file%><br />
-	title: <= title %><br />
-	session articleURL:  <= session.getAttribute("articleURL")%><br />-->
+   <%-- session articleURL:  <%= session.getAttribute("articleURL")%><br />
+	Querystring: <%= file%><br />
+	title: <%= title %><br />
+	session articleURL:  <= session.getAttribute("articleURL")%><br />--%>
 	<!--reconstructed URL: <= reconstructedURL.toString()%><br />-->
  <!--  Server Name: <%= request.getServerName()%><br />
   	Server Port: <%= request.getServerPort()%> <br />  

@@ -15,8 +15,9 @@
 	//strurl = "http://localhost:8080/hints_phase_2/landing.jsp?t=" + request.getParameter("t");  
 	//strurl ="http://qshi.s156.eatj.com/Hints_phase_2/landing.jsp?t=" + request.getParameter("t");
 	//strurl = "http://shiq.s156.eatj.com/hints_phase_2/";
-	strurl ="http://localhost:8080/planet/";
+	//strurl ="http://localhost:8080/planet/";
 	//strurl ="parsley.cit.nih.gov:8080/planet/"; //staging - parlsey
+	strurl ="parsley.cit.nih.gov/planet/";
 	//strurl ="ccplanet.cancer.gov/"; //Live link
 	   if  (request.getServletPath().equals("/briefs.jsp")) {
 			title="HINTS: HINTS Resources and Materials";
@@ -55,10 +56,10 @@
 	myspace_url= "javascript:MM_openBrWindow('http://www.myspace.com/Modules/PostTo/Pages/?t=" + title  +  "&c=" + strurl  + "&u=&l= " + "','triggers','location=yes, scrollbars=yes,resizable=yes,width=600,height=545')";
  %>
  
-<div class="box"><img src="images/icon_sharing.gif" alt="PDF" width="18" height="18" border="0" align="texttop" />&nbsp;<a href="#" title="Click to expand" onclick="toggleVis('sharing'); return false;">Share this page</a> referrer page: <%= request.getServletPath()%>
+<div class="box"><img src="images/icon_sharing.gif" alt="PDF" width="18" height="18" border="0" align="texttop" />&nbsp;<a href="#" title="Click to expand" onclick="toggleVis('sharing'); return false;">Share this page</a> <%--referrer page: <%= request.getServletPath()%>--%>
 
 <div id="sharing" class="toggleHidden">
-<p> <%--strurl: <%=  strurl%><br /><br /> --%><%--strurl: <%=  strurl%><br /> --%></p>
+<%--<p> strurl: <%=  strurl%><br /><br /> </p>--%>
         
 <table width="200" border="0" cellspacing="0" cellpadding="0" style="margin-left: 18px; font-size: .9em;">
   <tr>
