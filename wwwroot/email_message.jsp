@@ -1,6 +1,4 @@
 <%@ page language="java" contentType="text/html" %>
-<%@ page import="gov.nci.hints.*" %>
-<%@ page import="gov.nci.hints.util.*" %>
 <%@ page import = "java.util.*" session="true" %>
 <%@ page import="javax.mail.*" %>
 <%@ page import="javax.mail.internet.*" %>
@@ -36,7 +34,7 @@ if (request.getServerName().equals("localhost")){
 		articleURL  = "http://ccplanet.cancer.gov/" + articleURL ;
 	}
 %>
-<!-- articleURL: <%= articleURL  %><br />-->
+ articleURL: <%= articleURL  %><br />
  <!--reconstructedURL: <= reconstructedURL  %><br />
  Servlet Path: <%= request.getServletPath()%><br>
  Context Path: <%= request.getContextPath() %><br>
