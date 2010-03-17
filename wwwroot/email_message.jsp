@@ -3,6 +3,8 @@
 <%@ page import="javax.mail.*" %>
 <%@ page import="javax.mail.internet.*" %>
 <%@ page import="java.net.*"%>
+<%@ page import="gov.nci.planet.QueryBean" %>
+<%@ page import="gov.nci.planet.bean.*" %>
 <%@ page session="true" %>
  
 <%
@@ -26,7 +28,7 @@ if (request.getServerName().equals("localhost")){
 		articleURL  = "http://localhost:8080/planet/" + articleURL ;
 	} else if (request.getServerName().equals("parsley.cit.nih.gov")){ 
 	      if (request.getContextPath().equals("/planet")) {
-		        articleURL  = "http://parsley.cit.nih.gov:8080/planet/" + articleURL ;
+		        articleURL  = "http://parsley.cit.nih.gov/planet/" + articleURL ;
 		   }
 	
 		//articleURL = reconstructedURL.toString();
@@ -34,8 +36,8 @@ if (request.getServerName().equals("localhost")){
 		articleURL  = "http://ccplanet.cancer.gov/" + articleURL ;
 	}
 %>
- articleURL: <%= articleURL  %><br />
- <!--reconstructedURL: <= reconstructedURL  %><br />
+ <!--articleURL: <%= articleURL  %><br />
+ reconstructedURL: <%= reconstructedURL  %><br />
  Servlet Path: <%= request.getServletPath()%><br>
  Context Path: <%= request.getContextPath() %><br>
  Server Port: <%=request.getServerPort() %><br>
@@ -82,7 +84,7 @@ if (request.getServerName().equals("localhost")){
 	message.setSubject(subject);
 	message.setContent(messageText, "text/html"); 
 
-  	Transport.send(message);
+  	//Transport.send(message);
 %>
 		
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
