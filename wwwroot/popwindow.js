@@ -29,3 +29,10 @@ win = window.open(mypage, myname, winprops)
 }
 
 //* <a href="http://www.cdc.gov/cancer/ncccp/guidelines/index.htm" onclick="javascript:popWindow('http://www.cdc.gov/cancer/ncccp/guidelines/index.htm'); return false;"> *//
+
+//for sharing box, added 03/17/2010
+
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+		window.open(theURL,winName,features);
+}  
+
