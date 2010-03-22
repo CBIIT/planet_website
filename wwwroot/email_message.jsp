@@ -6,6 +6,12 @@
 <%@ page import="gov.nci.planet.QueryBean" %>
 <%@ page import="gov.nci.planet.bean.*" %>
 <%@ page session="true" %>
+<%@ page import="javax.mail.Address" %>
+<%@ page import="javax.mail.Message" %>
+<%@ page import="javax.mail.Session" %>
+<%@ page import="javax.mail.Transport" %>
+<%@ page import="javax.mail.internet.InternetAddress" %>
+<%@ page import="javax.mail.internet.MimeMessage" %>
  
 <%
 	String myemail = request.getParameter("myemail");
