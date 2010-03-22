@@ -36,12 +36,12 @@ if (request.getServerName().equals("localhost")){
 		articleURL  = "http://ccplanet.cancer.gov/" + articleURL ;
 	}
 %>
- <!--articleURL: <%= articleURL  %><br />
- reconstructedURL: <%= reconstructedURL  %><br />
- Servlet Path: <%= request.getServletPath()%><br>
- Context Path: <%= request.getContextPath() %><br>
- Server Port: <%=request.getServerPort() %><br>
- session articleURL <%=session.getAttribute("articleURL")%><br>-->
+ <!--articleURL: <= articleURL  %><br />
+ reconstructedURL: <= reconstructedURL  %><br />
+ Servlet Path: <= request.getServletPath()%><br>
+ Context Path: %= request.getContextPath() %><br>
+ Server Port: <=request.getServerPort() %><br>
+ session articleURL <=session.getAttribute("articleURL")%><br>-->
 <%
 	
 	if ( (request.getParameter("personalMessage") )!= null)   {
@@ -84,7 +84,7 @@ if (request.getServerName().equals("localhost")){
 	message.setSubject(subject);
 	message.setContent(messageText, "text/html"); 
 
-  	//Transport.send(message);
+  	Transport.send(message);
 %>
 		
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">

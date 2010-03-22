@@ -56,7 +56,8 @@
 	myspace_url= "javascript:MM_openBrWindow('http://www.myspace.com/Modules/PostTo/Pages/?t=" + title  +  "&c=" + strurl  + "&u=&l= " + "','triggers','location=yes, scrollbars=yes,resizable=yes,width=600,height=545')";
  %>
  
-<div class="box"><img src="images/icon_sharing.gif" alt="PDF" width="18" height="18" border="0" align="texttop" />&nbsp;<a href="#" title="Click to expand" onclick="toggleVis('sharing'); return false;">Share this page</a> <%--referrer page: <%= request.getServletPath()%>--%>
+<div class="box">
+	<img src="images/icon_sharing.gif" alt="PDF" width="18" height="18" border="0" align="texttop" />&nbsp;<a href="#" title="Click to expand" onclick="toggleVis('sharing'); return false;">Share this page</a> <%--referrer page: <%= request.getServletPath()%>--%>
 
 <div id="sharing" class="toggleHidden">
 <%--<p> strurl: <%=  strurl%><br /><br /> </p>--%>
