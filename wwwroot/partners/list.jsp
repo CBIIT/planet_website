@@ -501,6 +501,7 @@ if (it2.hasNext()) {
 <html>
 <head>
 <title><%= caption%></title>
+<script language="JavaScript" src="../popwindow.js" type="text/javascript"></script>
 <link href="../styles.css" rel="stylesheet" type="text/css">
 </head>
 <body topmargin="0" leftmargin="0" bgcolor="White">
