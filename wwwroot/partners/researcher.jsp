@@ -167,7 +167,7 @@
 	<td align="left" colspan="3">
 	<h3>Research Partners in Cancer Control</h3>
 
-    <p>To locate program partners in your state or region go to the <a href="index.jsp?cctopic=0">Program Partners</a> page.</p>
+    <p>To locate program partners in your state or region go to the <a href="index.jsp?cctopic=C">Program Partners</a> page.</p>
 	</td>
 </tr>
 <tr>
