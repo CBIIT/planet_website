@@ -531,7 +531,7 @@ if (it2.hasNext()) {
 <tr>
 	<td valign="top" align="left" colspan="3"><div style="font-family : Arial, Helvetica, Verdana, Geneva, sans-serif; font-size: 20px; font-weight: bold; color: #000000;"><%= partnerText%></div><br>
 		<!--<= headerText %>-->
-		<!--<p>To locate research partners in <= stateStatic%> go to the  <a href="rlist.jsp?r=<= region%>&cctopic=<= topicNum%>">Research Partners</a> page.</p>-->
+		<p>To locate research partners in <%= stateStatic%> go to the  <a href="rlist.jsp?r=<%= region%>&cctopic=<%= topicNum%>">Research Partners</a> page.</p>
 	</td>
 	<td valign="top" style="font-family : Arial, Helvetica, Verdana, Geneva, sans-serif; font-size: 14px; font-weight: bold; color: #000000;" align="right" colspan="2">&nbsp;</td>
 </tr>
