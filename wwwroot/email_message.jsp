@@ -1,53 +1,36 @@
 <%@ page language="java" contentType="text/html" %>
-<%@ page import = "java.util.*" session="true" %>
+<%@ page import="gov.nci.planet.*" %>
+<%@ page import="gov.nci.util.*" %>
+<%@ page import="java.util.*" session="true" %>
 <%@ page import="javax.mail.*" %>
 <%@ page import="javax.mail.internet.*" %>
 <%@ page import="java.net.*"%>
-<%@ page import="gov.nci.planet.QueryBean" %>
-<%@ page import="gov.nci.planet.bean.*" %>
 <%@ page session="true" %>
-<%@ page import="javax.mail.Address" %>
-<%@ page import="javax.mail.Message" %>
-<%@ page import="javax.mail.Session" %>
-<%@ page import="javax.mail.Transport" %>
-<%@ page import="javax.mail.internet.InternetAddress" %>
-<%@ page import="javax.mail.internet.MimeMessage" %>
  
 <%
 	String myemail = request.getParameter("myemail");
 	String friendemail = request.getParameter("friendemail");
 	String personalMessage = "";
 	String articleURL  = request.getParameter("articleURL");
-	String articleTitle = request.getParameter("title");
+	String articleTitle = "" ; //request.getParameter("title");
 	
 	if (request.getParameter("articleURL") != null){
 		articleURL  = request.getParameter("articleURL");
-%>	<!--not null: <%= request.getParameter("articleURL")%><br />-->
-<%	} else { %>
-      <!-- null: <%= request.getParameter("articleURL")%><br />-->
-
-<%		articleURL = (String)session.getAttribute("articleURL") ;
+	} else { 
+		articleURL = (String)session.getAttribute("articleURL") ;
 	}
-	//articleURL = (String)session.getAttribute("articleURL") ;
-			
-if (request.getServerName().equals("localhost")){ 
+
+	if (request.getServerName().equals("localhost")){ 
 		articleURL  = "http://localhost:8080/planet/" + articleURL ;
 	} else if (request.getServerName().equals("parsley.cit.nih.gov")){ 
 	      if (request.getContextPath().equals("/planet")) {
 		        articleURL  = "http://parsley.cit.nih.gov:8080/planet/" + articleURL ;
 		   }
-	
-		//articleURL = reconstructedURL.toString();
 	}else if (request.getServerName().equals("ccplanet.cancer.gov")){ 
 		articleURL  = "http://ccplanet.cancer.gov/" + articleURL ;
 	}
 %>
- <!--articleURL: <= articleURL  %><br />
- reconstructedURL: <= reconstructedURL  %><br />
- Servlet Path: <= request.getServletPath()%><br>
- Context Path: %= request.getContextPath() %><br>
- Server Port: <=request.getServerPort() %><br>
- session articleURL <=session.getAttribute("articleURL")%><br>-->
+ 
 <%
 	
 	if ( (request.getParameter("personalMessage") )!= null)   {
