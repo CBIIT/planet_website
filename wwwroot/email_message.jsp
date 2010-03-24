@@ -12,7 +12,7 @@
 	String friendemail = request.getParameter("friendemail");
 	String personalMessage = "";
 	String articleURL  = request.getParameter("articleURL");
-	String articleTitle = "" ; //request.getParameter("title");
+	String articleTitle = request.getParameter("title");
 	
 	if (request.getParameter("articleURL") != null){
 		articleURL  = request.getParameter("articleURL");
@@ -66,10 +66,6 @@
 
   	String toAddresses = request.getParameter("friendemail");
 	message.addRecipients(Message.RecipientType.TO, toAddresses);
-	//String ccAddresses =  myemail; 
-	//message.setRecipients(Message.RecipientType.CC, ccAddresses);
-	//String bccAddresses = "qshi@mmgct.com"; // request.getParameter("bcc");
-	//message.setRecipients(Message.RecipientType.BCC, bccAddresses);
 	message.setSubject(subject);
 	message.setContent(messageText, "text/html"); 
 
@@ -94,7 +90,6 @@
 </head>
 
 <body>
-      <p>&nbsp;</p>
       <p align="center"><h3>Thank you for sending the e-mail!</h3></p>
        
       <p align="center"><A onclick=window.close() href="#">Close Window</A></p>
