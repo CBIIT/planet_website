@@ -431,7 +431,7 @@ if (it2.hasNext()) {
 
 <table width="100%" border="0" cellpadding="5" cellspacing="0">
   <tr>
-	<td colspan="3">The list of research partners was compiled based on those individuals who had received a grant during the fiscal year period from 1998-2007 and who have permitted their contact information to be listed as a resource for comprehensive cancer control planning and implementation within their state.</td>
+	<td colspan="3">The list of research partners was compiled based on those individuals who had received a grant during the fiscal year period from 1998-2009 and who have permitted their contact information to be listed as a resource for comprehensive cancer control planning and implementation within their state.</td>
   </tr>
 </table>
 
