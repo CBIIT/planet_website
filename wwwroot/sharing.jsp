@@ -17,8 +17,8 @@
 	//strurl = "http://shiq.s156.eatj.com/hints_phase_2/";
 	//strurl ="http://localhost:8080/planet/";
 	//strurl ="parsley.cit.nih.gov:8080/planet/"; //staging - parlsey
-	//strurl ="parsley.cit.nih.gov/planet/";
-	strurl ="ccplanet.cancer.gov/"; //Live link
+	strurl ="http://parsley.cit.nih.gov/planet/";
+	//strurl ="http://ccplanet.cancer.gov/"; //Live link
 	   if  (request.getServletPath().equals("/briefs.jsp")) {
 			title="HINTS: HINTS Resources and Materials";
 			pageTitle  = title;
