@@ -64,6 +64,15 @@ function validateInput()
 				 document.form1.friendemail.focus();
 				return false;
 			}
+			
+			var semiPos = document.form1.friendemail.value.indexOf(";");
+	
+			if (semiPos != -1) {
+				window.alert("Please use commas to separate multiple addresses.");
+				document.form1.myemail.focus();
+				return false;
+			}
+			
 	} else {
 		window.alert("Please enter recipient's e-mail address.");
 		document.form1.friendemail.focus();
