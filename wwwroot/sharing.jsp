@@ -65,7 +65,7 @@
   <tr>
     <td width="18" style="padding: 1px;"><img src="images/sharing-icon-facebook.gif" alt="" width="18" height="18" /></td>
     <td width="82" style="padding: 1px;"><a href="<%= facebook_url %>">Facebook</a></td>
-    <td width="18" style="padding: 1px;">&nbsp;</td>
+    <td width="18" style="padding: 1px;"><img src="images/sharing-icon-twitter.gif" width="18" height="18" /></td>
     <td width="82" style="padding: 1px;"><a href="#">Twitter</a></td>
   </tr>
   <tr>

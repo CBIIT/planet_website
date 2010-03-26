@@ -188,7 +188,8 @@ table.border td {
 /* =Sharing Box
 ---------------------------------------- */
 
-.box { /* creates gray sidebar box */
+.box { /* creates sharing box */
+	float:right;
 	margin-top: 15px;
 	padding-top: 0px;
 	padding-left: 0px;
