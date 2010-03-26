@@ -211,7 +211,10 @@ table.border td {
 }
 
 #sharing {
-	border: 1px solid #666;
+	border: 1px solid #999;
 	font-size: 12px;
-	color: #333;
+}
+
+#sharing a{
+	font-size: 10px;
 }
