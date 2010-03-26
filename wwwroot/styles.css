@@ -191,8 +191,8 @@ table.border td {
 .box { /* creates sharing box */
 	position: absolute;
 	top: 125px;
-	right: 25px;
-	width:200px;
+	right: 10px;
+	width: 220px;
 	font-size: .9em;
 	color: #333;
 
