@@ -57,31 +57,29 @@
  %>
  
 <div class="box">
-	<img src="images/icon_sharing.gif" alt="PDF" width="18" height="18" border="0" align="texttop" />&nbsp;<a href="#" title="Click to expand" onclick="toggleVis('sharing'); return false;">Share this page</a> <%--referrer page: <%= request.getServletPath()%>--%>
+	<img src="images/openshareicon-16x16.jpg" alt="PDF" width="16" height="16" border="0" align="texttop" />&nbsp;<a href="#" title="Click to expand" onclick="toggleVis('sharing'); return false;">Share this page</a> <%--referrer page: <%= request.getServletPath()%>--%>
 
 <div id="sharing" class="toggleHidden">
 <%--<p> strurl: <%=  strurl%><br /><br /> </p>--%>
-        
 <table width="200" border="0" cellspacing="0" cellpadding="0" style="margin-left: 18px; font-size: .9em;">
   <tr>
     <td width="18" style="padding: 1px;"><img src="images/sharing-icon-facebook.gif" alt="" width="18" height="18" /></td>
     <td width="82" style="padding: 1px;"><a href="<%= facebook_url %>">Facebook</a></td>
-    <td width="18" style="padding: 1px;"><img src="images/sharing-icon-digg.gif" alt="" width="18" height="18" /></td>
-    <td width="82" style="padding: 1px;"><a href="<%= digg_url%>">Digg</a></td>
+    <td width="18" style="padding: 1px;">&nbsp;</td>
+    <td width="82" style="padding: 1px;"><a href="#">Twitter</a></td>
   </tr>
   <tr>
     <td style="padding: 1px;"><img src="images/sharing-icon-stumble.gif" alt="" width="18" height="18" /></td>
     <td style="padding: 1px;"><a href="<%= stumble_url %>">StumbleUpon</a></td>
-    <td style="padding: 1px;"><img src="images/sharing-icon-del.gif" alt="" width="18" height="18" /></td>
-    <td style="padding: 1px;"><a href="<%= delicious_url %>">Delicious</a>&nbsp;</td>
+    <td style="padding: 1px;"><img src="images/sharing-icon-digg.gif" alt="" width="18" height="18" /></td>
+    <td style="padding: 1px;"><a href="<%= digg_url%>">Digg</a></td>
   </tr>
   <tr>
     <td style="padding: 1px;"><img src="images/sharing-icon-linkedin.gif" alt="" width="18" height="18" /></td>
     <td style="padding: 1px;"><a href="<%= linkedin_url %>">LinkedIn</a>&nbsp;</td>
-    <td style="padding: 1px;"><img src="images/sharing-icon-myspace.gif" alt="" width="18" height="18" /></td>
-    <td style="padding: 1px;"><a href="<%= myspace_url%>">MySpace</a>&nbsp;</td>
+    <td style="padding: 1px;"><img src="images/sharing-icon-del.gif" alt="" width="18" height="18" /></td>
+    <td style="padding: 1px;"><a href="<%= delicious_url %>">Delicious</a></td>
   </tr>
-  
   <% 	 
 	 String file = request.getServletPath(); 
      file = file.replace("/", "");
@@ -92,14 +90,14 @@
 	session.setAttribute("contextpath", request.getContextPath());	*/				
 									
 %>
-		<!--session Servlet Path: <%= session.getAttribute("articleURL")%><br>
+  <!--session Servlet Path: <%= session.getAttribute("articleURL")%><br>
 		Servlet Path: <%= request.getServletPath()%><br>
         Context Path: <%= request.getContextPath() %><br>
   	    session Context Pat <%= session.getAttribute("contextpath")%>-->
-      <!--  pageTitle: <%= pageTitle%>-->
-   <tr>
+  <!--  pageTitle: <%= pageTitle%>-->
+  <tr>
     <td style="padding: 1px;" ><img src="images/icons_email.gif" alt="" width="18" height="18" /></td>
-    <td style="padding: 1px;" valign="top"><a href="javascript:popUpWindow('send_to_friend.jsp?articleURL=<%= file%>&title=<%= pageTitle%>', 50,50,810,525);">Send to a friend</a>&nbsp;</td>
+    <td style="padding: 1px;" valign="top" colspan="3"><a href="javascript:popUpWindow('send_to_friend.jsp?articleURL=<%= file%>&title=<%= pageTitle%>', 50,50,810,525);">E-mail to a friend</a>&nbsp;</td>
   </tr>
 </table>
 </div>

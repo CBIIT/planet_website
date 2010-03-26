@@ -36,7 +36,8 @@
       <h4>Follow 5 steps to develop a comprehensive cancer control plan or program</h4></td>
     <td width="126" valign="top"><img src="images/planet_or.gif" width="126" height="28"></td>
     <td width="50%" valign="top">
-      <h4>Find information by cancer control topic</h4><%@ include file="sharing.jsp" %></td>
+      <div id="sharing" style="float:right;"><%@ include file="sharing.jsp" %></div>
+      <h4>Find information by cancer control topic</h4></td>
   </tr>
   <tr valign="top">
     <td><a href="steps.html">Learn why these steps are important</a><br><br>
