@@ -96,8 +96,8 @@
   	    session Context Pat <%= session.getAttribute("contextpath")%>-->
   <!--  pageTitle: <%= pageTitle%>-->
   <tr>
-    <td style="padding: 1px;" ><img src="images/icons_email.gif" alt="" width="18" height="18" /></td>
-    <td style="padding: 1px;" valign="top" colspan="3"><a href="javascript:popUpWindow('send_to_friend.jsp?articleURL=<%= file%>&title=<%= pageTitle%>', 50,50,810,525);">E-mail to a friend</a>&nbsp;</td>
+    <td valign="bottom" style="padding: 1px;" ><img src="images/icons_email.gif" alt="" width="18" height="18" /></td>
+    <td style="padding: 1px;" valign="bottom" colspan="3"><a href="javascript:popUpWindow('send_to_friend.jsp?articleURL=<%= file%>&title=<%= pageTitle%>', 50,50,810,525);">E-mail to a friend</a>&nbsp;</td>
   </tr>
 </table>
 </div>
