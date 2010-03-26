@@ -190,8 +190,8 @@ table.border td {
 
 .box { /* creates sharing box */
 	position: absolute;
-	top: 110px;
-	right: 10px;
+	top: 125px;
+	right: 25px;
 	width:200px;
 	padding-top: 0px;
 	padding-left: 0px;
