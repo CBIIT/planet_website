@@ -52,7 +52,7 @@
 	} 
 	
 	messageText += articleTitle + " - " +  articleURL.replace("//", "&#47;&#47;") + "<br><br>";
-	messageText += "Learn more about Cancer Control P.L.A.N.E.T. at http:&#47;&#47;hints.cancer.gov.";
+	messageText += "Learn more about Cancer Control P.L.A.N.E.T. at http:&#47;&#47;ccplanet.cancer.gov.";
 	
 	Properties props = System.getProperties();
 	props.put("mail.host", host);
@@ -78,6 +78,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="description" content="" />
 <meta name="keywords" content="" />
+<link href="styles.css" rel="stylesheet" type="text/css">
 <title>Cancer Control P.L.A.N.E.T.: Share Cancer Control P.L.A.N.E.T. with a Friend</title>
 
 <link href="styles-baseline.css" rel="stylesheet" type="text/css" />

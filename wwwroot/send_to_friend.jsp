@@ -41,9 +41,7 @@
 <meta name="description" content="" />
 <meta name="keywords" content="" />
 <title>Cancer Control P.L.A.N.E.T.: Share Cancer Control P.L.A.N.E.T. with a Friend</title>
-
-<link href="styles-baseline.css" rel="stylesheet" type="text/css" />
-<link href="styles-2-column.css" rel="stylesheet" type="text/css" />
+<link href="styles.css" rel="stylesheet" type="text/css">
 <script src="scripts.js" language="javascript" type="text/javascript"></script>
 <script type="text/javascript" src="/fsrscripts/triggerParams.js"></script> 
 <script type="text/javascript" src="/fsrscripts/stdLauncher.js"></script>
