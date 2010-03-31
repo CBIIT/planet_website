@@ -10,6 +10,7 @@
 	String digg_url;
 	String delicious_url;
 	String stumble_url;
+	String twitter_url;
 	String pageTitle = "";//this is the title for the function "sending the page to a friend
 	
 	//strurl = "http://localhost:8080/hints_phase_2/landing.jsp?t=" + request.getParameter("t");  
@@ -54,6 +55,9 @@
 			
 	//Myspace
 	myspace_url= "javascript:MM_openBrWindow('http://www.myspace.com/Modules/PostTo/Pages/?t=" + title  +  "&c=" + strurl  + "&u=&l= " + "','triggers','location=yes, scrollbars=yes,resizable=yes,width=600,height=545')";
+	
+	
+	twitter_url= "javascript:MM_openBrWindow('http://twitter.com/home?status=" + title + " - " +  strurl+ "','triggers','location=yes, scrollbars=yes,resizable=yes,width=600,height=545')";
  %>
  
 <div class="box">
@@ -66,7 +70,7 @@
     <td width="18" style="padding: 1px;"><img src="images/sharing-icon-facebook.gif" alt="" width="18" height="18" /></td>
     <td width="82" style="padding: 1px;"><a href="<%= facebook_url %>">Facebook</a></td>
     <td width="18" style="padding: 1px;"><img src="images/sharing-icon-twitter.gif" width="18" height="18" /></td>
-    <td width="82" style="padding: 1px;"><a href="#">Twitter</a></td>
+    <td width="82" style="padding: 1px;"><a href="<%= twitter_url %>">Twitter</a></td>
   </tr>
   <tr>
     <td style="padding: 1px;"><img src="images/sharing-icon-stumble.gif" alt="" width="18" height="18" /></td>
