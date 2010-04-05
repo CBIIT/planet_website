@@ -21,6 +21,8 @@ loadjscssfile("toggle.css", "css") ////dynamically load and add this .css file
 
 function toggleVis( elemID )
 {    var elem = document.getElementById( elemID );
+
+ 				
 	if( elem.className == 'toggleHidden' )
         {        elem.className = 'toggleVisible';
         }
@@ -28,4 +30,16 @@ function toggleVis( elemID )
         {        elem.className = 'toggleHidden';
         }
 }
+
+
+	
+function ShowShareBox(id) { 
+  document.getElementById(id).style.display = 'block'; 
+} 
+	
+function HideShareBox(id) { 
+  document.getElementById(id).style.display = 'none'; 
+} 
+
+
 
