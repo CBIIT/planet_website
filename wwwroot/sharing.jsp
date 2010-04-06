@@ -13,7 +13,7 @@
 	String twitter_url;
 	String pageTitle = "";//this is the title for the function "sending the page to a friend
 	
-	//strurl = "http://localhost:8080/hints_phase_2/landing.jsp?t=" + request.getParameter("t");  
+	
 	//strurl ="http://qshi.s156.eatj.com/Hints_phase_2/landing.jsp?t=" + request.getParameter("t");
 	//strurl = "http://shiq.s156.eatj.com/hints_phase_2/";
 	//strurl ="http://localhost:8080/planet/";
@@ -60,12 +60,23 @@
 	twitter_url= "javascript:MM_openBrWindow('http://twitter.com/home?status=" + title + " - " +  strurl+ "','triggers','location=yes, scrollbars=yes,resizable=yes,width=600,height=545')";
  %>
  
-<div class="box">
-	<img src="images/openshareicon-16x16.jpg" alt="PDF" width="16" height="16" border="0" align="texttop" />&nbsp;<a href="#" title="Click to expand" onclick="toggleVis('sharing'); return false;">Share this page</a> <%--referrer page: <%= request.getServletPath()%>--%>
+<!--<div class="box">
+	<img src="images/openshareicon-16x16.jpg" alt="PDF" width="16" height="16" border="0" align="texttop" />&nbsp;<a href="#" title="Click to expand" onclick="toggleVis('sharing'); return false;">Share this page</a> -->
+ <div class="box" onmouseover="ShowShareBox('sharing'); return false;">
+     <img src="images/openshareicon-16x16.jpg"  alt="PDF" width="16" height="16" border="0" align="texttop" />&nbsp;Share this page<%--referrer page: <%= request.getServletPath()%>--%>
 
-<div id="sharing" class="toggleHidden">
+<!--<div id="sharing" class="toggleHidden">-->
+<div id="sharing" onMouseOut="HideShareBox('sharing'); return false;" style="display:none">
 <%--<p> strurl: <%=  strurl%><br /><br /> </p>--%>
 <table width="200" border="0" cellspacing="0" cellpadding="0" style="margin-left: 18px; font-size: .9em;">
+ <tr>
+    <td width="18" style="padding: 1px;">&nbsp; </td>
+    <td width="82" style="padding: 1px;"></td>
+    <td width="18" style="padding: 1px;"></td>
+    <td width="82" align="right" valign="top" style="padding: 1px;">
+       	<img src="images/x.gif" alt="Close the window" width="16" height="16" 
+        	border="1" align="texttop" onclick="HideShareBox('sharing'); return false;"/></td>
+  </tr>
   <tr>
     <td width="18" style="padding: 1px;"><img src="images/sharing-icon-facebook.gif" alt="" width="18" height="18" /></td>
     <td width="82" style="padding: 1px;"><a href="<%= facebook_url %>">Facebook</a></td>
