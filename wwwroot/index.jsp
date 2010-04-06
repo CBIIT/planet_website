@@ -34,7 +34,7 @@
   <tr valign="top">
     <td width="50%" valign="top">
       <h4>Follow 5 steps to develop a comprehensive cancer control plan or program</h4></td>
-    <td width="126" valign="top"><img src="images/planet_or.gif" width="126" height="28"></td>
+    <td width="126" valign="top"><img src="images/planet_or.gif" width="126" height="28" alt=""></td>
     <td width="50%" valign="top">
       <%@ include file="sharing.jsp" %>
       <h4>Find information by cancer control topic</h4></td>
