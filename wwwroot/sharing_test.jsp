@@ -62,7 +62,7 @@
         -->
         
   <div class="box" onmouseover="ShowShareBox('sharing'); return false;">
-     <img src="images/openshareicon-16x16.jpg"  alt="PDF" width="16" height="16" border="0" align="texttop" />&nbsp;Share this page
+     <img src="images/openshareicon-16x16.jpg" alt="Share this page" width="16" height="16" border="0" align="texttop" />&nbsp;Share this page
         
   
 <!--    <div id="sharing" class="toggleHidden">

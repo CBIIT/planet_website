@@ -60,12 +60,10 @@
 	twitter_url= "javascript:MM_openBrWindow('http://twitter.com/home?status=" + title + " - " +  strurl+ "','triggers','location=yes, scrollbars=yes,resizable=yes,width=600,height=545')";
  %>
  
-<!--<div class="box">
-	<img src="images/openshareicon-16x16.jpg" alt="PDF" width="16" height="16" border="0" align="texttop" />&nbsp;<a href="#" title="Click to expand" onclick="toggleVis('sharing'); return false;">Share this page</a> -->
+
  <div class="box" onmouseover="ShowShareBox('sharing'); return false;">
      <img src="images/openshareicon-16x16.jpg"  alt="PDF" width="16" height="16" border="0" align="texttop" />&nbsp;Share this page<%--referrer page: <%= request.getServletPath()%>--%>
 
-<!--<div id="sharing" class="toggleHidden">-->
 <div id="sharing" onMouseOut="HideShareBox('sharing'); return false;" style="display:none">
 <%--<p> strurl: <%=  strurl%><br /><br /> </p>--%>
 <table width="200" border="0" cellspacing="0" cellpadding="0" style="margin-left: 18px; font-size: .9em;">
