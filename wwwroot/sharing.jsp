@@ -62,7 +62,7 @@
  
 
  <div class="box" onmouseover="ShowShareBox('sharing'); return false;">
-     <img src="images/openshareicon-16x16.jpg"  alt="PDF" width="16" height="16" border="0" align="texttop" />&nbsp;Share this page<%--referrer page: <%= request.getServletPath()%>--%>
+     <img src="images/openshareicon-16x16.jpg"  alt="Share this page" width="16" height="16" border="0" align="texttop" />&nbsp;Share this page<%--referrer page: <%= request.getServletPath()%>--%>
 
 <div id="sharing" onMouseOut="HideShareBox('sharing'); return false;" style="display:none">
 <%--<p> strurl: <%=  strurl%><br /><br /> </p>--%>
