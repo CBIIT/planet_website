@@ -72,7 +72,7 @@
     <td width="82" style="padding: 1px;"></td>
     <td width="18" style="padding: 1px;"></td>
     <td width="82" align="right" valign="top" style="padding: 1px;">
-       	<img src="images/x.gif" alt="Close the window" width="16" height="16" 
+       	<img src="images/x.gif" alt="Close the window" width="10" height="10" 
         	border="1" align="texttop" onclick="HideShareBox('sharing'); return false;"/></td>
   </tr>
   <tr>
