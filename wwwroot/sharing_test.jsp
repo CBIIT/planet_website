@@ -61,21 +61,25 @@
 	<img src="images/openshareicon-16x16.jpg" alt="PDF" width="16" height="16" border="0" align="texttop" />&nbsp;Share this page
         -->
         
-  <div class="box" onmouseover="ShowShareBox('sharing'); return false;">
+  <div class="box" onmouseover="ShowShareBox('sharing'); return false;" >
      <img src="images/openshareicon-16x16.jpg" alt="Share this page" width="16" height="16" border="0" align="texttop" />&nbsp;Share this page
         
   
 <!--    <div id="sharing" class="toggleHidden">
 -->
-<div id="sharing" onMouseOut="HideShareBox('sharing'); return false;" style="display:none">
+<div id="sharing" class="toggleHidden">
 <table width="200" border="0" cellspacing="0" cellpadding="0" style="margin-left: 18px; font-size: .9em;">
   <tr>
     <td width="18" style="padding: 1px;">&nbsp; </td>
     <td width="82" style="padding: 1px;"></td>
     <td width="18" style="padding: 1px;"></td>
     <td width="82" align="right" valign="top" style="padding: 1px;">
-       	<img src="images/x.gif" alt="Close the window" width="16" height="16" 
-        	border="1" align="texttop" onclick="HideShareBox('sharing'); return false;"/></td>
+    	<script type="text/javascript">
+			document.writeln('<img id="CloseWin" src="images/x.gif" alt="Close the window" onclick="HideShareBox(\'sharing\'); return false;" />'); 
+        </script>
+                   
+                       <!--   	<img src="images/x.gif" alt="Close the window" width="16" height="16" 
+        	border="1" align="texttop" onclick="HideShareBox('sharing'); return false;"/>--></td>
   </tr>
   <tr>
     <td width="18" style="padding: 1px;"><img src="images/sharing-icon-facebook.gif" alt="" width="18" height="18" /></td>

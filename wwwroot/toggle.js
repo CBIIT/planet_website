@@ -32,16 +32,40 @@ function toggleVis( elemID )
 }
 
 
+
+function toggle_with_image(image, elemID){ 
+		var elem = document.getElementById( elemID );
+		
+		if( elem.className == 'toggleHidden' )
+		{       
+			elem.className = 'toggleVisible';
+			
+	     } else {        
+			elem.className = 'toggleHidden';
+		
+        }
+}
 	
 function ShowShareBox(id) { 
  
   var elem = document.getElementById( id );
   
   if( elem.className == 'toggleHidden' )
-        {         document.getElementById(id).style.display = 'none'; 
+  
+  
+        {        
+		
+		elem.className = 'toggleVisible';
+		document.getElementById(id).style.display = 'none'; 
+			//document.getElementById(image).src="images/x.gif"; 
+			//document.getElementById(image).alt="Close the window";
+		//window.alert("hello! hide");
         }
         else
-        {        document.getElementById(id).style.display = 'block'; 
+        {    
+			document.getElementById(id).style.display = 'block'; 
+			//	document.getElementById(image).src="images/x.gif"; 
+			//document.getElementById(image).alt="Close the window";
         }
 		
 } 
