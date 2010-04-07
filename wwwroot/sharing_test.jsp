@@ -75,7 +75,7 @@
     <td width="18" style="padding: 1px;"></td>
     <td width="82" align="right" valign="top" style="padding: 1px;">
     	<script type="text/javascript">
-			document.writeln('<img id="CloseWin" src="images/x.gif" alt="Close the window" onclick="HideShareBox(\'sharing\'); return false;" />'); 
+			document.writeln('<img id="CloseWin" src="images/x.gif" alt="Close the window" border="1" onclick="HideShareBox(\'sharing\'); return false;" />'); 
         </script>
                    
                        <!--   	<img src="images/x.gif" alt="Close the window" width="16" height="16" 
