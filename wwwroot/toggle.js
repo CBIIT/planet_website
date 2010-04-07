@@ -34,7 +34,16 @@ function toggleVis( elemID )
 
 	
 function ShowShareBox(id) { 
-  document.getElementById(id).style.display = 'block'; 
+ 
+  var elem = document.getElementById( id );
+  
+  if( elem.className == 'toggleHidden' )
+        {         document.getElementById(id).style.display = 'none'; 
+        }
+        else
+        {        document.getElementById(id).style.display = 'block'; 
+        }
+		
 } 
 	
 function HideShareBox(id) { 
