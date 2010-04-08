@@ -49,7 +49,9 @@
 	digg_url= "http://digg.com/submit?url=" + strurl +  "&title=" + title;
 		 
 	//stumble	 
-	stumble_url = "javascript:MM_openBrWindow('http://www.stumbleupon.com/submit?url=" + strurl +  "&title=" + title + "','triggers','location=yes, scrollbars=yes,resizable=yes,width=600,height=545')";
+	//stumble_url = "javascript:MM_openBrWindow('http://www.stumbleupon.com/submit?url=" + strurl +  "&title=" + title + "','triggers','location=yes, scrollbars=yes,resizable=yes,width=600,height=545')";
+	
+	stumble_url = "http://www.stumbleupon.com/submit?url=" + strurl +  "&title=" + title;
 		 
 	//Delicious
 	//delicious_url = "javascript:MM_openBrWindow('http://delicious.com/save?url=" + URLEncoder.encode(strurl) +  "&amp;title=" + title + "','triggers','location=yes, scrollbars=yes,resizable=yes,width=600,height=545')";
