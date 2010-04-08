@@ -45,7 +45,9 @@
 	delicious_url = "javascript:MM_openBrWindow('http://delicious.com/save?url=" + URLEncoder.encode(strurl) +  "&amp;title=" + title + "','triggers','location=yes, scrollbars=yes,resizable=yes,width=600,height=545')";
 		
 	//Linkedin
-	linkedin_url = "javascript:MM_openBrWindow('http://www.linkedin.com/shareArticle?mini=true&ro=true&url=" + strurl +  "&title=" + title + "','triggers','location=yes, scrollbars=yes,resizable=yes,width=600,height=545')";
+	//linkedin_url = "javascript:MM_openBrWindow('http://www.linkedin.com/shareArticle?mini=true&ro=true&url=" + strurl +  "&title=" + //title + "','triggers','location=yes, scrollbars=yes,resizable=yes,width=600,height=545')";
+	
+	linkedin_url = "http://www.linkedin.com/shareArticle?mini=true&ro=true&url=" + strurl +  "&title=" + title; 
 			
 	//Myspace
 	myspace_url= "javascript:MM_openBrWindow('http://www.myspace.com/Modules/PostTo/Pages/?t=" + title  +  "&c=" + strurl  + "&u=&l= " + "','triggers','location=yes, scrollbars=yes,resizable=yes,width=600,height=545')";
@@ -95,7 +97,7 @@
   </tr>
   <tr>
     <td style="padding: 1px;"><img src="images/sharing-icon-linkedin.gif" alt="" width="18" height="18" /></td>
-    <td style="padding: 1px;"><a href="<%= linkedin_url %>">LinkedIn</a>&nbsp;</td>
+    <td style="padding: 1px;"><a href="<%= linkedin_url %>"  onclick="javascript:MM_openBrWindow('<%= linkedin_url %>','triggers','location=yes, scrollbars=yes,resizable=yes,width=600,height=545'); return false;" target="_blank">LinkedIn</a>&nbsp;</td>
     <td style="padding: 1px;"><img src="images/sharing-icon-del.gif" alt="" width="18" height="18" /></td>
     <td style="padding: 1px;"><a href="<%= delicious_url %>">Delicious</a></td>
   </tr>
@@ -106,7 +108,11 @@
   <tr>
     <td valign="bottom" style="padding: 1px;" ><img src="images/icons_email.gif" alt="" width="18" height="18" /></td>
     <td style="padding: 1px;" valign="bottom" colspan="3">
-    	<a href="javascript:popUpWindow('send_to_friend.jsp?articleURL=<%= file%>&title=<%= pageTitle%>', 50,50,810,525);">E-mail to a friend</a>&nbsp;</td>
+    
+<!--    <a href="javascript:popUpWindow('send_to_friend.jsp?articleURL=<%= file%>&title=<%= pageTitle%>', 50,50,810,525);">E-mail to a friend</a>&nbsp;-->
+    	<a href="send_to_friend.jsp?articleURL=<%= file%>&title=<%= pageTitle%>" target="_blank" 
+        onclick="javascript:popUpWindow('send_to_friend.jsp?articleURL=<%= file%>&title=<%= pageTitle%>', 50,50,810,525);return false;
+">E-mail to a friend</a>&nbsp;</td>
   </tr>
 </table>
 </div>

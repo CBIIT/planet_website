@@ -39,25 +39,37 @@
 <%	//strurl = URLEncoder.encode(strurl); 
 	
 	//facebook   
-	facebook_url = "javascript:MM_openBrWindow('http://www.facebook.com/sharer.php?u=" + strurl + "&t=" + title + "','triggers','location=yes, scrollbars=yes,resizable=yes,width=600,height=545')";
+	//facebook_url = "javascript:MM_openBrWindow('http://www.facebook.com/sharer.php?u=" + strurl + "&t=" + title + "','triggers','location=yes, scrollbars=yes,resizable=yes,width=600,height=545')";
+	
+		facebook_url = "http://www.facebook.com/sharer.php?u=" + strurl + "&t=" + title ;
 	
 	//Digg
-	digg_url= "javascript:MM_openBrWindow('http://digg.com/submit?url=" + strurl +  "&title=" + title + "','triggers','location=yes, scrollbars=yes,resizable=yes,width=600,height=545')";
+	//digg_url= "javascript:MM_openBrWindow('http://digg.com/submit?url=" + strurl +  "&title=" + title + "','triggers','location=yes, scrollbars=yes,resizable=yes,width=600,height=545')";
+	
+	digg_url= "http://digg.com/submit?url=" + strurl +  "&title=" + title;
 		 
 	//stumble	 
 	stumble_url = "javascript:MM_openBrWindow('http://www.stumbleupon.com/submit?url=" + strurl +  "&title=" + title + "','triggers','location=yes, scrollbars=yes,resizable=yes,width=600,height=545')";
 		 
 	//Delicious
-	delicious_url = "javascript:MM_openBrWindow('http://delicious.com/save?url=" + URLEncoder.encode(strurl) +  "&amp;title=" + title + "','triggers','location=yes, scrollbars=yes,resizable=yes,width=600,height=545')";
+	//delicious_url = "javascript:MM_openBrWindow('http://delicious.com/save?url=" + URLEncoder.encode(strurl) +  "&amp;title=" + title + "','triggers','location=yes, scrollbars=yes,resizable=yes,width=600,height=545')";
+	
+	delicious_url = "http://delicious.com/save?url=" + URLEncoder.encode(strurl) +  "&amp;title=" + title;
 		
 	//Linkedin
-	linkedin_url = "javascript:MM_openBrWindow('http://www.linkedin.com/shareArticle?mini=true&ro=true&url=" + strurl +  "&title=" + title + "','triggers','location=yes, scrollbars=yes,resizable=yes,width=600,height=545')";
+	//linkedin_url = "javascript:MM_openBrWindow('http://www.linkedin.com/shareArticle?mini=true&ro=true&url=" + strurl +  "&title=" + //title + "','triggers','location=yes, scrollbars=yes,resizable=yes,width=600,height=545')";
 			
+	linkedin_url = "http://www.linkedin.com/shareArticle?mini=true&ro=true&url=" + strurl +  "&title=" + title; 
+	
 	//Myspace
-	myspace_url= "javascript:MM_openBrWindow('http://www.myspace.com/Modules/PostTo/Pages/?t=" + title  +  "&c=" + strurl  + "&u=&l= " + "','triggers','location=yes, scrollbars=yes,resizable=yes,width=600,height=545')";
+	//myspace_url= "javascript:MM_openBrWindow('http://www.myspace.com/Modules/PostTo/Pages/?t=" + title  +  "&c=" + strurl  + "&u=&l= //" + "','triggers','location=yes, scrollbars=yes,resizable=yes,width=600,height=545')";
 	
+	myspace_url= "http://www.myspace.com/Modules/PostTo/Pages/?t=" + title  +  "&c=" + strurl  + "&u=&l= ";
 	
-	twitter_url= "javascript:MM_openBrWindow('http://twitter.com/home?status=" + title + " - " +  strurl+ "','triggers','location=yes, scrollbars=yes,resizable=yes,width=600,height=545')";
+	//twitter
+	//twitter_url= "javascript:MM_openBrWindow('http://twitter.com/home?status=" + title + " - " +  strurl+ "','triggers','location=yes, scrollbars=yes,resizable=yes,width=600,height=545')";
+	
+	twitter_url= "http://twitter.com/home?status=" + title + " - " +  strurl;
  %>
  
 
@@ -80,21 +92,21 @@
   </tr>
   <tr>
     <td width="18" style="padding: 1px;"><img src="images/sharing-icon-facebook.gif" alt="" width="18" height="18" /></td>
-    <td width="82" style="padding: 1px;"><a href="<%= facebook_url %>">Facebook</a></td>
+    <td width="82" style="padding: 1px;"><a href="<%= facebook_url %>"  onclick="javascript:MM_openBrWindow('<%= facebook_url %>','triggers','location=yes, scrollbars=yes,resizable=yes,width=600,height=545'); return false;" target="_blank">Facebook</a></td>
     <td width="18" style="padding: 1px;"><img src="images/sharing-icon-twitter.gif" alt="" width="18" height="18" /></td>
-    <td width="82" style="padding: 1px;"><a href="<%= twitter_url %>">Twitter</a></td>
+    <td width="82" style="padding: 1px;"><a href="<%= twitter_url %>"  onclick="javascript:MM_openBrWindow('<%= twitter_url %>','triggers','location=yes, scrollbars=yes,resizable=yes,width=600,height=545'); return false;" target="_blank">Twitter</a></td>
   </tr>
   <tr>
     <td style="padding: 1px;"><img src="images/sharing-icon-stumble.gif" alt="" width="18" height="18" /></td>
-    <td style="padding: 1px;"><a href="<%= stumble_url %>">StumbleUpon</a></td>
+    <td style="padding: 1px;"><a href="<%= stumble_url %>" onclick="javascript:MM_openBrWindow('<%= stumble_url %>','triggers','location=yes, scrollbars=yes,resizable=yes,width=600,height=545'); return false;" target="_blank">StumbleUpon</a></td>
     <td style="padding: 1px;"><img src="images/sharing-icon-digg.gif" alt="" width="18" height="18" /></td>
-    <td style="padding: 1px;"><a href="<%= digg_url%>">Digg</a></td>
+    <td style="padding: 1px;"><a href="<%= digg_url%>"  onclick="javascript:MM_openBrWindow('<%= digg_url%>','triggers','location=yes, scrollbars=yes,resizable=yes,width=600,height=545'); return false;" target="_blank" >Digg</a></td>
   </tr>
   <tr>
     <td style="padding: 1px;"><img src="images/sharing-icon-linkedin.gif" alt="" width="18" height="18" /></td>
-    <td style="padding: 1px;"><a href="<%= linkedin_url %>">LinkedIn</a>&nbsp;</td>
+    <td style="padding: 1px;"><a href="<%= linkedin_url %>"  onclick="javascript:MM_openBrWindow('<%= linkedin_url %>','triggers','location=yes, scrollbars=yes,resizable=yes,width=600,height=545'); return false;" target="_blank">LinkedIn</a>&nbsp;</td>
     <td style="padding: 1px;"><img src="images/sharing-icon-del.gif" alt="" width="18" height="18" /></td>
-    <td style="padding: 1px;"><a href="<%= delicious_url %>">Delicious</a></td>
+    <td style="padding: 1px;"><a href="<%= delicious_url %>"  onclick="javascript:MM_openBrWindow('<%= delicious_url %>','triggers','location=yes, scrollbars=yes,resizable=yes,width=600,height=545'); return false;" target="_blank">Delicious</a></td>
   </tr>
   <% 	 
 	 String file = request.getServletPath(); 
@@ -113,7 +125,10 @@
   <!--  pageTitle: <%= pageTitle%>-->
   <tr>
     <td valign="bottom" style="padding: 1px;" ><img src="images/icons_email.gif" alt="" width="18" height="18" /></td>
-    <td style="padding: 1px;" valign="bottom" colspan="3"><a href="javascript:popUpWindow('send_to_friend.jsp?articleURL=<%= file%>&title=<%= pageTitle%>', 50,50,810,525);">E-mail to a friend</a>&nbsp;</td>
+    <td style="padding: 1px;" valign="bottom" colspan="3">	
+    	<a href="send_to_friend.jsp?articleURL=<%= file%>&title=<%= pageTitle%>" target="_blank" 
+        onclick="javascript:popUpWindow('send_to_friend.jsp?articleURL=<%= file%>&title=<%= pageTitle%>', 50,50,810,525);return false;
+">E-mail to a friend</a>&nbsp;</td>
   </tr>
 </table>
 </div>
