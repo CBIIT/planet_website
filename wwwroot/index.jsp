@@ -37,7 +37,13 @@
     <td width="126" valign="top"><img src="images/planet_or.gif" width="126" height="28" alt=""></td>
     <td width="50%" valign="top">
       <div id="sharing"><!-- AddThis Button BEGIN -->
-<a class="addthis_button" href="http://addthis.com/bookmark.php?v=250&amp;username=ccplanet"><img src="http://s7.addthis.com/static/btn/sm-share-en.gif" width="83" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=ccplanet"></script>
+<a class="addthis_button" href="http://addthis.com/bookmark.php?v=250&amp;username=ccplanet"><img src="http://s7.addthis.com/static/btn/sm-share-en.gif" width="83" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=ccplanet">
+var addthis_config =
+{
+   data_track_linkback: true,
+   services_compact
+}
+</script>
 <!-- AddThis Button END --></div>
 
       <h4>Find information by cancer control topic</h4></td>
