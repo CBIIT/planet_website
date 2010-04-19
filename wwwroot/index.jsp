@@ -36,9 +36,9 @@
       <h4>Follow 5 steps to develop a comprehensive cancer control plan or program</h4></td>
     <td width="126" valign="top"><img src="images/planet_or.gif" width="126" height="28" alt=""></td>
     <td width="50%" valign="top">
-      <!-- AddThis Button BEGIN -->
+      <div id="sharing"><!-- AddThis Button BEGIN -->
 <a class="addthis_button" href="http://addthis.com/bookmark.php?v=250&amp;username=ccplanet"><img src="http://s7.addthis.com/static/btn/sm-share-en.gif" width="83" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=ccplanet"></script>
-<!-- AddThis Button END -->
+<!-- AddThis Button END --></div>
 
       <h4>Find information by cancer control topic</h4></td>
   </tr>
