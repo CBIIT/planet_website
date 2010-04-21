@@ -25,15 +25,7 @@
         </p>
         
 <!-- AddThis Button BEGIN -->
-<div class="addthis_toolbox addthis_default_style">
-<a class="addthis_button_facebook"></a>
-<a class="addthis_button_email"></a>
-<a class="addthis_button_favorites"></a>
-<a class="addthis_button_print"></a>
-<span class="addthis_separator">|</span>
-<a href="http://addthis.com/bookmark.php?v=250&amp;username=ccplanet" class="addthis_button_expanded">More</a>
-</div>
-<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=ccplanet">
+<div class="addthis_toolbox">    <div class="hover_effect">        <div><a class="addthis_button_email">&amp;nbsp;Email</a></div>        <div><a class="addthis_button_print">&amp;nbsp;Print</a></div>        <div><a class="addthis_button_twitter">&amp;nbsp;</a></div>        <div><a class="addthis_button_facebook">&amp;nbsp;</a></div>        <div><a class="addthis_button_myspace">&amp;nbsp;</a></div>        <div><a class="addthis_button_digg">&amp;nbsp;</a></div>        <div><a class="addthis_button_expanded">&amp;nbsp;More...</a></div>        <div style="clear:both; float:none;"></div>     </div></div><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=ccplanet">
 var addthis_config ={   data_track_linkback: true}</script>
 <!-- AddThis Button END -->
 
