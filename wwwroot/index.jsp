@@ -23,11 +23,19 @@
         <a href="sponsors.html">Sponsors</a><br />
         <a href="faq.html">FAQ</a><br>
         </p>
-        
+
 <!-- AddThis Button BEGIN -->
 <div class="addthis_toolbox">
 <div class="hover_effect">
-<div><a class="addthis_button_email">&nbsp;Email</a></div>        <div><a class="addthis_button_print">&nbsp;Print</a></div>        <div><a class="addthis_button_twitter">&nbsp;</a></div>        <div><a class="addthis_button_facebook">&nbsp;</a></div>        <div><a class="addthis_button_myspace">&nbsp;</a></div>        <div><a class="addthis_button_digg">&nbsp;</a></div>        <div><a class="addthis_button_expanded">&nbsp;More...</a></div>        <div style="clear:both; float:none;"></div>     </div></div><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=ccplanet">
+<div><a class="addthis_button_email">&nbsp;Email</a></div>
+<div><a class="addthis_button_print">&nbsp;Print</a></div>
+<div><a class="addthis_button_twitter">&nbsp;</a></div>
+<div><a class="addthis_button_facebook">&nbsp;</a></div>
+<div><a class="addthis_button_myspace">&nbsp;</a></div>
+<div><a class="addthis_button_digg">&nbsp;</a></div>
+<div><a class="addthis_button_expanded">&nbsp;More...</a></div>
+<div style="clear:both; float:none;"></div>
+</div></div><script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=ccplanet">
 var addthis_config ={   data_track_linkback: true}</script>
 <!-- AddThis Button END -->
 

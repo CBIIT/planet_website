@@ -187,11 +187,7 @@ table.border td {
 
 /* =Sharing Box
 ---------------------------------------- */
-
-#sharing {
-	position: absolute;
-	top: 125px;
-	right: 10px;
+.addthis_toolbox{
 	font-size: 12px;
 }
 
