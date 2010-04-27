@@ -961,7 +961,7 @@ public class QueryBean {
 				conn = ConnPoolBean.getConnection();
 	
 				stmt = conn
-					.prepareCall("{call dccps.products_order_pkg.save_feedback(?, ?, ?, ?)}");
+					.prepareCall("{call dccps.planet_pkg.save_feedback(?, ?, ?, ?)}");
 				stmt.setString(1, feedbackText);
 				stmt.setString(2, email);
 				stmt.setString(3, phone);
