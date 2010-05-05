@@ -202,11 +202,16 @@ table.border td {
 	border: 3px solid #eee;    
 	-moz-border-radius: 5px;    
 	-webkit-border-radius: 5px;
+	border:thick;
+	border-bottom-color:#CC0033
 }
 
 
 .addthis_toolbox .hover_effect div {    
 	float: left;
+	border:thick;
+	border-color:#CC0000;
+
 }
 
 .addthis_toolbox .hover_effect a {    
@@ -215,6 +220,12 @@ table.border td {
 	position: relative;    
 	text-decoration: none;
 	font-size: 12px;
+	/*padding-left:16px;
+	padding-right:2px;
+	padding-left:12px;
+	padding-right:2px;*/
+	text-align:left;
+	
 }
 
 .addthis_toolbox .hover_effect a:hover {    
@@ -224,7 +235,14 @@ table.border td {
 	background: #B4D3F8;   
 	color: #105CB6;   
 	text-decoration: none;
-	float: none;
+	margin-left: .5px;
+	margin-right: .5px;
+	text-align:left;
+	text-indent:0px;
+
+	/*border:thick;
+	border-color:#CC0033;
+	border-left:*/
 }
 
 .addthis_toolbox .hover_effect span {    

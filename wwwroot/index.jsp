@@ -28,13 +28,13 @@
 <script type="text/javascript">
 	document.writeln('<div class="addthis_toolbox"> '); 
 	document.writeln('<div class="hover_effect">');
-	document.writeln(' <div style="font-size: 10px;"><a class="addthis_button_email">&nbsp;</a></div>');
+	document.writeln('<div style="font-size: 10px;"><a class="addthis_button_email">&nbsp;</a></div>');
 	document.writeln('<div style="font-size: 10px;"><a class="addthis_button_print">&nbsp;</a></div>');
 	document.writeln('<div style="font-size: 10px;"><a class="addthis_button_twitter">&nbsp;</a></div>');
-	document.writeln(' <div style="font-size: 10px;"><a class="addthis_button_facebook">&nbsp;</a></div>');
+	document.writeln('<div style="font-size: 10px;"><a class="addthis_button_facebook">&nbsp;</a></div>');
 	document.writeln('<div style="font-size: 10px;"><a class="addthis_button_myspace">&nbsp;</a></div>');
-	document.writeln('<div style="font-size: 10px;"><a class="addthis_button_digg">&nbsp;</a>');
-	document.writeln('<a href="http://parsley.cit.nih.gov:8080/planet/badges.html ">Promote CC P.L.A.N.E.T.</a></div>');
+	document.writeln('<div style="font-size: 10px;"><a class="addthis_button_digg">&nbsp;</a></div>');
+	document.writeln('<div style="font-size: 10px;"><a href="http://parsley.cit.nih.gov:8080/planet/badges.html">Promote CC P.L.A.N.E.T.</a></div>');
 	document.writeln('<div style="font-size: 10px;"><a class="addthis_button_expanded">&nbsp;More...</a></div>');
 	document.writeln('<div style="clear:both; float:none;"></div>');
 	document.writeln('</div>');
@@ -50,13 +50,8 @@
 	
 
 </script>
-
-<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=ccplanet">
-var addthis_config ={   data_track_linkback: true}</script>
 <!-- AddThis Button END -->
-
-
-        
+     
         </td>
   </tr>
   <tr>
