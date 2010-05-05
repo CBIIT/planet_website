@@ -197,7 +197,7 @@ table.border td {
 }
 
 .addthis_toolbox .hover_effect {    
-	width: 284px;    
+	width: 420px;    
 	padding: 10px 0 6px 10px;    
 	border: 3px solid #eee;    
 	-moz-border-radius: 5px;    
@@ -214,6 +214,7 @@ table.border td {
 	padding: 2px 2px 2px 16px;    
 	position: relative;    
 	text-decoration: none;
+	font-size: 12px;
 }
 
 .addthis_toolbox .hover_effect a:hover {    
@@ -223,6 +224,7 @@ table.border td {
 	background: #B4D3F8;   
 	color: #105CB6;   
 	text-decoration: none;
+	float: none;
 }
 
 .addthis_toolbox .hover_effect span {    
