@@ -1,5 +1,5 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html   xmlns="http://www.w3.org/1999/xhtml" xmlns:addthis="http://www.addthis.com/help/api-spec">>
+<html   xmlns="http://www.w3.org/1999/xhtml" xmlns:addthis="http://www.addthis.com/help/api-spec">
 <head>
 <title>Cancer Control - P.L.A.N.E.T.</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
@@ -25,15 +25,9 @@
         </p>
 
 <!-- AddThis Button BEGIN -->
-
-
-
-
 <script type="text/javascript">
 	document.writeln('<div class="addthis_toolbox"> '); 
-	
 	document.writeln('<div class="hover_effect">');
-	document.writeln(' <div class="clear"></div> '); 
 	document.writeln('<div style="font-size: 10px;"><a class="addthis_button_email">&nbsp;</a></div>');
 	document.writeln('<div style="font-size: 10px;"><a class="addthis_button_print">&nbsp;</a></div>');
 	document.writeln('<div style="font-size: 10px;"><a class="addthis_button_twitter" addthis:url="http://ccplanet.cancer.gov" addthis:title="Cancer Control - P.L.A.N.E.T.">&nbsp;</a></div>');
@@ -53,8 +47,6 @@
 		 data_track_linkback: true
 		 ui_508_compliant: true	
 	}
-	
-
 </script>
 <!-- AddThis Button END -->
      

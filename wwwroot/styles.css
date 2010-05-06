@@ -189,18 +189,11 @@ table.border td {
 ---------------------------------------- */
 .addthis_toolbox{
 	font-size: 12px;
-			text-indent:-1px;
-			height:0px;
-		/*	padding-left:0%;
-			padding-right:5%;*/
-		/*	margin-left:12px;
-			margin-right:12px;*/
 }
 
 /*the font size for more button*/
 .addthis_button_expanded{ 
 	font-size: 12px;
-		
 }
 
 
@@ -216,15 +209,11 @@ table.border td {
 */
 .addthis_toolbox .hover_effect {    
 	width: 420px;    
-	padding: 5px 0 0px 5px;    
+	padding: 5px 0px 5px 5px;    
 	border: 3px solid #eee;    
 	-moz-border-radius: 0px;    
 	-webkit-border-radius: 0px;
-		height:0px;
-		margin-bottom:0px;
-/*	border:thick;
-	border-bottom-color:#CC0033*/
-	/*	text-indent:-10px;*/
+		
 }
 
 
@@ -238,10 +227,6 @@ table.border td {
 	position: relative;    
 	text-decoration: none;
 	font-size: 12px;
-	/*padding-left:16px;
-	padding-right:2px;
-	padding-left:12px;
-	padding-right:2px;*/
 }
 
 .addthis_toolbox .hover_effect a:hover {    
@@ -251,15 +236,6 @@ table.border td {
 	background: #B4D3F8;   
 	color: #105CB6;   
 	text-decoration: none;
-	
-	/*text-align:left;
-	text-indent:-1px;
-	margin-left:2px;
-			margin-right:2px;
-*/
-	/*border:thick;
-	border-color:#CC0033;
-	border-left:*/
 }
 
 .addthis_toolbox .hover_effect span {    
