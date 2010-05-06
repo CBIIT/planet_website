@@ -30,7 +30,7 @@
 
 
 <script type="text/javascript">
-	document.writeln('<div class="addthis_toolbox addthis_default_style"> '); 
+	document.writeln('<div class="addthis_toolbox"> '); 
 	document.writeln('<div class="hover_effect">');
 	document.writeln('<div style="font-size: 10px;"><a class="addthis_button_email">&nbsp;</a></div>');
 	
