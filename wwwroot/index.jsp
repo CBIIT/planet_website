@@ -1,5 +1,5 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
+<html   xmlns="http://www.w3.org/1999/xhtml" xmlns:addthis="http://www.addthis.com/help/api-spec">>
 <head>
 <title>Cancer Control - P.L.A.N.E.T.</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
@@ -25,16 +25,22 @@
         </p>
 
 <!-- AddThis Button BEGIN -->
+
+
+
+
 <script type="text/javascript">
-	document.writeln('<div class="addthis_toolbox"> '); 
+	document.writeln('<div class="addthis_toolbox addthis_default_style"> '); 
 	document.writeln('<div class="hover_effect">');
 	document.writeln('<div style="font-size: 10px;"><a class="addthis_button_email">&nbsp;</a></div>');
+	
+	<!--document.writeln('<a href="http://www.addthis.com/bookmark.php" onmouseover="return addthis_open(this, '', '[URL]', '[TITLE]')" onmouseout="addthis_close()" onclick="return addthis_sendto()"><img src="http://s9.addthis.com/button1-bm.gif" width="125" height="16" border="0" alt="" /></a>');-->
 	document.writeln('<div style="font-size: 10px;"><a class="addthis_button_print">&nbsp;</a></div>');
 	document.writeln('<div style="font-size: 10px;"><a class="addthis_button_twitter">&nbsp;</a></div>');
-	document.writeln('<div style="font-size: 10px;"><a class="addthis_button_facebook">&nbsp;</a></div>');
-	document.writeln('<div style="font-size: 10px;"><a class="addthis_button_myspace">&nbsp;</a></div>');
-	document.writeln('<div style="font-size: 10px;"><a class="addthis_button_digg">&nbsp;</a></div>');
-	document.writeln('<div style="font-size: 10px;"><a href="http://parsley.cit.nih.gov:8080/planet/badges.html">Promote CC P.L.A.N.E.T.</a></div>');
+	document.writeln('<div style="font-size: 10px;"><a class="addthis_button_facebook" addthis:url="http://ccplanet.cancer.gov"      addthis:title="Cancer Control - P.L.A.N.E.T.">&nbsp;</a></div>');
+	document.writeln('<div style="font-size: 10px;"><a class="addthis_button_myspace" addthis:title="Cancer Control - P.L.A.N.E.T." >&nbsp;</a></div>');
+	document.writeln('<div style="font-size: 10px;"><a class="addthis_button_digg" addthis:title="Cancer Control - P.L.A.N.E.T.">&nbsp;</a></div>');
+	document.writeln('<div style="font-size: 10px;"><a class="addthis_promote" href="http://parsley.cit.nih.gov:8080/planet/badges.html">Promote CC P.L.A.N.E.T.</a></div>');
 	document.writeln('<div style="font-size: 10px;"><a class="addthis_button_expanded">&nbsp;More...</a></div>');
 	document.writeln('<div style="clear:both; float:none;"></div>');
 	document.writeln('</div>');
