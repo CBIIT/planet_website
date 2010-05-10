@@ -34,7 +34,7 @@
 	document.writeln('<div style="font-size: 10px;"><a class="addthis_button_facebook" addthis:url="http://ccplanet.cancer.gov" addthis:title="Cancer Control - P.L.A.N.E.T.">&nbsp;</a></div>');
 	document.writeln('<div style="font-size: 10px;"><a class="addthis_button_myspace" addthis:url="http://ccplanet.cancer.gov" addthis:title="Cancer Control - P.L.A.N.E.T.">&nbsp;</a></div>');
 	document.writeln('<div style="font-size: 10px;"><a class="addthis_button_digg" addthis:url="http://ccplanet.cancer.gov" addthis:title="Cancer Control - P.L.A.N.E.T.">&nbsp;</a></div>');
-	document.writeln('<div class="promote" style="font-size: 10px;"><a href="http://parsley.cit.nih.gov:8080/planet/badges.html">Promote CC P.L.A.N.E.T.</a></div>');
+	document.writeln('<div style="font-size: 10px;"><a href="http://parsley.cit.nih.gov:8080/planet/badges.html">Promote CC P.L.A.N.E.T.</a></div>');
 	document.writeln('<div style="font-size: 10px;"><a class="addthis_button_expanded" addthis:url="http://ccplanet.cancer.gov"      addthis:title="Cancer Control - P.L.A.N.E.T.">&nbsp;More...</a></div>');
 	document.writeln('<div style="clear:both; float:none;"></div>');
 	document.writeln('</div>');

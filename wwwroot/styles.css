@@ -207,16 +207,7 @@ table.border td {
 	text-align:left;
 }
 
- .promote a{
-	font-size: 12px;
-	white-space: nowrap;
-	text-align:left;
-	padding: 0px 0px 0px 0px;
-}
-
-
-
-.addthis_toolbox .hover_effect div {    
+ .addthis_toolbox .hover_effect div {    
 	float: left;
 }
 
