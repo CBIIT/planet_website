@@ -213,11 +213,11 @@ table.border td {
 
 .addthis_toolbox .hover_effect a {    
 	border: 2px solid #fff;    
-	padding: 4px 2px 4px 14px;    
+	padding: 2px 2px 2px 2px;    
 	position: relative;    
 	text-decoration: none;
-	font-size: 12px;
-	/*border-color:#CC0033;
+	/*font-size: 12px;
+	border-color:#CC0033;
 	line-height: 16 px;*/
 	width: 5%;
 	margin-left:auto;
