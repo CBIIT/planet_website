@@ -35,7 +35,7 @@ document.writeln('<img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif"
 var addthis_config = {
         services_compact: 'email,print,twitter,cancercontrol.cancer.gov,facebook,myspace,digg, more',
         services_custom: [{
-            	name: "Promote CC P.L.A.N.E.T.",
+            	name: "Badges",
               	url: "http://cancercontrol.cancer.gov/badges.html",
               	icon: "http://ccplanet.cancer.gov/images/planet_icon_tiny.gif"}],
               	ui_offset_left: 3,
