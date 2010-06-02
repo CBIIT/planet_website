@@ -31,7 +31,7 @@ document.writeln('<img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif"
 
 <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js?pub=mashalababy"></script>
 
-<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=xa-4bf2ef6142fd8270"></script><script type="text/javascript">
+<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=ccplanet"></script><script type="text/javascript">
 var addthis_config = {
         services_compact: 'email,print,twitter,ccplanet.cancer.gov,facebook,myspace,digg, more',
         services_custom: [{
