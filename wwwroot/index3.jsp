@@ -38,8 +38,7 @@ var addthis_config = {
             	name: "Badges",
               	url: "http://ccplanet.cancer.gov/badges.html",
               	icon: "http://ccplanet.cancer.gov/images/planet_icon_tiny.gif"}],
-              	ui_offset_left: 3,
-				data_track_linkback: true,
+              	data_track_linkback: true,
 		 		ui_508_compliant: true
 
         }
