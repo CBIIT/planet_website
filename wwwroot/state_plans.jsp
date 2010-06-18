@@ -133,7 +133,7 @@ StringBuffer pcScript = null;
 		}while (itb.hasNext());
       
 		//Territories
-		stateList.append("<br><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><th colspan='1' align='left' valign='top' nowrap>Territories</th></tr></table>");
+		stateList.append("<br /><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><th colspan='1' align='left' valign='top' nowrap>Territories</th></tr></table>");
 		
        	Iterator itt = statePlans.iterator();
 		
@@ -189,15 +189,41 @@ StringBuffer pcScript = null;
 </head>
 <body topmargin="0" leftmargin="0" bgcolor="White">
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><p class="banner"><a href="index.html"><img src="images/planet_logo.gif" alt="Cancer Control P.L.A.N.E.T. - Plan, Link, Act, Network with Evidence-based Tools" width="169" height="87" border="0"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p></td>
-    <td><a href="index.html"><img src="images/planet_banner_wider.gif" alt="Cancer Control P.L.A.N.E.T. - Links to comprehensive cancer control resources for public health professionals" width="500" height="82" border="0"></a></td>
-    <td><p><a href="index.html">Home</a><br>
-	<a href="contact.html">Contact Us</a><br>	<a href="/cgi-bin/awredir.pl?url=http://secure.mmgct.com/planettraining/" onClick="javascript:popWindow('/cgi-bin/awredir.pl?url=http://secure.mmgct.com/planettraining/', 'name','925','600','yes'); return false;">On-line Training</a><br />
-	<a href="about.html">About This Site</a><br>
-    <a href="factsheet.pdf">Fact Sheet (PDF)</a><br>
-    <a href="partners.html">P.L.A.N.E.T. Sponsors</a><br />
-    <a href="faq.html">FAQ</a></p></td>
+	<tr>
+		<td><p class="banner"><a href="index.html"><img src="images/planet_logo.gif" alt="Cancer Control P.L.A.N.E.T. - Plan, Link, Act, Network with Evidence-based Tools" width="169" height="87" border="0"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p></td>
+		<td><a href="index.html"><img src="images/planet_banner_wider.gif" alt="Cancer Control P.L.A.N.E.T. - Links to comprehensive cancer control resources for public health professionals" width="500" height="82" border="0"></a></td>
+		<td>
+			<p>
+				<a href="index.html">Home</a><br />
+				<a href="contact.html">Contact Us</a><br />
+				<a href="/cgi-bin/awredir.pl?url=http://secure.mmgct.com/planettraining/" onClick="javascript:popWindow('/cgi-bin/awredir.pl?url=http://secure.mmgct.com/planettraining/', 'name','925','600','yes'); return false;">On-line Training</a><br />
+				<a href="about.html">About This Site</a><br />
+				<a href="factsheet.pdf">Fact Sheet (PDF)</a><br />
+				<a href="partners.html">P.L.A.N.E.T. Sponsors</a><br />
+				<a href="faq.html">FAQ</a>
+			</p>
+			
+			<!-- AddThis Code -->
+            <script type="text/javascript">
+            document.writeln('<a class="addthis_button" href="http://addthis.com/bookmark.php?v=250&username=ccplanet">');
+            document.writeln('<img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a>');
+            </script>
+
+            <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js?pub=mashalababy"></script>
+
+            <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=ccplanet"></script><script type="text/javascript">
+            var addthis_config = {
+                services_compact: 'email,print,twitter,ccplanet.cancer.gov,facebook,myspace,digg, more',
+                services_custom: [{
+                    	name: "Badges",
+              	        url: "http://ccplanet.cancer.gov/badges.html",
+              	        icon: "http://ccplanet.cancer.gov/images/planet_icon_tiny.gif"}],
+              	        data_track_linkback: true,
+		 		        ui_508_compliant: true
+        
+                }
+            </script>
+		</td>
   </tr>
   <tr>
     <td colspan="3" id="breadcrumbs"><a href="index.html">Home</a> &gt; State, Tribe and Territory Plans</td>
@@ -209,7 +235,7 @@ StringBuffer pcScript = null;
 <p><div style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif; font-size : 16px; font-weight: bold;color : #000000;"><table align="right" width="400" border="0" cellpadding="0" cellspacing="0">
 <tr>
 <td><a href="http://apps.nccd.cdc.gov/CCCSearch/Default/Default.aspx" title="External link" onClick="javascript:popWindow('http://apps.nccd.cdc.gov/CCCSearch/Default/Default.aspx'); return false;"><img src="images/binocs.jpg" alt="" border="0" align="absmiddle"><strong>Search Cancer Control Plans</strong><img src="images/Icon_External_Link.png" alt="External link" border="0"></a><br />
-  <span class="small">  (<strong>Note:</strong> the link above will take you to CDC's search tool.  <strong><br>
+  <span class="small">  (<strong>Note:</strong> the link above will take you to CDC's search tool.  <strong><br />
   New users</strong>, please click, "Help for new users" on CDC's Web site to learn how to use the search tool.)</span></td>
 </tr>
 </table><img src="images/planet_step5.gif" alt="Step 5" align="absmiddle">&nbsp;<%= pageTitle%></div></p>
@@ -234,9 +260,9 @@ StringBuffer pcScript = null;
               <a href="privacy.html">Privacy Policy</a>&nbsp;&nbsp;&nbsp;
               <a href="disclaimer.html">Disclaimer</a>&nbsp;&nbsp;&nbsp;
             <a href="accessibility.html">Accessibility</a></p>
-          <p><span class="sponsors">Links to non-Federal organizations  found at this site are provided solely as a service to our users. <br>
-These links  do not constitute an endorsement of these organizations or their programs by  the Federal Government, and none should be inferred. <br>
-The Federal Government is  not responsible for the content of the individual organization Web pages found  at these links.</span><br>
+          <p><span class="sponsors">Links to non-Federal organizations  found at this site are provided solely as a service to our users. <br />
+These links  do not constitute an endorsement of these organizations or their programs by  the Federal Government, and none should be inferred. <br />
+The Federal Government is  not responsible for the content of the individual organization Web pages found  at these links.</span><br />
               </p>
 	</div>
     </td>
