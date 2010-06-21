@@ -11,47 +11,54 @@
 
 <body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
-  <tr>
-     <td><p class="banner"><a href="#content"><img src="images/spacer.gif" width="1" height="85" border="0" alt="Skip Navigation"></a><a href="index.html"><img src="images/planet_logo.gif" alt="Cancer Control P.L.A.N.E.T. - Plan, Link, Act, Network with Evidence-based Tools" width="169" height="87" border="0"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p></td>
-    <td><a href="index.html"><img src="images/planet_banner_wider.gif" alt="Cancer Control P.L.A.N.E.T. - Links to comprehensive cancer control resources for public health professionals" width="500" height="82" border="0"></a></td>
-    <td><p>
-        <!-- <a href="index.html">Home</a><br> -->
-        <a href="contact.html">Contact Us</a><br>	
-        <a href="/cgi-bin/awredir.pl?url=http://secure.mmgct.com/planettraining/" onClick="javascript:popWindow('/cgi-bin/awredir.pl?url=http://secure.mmgct.com/planettraining/', 'name','925','600','yes'); return false;">On-line Training</a><br />
-		<a href="about.html">About This Site</a><br>
-        <a href="factsheet.pdf">Fact Sheet (PDF)</a><br>
-        <a href="sponsors.html">Sponsors</a><br />
-        <a href="faq.html">FAQ</a><br>
-        </p>
+	<tr>
+		<td>
+			<p class="banner">
+				<a href="#content">
+					<img src="images/spacer.gif" width="1" height="85" border="0" alt="Skip Navigation" />
+				</a>
+				<a href="index.html">
+					<img src="images/planet_logo.gif" alt="Cancer Control P.L.A.N.E.T. - Plan, Link, Act, Network with Evidence-based Tools" width="169" height="87" border="0" />
+				</a>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			</p>
+		</td>
+		<td>
+			<a href="index.html">
+				<img src="images/planet_banner_wider.gif" alt="Cancer Control P.L.A.N.E.T. - Links to comprehensive cancer control resources for public health professionals" width="500" height="82" border="0" />
+			</a>
+		</td>
+		<td>
+			<p>
+				<!-- <a href="index.html">Home</a><br /> -->
+				<a href="contact.html">Contact Us</a><br />	
+				<a href="/cgi-bin/awredir.pl?url=http://secure.mmgct.com/planettraining/" onClick="javascript:popWindow('/cgi-bin/awredir.pl?url=http://secure.mmgct.com/planettraining/', 'name','925','600','yes'); return false;">On-line Training</a><br />
+				<a href="about.html">About This Site</a><br />
+				<a href="factsheet.pdf">Fact Sheet (PDF)</a><br />
+				<a href="sponsors.html">Sponsors</a><br />
+				<a href="faq.html">FAQ</a><br />
+			</p>
 
-<!-- AddThis Button BEGIN -->
-<script type="text/javascript">
-	document.writeln('<div class="addthis_toolbox"> '); 
-	document.writeln('<div class="hover_effect">');
-	document.writeln('<div font-size: 10px;"><a class="addthis_button_email">&nbsp;</a></div>');
-	document.writeln('<div style="font-size: 10px;"><a class="addthis_button_print">&nbsp;</a></div>');
-	document.writeln('<div style="font-size: 10px;"><a class="addthis_button_twitter" addthis:url="http://ccplanet.cancer.gov" addthis:title="Cancer Control - P.L.A.N.E.T.">&nbsp;</a></div>');
-	document.writeln('<div style="font-size: 10px;"><a class="addthis_button_facebook" addthis:url="http://ccplanet.cancer.gov" addthis:title="Cancer Control - P.L.A.N.E.T.">&nbsp;</a></div>');
-	document.writeln('<div style="font-size: 10px;"><a class="addthis_button_digg" addthis:url="http://ccplanet.cancer.gov" addthis:title="Cancer Control - P.L.A.N.E.T.">&nbsp;</a></div>');
-	document.writeln('<div style="font-size: 10px;"><a class="addthis_button_expanded" addthis:url="http://ccplanet.cancer.gov"      addthis:title="Cancer Control - P.L.A.N.E.T.">&nbsp;More...</a></div><br />');
-	document.writeln('<div style="font-size: 10px;"><a href="http://parsley.cit.nih.gov:8080/planet/badges.html">Promote CC P.L.A.N.E.T.</a></div>');
+			<script type="text/javascript">
+				document.writeln('<a class="addthis_button" href="http://addthis.com/bookmark.php?v=250&username=ccplanet">');
+				document.writeln('<img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a>');
+			</script>
 
-	document.writeln('<div style="clear:both; float:none;"></div>');
-	document.writeln('</div>');
-	document.writeln('</div>');
-</script>
+			<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js?pub=mashalababy"></script>
 
-<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=ccplanet">
-	var addthis_config =
-	{  
-		 data_track_linkback: true
-		 ui_508_compliant: true	
-	}
-</script>
-<!-- AddThis Button END -->
-     
-        </td>
-  </tr>
+			<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=ccplanet"></script><script type="text/javascript">
+				var addthis_config = {
+					services_compact: 'email,print,twitter,ccplanet.cancer.gov,facebook,myspace,digg, more',
+					services_custom: [{
+            			name: "Badges",
+              			url: "http://ccplanet.cancer.gov/badges.html",
+              			icon: "http://ccplanet.cancer.gov/images/planet_icon_tiny.gif"}],
+              			data_track_linkback: true,
+		 				ui_508_compliant: true
+					}
+			</script>
+		</td>
+	</tr>
   <tr>
     <td colspan="3"><hr size="1" noshade></td>
   </tr>

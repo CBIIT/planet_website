@@ -11,40 +11,54 @@
 
 <body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
-  <tr>
-     <td><p class="banner"><a href="#content"><img src="images/spacer.gif" width="1" height="85" border="0" alt="Skip Navigation"></a><a href="index.html"><img src="images/planet_logo.gif" alt="Cancer Control P.L.A.N.E.T. - Plan, Link, Act, Network with Evidence-based Tools" width="169" height="87" border="0"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p></td>
-    <td><a href="index.html"><img src="images/planet_banner_wider.gif" alt="Cancer Control P.L.A.N.E.T. - Links to comprehensive cancer control resources for public health professionals" width="500" height="82" border="0"></a></td>
-    <td><p>
-        <!-- <a href="index.html">Home</a><br> -->
-        <a href="contact.html">Contact Us</a><br>	
-        <a href="/cgi-bin/awredir.pl?url=http://secure.mmgct.com/planettraining/" onClick="javascript:popWindow('/cgi-bin/awredir.pl?url=http://secure.mmgct.com/planettraining/', 'name','925','600','yes'); return false;">On-line Training</a><br />
-		<a href="about.html">About This Site</a><br>
-        <a href="factsheet.pdf">Fact Sheet (PDF)</a><br>
-        <a href="sponsors.html">Sponsors</a><br />
-        <a href="faq.html">FAQ</a><br>
-        </p>
+	<tr>
+		<td>
+			<p class="banner">
+				<a href="#content">
+					<img src="images/spacer.gif" width="1" height="85" border="0" alt="Skip Navigation" />
+				</a>
+				<a href="index.html">
+					<img src="images/planet_logo.gif" alt="Cancer Control P.L.A.N.E.T. - Plan, Link, Act, Network with Evidence-based Tools" width="169" height="87" border="0" />
+				</a>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			</p>
+		</td>
+		<td>
+			<a href="index.html">
+				<img src="images/planet_banner_wider.gif" alt="Cancer Control P.L.A.N.E.T. - Links to comprehensive cancer control resources for public health professionals" width="500" height="82" border="0" />
+			</a>
+		</td>
+		<td>
+			<p>
+				<!-- <a href="index.html">Home</a><br /> -->
+				<a href="contact.html">Contact Us</a><br />	
+				<a href="/cgi-bin/awredir.pl?url=http://secure.mmgct.com/planettraining/" onClick="javascript:popWindow('/cgi-bin/awredir.pl?url=http://secure.mmgct.com/planettraining/', 'name','925','600','yes'); return false;">On-line Training</a><br />
+				<a href="about.html">About This Site</a><br />
+				<a href="factsheet.pdf">Fact Sheet (PDF)</a><br />
+				<a href="sponsors.html">Sponsors</a><br />
+				<a href="faq.html">FAQ</a><br />
+			</p>
 
-<script type="text/javascript">
-document.writeln('<a class="addthis_button" href="http://addthis.com/bookmark.php?v=250&username=ccplanet">');
-document.writeln('<img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a>');
-</script>
+			<script type="text/javascript">
+				document.writeln('<a class="addthis_button" href="http://addthis.com/bookmark.php?v=250&username=ccplanet">');
+				document.writeln('<img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a>');
+			</script>
 
-<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js?pub=mashalababy"></script>
+			<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js?pub=mashalababy"></script>
 
-<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=ccplanet"></script><script type="text/javascript">
-var addthis_config = {
-        services_compact: 'email,print,twitter,ccplanet.cancer.gov,facebook,myspace,digg, more',
-        services_custom: [{
-            	name: "Badges",
-              	url: "http://ccplanet.cancer.gov/badges.html",
-              	icon: "http://ccplanet.cancer.gov/images/planet_icon_tiny.gif"}],
-              	data_track_linkback: true,
-		 		ui_508_compliant: true
-
-        }
-</script>
-   </td>
-  </tr>
+			<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=ccplanet"></script><script type="text/javascript">
+				var addthis_config = {
+					services_compact: 'email,print,twitter,ccplanet.cancer.gov,facebook,myspace,digg, more',
+					services_custom: [{
+            			name: "Badges",
+              			url: "http://ccplanet.cancer.gov/badges.html",
+              			icon: "http://ccplanet.cancer.gov/images/planet_icon_tiny.gif"}],
+              			data_track_linkback: true,
+		 				ui_508_compliant: true
+					}
+			</script>
+		</td>
+	</tr>
   <tr>
     <td colspan="3"><hr size="1" noshade></td>
   </tr>
@@ -61,7 +75,7 @@ var addthis_config = {
       <h4>Find information by cancer control topic</h4></td>
   </tr>
   <tr valign="top">
-    <td><a href="steps.html">Learn why these steps are important</a><br><br>
+    <td><a href="steps.html">Learn why these steps are important</a><br /><br />
       <table border="0" cellspacing="0" cellpadding="2" width="100%">
 	  
 	  
@@ -275,11 +289,11 @@ var addthis_config = {
           <td valign="bottom">&nbsp;</td>
         </tr>
         <tr>
-          <td colspan="3" valign="top"><br>
+          <td colspan="3" valign="top"><br />
             <table width="184" border="0" cellpadding="0" cellspacing="0">
 		    <tr>
 			  <td colspan="2" valign="top">            
-			  <h4 align="left"><strong>Sponsors</strong><br>
+			  <h4 align="left"><strong>Sponsors</strong><br />
 			  
 			  <script type="text/javascript">
 AC_FL_RunContent( 'codebase','/cgi-bin/awredir.pl?url=http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0','width','100','height','75','src','images/planet-sponsors-07','quality','high','pluginspage','/cgi-bin/awredir.pl?url=http://www.macromedia.com/go/getflashplayer','movie','images/planet-sponsors-07' ); //end AC code
@@ -313,7 +327,7 @@ AC_FL_RunContent( 'codebase','/cgi-bin/awredir.pl?url=http://download.macromedia
 			</tr>
 		  </table>
 		  
-		  <p><br><font color="#CC0000">Note:</font> This web site is best viewed in <a href="http://www.microsoft.com/windows/downloads/ie/getitnow.mspx">Internet Explorer<img src="images/Icon_External_Link.png" alt="External link" width="12" height="12" border="0"></a> (version 5.0 or higher) or <a title="External link" href="/cgi-bin/awredir.pl?url=http://channels.netscape.com/ns/browsers/download.jsp">Netscape<img src="images/Icon_External_Link.png" alt="External link" width="12" height="12" border="0"></a> (version 7.0 or higher) at a <a href="screen_resolution.html">screen resolution</a> of 1024 by 768 or more.<br>
+		  <p><br /><font color="#CC0000">Note:</font> This web site is best viewed in <a href="http://www.microsoft.com/windows/downloads/ie/getitnow.mspx">Internet Explorer<img src="images/Icon_External_Link.png" alt="External link" width="12" height="12" border="0"></a> (version 5.0 or higher) or <a title="External link" href="/cgi-bin/awredir.pl?url=http://channels.netscape.com/ns/browsers/download.jsp">Netscape<img src="images/Icon_External_Link.png" alt="External link" width="12" height="12" border="0"></a> (version 7.0 or higher) at a <a href="screen_resolution.html">screen resolution</a> of 1024 by 768 or more.<br />
 		  </p></td>
         </tr>
       </table>
@@ -324,12 +338,12 @@ AC_FL_RunContent( 'codebase','/cgi-bin/awredir.pl?url=http://download.macromedia
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
     <td><hr size="1" noshade><div align="center">
-      <p><a href="index.html">Home</a>&nbsp;&nbsp;&nbsp; <a href="contact.html">Contact Us</a>&nbsp;&nbsp;&nbsp; <a href="about.html">About This Site</a>&nbsp;&nbsp;&nbsp; <a href="sponsors.html">Sponsors</a>&nbsp;&nbsp;&nbsp; <a href="privacy.html">Privacy  Policy</a>&nbsp;&nbsp;&nbsp; <a href="disclaimer.html">Disclaimer</a>&nbsp;&nbsp;&nbsp; <a href="accessibility.html">Accessibility</a><br>
-          <br>
+      <p><a href="index.html">Home</a>&nbsp;&nbsp;&nbsp; <a href="contact.html">Contact Us</a>&nbsp;&nbsp;&nbsp; <a href="about.html">About This Site</a>&nbsp;&nbsp;&nbsp; <a href="sponsors.html">Sponsors</a>&nbsp;&nbsp;&nbsp; <a href="privacy.html">Privacy  Policy</a>&nbsp;&nbsp;&nbsp; <a href="disclaimer.html">Disclaimer</a>&nbsp;&nbsp;&nbsp; <a href="accessibility.html">Accessibility</a><br />
+          <br />
           <span class="sponsors">Cancer Control P.L.A.N.E.T. is not affiliated with Planet Cancer. To visit Planet Cancer's site, please go to <a class="sponsors" href="/cgi-bin/awredir.pl?url=http://www.planetcancer.org">www.planetcancer.org<img src="images/Icon_External_Link.png" alt="External link" width="12" height="12" border="0"></a>.</span></p>
-      <p><span class="sponsors">Links to non-Federal organizations  found at this site are provided solely as a service to our users. <br>
-        These links  do not constitute an endorsement of these organizations or their programs by  the Federal Government, and none should be inferred. <br>
-        The Federal Government is  not responsible for the content of the individual organization Web pages found  at these links.</span><br>
+      <p><span class="sponsors">Links to non-Federal organizations  found at this site are provided solely as a service to our users. <br />
+        These links  do not constitute an endorsement of these organizations or their programs by  the Federal Government, and none should be inferred. <br />
+        The Federal Government is  not responsible for the content of the individual organization Web pages found  at these links.</span><br />
         </p>
     </div></td>  </tr>
   <tr>
