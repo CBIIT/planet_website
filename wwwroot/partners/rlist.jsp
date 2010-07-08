@@ -410,26 +410,7 @@ if (it2.hasNext()) {
 				<a href="../faq.html">FAQ</a>
 			</p>
 			
-			<!-- AddThis Code -->
-            <script type="text/javascript">
-            document.writeln('<a class="addthis_button" href="http://addthis.com/bookmark.php?v=250&username=ccplanet">');
-            document.writeln('<img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a>');
-            </script>
-
-            <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js?pub=mashalababy"></script>
-
-            <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=ccplanet"></script><script type="text/javascript">
-            var addthis_config = {
-                services_compact: 'email,print,twitter,ccplanet.cancer.gov,facebook,myspace,digg, more',
-                services_custom: [{
-                    	name: "Badges",
-              	        url: "http://ccplanet.cancer.gov/badges.html",
-              	        icon: "http://ccplanet.cancer.gov/images/planet_icon_tiny.gif"}],
-              	        data_track_linkback: true,
-		 		        ui_508_compliant: true
-        
-                }
-            </script>
+			
 		</td>
   </tr>
   <tr>
