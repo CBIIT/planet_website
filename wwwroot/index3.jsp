@@ -163,7 +163,16 @@
           <td valign="top"><img src="images/bullet_black.gif" alt="" width="15" height="13" border="0"></td>
           <td valign="top">Recommendations on screening, counseling, and other clinical regimens</td>
         </tr>
-       <tr>
+        <tr>
+          <td valign="top">&nbsp;</td>
+          <td colspan="2" valign="top"><a title="External link" href="/cgi-bin/awredir.pl?url=http://www.egappreviews.org/recommendations/index.htm" onClick="javascript:popWindow('/cgi-bin/awredir.pl?url=http://www.egappreviews.org/recommendations/index.htm', 'name','925','600','yes'); return false;">Evaluation of Genomic Applications in Practice and Prevention<img src="images/Icon_External_Link.png" alt="External link" width="12" height="12" border="0"></a>&nbsp;(EGAPP)</td>
+        </tr>
+        <tr>
+          <td valign="top">&nbsp;</td>
+          <td valign="top"><img src="images/bullet_black.gif" alt="" width="15" height="13" border="0"></td>
+          <td valign="top">Recommendations for public health genomics</td>
+        </tr>
+        <tr>
           <td valign="top">&nbsp;</td>
           <td colspan="2" valign="top"><a href="synthesis.html">
           Additional Research Evidence Reviews</a></td>
@@ -236,43 +245,47 @@
       <table border="0" cellspacing="0" cellpadding="1" width="100%">
 	    <tr>
           <td width="20" align="right" valign="top"><img src="images/bullet_black.gif" alt="" width="15" height="13" border="0"></td>
-          <td width="100%" valign="bottom"><a href="breast_cancer.html"><strong>Breast Cancer</strong></a></td>
+          <td width="100%" style="font-weight:bold; vertical-align:bottom;"><a href="breast_cancer.html">Breast Cancer</a></td>
         </tr>
         <tr>
           <td align="right" valign="top"><img src="images/bullet_black.gif" alt="" width="15" height="13" border="0"></td>
-          <td valign="bottom"><a href="cervical_cancer.html"><strong>Cervical Cancer</strong></a></td>
+          <td style="font-weight:bold; vertical-align:bottom;"><a href="cervical_cancer.html">Cervical Cancer</a></td>
         </tr>
         <tr>
           <td align="right" valign="top"><img src="images/bullet_black.gif" alt="" width="15" height="13" border="0"></td>
-          <td valign="bottom"><a href="colorectal_cancer.html"><strong>Colorectal Cancer</strong></a></td>
+          <td style="font-weight:bold; vertical-align:bottom;"><a href="colorectal_cancer.html">Colorectal Cancer</a></td>
         </tr>
         <tr>
           <td align="right" valign="top"><img src="images/bullet_black.gif" alt="" width="15" height="13" border="0"></td>
-          <td valign="bottom"><strong><a href="diet.html">Diet / Nutrition</a></strong></td>
+          <td style="font-weight:bold; vertical-align:bottom;"><a href="diet.html">Diet / Nutrition</a></td>
         </tr>
          <tr>
           <td align="right" valign="top"><img src="images/bullet_black.gif" alt="" width="15" height="13" border="0"></td>
-          <td valign="bottom"><strong><a href="informed.html">Informed Decision Making</a></strong></td>
+          <td style="font-weight:bold; vertical-align:bottom;"><a href="informed.html">Informed Decision Making</a></td>
         </tr>
         <!-- tr>
           <td align="right" valign="top"><img src="images/bullet_black.gif" alt="" width="15" height="13" border="0"></td>
-          <td valign="bottom"><strong><a href="5_a_day.html">Nutrition / 5 A Day</a></strong></td>
+          <td style="font-weight:bold; vertical-align:bottom;"><a href="5_a_day.html">Nutrition / 5 A Day</a></td>
         </tr -->
         <tr>
           <td align="right" valign="top"><img src="images/bullet_black.gif" alt="" width="15" height="13" border="0"></td>
-          <td valign="bottom"><a href="physical_activity.html"><strong>Physical Activity</strong></a></td>
+          <td style="font-weight:bold; vertical-align:bottom;"><a href="physical_activity.html">Physical Activity</a></td>
         </tr>
         <tr>
           <td align="right" valign="top"><img src="images/bullet_black.gif" alt="" width="15" height="13" border="0"></td>
-          <td valign="bottom"><strong><a href="sun_safety.html">Sun Safety</a></strong></td>
+          <td style="font-weight:bold; vertical-align:bottom;"><a href="public_health_genomics.html">Public Health Genomics</a></td>
         </tr>
         <tr>
           <td align="right" valign="top"><img src="images/bullet_black.gif" alt="" width="15" height="13" border="0"></td>
-          <td valign="bottom"><strong><a href="survivorship.html">Survivorship</a></strong></td>
+          <td style="font-weight:bold; vertical-align:bottom;"><a href="sun_safety.html">Sun Safety</a></td>
         </tr>
         <tr>
           <td align="right" valign="top"><img src="images/bullet_black.gif" alt="" width="15" height="13" border="0"></td>
-          <td valign="bottom"><a href="tobacco_control.html"><strong>Tobacco Control</strong></a></td>
+          <td style="font-weight:bold; vertical-align:bottom;"><a href="survivorship.html">Survivorship</a></td>
+        </tr>
+        <tr>
+          <td align="right" valign="top"><img src="images/bullet_black.gif" alt="" width="15" height="13" border="0"></td>
+          <td style="font-weight:bold; vertical-align:bottom;"><a href="tobacco_control.html">Tobacco Control</a></td>
         </tr>
 		<tr>
 		  <td valign="top" colspan="2">&nbsp;</td>
