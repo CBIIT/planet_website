@@ -165,7 +165,7 @@
         </tr>
         <tr>
           <td valign="top">&nbsp;</td>
-          <td colspan="2" valign="top"><a title="External link" href="/cgi-bin/awredir.pl?url=http://www.egappreviews.org/recommendations/index.htm" onClick="javascript:popWindow('/cgi-bin/awredir.pl?url=http://www.egappreviews.org/recommendations/index.htm', 'name','925','600','yes'); return false;">Evaluation of Genomic Applications in Practice and Prevention<img src="images/Icon_External_Link.png" alt="External link" width="12" height="12" border="0"></a>&nbsp;(EGAPP)</td>
+          <td colspan="2" valign="top"><a title="External link" href="/cgi-bin/awredir.pl?url=http://www.egappreviews.org/recommendations/index.htm" onClick="javascript:popWindow('/cgi-bin/awredir.pl?url=http://www.egappreviews.org/recommendations/index.htm', 'name','925','600','yes'); return false;">Evaluation of Genomic Applications in Practice and<br />Prevention<img src="images/Icon_External_Link.png" alt="External link" width="12" height="12" border="0"></a>&nbsp;(EGAPP)</td>
         </tr>
         <tr>
           <td valign="top">&nbsp;</td>
