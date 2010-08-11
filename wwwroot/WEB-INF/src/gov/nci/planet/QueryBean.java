@@ -8,7 +8,7 @@ import gov.nci.util.ConnPoolBean;
 import gov.nci.exception.ParameterException;
 import gov.nci.planet.bean.*;
 
-import gov.nci.validator.*;			// HF (3/30/2007) - CR #39829.  
+import gov.nci.validator.*;
 
 public class QueryBean {
 
@@ -940,7 +940,7 @@ public class QueryBean {
 		ParameterValidator pv = null;
 		try {
 			pv = new ParameterValidator();
-			textValidated = pv.validateSafe(feedbackText);
+			textValidated = pv.validateSafe(feedbackText) && !pv.isSpam(feedbackText);
 			if (textValidated)
 			{
 				phoneValidated = pv.validatePhone(phone);
