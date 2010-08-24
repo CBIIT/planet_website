@@ -32,7 +32,7 @@
 			<p>
 				<!-- <a href="index.html">Home</a><br /> -->
 				<a href="contact.html">Contact Us</a><br />	
-				<a href="/cgi-bin/awredir.pl?url=http://secure.mmgct.com/planettraining/" onClick="javascript:popWindow('/cgi-bin/awredir.pl?url=http://secure.mmgct.com/planettraining/', 'name','925','600','yes'); return false;">On-line Training</a><br />
+				<a href="/cgi-bin/awredir.pl?url=http://secure.mmgct.com/planettraining/" onclick="javascript:popWindow('/cgi-bin/awredir.pl?url=http://secure.mmgct.com/planettraining/', 'name','925','600','yes'); return false;">On-line Training</a><br />
 				<a href="about.html">About This Site</a><br />
 				<a href="factsheet.pdf">Fact Sheet (PDF)</a><br />
 				<a href="sponsors.html">Sponsors</a><br />
@@ -85,7 +85,7 @@
         </tr>
         <tr>
           <td valign="top">&nbsp;</td>
-          <td colspan="2" valign="top"><a title="External link" href="/cgi-bin/awredir.pl?url=http://statecancerprofiles.cancer.gov" onClick="javascript:popWindow('/cgi-bin/awredir.pl?url=http://statecancerprofiles.cancer.gov', 'name','925','600','yes'); return false;">State Cancer Profiles<img src="images/Icon_External_Link.png" alt="External link" width="12" height="12" border="0"></a>&nbsp;(CDC,&nbsp;NCI)</td>
+          <td colspan="2" valign="top"><a title="External link" href="/cgi-bin/awredir.pl?url=http://statecancerprofiles.cancer.gov" onclick="javascript:popWindow('/cgi-bin/awredir.pl?url=http://statecancerprofiles.cancer.gov', 'name','925','600','yes'); return false;">State Cancer Profiles<img src="images/Icon_External_Link.png" alt="External link" width="12" height="12" border="0"></a>&nbsp;(CDC,&nbsp;NCI)</td>
         </tr>
         <tr class="smaller">
           <td valign="top">&nbsp;</td>
@@ -156,16 +156,16 @@
         </tr>
 		<tr>
           <td valign="top">&nbsp;</td>
-          <td colspan="2" valign="top"><a title="External link" href="/cgi-bin/awredir.pl?url=http://www.preventiveservices.ahrq.gov" onClick="javascript:popWindow('/cgi-bin/awredir.pl?url=http://www.preventiveservices.ahrq.gov', 'name','925','600','yes'); return false;">Guide to Clinical Preventive Services<img src="images/Icon_External_Link.png" alt="External link" width="12" height="12" border="0"></a>&nbsp;(AHRQ)</td>
+          <td colspan="2" valign="top"><a title="External link" href="/cgi-bin/awredir.pl?url=http://www.uspreventiveservicestaskforce.org/index.html" onclick="javascript:popWindow('/cgi-bin/awredir.pl?url=http://www.uspreventiveservicestaskforce.org/index.html', 'name','925','600','yes'); return false;">U.S Preventive Services Task Force<img src="images/Icon_External_Link.png" alt="External link" width="12" height="12" border="0"></a>&nbsp;(Federally supported)</td>
         </tr>
         <tr>
           <td valign="top">&nbsp;</td>
           <td valign="top"><img src="images/bullet_black.gif" alt="" width="15" height="13" border="0"></td>
-          <td valign="top">Recommendations on screening, counseling, and other clinical regimens</td>
+          <td valign="top">Recommendations on screening, counseling, and preventive medications</td>
         </tr>
         <tr>
           <td valign="top">&nbsp;</td>
-          <td colspan="2" valign="top"><a title="External link" href="/cgi-bin/awredir.pl?url=http://www.egappreviews.org/recommendations/index.htm" onClick="javascript:popWindow('/cgi-bin/awredir.pl?url=http://www.egappreviews.org/recommendations/index.htm', 'name','925','600','yes'); return false;">Evaluation of Genomic Applications in Practice and<br />Prevention<img src="images/Icon_External_Link.png" alt="External link" width="12" height="12" border="0"></a>&nbsp;(EGAPP)</td>
+          <td colspan="2" valign="top"><a title="External link" href="/cgi-bin/awredir.pl?url=http://www.egappreviews.org/recommendations/index.htm" onclick="javascript:popWindow('/cgi-bin/awredir.pl?url=http://www.egappreviews.org/recommendations/index.htm', 'name','925','600','yes'); return false;">Evaluation of Genomic Applications in Practice and<br />Prevention<img src="images/Icon_External_Link.png" alt="External link" width="12" height="12" border="0"></a>&nbsp;(EGAPP)</td>
         </tr>
         <tr>
           <td valign="top">&nbsp;</td>
@@ -230,12 +230,12 @@
         </tr>
         <tr>
           <td valign="top">&nbsp;</td>
-          <td colspan="2" valign="top"><a title="External link" href="/cgi-bin/awredir.pl?url=http://www.ahrq.gov/clinic/ppipix.htm" onClick="javascript:popWindow('/cgi-bin/awredir.pl?url=http://www.ahrq.gov/clinic/ppipix.htm', 'name','925','600','yes'); return false;">Put Prevention Into Practice<img src="images/Icon_External_Link.png" alt="External link" width="12" height="12" border="0"></a>&nbsp;(AHRQ)</td>
+          <td colspan="2" valign="top"><a title="External link" href="/cgi-bin/awredir.pl?url=http://www.ahrq.gov/clinic/ppipix.htm" onclick="javascript:popWindow('/cgi-bin/awredir.pl?url=http://www.ahrq.gov/clinic/ppipix.htm', 'name','925','600','yes'); return false;">Prevention &#38; Care Management<img src="images/Icon_External_Link.png" alt="External link" width="12" height="12" border="0"></a>&nbsp;(AHRQ)</td>
         </tr>
         <tr>
           <td valign="top">&nbsp;</td>
           <td valign="top"><img src="images/bullet_black.gif" alt="" width="15" height="13" border="0"></td>
-          <td valign="top">Guidance for linking research and practice</td>
+          <td valign="top">Resources & Materials for linking research and practice</td>
         </tr>
       </table>
 
