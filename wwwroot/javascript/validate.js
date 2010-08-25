@@ -7,14 +7,19 @@ function validateForm(fieldNameToValidate)
    		var crossSiteScriptingPattern = new RegExp("((\\%3C)|<)(.|\\n)*?((\\%3E)|>)");
    		var phonePattern = new RegExp("\\([0-9]{3}\\)\\s?[0-9]{3}(-|\\s)?[0-9]{4}(\\s(x\\d+)?){0,1}$|^[0-9]{3}-?[0-9]{3}-?[0-9]{4}(\\s(x\\d+)?){0,1}$");
    		var emailPattern = new RegExp("[\\w-\\.]+@(?!acme-hack)([\\w-]+\\.)+[\\w-]{2,4}$");
+		var spamLinkPattern = "^(http://)";
    		var spamConsonantsPattern = new RegExp("[^aeiouyAEIOUY0-9\\n\\ \\/\\:\\.\\,\\-]{7,}");
+		var spamPrescriptionPattern = new RegExp("(?=.*\\bcheap\\b)(?=.*\\bprescription\\b)");
 
    		if ( (document.form1[fieldNameToValidate].value.match(sqlInjectionPattern)) ||
 			 (document.form1[fieldNameToValidate].value.match(crossSiteScriptingPattern)) ) {
-			window.alert("Please remove any special characters such as '<' and '>'.");
+			window.alert("Please remove any special characters.");
 			return false;
-		} else if (document.form1[fieldNameToValidate].value.match(spamConsonantsPattern)) {
-			window.alert("Please check spelling and/or expand any long acronyms");
+		} else if (document.form1[fieldNameToValidate].value.match(spamLinkPattern) ||
+			document.form1[fieldNameToValidate].value.match(spamConsonantsPattern) ||
+			document.form1[fieldNameToValidate].value.match(spamPrescriptionPattern) )
+		{
+			window.alert("Please check spelling, expand any long acronyms or reword your input.");
 			return false;
 		}		
    	} else {
