@@ -1,0 +1,1 @@
+place awredir.pl in /apps/whi/dccps-apps/webapps/cgi-bin when planet app dir is in /apps/whi/dccps-apps/webapps/planetApp/planet
