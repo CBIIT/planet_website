@@ -52,6 +52,7 @@
               			url: "http://ccplanet.cancer.gov/badges.html",
               			icon: "http://ccplanet.cancer.gov/images/planet_icon_tiny.gif"}],
               			data_track_linkback: true,
+						data_track_clickback,
 		 				ui_508_compliant: true
 					}
 			</script>
