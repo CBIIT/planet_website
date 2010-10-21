@@ -502,6 +502,9 @@ if (it2.hasNext()) {
 <head>
 <title><%= caption%></title>
 <script language="JavaScript" src="../popwindow.js" type="text/javascript"></script>
+<script type="text/javascript" language="javascript" src="../javascript/jquery-1.4.2.js"></script>
+<script type="text/javascript" language="javascript" src="../javascript/jquery.listen-1.0.3-min.js"></script>
+<script type="text/javascript" language="javascript" src="../javascript/addThisListener.js"></script>
 <link href="../styles.css" rel="stylesheet" type="text/css">
 </head>
 <body topmargin="0" leftmargin="0" bgcolor="White">

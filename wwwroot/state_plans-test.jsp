@@ -104,6 +104,9 @@ StringBuffer pcScript = null;
 <head>
 <title><%= caption%></title>
 <link href="styles.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" language="javascript" src="javascript/jquery-1.4.2.js"></script>
+<script type="text/javascript" language="javascript" src="javascript/jquery.listen-1.0.3-min.js"></script>
+<script type="text/javascript" language="javascript" src="javascript/addThisListener.js"></script>
 </head>
 <body topmargin="0" leftmargin="0" bgcolor="White">
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -114,7 +117,7 @@ StringBuffer pcScript = null;
 			<p>
 				<a href="index.html">Home</a><br />
 				<a href="contact.html">Contact Us</a><br />
-				<a href="http://ccplanetraining.cancer.gov" onclick="javascript:popWindow('http://ccplanetraining.cancer.gov', 'name','725','400','yes'); return false;">On-line Training</a><br />
+				<a href="http://ccplanetraining.cancer.gov" onClick="javascript:popWindow('http://ccplanetraining.cancer.gov', 'name','725','400','yes'); return false;">On-line Training</a><br />
 				<a href="about.html">About This Site</a><br />
 				<a href="factsheet.pdf">Fact Sheet (PDF)</a><br />
 				<a href="partners.html">P.L.A.N.E.T. Sponsors</a>
@@ -182,7 +185,7 @@ out.print(htmlString);
     <td><hr size="1" noshade>
 	<div align="center">
           <a href="index.html">Home</a>&nbsp;&nbsp;&nbsp;
-          <a href="contact.html">Contact Us</a>&nbsp;&nbsp;&nbsp;	<a href="http://ccplanetraining.cancer.gov" onclick="javascript:popWindow('http://ccplanetraining.cancer.gov', 'name','725','400','yes'); return false;">On-line Training</a><br />
+          <a href="contact.html">Contact Us</a>&nbsp;&nbsp;&nbsp;	<a href="http://ccplanetraining.cancer.gov" onClick="javascript:popWindow('http://ccplanetraining.cancer.gov', 'name','725','400','yes'); return false;">On-line Training</a><br />
           <a href="about.html">About this Site</a>&nbsp;&nbsp;&nbsp;
           <a href="partners.html">Sponsors</a>&nbsp;&nbsp;&nbsp;
           <a href="privacy.html">Privacy Policy</a>&nbsp;&nbsp;&nbsp;
