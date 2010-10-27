@@ -29,9 +29,9 @@ String researcherText="";
 String staticTopic = "";
 String topicLet = "C";
 
-if (param != null) 
+if (param != null) {
     region = param.toUpperCase();
-	
+	}
 param = request.getParameter("cctopic");
  
 
@@ -52,13 +52,13 @@ if (param != null)
 
     if (region.equals("ALL"))
     {
-        pcScript = "US.addPCXML(<DefaultShapeSettings><Properties FillColor='#B20000'/><Drilldown URL='rlist.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultShapeSettings>)";
+       // pcScript = "US.addPCXML(<DefaultShapeSettings><Properties FillColor='#B20000'/><Drilldown URL='rlist.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultShapeSettings>)";
         researchers = QBean.getResearchers(topic);
 		stateStatic="the US";
     }
     else
     {
-        pcScript = "US.setShapeValues("+region.trim()+",1)US.addPCXML(<DefaultShapeSettings><Drilldown URL='rlist.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultShapeSettings>)@_END";
+       // pcScript = "US.setShapeValues("+region.trim()+",1)US.addPCXML(<DefaultShapeSettings><Drilldown URL='rlist.jsp?r=%_NAME&cctopic="+topic+"' FillColor='White' ZoomPercent='120'/></DefaultShapeSettings>)@_END";
         researchers = QBean.getResearchers(topic, region);
     }
 
@@ -381,9 +381,6 @@ if (it2.hasNext()) {
 <head>
 <title>Cancer Control P.L.A.N.E.T. - <%= pageTitle%></title>
 <script language="JavaScript" src="../popwindow.js" type="text/javascript"></script>
-<script type="text/javascript" language="javascript" src="../javascript/jquery-1.4.2.js"></script>
-<script type="text/javascript" language="javascript" src="../javascript/jquery.listen-1.0.3-min.js"></script>
-<script type="text/javascript" language="javascript" src="../javascript/addThisListener.js"></script>
 <link href="../styles.css" rel="stylesheet" type="text/css">
 </head>
 <body topmargin="0" leftmargin="0" bgcolor="White"><a name="top"></a>
@@ -412,26 +409,7 @@ if (it2.hasNext()) {
 				<a href="../partners.html">Sponsors</a><br />
 				<a href="../faq.html">FAQ</a>
 			</p>
-			
-			<!-- AddThis Code -->
-            <script type="text/javascript">
-            document.writeln('<a class="addthis_button" href="http://addthis.com/bookmark.php?v=250&username=ccplanet">');
-            document.writeln('<img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a>');
-            </script>
-
-             <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=ccplanet"></script><script type="text/javascript">
-            var addthis_config = {
-                services_compact: 'email,print,twitter,ccplanet.cancer.gov,facebook,myspace,digg, more',
-                services_custom: [{
-                    	name: "Badges",
-              	        url: "http://ccplanet.cancer.gov/badges.html",
-              	        icon: "http://ccplanet.cancer.gov/images/planet_icon_tiny.gif"}],
-              	        data_track_linkback: true,
-		 		        ui_508_compliant: true
-        
-                }
-            </script>
-			
+							
 		</td>
   </tr>
   <tr>
