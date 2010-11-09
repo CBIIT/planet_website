@@ -25,7 +25,7 @@
 			<p>
 				<a href="../index.html">Home</a><br>
 				<a href="../contact.html">Contact Us</a><br>
-				<a href="/cgi-bin/awredir.pl?url=http://ccplanetraining.cancer.gov" onClick="javascript:popWindow('/cgi-bin/awredir.pl?url=http://ccplanetraining.cancer.gov', 'name','925','600','yes'); return false;"></a><br />
+				<a href="/cgi-bin/awredir.pl?url=http://ccplanetraining.cancer.gov" onClick="javascript:popWindow('/cgi-bin/awredir.pl?url=http://ccplanetraining.cancer.gov', 'name','925','600','yes'); return false;">On-line Training</a><br />
 				<a href="../about.html">About This Site</a><br>
 				<a href="../factsheet.pdf">Fact Sheet (PDF)</a><br>
 				<a href="../partners.html">Sponsors</a><br />
