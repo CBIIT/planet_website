@@ -71,7 +71,7 @@ StringBuffer pcScript = null;
 		       {
 					//create the text link
 					stateList.append("<a href='"+ rs.getPlanUrl().trim()+"' title='"+rs.getName().trim());
-		
+
 					if (rs.getPlanPeriod() != null)
 					{ 
 						stateList.append(" (Plan period: "+ rs.getPlanPeriod()+")' target='_blank'>"+rs.getName()+"</a>");
@@ -103,22 +103,25 @@ StringBuffer pcScript = null;
 			
 			if (rsb.getPlanType().equals("B"))
 			{
-			   //stateList.append("</td><td valign='top'>");
 	       
 		       //******************************
 		       if (rsb.getPlanStatus() == 1)
 		       {
 					//create the text link
 					stateList.append("<a href='"+ rsb.getPlanUrl().trim()+"' title='"+rsb.getName().trim());
-					
 					if (rsb.getPlanPeriod() != null)
-					{ 
-						stateList.append(" (Plan period: "+ rsb.getPlanPeriod()+")' target='_blank'>"+rsb.getName()+"</a>");
-					}else{
-						stateList.append("' target='_blank'>"+rsb.getName()+"</a>");
-					}
+						stateList.append(" (Plan period: "+ rsb.getPlanPeriod()+")");
+					stateList.append("'");
+					
+					// These two state plans are very large (25Mb/82Mb) and in some cases, Firefox displays, 
+					// "the file is damaged and could not be repaired".  One workaround is to right click and save
+					// to the hard drive.  This JS displays that and then attempts the download.
+					if (rsb.getName().indexOf("Fond Du Lac") > -1)
+						stateList.append(" onClick='showDownloadWarning()'");
+						
+					stateList.append(" target='_blank'>"+rsb.getName()+"</a>");
 		       }
-		       
+
 		       //******************************
 		       if (rsb.getPlanStatus() != 1)
 		       {
@@ -127,7 +130,6 @@ StringBuffer pcScript = null;
 		       }
 		       
 		       stateList.append("<br />");
-				
 				count++;
 			}
 		}while (itb.hasNext());
@@ -156,13 +158,17 @@ StringBuffer pcScript = null;
 		       {
 					//create the text link
 					stateList.append("<a href='"+ rst.getPlanUrl().trim()+"' title='"+rst.getName().trim());
-					
 					if (rst.getPlanPeriod() != null)
-					{ 
-						stateList.append(" (Plan period: "+ rst.getPlanPeriod()+")' target='_blank'>"+rst.getName()+"</a>");
-					}else{
-						stateList.append("' target='_blank'>"+rst.getName()+"</a>");
-					}
+						stateList.append(" (Plan period: "+ rst.getPlanPeriod()+")");
+					stateList.append("'");
+					
+					// These two state plans are very large (25Mb/82Mb) and in some cases, Firefox displays, 
+					// "the file is damaged and could not be repaired".  One workaround is to right click and save
+					// to the hard drive.  This JS displays that and then attempts the download.
+					if (rst.getName().indexOf("Mariana") > -1)
+						stateList.append(" onClick='showDownloadWarning()'");
+						
+					stateList.append(" target='_blank'>"+rst.getName()+"</a>");
 		       }
 		       
 		       //******************************
@@ -189,6 +195,16 @@ StringBuffer pcScript = null;
 <script type="text/javascript" language="javascript" src="javascript/jquery-1.4.2.js"></script>
 <script type="text/javascript" language="javascript" src="javascript/jquery.listen-1.0.3-min.js"></script>
 <script type="text/javascript" language="javascript" src="javascript/addThisListener.js"></script>
+<script>
+function showDownloadWarning()
+{
+	if ($.browser.mozilla) 
+		alert("If you encounter any difficulty viewing this file, please right click this link, choose 'Save Link As...' and save the file to your computer's hard drive.  You can then view the file in Adobe Reader");
+
+	return true;
+}
+</script>
+
 </head>
 <body topmargin="0" leftmargin="0" bgcolor="White">
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
