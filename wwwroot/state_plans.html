@@ -1,196 +1,8 @@
-﻿<%@ page language="java" contentType="text/html" %>
-<%@ page import="java.sql.ResultSet" %>
-<%@ page import="gov.nci.corda.NCIPopChartEmbedder" %>
-<%@ page import="gov.nci.planet.QueryBean" %>
-<%@ page import="gov.nci.planet.bean.*" %>
-<%@ page import="java.util.Vector" %>
-<%@ page import="java.util.Iterator" %>
-<%
-String param;
-String htmlString = null;
-String caption = "State, Tribe and Territory Plans";
-String pageTitle = "State, Tribe and Territory Plans";
-int count= 0;
-
-StringBuffer stateList = null;
-StringBuffer pcScript = null;
-
-     QueryBean QBean = new QueryBean();
-     Vector statePlans = QBean.getStatePlans();
-
-     //now get the information to display
-     //theQuery = "SELECT state, name, plan_status, plan_URL, type FROM states;";
-
-	 String beginTD = "<tr><td style='font-family: Arial,Helvetica;font-size: 12;' align=\"left\">";
-	 String endTD = "</td></tr>";
-
-     pcScript = new StringBuffer();
-     pcScript.append("US.addPCXML(<DefaultBackgroundShapeSettings><Properties FillColor='#b2b2b2' FillType='Pattern' PatternType='DiagonalBottomToTop'/><Drilldown URL='' FillColor='White' ZoomPercent='120'/></DefaultBackgroundShapeSettings>");
-     pcScript.append("<DefaultShapeSettings Type='Circle' Width='8' Height='8'><Properties FillColor='#b2b2b2' FillType='Pattern' PatternType='DiagonalBottomToTop'/><Drilldown URL='' FillColor='White' ZoomPercent='120'/></DefaultShapeSettings>");
-     pcScript.append("<Range Name='Plandp' LegendText='Cancer plan available (Tribal)' Minimum='1.0' Maximum='1.0'><RangeShapeSettings  Type='Circle' Width='8' Height='8'><MapProperties OverrideFillColor='True' OverrideShapeSettings='True'/><Properties FillColor='#b3a8ee'/></RangeShapeSettings></Range>");
-     pcScript.append("<Range Name='NoPlandp' LegendText='Cancer plan in progress (Tribal)' Minimum='No data' Maximum='No data'><RangeShapeSettings  Type='Circle' Width='8' Height='8'><MapProperties OverrideFillColor='True' OverrideShapeSettings='True'/><Properties FillColor='#bfbfbf' FillType='Pattern' PatternType='DiagonalTopToBottom'/></RangeShapeSettings></Range>");
-     pcScript.append("<Range Name='Plan' LegendText='Cancer plan available' Minimum='1.0' Maximum='1.0' BackgroundRange='True'><RangeShapeSettings  Type='Rectangle' Width='8' Height='8'><MapProperties OverrideFillColor='True' OverrideShapeSettings='True'/><Properties FillColor='#b3a8ee'/></RangeShapeSettings></Range>");
-     pcScript.append("<Range Name='NoPlan' LegendText='Cancer plan in progress' Minimum='No data' Maximum='No data' BackgroundRange='True'><RangeShapeSettings  Type='Rectangle' Width='8' Height='8'><MapProperties OverrideFillColor='True' OverrideShapeSettings='True'/><Properties FillColor='#bfbfbf' FillType='Pattern' PatternType='DiagonalTopToBottom'/></RangeShapeSettings></Range>)");
-     pcScript.append("US.addPCXML(<Legend Name='legend' Top='5' Left='213' Width='403' Height='23' ZIndex='56'><Properties RangeSizeForMarkers='True' MinimumFontSize='10.0' ReverseOrder='True' Font='Name:Helvetica; Size:11.0;'/></Legend>)");
-
-     Iterator it = statePlans.iterator();
-
-     if (it.hasNext())
-     {
-		stateList = new StringBuffer();
-		String typeString = "S";
-		stateList.append("<table border='0' cellpadding='5' cellspacing='0' width='100%'><tr><th colspan='3' align='left' valign='top' nowrap>States</th><th colspan='1' align='left' valign='top' nowrap>Tribes</th></tr><tr><td valign='top' nowrap>");
-
-		do
-		{
-			StatePlanBean rs = (StatePlanBean)it.next();
-			
-			if (rs.getPlanType().equals("S"))
-			{
-			
-			   //the following lines are used to create can be added back in when the list gets over 27 states
-			   //*******************************
-			   if (count == 17)
-			   {
-			    stateList.append("</td><td valign='top'>");
-			    //count = 0;
-			   }
-				if (count == 34)
-			   {
-			    stateList.append("</td><td valign='top'>");
-			    //count = 0;
-			   }
-			   if (count == 51)
-			   {
-			    stateList.append("</td><td valign='top'>");
-			    //count = 0;
-			   }
-	       
-		       //******************************
-		       if (rs.getPlanStatus() == 1)
-		       {
-					//create the text link
-					stateList.append("<a href='"+ rs.getPlanUrl().trim()+"' title='"+rs.getName().trim());
-
-					if (rs.getPlanPeriod() != null)
-					{ 
-						stateList.append(" (Plan period: "+ rs.getPlanPeriod()+")' target='_blank'>"+rs.getName()+"</a>");
-					}else{
-						stateList.append("' target='_blank'>"+rs.getName()+"</a>");
-					}
-		
-					stateList.append("<br />");
-		
-					//Idaho_Childhood_Cancer_Control_Plan.pdf
-					if (rs.getName().equals("Idaho"))
-					{
-						stateList.append("&nbsp;&nbsp;&nbsp;");
-						stateList.append("<a href='state_plans/Idaho_Childhood_Cancer_Control_Plan.pdf' title='Childhood cancer' target='_blank'>Childhood cancer</a>");
-						stateList.append("<br />");
-					}
-					
-					count++;
-		       }
-			}
-		}while (it.hasNext());
-
-		//Tribes
-		Iterator itb = statePlans.iterator();
-		stateList.append("</td><td valign='top'>");
-      	do
-		{
-			StatePlanBean rsb = (StatePlanBean)itb.next();
-			
-			if (rsb.getPlanType().equals("B"))
-			{
-	       
-		       //******************************
-		       if (rsb.getPlanStatus() == 1)
-		       {
-					//create the text link
-					stateList.append("<a href='"+ rsb.getPlanUrl().trim()+"' title='"+rsb.getName().trim());
-					if (rsb.getPlanPeriod() != null)
-						stateList.append(" (Plan period: "+ rsb.getPlanPeriod()+")");
-					stateList.append("'");
-					
-					// These two state plans are very large (25Mb/82Mb) and in some cases, Firefox displays, 
-					// "the file is damaged and could not be repaired".  One workaround is to right click and save
-					// to the hard drive.  This JS displays that and then attempts the download.
-					if (rsb.getName().indexOf("Fond Du Lac") > -1)
-						stateList.append(" onClick='showDownloadWarning()'");
-						
-					stateList.append(" target='_blank'>"+rsb.getName()+"</a>");
-		       }
-
-		       //******************************
-		       if (rsb.getPlanStatus() != 1)
-		       {
-					//create the text link
-					stateList.append(rsb.getName().trim());
-		       }
-		       
-		       stateList.append("<br />");
-				count++;
-			}
-		}while (itb.hasNext());
-      
-		//Territories
-		stateList.append("<br /><table border='0' cellpadding='0' cellspacing='0' width='100%'><tr><th colspan='1' align='left' valign='top' nowrap>Territories</th></tr></table>");
-		
-       	Iterator itt = statePlans.iterator();
-		
-      	do
-		{
-			StatePlanBean rst = (StatePlanBean)itt.next();
-			
-			if (rst.getPlanType().equals("T"))
-			{
-			   //stateList.append("</td><td valign='top'>");
-
-		    	//indent
-				if (rst.getName().equals("Chuuk State") || rst.getName().equals("Kosrae") || rst.getName().equals("Pohnpei") || rst.getName().equals("Yap State"))
-				{
-					stateList.append("&nbsp;&nbsp;&nbsp;");
-				}
-	       
-		       //******************************
-		       if (rst.getPlanStatus() == 1)
-		       {
-					//create the text link
-					stateList.append("<a href='"+ rst.getPlanUrl().trim()+"' title='"+rst.getName().trim());
-					if (rst.getPlanPeriod() != null)
-						stateList.append(" (Plan period: "+ rst.getPlanPeriod()+")");
-					stateList.append("'");
-					
-					// These two state plans are very large (25Mb/82Mb) and in some cases, Firefox displays, 
-					// "the file is damaged and could not be repaired".  One workaround is to right click and save
-					// to the hard drive.  This JS displays that and then attempts the download.
-					if (rst.getName().indexOf("Mariana") > -1)
-						stateList.append(" onClick='showDownloadWarning()'");
-						
-					stateList.append(" target='_blank'>"+rst.getName()+"</a>");
-		       }
-		       
-		       //******************************
-		       if (rst.getPlanStatus() != 1)
-		       {
-					//create the text link
-					stateList.append(rst.getName().trim());
-		       }
-		       
-		       stateList.append("<br />");
-				
-				count++;
-			}
-		}while (itt.hasNext());
-       	
-		stateList.append("</td></tr></table>");
-     }
-%>
-<html>
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<title><%= caption%></title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Cancer Control P.L.A.N.E.T. - State, Tribe and Territory Plans</title>
 	<link href="styles.css" rel="stylesheet" type="text/css" />
 	<link href="http://fonts.googleapis.com/css?family=Cabin" rel="stylesheet" type="text/css" />
 	<script src="Scripts/swfobject_modified.js" type="text/javascript"></script>
@@ -218,10 +30,13 @@ StringBuffer pcScript = null;
 	<div id="skip"><a href="#skipnav">Skip to content</a></div>
 	<div id="banner"><a href="index.html"><img src="images/banner.gif" width="1000" height="137" border="0" alt="Cancer Control P.L.A.N.E.T. Plan, Link, Act, Network with Evidence-based Tools" /></a></div>
 
-	<div id="contentWrapper">
+	<div id="headerTagline">
+			<a href="index.html">Links to comprehensive cancer control resources for public health professionals</a>
+		</div>
+		<div id="contentWrapper">
 		<div id="topNav">
 			<p><a href="index.html">Home</a> | <a href="about.html">About This Site</a> | <a href="faq.html">FAQ</a> | <a href="sponsors.html">Sponsors</a></p></div>
-
+			
 		<a name="skipnav" id="skipnav"></a>
 		<div id="content">
 			<div style="float: right; width: 400px; margin-bottom: 1em; margin-right: 28px;">
@@ -230,7 +45,8 @@ StringBuffer pcScript = null;
 				<strong>New users</strong>, please click, "Help for new users" on CDC's Web site to learn how to use the search tool.)</span>
 			</div>
 			<h2>State, Tribe and Territory Plans<br /><span style="font-size: 60%;">(No link indicates that a cancer control plan is currently not available)</span></h2>
-
+			
+			
 			<table border='0' cellpadding='5' cellspacing='0' width='950'>
 				<tr>
 					<th colspan='3' align='left' valign='top' nowrap width="550">States</th>
