@@ -225,7 +225,8 @@ StringBuffer pcScript = null;
 		<a name="skipnav" id="skipnav"></a>
 		<div id="content">
 			<div style="float: right; width: 400px; margin-bottom: 1em; margin-right: 28px;">
-				<a title="External link" href="/cgi-bin/awredir.pl?url=http://apps.nccd.cdc.gov/CCCSearch/Default/Default.aspx" onClick="javascript:popWindow('/cgi-bin/awredir.pl?url=http://apps.nccd.cdc.gov/CCCSearch/Default/Default.aspx'); return false;"><img src="images/binocs.jpg" alt="" border="0" align="absmiddle"><strong>Search Cancer Control Plans</strong><img src="images/Icon_External_Link.png" alt="External link" border="0"></a><br />
+				<!--<a title="External link" href="/cgi-bin/awredir.pl?url=http://apps.nccd.cdc.gov/CCCSearch/Default/Default.aspx" onClick="javascript:popWindow('/cgi-bin/awredir.pl?url=http://apps.nccd.cdc.gov/CCCSearch/Default/Default.aspx'); return false;"><img src="images/binocs.jpg" alt="" border="0" align="absmiddle"><strong>Search Cancer Control Plans</strong><img src="images/Icon_External_Link.png" alt="External link" border="0"></a><br />-->
+				<a title="External link" href="http://apps.nccd.cdc.gov/CCCSearch/Default/Default.aspx"><img src="images/binocs.jpg" alt="" border="0" align="absmiddle"><strong>Search Cancer Control Plans</strong><img src="images/Icon_External_Link.png" alt="External link" border="0"></a><br />
 				<span style="font-size: 80%;">(<strong>Note:</strong> the link above will take you to CDC's search tool.<br />
 				<strong>New users</strong>, please click, "Help for new users" on CDC's Web site to learn how to use the search tool.)</span>
 			</div>
