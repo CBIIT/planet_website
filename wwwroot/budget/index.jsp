@@ -2,8 +2,7 @@
 <!-- %@ page import="com.corda.CordaEmbedder" %  -->
 <%@ page import="gov.nci.corda.NCIPopChartEmbedder" %>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>Cancer Control P.L.A.N.E.T. - State, Tribe and Territory Implementation Budgets</title>
@@ -116,5 +115,8 @@
 		<div id="footer"><p><a href="../index.html">Home</a> | <a href="../contact.html">Contact Us</a> | <a href="../viewing-files.html">Viewing Files</a> | <a href="../privacy.html">Privacy Policy</a> | <a href="../disclaimer.html">Disclaimer</a> | <a href="../accessibility.html">Accessibility</a></p><br /></div>
 	</div>
 </div>
+<!--  HF (6/3/08) CR #41097 
+<script type="text/javascript" src="ieupdate.js"></script>
+ -->
 </body>
 </html>
