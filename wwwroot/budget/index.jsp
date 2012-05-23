@@ -47,7 +47,7 @@
 			<p>To view, click on map or state name below.</p>
 			<p>To locate Cancer Control Plans go to the <a href="../state_plans.jsp">Plans</a> page.</p>
 			
-			<div style="position: relative; float: left; width: 300px;">
+			<div style="position: relative; float: left; width: 130px;">
 				<p style="font-weight: bold;">States</p>
 				<p>
 					<a href="./budget_files/Delaware_Cancer_Control_Budget.pdf" class="a1" target="_blank">Delaware</a><br />
@@ -56,7 +56,7 @@
 					<a href="./budget_files/Wyoming Comprehensive Cancer Control Budget.pdf" class="a1" target="_blank">Wyoming</a>
 				</p>
 			</div>
-			<div style="position: relative; float: right; width: 700px;">
+			<div style="position: relative; float: right; width: 850px;">
 				<%  
 					String htmlString = "";
 					StringBuffer pcScript = new StringBuffer();
