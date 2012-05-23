@@ -217,7 +217,10 @@ StringBuffer pcScript = null;
 <div id="pageWrapper">
 	<div id="skip"><a href="#skipnav">Skip to content</a></div>
 	<div id="banner"><a href="index.html"><img src="images/banner.gif" width="1000" height="137" border="0" alt="Cancer Control P.L.A.N.E.T. Plan, Link, Act, Network with Evidence-based Tools" /></a></div>
-
+	<div id="headerTagline">
+			<a href="index.html">Links to comprehensive cancer control resources for public health professionals</a>
+	</div>
+	
 	<div id="contentWrapper">
 		<div id="topNav">
 			<p><a href="index.html">Home</a> | <a href="about.html">About This Site</a> | <a href="faq.html">FAQ</a> | <a href="sponsors.html">Sponsors</a></p></div>
