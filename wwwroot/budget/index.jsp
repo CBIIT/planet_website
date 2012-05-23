@@ -1,166 +1,120 @@
-<%@ page language="java" contentType="text/html" %>
+﻿<%@ page language="java" contentType="text/html" %>
 <!-- %@ page import="com.corda.CordaEmbedder" %  -->
 <%@ page import="gov.nci.corda.NCIPopChartEmbedder" %>
 
-
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>State, Tribe and Territory Implementation Budgets</title>
-<link href="../styles.css" rel="stylesheet" type="text/css">
-<script type="text/javascript" language="javascript" src="../javascript/jquery-1.4.2.js"></script>
-<script type="text/javascript" language="javascript" src="../javascript/jquery.listen-1.0.3-min.js"></script>
-<script type="text/javascript" language="javascript" src="../javascript/addThisListener.js"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Cancer Control P.L.A.N.E.T. - State, Tribe and Territory Implementation Budgets</title>
+	<link href="../styles.css" rel="stylesheet" type="text/css" />
+	<link href="http://fonts.googleapis.com/css?family=Cabin" rel="stylesheet" type="text/css" />
+	<script src="../Scripts/swfobject_modified.js" type="text/javascript"></script>
+	<script language="JavaScript" src="../popwindow.js" type="text/javascript"></script>
+	<script src="../toggle.js" type="text/javascript"></script>
+	<script type="text/javascript" language="javascript" src="../javascript/jquery-1.4.2.js"></script>
+	<script type="text/javascript" language="javascript" src="../javascript/jquery.listen-1.0.3-min.js"></script>
+	<script type="text/javascript" language="javascript" src="../javascript/addThisListener.js"></script>
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-30179125-1']);
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
 </head>
-<body topmargin="0" leftmargin="0" bgcolor="White">
-<table width="100%" border="0" cellspacing="0" cellpadding="0">
-	<tr>
-		<td>
-			<p class="banner">
-				<a href="../index.html">
-					<img src="../images/planet_logo.gif" alt="Cancer Control P.L.A.N.E.T. - Plan, Link, Act, Network with Evidence-based Tools" width="169" height="87" border="0"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p></td>    <td><a href="../index.html"><img src="../images/planet_banner_wider.gif" alt="Cancer Control P.L.A.N.E.T. - Links to comprehensive cancer control resources for public health professionals" width="500" height="82" border="0" />
-				</a>
-			</p>
-		</td>
-		<td>
-			<p>
-				<a href="../index.html">Home</a><br>
-				<a href="../contact.html">Contact Us</a><br>
-				<a href="/cgi-bin/awredir.pl?url=http://ccplanettraining.cancer.gov" onClick="javascript:popWindow('/cgi-bin/awredir.pl?url=http://ccplanettraining.cancer.gov', 'name','925','600','yes'); return false;">On-line Training</a><br />
-				<a href="../about.html">About This Site</a><br>
-				<a href="../factsheet.pdf">Fact Sheet (PDF)</a><br>
-				<a href="../partners.html">Sponsors</a><br />
-				<a href="../faq.html">FAQ</a>
-			</p>
+
+<body>
+
+<div id="pageWrapper">
+	<div id="skip"><a href="#skipnav">Skip to content</a></div>
+	<div id="banner"><a href="../index.html"><img src="../images/banner.gif" width="1000" height="137" border="0" alt="Cancer Control P.L.A.N.E.T. Plan, Link, Act, Network with Evidence-based Tools" /></a></div>
+
+	<div id="headerTagline">
+			<a href="../index.html">Links to comprehensive cancer control resources for public health professionals</a>
+		</div>
+		<div id="contentWrapper">
+		<div id="topNav">
+			<p><a href="../index.html">Home</a> | <a href="../about.html">About This Site</a> | <a href="../faq.html">FAQ</a> | <a href="../sponsors.html">Sponsors</a></p></div>
+
+		<a name="skipnav" id="skipnav"></a>
+		<div id="content">
+			<h2>State, Tribe and Territory Implementation Budgets</h2>
+
+			<p>To view, click on map or state name below.</p>
+			<p>To locate Cancer Control Plans go to the <a href="../state_plans.jsp">Plans</a> page.</p>
 			
-			<!-- AddThis Code -->
-            <script type="text/javascript">
-            document.writeln('<a class="addthis_button" href="http://addthis.com/bookmark.php?v=250&username=ccplanet">');
-            document.writeln('<img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a>');
-            </script>
+			<div style="position: relative; float: left; width: 300px;">
+				<p style="font-weight: bold;">States</p>
+				<p>
+					<a href="./budget_files/Delaware_Cancer_Control_Budget.pdf" class="a1" target="_blank">Delaware</a><br />
+					<a href="./budget_files/Iowa Comprehensive Cancer Control Budget.xls" class="a1" target="_blank">Iowa</a><br />
+					<a href="./budget_files/NH.zip" class="a1" target="_blank">New Hampshire</a><br />
+					<a href="./budget_files/Wyoming Comprehensive Cancer Control Budget.pdf" class="a1" target="_blank">Wyoming</a>
+				</p>
+			</div>
+			<div style="position: relative; float: right; width: 700px;">
+				<%  
+					String htmlString = "";
+					StringBuffer pcScript = new StringBuffer();
 
-             <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=ccplanet"></script><script type="text/javascript">
-            var addthis_config = {
-                services_compact: 'email,print,twitter,ccplanet.cancer.gov,facebook,myspace,digg, more',
-                services_custom: [{
-                    	name: "Badges",
-              	        url: "http://ccplanet.cancer.gov/badges.html",
-              	        icon: "http://ccplanet.cancer.gov/images/planet_icon_tiny.gif"}],
-              	        data_track_linkback: true,
-		 		        ui_508_compliant: true
-        
-                }
-            </script>
-		</td>
-  </tr>
-  <tr>
-    <td colspan="3" id="breadcrumbs"><a href="../index.html">Home</a> &gt; State, Tribe and Territory Implementation Budgets</td>
-  </tr>
-  <tr>
-    <td colspan="3" id="breadcrumbs2">&nbsp;</td>
-  </tr>
-</table>
+					// HF (10/26/07) CR #40359 - reenable DE. 
+					//  String[] entity = {"IA","NH","WY"};
+					//  String[] docs = {"Iowa Comprehensive Cancer Control Budget.xls", "NH.zip", "Wyoming Comprehensive Cancer Control Budget.pdf"};
+					String[] entity = {"DE", "IA","NH","WY"};
+					String[] docs = {"Delaware_Cancer_Control_Budget.pdf", "Iowa Comprehensive Cancer Control Budget.xls", "NH.zip", "Wyoming Comprehensive Cancer Control Budget.pdf"};
+					String[] prefix = {"", "redirectIE6.jsp?", "", ""};
+					//    String[] prefix = {"", "indexOrig.jsp?", "", ""};
 
-<div STYLE="display: block; position: relative; left: 5px">
+					try
+					{
+					for (int i=0; i<entity.length; i++)
+					{
+					// HF (6/22/07) CR #39949 - changed link from absolute URL (./budget_files/) to relative (./budget_files).
+					//    		pcScript.append("US_" + entity[i] + ".SetValue(1)US_" + entity[i] + ".AddPCXML(<ItemShapeSettings><MapProperties OverrideDrilldownSettings='True'/><Drilldown URL='" + prefix[i] + "./budget_files/" + docs[i] + "' Target='_blank' FillColor='White' ZoomPercent='110'/></ItemShapeSettings>)");
+					pcScript.append("US_" + entity[i] + ".SetValue(1)US_" + entity[i] + ".AddPCXML(<ItemShapeSettings><MapProperties OverrideDrilldownSettings='True'/><Drilldown URL='" + prefix[i] + "./budget_files/" + docs[i] + "' Target='_self' FillColor='White' ZoomPercent='110'/></ItemShapeSettings>)");
+					}
 
-<table summary="Links to province cancer control plans" bgcolor="white" border="0" cellpadding="5" cellspacing="0">
-<tr>
-<td align="left" colspan="3">
-<div style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif; font-size : 16px; font-weight: bold;color : #000000;">
-<img src="../images/planet_step5.gif" alt="Step 5" align="absmiddle">&nbsp;State, Tribe and Territory Implementation Budgets</div>
+					// CordaEmbedder theChart = new CordaEmbedder();		// HF (6/22/07) CR #39949 - replaced CordaEmbedder with our derived class, NCIPopChartEmbedder.
+					NCIPopChartEmbedder theChart = new NCIPopChartEmbedder();
 
-<p><div style="font-family : Verdana, Geneva, Arial, Helvetica, sans-serif; font-size : 12px; color : #000000;">
-To view, click on map or state name below.
-<p>To locate Cancer Control Plans go to the  <a href="../state_plans.jsp">Plans</a> page.</p>
+					theChart.appearanceFile = "apfiles/planet/US_planet_budget.pcxml";	// HF (6/22/07) CR #39949 - Adjusted to point to the planet directory on the Corda server (spica).
+					theChart.height=449;
+					theChart.width=629;
 
+					//change the following to hit your optimap server/commport or redirector/clustermonitor address
+					// HF (6/22/07) CR #39949 	theChart.externalServerAddress = "http://procyon.cit.nih.gov:2001";
+					// HF (6/22/07) CR #39949         theChart.internalCommPortAddress = "http://procyon.cit.nih.gov:2002";
+					//theChart.isPostRequest = true;
+					// HF (6/22/07) CR #39949        theChart.externalServerAddress = "http://127.0.0.1:2001";
+					//theChart.externalServerAddress = "http://192.168.2.8:8080/corda/server/";
+					// HF (6/22/07) CR #39949         theChart.internalCommPortAddress = "http://127.0.0.1:2002";
+
+					theChart.userAgent = request.getHeader("USER-AGENT");
+					theChart.pcScript = pcScript.toString();
+					theChart.returnDescriptiveLink = false;
+					theChart.extraCTSCommands = "@_NOJSPOPUP";
+					theChart.imageType = "FLASH";		// HF (6/22/07) CR #39949 - per Eric Luke, change outputType to imageType (former causes unresolved exception).
+					theChart.addObjectParamTag("allowScriptAccess", "sameDomain");
+					htmlString += theChart.getEmbeddingHTML();
+
+					}
+					catch(Exception exc)
+					{
+					//System.out.println(exc.toString());
+					htmlString = "<p><FONT style=\"font-face: Arial, Helvetica;font-size: 18;font-style: bold;color: #000000;\">An error occured retrieving the image</FONT></p>";
+					}
+				%>
+				<%= htmlString%>
+			</div>
+		</div>
+
+		<div id="footer"><p><a href="../index.html">Home</a> | <a href="../contact.html">Contact Us</a> | <a href="../viewing-files.html">Viewing Files</a> | <a href="../privacy.html">Privacy Policy</a> | <a href="../disclaimer.html">Disclaimer</a> | <a href="../accessibility.html">Accessibility</a></p><br /></div>
+	</div>
 </div>
-
-</td>
-</tr>
-<tr>
-<td valign='top'><table border='0' cellpadding='5' cellspacing='0' width='100%'><tr><th colspan='2' align='left' valign='top' nowrap>States</th></tr><tr><td valign='top' nowrap style='font-family:Arial, Helvetica, Verdana, Geneva, sans-serif;font-size:12px;'>
-
-<a href="./budget_files/Delaware_Cancer_Control_Budget.pdf" class="a1" target="_blank">Delaware</a><br />
-<a href="./budget_files/Iowa Comprehensive Cancer Control Budget.xls" class="a1" target="_blank">Iowa</a><br />
-<a href="./budget_files/NH.zip" class="a1" target="_blank">New Hampshire</a><br />
-<a href="./budget_files/Wyoming Comprehensive Cancer Control Budget.pdf" class="a1" target="_blank">Wyoming</a></td></tr>
-</table><br />
-</td>
-	<td valign='top'>
-<%  
-    String htmlString = "";
-    StringBuffer pcScript = new StringBuffer();
-    
-// HF (10/26/07) CR #40359 - reenable DE. 
-//  String[] entity = {"IA","NH","WY"};
-//  String[] docs = {"Iowa Comprehensive Cancer Control Budget.xls", "NH.zip", "Wyoming Comprehensive Cancer Control Budget.pdf"};
-    String[] entity = {"DE", "IA","NH","WY"};
-    String[] docs = {"Delaware_Cancer_Control_Budget.pdf", "Iowa Comprehensive Cancer Control Budget.xls", "NH.zip", "Wyoming Comprehensive Cancer Control Budget.pdf"};
-    String[] prefix = {"", "redirectIE6.jsp?", "", ""};
-//    String[] prefix = {"", "indexOrig.jsp?", "", ""};
-	
-    try
-    {
-    	for (int i=0; i<entity.length; i++)
-	{
-    		// HF (6/22/07) CR #39949 - changed link from absolute URL (./budget_files/) to relative (./budget_files).
-//    		pcScript.append("US_" + entity[i] + ".SetValue(1)US_" + entity[i] + ".AddPCXML(<ItemShapeSettings><MapProperties OverrideDrilldownSettings='True'/><Drilldown URL='" + prefix[i] + "./budget_files/" + docs[i] + "' Target='_blank' FillColor='White' ZoomPercent='110'/></ItemShapeSettings>)");
-    		pcScript.append("US_" + entity[i] + ".SetValue(1)US_" + entity[i] + ".AddPCXML(<ItemShapeSettings><MapProperties OverrideDrilldownSettings='True'/><Drilldown URL='" + prefix[i] + "./budget_files/" + docs[i] + "' Target='_self' FillColor='White' ZoomPercent='110'/></ItemShapeSettings>)");
-	}
-    	
-        // CordaEmbedder theChart = new CordaEmbedder();		// HF (6/22/07) CR #39949 - replaced CordaEmbedder with our derived class, NCIPopChartEmbedder.
-        NCIPopChartEmbedder theChart = new NCIPopChartEmbedder();
-        
-        theChart.appearanceFile = "apfiles/planet/US_planet_budget.pcxml";	// HF (6/22/07) CR #39949 - Adjusted to point to the planet directory on the Corda server (spica).
-        theChart.height=449;
-        theChart.width=629;
-
-		//change the following to hit your optimap server/commport or redirector/clustermonitor address
-// HF (6/22/07) CR #39949 	theChart.externalServerAddress = "http://procyon.cit.nih.gov:2001";
-// HF (6/22/07) CR #39949         theChart.internalCommPortAddress = "http://procyon.cit.nih.gov:2002";
-	//theChart.isPostRequest = true;
-// HF (6/22/07) CR #39949        theChart.externalServerAddress = "http://127.0.0.1:2001";
-        //theChart.externalServerAddress = "http://192.168.2.8:8080/corda/server/";
-// HF (6/22/07) CR #39949         theChart.internalCommPortAddress = "http://127.0.0.1:2002";
-
-	      theChart.userAgent = request.getHeader("USER-AGENT");
-	      theChart.pcScript = pcScript.toString();
-	      theChart.returnDescriptiveLink = false;
-        theChart.extraCTSCommands = "@_NOJSPOPUP";
-            theChart.imageType = "FLASH";		// HF (6/22/07) CR #39949 - per Eric Luke, change outputType to imageType (former causes unresolved exception).
-            theChart.addObjectParamTag("allowScriptAccess", "sameDomain");
-	      htmlString += theChart.getEmbeddingHTML();
-        
-    }
-    catch(Exception exc)
-    {
-     //System.out.println(exc.toString());
-     htmlString = "<p><FONT style=\"font-face: Arial, Helvetica;font-size: 18;font-style: bold;color: #000000;\">An error occured retrieving the image</FONT></p>";
-    }
-%>
-<%= htmlString%>
-</td>
-</tr>
-</table>
-</div>
-
-<table width="100%" border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><hr size="1" noshade>
-	<div align="center">
-          <a href="../index.html">Home</a>&nbsp;&nbsp;&nbsp;
-          <a href="../contact.html">Contact Us</a>&nbsp;&nbsp;&nbsp;
-          <a href="../about.html">About this Site</a>&nbsp;&nbsp;&nbsp;
-          <a href="../partners.html">Sponsors</a>&nbsp;&nbsp;&nbsp;
-
-          <a href="../privacy.html">Privacy Policy</a>&nbsp;&nbsp;&nbsp;
-          <a href="../disclaimer.html">Disclaimer</a>&nbsp;&nbsp;&nbsp;
-          <a href="../accessibility.html">Accessibility</a><br>
-      </div>
-    </td>
-  </tr>
-</table>
-<!--  HF (6/3/08) CR #41097 
-<script type="text/javascript" src="ieupdate.js"></script>
- -->
-</body></html>
-
+</body>
+</html>
