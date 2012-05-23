@@ -48,7 +48,7 @@
           
           <p><strong>P.L.A.N.E.T. Feedback</strong></p>
 
-		<p>You may also provide feedback on the Cancer Control P.L.A.N.E.T. below.</p>
+		<p><label for="feedback">You may also provide feedback on the Cancer Control P.L.A.N.E.T. below.</label></p>
 		
 		<script>
 		if (window.location.search.length > 0)
@@ -58,7 +58,7 @@
       <table border="0" cellspacing="0" cellpadding="0"><!-- feedback form -->
 				<form method="post" action="contactsubmit.jsp" id="form1" name="form1" onSubmit="return validateForm('feedback');">
           <tr>
-				    <td align="left" colspan="2"><textarea rows="12" cols="70" name="feedback"></textarea></td>
+				    <td align="left" colspan="2"><textarea rows="12" cols="70" name="feedback" id="feedback"></textarea></td>
 			    </tr>
 			    <tr>
 						<td align="left" colspan="2">&nbsp;</td>
@@ -70,19 +70,21 @@
 						<td align="left" colspan="2">&nbsp;</td>
 					</tr>
 					<tr>
-						<td align="left">E-mail:</td>
-						<td align="left"><input type="text" name="email"></td>
+						<td align="left"><label for="email">E-mail:</label></td>
+						<td align="left"><input type="text" name="email" id="email"></td>
 					</tr>
 					<tr>
-						<td align="left">Phone:</td>
-						<td align="left"><input type="text" name="phone"></td>
+						<td align="left"><label for="phone">Phone:</label></td>
+						<td align="left"><input type="text" name="phone" id="phone"></td>
 					</tr>
 					<tr>
 						<td align="left" colspan="2">&nbsp;</td>
 					</tr>
 					<tr>
-						<td align="left" colspan="2"><input type="submit" name="Submit" value="Submit Comments">
-						<input type="reset" name="reset" value="Clear Form"></td>
+						<td align="left" colspan="2">
+							<input type="submit" name="Submit" value="Submit Comments">
+							<input type="reset" name="reset" value="Clear Form">
+						</td>
 					</tr>
 					</form>
         </table><!-- End of feedback form -->
