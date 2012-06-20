@@ -123,9 +123,9 @@
 			</p>
 			<p style="text-align: center">
 				<a href="http://www.hhs.gov">
-					<img src="images/footer-hhs.gif" alt="Department of Health and Human Services" /></a>
+					<img src="../images/footer-hhs.gif" alt="Department of Health and Human Services" /></a>
 				<a href="http://www.usa.gov">
-					<img style="margin-left: 12px;" src="images/footer-usa.gif" alt="USA.gov" /></a><br /><br />
+					<img style="margin-left: 12px;" src="../images/footer-usa.gif" alt="USA.gov" /></a><br /><br />
 			</p>
 		</div>
 	</div>
