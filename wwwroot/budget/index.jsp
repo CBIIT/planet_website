@@ -114,11 +114,11 @@
 
 		<div id="footer">
 			<p>
-				<a href="index.html">Home</a> | 
-				<a href="contact.html">Contact Us</a> | 
-				<a href="viewing-files.html">Viewing Files</a> | 
+				<a href="../index.html">Home</a> | 
+				<a href="../contact.html">Contact Us</a> | 
+				<a href="../viewing-files.html">Viewing Files</a> | 
 				<a href="http://www.cancer.gov/global/web/policies/page2">Privacy Policy</a> | 
-				<a href="disclaimer.html">Disclaimer</a> | 
+				<a href="../disclaimer.html">Disclaimer</a> | 
 				<a href="http://www.cancer.gov/global/web/policies/page3">Accessibility</a>
 			</p>
 			<p style="text-align: center">

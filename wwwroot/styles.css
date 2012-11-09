@@ -167,7 +167,7 @@ body {  /* Sets font face, size, and full page background */
 	
 }
 
-#footer img { border: 0; }
+#footer a img { border: 0; }
 
 .clear {
 	clear: both;
