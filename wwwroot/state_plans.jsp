@@ -300,7 +300,6 @@ StringBuffer pcScript = null;
 						<a href='state_plans/Wyoming_Cancer_Control_Plan.pdf' title='Wyoming' target='_blank'>Wyoming</a><br />
 					</td>
 					<td valign='top'>
-						Aberdeen Area Tribal Chairman's Health Board<br />
 						<a href='state_plans/Alaska_Native_Tribal_Health_Consortium_Cancer_Control_Plan.pdf' title='Alaska Native Tribal Health Consortium' target='_blank'>Alaska Native Tribal Health Consortium</a><br />
 						<a href='state_plans/Cherokee_Nation_Cancer_Control_Plan.pdf' title='Cherokee Nation' target='_blank'>Cherokee Nation</a><br />
 						<a href='state_plans/Fond_du_Lac_Cancer_Control_Plan.pdf' title='Fond Du Lac Reservation' onClick='showDownloadWarning()' target='_blank'>Fond Du Lac Reservation</a><br />
