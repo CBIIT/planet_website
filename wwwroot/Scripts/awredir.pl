@@ -12,7 +12,7 @@
 # Defines
 #-------------------------------------------------------
 use vars qw/ $REVISION $VERSION /;
-$REVISION='$Revision: 1.1 $'; $REVISION =~ /\s(.*)\s/; $REVISION=$1;
+$REVISION='$Revision: 1.2 $'; $REVISION =~ /\s(.*)\s/; $REVISION=$1;
 $VERSION="1.1 (build $REVISION)";
 
 use vars qw / $DIR $PROG $Extension $DEBUG $DEBUGFILE $REPLOG $DEBUGRESET $SITE $REPCONF /;
@@ -159,7 +159,8 @@ my @redirSites = (
 	"http://www3.interscience.wiley.com",
 	"http://secure.mmgct.com/planettraining/",
 	"http://www.uspreventiveservicestaskforce.org/",
-	"http://www.egappreviews.org/"
+	"http://www.egappreviews.org/",
+	"http://www.iccp-portal.org/"
 );
 
 # Parse the list of sites listed on planet.cancer.gov (above) and if the current Url matches, then allow redirection. 
