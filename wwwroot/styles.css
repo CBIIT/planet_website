@@ -322,7 +322,8 @@ a:HOVER {
 }
 
 a:VISITED {
-	color: #637cbe;
+/*	color: #637cbe;*/
+	color: #19388a;
 }
 
 #skip a {
