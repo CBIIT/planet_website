@@ -60,4 +60,8 @@
         <servlet-name>ctRedirector</servlet-name>
         <url-pattern>/servlet/ctRedirector</url-pattern>
     </servlet-mapping>
+   <error-page>
+      <error-code>404</error-code>
+      <location>/problem.html</location>
+   </error-page>
 </web-app>
