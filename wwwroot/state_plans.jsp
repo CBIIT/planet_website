@@ -248,7 +248,7 @@ StringBuffer pcScript = null;
 						<a href='state_plans/Arkansas_Cancer_Control_Plan.pdf' title='Arkansas' target='_blank'>Arkansas</a><br />
 						<a href='state_plans/California_Cancer_Control_Plan.pdf' title='California' target='_blank'>California</a><br />
 						<a href='state_plans/Colorado_Cancer_Control_Plan.pdf' title='Colorado' target='_blank'>Colorado</a><br />
-						<a href='http://ctcancerpartnership.org/plan/plan.list.asp' title='Connecticut' target='_blank'>Connecticut</a><br />
+						<a href='http://ctcancerpartnership.org/plan/plan.list.asp' title='Connecticut' target='_blank'>Connecticut<img border="0" alt="External link" src="images/Icon_External_Link.png" width="12" height="12" /></a><br />
 						<a href='state_plans/Delaware_Cancer_Control_Plan.pdf' title='Delaware' target='_blank'>Delaware</a><br />
 						<a href='state_plans/District_of_Columbia_Cancer_Control_Plan.pdf' title='District of Columbia' target='_blank'>District of Columbia</a><br />
 						<a href='state_plans/Florida_Cancer_Control_Plan.pdf' title='Florida' target='_blank'>Florida</a><br />
