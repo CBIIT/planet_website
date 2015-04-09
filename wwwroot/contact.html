@@ -31,7 +31,7 @@
 		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 	})();
     </script>
-
+	<script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 <body>
     <div id="pageWrapper">
@@ -69,16 +69,24 @@
                     <label for="feedback">
                         <font color="#FF0000">*</font> You may also provide feedback on the Cancer Control P.L.A.N.E.T. below.</label></p>
 
-                <script>
+        <script>
 		if (window.location.search.length > 0)
 			document.write(unescape("<div class='red'>" + window.location.search.substr(1) + "</div>"));
-                </script>
+        </script>
 
-                <script language="javascript" type="text/javascript">
+        <script language="javascript" type="text/javascript">
 		
 		function ValidatThisForm_RWB()
 		{
-			var bln_valid = true;
+	
+			var bln_valid = true;	
+			
+			if ((grecaptcha.getResponse()) == false)
+			{
+				alert('Please complete the reCaptcha widget');
+				return false;
+			}
+				
 			if ((validateForm('feedback')) == false)
 			{
 			return false;	
@@ -107,8 +115,7 @@
 		}
 		return true;
 		}
-		
-                </script>
+        </script>
 
                 <table border="0" cellspacing="0" cellpadding="0">
                     <!-- feedback form -->
@@ -159,6 +166,7 @@
                     <tr>
                         <td align="left" colspan="2">
                     <p style="color:#F00"><em>* denotes required field</em></p>
+                    <div class="g-recaptcha" data-sitekey="6LfZigMTAAAAAJAxHfGP5ayDta_HsqRx4GIrIWXH"></div>
                             <input type="submit" name="Submit" value="Submit Comments">
                             <input type="reset" name="reset" value="Clear Form">
                         </td>
