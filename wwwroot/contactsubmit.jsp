@@ -72,8 +72,13 @@
     if (feedback == null || feedback.equals(""))
     {
 %>
-          <p>No information entered -- please enter your comments on the <a href="contact.html">contact page</a>.</p>
+          <p>No information entered -- please enter your comments with an email on the <a href="contact.html">contact page</a>.</p>
 <%
+    }
+    else if (email == null || email.equals("")) {
+%>
+		<p>No information entered -- please enter your comments with an email on the <a href="contact.html">contact page</a>.</p>
+<%    	
     }
     else
     {
