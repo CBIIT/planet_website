@@ -1,6 +1,9 @@
 <%@ page import="java.sql.*" %>
 <%@ page import="oracle.jdbc.*" %>
 <%@ page import="gov.nci.planet.QueryBean" %>
+<%@ page import="gov.nci.planet.CaptchaValidator" %>
+<%@ page import="java.net.*" %>
+<%@ page import="java.io.*" %>
 <html>
 <head>
 <title>Cancer Control P.L.A.N.E.T.</title>
@@ -56,23 +59,30 @@
 
     <p>Your comments, questions, and suggestions are appreciated.</p>
 
-<p>For general cancer information, please visit <a title="External link" href="/cgi-bin/awredir.pl?url=http://www.cancer.gov">Cancer.gov<img src="images/Icon_External_Link.png" alt="External link" width="12" height="12" border="0"></a>.</p>
+	<p>For general cancer information, please visit <a title="External link" href="/cgi-bin/awredir.pl?url=http://www.cancer.gov">Cancer.gov<img src="images/Icon_External_Link.png" alt="External link" width="12" height="12" border="0"></a>.</p>
 
-		<p>You may also provide feedback here on the Cancer Control P.L.A.N.E.T.</p>
+	<p>You may also provide feedback here on the Cancer Control P.L.A.N.E.T.</p>
 			<table width="100%" border="0" cellspacing="0" cellpadding="6">
         <tr>
           <td width="50%" colspan="3">
-			<p align="center"> Thank you for providing this information. Below is the information you provided.</p>
-
+			<p style= "margin-left: 20px; margin-right: 20px; margin-bottom: .8em;"><font color="#FF0000">Thank you for providing this information. Below is the information you provided.</font></p>
 <%
     String feedback = request.getParameter("feedback");
     String email = request.getParameter("email");
     String phone = request.getParameter("phone");
+    String captcha_response =  request.getParameter("g-recaptcha-response");
+    
+    CaptchaValidator cv = new CaptchaValidator();
+    Boolean validCaptcha = cv.getPlanetRecaptchaResponse(captcha_response);
 
-    if (feedback == null || feedback.equals(""))
+	if (!validCaptcha){%>
+		
+		<p>Please enter your comments through the <a href="contact.html">contact page</a>.  Make sure to complete the CAPTCHA prior to submission</p>
+	<%}
+	else if (feedback == null || feedback.equals(""))
     {
 %>
-          <p>No information entered -- please enter your comments with an email on the <a href="contact.html">contact page</a>.</p>
+        <p>No information entered -- please enter your comments with an email on the <a href="contact.html">contact page</a>.</p>
 <%
     }
     else if (email == null || email.equals("")) {

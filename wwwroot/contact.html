@@ -31,7 +31,7 @@
 		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 	})();
     </script>
-	<script src='https://www.google.com/recaptcha/api.js'></script>
+	<script src="https://www.google.com/recaptcha/api.js?" async defer></script>
 </head>
 <body>
     <div id="pageWrapper">
@@ -117,9 +117,10 @@
 		}
         </script>
 
-                <table border="0" cellspacing="0" cellpadding="0">
+                
                     <!-- feedback form -->
                     <form method="post" action="contactsubmit.jsp" id="form1" name="form1" onsubmit="return ValidatThisForm_RWB();">
+                    <table border="0" cellspacing="0" cellpadding="0">
                     <tr>
                         <td align="left" colspan="2">
                             <textarea rows="12" cols="70" name="feedback" id="feedback"></textarea>
@@ -132,7 +133,7 @@
                     </tr>
                     <tr>
                         <td align="left" colspan="2">
-                            If you wish, tell us how to get in touch with you:
+                            Tell us how to get in touch with you:
                         </td>
                     </tr>
                     <tr>
@@ -152,27 +153,26 @@
                     <tr>
                         <td align="left">
                             <label for="phone">
-                                Phone:</label>
+                                &nbsp;&nbsp;Phone:</label>
                         </td>
                         <td align="left">
                             <input type="text" name="phone" id="phone">
                         </td>
                     </tr>
-                    <tr>
-                        <td align="left" colspan="2">&nbsp;
-                            
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="left" colspan="2">
-                    <p style="color:#F00"><em>* denotes required field</em></p>
+
+                    </table>
+                    
+                    <div style="padding: 20px;">
+                    <p style="margin-left: 0px;"><font color="#FF0000">*</font> Check the following box.  You may be required to complete a CAPTCHA to proceed.</p>
                     <div class="g-recaptcha" data-sitekey="6LfZigMTAAAAAJAxHfGP5ayDta_HsqRx4GIrIWXH"></div>
-                            <input type="submit" name="Submit" value="Submit Comments">
-                            <input type="reset" name="reset" value="Clear Form">
-                        </td>
-                    </tr>
+                    <br>
+                    <p style="color:#F00"><em>* denotes required field</em></p>
+                    <br>
+                    <input type="submit" name="Submit" value="Submit Comments">
+                    <input type="reset" name="reset" value="Clear Form">
+                    </div>
                     </form>
-                </table>
+               
                 <!-- End of feedback form -->
             </div>
             <div id="footer">

@@ -293,6 +293,11 @@ text-decoration: underline;
 
 /* =Typography
 ---------------------------------------- */
+p {
+	margin-left: 20px; 
+	margin-right: 20px; 
+	margin-bottom: .8em;
+}
 
 h2 {
 	font-size: 20px;
