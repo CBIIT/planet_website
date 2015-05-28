@@ -370,6 +370,108 @@ table.borders td {
 /* =Navigation
 ---------------------------------------- */
 
+/* RWB Added Billy Weinheimer code 5/26/2016 */
+body {
+	font-family: Helvetica, Arial, sans-serif;
+background-image: none;
+background-color: #f2f2f2;
+line-height:20px;
+}
+
+#headerTagline
+{
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 20px;
+	font-weight:bold;
+	font-style: normal;
+	color:#468e01;
+	position: absolute; 
+	left: 745px; 
+	top: 60px;
+	padding-right:20px;
+}
+
+#headerTagline a {
+	color: #468e01;
+	text-decoration: none;
+}
+
+
+#contentWrapper {
+	border-right: none;
+	border-left: none;
+}
+
+#topNav {
+	background-color:#f2f2f2;
+margin:20px;
+padding: 5px;
+}
+
+#topNav p {
+padding-top: 0px;
+margin-left: 0px;
+margin-right: 0px;
+margin-bottom: 0px;
+font-size: 11px;
+}
+#topNav p a{
+padding: 0px 5px;
+}
+
+
+#steps {
+width:510px;
+}
+
+
+.lightBlueBox {
+	
+border-radius:5px;
+}
+
+
+.lightGrayBox {
+border-radius:5px;
+background-color: #f2f2f2;
+} 
+
+.darkBlueBox {
+border-radius:5px;
+background-color: #005580;
+}
+
+.whatsNewBox {
+border-radius:5px;
+background-color: #f2f2f2;
+border: 1px solid #ccc;
+}
+
+
+
+.blueBorderBox {
+	
+border-radius: 5px;
+border: 1px solid #005580;
+}
+
+.boxTitle {
+color:#005580;
+}
+
+a {
+color: #078fb3;
+}
+
+a:visited {
+color:#005580;
+}
+
+.whatsNewBox a:visited {
+color:#005580;
+}
+/* RWB Added Billy Weinheimer code 5/26/2016 */
 
 
 	
