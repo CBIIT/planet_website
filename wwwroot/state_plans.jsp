@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html" %>
+﻿<%@ page language="java" contentType="text/html" %>
 <%@ page import="java.sql.ResultSet" %>
 <%@ page import="gov.nci.corda.NCIPopChartEmbedder" %>
 <%@ page import="gov.nci.planet.QueryBean" %>
