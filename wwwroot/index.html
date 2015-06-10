@@ -1,38 +1,165 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!doctype html>
+<html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Cancer Control P.L.A.N.E.T. - Home</title>
-    <link href="styles.css" rel="stylesheet" type="text/css" />
-	<link href="http://fonts.googleapis.com/css?family=Cabin" rel="stylesheet" type="text/css" />
-    <link href="javascript/tipsy.css" rel="stylesheet" type="text/css" />
-    <script src="Scripts/swfobject_modified.js" type="text/javascript"></script>
-    <script language="JavaScript" src="popwindow.js" type="text/javascript"></script>
-    <script src="toggle.js" type="text/javascript"></script>
-    <script type="text/javascript" language="javascript" src="javascript/jquery-1.4.2.js"></script>
-    <script type="text/javascript" language="javascript" src="javascript/jquery.listen-1.0.3-min.js"></script>
-    <script type="text/javascript" language="javascript" src="javascript/addThisListener.js"></script>
-    <script type="text/javascript" language="javascript" src="javascript/jquery.tipsy.js"></script>
-    <script type="text/javascript" language="javascript" src="javascript/jquery.pngFix.js"></script>
-	<script type="text/javascript" src="http://cloud.github.com/downloads/malsup/cycle/jquery.cycle.all.latest.js"></script>
-
-    <script type='text/javascript'>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Cancer Control P.L.A.N.E.T. - Home</title>
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="js/tipsy.css">
+<link href='http://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="js/jquery.tipsy.js"></script>
+<script type='text/javascript'>
         $(function () {
             $('.infoBubble').tipsy({ gravity: 'w', fade: 'true' });
         });
+</script>
+</head>
 
-        $(document).ready(function () {
-            $(document).pngFix();
-        }); 
-		
-		$(document).ready(function() {
-			$('.slideShow').cycle({
-				fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
-			});
-		});
-    </script>
-	<!-- see http://jquery.malsup.com/cycle/options.html for slideshow options -->
+<body>
+<div class="container">
+	<div><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a></div>
+    <header class="banner">
+    	<a href="index.html"><img src="images/banner.gif" width="1000" height="137" border="0" alt="Cancer Control P.L.A.N.E.T. Plan, Link, Act, Network with Evidence-based Tools"></a>
+    	<div class="headerTagline">
+			<a href="index.html">Links to Comprehensive Cancer Control Resources for Public Health Professionals</a>
+		</div> <!-- close headerTagline -->
+	</header> <!-- close banner -->
+    <nav class="topnav">
+		<a href="index.html" class="active">Home</a> | <a href="about.html">About This Site</a> | <a href="faq.html">FAQ</a> | <a href="sponsors.html">Sponsors</a> | <a href="contact.html">Contact Us</a>
+	</nav> <!-- close topnav -->
 	
+    <div class="intro">
+    	<p>Cancer Control P.L.A.N.E.T. portal provides access to data and resources that can help planners, program staff, and researchers to design, implement and evaluate evidence-based cancer control programs.</p>
+    </div>
+    
+    <div class="clearfix" id="content" tabindex="-1">
+    <div class="wrapper">
+    <section class="steps">
+    	<div class="box">
+        	<h2 class="data">DATA</h2>
+            <div class="box-content">
+            	<a href="/cgi-bin/awredir.pl?url=http://statecancerprofiles.cancer.gov" target="_blank">State Cancer Profiles<img src="images/Icon_External_Link.png" alt="External link" class="external-link" width="12" height="12"></a> (CDC, NCI) <img src="images/blue-info.png" alt="Info" class="infoBubble" title="Statistics for prioritizing cancer control efforts in the nation, states, and counties">
+            </div> <!-- close box-content -->
+        </div> <!-- close box -->
+        <div class="box">
+        	<h2 class="collaboration">COLLABORATION</h2>
+            <div class="box-content">
+            	<a href="/cgi-bin/awredir.pl?url=http://researchtoreality.cancer.gov/" target="_blank">Research to Reality<img src="images/Icon_External_Link.png" alt="External link" class="external-link" width="12" height="12"></a> (NCI) <img src="images/blue-info.png" alt="Info" class="infoBubble" title="Interactive community of practice for discussion, learning, and enhanced collaboration around evidence-based practice">
+            </div> <!-- close box-content -->
+        </div> <!-- close box -->
+        <div class="box">
+        	<h2 class="researchsynthesis">RESEARCH SYNTHESIS</h2>
+            <div class="box-content">
+            	<p><a title="External link" href="/cgi-bin/awredir.pl?url=http://www.thecommunityguide.org/index.html" target="_blank">Guide to Community Preventive Services<img alt="External link" class="external-link" src="images/Icon_External_Link.png" width="12" height="12"></a><br>(Federally Supported) <img src="images/blue-info.png" alt="Info" class="infoBubble" title="Recommendations for population-based intervention approaches"></p>
+                <p><a title="External link" href="/cgi-bin/awredir.pl?url=http://www.uspreventiveservicestaskforce.org" target="_blank">U.S. Preventive Services Task Force<img alt="External link" class="external-link" src="images/Icon_External_Link.png" width="12" height="12"></a><br>(Federally Supported) <img src="images/blue-info.png" alt="Info" class="infoBubble" title="Recommendations on screening, counseling, and preventive medications"></p>
+                <p><a title="External link" href="/cgi-bin/awredir.pl?url=http://www.egappreviews.org/recommendations/index.htm" target="_blank">Evaluation of Genomic Applications<br>in Practice and Prevention (EGAPP)<img alt="External link" class="external-link" src="images/Icon_External_Link.png" width="12" height="12"></a> <img src="images/blue-info.png" alt="Info" class="infoBubble" title="Recommendations for public health genomics"></p>
+                <p><a href="synthesis.html">Additional Research Evidence Reviews</a></p>	
+            </div> <!-- close box-content -->
+        </div> <!-- close box -->
+        <div class="box">
+        	<h2 class="programs">PROGRAMS</h2>
+            <div class="box-content">
+            	<a href="/cgi-bin/awredir.pl?url=http://rtips.cancer.gov/rtips/index.do" target="_blank">Research-tested Intervention Programs (RTIPs)<img src="images/Icon_External_Link.png" alt="External link" class="external-link" width="12" height="12"></a>
+            </div> <!-- close box-content -->
+        </div> <!-- close box -->
+        <div class="box">
+        	<h2 class="resources">RESOURCES</h2>
+            <div class="box-content">
+            	<a href="more.html">More About Using These Resources</a>
+            </div> <!-- close box-content -->
+        </div> <!-- close box -->
+        <div class="box">
+        	<h2 class="plan">PLAN</h2>
+            <div class="box-content">
+            	<p><a title="External link" href="/cgi-bin/awredir.pl?url=http://www.iccp-portal.org/cancer-plans" target="_blank">International Comprehensive Cancer Control Plans<img src="images/Icon_External_Link.png" alt="External link" class="external-link" width="12" height="12"></a> <img src="images/blue-info.png" alt="Info" class="infoBubble" title="Comprehensive approaches to cancer control for countries"></p>                    
+                <p><a href="/cgi-bin/awredir.pl?url=http://www.cdc.gov/cancer/ncccp/ccc_plans.htm" target="_blank">US Comprehensive Cancer Control Plans<img src="images/Icon_External_Link.png" alt="External link" class="external-link" width="12" height="12"></a> <img src="images/blue-info.png" alt="Info" class="infoBubble" title="Comprehensive approach to cancer control for states, tribes and territories"></p>
+            </div> <!-- close box-content -->
+        </div> <!-- close box -->
+        <div class="box">
+        	<h2 class="evaluation">EVALUATION</h2>
+            <div class="box-content">
+            	<a title="External link" href="/cgi-bin/awredir.pl?url=http://www.re-aim.org/" target="_blank">Reach Effectiveness Adoption Implementation<br>Maintenance (RE-AIM)<img src="images/Icon_External_Link.png" alt="External link" class="external-link" width="12" height="12"></a> <img src="images/blue-info.png" alt="Info" class="infoBubble" title="Explanation of and resources for those wanting to apply the RE-AIM framework">
+            </div> <!-- close box-content -->
+        </div> <!-- close box -->
+        
+        
+    </section> <!-- close steps -->
+    	
+    <section class="topics">
+    	<div class="box topics-box">
+        	<h2>TOPICS</h2>
+            <div class="topics-box-content clearfix">
+            	<ul class="topicListLeft">
+                    <li><a target="_blank" href="/cgi-bin/awredir.pl?url=https://researchtoreality.cancer.gov/search/node/breast%20cancer">Breast Cancer</a></li>
+                    <li><a target="_blank" href="/cgi-bin/awredir.pl?url=https://researchtoreality.cancer.gov/search/node/cervical">Cervical Cancer</a></li>
+                    <li><a target="_blank" href="/cgi-bin/awredir.pl?url=https://researchtoreality.cancer.gov/search/node/colorectal">Colorectal Cancer</a></li>
+                    <li><a target="_blank" href="/cgi-bin/awredir.pl?url=https://researchtoreality.cancer.gov/search/node/nutrition">Diet / Nutrition</a></li>
+                    <li><a target="_blank" href="/cgi-bin/awredir.pl?url=https://researchtoreality.cancer.gov/search/node/informed%20decision%20making">Informed Decision Making</a></li>
+                    <li><a target="_blank" href="/cgi-bin/awredir.pl?url=https://researchtoreality.cancer.gov/search/node/HPV%20Vaccination">HPV Vaccination</a></li>
+                </ul> <!-- close topicsListLeft -->
+                <ul class="topicListRight">
+                    <li><a target="_blank" href="/cgi-bin/awredir.pl?url=https://researchtoreality.cancer.gov/search/node/obesity%20type%3Aseminar%2Cdiscussion%2Cfeatured_r2r_member">Obesity</a></li>
+                    <li><a target="_blank" href="/cgi-bin/awredir.pl?url=https://researchtoreality.cancer.gov/search/node/physical%20activity">Physical Activity</a></li>
+                    <li><a target="_blank" href="/cgi-bin/awredir.pl?url=https://researchtoreality.cancer.gov/search/node/genomics">Public Health Genomics</a></li>
+                    <li><a target="_blank" href="/cgi-bin/awredir.pl?url=https://researchtoreality.cancer.gov/search/node/sun%20safety">Sun Safety</a></li>
+                    <li><a target="_blank" href="/cgi-bin/awredir.pl?url=https://researchtoreality.cancer.gov/search/node/survivorship">Survivorship</a></li>
+                    <li><a target="_blank" href="/cgi-bin/awredir.pl?url=https://researchtoreality.cancer.gov/search/node/tobacco">Tobacco Control</a></li>
+                </ul> <!-- close topicsListRight -->
+        	</div> <!-- close topics-box-content -->
+        </div> <!-- close box topics-box -->
+        <div class="box whatsnew">
+        	<h2>WHAT'S NEW</h2>
+            <div class="box-content">Cancer Control P.L.A.N.E.T. now links to the International  Cancer Control Partnership’s (ICCP) new web-portal. Learn more about  their <a title="External link" href="/cgi-bin/awredir.pl?url=http://www.iccp-portal.org/about-portal" target="_blank">portal<img src="images/Icon_External_Link.png" alt="External link" class="external-link" width="12" height="12"></a> and <a title="External link" href="/cgi-bin/awredir.pl?url=http://www.iccp-portal.org/cancer-plans" target="_blank">search<img src="images/Icon_External_Link.png" alt="External link" class="external-link" width="12" height="12"></a> over 100  international cancer plans and emerging non-communicable disease plans at <a title="External link" href="/cgi-bin/awredir.pl?url=http://www.iccp-portal.org/cancer-plans" target="_blank">http://www.iccp-portal.org/cancer-plans<img src="images/Icon_External_Link.png" alt="External link" class="external-link" width="12" height="12"></a>.</div>
+            <h2>E-NEWSLETTER</h2>
+            <div class="box-content"><a href="/cgi-bin/awredir.pl?url=https://planetnewsletter.cancercontrolplanet.org/" target="_blank">Sign up<img src="images/Icon_External_Link.png" alt="External link" class="external-link" width="12" height="12"></a> to receive monthly updates on Cancer Control P.L.A.N.E.T.</div>
+            <h2>FEEDBACK</h2>
+            <div class="box-content">We welcome your <a href="contact.html">feedback</a> on the Cancer Control P.L.A.N.E.T. and its satellite web sites. Thank you for helping to improve this site for the cancer control community.</div>
+        </div> <!-- close box -->
+        <div class="box sponsors">
+        	<h2>SPONSORS</h2>
+            <div class="box-content">
+            	<a href="/cgi-bin/awredir.pl?url=http://www.cancer.gov" target="_blank"><img src="images/NCI-logo.png" alt="National Cancer Institute (NCI) logo"></a>
+                <a href="/cgi-bin/awredir.pl?url=http://www.cdc.gov" target="_blank"><img src="images/CDC-logo.png" alt="Center for Disease Control (CDC) logo"></a>
+                <a href="/cgi-bin/awredir.pl?url=http://www.ahrq.gov" target="_blank"><img src="images/AHRQ-logo.png" alt="Agency for Healthcare Research and Quality (AHRQ) logo"></a>
+            </div> <!-- close box-content -->
+        </div> <!-- close box sponsors -->
+    </section> <!-- close topics -->
+    </div> <!-- close wrapper -->
+    </div> <!-- close content -->
+    
+    <footer>
+    <hr>
+    <div class="bottomnav">
+        <a href="index.html" class="active">Home</a> | 
+        <a href="contact.html">Contact Us</a> | 
+        <a href="viewing-files.html">Viewing Files</a> | 
+        <a href="http://www.cancer.gov/global/web/policies/page2" target="_blank">Privacy Policy</a> | 
+        <a href="disclaimer.html">Disclaimer</a> | 
+        <a href="http://www.cancer.gov/global/web/policies/page3" target="_blank">Accessibility</a> |
+        <a href="http://www.cancer.gov/global/web/policies/foia" target="_blank">Freedom of Information Act</a>
+    </div> <!-- close bottomnav -->
+    
+    <div>Content on this page is maintained by the <a href="http://cancercontrol.cancer.gov" target="_blank">Division of Cancer Control and Population Sciences at the National Cancer Institute<img src="images/Icon_External_Link.png" width="12" height="12" alt="External link"  class="external-link"></a>.</div>
+    
+    <div>Cancer Control P.L.A.N.E.T. is not affiliated with Planet Cancer. To visit Planet Cancer's site, please go to <a title="External link" href="http://myplanet.planetcancer.org/" target="_blank">www.planetcancer.org<img src="images/Icon_External_Link.png" width="12" height="12" alt="External link"  class="external-link"></a>.</div>
+	
+	<div class="footer-logos">
+    	<a href="http://www.hhs.gov" target="_blank"><img src="images/hhs-logo.jpg" height="55" alt="Department of Health and Human Services"></a>
+		<div class="footer-logo-usagov">
+        	<a href="http://www.usa.gov" target="_blank"><img src="images/usagov-logo.jpg" height="35" alt="USA.gov"></a>
+        </div>
+    </div>
+    </footer> <!-- close footer -->
+    
+</div> <!-- close container -->
+
+
 <script type="text/javascript">
 	var _gaq = _gaq || [];
 	_gaq.push(['_setAccount', 'UA-30179125-1']);
@@ -44,186 +171,5 @@
 		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 	})();
 </script>
-</head>
-
-<body>
-
-<div id="pageWrapper">
-    <div id="skip"><a href="#skipnav">Skip to content</a></div>
-    <div id="banner"><a href="index.html"><img src="images/banner.gif" width="1000" height="137" border="0" alt="Cancer Control P.L.A.N.E.T. Plan, Link, Act, Network with Evidence-based Tools" /></a></div>
-	<div id="headerTagline">
-		<a href="index.html">Links to comprehensive cancer control resources for public health professionals</a>
-	</div>
-	<div id="contentWrapper">
-		
-		<div id="topNav">
-			<p><a href="index.html">Home</a> | <a href="about.html">About This Site</a> | <a href="faq.html">FAQ</a> | <a href="sponsors.html">Sponsors</a></p>
-		</div>
-        
-        <div id="steps">
-            <a name="skipnav" id="skipnav"></a>
-            <div class="boxContainer">
-                <div class="lightBlueBox">
-                    <p class="boxTitle">
-                        DATA</p>
-                    <p>
-                        <a title="External link" href="/cgi-bin/awredir.pl?url=http://statecancerprofiles.cancer.gov" onClick="javascript:popWindow('/cgi-bin/awredir.pl?url=http://statecancerprofiles.cancer.gov'); return false;"><strong>State Cancer Profiles</strong><img src="images/Icon_External_Link.png" alt="External link" width="12" height="12" border="0"></a> (CDC, NCI)
-                        <img src="images/blue-info.jpg" alt="Info" class="infoBubble" title="Statistics for prioritizing cancer control efforts in the nation, states, and counties" />
-                        <!--<img src="images/usa.png" alt="" style="margin-left: 3em; margin-top: -4em;" />--></p>
-                </div>
-            </div>
-            <div class="boxContainer">
-                <div class="lightBlueBox">
-                    <p class="boxTitle">
-                        COLLABORATION</p>
-                    <p>
-                        <a title="External link" href="/cgi-bin/awredir.pl?url=http://researchtoreality.cancer.gov/" onClick="javascript:popWindow('/cgi-bin/awredir.pl?url=http://researchtoreality.cancer.gov/'); return false;"><strong>Research to Reality</strong><img src="images/Icon_External_Link.png" alt="External link" width="12" height="12" border="0"></a> (NCI)
-                        <img src="images/blue-info.jpg" alt="Info" class="infoBubble" title="Interactive community of practice for discussion, learning, and enhanced collaboration around evidence-based practice" />
-                        <!--<img src="images/quote-bubble.png" alt="" style="margin-left: 7em; margin-top: -4em;" />--></p>
-                </div>
-            </div>
-			<div class="boxContainer">
-                <div class="lightBlueBox">
-                    <p class="boxTitle">
-                        RESEARCH SYNTHESIS</p>
-                    <p>
-                        <a title="External link" href="/cgi-bin/awredir.pl?url=http://www.thecommunityguide.org/index.html" onclick="javascript:popWindow('/cgi-bin/awredir.pl?url=http://www.thecommunityguide.org/index.html'); return false;"><strong>Guide to Community Preventive Services</strong><img border="0" alt="External link" src="images/Icon_External_Link.png" width="12" height="12" /></a><br />(Federally supported)<img src="images/blue-info.jpg" alt="Info" class="infoBubble" title="Recommendations for population-based intervention approaches" /></p></p>
-                    <p>
-                        <a title="External link" href="/cgi-bin/awredir.pl?url=http://www.uspreventiveservicestaskforce.org" onclick="javascript:popWindow('/cgi-bin/awredir.pl?url=http://www.uspreventiveservicestaskforce.org/'); return false;"><strong>U.S. Preventive Services Task Force</strong><img border="0" alt="External link" src="images/Icon_External_Link.png" width="12" height="12" /></a><br />(Federally supported)<img src="images/blue-info.jpg" alt="Info" class="infoBubble" title="Recommendations on screening, counseling, and preventive medications" /></p>
-                    <p>
-                        <a title="External link" href="/cgi-bin/awredir.pl?url=http://www.egappreviews.org/recommendations/index.htm" onclick="javascript:popWindow('/cgi-bin/awredir.pl?url=http://www.egappreviews.org/recommendations/index.htm'); return false;"><strong>Evaluation of Genomic Applications in Practice and Prevention (EGAPP)</strong><img border="0" alt="External link" src="images/Icon_External_Link.png" width="12" height="12" /></a><img src="images/blue-info.jpg" alt="Info" class="infoBubble" title="Recommendations for public health genomics" /></p>
-                    <p>
-                        <a href="synthesis.html"><strong>Additional Research Evidence Reviews</strong></a></p>
-                </div>
-            </div>
-            <div class="boxContainer">
-                <div class="lightBlueBox">
-                    <p class="boxTitle">
-                        PROGRAMS</p>
-                    <p>
-                        <a title="External link" href="/cgi-bin/awredir.pl?url=http://rtips.cancer.gov/rtips/index.do" onClick="javascript:popWindow('/cgi-bin/awredir.pl?url=http://rtips.cancer.gov/rtips/index.do'); return false;"><strong>Research-tested Intervention Programs (RTIPs)</strong><img src="images/Icon_External_Link.png" alt="External link" width="12" height="12" border="0"></a> 
-                        <!-- (NCI, SAMHSA) <img src="images/blue-info.jpg" alt="Info" class="infoBubble" title="Summary statements, ratings, and products from cancer prevention and control programs tested in research" /> -->
-                        </p>
-                </div>
-            </div>
-            <div class="boxContainer">
-                <div class="lightBlueBox">
-                    <p class="boxTitle">
-                        EVALUATION</p>
-                    <p>
-                        <a title="External link" href="/cgi-bin/awredir.pl?url=http://www.re-aim.org/" onClick="javascript:popWindow('/cgi-bin/awredir.pl?url=http://www.re-aim.org/'); return false;"><strong>Reach Effectiveness Adoption Implementation Maintenance <br />(RE-AIM)</strong><img src="images/Icon_External_Link.png" alt="External link" width="12" height="12" style="border: 0; margin: 0 1px;"></a><!--(NCI)-->
-                            <img src="images/blue-info.jpg" alt="Info" class="infoBubble" title="Explanation of and resources for those wanting to apply the RE-AIM framework" /></p>
-                </div>
-            </div>
-            
-            <div class="boxContainer">
-                <div class="lightBlueBox">
-                    <p class="boxTitle">
-                        PLAN</p>
-                        
-                    <p>
-                        <a title="External link" href="/cgi-bin/awredir.pl?url=http://www.iccp-portal.org/cancer-plans" onClick="javascript:popWindow('/cgi-bin/awredir.pl?url=http://www.iccp-portal.org/cancer-plans'); return false;"><strong>International Comprehensive Cancer Control Plans</strong><img src="images/Icon_External_Link.png" alt="External link" width="12" height="12" style="border: 0; margin: 0 1px;"></a><!--(NCI)-->
-                            <img src="images/blue-info.jpg" alt="Info" class="infoBubble" title="Comprehensive approaches to cancer control for countries" /></p>                    
-                    <p>
-                        <a title="External link" href="/cgi-bin/awredir.pl?url=http://www.cdc.gov/cancer/ncccp/ccc_plans.htm" onClick="javascript:popWindow('/cgi-bin/awredir.pl?url=http://www.cdc.gov/cancer/ncccp/ccc_plans.htm', 'name','925','600','yes'); return false;"><strong>US Comprehensive Cancer Control Plans</strong><img src="images/Icon_External_Link.png" alt="External link" width="12" height="12" border="0"></a>
-                        <img src="images/blue-info.jpg" alt="Info" class="infoBubble" title="Comprehensive approach to cancer control for states, tribes and territories" /></p>
-                    
-                </div>
-            </div>
-			<div class="boxContainer">
-				<div class="lightGrayBox">
-					<p class="boxTitle">RESOURCES</p>
-					<p><a href="more.html"><strong>More about using these resources</strong></a></p>
-				</div>
-			</div>
-        </div>
-
-        <div id="topics">
-            <div class="boxContainer">
-                <div class="darkBlueBox">
-                    <p class="boxTitle">
-                        TOPICS</p>
-                    <ul id="topicListLeft">
-                        <li><a target="_blank" href="breast_cancer.html"><strong>Breast Cancer</strong></a></li>
-                        <li><strong><a href="cervical_cancer.html">Cervical Cancer</a></strong></li>
-                        <li><strong><a href="colorectal_cancer.html">Colorectal Cancer</a></strong></li>
-                        <li><strong><a href="diet.html">Diet / Nutrition</a></strong></li>
-                        <li><strong><a href="informed.html">Informed Decision Making</a></strong></li>
-                        <li><strong><a href="obesity.html">Obesity</a></strong></li>
-                    </ul>
-                    <ul id="topicListRight">
-                        <li><a href="physical_activity.html"><strong>Physical Activity</strong></a></li>
-                        <li><strong><a href="public_health_genomics.html">Public Health Genomics</a></strong></li>
-                        <li><strong><a href="sun_safety.html">Sun Safety</a></strong></li>
-                        <li><strong><a href="survivorship.html">Survivorship</a></strong></li>
-                       <li><strong><a href="tobacco_control.html">Tobacco Control</a></strong></li>
-                    </ul>
-                    <div class="clear">
-                    </div>
-                </div>
-            </div>
-            <div class="boxContainer">
-                <div class="whatsNewBox">
-                    <p class="boxTitle">
-                        WHAT'S NEW</p>
-                   <p>Cancer Control P.L.A.N.E.T. now links to the International  Cancer Control Partnership’s (ICCP) new web-portal. Learn more about  their <a title="External link" href="/cgi-bin/awredir.pl?url=http://www.iccp-portal.org/about-portal" onClick="javascript:popWindow('/cgi-bin/awredir.pl?url=http://www.iccp-portal.org/about-portal'); return false;">portal<img src="images/Icon_External_Link.png" alt="External link" width="12" height="12" border="0"></a> and <a title="External link" href="/cgi-bin/awredir.pl?url=http://www.iccp-portal.org/cancer-plans" onClick="javascript:popWindow('/cgi-bin/awredir.pl?url=http://www.iccp-portal.org/cancer-plans'); return false;">search<img src="images/Icon_External_Link.png" alt="External link" width="12" height="12" border="0"></a> over 100  international cancer plans and emerging non-communicable disease plans at <a title="External link" href="/cgi-bin/awredir.pl?url=http://www.iccp-portal.org/cancer-plans" onClick="javascript:popWindow('/cgi-bin/awredir.pl?url=http://www.iccp-portal.org/cancer-plans'); return false;">http://www.iccp-portal.org/cancer-plans<img src="images/Icon_External_Link.png" alt="External link" width="12" height="12" border="0"></a>.</p>
-<p class="boxTitle">
-            E-NEWSLETTER</p>
-                    <p>
-                        <a href="/cgi-bin/awredir.pl?url=https://planetnewsletter.cancercontrolplanet.org/">Sign up</a> to receive monthly
-                        updates on Cancer Control P.L.A.N.E.T.</p>
-                    <p class="boxTitle">
-                        FEEDBACK</p>
-                    <p>
-                        We welcome your <a href="contact.html">feedback</a> on the Cancer Control P.L.A.N.E.T.
-                        and its satellite web sites. Thank you for helping to improve this site for the
-                        cancer control community.</p>
-                </div>
-            </div>
-            <div class="boxContainer">
-                <div class="blueBorderBox">
-                    <p class="boxTitle">
-                        SPONSORS</p>
-                    <div class="sponsorsBox">
-						<img src="images/nci-logo-sm.jpg" alt="National Cancer Institute (NCI)" />
-						<img style="margin-left: 4em;" src="images/cdc-logo-sm.jpg" alt="The Centers for Disease Control and Prevention (CDC)" />
-						<img style="margin-left: 4em;" src="images/ahrq_logo.gif" alt="The Agency for Healthcare Research and Quality (AHRQ)" />
-                        
-                        <!--
-                        <br /><br />
-						<img style="margin-left: 8em;" src="images/samhsa-logo.png" alt="The Substance Abuse and Mental Health Services Administration (SAMHSA) logo" />
-                        -->
-					</div>
-                </div>
-            </div>
-        </div>
-
-        <div id="footer">
-            <p>
-                <a href="index.html">Home</a> | 
-                <a href="contact.html">Contact Us</a> | 
-                <a href="viewing-files.html">Viewing Files</a> | 
-                <a href="http://www.cancer.gov/global/web/policies/page2">Privacy Policy</a> | 
-                <a href="disclaimer.html">Disclaimer</a> | 
-                <a href="http://www.cancer.gov/global/web/policies/page3">Accessibility</a> |
-                <a href="http://www.cancer.gov/global/web/policies/foia">Freedom of Information Act</a>
-            </p>
-            <p>Content on this page is maintained by the Division of Cancer Control and Population Sciences at the National Cancer Institute.</p>
-            <p>
-                Cancer Control P.L.A.N.E.T. is not affiliated with Planet Cancer. To visit Planet
-                Cancer's site, please go to <a title="External link" href="/cgi-bin/awredir.pl?url=http://www.planetcancer.org" onClick="javascript:popWindow(''); return false;">www.planetcancer.org<img border="0" alt="External link" src="images/Icon_External_Link.png" width="12" height="12" /></a>.</p>
-            <br />
-			<p style="text-align: center">
-				<a href="http://www.hhs.gov">
-					<img src="images/footer-hhs.gif" alt="Department of Health and Human Services" /></a>
-				<a href="http://www.usa.gov">
-					<img style="margin-left: 12px;" src="images/footer-usa.gif" alt="USA.gov" /></a><br /><br />
-			</p>
-        </div>
-
-    </div>
-</div>
-
-<script language="JavaScript" type="text/javascript" src="http://cancercontrol.cancer.gov/JS/Omniture/WA_DCCPS_PageLoad.js"></script>
 </body>
 </html>
