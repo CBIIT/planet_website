@@ -283,13 +283,13 @@ a:hover {
 	color:#0099e6;	
 }
 .intro {
-	font: 300 20px/30px "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font: 300 17px/24px "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color: #00334d;
-	background: #f2f2f2 url(../images/intro-bg.png) no-repeat center center;
+	background: #f2f2f2 url(../images/intro-bg.png) no-repeat center top;
 	text-align: left;
 	vertical-align: middle;
 	margin: 20px 20px;
-	padding: 20px 20px;
+	padding: 15px 20px;
 }
 .intro p {
 	margin:0;	
