@@ -19,4 +19,3 @@ var addthisboxinitialized = false;
          addthisboxinitialized = true;
       });
    });
-
