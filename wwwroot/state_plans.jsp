@@ -192,7 +192,7 @@ StringBuffer pcScript = null;
 	<title><%= caption%></title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<link href="styles.css" rel="stylesheet" type="text/css" />
-	<link href="http://fonts.googleapis.com/css?family=Cabin" rel="stylesheet" type="text/css" />
+	<link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet" type="text/css" />
 	<script src="Scripts/swfobject_modified.js" type="text/javascript"></script>
 	<script language="JavaScript" src="popwindow.js" type="text/javascript"></script>
 	<script src="toggle.js" type="text/javascript"></script>
