@@ -143,6 +143,6 @@
 <!--  HF (6/3/08) CR #41097 
 <script type="text/javascript" src="ieupdate.js"></script>
  -->
-<script language="JavaScript" type="text/javascript" src="http://cancercontrol.cancer.gov/JS/Omniture/WA_DCCPS_PageLoad.js"></script>
+<script language="JavaScript" type="text/javascript" src="/JS/Omniture/WA_DCCPS_PageLoad.js"></script>
 </body>
 </html>

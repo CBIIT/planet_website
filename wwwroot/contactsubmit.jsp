@@ -147,7 +147,7 @@
     
 </div> <!-- close container -->
 
-<script language="JavaScript" type="text/javascript" src="http://cancercontrol.cancer.gov/JS/Omniture/WA_DCCPS_PageLoad.js"></script>
+<script language="JavaScript" type="text/javascript" src="/JS/Omniture/WA_DCCPS_PageLoad.js"></script>
 
 <script type="text/javascript">
 	var _gaq = _gaq || [];
