@@ -12,7 +12,7 @@
 # Defines
 #-------------------------------------------------------
 use vars qw/ $REVISION $VERSION /;
-$REVISION='$Revision: 1.1 $'; $REVISION =~ /\s(.*)\s/; $REVISION=$1;
+$REVISION='$Revision: 1.2 $'; $REVISION =~ /\s(.*)\s/; $REVISION=$1;
 $VERSION="1.1 (build $REVISION)";
 
 use vars qw / $DIR $PROG $Extension $DEBUG $DEBUGFILE $REPLOG $DEBUGRESET $SITE $REPCONF /;
@@ -134,18 +134,21 @@ if ($TRACEFILE == 1) {
 # websites.  Done by defining a whitelist of URLs which the Planet website redirects to.
 # Not a pretty solution, but it gets the job done.  Whenever a new external link is added
 # to the website, this list must be expanded, and similar when deleted.
+# HF (9/15/16) CR #50315 - Modified the regex in response to IRT scan to handle URLs like:
+#	http://ccplanet.nci.nih.gov/cgi-bin/awredir.pl?url=http://hacker.com?bypass=cancer.gov
+# Also added one for .org.
 
 my $isValidUrl=0;
 my @redirSites = (
         "http://apps.nccd.cdc.gov/statesystem",
 #        "http://.*cancer.gov",
-        "http://cancer.org",
+	"http://[^?]*cancer.gov",
+	"http://[^?]*cancer.org",
         "http://channels.netscape.com/ns/browsers/download.jsp",
         "http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0",
 	"https://secure.mmgct.com/",
 	"http://secure.mmgct.com/",
         "http://www.ahrq.gov",
-        "http://www.cancer.org",
         "http://www.cdc.gov",
 	"http://www.cochrane.org",
 	"http://www.crn-ccrc.org",
@@ -155,12 +158,10 @@ my @redirSites = (
         "http://www.health.gov",
         "http://www.macromedia.com/go/getflashplayer",
         "http://www.microsoft.com",
-        "http://www.planetcancer.org",
         "http://www.preventiveservices.ahrq.gov",
 	"http://www.re-aim.org",
 	"http://www.research-practice.org",
         "http://www.samhsa.gov",
-	"http://statecancerprofiles.cancer.gov",
         "http://www.surgeongeneral.gov",
         "http://www.thecommunityguide.org",
         "http://www.usa.gov",
