@@ -364,7 +364,7 @@ AC_FL_RunContent( 'codebase','/cgi-bin/awredir.pl?url=http://download.macromedia
         </p>
     </div></td>  </tr>
   <tr>
-    <td align="right"><a title="External link" href="/cgi-bin/awredir.pl?url=http://www.usa.gov/"><img alt="USA.gov" border="0" height="25" width="76" src="images/usagov_logo.jpg"></a></td>
+    <td align="right"><a title="External link" href="/cgi-bin/awredir.pl?url=http://www.usa.gov/"  target="_blank"><img alt="USA.gov" border="0" height="25" width="76" src="images/usagov_logo.jpg"></a></td>
   </tr>
 </table>
 </body></html>
