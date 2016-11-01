@@ -12,7 +12,7 @@
 # Defines
 #-------------------------------------------------------
 use vars qw/ $REVISION $VERSION /;
-$REVISION='$Revision: 1.2 $'; $REVISION =~ /\s(.*)\s/; $REVISION=$1;
+$REVISION='$Revision: 1.3 $'; $REVISION =~ /\s(.*)\s/; $REVISION=$1;
 $VERSION="1.1 (build $REVISION)";
 
 use vars qw / $DIR $PROG $Extension $DEBUG $DEBUGFILE $REPLOG $DEBUGRESET $SITE $REPCONF /;
@@ -140,33 +140,17 @@ if ($TRACEFILE == 1) {
 
 my $isValidUrl=0;
 my @redirSites = (
-        "http://apps.nccd.cdc.gov/statesystem",
-#        "http://.*cancer.gov",
 	"http://[^?]*cancer.gov",
-	"http://[^?]*cancer.org",
-        "http://channels.netscape.com/ns/browsers/download.jsp",
-        "http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0",
-	"https://secure.mmgct.com/",
-	"http://secure.mmgct.com/",
         "http://www.ahrq.gov",
         "http://www.cdc.gov",
-	"http://www.cochrane.org",
-	"http://www.crn-ccrc.org",
 	"http://www.egappreviews.org/",
 	"http://www.iccp-portal.org/",
-        "http://www.facs.org/cancerprogram",
-        "http://www.health.gov",
-        "http://www.macromedia.com/go/getflashplayer",
-        "http://www.microsoft.com",
-        "http://www.preventiveservices.ahrq.gov",
 	"http://www.re-aim.org",
-	"http://www.research-practice.org",
-        "http://www.samhsa.gov",
-        "http://www.surgeongeneral.gov",
         "http://www.thecommunityguide.org",
         "http://www.usa.gov",
 	"http://www.uspreventiveservicestaskforce.org/",
-	"http://www3.interscience.wiley.com",
+	"http://myplanet.planetcancer.org/",
+	"http://www.hhs.gov",
 	"https://planetnewsletter.cancercontrolplanet.org/"
 );
 
