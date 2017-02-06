@@ -12,7 +12,7 @@
 # Defines
 #-------------------------------------------------------
 use vars qw/ $REVISION $VERSION /;
-$REVISION='$Revision: 1.3 $'; $REVISION =~ /\s(.*)\s/; $REVISION=$1;
+$REVISION='$Revision: 1.4 $'; $REVISION =~ /\s(.*)\s/; $REVISION=$1;
 $VERSION="1.1 (build $REVISION)";
 
 use vars qw / $DIR $PROG $Extension $DEBUG $DEBUGFILE $REPLOG $DEBUGRESET $SITE $REPCONF /;
@@ -140,18 +140,18 @@ if ($TRACEFILE == 1) {
 
 my $isValidUrl=0;
 my @redirSites = (
-	"http://[^?]*cancer.gov",
-        "http://www.ahrq.gov",
-        "http://www.cdc.gov",
-	"http://www.egappreviews.org/",
-	"http://www.iccp-portal.org/",
-	"http://www.re-aim.org",
-        "http://www.thecommunityguide.org",
-        "http://www.usa.gov",
-	"http://www.uspreventiveservicestaskforce.org/",
-	"http://myplanet.planetcancer.org/",
-	"http://www.hhs.gov",
-	"https://planetnewsletter.cancercontrolplanet.org/"
+	"https?://[^?]*cancer.gov",
+        "https?://www.ahrq.gov",
+        "https?://www.cdc.gov",
+	"https?://www.egappreviews.org/",
+	"https?://www.iccp-portal.org/",
+	"https?://www.re-aim.org",
+        "https?://www.thecommunityguide.org",
+        "https?://www.usa.gov",
+	"https?://www.uspreventiveservicestaskforce.org/",
+	"https?://myplanet.planetcancer.org/",
+	"https?://www.hhs.gov",
+	"https?://planetnewsletter.cancercontrolplanet.org/"
 );
 
 # Parse the list of sites listed on planet.cancer.gov (above) and if the current Url matches, then allow redirection. 
