@@ -355,6 +355,6 @@ StringBuffer pcScript = null;
 		</div>
 	</div>
 </div>
-<script language="JavaScript" type="text/javascript" src="/JS/Omniture/WA_DCCPS_PageLoad.js"></script>
+<script language="JavaScript" type="text/javascript" src="https://cancercontrol.cancer.gov/JS/Omniture/WA_DCCPS_PageLoad.js"></script>
 </body>
 </html>
