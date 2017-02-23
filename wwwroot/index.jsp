@@ -193,7 +193,7 @@
         </tr>
         <tr>
           <td valign="top">&nbsp;</td>
-          <td colspan="2" valign="top"><a title="External link" href="/cgi-bin/awredir.pl?url=http://rtips.cancer.gov/rtips/index.do"  onclick="javascript:popWindow('/cgi-bin/awredir.pl?url=http://rtips.cancer.gov/rtips/index.do', 'name','925','600','yes'); return false;">Research-tested Intervention Programs (RTIPs)<img src="images/Icon_External_Link.png" alt="External link" width="12" height="12" border="0"></a>&nbsp;(NCI,&nbsp;SAMHSA)</td>
+          <td colspan="2" valign="top"><a title="External link" href="/cgi-bin/awredir.pl?url=https://rtips.cancer.gov/rtips/index.do"  onclick="javascript:popWindow('/cgi-bin/awredir.pl?url=https://rtips.cancer.gov/rtips/index.do', 'name','925','600','yes'); return false;">Research-tested Intervention Programs (RTIPs)<img src="images/Icon_External_Link.png" alt="External link" width="12" height="12" border="0"></a>&nbsp;(NCI,&nbsp;SAMHSA)</td>
         </tr>
         <tr>
           <td valign="top">&nbsp;</td>
