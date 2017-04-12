@@ -14,6 +14,9 @@ response.setHeader( "Location", "https://cancercontrolplanet.cancer.gov/" );
 %>
 <html>
 <head>
+
+<meta http-equiv="refresh" content="0; url=https://cancercontrolplanet.cancer.gov/">
+
 	<title><%= caption%></title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<link href="styles.css" rel="stylesheet" type="text/css" />
