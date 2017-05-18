@@ -820,3 +820,29 @@ td.plan p {
 	background-color:#c2e4ff;
 	border:solid 1px #b2ddff;	
 }
+
+/* Survey header */
+.survey-banner {
+  width: 100%;
+  background: #005480;
+  height: 68px;
+  font-size: 18px;
+  color: #ffffff;
+  padding: 10px 80px;
+}
+.survey-banner .text {
+  float: left;
+  padding: 15px;
+  font-size: 18px;
+  padding: 15px;
+}
+.survey-banner .button-link {
+  float: right;
+  padding: 15px;
+  background: #41a700;
+  cursor: pointer;
+}
+.survey-banner .button-link a {
+  color: white;
+  text-decoration: none;
+}
