@@ -824,11 +824,12 @@ td.plan p {
 /* Survey header */
 .survey-banner {
   width: 100%;
-  background: #005480;
+  background: #daa520;
   height: 68px;
   font-size: 18px;
-  color: #ffffff;
+  color: #000000;
   padding: 10px 80px;
+  cursor: pointer;
 }
 .survey-banner .text {
   float: left;
@@ -839,8 +840,7 @@ td.plan p {
 .survey-banner .button-link {
   float: right;
   padding: 15px;
-  background: #41a700;
-  cursor: pointer;
+  background: #2a5480;
 }
 .survey-banner .button-link a {
   color: white;
