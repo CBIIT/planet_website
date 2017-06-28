@@ -822,14 +822,21 @@ td.plan p {
 }
 
 /* Survey header */
+
+header.banner {
+  padding-top: 68px;
+}
 .survey-banner {
-  width: 100%;
+  width: 1000px;
   background: #daa520;
   height: 68px;
   font-size: 18px;
   color: #000000;
   padding: 10px 80px;
   cursor: pointer;
+  z-index: 10;
+  position: fixed;
+  top: 0;
 }
 .survey-banner .text {
   float: left;
