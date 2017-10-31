@@ -973,6 +973,7 @@ public class QueryBean {
 	
 			} catch (SQLException e) {
 				e.printStackTrace();
+				throw e;
 			} finally {
 				if (stmt!=null){
 					try {
