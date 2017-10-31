@@ -125,7 +125,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					QBean.saveFeedback(feedback, email, phone);
 					//QBean.close();
 						} catch (Exception e) {
-							response.sendRedirect(response.encodeRedirectURL("contact.html?" + e.getMessage()));
+							//response.sendRedirect(response.encodeRedirectURL("contact.html?" + e.getMessage())); 
+							e.printStackTrace();
+							
+			%>
+						<div class='red'>Unfortunately, we were not able to submit your comment.  If you are accessing this page during weekend or evening hours, the database may currently be offline for maintenance and should be operational within a few hours. We ask that you come back and try to resubmit your comment, question or suggestion by returning to the <a href=contact.html>Contact Us</a> page at a later time.  We apologize for the inconvenience!</div>
+			<%
 						}
 					}
 			%>
