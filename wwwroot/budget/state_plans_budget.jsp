@@ -135,7 +135,7 @@ StringBuffer pcScript = null;
 		<td>
 			<p>
 				<a href="../contact.html">Contact Us</a><br>
-				<a href="/cgi-bin/awredir.pl?url=http://ccplanetraining.cancer.gov" onClick="javascript:popWindow('/cgi-bin/awredir.pl?url=http://ccplanetraining.cancer.gov', 'name','925','600','yes'); return false;"></a><br />
+				<a href="http://ccplanetraining.cancer.gov" onClick="javascript:popWindow('http://ccplanetraining.cancer.gov', 'name','925','600','yes'); return false;"></a><br />
 				<a href="../about.html">About This Site</a><br>
 				<a href="../factsheet.pdf">Fact Sheet (PDF)</a><br>
 				<a href="../partners.html">P.L.A.N.E.T. Sponsors</a>
@@ -203,7 +203,7 @@ out.print(htmlString);
 	<div align="center">
           <a href="../index.html">Home</a>&nbsp;&nbsp;&nbsp;
           <a href="../contact.html">Contact Us</a>&nbsp;&nbsp;&nbsp;
-		  <a href="/cgi-bin/awredir.pl?url=http://ccplanetraining.cancer.gov" onClick="javascript:popWindow('/cgi-bin/awredir.pl?url=http://ccplanetraining.cancer.gov', 'name','925','600','yes'); return false;"></a><br />
+		  <a href="http://ccplanetraining.cancer.gov" onClick="javascript:popWindow('http://ccplanetraining.cancer.gov', 'name','925','600','yes'); return false;"></a><br />
           <a href="../about.html">About this Site</a>&nbsp;&nbsp;&nbsp;
           <a href="../partners.html">Sponsors</a>&nbsp;&nbsp;&nbsp;
           <a href="../privacy.html">Privacy Policy</a>&nbsp;&nbsp;&nbsp;

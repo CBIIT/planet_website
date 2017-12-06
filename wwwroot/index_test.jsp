@@ -17,7 +17,7 @@
     <td><p>
         <!-- <a href="index.html">Home</a><br> -->
         <a href="contact.html">Contact Us</a><br>	
-        <a href="/cgi-bin/awredir.pl?url=http://ccplanettraining.cancer.gov/" onClick="javascript:popWindow('/cgi-bin/awredir.pl?url=http://ccplanettraining.cancer.gov/', 'name','925','600','yes'); return false;">On-line Training</a><br />
+        <a href="http://ccplanettraining.cancer.gov/" onClick="javascript:popWindow('http://ccplanettraining.cancer.gov/', 'name','925','600','yes'); return false;">On-line Training</a><br />
 		<a href="about.html">About This Site</a><br>
         <a href="factsheet.pdf">Fact Sheet (PDF)</a><br>
         <a href="sponsors.html">Sponsors</a><br />
@@ -50,7 +50,7 @@
         </tr>
         <tr>
           <td valign="top">&nbsp;</td>
-          <td colspan="2" valign="top"><a title="External link" href="/cgi-bin/awredir.pl?url=http://statecancerprofiles.cancer.gov" onClick="javascript:popWindow('/cgi-bin/awredir.pl?url=http://statecancerprofiles.cancer.gov', 'name','925','600','yes'); return false;">State Cancer Profiles<img src="images/Icon_External_Link.png" alt="External link" width="12" height="12" border="0"></a>&nbsp;(CDC,&nbsp;NCI)</td>
+          <td colspan="2" valign="top"><a title="External link" href="http://statecancerprofiles.cancer.gov" onClick="javascript:popWindow('http://statecancerprofiles.cancer.gov', 'name','925','600','yes'); return false;">State Cancer Profiles<img src="images/Icon_External_Link.png" alt="External link" width="12" height="12" border="0"></a>&nbsp;(CDC,&nbsp;NCI)</td>
         </tr>
         <tr class="smaller">
           <td valign="top">&nbsp;</td>
@@ -107,7 +107,7 @@
         </tr>
         <tr>
           <td valign="top">&nbsp;</td>
-          <td colspan="2" valign="top"><a title="External link" href="/cgi-bin/awredir.pl?url=http://www.thecommunityguide.org/"  onclick="javascript:popWindow('/cgi-bin/awredir.pl?url=http://www.thecommunityguide.org/', 'name','925','600','yes'); return false;">Guide to Community Preventive Services<img src="images/Icon_External_Link.png" alt="External link" width="12" height="12" border="0"></a>&nbsp;(Federally&nbsp;sponsored)</td>
+          <td colspan="2" valign="top"><a title="External link" href="http://www.thecommunityguide.org/"  onclick="javascript:popWindow('http://www.thecommunityguide.org/', 'name','925','600','yes'); return false;">Guide to Community Preventive Services<img src="images/Icon_External_Link.png" alt="External link" width="12" height="12" border="0"></a>&nbsp;(Federally&nbsp;sponsored)</td>
         </tr>
         <tr>
           <td valign="top">&nbsp;</td>
@@ -116,7 +116,7 @@
         </tr>
 		<tr>
           <td valign="top">&nbsp;</td>
-          <td colspan="2" valign="top"><a title="External link" href="/cgi-bin/awredir.pl?url=http://www.preventiveservices.ahrq.gov" onClick="javascript:popWindow('/cgi-bin/awredir.pl?url=http://www.preventiveservices.ahrq.gov', 'name','925','600','yes'); return false;">Guide to Clinical Preventive Services<img src="images/Icon_External_Link.png" alt="External link" width="12" height="12" border="0"></a>&nbsp;(AHRQ)</td>
+          <td colspan="2" valign="top"><a title="External link" href="http://www.preventiveservices.ahrq.gov" onClick="javascript:popWindow('http://www.preventiveservices.ahrq.gov', 'name','925','600','yes'); return false;">Guide to Clinical Preventive Services<img src="images/Icon_External_Link.png" alt="External link" width="12" height="12" border="0"></a>&nbsp;(AHRQ)</td>
         </tr>
         <tr>
           <td valign="top">&nbsp;</td>
@@ -140,7 +140,7 @@
         </tr>
         <tr>
           <td valign="top">&nbsp;</td>
-          <td colspan="2" valign="top"><a title="External link" href="/cgi-bin/awredir.pl?url=http://rtips.cancer.gov/rtips/index.do"  onclick="javascript:popWindow('/cgi-bin/awredir.pl?url=http://rtips.cancer.gov/rtips/index.do', 'name','925','600','yes'); return false;">Research-tested Intervention Programs (RTIPs)<img src="images/Icon_External_Link.png" alt="External link" width="12" height="12" border="0"></a>&nbsp;(NCI,&nbsp;SAMHSA)</td>
+          <td colspan="2" valign="top"><a title="External link" href="http://rtips.cancer.gov/rtips/index.do"  onclick="javascript:popWindow('http://rtips.cancer.gov/rtips/index.do', 'name','925','600','yes'); return false;">Research-tested Intervention Programs (RTIPs)<img src="images/Icon_External_Link.png" alt="External link" width="12" height="12" border="0"></a>&nbsp;(NCI,&nbsp;SAMHSA)</td>
         </tr>
         <tr>
           <td valign="top">&nbsp;</td>
@@ -181,7 +181,7 @@
         </tr>
         <tr>
           <td valign="top">&nbsp;</td>
-          <td colspan="2" valign="top"><a title="External link" href="/cgi-bin/awredir.pl?url=http://www.ahrq.gov/clinic/ppipix.htm" onClick="javascript:popWindow('/cgi-bin/awredir.pl?url=http://www.ahrq.gov/clinic/ppipix.htm', 'name','925','600','yes'); return false;">Put Prevention Into Practice<img src="images/Icon_External_Link.png" alt="External link" width="12" height="12" border="0"></a>&nbsp;(AHRQ)</td>
+          <td colspan="2" valign="top"><a title="External link" href="http://www.ahrq.gov/clinic/ppipix.htm" onClick="javascript:popWindow('http://www.ahrq.gov/clinic/ppipix.htm', 'name','925','600','yes'); return false;">Put Prevention Into Practice<img src="images/Icon_External_Link.png" alt="External link" width="12" height="12" border="0"></a>&nbsp;(AHRQ)</td>
         </tr>
         <tr>
           <td valign="top">&nbsp;</td>
@@ -256,11 +256,11 @@
 			  <h4 align="left"><strong>Sponsors</strong><br>
 			  
 			  <script type="text/javascript">
-AC_FL_RunContent( 'codebase','/cgi-bin/awredir.pl?url=http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0','width','100','height','75','src','images/planet-sponsors-07','quality','high','pluginspage','/cgi-bin/awredir.pl?url=http://www.macromedia.com/go/getflashplayer','movie','images/planet-sponsors-07' ); //end AC code
-</script><noscript><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="/cgi-bin/awredir.pl?url=http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="100" height="75">
+AC_FL_RunContent( 'codebase','http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0','width','100','height','75','src','images/planet-sponsors-07','quality','high','pluginspage','http://www.macromedia.com/go/getflashplayer','movie','images/planet-sponsors-07' ); //end AC code
+</script><noscript><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="100" height="75">
 			  <param name="movie" value="images/planet-sponsors-07.swf">
 			  <param name="quality" value="high">
-			  <embed src="images/planet-sponsors-07.swf" quality="high" pluginspage="/cgi-bin/awredir.pl?url=http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="100" height="75"></embed></object></noscript>
+			  <embed src="images/planet-sponsors-07.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="100" height="75"></embed></object></noscript>
 			  <img src="images/spacer.gif" width="2" height="2" alt="National Cancer Institute, Centers for Disease Control and Prevention, Substance Abuse and Mental Health Services Administration, American Cancer Society, The Commission on Cancer">                    </h4></td>
 			</tr>
 		  </table><br />
@@ -287,7 +287,7 @@ AC_FL_RunContent( 'codebase','/cgi-bin/awredir.pl?url=http://download.macromedia
 			</tr>
 		  </table>
 		  
-		  <p><br><font color="#CC0000">Note:</font> This web site is best viewed in <a href="http://www.microsoft.com/windows/downloads/ie/getitnow.mspx">Internet Explorer<img src="images/Icon_External_Link.png" alt="External link" width="12" height="12" border="0"></a> (version 5.0 or higher) or <a title="External link" href="/cgi-bin/awredir.pl?url=http://channels.netscape.com/ns/browsers/download.jsp">Netscape<img src="images/Icon_External_Link.png" alt="External link" width="12" height="12" border="0"></a> (version 7.0 or higher) at a <a href="screen_resolution.html">screen resolution</a> of 1024 by 768 or more.<br>
+		  <p><br><font color="#CC0000">Note:</font> This web site is best viewed in <a href="http://www.microsoft.com/windows/downloads/ie/getitnow.mspx">Internet Explorer<img src="images/Icon_External_Link.png" alt="External link" width="12" height="12" border="0"></a> (version 5.0 or higher) or <a title="External link" href="http://channels.netscape.com/ns/browsers/download.jsp">Netscape<img src="images/Icon_External_Link.png" alt="External link" width="12" height="12" border="0"></a> (version 7.0 or higher) at a <a href="screen_resolution.html">screen resolution</a> of 1024 by 768 or more.<br>
 		  </p></td>
         </tr>
       </table>
@@ -300,14 +300,14 @@ AC_FL_RunContent( 'codebase','/cgi-bin/awredir.pl?url=http://download.macromedia
     <td><hr size="1" noshade><div align="center">
       <p><a href="index.html">Home</a>&nbsp;&nbsp;&nbsp; <a href="contact.html">Contact Us</a>&nbsp;&nbsp;&nbsp; <a href="about.html">About This Site</a>&nbsp;&nbsp;&nbsp; <a href="sponsors.html">Sponsors</a>&nbsp;&nbsp;&nbsp; <a href="privacy.html">Privacy  Policy</a>&nbsp;&nbsp;&nbsp; <a href="disclaimer.html">Disclaimer</a>&nbsp;&nbsp;&nbsp; <a href="accessibility.html">Accessibility</a><br>
           <br>
-          <span class="sponsors">Cancer Control P.L.A.N.E.T. is not affiliated with Planet Cancer. To visit Planet Cancer's site, please go to <a class="sponsors" href="/cgi-bin/awredir.pl?url=http://www.planetcancer.org">www.planetcancer.org<img src="images/Icon_External_Link.png" alt="External link" width="12" height="12" border="0"></a>.</span></p>
+          <span class="sponsors">Cancer Control P.L.A.N.E.T. is not affiliated with Planet Cancer. To visit Planet Cancer's site, please go to <a class="sponsors" href="http://www.planetcancer.org">www.planetcancer.org<img src="images/Icon_External_Link.png" alt="External link" width="12" height="12" border="0"></a>.</span></p>
       <p><span class="sponsors">Links to non-Federal organizations  found at this site are provided solely as a service to our users. <br>
         These links  do not constitute an endorsement of these organizations or their programs by  the Federal Government, and none should be inferred. <br>
         The Federal Government is  not responsible for the content of the individual organization Web pages found  at these links.</span><br>
         </p>
     </div></td>  </tr>
   <tr>
-    <td align="right"><a title="External link" href="/cgi-bin/awredir.pl?url=http://www.usa.gov/" target="_blank"><img alt="USA.gov" border="0" height="25" width="76" src="images/usagov_logo.jpg"></a></td>
+    <td align="right"><a title="External link" href="http://www.usa.gov/" target="_blank"><img alt="USA.gov" border="0" height="25" width="76" src="images/usagov_logo.jpg"></a></td>
   </tr>
 </table>
 </body></html>

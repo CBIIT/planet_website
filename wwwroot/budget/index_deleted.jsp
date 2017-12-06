@@ -44,7 +44,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			<h2>State, Tribe and Territory Implementation Budgets</h2>
 
 			<p>To view, click on map or state name below.</p>
-			<p>To locate Cancer Control Plans go to the <a title="External link" href="/cgi-bin/awredir.pl?url=http://www.cdc.gov/cancer/ncccp/ccc_plans.htm" onClick="javascript:popWindow('/cgi-bin/awredir.pl?url=http://www.cdc.gov/cancer/ncccp/ccc_plans.htm', 'name','925','600','yes'); return false;">plans<img src="../images/Icon_External_Link.png" alt="External link" width="12" height="12" border="0"></a> page.</p>
+			<p>To locate Cancer Control Plans go to the <a title="External link" href="http://www.cdc.gov/cancer/ncccp/ccc_plans.htm" onClick="javascript:popWindow('http://www.cdc.gov/cancer/ncccp/ccc_plans.htm', 'name','925','600','yes'); return false;">plans<img src="../images/Icon_External_Link.png" alt="External link" width="12" height="12" border="0"></a> page.</p>
 			
 			<div style="position: relative; float: left; width: 150px;">
 				<p style="font-weight: bold;">States</p>
@@ -125,15 +125,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                            <p>Content on this page is maintained by the Division of Cancer Control and Population Sciences at the National Cancer Institute.</p>
             <p>
                 Cancer Control P.L.A.N.E.T. is not affiliated with Planet Cancer. To visit Planet
-                Cancer's site, please go to <a title="External link" href="/cgi-bin/awredir.pl?url=http://www.planetcancer.org" onClick="javascript:popWindow(''); return false;">www.planetcancer.org<img border="0" alt="External link" src="images/Icon_External_Link.png" width="12" height="12" /></a>.</p>
+                Cancer's site, please go to <a title="External link" href="http://www.planetcancer.org" onClick="javascript:popWindow(''); return false;">www.planetcancer.org<img border="0" alt="External link" src="images/Icon_External_Link.png" width="12" height="12" /></a>.</p>
             <br />
 				
 		
 				
 			<p style="text-align: center">
-				<a href="/cgi-bin/awredir.pl?url=http://www.hhs.gov" target="_blank">
+				<a href="http://www.hhs.gov" target="_blank">
 					<img src="../images/footer-hhs.gif" alt="Department of Health and Human Services" /></a>
-				<a href="/cgi-bin/awredir.pl?url=http://www.usa.gov" target="_blank">
+				<a href="http://www.usa.gov" target="_blank">
 					<img style="margin-left: 12px;" src="../images/footer-usa.gif" alt="USA.gov" /></a><br /><br />
 			</p>
 		</div>

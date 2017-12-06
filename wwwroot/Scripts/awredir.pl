@@ -12,7 +12,7 @@
 # Defines
 #-------------------------------------------------------
 use vars qw/ $REVISION $VERSION /;
-$REVISION='$Revision: 1.2 $'; $REVISION =~ /\s(.*)\s/; $REVISION=$1;
+$REVISION='$Revision: 1.3 $'; $REVISION =~ /\s(.*)\s/; $REVISION=$1;
 $VERSION="1.1 (build $REVISION)";
 
 use vars qw / $DIR $PROG $Extension $DEBUG $DEBUGFILE $REPLOG $DEBUGRESET $SITE $REPCONF /;
@@ -73,7 +73,7 @@ if (! $ENV{'GATEWAY_INTERFACE'}) {	# Run from command line
 	print "HTML pages from\n";
 	print "<a href=\"http://externalsite/pagelinked\">Link</a>\n";
 	print "to\n";
-	print "<a href=\"http://mysite/cgi-bin/awredir.pl?url=http://externalsite/pagelinked\">Link</a>\n";
+	print "<a href=\"http://mysitehttp://externalsite/pagelinked\">Link</a>\n";
 	print "\n";
 	print "For your web visitor, there is no difference. However this allow you to track\n";
 	print "clicks done on links onto your web pages that point to external web sites,\n";

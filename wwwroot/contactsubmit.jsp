@@ -76,7 +76,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         
         <p>Your comments, questions, and suggestions are appreciated.</p>
 		
-        <p>For general cancer information, please visit <a href="/cgi-bin/awredir.pl?url=http://www.cancer.gov" target="_blank">cancer.gov<img src="images/Icon_External_Link.png" alt="External link" class="external-link" width="12" height="12"></a>.</p>
+        <p>For general cancer information, please visit <a href="http://www.cancer.gov" target="_blank">cancer.gov<img src="images/Icon_External_Link.png" alt="External link" class="external-link" width="12" height="12"></a>.</p>
         
         <p>You may also provide feedback here on the Cancer Control P.L.A.N.E.T.</p>
         
@@ -149,14 +149,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <a href="http://www.cancer.gov/global/web/policies/foia" target="_blank">Freedom of Information Act</a>
     </div> <!-- close bottomnav -->
     
-    <div>Content on this page is maintained by the <a href="/cgi-bin/awredir.pl?url=http://cancercontrol.cancer.gov" target="_blank">Division of Cancer Control and Population Sciences at the National Cancer Institute<img src="images/Icon_External_Link.png" width="12" height="12" alt="External link"  class="external-link"></a>.</div>
+    <div>Content on this page is maintained by the <a href="http://cancercontrol.cancer.gov" target="_blank">Division of Cancer Control and Population Sciences at the National Cancer Institute<img src="images/Icon_External_Link.png" width="12" height="12" alt="External link"  class="external-link"></a>.</div>
     
-    <div>Cancer Control P.L.A.N.E.T. is not affiliated with Planet Cancer. To visit Planet Cancer's site, please go to <a title="External link" href="/cgi-bin/awredir.pl?url=http://myplanet.planetcancer.org/" target="_blank">www.planetcancer.org<img src="images/Icon_External_Link.png" width="12" height="12" alt="External link"  class="external-link"></a>.</div>
+    <div>Cancer Control P.L.A.N.E.T. is not affiliated with Planet Cancer. To visit Planet Cancer's site, please go to <a title="External link" href="http://myplanet.planetcancer.org/" target="_blank">www.planetcancer.org<img src="images/Icon_External_Link.png" width="12" height="12" alt="External link"  class="external-link"></a>.</div>
 	
 	<div class="footer-logos">
-    	<a href="/cgi-bin/awredir.pl?url=http://www.hhs.gov" target="_blank"><img src="images/hhs-logo.jpg" height="55" alt="Department of Health and Human Services"></a>
+    	<a href="http://www.hhs.gov" target="_blank"><img src="images/hhs-logo.jpg" height="55" alt="Department of Health and Human Services"></a>
 		<div class="footer-logo-usagov">
-        	<a href="/cgi-bin/awredir.pl?url=http://www.usa.gov" target="_blank"><img src="images/usagov-logo.jpg" height="35" alt="USA.gov"></a>
+        	<a href="http://www.usa.gov" target="_blank"><img src="images/usagov-logo.jpg" height="35" alt="USA.gov"></a>
         </div>
     </div>
     </footer> <!-- close footer -->

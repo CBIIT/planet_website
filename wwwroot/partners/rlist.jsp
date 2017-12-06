@@ -205,10 +205,10 @@ if (param != null)
 				
                 if (researcherString.equals("CDC") && (topic.equals("1") || topic.equals("4") || topic.equals("5")))
                 {
-                  outString.append(beginTD+"<a href=\"/cgi-bin/awredir.pl?url="+urlStr+"\" target=\"_blank\" class='a1'>"+urlStr+"</a>"+endTD);
+                  outString.append(beginTD+"<a href=\""+urlStr+"\" target=\"_blank\" class='a1'>"+urlStr+"</a>"+endTD);
                 }
                else
-                 outString.append(beginTD+"Web site:  <a href=\"/cgi-bin/awredir.pl?url="+urlStr+"\" target=\"_blank\" class='a1'>"+urlStr+"</a>"+endTD);
+                 outString.append(beginTD+"Web site:  <a href=\""+urlStr+"\" target=\"_blank\" class='a1'>"+urlStr+"</a>"+endTD);
             }
 
             if (rs.getOrgurl2() != null && rs.getOrgurl2().compareTo("") != 0)
@@ -223,10 +223,10 @@ if (param != null)
 
                if (researcherString.equals("CDC") && (topic.equals("1") || topic.equals("4") || topic.equals("5")))
                 {
-                   outString.append(beginTD+"<a href=\"/cgi-bin/awredir.pl?url="+urlStr+"\" target=\"_blank\" class='a1'>"+urlStr+"</a>"+endTD);
+                   outString.append(beginTD+"<a href=\""+urlStr+"\" target=\"_blank\" class='a1'>"+urlStr+"</a>"+endTD);
                 }
                 else
-                    outString.append(beginTD+"Web site:  <a href=\"/cgi-bin/awredir.pl?url="+urlStr+"\" target=\"_blank\" class='a1'>"+urlStr+"</a>"+endTD);
+                    outString.append(beginTD+"Web site:  <a href=\""+urlStr+"\" target=\"_blank\" class='a1'>"+urlStr+"</a>"+endTD);
             }
 
 	         cellCount++;
@@ -403,7 +403,7 @@ if (it2.hasNext()) {
 			<p>
 				<a href="../index.html">Home</a><br>
 				<a href="../contact.html">Contact Us</a><br>
-				<a href="/cgi-bin/awredir.pl?url=http://ccplanettraining.cancer.gov/" onClick="javascript:popWindow('/cgi-bin/awredir.pl?url=http://ccplanettraining.cancer.gov/', 'name','725','400','yes'); return false;">On-line Training</a><br />
+				<a href="http://ccplanettraining.cancer.gov/" onClick="javascript:popWindow('http://ccplanettraining.cancer.gov/', 'name','725','400','yes'); return false;">On-line Training</a><br />
 				<a href="../about.html">About This Site</a><br>
 				<a href="../factsheet.pdf">Fact Sheet (PDF)</a><br>
 				<a href="../partners.html">Sponsors</a><br />

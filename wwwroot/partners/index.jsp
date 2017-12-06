@@ -154,7 +154,7 @@
 			<p>
 				<a href="../index.html">Home</a><br>
 				<a href="../contact.html">Contact Us</a><br>
-				<a href="/cgi-bin/awredir.pl?url=http://ccplanettraining.cancer.gov/" onClick="javascript:popWindow('/cgi-bin/awredir.pl?url=http://ccplanettraining.cancer.gov/', 'name','725','400','yes'); return false;">On-line Training</a><br />
+				<a href="http://ccplanettraining.cancer.gov/" onClick="javascript:popWindow('http://ccplanettraining.cancer.gov/', 'name','725','400','yes'); return false;">On-line Training</a><br />
 				<a href="../about.html">About This Site</a><br>
 				<a href="../factsheet.pdf">Fact Sheet (PDF)</a><br>
 				<a href="../partners.html">Sponsors</a><br />
