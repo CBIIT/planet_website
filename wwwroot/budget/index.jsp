@@ -13,14 +13,14 @@
 	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 	})(window,document,'script','dataLayer','GTM-NXZ8842');</script>
 	<!-- End Google Tag Manager -->
-	<link href="../styles.css" rel="stylesheet" type="text/css" />
+	<link href="../css/styles-2.css" rel="stylesheet" type="text/css" />
 	<link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet" type="text/css" />
-	<script src="../Scripts/swfobject_modified.js" type="text/javascript"></script>
-	<script language="JavaScript" src="../popwindow.js" type="text/javascript"></script>
-	<script src="../toggle.js" type="text/javascript"></script>
-	<script type="text/javascript" language="javascript" src="../javascript/jquery-1.4.2.js"></script>
-	<script type="text/javascript" language="javascript" src="../javascript/jquery.listen-1.0.3-min.js"></script>
-	<script type="text/javascript" language="javascript" src="../javascript/addThisListener.js"></script>
+	<script src="../js/swfobject_modified.js" type="text/javascript"></script>
+	<script language="JavaScript" src="../js/popwindow.js" type="text/javascript"></script>
+	<script src="../js/toggle.js" type="text/javascript"></script>
+	<script type="text/javascript" language="javascript" src="../js/jquery-1.4.2.js"></script>
+	<script type="text/javascript" language="javascript" src="../js/jquery.listen-1.0.3-min.js"></script>
+	<script type="text/javascript" language="javascript" src="../js/addThisListener.js"></script>
 </head>
 
 <body>

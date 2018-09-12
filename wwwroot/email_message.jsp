@@ -78,16 +78,16 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="description" content="" />
 <meta name="keywords" content="" />
-<link href="styles.css" rel="stylesheet" type="text/css">
+<link href="css/styles-2.css" rel="stylesheet" type="text/css">
 <title>Cancer Control P.L.A.N.E.T.: Share Cancer Control P.L.A.N.E.T. with a Friend</title>
 
 <link href="styles-baseline.css" rel="stylesheet" type="text/css" />
 <link href="styles-2-column.css" rel="stylesheet" type="text/css" />
 <script src="scripts.js" language="javascript" type="text/javascript"></script>
-<script type="text/javascript" src="/fsrscripts/triggerParams.js"></script> 
-<script type="text/javascript" src="/fsrscripts/stdLauncher.js"></script>
-<script type="text/javascript" src="javascript/validate.js"></script>
-<script type="text/javascript" src="javascript/toggle.js"></script>
+<script type="text/javascript" src="/js/fsrscripts/triggerParams.js"></script> 
+<script type="text/javascript" src="/js/fsrscripts/stdLauncher.js"></script>
+<script type="text/javascript" src="js/validate.js"></script>
+<script type="text/javascript" src="js/toggle.js"></script>
 </head>
 
 <body>

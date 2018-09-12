@@ -14,7 +14,7 @@
 <td><p><a href="http://cancercontrolplanet.cancer.gov/contact.html">Contact Us</a><br>
 		<a href="http://ccplanetraining.cancer.gov" onclick="javascript:popWindow('http://ccplanetraining.cancer.gov', 'name','725','400','yes'); return false;"></a><br />
 	    <a href="about.html">About This Site</a><br>
-        <a href="http://cancercontrolplanet.cancer.gov/factsheet.pdf">Fact Sheet (PDF)</a><br>
+        <a href="http://cancercontrolplanet.cancer.gov/documents/factsheet.pdf">Fact Sheet (PDF)</a><br>
         <a href="http://cancercontrolplanet.cancer.gov/partners.html">Sponsors</a></p></td>
   </tr>
   <tr>

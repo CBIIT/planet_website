@@ -3,13 +3,13 @@
 <head>
 <title>Cancer Control - P.L.A.N.E.T.</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-<link href="styles.css" rel="stylesheet" type="text/css">
-<script language="JavaScript" src="popwindow.js" type="text/javascript"></script>
-<script src="Scripts/AC_RunActiveContent.js" type="text/javascript"></script>
-<script type="text/javascript" src="toggle.js"></script>
-<script type="text/javascript" language="javascript" src="javascript/jquery-1.4.2.js"></script>
-<script type="text/javascript" language="javascript" src="javascript/jquery.listen-1.0.3-min.js"></script>
-<script type="text/javascript" language="javascript" src="javascript/addThisListener.js"></script>
+<link href="css/styles-2.css" rel="stylesheet" type="text/css">
+<script language="JavaScript" src="js/popwindow.js" type="text/javascript"></script>
+<script src="js/AC_RunActiveContent.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/toggle.js"></script>
+<script type="text/javascript" language="javascript" src="js/jquery-1.4.2.js"></script>
+<script type="text/javascript" language="javascript" src="js/jquery.listen-1.0.3-min.js"></script>
+<script type="text/javascript" language="javascript" src="js/addThisListener.js"></script>
 </head>
 
 <body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
@@ -37,7 +37,7 @@
 				<a href="contact.html">Contact Us</a><br />	
 				<a href="http://ccplanettraining.cancer.gov/" onClick="javascript:popWindow('http://ccplanettraining.cancer.gov/', 'name','925','600','yes'); return false;">On-line Training</a><br />
 				<a href="about.html">About This Site</a><br />
-				<a href="factsheet.pdf">Fact Sheet (PDF)</a><br />
+				<a href="documents/factsheet.pdf">Fact Sheet (PDF)</a><br />
 				<a href="sponsors.html">Sponsors</a><br />
 				<a href="faq.html">FAQ</a><br />
 			</p>
@@ -118,7 +118,7 @@
         <tr>
           <td valign="top">&nbsp;</td>
           <td valign="top"><img src="images/bullet_black.gif" alt="" width="15" height="13" border="0"></td>
-          <td valign="top"><span class="red"><em><strong>New!</strong></em></span> <a href="Abstract_Criteria_Partnerships.doc">Call for Abstracts</a></td>
+          <td valign="top"><span class="red"><em><strong>New!</strong></em></span> <a href="documents/Abstract_Criteria_Partnerships.doc">Call for Abstracts</a></td>
         </tr>
         <tr>
           <td valign="top">&nbsp;</td>

@@ -380,8 +380,8 @@ if (it2.hasNext()) {
 <html>
 <head>
 <title>Cancer Control P.L.A.N.E.T. - <%= pageTitle%></title>
-<script language="JavaScript" src="../popwindow.js" type="text/javascript"></script>
-<link href="../styles.css" rel="stylesheet" type="text/css">
+<script language="JavaScript" src="../js/popwindow.js" type="text/javascript"></script>
+<link href="../css/styles-2.css" rel="stylesheet" type="text/css">
 </head>
 <body topmargin="0" leftmargin="0" bgcolor="White"><a name="top"></a>
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -405,7 +405,7 @@ if (it2.hasNext()) {
 				<a href="../contact.html">Contact Us</a><br>
 				<a href="http://ccplanettraining.cancer.gov/" onClick="javascript:popWindow('http://ccplanettraining.cancer.gov/', 'name','725','400','yes'); return false;">On-line Training</a><br />
 				<a href="../about.html">About This Site</a><br>
-				<a href="../factsheet.pdf">Fact Sheet (PDF)</a><br>
+				<a href="../documents/factsheet.pdf">Fact Sheet (PDF)</a><br>
 				<a href="../partners.html">Sponsors</a><br />
 				<a href="../faq.html">FAQ</a>
 			</p>
