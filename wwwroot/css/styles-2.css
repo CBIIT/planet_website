@@ -1,0 +1,478 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* ----------------------------------------
+CC PLANET
+Baseline styles
+
+Version: 1.0
+Author: Lewellyn Belber
+E-mail: lbelber@mmgct.com 
+
+Colors:
+
+---------------------------------------- */
+
+* {  /* Clears all margins and paddings to eliminate discrepencies between IE and FF */
+  	margin: 0px;
+  	padding: 0px;
+}
+
+body {  /* Sets font face, size, and full page background */
+	font-family: Arial, Verdana, Trebuchet MS, Tahoma, sans-serif;
+	background-color: #4b69b1;
+	background-image: url(images/background.jpg);
+	text-align: center;  /* IE hack */
+	font-size: 14px;
+}
+
+/* =Layout
+---------------------------------------- */
+
+#pageWrapper {  /* sets width of page and centers */
+	width: 1000px;
+	height: 100%;
+	position: relative;
+	margin-left: auto;
+  	margin-right: auto;
+	text-align: left; /* to realign text */
+	background-color: #ffffff;
+}
+
+#banner {
+	width: 1000px;
+	position: relative;
+}
+
+#contentWrapper {
+	width: 998px;
+	position: relative;
+	/*float: center;*/
+	background-color: #ffffff;
+	border-right: 1px solid #3049a3;
+	border-left: 1px solid #3049a3;
+	
+}
+
+
+#topNav p {
+	padding-top: 15px;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+}
+
+#headerTagline { 
+	position: absolute; 
+	left: 435px; 
+	top: 104px; 
+	color: #fff; 
+	font: italic bold 100% Arial, Verdana, Trebuchet MS, Tahoma, sans-serif; 
+}
+
+#steps {
+	position: relative;
+	width: 525px;
+	float: left;
+}
+
+#topics {
+	position: relative;
+	width: 465px;
+	float: right;
+}
+
+.boxContainer {
+	margin-top: 10px;
+}
+
+.lightBlueBox {
+	position: relative;
+	background-color: #e2e8f6;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	margin-left: 20px;
+		-moz-border-radius: 20px;
+		-webkit-border-radius: 20px;
+		-khtml-border-radius: 20px;
+	border-radius: 20px;
+	behavior: url('pie.htc');
+}
+
+.darkBlueBox {
+	position: relative;
+	background-color: #19388a;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	margin-top: 10px;
+	margin-right: 20px;
+		-moz-border-radius: 20px;
+		-webkit-border-radius: 20px;
+		-khtml-border-radius: 20px;
+	behavior: url('pie.htc');
+	border-radius: 20px;
+}
+
+.lightGrayBox {
+	position: relative;
+	background-color: #e4e4e4;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	margin-top: 10px;
+	margin-left: 20px;
+		-moz-border-radius: 20px;
+		-webkit-border-radius: 20px;
+		-khtml-border-radius: 20px;
+	behavior: url('pie.htc');
+	border-radius: 20px;
+}
+
+.whatsNewBox {
+	position: relative;
+	/*background-color: #e4e4e4;*/
+	background: #ddd;
+	border: 1px solid #193892;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	margin-top: 10px;
+	margin-right: 20px;
+		-moz-border-radius: 20px;
+		-webkit-border-radius: 20px;
+		-khtml-border-radius: 20px;
+	behavior: url('pie.htc');
+	border-radius: 20px;
+}
+
+.blueBorderBox {
+	position: relative;
+	background-color: #ffffff;
+	border: 1px solid #193892;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	margin-top: 10px;
+	margin-right: 20px;
+		-moz-border-radius: 20px;
+		-webkit-border-radius: 20px;
+		-khtml-border-radius: 20px;
+	behavior: url('pie.htc');
+	border-radius: 20px;
+}
+
+
+#footer {
+	position: relative;
+	width: 1000px;
+	clear: both;
+	padding-top: .5em;
+	
+}
+
+#footer a img { border: 0; }
+
+.clear {
+	clear: both;
+}
+
+/* ------------------- */
+
+#steps p, #topics p {
+margin-left: 20px;
+margin-right: 20px;
+margin-bottom: .8em;
+}
+
+#content p, #content h1, #content h2, #content h3, #content h4, #content ol, #content ul, #content table {
+margin-left: 20px;
+margin-right: 20px;
+margin-bottom: .8em;
+}
+
+#content li {
+margin-left: 30px;
+}
+
+#content ul ul {
+margin-left: 30px;
+}
+
+.boxTitle {
+	font: normal 900 18px 'Cabin', sans-serif;
+}
+
+.lightBlueBox .boxTitle, .lightGrayBox .boxTitle, .whatsNewBox .boxTitle, .blueBorderBox .boxTitle {
+	color: #1d3d92;
+}
+
+.darkBlueBox p, .darkBlueBox ul, .darkBlueBox a {
+	color: #ffffff;
+}
+
+#footer p {
+text-align: center;
+margin-top: 20px;
+font-size: 13px;
+}
+
+#footer a {
+text-decoration: none;
+}
+
+#footer a:HOVER {
+color: #39b2cd;
+text-decoration: underline;
+}
+
+#callout {
+	width: 170px;
+	float: right;
+	background-color: #ceeff6;
+	border: 1px solid #079fc1;
+	margin-right: 50px;
+	margin-left: 15px;
+	margin-bottom: 10px;
+	padding: 8px;
+	font-size: .9em;
+}
+
+#topicListLeft {
+	position: relative;
+	float: left;
+	width: 200px;
+	padding-left: 35px;
+	}
+
+#topicListRight {
+	position: relative;
+	float: right;
+	width: 190px;
+	padding-left: 15px;
+}
+
+.infoBubble { vertical-align: middle; }
+
+.obj {
+	font-weight : bold;
+	font-size : smaller;
+}
+
+.cont {
+	background-color : Silver;
+	font-size : smaller;
+}
+
+.out {
+	font-weight : lighter;
+	font-size : smaller;
+}
+
+.plan {
+	font-size : larger;
+	font-weight : bolder;
+	color : Navy;
+	text-align : center;
+}
+
+.cont2 {
+	background-color : #9CF;
+	font-size : smaller;
+}
+
+.slideShow {
+	width: 165px;
+	height: 50px;
+	margin-left: 3em;
+}
+
+.sponsorsBox {
+	margin: 10px 20px; 
+	vertical-align: top;
+}
+
+.sponsorsBox img { vertical-align: top; }
+
+
+/* =Typography
+---------------------------------------- */
+p {
+	margin-left: 20px; 
+	margin-right: 20px; 
+	margin-bottom: .8em;
+}
+
+h2 {
+	font-size: 20px;
+	color: #4c4c4c;
+}
+
+h3 {
+	font-size: 16px;
+	color: #333333;
+	padding-top: 1em;
+}
+
+h4 {
+	font-size : 14px;
+	margin-bottom : 0px;
+}
+
+a {
+	color: #19388a;
+	text-decoration: none;
+}
+
+a:HOVER {
+	/*color: #8a8d94;*/
+	color: #555;
+	text-decoration: underline;
+}
+
+a:VISITED {
+/*	color: #637cbe;*/
+	color: #19388a;
+}
+
+#skip a {
+	color: #ffffff;
+	font-size: 1px;
+}
+
+.darkBlueBox a { color: #fff; text-decoration: none; }
+.darkBlueBox a:hover, .darkBlueBox a:visited { color: #fff; text-decoration: underline; }
+
+.whatsNewBox a { color: #078fb3; text-decoration: underline; }
+.whatsNewBox a:hover { color: #f00; text-decoration: underline; }
+.whatsNewBox a:visited { color: #f00; text-decoration: none;}
+
+#headerTagline a { color: #fff; text-decoration: none; }
+
+sup,sub {	
+	height: 0;	line-height: 1;	vertical-align: baseline;	_vertical-align: bottom;	position: relative;
+	font-size: .9em;}
+
+sup {	bottom: .5ex;}
+
+sub {	top: .5ex;}
+
+p.title {
+	margin-top: 30px;
+}
+
+table.borders {
+	border-top: 1px solid #000;
+	border-left: 1px solid #000;
+}
+
+table.borders td {
+	border-bottom: 1px solid #000;
+	border-right: 1px solid #000;
+}
+
+/* =Navigation
+---------------------------------------- */
+
+/* RWB Added Billy Weinheimer code 5/26/2016 */
+body {
+	font-family: Helvetica, Arial, sans-serif;
+background-image: none;
+background-color: #f2f2f2;
+line-height:20px;
+}
+
+#headerTagline
+{
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 20px;
+	font-weight:bold;
+	font-style: normal;
+	color:#468e01;
+	position: absolute; 
+	left: 745px; 
+	top: 60px;
+	padding-right:20px;
+}
+
+#headerTagline a {
+	color: #468e01;
+	text-decoration: none;
+}
+
+
+#contentWrapper {
+	border-right: none;
+	border-left: none;
+}
+
+#topNav {
+	background-color:#f2f2f2;
+margin:20px;
+padding: 5px;
+}
+
+#topNav p {
+padding-top: 0px;
+margin-left: 0px;
+margin-right: 0px;
+margin-bottom: 0px;
+font-size: 11px;
+}
+#topNav p a{
+padding: 0px 5px;
+}
+
+
+#steps {
+width:510px;
+}
+
+
+.lightBlueBox {
+	
+border-radius:5px;
+}
+
+
+.lightGrayBox {
+border-radius:5px;
+background-color: #f2f2f2;
+} 
+
+.darkBlueBox {
+border-radius:5px;
+background-color: #005580;
+}
+
+.whatsNewBox {
+border-radius:5px;
+background-color: #f2f2f2;
+border: 1px solid #ccc;
+}
+
+
+
+.blueBorderBox {
+	
+border-radius: 5px;
+border: 1px solid #005580;
+}
+
+.boxTitle {
+color:#005580;
+}
+
+a {
+color: #078fb3;
+}
+
+a:visited {
+color:#005580;
+}
+
+.whatsNewBox a:visited {
+color:#005580;
+}
+/* RWB Added Billy Weinheimer code 5/26/2016 */
+
+
+	
+	
