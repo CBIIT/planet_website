@@ -112,6 +112,8 @@
 				<exclude name="**/.cvsignore"/>
 			</fileset>
 		</copy>
+		<copy file="${wwwrootDir}/WEB-INF/web.xml" tofile="${deployDir}/WEB-INF/web.xml"/>
+		
     	<antcall target="subFromEnv">
     			<param name="dDir" value="${deployDir}"/>
     	</antcall>
