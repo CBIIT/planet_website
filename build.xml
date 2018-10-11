@@ -29,8 +29,8 @@
 		<property environment="env"/>
 	</target>
 	
-	<target depends="init" name="compile">
-		<mkdir dir="${classesDir}"/>
+	<target depends="prep" name="compile">
+		<mkdir dir="${deployDir}/WEB-INF/classes"/>
 		<mkdir dir="${deploy.path}/src/"/>
 		<copy todir="${deploy.path}/src/" filtering="false" includeEmptyDirs="false">
 			<fileset dir="${srcDir}">
@@ -46,7 +46,7 @@
     			<param name="dDir" value="${deployDir}"/>
     	</antcall>
     				
-		<javac debug="true" deprecation="off" destdir="${classesDir}" srcdir="${deploy.path}/src/">
+		<javac debug="true" deprecation="off" destdir="${deployDir}/WEB-INF/classes" srcdir="${deploy.path}/src/">
 			 <!--  To add something to the classpath:  -->
 			<classpath>
 				<pathelement path="${classpath}"/>
@@ -77,8 +77,18 @@
 		</delete>
 	</target>
 	
-	<target depends="compile" description="Creates valid platform specific config files after compilation" name="build">
-		<echo>Compiled the src directory</echo>
+	<target depends="init" description="Creates valid platform specific config files after compilation" name="prep">
+		<mkdir dir="${deployDir}"/>
+		<copy todir="${deployDir}" filtering="false" includeEmptyDirs="false">
+			<fileset dir="${wwwrootDir}">
+				<exclude name="**/*.java"/>
+				<exclude name="**/*.build"/>
+				<exclude name="**/*.bak"/>
+				<exclude name="**/build.xml"/>
+				<exclude name="**/.cvsignore"/>
+			</fileset>
+		</copy>
+		<copy file="${wwwrootDir}/WEB-INF/web.xml" tofile="${deployDir}/WEB-INF/web.xml"/>
 	</target>
 
 	<target description="Substitute tokens" name="subFromEnv" if="mode">
@@ -101,19 +111,7 @@
 		<replace file="${deploy.path}/src/gov/nci/planet/CaptchaValidator.java" token="@CaptchaKey@" value="${captcha.key}"/>
 	</target>
 	    	
-	<target depends="build" description="Deploys everything in ${deployDir} folder" name="deploy">
-		<mkdir dir="${deployDir}"/>
-		<copy todir="${deployDir}" filtering="false" includeEmptyDirs="false">
-			<fileset dir="${wwwrootDir}">
-				<exclude name="**/*.java"/>
-				<exclude name="**/*.build"/>
-				<exclude name="**/*.bak"/>
-				<exclude name="**/build.xml"/>
-				<exclude name="**/.cvsignore"/>
-			</fileset>
-		</copy>
-		<copy file="${wwwrootDir}/WEB-INF/web.xml" tofile="${deployDir}/WEB-INF/web.xml"/>
-		
+	<target depends="compile" description="Deploys everything in ${deployDir} folder" name="deploy">	
     	<antcall target="subFromEnv">
     			<param name="dDir" value="${deployDir}"/>
     	</antcall>
