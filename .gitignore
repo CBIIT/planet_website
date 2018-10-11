@@ -1,0 +1,17 @@
+
+# /oracle/
+/oracle/afiedt.buf
+
+# /wwwroot/
+/wwwroot/.nbattrs
+/wwwroot/*~
+
+# /wwwroot/WEB-INF/src/gov/nci/
+/wwwroot/WEB-INF/src/gov/nci/.nbattrs
+
+# /wwwroot/WEB-INF/src/gov/nci/planet/
+/wwwroot/WEB-INF/src/gov/nci/planet/*~
+/wwwroot/WEB-INF/src/gov/nci/planet/*.class
+
+# /wwwroot/partners/
+/wwwroot/partners/*~
