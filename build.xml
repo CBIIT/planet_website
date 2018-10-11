@@ -1,0 +1,134 @@
+<!--
+ Written to assume that classpath is rooted in the current directory. 
+ So this should be OK if you make this script in the root of a filesystem. 
+ If not, you may prefer to adjust the basedir, or move some directories around. 
+ The idea is that both Ant and NetBeans have to know what the package root is 
+-->
+
+<!--  for the classes in your application.  -->
+<project basedir="." default="help" name="planet">
+	<description>Ant script for building ${project.name}</description>
+	<property file="build.properties"/>
+	<property name="deployDir" value="${deploy.path}/${project.name}"/>
+	<property name="wwwrootDir" value="${basedir}/wwwroot"/>
+	<property name="classesDir" value="${wwwrootDir}/WEB-INF/classes"/>
+	<property name="libDir" value="${wwwrootDir}/WEB-INF/lib"/>
+	<property name="srcDir" value="${wwwrootDir}/WEB-INF/src"/>
+	
+	 <!--  Targets  -->
+	<target name="help">
+		<echo message="Help For Using this build Script"/>
+		<echo message="These are some of the possible commands:"/>
+		<echo message=""/>
+		<echo message="ant compile :- compiles src folders"/>
+		<echo message="ant clean :- cleans the classes/gov folder and removes the web.xml from the deploy directory"/>
+		<echo message="ant deploy :- compiles the src folder, copies all the files to the deploy path, and builds the web.xml file"/>
+	</target>
+	
+	<target name="init">
+		<property environment="env"/>
+	</target>
+	
+	<target depends="init" name="compile">
+		<mkdir dir="${classesDir}"/>
+		<mkdir dir="${deploy.path}/src/"/>
+		<copy todir="${deploy.path}/src/" filtering="false" includeEmptyDirs="false">
+			<fileset dir="${srcDir}">
+				<include name="**/*"/>
+			</fileset>
+		</copy>		
+
+    	<antcall target="subFromEnv">
+    			<param name="dDir" value="${deployDir}"/>
+    	</antcall>
+    	
+    	<antcall target="subFromProp">
+    			<param name="dDir" value="${deployDir}"/>
+    	</antcall>
+    				
+		<javac debug="true" deprecation="off" destdir="${classesDir}" srcdir="${deploy.path}/src/">
+			 <!--  To add something to the classpath:  -->
+			<classpath>
+				<pathelement path="${classpath}"/>
+				<fileset dir="${libDir}">
+					<include name="**/*.jar"/>
+					<include name="**/*.zip"/>
+				</fileset>
+			</classpath>
+		</javac>
+	</target>
+	
+	<target depends="init" description="Clean all build products." name="clean">
+		<echo>Cleaning up the deployed classes/lib folders and development classes folders</echo>
+		<delete>
+			<fileset dir="${classesDir}/gov">
+				<include name="**/*.class"/>
+			</fileset>
+			<fileset dir="${deploy.path}/${project.name}/WEB-INF">
+				<include name="**/*.class"/>
+				<include name="**/*.jar"/>
+			</fileset>
+		</delete>
+		<echo>Deleting the deployed web.xml file</echo>
+		<delete>
+		<fileset dir="${deploy.path}/${project.name}/WEB-INF">
+		<include name="web.xml"/>
+		</fileset>
+		</delete>
+	</target>
+	
+	<target depends="compile" description="Creates valid platform specific config files after compilation" name="build">
+		<echo>Compiled the src directory</echo>
+	</target>
+
+	<target description="Substitute tokens" name="subFromEnv" if="mode">
+        <replace file="${dDir}/WEB-INF/web.xml" token="@DB_URL@" value="${env.JdbcUrl}" />
+        <replace file="${dDir}/WEB-INF/web.xml" token="@DB_USER@" value="${env.UserName}"/>
+        <replace file="${dDir}/WEB-INF/web.xml" token="@DB_PASSWD@" value="${env.Password}"/>
+        <replace file="${dDir}/WEB-INF/web.xml" token="@CORDA_EXTERNAL_ADDRESS@" value="${env.CordaExtAdd}"/>
+        <replace file="${dDir}/WEB-INF/web.xml" token="@CORDA_INTERNAL_ADDRESS@" value="${env.CordaIntAdd}"/>
+        <replace file="${dDir}/WEB-INF/web.xml" token="@CORDA_SERVER@" value="${env.CordaServer}"/>
+		<replace file="${deploy.path}/src/gov/nci/planet/CaptchaValidator.java" token="@CaptchaKey@" value="${env.CaptchaKey}"/>
+	</target>
+
+	<target description="Substitute tokens" name="subFromProp">		
+	    <replace file="${dDir}/WEB-INF/web.xml" token="@DB_URL@" value="${db.url}"/>
+	    <replace file="${dDir}/WEB-INF/web.xml" token="@DB_USER@" value="${db.user}"/>
+	    <replace file="${dDir}/WEB-INF/web.xml" token="@DB_PASSWD@" value="${db.password}"/>
+        <replace file="${dDir}/WEB-INF/web.xml" token="@CORDA_EXTERNAL_ADDRESS@" value="${corda.external.address}"/>
+	    <replace file="${dDir}/WEB-INF/web.xml" token="@CORDA_INTERNAL_ADDRESS@" value="${corda.internal.address}"/>
+	    <replace file="${dDir}/WEB-INF/web.xml" token="@CORDA_SERVER@" value="${corda.server}"/>
+		<replace file="${deploy.path}/src/gov/nci/planet/CaptchaValidator.java" token="@CaptchaKey@" value="${captcha.key}"/>
+	</target>
+	    	
+	<target depends="build" description="Deploys everything in ${deployDir} folder" name="deploy">
+		<mkdir dir="${deployDir}"/>
+		<copy todir="${deployDir}" filtering="false" includeEmptyDirs="false">
+			<fileset dir="${wwwrootDir}">
+				<exclude name="**/*.java"/>
+				<exclude name="**/*.build"/>
+				<exclude name="**/*.bak"/>
+				<exclude name="**/build.xml"/>
+				<exclude name="**/.cvsignore"/>
+			</fileset>
+		</copy>
+    	<antcall target="subFromEnv">
+    			<param name="dDir" value="${deployDir}"/>
+    	</antcall>
+    	
+    	<antcall target="subFromProp">
+    			<param name="dDir" value="${deployDir}"/>
+    	</antcall>
+		
+    	<mkdir dir="${deploy.path}/libs/"/>
+    	
+    	<war destfile="${deploy.path}/libs/${project.name}.war" needxmlfile="false">
+    			<fileset dir="${deploy.path}/${project.name}" >
+    				<include name="**/*" />
+    			</fileset>
+    	</war>
+		
+		<echo>Deployment completed for ${project.name} in ${deployDir} folder</echo>
+	</target>
+	
+</project>
