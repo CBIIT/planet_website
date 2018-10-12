@@ -93,8 +93,8 @@
 
 	<target description="Substitute tokens" name="subFromEnv" if="mode">
         <replace file="${dDir}/WEB-INF/web.xml" token="@DB_URL@" value="${env.JdbcUrl}" />
-        <replace file="${dDir}/WEB-INF/web.xml" token="@DB_USER@" value="${env.UserName}"/>
-        <replace file="${dDir}/WEB-INF/web.xml" token="@DB_PASSWD@" value="${env.Password}"/>
+        <replace file="${dDir}/WEB-INF/web.xml" token="@DB_USER@" value="${env.DbUserName}"/>
+        <replace file="${dDir}/WEB-INF/web.xml" token="@DB_PASSWD@" value="${env.DbPassword}"/>
         <replace file="${dDir}/WEB-INF/web.xml" token="@CORDA_EXTERNAL_ADDRESS@" value="${env.CordaExtAdd}"/>
         <replace file="${dDir}/WEB-INF/web.xml" token="@CORDA_INTERNAL_ADDRESS@" value="${env.CordaIntAdd}"/>
         <replace file="${dDir}/WEB-INF/web.xml" token="@CORDA_SERVER@" value="${env.CordaServer}"/>
