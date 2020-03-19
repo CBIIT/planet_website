@@ -3,7 +3,7 @@ package gov.nci.util;
 import java.sql.*;
 import javax.naming.Context;
 import javax.naming.InitialContext;
-import oracle.jdbc.pool.*;
+import oracle.ucp.jdbc.*;
 
 public class ConnPoolBean {
 	
@@ -12,11 +12,11 @@ public class ConnPoolBean {
     // Get a Logical connection
     public static synchronized Connection getConnection() throws SQLException
     {
-		if (null!=occi)
+		if (null!=ocpds)
 		{
-			return occi.getConnection();
+			return ocpds.getConnection();
 		}
-        //return occi.getConnection();
+        //return ocpds.getConnection();
 		Connection conn = null;
 
         try {
@@ -37,6 +37,7 @@ public class ConnPoolBean {
     public static synchronized boolean closeConnection(Connection conn) throws SQLException {
     	
     	if (!conn.isClosed()){
+    		((ValidConnection) conn).setInvalid();
     		conn.close();
             System.out.println("PUT:" + count + "  THREAD:" +  Thread.currentThread().getName());
             count--;
@@ -49,46 +50,42 @@ public class ConnPoolBean {
 
 	/* suppport for previous version of connection pooling */
 
-	private static OracleConnectionPoolDataSource ocpds;
-    private static OracleConnectionCacheImpl occi;
+	private static PoolDataSource ocpds;
 
     public static void init(String driver, String username,
                             String password, int minLimit) throws SQLException
     {
-        ocpds = new OracleConnectionPoolDataSource();
-
+    	ocpds = PoolDataSourceFactory.getPoolDataSource();
+    	ocpds.setConnectionFactoryClassName("oracle.jdbc.pool.OracleDataSource");
         ocpds.setURL(driver);
         ocpds.setUser(username);
         ocpds.setPassword(password);
+        ocpds.setMinPoolSize(minLimit);
 
-        // Create a pooled connection
-        occi = new OracleConnectionCacheImpl(ocpds);
-        occi.setMinLimit(minLimit);
     }
 
 
     public static void init(String driver, String username,
                             String password, int minLimit, int maxLimit) throws SQLException
     {
-        ocpds = new OracleConnectionPoolDataSource();
-
+    	ocpds = PoolDataSourceFactory.getPoolDataSource();
+    	ocpds.setConnectionFactoryClassName("oracle.jdbc.pool.OracleDataSource");
         ocpds.setURL(driver);
         ocpds.setUser(username);
         ocpds.setPassword(password);
-
-        // Create a pooled connection
-        occi = new OracleConnectionCacheImpl(ocpds);
-        occi.setMinLimit(minLimit);
-        occi.setMaxLimit(maxLimit);
+        ocpds.setMinPoolSize(minLimit);
+        ocpds.setMaxPoolSize(maxLimit);
     }
 
     // Close the pooled connection
     protected void finalize() throws SQLException
     {
-		if (null!=occi)
-		{		
-			occi.close();
-			occi = null;
+		if (null!=ocpds.getConnection())
+		{	
+			Connection conn = ocpds.getConnection();
+			((ValidConnection) conn).setInvalid();
+			conn.close();
+			conn = null;
 		}
     }
 }
